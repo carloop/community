@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Having trouble finding information on hardware availability</title>
+    <link>https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801</link>
+    <description>Many of the items in the store are not available. Is there an anticipated date when they&#39;ll be back in stock?  Are they no longer being sold?  New versions under development? I&#39;m personally interested in the Carloop and the CAN hitch.
+
+I suggest adding info to the store to answer these types of questions, or adding a News/Updates page.  The next place I would look for this type of info would be in the community forum. Perhaps a sticky topic with hardware availability / plans / technology roadmap.
+
+Maybe the info is there and I just missed it?</description>
+    
+    <lastBuildDate>Thu, 17 Jan 2019 21:37:21 +0000</lastBuildDate>
+    <category>Site Feedback</category>
+    <atom:link href="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Having trouble finding information on hardware availability</title>
+        <dc:creator><![CDATA[jpvonoy]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the update. This is a great project, I’ll continue checking in here.  Keep up the good work guys!</p>
+          <p><a href="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/3</link>
+        <pubDate>Thu, 17 Jan 2019 21:37:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-801-3</guid>
+        <source url="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801.rss">Having trouble finding information on hardware availability</source>
+      </item>
+      <item>
+        <title>Having trouble finding information on hardware availability</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there!<br>
+Thanks for bringing this up.  We are currently waiting on a uBlox order to make more Carloop Pros.  Additionally, we have CAN hitch 2.0 in the works that should come out before Q1 2019.  Maintaining a News/Updates page is tough, but we can be more proactive posting hardware production updates on the forum.</p>
+<p>Carloop is a side-project that we started in 2016 and we are trying our best to keep up with the growth in interest and demand.  I absolutely love seeing all the projects people are tackling with Carloop and we’re committed to continue making the hardware.  We very much value any feedback, feature requests, and of course we welcome any pull requests: <a href="https://github.com/carloop" class="inline-onebox">Carloop · GitHub</a></p>
+<p>Some people may not know this, but Carloop is just two people (<a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> and <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>).  Additionally, <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> has been a stellar Carloop Ambassador and community supporter.  He’s been answering questions and providing information         with great dedication, so if you ever come across him here - say hi to him, he’s awesome!  Other folks such as <a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> have also helped out people struggling with setup and we are grateful for his contributions as well.</p>
+<p>Thanks for understanding and please bear with us as we try to figure out how to scale gracefully</p>
+          <p><a href="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/2</link>
+        <pubDate>Thu, 03 Jan 2019 18:08:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-801-2</guid>
+        <source url="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801.rss">Having trouble finding information on hardware availability</source>
+      </item>
+      <item>
+        <title>Having trouble finding information on hardware availability</title>
+        <dc:creator><![CDATA[jpvonoy]]></dc:creator>
+        <description><![CDATA[
+            <p>Many of the items in the store are not available. Is there an anticipated date when they’ll be back in stock?  Are they no longer being sold?  New versions under development? I’m personally interested in the Carloop and the CAN hitch.</p>
+<p>I suggest adding info to the store to answer these types of questions, or adding a News/Updates page.  The next place I would look for this type of info would be in the community forum. Perhaps a sticky topic with hardware availability / plans / technology roadmap.</p>
+<p>Maybe the info is there and I just missed it?</p>
+          <p><a href="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801/1</link>
+        <pubDate>Thu, 03 Jan 2019 10:55:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-801-1</guid>
+        <source url="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801.rss">Having trouble finding information on hardware availability</source>
+      </item>
+  </channel>
+</rss>

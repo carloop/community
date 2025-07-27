@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop with access to HS CAN via ODB connector</title>
+    <link>https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933</link>
+    <description>Hello,
+
+I&#39;m new to carloop - just started to plug a carloop with photon into my ODB port and read a CAN trace.
+That all works fine!
+I wonder if the carloop hardware can connect to and of the other CAN pins of the OBD connector.
+My vehicle (Volvo V60) has HS-CAN and LS-CAN pins. It there a jumper or software switch that I can change to connect the carloop device to the HS-CAN?
+
+Thanks!</description>
+    
+    <lastBuildDate>Fri, 26 Feb 2021 00:05:52 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop with access to HS CAN via ODB connector</title>
+        <dc:creator><![CDATA[bwildered]]></dc:creator>
+        <description><![CDATA[
+            <p>I Have a 2007 XC70 and am also wondering how to address different High and Low CAN devices.</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933/2</link>
+        <pubDate>Fri, 26 Feb 2021 00:05:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-933-2</guid>
+        <source url="https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933.rss">Carloop with access to HS CAN via ODB connector</source>
+      </item>
+      <item>
+        <title>Carloop with access to HS CAN via ODB connector</title>
+        <dc:creator><![CDATA[dmmp]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I’m new to carloop - just started to plug a carloop with photon into my ODB port and read a CAN trace.<br>
+That all works fine!<br>
+I wonder if the carloop hardware can connect to and of the other CAN pins of the OBD connector.<br>
+My vehicle (Volvo V60) has HS-CAN and LS-CAN pins. It there a jumper or software switch that I can change to connect the carloop device to the HS-CAN?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933/1</link>
+        <pubDate>Mon, 07 Oct 2019 08:30:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-933-1</guid>
+        <source url="https://community.carloop.io/t/carloop-with-access-to-hs-can-via-odb-connector/933.rss">Carloop with access to HS CAN via ODB connector</source>
+      </item>
+  </channel>
+</rss>

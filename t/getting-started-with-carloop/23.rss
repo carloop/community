@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Getting Started with Carloop</title>
+    <link>https://community.carloop.io/t/getting-started-with-carloop/23</link>
+    <description>This topic is intended for people who have purchased Carloop and are looking for an easy path to be up and running.
+
+1. To get an idea of how it all works, check out Carloop&#39;s demo program [a Carloop demo program](https://carloop.dyndns.org/t/carloop-demo-program/18)
+
+2. Make sure your Device firmware is version 0.4.9 or later.  [Click on this post to check your firmware](https://carloop.dyndns.org/t/carloop-demo-program/18/4)
+
+3. Connect your Carloop to your OBD-II port and try publishing data using [Particle&#39;s Publish function](https://docs.particle.io/reference/firmware/photon/#particle-publish-)
+
+4. Try to make Carloop respond to OBD signals on the CAN bus using this [&quot;Hello World&quot; example](https://carloop.dyndns.org/t/carloop-hello-world-program/36?u=alanm).
+
+5. Ask questions on this forum and you will get a quick answer form the community.
+
+6. Share your projects with the rest of the community!</description>
+    
+    <lastBuildDate>Fri, 19 Jan 2018 15:46:12 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/getting-started-with-carloop/23.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Published to the world!</p>
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/7</link>
+        <pubDate>Fri, 19 Jan 2018 15:46:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-7</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[ronsheely]]></dc:creator>
+        <description><![CDATA[
+            <p>Stumbled onto Carloop via <a href="http://Particle.io" rel="noopener nofollow ugc">Particle.io</a> Photon forum. Looks like a Photon can RW OBD. What content can OBD provide in addition to GPS and tire pressure? How can I know what my 2017 Honda CRV provides? Could I for example start/stop my engine via OBD? How do we get the mfg info? Reverse engineering? Published to the world, or only to dealers and maintenance?</p>
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/6</link>
+        <pubDate>Fri, 27 Oct 2017 06:05:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-6</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/5</link>
+        <pubDate>Wed, 06 Jul 2016 01:54:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-5</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>hey <a class="mention" href="https://community.carloop.io/u/jp15">@jp15</a>, yes you can track your car if you add the <a href="https://www.sparkfun.com/products/13670">GP-735 from SparkFun</a>.  Depending on your car’s model year (2008 and earlier) you might be able to get that data from the standard OBD2 signals.  If older than 2008 you might still be able to get that data by reverse engineering the signals on the CAN bus.  What kind of car do you have?  Also, what do you mean by fuel intake?</p>
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/4</link>
+        <pubDate>Sat, 14 May 2016 23:21:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-4</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[jp15]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="alanm" data-post="1" data-topic="23">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>This topic is intended for people who have purchased Carloop and are looking for an easy path to be up and running.</p>
+</blockquote>
+</aside>
+<p>Without looking too much into the project, I want to know what I can do with Carloop. Can I do any of the following?</p>
+<ul>
+<li>Track the car</li>
+<li>Get data on fuel usage (mpg, speed, etc)</li>
+<li>Change fuel intake (I’ve heard of fuel converter kits to allow the car to run on ethanol)</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/3</link>
+        <pubDate>Sat, 14 May 2016 17:19:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-3</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/2</link>
+        <pubDate>Mon, 28 Mar 2016 23:55:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-2</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+      <item>
+        <title>Getting Started with Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>This topic is intended for people who have purchased Carloop and are looking for an easy path to be up and running.</p>
+<ol>
+<li>
+<p>To get an idea of how it all works, check out Carloop’s demo program <a href="https://carloop.dyndns.org/t/carloop-demo-program/18">a Carloop demo program</a></p>
+</li>
+<li>
+<p>Make sure your Device firmware is version 0.4.9 or later.  <a href="https://carloop.dyndns.org/t/carloop-demo-program/18/4">Click on this post to check your firmware</a></p>
+</li>
+<li>
+<p>Connect your Carloop to your OBD-II port and try publishing data using <a href="https://docs.particle.io/reference/firmware/photon/#particle-publish-">Particle’s Publish function</a></p>
+</li>
+<li>
+<p>Try to make Carloop respond to OBD signals on the CAN bus using this <a href="https://carloop.dyndns.org/t/carloop-hello-world-program/36?u=alanm">“Hello World” example</a>.</p>
+</li>
+<li>
+<p>Ask questions on this forum and you will get a quick answer form the community.</p>
+</li>
+<li>
+<p>Share your projects with the rest of the community!</p>
+</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/getting-started-with-carloop/23/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-carloop/23/1</link>
+        <pubDate>Mon, 28 Mar 2016 23:54:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-23-1</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-carloop/23.rss">Getting Started with Carloop</source>
+      </item>
+  </channel>
+</rss>

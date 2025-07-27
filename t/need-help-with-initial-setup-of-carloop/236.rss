@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Need help with initial setup of Carloop</title>
+    <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236</link>
+    <description>I&#39;ve been trying to get Carloop working on just a basic level (i.e. reading available PIDs) from my vehicle and I&#39;m not having any luck.
+
+I&#39;m using Carloop with an Electron plugged in.  When I plug the Carloop into the OBD port it powers the Electron, but I can&#39;t get it to read OBD data.  Both cars are Honda (2010 and 2015).
+
+In speaking with Julien over e-mail he recommended that I try changing the speed from the default of 500 to something like 250 or 1000 (because some vehicles use these speeds) and that was a good suggestion but it didn&#39;t make any difference in my case.
+
+Eventually I tried the &quot;minimal&quot; example in the Github library, which just returns the CAN message count.  This does seem to work (with the default speed of 500 kbps) and it seems to return about 1500 CAN messages per second.  Not sure if that is typical or not.
+
+But I&#39;m unable to get any further than this.  The &quot;Blink LED&quot; example doesn&#39;t blink the LED and the &quot;Available PIDs&quot; example (posted by a forum member here) doesn&#39;t return anything.
+
+My Electron is on firmware 0.6.0.
+
+I have an extension cable which is about 10 ft. long and if I use that cable it still exhibits the same problem.  The one interesting thing about the cable is it&#39;s an extremely tight fit in the carloop and OBD port and doesn&#39;t quite go in all the way.  I ordered another ODB extension cable which is shorter and perhaps will fit better, so I&#39;ll find out how that works later this week.
+
+Any help would be greatly appreciated... thanks!
+
+Mike</description>
+    
+    <lastBuildDate>Mon, 10 Apr 2017 20:52:19 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve solved the problem with my setup-- details can be found in my other post, thanks!</p>
+<p><a href="https://carloop.dyndns.org/t/handling-29-bit-extended-format/239" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/handling-29-bit-extended-format/239</a></p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/8</link>
+        <pubDate>Mon, 10 Apr 2017 20:52:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-8</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>Will it fit without the cable? I suppose it’s possible the extension is somehow changing the termination resistance.</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/7</link>
+        <pubDate>Wed, 29 Mar 2017 03:00:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-7</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>,</p>
+<p>Thanks, I ended up at the same conclusion about the buffer.  I already have the firmware set up to send the diagnostic message and check the reply.  The message transmits “successfully” (no error returned on the transmit() call) but I never get a reply back.  For reference, here is the current code I’m using for building the message:</p>
+<p>CANMessage message;<br>
+message.id = 0x7DF;      // This should send the message to the ECU<br>
+message.len = 8;         // message will always be 8 bytes<br>
+message.data[0] = 0x02;  // 2 bytes of data in message<br>
+message.data[1] = 0x01;  // Get current data<br>
+message.data[2] = 0x00;   // The PID to retrieve (Get Available PIDs)<br>
+message.data[3] = 0x55;<br>
+message.data[4] = 0x55;<br>
+message.data[5] = 0x55;<br>
+message.data[6] = 0x55;<br>
+message.data[7] = 0x55;</p>
+<p>I tried some other stuff like the following:</p>
+<ul>
+<li>Setting message ID to 0x7E0 (for some reason <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> sample code is using 0x7E0 instead of 0x7DF and I’m not sure why or if there is a difference)</li>
+<li>Setting the trailing 5 bytes to 0x00 instead of 0x55, or not setting them at all</li>
+<li>Changing the PID to retrieve from 0x00 to something else like 0x0D (vehicle speed)</li>
+</ul>
+<p>I’ve also tried it with and without this filter (still don’t get a reply, but without the filter I can see other CAN messages on the bus):</p>
+<p>canDriver.addFilter(0x7E0, 0x7F0);  // reply might come from an address between 0x7E8 and 0x7EF</p>
+<p>I confirmed my car is using 500kbps for the speed because it states that in the manual.</p>
+<p>One other thing to note, I’m using a 5 ft. extension cable because the Carloop doesn’t fit very well in the OBD port on my car.  That makes me wonder if there is some kind of signal degradation on the transmit where the message is never getting to the OBD port.  My firmware never detects any problems with the OBD interface though (no error status code is set).</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/6</link>
+        <pubDate>Tue, 28 Mar 2017 14:32:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-6</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>,</p>
+<p>It looks like you are not filling the CAN buffer.  If I have read the docs correctly, the default buffer can hold 32 messages.<br>
+<a href="https://docs.particle.io/reference/firmware/photon/#can-canbus-" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/reference/firmware/photon/#can-canbus-</a></p>
+<p>If you filter for OBD diagnostic messages, you will have to make sure you send a request for those messages.  There will be no OBD reply without a request first being sent.  You will need to set up your firmware to behave like an OBD scan tool.  I think there is a sample that does that … you will need to look at that code to see how it is done.</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/5</link>
+        <pubDate>Tue, 28 Mar 2017 04:26:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-5</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>Yeah, I’m still struggling to get replies back from the vehicle.  Tried a different OBD cable which fits better but still have the same problem.  When I filter on all CAN traffic it returns around 1500 messages per second and the Message IDs are usually in the range of 300-1500 or thereabouts.</p>
+<p>I haven’t checked the actual data being returned.  Not sure how I would know the difference between real messages and garbage but the Message IDs seem pretty realistic.</p>
+<p>Is there any chance the receive buffer could be filling up and causing it to “miss” diagnostic reply messages?  I’m looping every 5ms and the amount of messages in the queue hovers around 15 as I continue to receive them (doesn’t appear to be maxing out but maybe I’m not understanding it correctly).</p>
+<p>I haven’t tried this yet, but I assume if I set my filter to 0x7E0 and mask to 0x7F0, that would cover any potential OBD diagnostic reply messages.</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/4</link>
+        <pubDate>Sat, 25 Mar 2017 20:07:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-4</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Is this still a problem?<br>
+Sorry, I only get the chance to login here on weekends…</p>
+<p>One thing to try is to send the messages to the serial port and view on your computer or other connected device.  You will get a whole lot of messages, but by looking at just one of the messages you should be able to tell if you are getting real messages, or just garbage.</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/3</link>
+        <pubDate>Sat, 25 Mar 2017 19:35:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-3</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[packetpilot]]></dc:creator>
+        <description><![CDATA[
+            <p>Subbed; I’m having similar issues with the OBD-blink not working on my 2016 BMW F82 M4 nor on a Toyota Yaris. Haven’t tried yet to see whether carloop_minimal is reporting CAN messages, but I can report that it’s seemingly not reporting GPS location (I do see many asterisks though, and can share output if it’d be useful).</p>
+<p>Only difference on my end other than the cars is firmware 0.6.1, as I’m also using an electron.</p>
+<p><strong>update</strong>: I can see the CAN Messages count increment by +10 every 1s. Hooray, activity, but I have a feeling 10 messages/sec is low (same rate w/ iginition on/engine off, and both on).</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/2</link>
+        <pubDate>Tue, 21 Mar 2017 18:46:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-2</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+      <item>
+        <title>Need help with initial setup of Carloop</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve been trying to get Carloop working on just a basic level (i.e. reading available PIDs) from my vehicle and I’m not having any luck.</p>
+<p>I’m using Carloop with an Electron plugged in.  When I plug the Carloop into the OBD port it powers the Electron, but I can’t get it to read OBD data.  Both cars are Honda (2010 and 2015).</p>
+<p>In speaking with Julien over e-mail he recommended that I try changing the speed from the default of 500 to something like 250 or 1000 (because some vehicles use these speeds) and that was a good suggestion but it didn’t make any difference in my case.</p>
+<p>Eventually I tried the “minimal” example in the Github library, which just returns the CAN message count.  This does seem to work (with the default speed of 500 kbps) and it seems to return about 1500 CAN messages per second.  Not sure if that is typical or not.</p>
+<p>But I’m unable to get any further than this.  The “Blink LED” example doesn’t blink the LED and the “Available PIDs” example (posted by a forum member here) doesn’t return anything.</p>
+<p>My Electron is on firmware 0.6.0.</p>
+<p>I have an extension cable which is about 10 ft. long and if I use that cable it still exhibits the same problem.  The one interesting thing about the cable is it’s an extremely tight fit in the carloop and OBD port and doesn’t quite go in all the way.  I ordered another ODB extension cable which is shorter and perhaps will fit better, so I’ll find out how that works later this week.</p>
+<p>Any help would be greatly appreciated… thanks!</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236/1</link>
+        <pubDate>Tue, 21 Mar 2017 00:37:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-236-1</guid>
+        <source url="https://community.carloop.io/t/need-help-with-initial-setup-of-carloop/236.rss">Need help with initial setup of Carloop</source>
+      </item>
+  </channel>
+</rss>

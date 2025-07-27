@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Message detection</title>
+    <link>https://community.carloop.io/t/message-detection/981</link>
+    <description>Good morning here!!
+
+While talking about car hacking, one of the most important parts of your research would probably be identifying which CAN message is generating a specific action. During my research I found several ways of doing this, some more and some others less effective. I use Socketcan and linux for this.
+
+Do you have any cool method you use for finding CAN messages on the mess the car is generating? Share it and I will include it on this same post to have all of them together :slight_smile: 
+
+Some of this methods are:
+- Recording traffic while executing an action (e.g open a door) and replaying and splitting it recursively checking if the action is repeated, until you have only one message left.
+- Recording traffic on several captures, some of them performing the action and some of them not. The message we want will be on all of the &quot;action captures&quot; and on none of the &quot;captures without the action&quot;. This can be automated easily with a python script.
+
+
+Cheers!!</description>
+    
+    <lastBuildDate>Mon, 26 Aug 2024 07:13:10 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/message-detection/981.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Message detection</title>
+        <dc:creator><![CDATA[halcyoncv]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/fiti">@fiti</a> <img src="https://carloop.dyndns.org/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20">,</p>
+<p>Your methods are spot on! I’ve found that keeping an eye on message ID changes and data byte shifts can be a real game-changer. Plus, comparing traffic when the system is in different states (like when doors are open or closed) can really help pinpoint the relevant messages. Tools like SavvyCAN make this process a breeze.</p>
+          <p><a href="https://community.carloop.io/t/message-detection/981/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/message-detection/981/2</link>
+        <pubDate>Mon, 26 Aug 2024 07:13:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-981-2</guid>
+        <source url="https://community.carloop.io/t/message-detection/981.rss">Message detection</source>
+      </item>
+      <item>
+        <title>Message detection</title>
+        <dc:creator><![CDATA[fiti]]></dc:creator>
+        <description><![CDATA[
+            <p>Good morning here!!</p>
+<p>While talking about car hacking, one of the most important parts of your research would probably be identifying which CAN message is generating a specific action. During my research I found several ways of doing this, some more and some others less effective. I use Socketcan and linux for this.</p>
+<p>Do you have any cool method you use for finding CAN messages on the mess the car is generating? Share it and I will include it on this same post to have all of them together <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Some of this methods are:</p>
+<ul>
+<li>Recording traffic while executing an action (e.g open a door) and replaying and splitting it recursively checking if the action is repeated, until you have only one message left.</li>
+<li>Recording traffic on several captures, some of them performing the action and some of them not. The message we want will be on all of the “action captures” and on none of the “captures without the action”. This can be automated easily with a python script.</li>
+</ul>
+<p>Cheers!!</p>
+          <p><a href="https://community.carloop.io/t/message-detection/981/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/message-detection/981/1</link>
+        <pubDate>Fri, 17 Jan 2020 10:17:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-981-1</guid>
+        <source url="https://community.carloop.io/t/message-detection/981.rss">Message detection</source>
+      </item>
+  </channel>
+</rss>

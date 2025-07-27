@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop retransmits forever when no Ack received</title>
+    <link>https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194</link>
+    <description>**Quick summary**: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged.
+
+**Detail ...**
+My Carloop receives and filters messages as expected, so I&#39;m doing some testing with transmitting messages from Carloop to the OBDII bus.
+
+If a CAN-bus transmitter doesn&#39;t see its Ack bit set (by a receiver), the message is automatically retransmitted by the Photon&#39;s CAN transmitter hardware (this is part of the CAN standard). I&#39;m doing testing in advance of putting this into my car, so I realize the message won&#39;t receive an Ack. My test set-up is Carloop transmitting into a 60 Ω resistor (the equivalent of the two 120 Ω CAN bus termination resistors in parallel). Also &quot;on the bus&quot; is a standard OBDII Bluetooth interface.
+
+I see that when the OBDII Bluetooth interface transmits, it sends the same message a total of 12 times (since it too is not receiving an Ack), so this is expected behaviour.
+
+But transmitting just one message from the Carloop results in it sending forever. Reading the documentation for the Particle Photon&#39;s CAN interface (which seems to be the 1,361-page Reference Manual RM0033, [here](http://www.st.com/content/ccc/resource/technical/document/reference_manual/51/f7/f3/06/cd/b6/46/ec/CD00225773.pdf/files/CD00225773.pdf/jcr:content/translations/en.CD00225773.pdf) ) shows on page 796 that the maximum number of retransmissions should be 255, followed by a long pause. Perhaps the Photon&#39;s CAN bus driver is doing this retransmission after the 255 done by the hardware, but I couldn&#39;t find that code (it must be buried in the interrupt handler).
+
+While I&#39;m sure the CAN interface is very mature and well tested hardware, something is unexpected here (which certainly could include me doing something wrong), so I&#39;m wondering if others have seen retransmissions forever when using the Carloop stand-alone, not in a car.</description>
+    
+    <lastBuildDate>Fri, 23 Dec 2016 14:06:08 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop retransmits forever when no Ack received</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Ah, so the dongle doesn’t ACK. This is interesting.</p>
+<p>The logic for retransmitting is in the silicon, so the reference manual is the best place to look. Where can_hal.cpp would get involved is reading status register and perhaps clearing some transmit bits.</p>
+<p>I’m not worried about the retransmissions because you’re correct that if the message is acknowledged then no retransmission will happen.</p>
+<p>I’d like to share two ideas for testing with you:</p>
+<ul>
+<li>
+<p>For desktop testing with a real Carloop, you can put the CAN in loopback test mode which will act as if all messages were acknowledged and will make it so any transmitted message is added to the receive queue.<br>
+<code>carloop.can().begin(500000, CAN_TEST_MODE); // instead of carloop.begin();</code></p>
+</li>
+<li>
+<p>You can also check how I did tests on a laptop using the Catch test helper for the code reader app and the mileage tracker app.<br>
+<a href="https://github.com/carloop/app-code-reader/tree/master/tests" class="inline-onebox">app-code-reader/tests at master · carloop/app-code-reader · GitHub</a><br>
+<a href="https://github.com/carloop/app-reminder/tree/master/tests" class="inline-onebox">app-reminder/tests at master · carloop/app-reminder · GitHub</a><br>
+I created test stubs for the firmware APIs I used in the application and I was able to run through the main logic in my code this way.</p>
+</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/4</link>
+        <pubDate>Fri, 23 Dec 2016 14:06:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-194-4</guid>
+        <source url="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194.rss">Carloop retransmits forever when no Ack received</source>
+      </item>
+      <item>
+        <title>Carloop retransmits forever when no Ack received</title>
+        <dc:creator><![CDATA[Mitchell]]></dc:creator>
+        <description><![CDATA[
+            <p>You’re right, thank you. I did not have the Carloop on the bus when I saw the 12 transmissions from the OBD dongle as I didn’t realize the Carloop would Ack, figuring only intended receivers would Ack. I’ve looked more carefully now, and the behavior is:</p>
+<ol>
+<li>
+<p>If the Carloop is not on the bus, the OBD dongle transmits 12 times consecutively, at five-second intervals, and the Ack bit is not set.</p>
+</li>
+<li>
+<p>If the Carloop is on the bus, the OBD dongle transmits once, at five second intervals, and the Ack bit is set. So you’re right, Carloop does the Ack for the dongle’s transmission.</p>
+</li>
+<li>
+<p>When the Carloop transmits with either nothing else, or only the OBD dongle on the bus, the Carloop transmits constantly (only about 20 idle bit times between messages) for between about 1 to 5 seconds. If I initiate another transmission from Carloop after this, it is sent, so the Bus Off condition clears itself. The RM0033 says Bus Off is cleared when the OBD bus is idle for 128 11-bit times (less than 3 ms).</p>
+</li>
+</ol>
+<p>I had looked at can_hal.c before and it only seems to queue messages or call other functions, the actual logic of what happens when no Ack is received isn’t in that file. I spent much time looking through all the other files in that directory tree that seemed to be related to CAN, and all they do is populate structures, or call other functions, I couldn’t see where the Ack or retransmit logic is, so I don’t know if this is caused by the CAN interface hardware or some software somewhere (or if this is just something I’m doing wrong).</p>
+<p>It is a bit scary that the Carloop would transmit constantly for several seconds, but if any device on the OBD bus will Ack, I suppose this would never happen, and in any case, the low priority of the IDs I’m sending should ensure the car’s OBD bus would not be disrupted.</p>
+          <p><a href="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/3</link>
+        <pubDate>Fri, 23 Dec 2016 00:15:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-194-3</guid>
+        <source url="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194.rss">Carloop retransmits forever when no Ack received</source>
+      </item>
+      <item>
+        <title>Carloop retransmits forever when no Ack received</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Your test setup looks good. I’m curious why the Carloop doesn’t ACK the message from the OBD dongle.</p>
+<p>The retransmission limit you describe is the bus off state. I know I’ve seen the Photon enter bus off but I’m not sure what is the current behavior to exit bus off and retransmit after that. I would assume that the TX message remains in the CAN hardware peripheral on the Photon until it is transmitted successfully.</p>
+<p>The place to look for the implementation is here:<br>
+<a href="https://github.com/spark/firmware/blob/develop/hal/src/stm32f2xx/can_hal.cpp" class="onebox" target="_blank" rel="noopener">https://github.com/spark/firmware/blob/develop/hal/src/stm32f2xx/can_hal.cpp</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/2</link>
+        <pubDate>Thu, 22 Dec 2016 20:34:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-194-2</guid>
+        <source url="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194.rss">Carloop retransmits forever when no Ack received</source>
+      </item>
+      <item>
+        <title>Carloop retransmits forever when no Ack received</title>
+        <dc:creator><![CDATA[Mitchell]]></dc:creator>
+        <description><![CDATA[
+            <p><strong>Quick summary</strong>: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged.</p>
+<p><strong>Detail …</strong><br>
+My Carloop receives and filters messages as expected, so I’m doing some testing with transmitting messages from Carloop to the OBDII bus.</p>
+<p>If a CAN-bus transmitter doesn’t see its Ack bit set (by a receiver), the message is automatically retransmitted by the Photon’s CAN transmitter hardware (this is part of the CAN standard). I’m doing testing in advance of putting this into my car, so I realize the message won’t receive an Ack. My test set-up is Carloop transmitting into a 60 Ω resistor (the equivalent of the two 120 Ω CAN bus termination resistors in parallel). Also “on the bus” is a standard OBDII Bluetooth interface.</p>
+<p>I see that when the OBDII Bluetooth interface transmits, it sends the same message a total of 12 times (since it too is not receiving an Ack), so this is expected behaviour.</p>
+<p>But transmitting just one message from the Carloop results in it sending forever. Reading the documentation for the Particle Photon’s CAN interface (which seems to be the 1,361-page Reference Manual RM0033, <a href="http://www.st.com/content/ccc/resource/technical/document/reference_manual/51/f7/f3/06/cd/b6/46/ec/CD00225773.pdf/files/CD00225773.pdf/jcr:content/translations/en.CD00225773.pdf" rel="noopener nofollow ugc">here</a> ) shows on page 796 that the maximum number of retransmissions should be 255, followed by a long pause. Perhaps the Photon’s CAN bus driver is doing this retransmission after the 255 done by the hardware, but I couldn’t find that code (it must be buried in the interrupt handler).</p>
+<p>While I’m sure the CAN interface is very mature and well tested hardware, something is unexpected here (which certainly could include me doing something wrong), so I’m wondering if others have seen retransmissions forever when using the Carloop stand-alone, not in a car.</p>
+          <p><a href="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194/1</link>
+        <pubDate>Thu, 22 Dec 2016 17:51:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-194-1</guid>
+        <source url="https://community.carloop.io/t/carloop-retransmits-forever-when-no-ack-received/194.rss">Carloop retransmits forever when no Ack received</source>
+      </item>
+  </channel>
+</rss>

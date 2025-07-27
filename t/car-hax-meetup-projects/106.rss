@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Car Hax Meetup Projects</title>
+    <link>https://community.carloop.io/t/car-hax-meetup-projects/106</link>
+    <description>This topic is the specifically related to the [Car Hax Meetup](http://www.meetup.com/Car-Hax/) it&#39;s a forum to discuss progress on current Car Hacking projects.  Feel free to add any project proposals you&#39;d like to work on and :thumbsup: the ones you&#39;d like to join.</description>
+    
+    <lastBuildDate>Mon, 12 Sep 2016 20:40:20 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/car-hax-meetup-projects/106.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[ian.z]]></dc:creator>
+        <description><![CDATA[
+            <p>It’s 2002. It should have CAN bus bridged out over OBDII. I will check it when I get chance.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/16</link>
+        <pubDate>Mon, 12 Sep 2016 20:40:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-16</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks Ian!  What year is the MR2?  Does it have the CAN bus exposed on pins 6 and 14 of the OBD-II port?</p>
+<p>Definitely bring it but come early so we can check if it will work.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/15</link>
+        <pubDate>Mon, 12 Sep 2016 05:49:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-15</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[ian.z]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> <a class="mention" href="https://community.carloop.io/u/parin.dedhia">@parin.dedhia</a></p>
+<p>I can bring in my manual MR2, if we need a smaller and mechanically simpler car to work on.</p>
+<p>Best,<br>
+Ian</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/14</link>
+        <pubDate>Mon, 12 Sep 2016 04:32:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-14</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[kane]]></dc:creator>
+        <description><![CDATA[
+            <p>Avidan’s right! My dad drove FJ40’s in the deserts of Kuwait, and I grew up in redneck NY working on my friends’ rusty old Broncos and Challengers. I’m a CS nerd though, and excited to learn about the intersection of the two. Looking forward to next week.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/13</link>
+        <pubDate>Sat, 10 Sep 2016 20:09:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-13</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/avidan">@avidan</a> it is a great pleasure and honor having you in our community! Thanks for hosting our next meetup!</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/12</link>
+        <pubDate>Fri, 09 Sep 2016 21:15:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-12</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[avidan]]></dc:creator>
+        <description><![CDATA[
+            <p>hey all,<br>
+just wanted to introduce myself quickly. i am the founder of Root Ventures, and we are BEYOND excited to host this event. In addition to being the earliest and lead investors in <a href="http://Particle.io" rel="noopener nofollow ugc">Particle.io</a>, I am a huge car hacking nut. I was an early member of mp3car, and hacktheibus. My first “adult” car was promptly torn down to hold a custom in-dash PC that had serial access to the ibus (bmw). I am super excited to learn about benchtop hacking, since mine always was precariously done in the garage.<br>
+see you all next week!</p>
+<p>ps. <a class="mention" href="https://community.carloop.io/u/kane">@kane</a> from root.vc is a car nut too. but he’s into obscure cars. like old japanese suvs. god bless his soul.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/11</link>
+        <pubDate>Fri, 09 Sep 2016 19:53:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-11</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[parin.dedhia]]></dc:creator>
+        <description><![CDATA[
+            <p>Great, see you there.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/10</link>
+        <pubDate>Fri, 09 Sep 2016 17:38:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-10</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[kane]]></dc:creator>
+        <description><![CDATA[
+            <p>We can pull it mostly up and leave some of the sidewalk open!</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/9</link>
+        <pubDate>Wed, 07 Sep 2016 18:50:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-9</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[parin.dedhia]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> Sounds like a plan. Pulling the car right up to the doors might block the pedestrian pathway, can we double confirm with root.vc if thats okay? Apart from that, I will be getting my particle photon, cables, a macbook pro and the car.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/8</link>
+        <pubDate>Wed, 07 Sep 2016 06:57:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-8</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/parin.dedhia">@parin.dedhia</a> .  What do you think?</p>
+<blockquote>
+<p>We couldn’t get a car directly into the space, but we have glass double doors that open onto a driveway, where you could pull the car right up to the doors. Would that work? pic shows a parallel parked car but we can drive up to the doors too</p>
+</blockquote>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b8584db1aba3c6a9c61e2d60941b0f0927799a8a.png" data-download-href="//carloop-community.dyndns.org/uploads/default/b8584db1aba3c6a9c61e2d60941b0f0927799a8a" title="Screenshot 2016-09-06 21.12.45.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/b8584db1aba3c6a9c61e2d60941b0f0927799a8a_2_350x500.png" width="350" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/b8584db1aba3c6a9c61e2d60941b0f0927799a8a_2_350x500.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/b8584db1aba3c6a9c61e2d60941b0f0927799a8a_2_525x750.png 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/b8584db1aba3c6a9c61e2d60941b0f0927799a8a_2_700x1000.png 2x" data-dominant-color="676966"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/7</link>
+        <pubDate>Wed, 07 Sep 2016 04:57:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-7</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Very cool! I’m waiting to hear from the Root.vc folks if there will be space to roll your car in.</p>
+<p>Best,<br>
+Alan</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/6</link>
+        <pubDate>Tue, 06 Sep 2016 22:42:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-6</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[parin.dedhia]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, you mentioned that there is space for 1 car in the next meet up. I would be excited to bring in my Honda Civic and we could do a real time demo of hacking on it. Please let me know what you think about it. I would be more than happy to have it in the meet up.</p>
+<p>Thanks,<br>
+Parin</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/5</link>
+        <pubDate>Tue, 06 Sep 2016 18:10:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-5</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[sahilpotnis]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> for announcing the next Meetup. I am not sure as of now whether we will be able to get the ECU and an instrument cluster, we will keep you posted on it.</p>
+<p>Also, it would be very helpful to know our agenda on Sep 14th if you have planned anything with other participating members. See you!</p>
+<p>Best,<br>
+Sahil</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/4</link>
+        <pubDate>Sun, 04 Sep 2016 05:56:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-4</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Our next <a href="http://www.meetup.com/Car-Hax/events/233714172/">Car Hax Meetup</a> is on September, 14 at Root.vc in SF.<br>
+<a class="mention" href="https://community.carloop.io/u/sahilpotnis">@sahilpotnis</a> and <a class="mention" href="https://community.carloop.io/u/parin.dedhia">@parin.dedhia</a> you mentioned you might be able to bring a Honda ECU and an instrument cluster from a junkyard?  If you do, please ask the junkyard you are buying it from to leave a pigtail connector (see next paragraph).  You can go to <a href="http://car-part.com">car-part.com</a> and search for the ECU and Instrument Cluster (dashboard) of your exact Honda and they’ll pull the part and ship it to you.  It would be very good to test this and we can help you build your test stand.</p>
+<p>Make sure you specifically request that they leave 6 to 8 inches of “pigtail wiring harness” on both the ECU and instrument cluster so it comes with the connectors and wires.  Thanks guys!!</p>
+<p>Also, make sure you order a 12V power supply.  I highly recommend <a href="https://www.amazon.com/Pyramid-PS9KX-Supply-Cigarette-Lighter/dp/B0002BA570/ref=sr_1_1?ie=UTF8&amp;qid=1472878836&amp;sr=8-1&amp;keywords=12v+power+supply+pyramid">this one</a> but any 12V power supply will work.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/3</link>
+        <pubDate>Sat, 03 Sep 2016 05:02:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-3</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Presentation at Car Hax meetup in Berkeley: <a href="http://www.slideshare.net/getcarloop/car-hacking-101/getcarloop/car-hacking-101">http://www.slideshare.net/getcarloop/car-hacking-101/getcarloop/car-hacking-101</a></p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/2</link>
+        <pubDate>Thu, 18 Aug 2016 21:39:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-2</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+      <item>
+        <title>Car Hax Meetup Projects</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>This topic is the specifically related to the <a href="http://www.meetup.com/Car-Hax/">Car Hax Meetup</a> it’s a forum to discuss progress on current Car Hacking projects.  Feel free to add any project proposals you’d like to work on and <img src="//carloop-community.dyndns.org/images/emoji/twitter/thumbsup.png?v=12" title=":thumbsup:" class="emoji" alt=":thumbsup:" loading="lazy" width="20" height="20"> the ones you’d like to join.</p>
+          <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hax-meetup-projects/106/1</link>
+        <pubDate>Thu, 18 Aug 2016 17:54:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-106-1</guid>
+        <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+      </item>
+  </channel>
+</rss>

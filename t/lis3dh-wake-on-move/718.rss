@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>LIS3DH Wake on Move</title>
+    <link>https://community.carloop.io/t/lis3dh-wake-on-move/718</link>
+    <description>I have a Carloop + GPS (with LIS3DH) and an AssetTracker V2 (also contains an LIS3DH).  I am able to successfully use the 1_WakeOnMove example with the AssetTracker, but I&#39;m not able to with the Carloop + GPS.  The problem is that the Carloop + GPS never gets quiet enough (x,y,x is always changing - even when the unit is sitting on my desktop with no movement).  
+
+My test enviornment consists of a single Electron, several Carloop + GPS modules, a single AssetTrackerV2 shield, firmware V0.6.4.  I flash the 1_WakeOnMove application onto the Electron and install the Electron into the AssetTrackerV2 and it works perfectly.  The unit goes to sleep as expected and wakes as expected, 100% of the time.  I then remove the Electron from the AssetTrackerV2 sheild and assemble it with my Carloop + GPS shields and perform the same test.  The accelerometer is never quite enough for the device to enter sleep mode.  I&#39;ve tried it with several Carloop + GPS modules.  
+
+Is the a trick that I&#39;m missing?</description>
+    
+    <lastBuildDate>Tue, 25 Sep 2018 20:27:15 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/lis3dh-wake-on-move/718.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>LIS3DH Wake on Move</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a>,</p>
+<p>I just received my CarloopGPS last week, so now I can look into how the LIS3DH behaves.<br>
+Also, I do not have an AssetTracker, so I will have to ask you some questions.</p>
+<p>Accelerometers in general have adjustable sensitivity as well as thresholds for wake functionality.<br>
+I was reading about one that had adjustable sensitivity of 2G, 4G or 8G.  If the accelerometer is difficult to get quiet, then probably the setting is too sensitive.  Note that the lower setting (ie. 2G) is the most sensitive.  The threshold setting should be set higher than the background x,y,z variation so it does not trigger unless the movement is big enough that you want to detect it.  Both of these should be adjustable in the firmware code.</p>
+<p>The other aspect is hardware.  Older GPS units to go along with Carloop communicated via Serial1 communications. I have to verify if this is still the case for the new CarloopGPS. The Carloop would always have to monitor the serial line to get the x.y.z in order to detect movement.  Does the AssetTracker communicate with the LIS3DH the same way?  It could be possible that there is additional connection between the sensor and the interrupt line, but you would have to look that up.</p>
+          <p><a href="https://community.carloop.io/t/lis3dh-wake-on-move/718/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lis3dh-wake-on-move/718/2</link>
+        <pubDate>Tue, 25 Sep 2018 20:15:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-718-2</guid>
+        <source url="https://community.carloop.io/t/lis3dh-wake-on-move/718.rss">LIS3DH Wake on Move</source>
+      </item>
+      <item>
+        <title>LIS3DH Wake on Move</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I have a Carloop + GPS (with LIS3DH) and an AssetTracker V2 (also contains an LIS3DH).  I am able to successfully use the 1_WakeOnMove example with the AssetTracker, but I’m not able to with the Carloop + GPS.  The problem is that the Carloop + GPS never gets quiet enough (x,y,x is always changing - even when the unit is sitting on my desktop with no movement).</p>
+<p>My test enviornment consists of a single Electron, several Carloop + GPS modules, a single AssetTrackerV2 shield, firmware V0.6.4.  I flash the 1_WakeOnMove application onto the Electron and install the Electron into the AssetTrackerV2 and it works perfectly.  The unit goes to sleep as expected and wakes as expected, 100% of the time.  I then remove the Electron from the AssetTrackerV2 sheild and assemble it with my Carloop + GPS shields and perform the same test.  The accelerometer is never quite enough for the device to enter sleep mode.  I’ve tried it with several Carloop + GPS modules.</p>
+<p>Is the a trick that I’m missing?</p>
+          <p><a href="https://community.carloop.io/t/lis3dh-wake-on-move/718/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lis3dh-wake-on-move/718/1</link>
+        <pubDate>Tue, 04 Sep 2018 11:27:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-718-1</guid>
+        <source url="https://community.carloop.io/t/lis3dh-wake-on-move/718.rss">LIS3DH Wake on Move</source>
+      </item>
+  </channel>
+</rss>

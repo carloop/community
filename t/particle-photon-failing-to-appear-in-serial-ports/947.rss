@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Particle photon failing to appear in serial ports</title>
+    <link>https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947</link>
+    <description>&lt;cross posted to particle community&gt;
+
+I’m following the instructions in https://www.carloop.io/apps/app-socketcan/ to set up socketcan with carloop and my Particle Photon. The instructions indicate that when I connect my photon to my laptop with a USB cable, I should see the device appear under Ports in Device Manager. However, I don’t see any Ports appear. I also don’t see the Photon appear under Universal Serial Bus Controllers.
+The instructions indicate A serial port named /dev/ttyACM0 should now be available. Check with ls /dev/ttyACM*. However, when I try this command, I don’t see any ttyACM devices appear.
+I’m running Windows 10 on a Surface Book.
+My Particle Photon is connected to wifi, and when I try particle nyan from Particle CLI, I’m able to see the lights flash rainbow colors. However, it seems that the USB connection isn’t being recognized. `particle serial identify` returns `Could not identify device: No serial port identified` on my device CL, and within bash I get the error `! The `serialport` dependency is missing or invalid.
+! Please reinstall: https://docs.particle.io/tutorials/developer-tools/cli/#installing
+Cannot find module &#39;@serialport/bindings&#39;`
+I&#39;ve tried re-installing particle-cli but that doesn&#39;t seem to resolve the issue.
+Any additional troubleshooting tips you might recommend? I have two different Photons and I’ve hit this issue with both of them. I’m hoping to get the serial port to appear so that I can proceed with the steps in the linked tutorial.
+Thanks in advance!!</description>
+    
+    <lastBuildDate>Tue, 05 Nov 2019 13:23:52 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Particle photon failing to appear in serial ports</title>
+        <dc:creator><![CDATA[kimkim]]></dc:creator>
+        <description><![CDATA[
+            <p>thanks for your response! I forgot to specify - I’m running Ubuntu Bash for Windows. (<a href="https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0" rel="noopener nofollow ugc">https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0</a>)<br>
+I assumed that this environment would be compatible. Is this not the case?<br>
+If not, I can try installing VMs as well. I have the surface book I described available to me in addition to a MacBook.</p>
+          <p><a href="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/3</link>
+        <pubDate>Tue, 05 Nov 2019 13:23:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-947-3</guid>
+        <source url="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947.rss">Particle photon failing to appear in serial ports</source>
+      </item>
+      <item>
+        <title>Particle photon failing to appear in serial ports</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>HI <a class="mention" href="https://community.carloop.io/u/kimkim">@kimkim</a>, unfortunately, <code>socketcan</code> is only supported in a Linux OS environment.  One option you have is to download VirtualBox and install an <code>Ubuntu 16.04</code> or <code>Ubuntu 18.04</code> image.  This way you can run a Linux virtual machine inside your Windows 10 operating system.  When you start your virtual machine, make sure you enable USB ports to be available, so they can communicate with the Particle Photon over serial.</p>
+<p>The reason why Particle CLI works partially is because Particle CLI is based on npm and works on all 3 most popular operating systems (Windows, Mac OS, and Linux).  If you try everything within the VirtualBox machine it should work.</p>
+<p>Hope this helps</p>
+          <p><a href="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/2</link>
+        <pubDate>Tue, 05 Nov 2019 07:16:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-947-2</guid>
+        <source url="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947.rss">Particle photon failing to appear in serial ports</source>
+      </item>
+      <item>
+        <title>Particle photon failing to appear in serial ports</title>
+        <dc:creator><![CDATA[kimkim]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m following the instructions in <a href="https://www.carloop.io/apps/app-socketcan/">https://www.carloop.io/apps/app-socketcan/</a> to set up socketcan with carloop and my Particle Photon. The instructions indicate that when I connect my photon to my laptop with a USB cable, I should see the device appear under Ports in Device Manager. However, I don’t see any Ports appear. I also don’t see the Photon appear under Universal Serial Bus Controllers.<br>
+The instructions indicate A serial port named /dev/ttyACM0 should now be available. Check with ls /dev/ttyACM*. However, when I try this command, I don’t see any ttyACM devices appear.<br>
+I’m running Windows 10 on a Surface Book.<br>
+My Particle Photon is connected to wifi, and when I try particle nyan from Particle CLI, I’m able to see the lights flash rainbow colors. However, it seems that the USB connection isn’t being recognized. <code>particle serial identify</code> returns <code>Could not identify device: No serial port identified</code> on my device CL, and within bash I get the error <code>! The </code>serialport<code> dependency is missing or invalid. ! Please reinstall: https://docs.particle.io/tutorials/developer-tools/cli/#installing Cannot find module '@serialport/bindings'</code><br>
+I’ve tried re-installing particle-cli but that doesn’t seem to resolve the issue.<br>
+Any additional troubleshooting tips you might recommend? I have two different Photons and I’ve hit this issue with both of them. I’m hoping to get the serial port to appear so that I can proceed with the steps in the linked tutorial.<br>
+Thanks in advance!!</p>
+          <p><a href="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947/1</link>
+        <pubDate>Tue, 05 Nov 2019 05:35:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-947-1</guid>
+        <source url="https://community.carloop.io/t/particle-photon-failing-to-appear-in-serial-ports/947.rss">Particle photon failing to appear in serial ports</source>
+      </item>
+  </channel>
+</rss>

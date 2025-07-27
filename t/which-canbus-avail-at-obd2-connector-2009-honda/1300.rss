@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Which CANbus avail at OBD2 connector 2009 Honda</title>
+    <link>https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300</link>
+    <description>I want to receive/transmit lock and unlock codes to my 2009 Honda Accord.
+
+I have plugged into the CANbus at the OBD2 connector and am successfully reading CAN frames.  However, I&#39;m not capturing any lock/lock codes.
+
+I read [on this post](https://carloop.dyndns.org/t/honda-b-can-and-carloop/152) that there are 2 CAN busses on the Honda&#39;s, bridged through a gateway module.  SO my questions are:
+
+1. Which CAN bus (F or B) am I connecting to at the OBD2 connector?  Since my speed is 500k on the bus I assume F.
+2. How can I ask the gateway to bridge lock codes (send and receive) across the busses?
+3. If #2 is not possible, how can I (easily) connect to the CAN-B on this car?  I say in the other post that an Odysey owner jumpered into CAN-B at a car heater module...but hoping for something easier or under-dash.</description>
+    
+    <lastBuildDate>Tue, 15 Nov 2022 22:19:14 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Which CANbus avail at OBD2 connector 2009 Honda</title>
+        <dc:creator><![CDATA[ohseegee]]></dc:creator>
+        <description><![CDATA[
+            <p>I want to receive/transmit lock and unlock codes to my 2009 Honda Accord.</p>
+<p>I have plugged into the CANbus at the OBD2 connector and am successfully reading CAN frames.  However, I’m not capturing any lock/lock codes.</p>
+<p>I read <a href="https://carloop.dyndns.org/t/honda-b-can-and-carloop/152">on this post</a> that there are 2 CAN busses on the Honda’s, bridged through a gateway module.  SO my questions are:</p>
+<ol>
+<li>Which CAN bus (F or B) am I connecting to at the OBD2 connector?  Since my speed is 500k on the bus I assume F.</li>
+<li>How can I ask the gateway to bridge lock codes (send and receive) across the busses?</li>
+<li>If <span class="hashtag-raw">#2</span> is not possible, how can I (easily) connect to the CAN-B on this car?  I say in the other post that an Odysey owner jumpered into CAN-B at a car heater module…but hoping for something easier or under-dash.</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300/1</link>
+        <pubDate>Tue, 15 Nov 2022 22:19:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1300-1</guid>
+        <source url="https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300.rss">Which CANbus avail at OBD2 connector 2009 Honda</source>
+      </item>
+  </channel>
+</rss>

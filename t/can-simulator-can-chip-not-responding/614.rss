@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can simulator: CAN chip not responding</title>
+    <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614</link>
+    <description>I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error :
+
+Error occured: CAN chip not responding
+
+And no more errors. Is there a way to figure out why this is happening ?</description>
+    
+    <lastBuildDate>Sat, 26 Oct 2019 00:25:51 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried a couple of PCB versions of the ECU sim with no success, so I done my own : <a href="https://carloop.dyndns.org/t/my-own-ecu-simulator/720" class="inline-onebox">My own ECU simulator - Car Hacking - Carloop Community</a> .</p>
+<p>Hope it helps.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/33">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/33</link>
+        <pubDate>Sat, 26 Oct 2019 00:25:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-33</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[rob]]></dc:creator>
+        <description><![CDATA[
+            <p>Greetings,</p>
+<p>Sorry to revive an old thread. Did this work for the folks who were trying to get their simulators running?</p>
+<p>I ordered the board direct from OSH Park, and the TJA1049 seems to be properly grounded, but I am also getting the “Error occured: CAN chip not responding” message. I tried the test with the Particle Photon and I get “MCP2515 did not respond. Check wiring.”</p>
+<p>Would be grateful for any insight.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62" title="IMG_5263.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62_2_666x500.JPG" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62_2_666x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62_2_999x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/8c65b2e67dd7ba4ae20e466fd2274e2081d59b62_2_1332x1000.JPG 2x" data-dominant-color="80625B"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/32">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/32</link>
+        <pubDate>Fri, 12 Jul 2019 15:07:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-32</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>Ill try that version to discard a soldering issue as well.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/31">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/31</link>
+        <pubDate>Sun, 03 Jun 2018 22:41:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-31</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>The readme on the <a href="https://github.com/carloop/simulator">CAN simulator GitHub repository</a> is now updated with links to the <a href="https://oshpark.com/shared_projects/GOPwocjS">latest PCB on OSH Park</a>. I updated the version printed on the PCB to v1.1 to avoid confusion in the future when someone prints this PCB.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/30">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/30</link>
+        <pubDate>Sun, 03 Jun 2018 22:00:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-30</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, I can confirm that the link <em>Order a simulator v1 PCB from OSH Park</em> from <a href="https://github.com/carloop/simulator" class="inline-onebox">GitHub - carloop/simulator: CAN bus simulator on the Rasperry Pi</a> linked to the old version of the PCB <strong>without</strong> the CAN tranceiver TJA1049 pin 8 shorted to ground.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/eaec734a769b877d49228a5dea5aeeabf11baa89.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/eaec734a769b877d49228a5dea5aeeabf11baa89" title="image.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/eaec734a769b877d49228a5dea5aeeabf11baa89_2_690x453.jpg" width="690" height="453" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/eaec734a769b877d49228a5dea5aeeabf11baa89_2_690x453.jpg, //carloop-community.dyndns.org/uploads/default/original/1X/eaec734a769b877d49228a5dea5aeeabf11baa89.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/eaec734a769b877d49228a5dea5aeeabf11baa89.jpg 2x" data-dominant-color="4D2167"></a></div><p></p>
+<p>The PCB design on GitHub is fixed. I’ll go ahead tonight and upload it to OSH Park and update the README.</p>
+<p>However I still don’t expect a missing ground on the TJA1049 CAN transceiver to lead to the CAN controller MCP2515 not responding to the SPI communications from the Raspberry Pi. There might be something else going on.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/29">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/29</link>
+        <pubDate>Thu, 31 May 2018 15:48:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-29</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>That means that the PCB design in github (v1) is fixed ? So, can I take as the proper one ?</p>
+<p>Thanks for all the support.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/28</link>
+        <pubDate>Thu, 31 May 2018 02:55:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-28</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>That must be it. <img src="//carloop-community.dyndns.org/images/emoji/twitter/tired_face.png?v=12" title=":tired_face:" class="emoji" alt=":tired_face:" loading="lazy" width="20" height="20"></p>
+<p>Well the fix is simple.</p>
+<p>I’ll be let sure to update OSH park later.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/27</link>
+        <pubDate>Thu, 31 May 2018 00:18:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-27</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p>When I checked my PCB and Pin8 on IC2 with all the grounds, it never had continuity. It definitely was not grounded. Did you update the Eagle, but somehow OshPark is using the previous one?</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/26</link>
+        <pubDate>Tue, 29 May 2018 16:56:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-26</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I scraped the solder mask of the ground plane and shorted the pin to it.</p>
+<p>To be clear I don’t think this is the issue. Pin 8 should be connected to ground on the PCBs you printed (I updated the Eagle files after I found the mistake). Besides the result of this missing ground would be no signal exchange with the outside CAN and would not affect SPI communications with the MCP2515 CAN controller.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/25</link>
+        <pubDate>Tue, 29 May 2018 13:45:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-25</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> - Awesome information here!!</p>
+<p>I didn’t have any free time this weekend to tackle this. This is on my things to get done this week. Hopefully adding the ground will fix my issues.</p>
+<p>But I’ll run through your tests above with my multi-meter to verify what you see.</p>
+<p>On your assembled board, how did you end up grounding Pin8 on IC2? I see the large glob of solder/flux. Did you drill a hole through, or carve out a little path to ground?</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/24</link>
+        <pubDate>Tue, 29 May 2018 07:11:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-24</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ll try that tomorrow. I’ll let you know the results.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/23</link>
+        <pubDate>Tue, 29 May 2018 05:28:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-23</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Here’s another avenue to validate the hardware before diving deeper into the Linux OS.</p>
+<p>Connect a Particle Photon or a 3.3V Arduino to the CAN simulator board directly and see if the board responds to a SPI request.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ca599f11833307edffd5a5998a7b76f38c74a918.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/ca599f11833307edffd5a5998a7b76f38c74a918" title="20180528_230824.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ca599f11833307edffd5a5998a7b76f38c74a918_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ca599f11833307edffd5a5998a7b76f38c74a918_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/ca599f11833307edffd5a5998a7b76f38c74a918_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/ca599f11833307edffd5a5998a7b76f38c74a918_2_1332x1000.jpg 2x" data-dominant-color="433D39"></a></div><p></p>
+<p>Here’s the pinout</p>
+<p>Photon → Pi GPIO<br>
+CS: A2 → 24<br>
+SCK: A3 → 23<br>
+MISO: A4 → 21<br>
+MOSI: A5 → 19<br>
+3.3V: 3V3 → 1<br>
+Ground: GND → 39</p>
+<p>Flash this program to the Photon.</p>
+<pre><code class="lang-auto">#define WRITE_COMMAND 0x02
+#define READ_COMMAND 0x03
+
+#define REGISTER_CNF2 0x29
+#define INITIAL_CNF2 ((1 &lt;&lt; 7) | (2 &lt;&lt; 3))
+void setup() {
+  Serial.begin();
+
+  Serial.printlnf("Write %02x to MCP2515 register CNF2 and reading back", INITIAL_CNF2);
+
+  SPI.begin(SS);
+
+  digitalWrite(SS, LOW);
+  SPI.transfer(WRITE_COMMAND);
+  SPI.transfer(REGISTER_CNF2);
+  SPI.transfer(INITIAL_CNF2);
+  digitalWrite(SS, HIGH);
+
+  delay(1);
+
+  digitalWrite(SS, LOW);
+  SPI.transfer(READ_COMMAND);
+  SPI.transfer(REGISTER_CNF2);
+  uint8_t result = SPI.transfer(0);
+  digitalWrite(SS, HIGH);
+
+  if (result == INITIAL_CNF2) {
+    Serial.println("MCP2515 responded with expected result.");
+  } else {
+    Serial.println("MCP2515 did not respond. Check wiring.");
+  }
+}
+</code></pre>
+<p>I see this output with the setup pictured above:</p>
+<pre><code class="lang-auto">Write 90 to MCP2515 register CNF2 and reading back
+MCP2515 responded with expected result
+</code></pre>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/22</link>
+        <pubDate>Tue, 29 May 2018 03:15:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-22</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group quote-modified" data-username="Trey" data-post="12" data-topic="614">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/t/c67d28/48.png" class="avatar"> Trey:</div>
+<blockquote>
+<p>One thing I see from other schematics on the web, is the use of GPIO25 on the Pi for the Interrupt to the MCP2515 Pin12.</p>
+<p>I don’t see that on your board. I am very new to all of this, and still don’t truly understand what the interrupts are used for. Is it not needed in your implementation?</p>
+</blockquote>
+</aside>
+<p>To address this question directly, no the interrupt is not used in this design. The simulator program polls the MCP2515 for available messages.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/21</link>
+        <pubDate>Mon, 28 May 2018 17:30:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-21</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Here’s a closeup of my assembled board.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5" title="IMG_5397.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5_2_690x463.JPG" width="690" height="463" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5_2_690x463.JPG, //carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG 2x" data-dominant-color="5A5461"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/20</link>
+        <pubDate>Mon, 28 May 2018 17:27:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-20</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I upgraded the Raspberry Pi as much as I could. The kernel is now:</p>
+<pre><code class="lang-auto">Linux pi3 4.14.43-v7+ #1115 SMP Fri May 25 14:27:48 BST 2018 armv7l GNU/Linux
+</code></pre>
+<p>The simulator-program is still working on my setup.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/19</link>
+        <pubDate>Mon, 28 May 2018 17:11:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-19</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>So one hardware debug method I like to use is to set <a href="https://www.adafruit.com/product/308">this multimeter from Adafruit</a> to the frequency measurement setting and check if signals I expect to toggle are actually toggling. This is how I originally found out that pin 8 from the CAN transceiver had to be grounded: even though the input lines were toggling, the output lines were not.</p>
+<p>While running the CAN simulator program, the SPI clock (SCK) pin is indicating 73 kHz on the multimeter (that’s not the actual frequency, but it gives an idea the pin is toggling).<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b.png" data-download-href="//carloop-community.dyndns.org/uploads/default/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b" title="can simulator sck.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b.png" width="690" height="439" data-dominant-color="26241F"></a></div><p></p>
+<p>While running the CAN simulator program, the MISO pin is indicating 7.3 kHz on the multimeter.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/79615f19d6f6a4b87b40bf2d5093fbed6373f30d.png" data-download-href="//carloop-community.dyndns.org/uploads/default/79615f19d6f6a4b87b40bf2d5093fbed6373f30d" title="can simulator miso.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/79615f19d6f6a4b87b40bf2d5093fbed6373f30d.png" width="690" height="440" data-dominant-color="262520"></a></div><p></p>
+<p>While running the CAN simulator program, the MOSI pin is indicating 11 kHz on the multimeter.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e" title="can simulator mosi.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e.png" width="690" height="442" data-dominant-color="262520"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/18</link>
+        <pubDate>Mon, 28 May 2018 17:01:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-18</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>This is what my fully connected setup looks like (click on image to see the full thing). Pi 3 connected to CAN simulator board connected to Carloop.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/b958b50d8d32686f6d46bd98196f22844d41b2c9" title="IMG_20180528_124100.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_247x500.jpg" width="247" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_247x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_370x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_494x1000.jpg 2x" data-dominant-color="51473B"></a></div><p></p>
+<p>Disregard the extra capacitor on the 12V regulator board. I was having the issue that connecting a Carloop was drawing too much current and resetting the Pi. I tried adding an extra cap to no avail. Now I just power the Carloop through USB first before plugging it into the simulator board.)</p>
+<p>I flashed <a href="http://carloop.io/apps/app-simple-transmit/">this app</a> (<a href="https://github.com/carloop/app-simple-transmit">source on GitHub</a>) on the Photon connected to the Carloop to transmit a message at a regular interval.</p>
+<p>When running the simulator-program on the Pi 3 it I see the printout of the CAN messages transmitted by Carloop.</p>
+<p>I can reproduce “Error occured: CAN chip not responding” by unplugging the CAN simulator board and restarting the simulator-program.</p>
+<p>This seems to point to a hardware issue. Let me make some additional measurements on my side to help you figure out where the issue might be.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/17</link>
+        <pubDate>Mon, 28 May 2018 16:46:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-17</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried the CAN simulator I built 2 years ago as a base. That one still works.</p>
+<p>I then tried the CAN simulator board connected to a Raspberry Pi 3 that had Raspbian from April 2017, Raspbian 8 (jessie). At first it didn’t work because the SPI kernel module was not loaded. I did <code>sudo raspi-config</code> then Interfacing → SPI → Enable → Yes then reboot. After that I could see the SPI module in <code>lsmod | grep spi</code> (outputs <code>spidev</code> and <code>spi_bcm2835</code>). With these changes the simulator program worked.</p>
+<p>I’m in the process of upgrading the Pi to the latest and greatest Raspbian to see if a recent change broke the setup.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/16</link>
+        <pubDate>Mon, 28 May 2018 15:53:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-16</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I have not built one of these myself, so take my thoughts with a grain of salt.<br>
+I plan to build one in the next few months; reality means it will be more likely in the next year.</p>
+<p><a class="mention" href="https://community.carloop.io/u/maleficarum">@maleficarum</a>,</p>
+<p>Can you do some testing on your board to ensure that the pins on the chips are not shorted to other pins, that power and ground make it to where they should?  Essentially go over your board trace by trace to ensure there are no opens or shorts.  Also, look for cold solder joints that are not connected when they should be.  Also, look for excess solder that could be shorting pins together.</p>
+<p>This is meticulous work and will take a bit of time.  Compare everything you check with the schematic.  Unofortunately, it is necessary to be this detailed to eliminate board assembly as a possible cause for this.</p>
+<p>You should be able to do these tests with a multimeter using a continuity setting, with no power on the simulator circuit board.</p>
+<p><a class="mention" href="https://community.carloop.io/u/trey">@Trey</a>, You had some help doing these tests from someone at work … did you get yours working?</p>
+<p>Good luck!</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/15</link>
+        <pubDate>Sun, 27 May 2018 04:02:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-15</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>I grounded the IC2 pin 8, I checked with a multimeter but I still getting the same error :</p>
+<p><code>Error occured: CAN chip not responding</code></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/6ac07f86261aee55154a76fef0c2f7edf08254b0" title="2018-05-26 09.24.36.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_375x500.jpg" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_375x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_562x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_750x1000.jpg 2x" data-dominant-color="695A59"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/14</link>
+        <pubDate>Sat, 26 May 2018 14:24:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-14</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p>I had one of the boards with me here at work. I went and tested IC2 Pin8, and it is for sure NOT grounded.</p>
+<p>I guess there is no path to ground in the PCB design? I got your version 1 board. Is this fixed in your version 2 board? I grabbed version 1, as that was listed in your Assembly Instructions.</p>
+<p>I’m hopeful now that once I ground IC2 Pin8, everything will work.</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/13</link>
+        <pubDate>Fri, 25 May 2018 20:13:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-13</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ll definitely check that when I get home later today.</p>
+<p>One thing I see from other schematics on the web, is the use of GPIO25 on the Pi for the Interrupt to the MCP2515 Pin12.</p>
+<p>I don’t see that on your board. I am very new to all of this, and still don’t truly understand what the interrupts are used for. Is it not needed in your implementation?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/12</link>
+        <pubDate>Fri, 25 May 2018 19:22:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-12</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>It’s cool to see other folks experimenting with the CAN simulator board!</p>
+<p>I haven’t haven’t tried this hardware and code with a new Raspberry Pi. It was originally built with a Pi 2. I haven’t tried it with the latest and greatest Raspbian. I’ll try that over the weekend.</p>
+<p>The hardware I’m using had a mistake where the CAN transceiver IC2 pin 8 (top left) was not grounded. I fixed it in the schematic, but it would be good to check that the top left pin of IC2 is at ground with a multimeter.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b299ba034d82743c8cf7216dfff9bd771520a872.png" data-download-href="//carloop-community.dyndns.org/uploads/default/b299ba034d82743c8cf7216dfff9bd771520a872" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/b299ba034d82743c8cf7216dfff9bd771520a872.png" width="644" height="500" data-dominant-color="713752"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/11</link>
+        <pubDate>Fri, 25 May 2018 11:43:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-11</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p>So I took both my boards to work. The guy there tested them, and one had a bad 120ohm resistor, he replaced that. Then on the MCP2515 board connections, I don’t know how many cold solder joints he said there were on each board. So he re-did every connection on both boards. These boards are now bad ass looking, like a robot did it on the assembly line. Everything is also pin indexed as it should be.</p>
+<p>All said and done, I still get the exact same message, on both boards.</p>
+<p>I went through each board connection, and followed the wiring schematic, checking for continuity, everything checks out.</p>
+<p>This code is now 2 years old. I’m thinking something is different, possibly with the Raspbian version, or this was developed on a RasPi 2 instead of a RasPi 3 B that I am using, if that even matters.</p>
+<p>I’m currently running version:<br>
+Linux raspberrypi 4.14.34-v7+ <span class="hashtag-raw">#1110</span> SMP Mon Apr 16 15:18:51 BST 2018 armv7l GNU/Linux</p>
+<p>I’ve also tried to initialize the MCP2515 with the OS, and I can’t get that to work either. I keep getting the below in my dmesg:<br>
+[    4.872985] mcp251x spi0.0: Cannot initialize MCP2515. Wrong wiring?<br>
+[    4.873023] mcp251x spi0.0: Probe failed, err=19</p>
+<p>I’m at a loss. I don’t feel it’s the hardware, I feel it’s something with the OS.</p>
+<p>Anyone using this on the latest Raspberry PI 3 B or B+ boards with the latest OS?</p>
+<p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> - Any pointers on this?</p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/10</link>
+        <pubDate>Thu, 24 May 2018 09:15:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-10</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+      <item>
+        <title>Can simulator: CAN chip not responding</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>This is my first versión of the pcb. Looks like trey’s pcb (the Components looks well oriented).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/bb04035c000031eeceb80c566513641b8ebe5f9e.jpeg" data-download-href="//carloop-community.dyndns.org/uploads/default/bb04035c000031eeceb80c566513641b8ebe5f9e" title="307E0773-0296-44AF-A6A1-7081E0852CE3.jpeg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/bb04035c000031eeceb80c566513641b8ebe5f9e_2_375x500.jpeg" width="375" height="500" data-dominant-color="7A574F"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614/9</link>
+        <pubDate>Thu, 24 May 2018 02:14:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-614-9</guid>
+        <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+      </item>
+  </channel>
+</rss>

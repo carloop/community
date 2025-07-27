@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Renualt pid help - Getting Started - Carloop Community</title>
+    <meta name="description" content="Hello, 
+I want to create a small project will send me the total distance of the car and vin number 
+I知 using pi zero with canbus and connected it  to the my car 
+I have try 2 speeds: 
+250kbps 
+this is what I got (this i&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="1074.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="geJal8fWFpyw2WprdexmRGqOb">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="geJal8fWFpyw2WprdexmRGqOb"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Renualt pid help&#39;" href="1074.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/renualt-pid-help/1074">
+<meta name="twitter:url" content="/t/renualt-pid-help/1074">
+<meta property="og:title" content="Renualt pid help">
+<meta name="twitter:title" content="Renualt pid help">
+<meta property="og:description" content="Hello,  I want to create a small project will send me the total distance of the car and vin number  I知 using pi zero with canbus and connected it  to the my car  I have try 2 speeds:  250kbps  this is what I got (this is just the first lines )   e[1me[34mcan0e[0m  110   [4]  B4 23 34 D6  e[1me[34mcan0e[0m  012   [1]  remote request  e[1me[34mcan0e[0m  004ACDA0   [1]  remote request  e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07  e[1me[34mcan0e[0m       709   [0]  e[1me[34mcan0e[0m       091   ...">
+<meta name="twitter:description" content="Hello,  I want to create a small project will send me the total distance of the car and vin number  I知 using pi zero with canbus and connected it  to the my car  I have try 2 speeds:  250kbps  this is what I got (this is just the first lines )   e[1me[34mcan0e[0m  110   [4]  B4 23 34 D6  e[1me[34mcan0e[0m  012   [1]  remote request  e[1me[34mcan0e[0m  004ACDA0   [1]  remote request  e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07  e[1me[34mcan0e[0m       709   [0]  e[1me[34mcan0e[0m       091   ...">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta property="article:published_time" content="2020-10-01T12:38:42+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="1074.html">Renualt pid help</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Renualt pid help'>
+      <link itemprop='url' href='1074.html'>
+      <meta itemprop='datePublished' content='2020-10-01T12:38:41Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/david.html'><span itemprop='name'>david</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="1074.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2020-10-01T12:38:42Z' class='post-time'>
+                    October 1, 2020, 12:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-01T12:38:42Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,<br>
+I want to create a small project will send me the total distance of the car and vin number</p>
+<p>I知 using pi zero with canbus and connected it  to the my car<br>
+I have try 2 speeds:<br>
+250kbps<br>
+this is what I got (this is just the first lines )</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  110   [4]  B4 23 34 D6<br>
+e[1me[34mcan0e[0m  012   [1]  remote request<br>
+e[1me[34mcan0e[0m  004ACDA0   [1]  remote request<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       709   [0]<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       654   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m  1952CDA0   [4]  remote request<br>
+e[1me[34mcan0e[0m  10437A5F   [4]  remote request<br>
+e[1me[34mcan0e[0m       44D   [2]  C7 32<br>
+e[1me[34mcan0e[0m       560   [2]  C7 32<br>
+e[1me[34mcan0e[0m       091   [4]  C7 B4 23 34<br>
+e[1me[34mcan0e[0m  11A6E2DF   [4]  remote request<br>
+e[1me[34mcan0e[0m  1A6E2DF0   [4]  remote request<br>
+e[1me[34mcan0e[0m  1B8B7C20   [4]  remote request<br>
+e[1me[34mcan0e[0m       70B   [0]</p>
+</blockquote>
+<p>and this in the 500kbps</p>
+<p>and got many many pid</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 40 FE FE<br>
+e[1me[34mcan0e[0m  0E1   [8]  7F F7 7F FF 7F DB A8 09<br>
+e[1me[34mcan0e[0m  19D   [8]  38 2E B0 61 A8 08 00 D8<br>
+e[1me[34mcan0e[0m  299   [8]  FF E0 00 18 A8 10 FF E0<br>
+e[1me[34mcan0e[0m  29A   [8]  00 00 00 00 00 00 0A F5<br>
+e[1me[34mcan0e[0m  312   [8]  50 00 02 47 FF 40 A0 87<br>
+e[1me[34mcan0e[0m  378   [8]  3C 68 96 28 08 40 00 20<br>
+e[1me[34mcan0e[0m  563   [2]  2E B0<br>
+e[1me[34mcan0e[0m  15A   [6]  3A 70 00 14 00 00<br>
+e[1me[34mcan0e[0m  15C   [8]  1C 3C 31 E3 29 00 25 00<br>
+e[1me[34mcan0e[0m  15D   [8]  5E 8B 82 F0 98 90 44 FE<br>
+e[1me[34mcan0e[0m  15E   [8]  32 C3 29 36 63 29 71 8A<br>
+e[1me[34mcan0e[0m  44E   [7]  47 4C C8 E1 17 52 4C<br>
+e[1me[34mcan0e[0m  2F7   [1]  44<br>
+e[1me[34mcan0e[0m  194   [6]  FE 32 00 08 00 00<br>
+e[1me[34mcan0e[0m  18D   [8]  32 94 88 AA 08 00 00 00<br>
+e[1me[34mcan0e[0m  18E   [8]  00 00 00 00 00 00 48 00<br>
+e[1me[34mcan0e[0m  2E1   [4]  72 0E 90 00<br>
+e[1me[34mcan0e[0m  313   [2]  03 88<br>
+e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 50 FE FE</p>
+</blockquote>
+<p>where can I found information about the pids I need , and know which one to search ?<br>
+for start I want to get the total distance (and maybe the vin) - just to see everything is working correct .</p>
+<p>Thanks,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/kong.html'><span itemprop='name'>kong</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-15T15:09:18Z' class='post-time'>
+                    October 15, 2020,  3:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-15T15:09:18Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi<br>
+Does total distance mean ODOMETER? if yes, (0x5d7) D2-D5 4 byte data</p>
+<p>VIN you have to request 7E4-&gt;7EC</p>
+<p>hope can help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/david.html'><span itemprop='name'>david</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-19T13:38:06Z' class='post-time'>
+                    October 19, 2020,  1:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-19T13:38:06Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yes<br>
+total distance mean ODOMETER</p>
+<p>but how could it be that I don稚 see this msg?<br>
+0x5d7? in the logs?<br>
+I have saved data for 5 min , and I don稚 see this PID</p>
+<p>how could it be?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/kong.html'><span itemprop='name'>kong</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-19T16:49:16Z' class='post-time'>
+                    October 19, 2020,  4:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-19T16:49:16Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi</p>
+<p>I read OBD2 using AT90CAN (my own PCB) and setup the mask filer ? </p>
+<p>INT 2 CANBUS Len:7:0x05D7 [BA E8 F1 40 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 42 F0 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 0A F8 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 4B 08 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 70 18 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 73 20 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 EE 30 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 CB 38 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km</p>
+<p>you have to use the mask filer to listen each ID, ZOE has large amount CAN messages</p>
+<p>good luck</p>
+<p>Kong</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/david.html'><span itemprop='name'>david</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-20T06:11:07Z' class='post-time'>
+                    October 20, 2020,  6:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-20T06:11:07Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>what is the kbps you are using to listen<br>
+maybe I知 listening to the wrong data?<br>
+I see that I get data in all kinds of rates:<br>
+125<br>
+250<br>
+500</p>
+<p>Thank you for the help!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/kong.html'><span itemprop='name'>kong</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-21T15:25:51Z' class='post-time'>
+                    October 21, 2020,  3:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-21T15:25:51Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi</p>
+<p>500kbps canbus</p>
+<p>kong</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

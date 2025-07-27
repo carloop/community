@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Pro - No GPS Fix</title>
+    <link>https://community.carloop.io/t/carloop-pro-no-gps-fix/928</link>
+    <description>Hey there,
+
+I have the [Carloop Pro](https://store.carloop.io/products/carloop-pro-1) and &#39;m having troubles getting a GPS fix simliar to that of many other threads here. I&#39;m running the unedited [carloop-minimal](https://github.com/carloop/carloop-library/blob/master/examples/carloop_minimal/carloop_minimal.cpp) code on OS 1.4.0 and despite being outside on a clear day for 30 minutes, I can&#39;t aquire a GPS status.
+
+It seems like using an external antenna or using jumper wires on the JST-SH ports wouldn&#39;t be optimal for my situation. Are there any other easy ways to debug this? How can I tell if the boards are bad? Any direction is appreciated.
+
+Thanks!</description>
+    
+    <lastBuildDate>Mon, 23 Sep 2019 21:44:41 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/carloop-pro-no-gps-fix/928.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Pro - No GPS Fix</title>
+        <dc:creator><![CDATA[Siceth]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there,</p>
+<p>I have the <a href="https://store.carloop.io/products/carloop-pro-1">Carloop Pro</a> and 'm having troubles getting a GPS fix simliar to that of many other threads here. I’m running the unedited <a href="https://github.com/carloop/carloop-library/blob/master/examples/carloop_minimal/carloop_minimal.cpp" rel="noopener nofollow ugc">carloop-minimal</a> code on OS 1.4.0 and despite being outside on a clear day for 30 minutes, I can’t aquire a GPS status.</p>
+<p>It seems like using an external antenna or using jumper wires on the JST-SH ports wouldn’t be optimal for my situation. Are there any other easy ways to debug this? How can I tell if the boards are bad? Any direction is appreciated.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-no-gps-fix/928/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-no-gps-fix/928/1</link>
+        <pubDate>Mon, 23 Sep 2019 21:44:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-928-1</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-no-gps-fix/928.rss">Carloop Pro - No GPS Fix</source>
+      </item>
+  </channel>
+</rss>

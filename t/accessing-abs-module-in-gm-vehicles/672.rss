@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Accessing ABS module in GM vehicles</title>
+    <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672</link>
+    <description>Has anyone figured out how to access the ABS module in a GM vehicle? In particular I would like to cycle the ABS module. If had access to a GM Tech2 that could it but those are rare as hens teeth in wild.
+Right now I am using HPTuner software and dongle to tune the engine and transmission but doesn&#39;t let you access anything other than the ECM and TCM
+Thanks Terry</description>
+    
+    <lastBuildDate>Tue, 10 Jul 2018 15:32:00 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Accessing ABS module in GM vehicles</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>on GM with the carloop ive been able to change VIN, reset VAT,and brute force e38 /e39 ecu’s seed key and many other functions im sure it can be done. easiest way would be to get a splitter and sniff a scan tool.</p>
+          <p><a href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/5</link>
+        <pubDate>Tue, 10 Jul 2018 15:32:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-672-5</guid>
+        <source url="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss">Accessing ABS module in GM vehicles</source>
+      </item>
+      <item>
+        <title>Accessing ABS module in GM vehicles</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/forbinproject01">@Forbinproject01</a>,</p>
+<p>I understand now what you are trying to do.</p>
+<p>Since this functionality is not in the OBD2  standard, each car company is free to do it however they want.  So, it is likely to be some custom format by the company that designs the ABS module.</p>
+<p>Check out the GM forums specific to your car to see if someone has already done it.  If they have, you can then port their code to run on Carloop.  If not, then you might have to hook up the Tech2 and a Carloop at the same time.  You would program the Carloop to listen and record all the messages between the Tech2 and the car.  Once you know all the messages, then you create a Carloop program to replace the Tech2.</p>
+<p>Good luck on your project!</p>
+          <p><a href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/4</link>
+        <pubDate>Mon, 09 Jul 2018 04:22:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-672-4</guid>
+        <source url="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss">Accessing ABS module in GM vehicles</source>
+      </item>
+      <item>
+        <title>Accessing ABS module in GM vehicles</title>
+        <dc:creator><![CDATA[Forbinproject01]]></dc:creator>
+        <description><![CDATA[
+            <p>The problem is if you are not paying attention when replacing calipers or brake lines and you let the brake fluid gravity bleed out you get air in the ABS module. The only way to purge the air is to get to a dealer and have them hook up a Tech2 and cycle the ABS module until the air is out. The other is to drive the vehicle and lock the brakes so the ABS activates(on snow or dirt). This worked in my case, but you have to do it several times to fully purge the system of air. Involves braking then pulling your wheels bleeding then repeating.</p>
+<p>Enough people have had this problem, from what I have read on various forums, that it would be nice to have a way to activate the ABS at home.</p>
+<p>A good Tech2 device cost $1000 or more although there Chinese knockoffs around for under $500 but with poor reviews.</p>
+<p>Anyways I thought I would throw this question out on this forum since there are some pretty sharp people here who might have some ideas.</p>
+<p>Thanks for the reply<br>
+Terry</p>
+          <p><a href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/3</link>
+        <pubDate>Sat, 07 Jul 2018 13:30:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-672-3</guid>
+        <source url="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss">Accessing ABS module in GM vehicles</source>
+      </item>
+      <item>
+        <title>Accessing ABS module in GM vehicles</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/forbinproject01">@Forbinproject01</a>, what do you mean by cycle the ABS module?</p>
+<p>Assuming it means to cycle the power to the module or to reset the module, then you do not need a high-tech solution.  Simply turn off the ignition for 10 seconds (with the vehicle safely parked) and then turn it back on.</p>
+<p>Since you have a GM vehicle, I would assume you are in the USA, in which case you should look into the legal implications of touching the ABS or SIR modules.  Things are similar here in Canada; I will not  be touching those on my regular driver.</p>
+          <p><a href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/2</link>
+        <pubDate>Sat, 07 Jul 2018 03:57:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-672-2</guid>
+        <source url="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss">Accessing ABS module in GM vehicles</source>
+      </item>
+      <item>
+        <title>Accessing ABS module in GM vehicles</title>
+        <dc:creator><![CDATA[Forbinproject01]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone figured out how to access the ABS module in a GM vehicle? In particular I would like to cycle the ABS module. If had access to a GM Tech2 that could it but those are rare as hens teeth in wild.<br>
+Right now I am using HPTuner software and dongle to tune the engine and transmission but doesn’t let you access anything other than the ECM and TCM<br>
+Thanks Terry</p>
+          <p><a href="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672/1</link>
+        <pubDate>Thu, 05 Jul 2018 01:03:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-672-1</guid>
+        <source url="https://community.carloop.io/t/accessing-abs-module-in-gm-vehicles/672.rss">Accessing ABS module in GM vehicles</source>
+      </item>
+  </channel>
+</rss>

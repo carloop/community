@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop basic - Can&#39;t see any CAN message - Getting Started - Carloop Community</title>
+    <meta name="description" content="Hello everyone, 
+I’m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car. 
+I could do some basic stuffs with the carloop (particle led blinking, socketcan fir&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="731.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="Pbvnu20YmRn4HZYpH9wem3zOk">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="Pbvnu20YmRn4HZYpH9wem3zOk"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop basic - Can&#39;t see any CAN message&#39;" href="731.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-basic-cant-see-any-can-message/731">
+<meta name="twitter:url" content="/t/carloop-basic-cant-see-any-can-message/731">
+<meta property="og:title" content="Carloop basic - Can&#39;t see any CAN message">
+<meta name="twitter:title" content="Carloop basic - Can&#39;t see any CAN message">
+<meta property="og:description" content="Hello everyone,  I’m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car.  I could do some basic stuffs with the carloop (particle led blinking, socketcan firmware flashing). But then when I plug the carloop with socketcan firmware to my obd2 port, candump/cansniffer couldn’t see any can messages from the car. I could only see messages send by me using cansend. I even used cangen during a while to probe for PIDs.  For information, it’...">
+<meta name="twitter:description" content="Hello everyone,  I’m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car.  I could do some basic stuffs with the carloop (particle led blinking, socketcan firmware flashing). But then when I plug the carloop with socketcan firmware to my obd2 port, candump/cansniffer couldn’t see any can messages from the car. I could only see messages send by me using cansend. I even used cangen during a while to probe for PIDs.  For information, it’...">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta property="article:published_time" content="2018-09-21T17:02:39+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="731.html">Carloop basic - Can&#39;t see any CAN message</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop basic - Can&#39;t see any CAN message'>
+      <link itemprop='url' href='731.html'>
+      <meta itemprop='datePublished' content='2018-09-21T17:02:38Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="731.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-09-21T17:02:39Z' class='post-time'>
+                    September 21, 2018,  5:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-21T17:02:39Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I’m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car.</p>
+<p>I could do some basic stuffs with the carloop (particle led blinking, socketcan firmware flashing). But then when I plug the carloop with socketcan firmware to my obd2 port, candump/cansniffer couldn’t see any can messages from the car. I could only see messages send by me using cansend. I even used cangen during a while to probe for PIDs.</p>
+<p>For information, it’s a Renault Grand Scenic 3 from 2014.</p>
+<p>One other thing: the commands “particle serial identify” or “particle serial monitor” all returned an error “serial timeout”.</p>
+<p>What do you think about this case? Thanks in advance for your help.</p>
+<p>Cheers</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-22T19:18:30Z' class='post-time'>
+                    September 22, 2018,  7:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-22T19:18:30Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So here’s what I’ve done so far: I bought a wifi ELM327 and a OBD2 splitter to sniff CAN messages using the carloop.<br>
+The ELM327 works well, while I’ve still got nothing on the carloop.</p>
+<p>Any chance there’s a problem with my carloop?</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/1575a15eb9eb40642295f74e02ac0827810e9521.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-24T21:22:45Z' class='post-time'>
+                    September 24, 2018,  9:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-24T21:22:45Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok, so I flashed the VIN reader app (<a href="https://www.carloop.io/apps/app-vin-reader/">https://www.carloop.io/apps/app-vin-reader/</a>), but it seems that the CAN interface doesn’t work (my car was on, and the ELM327 worked fine):<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/1575a15eb9eb40642295f74e02ac0827810e9521.jpg" width="647" height="349"></p>
+<p>I’m thinking my carloop basic unit is faulty.</p>
+<p>May I get some help from <a class="mention" href="/u/alanm">@alanm</a> or <a class="mention" href="../../u/jvanier.html">@jvanier</a> please?</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-24T22:01:30Z' class='post-time'>
+                    September 24, 2018, 10:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-24T22:01:30Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hey, from your screenshot it looks like you are using a Windows Operating System. Have you tried using a Linux Virtual Machine with socketcan?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-24T22:41:30Z' class='post-time'>
+                    September 24, 2018, 10:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-24T22:41:30Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Alan,</p>
+<p>Yes I tried with both virtual and non-virtual Linux.</p>
+<p>Cheers</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T19:22:33Z' class='post-time'>
+                    September 25, 2018,  7:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T19:22:33Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/ngocdh.html">@ngocdh</a>, It looks like from your screen shot that you got the particle serial monitor working okay.<br>
+It also looks like that VIN reader app flashed okay, since it is trying to read the VIN.<br>
+Usually, that is all it takes to get going…</p>
+<p>Can you verify that your Photon is plugged into the Carloop securely?<br>
+Also, can you verify that the Carloop is plugged into the OBD2 splitter securely?<br>
+You could even try plugging the Carloop directly into the car without using the splitter.<br>
+Those checks all address potential connection problems.  After that, I would suspect a problem with the Carloop or the Photon.</p>
+<p>One thing that is strange from your screenshot is that “dhp” shows as offline when you do particle list, but the particle serial monitor is working.   Do you have more than one Photon, or more than one particle account?  Is the Photon named “dhp” plugged into the Carloop?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T19:48:55Z' class='post-time'>
+                    September 25, 2018,  7:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T19:48:55Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks alot <a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a> for the thorough analysis of my screenshot. It’s very much appreciated.<br>
+Actually the part where the photon was offline is irrelevant, that was when I restarted the photon. You can see that the VIN reader app could detect the photon when it was back online.<br>
+I have only one photon and one particle account.<br>
+I did try many times to plug the Carloop directly to the OBD2, or to the splitter, with or without the ELM327, and all that with Windows, Linux, and Linux VM. Nothing could make the carloop read anything from the CAN bus.<br>
+Seeing that operations work quite well with the photon, I’m thinking there’s a problem with the carloop, because so far, it’s the only component that hasn’t show any “signal”. The led was on when I plugged the carloop to the car without usb cable though.<br>
+Ngocdh</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T19:51:20Z' class='post-time'>
+                    September 25, 2018,  7:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T19:51:20Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>And it’s a carloop basic unit that I just purchased, so yes I supposed the photon is plugged into the carloop, or am I missing something maybe?<br>
+Ngocdh</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T19:59:54Z' class='post-time'>
+                    September 25, 2018,  7:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T19:59:54Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, the Carloop basic comes with the Photon already plugged in.  Maybe try unplugging it then plugging it back in, just to make sure the connection is secure.</p>
+<p>Oh, I just thought of something.  The Carloop power supply expects to get its power from the car.  I am not sure if the CAN transceiver chip will power up if that supply is missing.  So, I forgot to ask earlier if you are plugging it into a car, or just using power from USB?  (I will have to try that one myself.)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ngocdh.html'><span itemprop='name'>ngocdh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T20:41:29Z' class='post-time'>
+                    September 25, 2018,  8:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T20:41:29Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a> the carloop takes power from both my car and the usb connection.  And when it’s only plugged into the car, the photon’s led blinks, so I guess the photon is plugged into the carloop.<br>
+Ngocdh</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

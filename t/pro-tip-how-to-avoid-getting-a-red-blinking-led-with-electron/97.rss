@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>PRO TIP: How to avoid getting a red blinking LED with Electron</title>
+    <link>https://community.carloop.io/t/pro-tip-how-to-avoid-getting-a-red-blinking-led-with-electron/97</link>
+    <description>For those of you using the Electron with Carloop, you might have noticed that you can power it straight from the OBD-II port without the LiPo battery and it&#39;ll work just fine.  There is one annoying detail which is a blinking red LED.  This is caused by a pull-up resistor.  Luckily it is very easy to remove and it won&#39;t compromise your Electron.  To remove it, just unsolder the resistor circled in blue and you&#39;re good to go!
+&lt;img src=&quot;/uploads/default/original/1X/c73af44d0750561863374ac212b969a4544e19a4.png&quot; width=&quot;690&quot; height=&quot;472&quot;&gt;</description>
+    
+    <lastBuildDate>Fri, 05 Aug 2016 15:54:57 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/pro-tip-how-to-avoid-getting-a-red-blinking-led-with-electron/97.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>PRO TIP: How to avoid getting a red blinking LED with Electron</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>For those of you using the Electron with Carloop, you might have noticed that you can power it straight from the OBD-II port without the LiPo battery and it’ll work just fine.  There is one annoying detail which is a blinking red LED.  This is caused by a pull-up resistor.  Luckily it is very easy to remove and it won’t compromise your Electron.  To remove it, just unsolder the resistor circled in blue and you’re good to go!<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c73af44d0750561863374ac212b969a4544e19a4.png" data-download-href="//carloop-community.dyndns.org/uploads/default/c73af44d0750561863374ac212b969a4544e19a4" title="disable_red_led_blinking.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/c73af44d0750561863374ac212b969a4544e19a4.png" width="690" height="472" data-dominant-color="C0BCAC"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/pro-tip-how-to-avoid-getting-a-red-blinking-led-with-electron/97/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pro-tip-how-to-avoid-getting-a-red-blinking-led-with-electron/97/1</link>
+        <pubDate>Fri, 05 Aug 2016 15:54:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-97-1</guid>
+        <source url="https://community.carloop.io/t/pro-tip-how-to-avoid-getting-a-red-blinking-led-with-electron/97.rss">PRO TIP: How to avoid getting a red blinking LED with Electron</source>
+      </item>
+  </channel>
+</rss>

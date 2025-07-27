@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop gps question</title>
+    <link>https://community.carloop.io/t/carloop-gps-question/31</link>
+    <description>The connector fits what gps receiver?
+I have one that is close.. but it is not the same!</description>
+    
+    <lastBuildDate>Sun, 18 Sep 2016 05:27:54 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-gps-question/31.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>Nope, can’t reproduce it, but could it theoretically be that the first fix took more than 1 1/2 hours?<br>
+When I now put the device (after being depowered for a while) in the car under the car port, a fix can take up to 30min. During that time I see the same symptoms. But before the car was standing free and it took much longer. So no idea what <img src="//carloop-community.dyndns.org/images/emoji/twitter/confused.png?v=12" title=":confused:" class="emoji" alt=":confused:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/21</link>
+        <pubDate>Sun, 18 Sep 2016 05:27:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-21</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>whew! that’s fantastic news! This is a new batch of GPS + wiring so I’m glad to hear that. What do you suspect was the issue?  Can you reproduce it at all?</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/20</link>
+        <pubDate>Sun, 18 Sep 2016 01:59:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-20</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, after some messing with my other problem, unplugging, replugging GPS module and Particle devices, I now do get GPS readings.<br>
+No idea what cured it, but that’s settled for me now (with the original wiring).</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/19</link>
+        <pubDate>Sat, 17 Sep 2016 16:17:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-19</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Let me take a look on my end if anything changed recently with the GPS setup and I’ll get back to you.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/18</link>
+        <pubDate>Sat, 17 Sep 2016 15:55:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-18</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>Strange then that I don’t get any GPS info with the <code>carloop-minimal.ino</code> sample - even after waiting for over an hour for a GPS fix (in car with clear view to sky).<br>
+I only ever get zero <code>gps.charsProcessed()</code></p>
+<p>As a side note, when having Carloop with and Electron and <code>carloop-minimal.ino</code> plugged into my Renault Espace (2007) it won’t start and always complains about oil pressure loss <img src="//carloop-community.dyndns.org/images/emoji/twitter/flushed.png?v=12" title=":flushed:" class="emoji" alt=":flushed:" loading="lazy" width="20" height="20"><br>
+Removing Carloop cures the problem <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/17</link>
+        <pubDate>Fri, 16 Sep 2016 11:43:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-17</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>The Carloop 2.3 has the correct wiring for the GPS. I did not see negative impact to the GPS module of the wrong wiring so you should be ok.</p>
+<p>The picture you took shows the correct wiring.</p>
+<p>Good luck on your projects!</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/16</link>
+        <pubDate>Fri, 16 Sep 2016 11:37:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-16</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, I just received my devices - is this pin reordering still required for Carloop R2.3 2016/05 and GPS GP-735T VRN 0.20?</p>
+<p>Could you maybe also post an image of the correctly done done wiring?<br>
+And I hope the wrong wiring didn’t do any harm to the GPS module.</p>
+<p>This is how mine looks currently (before reordering):<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/01c0cfa8251c090041e0a6cd67aeb104da70977f.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/01c0cfa8251c090041e0a6cd67aeb104da70977f" title="CarloopGPS.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/01c0cfa8251c090041e0a6cd67aeb104da70977f_2_690x454.jpg" width="690" height="454" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/01c0cfa8251c090041e0a6cd67aeb104da70977f_2_690x454.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/01c0cfa8251c090041e0a6cd67aeb104da70977f_2_1035x681.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/01c0cfa8251c090041e0a6cd67aeb104da70977f_2_1380x908.jpg 2x" data-dominant-color="493F2D"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/15</link>
+        <pubDate>Fri, 16 Sep 2016 10:49:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-15</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, you can use it for both!</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/14</link>
+        <pubDate>Sat, 21 May 2016 03:47:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-14</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> Can I use this with both Photon and Electron?<br>
+This =  <a href="http://www.arduitronics.com/product/747/ublox-neo-m8n-gps-module-free-antenna-uart-interface" rel="noopener nofollow ugc">http://www.arduitronics.com/product/747/ublox-neo-m8n-gps-module-free-antenna-uart-interface</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/13</link>
+        <pubDate>Tue, 03 May 2016 03:39:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-13</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="macsboost" data-post="10" data-topic="31">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/a698b9/48.png" class="avatar"> macsboost:</div>
+<blockquote>
+<p>I would like to suggest using another gps unit anyway.  These can be had for about $20 and include an i2c compass.It is possible to use i2c for the gps as well, eliminating any serial port rate issues.  They operate up to 10hz and are glonass/gps/beidou/galileo compatible.</p>
+</blockquote>
+</aside>
+<p>It’s rather unfortunate but one of the pins for the CAN bus is the same as one of the pins for I2C on the Photon. You could use an I2C GPS on the Electron since it has an additional I2C bus on C4/C5.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/12</link>
+        <pubDate>Tue, 03 May 2016 01:46:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-12</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[macsboost]]></dc:creator>
+        <description><![CDATA[
+            <p>This is based on the ublox m8n chip… the sparkfun was a ublox 7.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/11</link>
+        <pubDate>Mon, 02 May 2016 20:40:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-11</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[macsboost]]></dc:creator>
+        <description><![CDATA[
+            <p>put me in line for a v3.<br>
+I ended up just deadbugging in another gps to make it go.  The miswire makes sense now.</p>
+<p>I would like to suggest using another gps unit anyway.  These can be had for about $20 and include an i2c compass.<br>
+It is possible to use i2c for the gps as well, eliminating any serial port rate issues.  They operate up to 10hz and are glonass/gps/beidou/galileo compatible.</p>
+<p><a href="http://www.ebay.com/itm/161886410833?_trksid=p2057872.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.ebay.com/itm/161886410833?_trksid=p2057872.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT</a></p>
+<p>Look for the pixhawk px4 compatible.  Sirf also has a binary mode that has a lot less overhead than a nmea stream.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/10</link>
+        <pubDate>Mon, 02 May 2016 20:29:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-10</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/izeroman">@Izeroman</a> please send me a private message with your mailing address.  V3 is not ready for production just yet!</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/9</link>
+        <pubDate>Mon, 02 May 2016 14:35:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-9</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>I would like a replacement please. Please give me the address. Also instead of v. 2, can you send v. 3?</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/8</link>
+        <pubDate>Mon, 02 May 2016 01:25:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-8</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I looked again at the PCB for the unit we shipped you and there’s a layout error on the GPS connector. The pins are backwards (1 is 6, 2 is 5, …).</p>
+<p>If you’re able you can reorder the pins on the wire between the Carloop and the GPS unit. Lift up the white plastic tab holding the terminal with the tip of a knife and pull out the terminal. Reinsert the terminals in the opposite order.</p>
+<p>We have another batch being produced right now that doesn’t have this issue. We can ship you a new unit when we receive it if you don’t want to re-pin the connector.</p>
+<p>Sorry about that <a class="mention" href="https://community.carloop.io/u/izeroman">@Izeroman</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/7</link>
+        <pubDate>Sun, 01 May 2016 22:59:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-7</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>I just got my GP-735. I couldn’t get a gps readings at all even Serial1 logging.</p>
+<p>Serial.begin(115200);<br>
+Serial1.begin(9600);</p>
+<pre><code>void loop()
+{
+  while (Serial1.available())  
+    Serial.write(Serial1.read());  // pass RX data to USB serial
+
+  while (Serial.available())
+    Serial1.write(Serial.read());  // pass USB serial to TX pin 
+} 
+</code></pre>
+<p>Please help.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/6</link>
+        <pubDate>Sun, 01 May 2016 08:34:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-6</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>I just want to get some location reading off the Tracker since I don’t have any gps modules laying around. I’m gonna other the GP735 but now it’s a national week long holiday in Thailand.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/5</link>
+        <pubDate>Wed, 13 Apr 2016 04:11:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-5</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>There are ways you can do that, but I’m curious, what features of the Asset Tracker do you want to use?  In other words, what is your project?</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/4</link>
+        <pubDate>Tue, 12 Apr 2016 18:08:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-4</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>What if you want to connect Carloop to Particle Asset Tracker, how would you do it?</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/3</link>
+        <pubDate>Tue, 12 Apr 2016 16:17:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-3</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>hey <a class="mention" href="https://community.carloop.io/u/macsboost">@macsboost</a>, the GPS is the GP-735 (56 Channel) found at SparkFun <a href="https://www.sparkfun.com/products/13670" class="inline-onebox">GPS Receiver - GP-735 (56 Channel) - GPS-13670 - SparkFun Electronics</a>.  You will need a jumper wire like this one as well to connect it to Carloop: <a href="https://www.sparkfun.com/products/574" class="inline-onebox">JST SH Jumper 6 Wire - 1.75" - GPS-00574 - SparkFun Electronics</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/2</link>
+        <pubDate>Tue, 12 Apr 2016 07:30:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-2</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+      <item>
+        <title>Carloop gps question</title>
+        <dc:creator><![CDATA[macsboost]]></dc:creator>
+        <description><![CDATA[
+            <p>The connector fits what gps receiver?<br>
+I have one that is close… but it is not the same!</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-question/31/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-question/31/1</link>
+        <pubDate>Mon, 11 Apr 2016 21:28:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-31-1</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-question/31.rss">Carloop gps question</source>
+      </item>
+  </channel>
+</rss>

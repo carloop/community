@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop Basic + Adafruit NeoPixel Stick? - Getting Started - Carloop Community</title>
+    <meta name="description" content="Hello, 
+I’ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own “RPM” Gauge, similar to those in racecars. For that I would use&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="559.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="WzY1OnecdtzuDxyYfQepzIl8W">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="WzY1OnecdtzuDxyYfQepzIl8W"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop Basic + Adafruit NeoPixel Stick?&#39;" href="559.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-basic-adafruit-neopixel-stick/559">
+<meta name="twitter:url" content="/t/carloop-basic-adafruit-neopixel-stick/559">
+<meta property="og:title" content="Carloop Basic + Adafruit NeoPixel Stick?">
+<meta name="twitter:title" content="Carloop Basic + Adafruit NeoPixel Stick?">
+<meta property="og:description" content="Hello,  I’ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own “RPM” Gauge, similar to those in racecars. For that I would use a Carloop Basic and a Adafruit NeoPixel Stick (NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers : ID 1426 : $5.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits)  Now, after some google Foo, it appears that the Particle Photon can Power them with 3.3V.  Bu...">
+<meta name="twitter:description" content="Hello,  I’ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own “RPM” Gauge, similar to those in racecars. For that I would use a Carloop Basic and a Adafruit NeoPixel Stick (NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers : ID 1426 : $5.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits)  Now, after some google Foo, it appears that the Particle Photon can Power them with 3.3V.  Bu...">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="1 ?">
+<meta property="article:published_time" content="2018-03-02T16:25:06+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="559.html">Carloop Basic + Adafruit NeoPixel Stick?</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop Basic + Adafruit NeoPixel Stick?'>
+      <link itemprop='url' href='559.html'>
+      <meta itemprop='datePublished' content='2018-03-02T16:25:06Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/redimo.html'><span itemprop='name'>redimo</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="559.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-03-02T16:25:06Z' class='post-time'>
+                    March 2, 2018,  4:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-02T16:25:06Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I’ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own “RPM” Gauge, similar to those in racecars. For that I would use a Carloop Basic and a Adafruit NeoPixel Stick (<a href="https://www.adafruit.com/product/1426" class="inline-onebox" rel="noopener nofollow ugc">NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers : ID 1426 : $5.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits</a>)</p>
+<p>Now, after some google Foo, it appears that the Particle Photon can Power them with 3.3V.<br>
+But what about the Power output of the OBD-2 Port? Does anyone know the limitations or are these Vehicle specific?</p>
+<p>Maybe someone has already done something along those lines?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-04T05:29:08Z' class='post-time'>
+                    March 4, 2018,  5:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-04T05:29:08Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/redimo.html">@redimo</a>, I have pretty much the same idea.  Only in a rally car, because those are the best (just joking) and I prefer a solo car.  Then again Solo I events are solo and on the track…  Anyway, my idea is a NeoPixel ring and a 4-digit 7-segment LED display installed into the body of a standard guage.</p>
+<p>Unless you have something out of the ordinary, your car will provide +12V at the OBD-2 port.  I would assume it could supply plenty of current as the dashboard and the associated interior lighting are likely to be on the same circuit.<br>
+The Carloop has an onboard regulator to bring that down to +5V (1 A).  I recommend using that +5V (VIN on the Photon) to power the NeoPixels.  144mA is the nominal current requirement and I expect would be no problem for the Carloop, but you might have to pay attention if you are also using a SD Card at the same time.</p>
+<p>Note that it is recommended to use a capacitor on the wire supplying the power to the neopixels.</p>
+<p>The output pin on the Photon will be 3.3V and it should be strong enough for the neopixel “input” line.  However, if it turns out to not be strong enough, use the 3.3V to control a transistor that will drive it to 5V.  You do not need a bi-directional converter as the signal is only needed one-way only.</p>
+<p>In summary, you should have no problem at all doing this.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/redimo.html'><span itemprop='name'>redimo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-04T17:46:46Z' class='post-time'>
+                    March 4, 2018,  5:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-04T17:46:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a><br>
+Perfect, thanks for the reply.</p>
+<p>I currently drive a Focus RS 17’ that I want to slowly turn into my Trackweapon, and whilst I am waiting for my KW Coilovers and Sway bars I want to start working on a shift light, as looking down during the track is quite bothersome and the optimal shifting isnt at redline.</p>
+<p>Anyway, sounds cool!</p>
+<p>I might not use a SD at the beginning, but maybe later.</p>
+<p>With the transistor you mean one between + and GND, right? Im not so knowledgable in electronics <img src="//carloop-community.dyndns.org/images/emoji/twitter/stuck_out_tongue.png?v=12" title=":stuck_out_tongue:" class="emoji" alt=":stuck_out_tongue:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-05T04:57:16Z' class='post-time'>
+                    March 5, 2018,  4:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-05T04:57:16Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/redimo.html">@redimo</a>,</p>
+<p>Can I assume that your Focus will still be street-worthy while being setup for the track?  Sounds very fun…  My project car is a 2004 Impreza that needs a head gasket.  I am free to do what I want with the project as we already had to get another daily driver in the meantime.  Eventually I hope for full cage and a hotbits suspension.</p>
+<p>For the reference to the transistor, see this thread here on the Particle forums:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10" target="_blank" rel="noopener" title="08:05AM - 28 January 2018">Particle – 28 Jan 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10" target="_blank" rel="noopener">Easiest way to wire the Photon to Neopixels</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #BF1E2E;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Hardware</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>While using a logic level shifter (of any kind - see bellow) is advisable, well manufactured NeoPixels can usually cope with the 3.3V data as the LOW/HIGH threshold sits somewhere round about 3V.  But lesser quality LEDs tend to have higher...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>By the way, since you are thinking of eventually using a SD Card and probably want to track vehicle dynamics, please read this thread before you go IMU shopping.  I bought this one, but have not yet tried it; looks like it may not work well for race-car purposes:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837" target="_blank" rel="noopener" title="10:02PM - 18 April 2017">Particle – 18 Apr 17</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837" target="_blank" rel="noopener">Is there a good library for Adafruit 9-DOF Absolute Orientation IMU Fusion...</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Firmware</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Libraries</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>that will let me get the compass data?</p>
+
+  <p>
+    <span class="label1">Reading time: 1 mins ??</span>
+      <span class="label2">Likes: 2 ?</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

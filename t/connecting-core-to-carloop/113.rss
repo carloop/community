@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Connecting Core to Carloop</title>
+    <link>https://community.carloop.io/t/connecting-core-to-carloop/113</link>
+    <description>New to the whole car hacking field and want to tinker. Using the sparkcore v1.0 how do I connect this device to the carloop.
+
+Sorry if this is a dumb question, I couldn&#39;t find the answer in the documentation already.
+
+Thanks.</description>
+    
+    <lastBuildDate>Tue, 23 Aug 2016 01:57:10 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/connecting-core-to-carloop/113.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Connecting Core to Carloop</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I added <a href="https://carloop.readme.io/v1.0/docs/hardware-compatibility">a page to the docs about hardware compatibility</a> to clarify this for others too.</p>
+          <p><a href="https://community.carloop.io/t/connecting-core-to-carloop/113/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/connecting-core-to-carloop/113/3</link>
+        <pubDate>Tue, 23 Aug 2016 01:57:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-113-3</guid>
+        <source url="https://community.carloop.io/t/connecting-core-to-carloop/113.rss">Connecting Core to Carloop</source>
+      </item>
+      <item>
+        <title>Connecting Core to Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there!<br>
+The Spark Core unfortunately does not have a CAN bus and therefore not entirely compatible with Carloop.  You’ll need to order a Particle Photon to read/write CAN messages with Carloop.</p>
+          <p><a href="https://community.carloop.io/t/connecting-core-to-carloop/113/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/connecting-core-to-carloop/113/2</link>
+        <pubDate>Tue, 23 Aug 2016 01:09:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-113-2</guid>
+        <source url="https://community.carloop.io/t/connecting-core-to-carloop/113.rss">Connecting Core to Carloop</source>
+      </item>
+      <item>
+        <title>Connecting Core to Carloop</title>
+        <dc:creator><![CDATA[AStorm]]></dc:creator>
+        <description><![CDATA[
+            <p>New to the whole car hacking field and want to tinker. Using the sparkcore v1.0 how do I connect this device to the carloop.</p>
+<p>Sorry if this is a dumb question, I couldn’t find the answer in the documentation already.</p>
+<p>Thanks.</p>
+          <p><a href="https://community.carloop.io/t/connecting-core-to-carloop/113/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/connecting-core-to-carloop/113/1</link>
+        <pubDate>Mon, 22 Aug 2016 22:58:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-113-1</guid>
+        <source url="https://community.carloop.io/t/connecting-core-to-carloop/113.rss">Connecting Core to Carloop</source>
+      </item>
+  </channel>
+</rss>

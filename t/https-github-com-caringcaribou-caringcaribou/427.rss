@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>https://github.com/CaringCaribou/caringcaribou</title>
+    <link>https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427</link>
+    <description>  https://github.com/CaringCaribou/caringcaribou
+
+I really like this it really helps when sniffing. Still getting used to everything it does but man it has some interesting features. Plus it works with carloops &quot;socket can&quot; sketch. Just bring up your device and then use the python script to run a command. Really dope</description>
+    
+    <lastBuildDate>Sat, 26 Aug 2017 13:26:23 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>https://github.com/CaringCaribou/caringcaribou</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="https://github.com/CaringCaribou/caringcaribou" class="inline-onebox" rel="noopener nofollow ugc">GitHub - CaringCaribou/caringcaribou: A friendly car security exploration tool for the CAN bus</a></p>
+<p>I really like this it really helps when sniffing. Still getting used to everything it does but man it has some interesting features. Plus it works with carloops “socket can” sketch. Just bring up your device and then use the python script to run a command. Really dope</p>
+          <p><a href="https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427/1</link>
+        <pubDate>Sat, 26 Aug 2017 13:26:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-427-1</guid>
+        <source url="https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427.rss">https://github.com/CaringCaribou/caringcaribou</source>
+      </item>
+  </channel>
+</rss>

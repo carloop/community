@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>OBD2 emulator for developing</title>
+    <link>https://community.carloop.io/t/obd2-emulator-for-developing/460</link>
+    <description>Hi, I&#39;m looking for a good OBD2 emulator for developing purposes.
+
+So far I found this one [obd2 emulator](https://www.amazon.com/ScanTool-602201-ECUsim-Simulator-Development/dp/B008NAH6WE).
+
+Thanks in advance.</description>
+    
+    <lastBuildDate>Tue, 17 Oct 2017 15:49:04 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/obd2-emulator-for-developing/460.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>OBD2 emulator for developing</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/itsmedavid">@itsmedavid</a>, I think using a RPi for other protocols is possible.</p>
+<p>However, I have not searched to see if anyone has designed emulators for those protocols.  I suggest to try and search around for the protocols with RPi that you are interested in.</p>
+<p>It might come down to being able to find emulators if you want to use something existing, or to develop your own emulators for other protocols if you are willing to tackle those projects.</p>
+          <p><a href="https://community.carloop.io/t/obd2-emulator-for-developing/460/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obd2-emulator-for-developing/460/4</link>
+        <pubDate>Tue, 17 Oct 2017 15:49:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-460-4</guid>
+        <source url="https://community.carloop.io/t/obd2-emulator-for-developing/460.rss">OBD2 emulator for developing</source>
+      </item>
+      <item>
+        <title>OBD2 emulator for developing</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>, thanks for your answer.</p>
+<p>Yes I need it for “newer” cars (2007 till now). I found another emulator with other protocols but are very expensive.</p>
+<p>With the raspberry pi emulator is it possible to emulate more protocols ?</p>
+<p>Thanks.</p>
+          <p><a href="https://community.carloop.io/t/obd2-emulator-for-developing/460/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obd2-emulator-for-developing/460/3</link>
+        <pubDate>Tue, 17 Oct 2017 13:03:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-460-3</guid>
+        <source url="https://community.carloop.io/t/obd2-emulator-for-developing/460.rss">OBD2 emulator for developing</source>
+      </item>
+      <item>
+        <title>OBD2 emulator for developing</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/itsmedavid">@itsmedavid</a>,</p>
+<p>I took a look at the example you found.  Please be aware that it is a CAN emulator, which also does SAE J1979 over CAN.<br>
+If you only need OBD2 for newer cars only using CANbus, you should be okay.<br>
+If you need OBD2 running on other protocols such as ISO9141, KWP2000, KWP fast init, PWM or VPW then you will need to keep on searching for something else.</p>
+<p>I know there is a solution (a really cool one!) using old car parts here, but you have to choose a donor car that matches the protocol you are interested in:<br>
+<a href="https://carloop.dyndns.org/t/instrument-cluster-at-a-meetup-event-dec-2016/209" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/instrument-cluster-at-a-meetup-event-dec-2016/209</a></p>
+<p>Also, a RPi has been used as a CAN simulator as shown here:<br>
+<a href="https://carloop.dyndns.org/t/got-raspberry-pi-use-it-as-a-can-simulator/42" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/got-raspberry-pi-use-it-as-a-can-simulator/42</a></p>
+<p>I have not seen a simulator that does it all; I bet it exists as a commercial testing product…</p>
+          <p><a href="https://community.carloop.io/t/obd2-emulator-for-developing/460/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obd2-emulator-for-developing/460/2</link>
+        <pubDate>Tue, 17 Oct 2017 01:54:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-460-2</guid>
+        <source url="https://community.carloop.io/t/obd2-emulator-for-developing/460.rss">OBD2 emulator for developing</source>
+      </item>
+      <item>
+        <title>OBD2 emulator for developing</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, I’m looking for a good OBD2 emulator for developing purposes.</p>
+<p>So far I found this one <a href="https://www.amazon.com/ScanTool-602201-ECUsim-Simulator-Development/dp/B008NAH6WE" rel="noopener nofollow ugc">obd2 emulator</a>.</p>
+<p>Thanks in advance.</p>
+          <p><a href="https://community.carloop.io/t/obd2-emulator-for-developing/460/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obd2-emulator-for-developing/460/1</link>
+        <pubDate>Mon, 16 Oct 2017 15:29:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-460-1</guid>
+        <source url="https://community.carloop.io/t/obd2-emulator-for-developing/460.rss">OBD2 emulator for developing</source>
+      </item>
+  </channel>
+</rss>

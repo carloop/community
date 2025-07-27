@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Has anyone use this app with carloop</title>
+    <link>https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376</link>
+    <description>https://github.com/linklayer/cantact-app
+
+I was able to hook it up and it worked, it has some really nice features that don&#39;t work or I&#39;m not sure on how to use them.</description>
+    
+    <lastBuildDate>Thu, 27 Jul 2017 04:04:25 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Has anyone use this app with carloop</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>it worked I was able to get basic candump going on my Mac. I had to use a virtual machine with linux to get a can dump before so it helped me that way.</p>
+          <p><a href="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/3</link>
+        <pubDate>Thu, 27 Jul 2017 04:04:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-376-3</guid>
+        <source url="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376.rss">Has anyone use this app with carloop</source>
+      </item>
+      <item>
+        <title>Has anyone use this app with carloop</title>
+        <dc:creator><![CDATA[Beerman7175]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey, How well does this work with your carloop?</p>
+          <p><a href="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/2</link>
+        <pubDate>Thu, 27 Jul 2017 03:48:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-376-2</guid>
+        <source url="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376.rss">Has anyone use this app with carloop</source>
+      </item>
+      <item>
+        <title>Has anyone use this app with carloop</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/linklayer/cantact-app">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/linklayer/cantact-app" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/8bd48b274a7da5892689db7e358c7d06aafb7343_2_690x345.png" class="thumbnail" data-dominant-color="F5F3F2" width="690" height="345"></div>
+
+<h3><a href="https://github.com/linklayer/cantact-app" target="_blank" rel="noopener nofollow ugc">GitHub - linklayer/cantact-app: Desktop application for CANtact hardware...</a></h3>
+
+  <p>Desktop application for CANtact hardware interface - linklayer/cantact-app</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I was able to hook it up and it worked, it has some really nice features that don’t work or I’m not sure on how to use them.</p>
+          <p><a href="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376/1</link>
+        <pubDate>Tue, 04 Jul 2017 20:10:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-376-1</guid>
+        <source url="https://community.carloop.io/t/has-anyone-use-this-app-with-carloop/376.rss">Has anyone use this app with carloop</source>
+      </item>
+  </channel>
+</rss>

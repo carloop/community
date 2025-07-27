@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Library released!</title>
+    <link>https://community.carloop.io/t/carloop-library-released/17</link>
+    <description>The first version of the Carloop library is released: https://github.com/carloop/carloop-library.  This library lets you do things like:
+
+    Carloop&lt;CarloopRevision2&gt; carloop;
+
+    void setup()
+    {
+        carloop.begin();
+    }
+
+    void loop()
+    {
+        carloop.update();
+
+        Serial.printf(&quot;Battery voltage: %12f &quot;, carloop.battery());
+
+        CANMessage message;
+        while(carloop.can().receive(message))
+        {
+            canMessageCount++;
+        }
+
+        auto &amp;gps = carloop.gps();
+        Serial.printf(&quot;%f %f&quot;, gps.location.lat(), gps.location.lng());
+    }</description>
+    
+    <lastBuildDate>Mon, 28 Mar 2016 21:48:48 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/carloop-library-released/17.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Library released!</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>The first version of the Carloop library is released: <a href="https://github.com/carloop/carloop-library">https://github.com/carloop/carloop-library</a>.  This library lets you do things like:</p>
+<pre><code>Carloop&lt;CarloopRevision2&gt; carloop;
+
+void setup()
+{
+    carloop.begin();
+}
+
+void loop()
+{
+    carloop.update();
+
+    Serial.printf("Battery voltage: %12f ", carloop.battery());
+
+    CANMessage message;
+    while(carloop.can().receive(message))
+    {
+        canMessageCount++;
+    }
+
+    auto &amp;gps = carloop.gps();
+    Serial.printf("%f %f", gps.location.lat(), gps.location.lng());
+}
+</code></pre>
+          <p><a href="https://community.carloop.io/t/carloop-library-released/17/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-released/17/1</link>
+        <pubDate>Mon, 28 Mar 2016 21:48:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-17-1</guid>
+        <source url="https://community.carloop.io/t/carloop-library-released/17.rss">Carloop Library released!</source>
+      </item>
+  </channel>
+</rss>

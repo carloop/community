@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Simple CAN logger</title>
+    <link>https://community.carloop.io/t/simple-can-logger/73</link>
+    <description>I made a simple logger that outputs CAN messages formatted as JSON on the USB serial port and a server.
+
+https://github.com/carloop/simple_logger
+
+Check it out!</description>
+    
+    <lastBuildDate>Wed, 08 Jun 2016 03:26:26 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/simple-can-logger/73.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Simple CAN logger</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I made a simple logger that outputs CAN messages formatted as JSON on the USB serial port and a server.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/simple_logger">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/simple_logger" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/4ad8f366c1e969912cea8d136419dd8bb93b2feb_2_690x345.png" class="thumbnail" data-dominant-color="F0EFF1" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/simple_logger" target="_blank" rel="noopener">GitHub - carloop/simple_logger: Serial and TCP CAN bus logger for Carloop</a></h3>
+
+  <p>Serial and TCP CAN bus logger for Carloop. Contribute to carloop/simple_logger development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Check it out!</p>
+          <p><a href="https://community.carloop.io/t/simple-can-logger/73/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-can-logger/73/1</link>
+        <pubDate>Wed, 08 Jun 2016 03:26:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-73-1</guid>
+        <source url="https://community.carloop.io/t/simple-can-logger/73.rss">Simple CAN logger</source>
+      </item>
+  </channel>
+</rss>

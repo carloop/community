@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Does Carloop work with Boron LTE Kit?</title>
+    <link>https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922</link>
+    <description>This is my first time hacking OBD2 - making a dashboard to my RV, does boron lte work or should i get the particle-electron 3g version?
+
+Thanks for the help!</description>
+    
+    <lastBuildDate>Mon, 15 Mar 2021 20:02:48 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Does Carloop work with Boron LTE Kit?</title>
+        <dc:creator><![CDATA[Odb7]]></dc:creator>
+        <description><![CDATA[
+            <p>Here is an option <a href="https://community.particle.io/t/what-are-the-current-options-for-supporting-bluetooth-low-energy-ble/23395" class="inline-onebox" rel="noopener nofollow ugc">What are the current options for supporting Bluetooth Low Energy (BLE)? - Hardware - Particle</a><br>
+since electron does not have hardware capibilities you have to attach an external device and wire it correctly and make sure the voltage load is right. I would recommend it is worth spending money and upgrade the hardware to Wake on Bluetooth LE data (BLE). Only available on Gen 3 platforms (Argon, Boron, B Series SoM, and Tracker SoM).<a href="https://blog.particle.io/get-started-with-ble-and-nfc/" class="inline-onebox" rel="noopener nofollow ugc">Here’s how to share data from Particle Gen 3 devices using Bluetooth or NFC – Particle Blog</a></p>
+          <p><a href="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/4</link>
+        <pubDate>Mon, 15 Mar 2021 20:02:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-922-4</guid>
+        <source url="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922.rss">Does Carloop work with Boron LTE Kit?</source>
+      </item>
+      <item>
+        <title>Does Carloop work with Boron LTE Kit?</title>
+        <dc:creator><![CDATA[cworoberts]]></dc:creator>
+        <description><![CDATA[
+            <p>I have the Electron connected to the Carloop board and sending data over the cell network. How do I add bluetooth to it to read my wireless sensors?</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/3</link>
+        <pubDate>Tue, 02 Mar 2021 02:39:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-922-3</guid>
+        <source url="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922.rss">Does Carloop work with Boron LTE Kit?</source>
+      </item>
+      <item>
+        <title>Does Carloop work with Boron LTE Kit?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>The only boards currently supported are the Electron, Photon and Redbear Duo. You can buy a regular Carloop (<a href="https://store.carloop.io/products/carloop" class="inline-onebox">Carloop Particle Adapter for OBD II</a>), and separately purchase an Electron from Particle.  That is equivalent to Carloop 3G (which is currently out of stock as a kit).</p>
+<p>If you’d like GPS capability, you can purchase Carloop Pro which comes with the Electron + GPS and SD card reader.</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/2</link>
+        <pubDate>Tue, 10 Sep 2019 13:21:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-922-2</guid>
+        <source url="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922.rss">Does Carloop work with Boron LTE Kit?</source>
+      </item>
+      <item>
+        <title>Does Carloop work with Boron LTE Kit?</title>
+        <dc:creator><![CDATA[dev]]></dc:creator>
+        <description><![CDATA[
+            <p>This is my first time hacking OBD2 - making a dashboard to my RV, does boron lte work or should i get the particle-electron 3g version?</p>
+<p>Thanks for the help!</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922/1</link>
+        <pubDate>Sat, 07 Sep 2019 22:08:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-922-1</guid>
+        <source url="https://community.carloop.io/t/does-carloop-work-with-boron-lte-kit/922.rss">Does Carloop work with Boron LTE Kit?</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Non-Standard PIDs</title>
+    <link>https://community.carloop.io/t/non-standard-pids/251</link>
+    <description>I&#39;m at a bit of a loss to how I&#39;m suppose to query these pids.
+
+    Description                      Display            PID           Min       Max       Scale       Unit       Equation
+    HV Battery state of charge       SoC                224801        0.0        100.0     x1          %           ((((A*256)+B)*(1/5))/100)
+    HV Battery temperature           HV Temp            224800        0.0        150.0     x1          DegF     ((A*18)-580)/100
+    HV Battery current in Amps       HV Amps            22480b       -200        200       x1          Amps     ((((Signed(A)*256)+B)/5)/10)*-1
+    HV Battery Voltage               HV Volts           22480d        0.0        400.0     x1          Volts       (((A*256)+B)/100)
+    Temperature inside car           Inside Temp        22dd04        0.0        160.0     x1          DegF     ((A*18)-400)/10</description>
+    
+    <lastBuildDate>Thu, 06 Apr 2017 04:02:14 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/non-standard-pids/251.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Non-Standard PIDs</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Since you have the PIDs and the equations to interpret the data, check out an example on how to do the standard PIDs with the source code for the Code Reader Sample app:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/app-code-reader">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/app-code-reader" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/e83c7aea3bab781332f54c20be0ed675b2e818af_2_690x345.png" class="thumbnail" data-dominant-color="F4EFF1" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/app-code-reader" target="_blank" rel="noopener">GitHub - carloop/app-code-reader: Fault code reader</a></h3>
+
+  <p>Fault code reader. Contribute to carloop/app-code-reader development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/non-standard-pids/251/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/non-standard-pids/251/2</link>
+        <pubDate>Thu, 06 Apr 2017 04:02:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-251-2</guid>
+        <source url="https://community.carloop.io/t/non-standard-pids/251.rss">Non-Standard PIDs</source>
+      </item>
+      <item>
+        <title>Non-Standard PIDs</title>
+        <dc:creator><![CDATA[Samistine]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m at a bit of a loss to how I’m suppose to query these pids.</p>
+<pre><code>Description                      Display            PID           Min       Max       Scale       Unit       Equation
+HV Battery state of charge       SoC                224801        0.0        100.0     x1          %           ((((A*256)+B)*(1/5))/100)
+HV Battery temperature           HV Temp            224800        0.0        150.0     x1          DegF     ((A*18)-580)/100
+HV Battery current in Amps       HV Amps            22480b       -200        200       x1          Amps     ((((Signed(A)*256)+B)/5)/10)*-1
+HV Battery Voltage               HV Volts           22480d        0.0        400.0     x1          Volts       (((A*256)+B)/100)
+Temperature inside car           Inside Temp        22dd04        0.0        160.0     x1          DegF     ((A*18)-400)/10
+</code></pre>
+          <p><a href="https://community.carloop.io/t/non-standard-pids/251/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/non-standard-pids/251/1</link>
+        <pubDate>Wed, 05 Apr 2017 21:34:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-251-1</guid>
+        <source url="https://community.carloop.io/t/non-standard-pids/251.rss">Non-Standard PIDs</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>What protocols are supported?</title>
+    <link>https://community.carloop.io/t/what-protocols-are-supported/310</link>
+    <description>Does Carloop provide access to the other protocols/pins on the OBD-II connector besides the CAN-H, CAN-L, and of course power?  I&#39;m talking about the &quot;Vendor Option&quot; pins as well as the J1850 and ISO 9141-2 protocols.
+
+I believe there are certain things that I want to control that may not be on the CAN bus and I want to know the options.</description>
+    
+    <lastBuildDate>Mon, 29 May 2017 04:23:12 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/what-protocols-are-supported/310.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>What protocols are supported?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The Carloop circuit board has only a CANbus transceiver.  The CANbus connects out to the CAN-H,L pins on the connector.  You can always use adapters to connect to other CANbuses (Most cars now have several CANbus and only the diagnostics/OBDII data is available on the normal connector.  The interesting stuff is on the hidden CANbuses.).</p>
+<p>If the vendor option pins are a form of CANbus, then you can do what I suggested above.  If they did something else, then you might need some different hardware.</p>
+<p>For example, I am working on designing a CarloopRetro which will have a K-Line transceiver chip.  K-Line is the hardware level for ISO 9141-2, KWP and KWP2000.  I do not work for Carloop, so I only achieve about 30 minutes a month … it’s going to be a long time coming.</p>
+<p>I do not remember J1850.  Is it the hardware protocol for off-road vehicles or heavy machinery? I just remember that there are 4 hardware protocols: CANbus, K-Line, off-road and heavy machinery.  Carloop does not do any hardware protocols other than CANbus.  Any communications protocol running on CANbus can be done by Carloop, so long as the firmware is coded to do it.</p>
+          <p><a href="https://community.carloop.io/t/what-protocols-are-supported/310/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-protocols-are-supported/310/3</link>
+        <pubDate>Mon, 29 May 2017 04:23:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-310-3</guid>
+        <source url="https://community.carloop.io/t/what-protocols-are-supported/310.rss">What protocols are supported?</source>
+      </item>
+      <item>
+        <title>What protocols are supported?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>id like to know that as well, I was thinking of just “<a href="https://oshpark.com/shared_projects/ir8I9vT6" rel="noopener nofollow ugc">ordering</a>” one from there but was going to ask if I could just change the pins.</p>
+          <p><a href="https://community.carloop.io/t/what-protocols-are-supported/310/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-protocols-are-supported/310/2</link>
+        <pubDate>Wed, 17 May 2017 19:19:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-310-2</guid>
+        <source url="https://community.carloop.io/t/what-protocols-are-supported/310.rss">What protocols are supported?</source>
+      </item>
+      <item>
+        <title>What protocols are supported?</title>
+        <dc:creator><![CDATA[JoeJErnst]]></dc:creator>
+        <description><![CDATA[
+            <p>Does Carloop provide access to the other protocols/pins on the OBD-II connector besides the CAN-H, CAN-L, and of course power?  I’m talking about the “Vendor Option” pins as well as the J1850 and ISO 9141-2 protocols.</p>
+<p>I believe there are certain things that I want to control that may not be on the CAN bus and I want to know the options.</p>
+          <p><a href="https://community.carloop.io/t/what-protocols-are-supported/310/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-protocols-are-supported/310/1</link>
+        <pubDate>Wed, 17 May 2017 17:45:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-310-1</guid>
+        <source url="https://community.carloop.io/t/what-protocols-are-supported/310.rss">What protocols are supported?</source>
+      </item>
+  </channel>
+</rss>

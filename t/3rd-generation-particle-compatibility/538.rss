@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>3rd Generation Particle Compatibility</title>
+    <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538</link>
+    <description>Hi,
+
+Is the Carloop compatible with the new 3rd generation devices (Boron, Argon, Xenon)?
+
+I will be ordering a few Boron devices and wanted to know if I can plug it into the spot where my electron is now.
+
+Thanks!</description>
+    
+    <lastBuildDate>Sun, 11 Nov 2018 05:08:55 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>On this thread, Rick Kas at Particle confirms that CAN is not directly supported by the Nordic processors in the Mesh products:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/boron-featherwing-compatibility/45127">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/boron-featherwing-compatibility/45127" target="_blank" rel="noopener" title="02:06AM - 10 November 2018">Particle – 10 Nov 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/boron-featherwing-compatibility/45127" target="_blank" rel="noopener">Boron featherwing compatibility</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">General</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>I’m wondering if this featherwing will work on the new boron. Would it work out of the box or would it need work?  http://skpang.co.uk/catalog/canbus-featherwing-for-esp32-p-1556.html</p>
+
+  <p>
+    <span class="label1">Reading time: 1 mins 🕑</span>
+      <span class="label2">Likes: 1 ❤</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>For anyone that needs Carloop and ParticleMesh, then you need a new design.  How about CarloopMesh for a name?<br>
+The hardware would not be too difficult; refactor the board to use the featherwing specification and add a MCP2515 or similar SPI-CAN chip.  However, the Carloop library will not work on its own.  Most likely, a hardware driver library will need to be created or ported to support the MCP2515 to enable CAN capability.</p>
+<p>If you do not need Mesh, then the existing Carloop with a Photon (or RedbearDuo or Electron) would be the easiest way to go.  A bit more expensive in hardware than the Mesh option, but much easier for firmware development.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/11</link>
+        <pubDate>Sun, 11 Nov 2018 05:08:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-11</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[travlytle]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t really need mesh.  I got the LTE boron to play with.  I’m hoping to make a car telematics/datalogger/asset tracker.  I’ve started this with a raspberry pi 3 but realize it might not be the best.  I need a battery to properly shut it down.  I’m assuming the nRF52840 doesn’t need to be shutdown properly and power can just be cut like a microcontroller.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/10</link>
+        <pubDate>Sat, 10 Nov 2018 11:59:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-10</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/travlytle">@travlytle</a>,</p>
+<p>Particle has now released some of the datasheets and reference materials for the new devices.<br>
+There is now enough information available to start our investigation whether these boards will work with the existing Carloop or not.</p>
+<p>In the second generation devices (Photon, Electron, RedbearDuo), the STM32F10… processor supported CANbus as a microprocessor peripheral.  Do the new Nordic processors have the same support?  This would not be a show-stopper, but lacking support would greatly increase the magnitude of the project.<br>
+[Edit: I just did a quick searh]<br>
+I found the product specification for the new microprocessors, and I did not find CANbus mentioned anywhere:</p><aside class="onebox pdf" data-onebox-src="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf">
+  <header class="source">
+
+      <a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener">infocenter.nordicsemi.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener"><span class="pdf-onebox-logo"></span></a>
+
+<h3><a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener">nRF52840_PS_v1.0.pdf</a></h3>
+
+  <p class="filesize">10.22 MB</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Does the new third generation break out that functionality and make it available on the feather pins?  If not, then it might mean designing a 3rd party third generation product, much like how the Duo was developed by RedbearLabs.  If the hardware is brought out to the correct pins, then the feather adapter would allow that connection.  If it is brought out to different pins, it would mean a custom adapter or maybe it would be simpler to design a CarloopMesh version.</p>
+<p>There should be enough information available now to at least partially answer these questions.</p>
+<p>On the other hand, the new devices are intended to be part of a MeshNetwork with connection to the Particle Cloud.  Depending on your application, you might be better off with a second generation device.  Can you elaborate on whether you need mesh capability with Carloop?</p>
+<p>Congratulations on getting your order.  I placed my order late, so I will be at the end of the initial deliveries.  I just hope they are delivered before Christmas holidays so I can have a friend hand-deliver across the border during holiday travel.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/9</link>
+        <pubDate>Sat, 10 Nov 2018 04:20:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-9</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[travlytle]]></dc:creator>
+        <description><![CDATA[
+            <p>Any news if carloop will support these new devices? Ive gotten my order of the new boards and would like to order a carloop if it will work.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/8</link>
+        <pubDate>Fri, 09 Nov 2018 22:46:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-8</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[travlytle]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s weird because looking at the datasheet there is no CAN.  I guess if they are keeping it backwards compatible then maybe they will provide an SPI device.  I sure hope so!</p>
+<aside class="onebox pdf" data-onebox-src="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf">
+  <header class="source">
+
+      <a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener nofollow ugc">infocenter.nordicsemi.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener nofollow ugc"><span class="pdf-onebox-logo"></span></a>
+
+<h3><a href="https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.0.pdf" target="_blank" rel="noopener nofollow ugc">nRF52840_PS_v1.0.pdf</a></h3>
+
+  <p class="filesize">10.22 MB</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The guy I emailed and chatted with was Rick on June 18th.</p>
+<p>Maybe there is something special they are doing, like providing an aux CPU or providing a SPI device.</p>
+<p>I’ve been using a raspberry pi in my car and would like to switch to something smaller like this.  I haven’t used the old boards but I have pre-ordered the boron.  Hopefully they either provide can or someone creates a daughter board for it.</p>
+<p>I’ve been looking for feather boards with CAN and haven’t found any except the carloop.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/7</link>
+        <pubDate>Thu, 21 Jun 2018 02:27:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-7</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>I also asked to particle support (Ziran Wang from particle support) and confirm that CAN will be supported.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/6</link>
+        <pubDate>Thu, 21 Jun 2018 01:16:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-6</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[travlytle]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a></p>
+<p>I’ve asked particle support and the processor has no CAN support. The cheapest and easiest way to go is with a daughter board with an mpc2515 style chip. If carloop is upgraded this can go on it.</p>
+<p>Travis</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/5</link>
+        <pubDate>Wed, 20 Jun 2018 11:10:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-5</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/travlytle">@travlytle</a>,</p>
+<p>There is really not enough information to be sure of anything at this point.  Particle along with the Elites on <a href="http://community.particle.io">community.particle.io</a> are not revealing anything substantial.</p>
+<p>Since we know the main processor is changing, it is a good bet that the peripherals will also be changing.  We can always look into the datasheet for the new main processor to see if CAN is supported or not; even then we would not know if Particle would bring the interface out and make it accessible.</p>
+<p>There are always solutions, but not necessarily a solution that fits every use case.<br>
+For example, you could have a Carloop attached to a Photon, which then communicates over SPI/I2C/Serial to the Boron.</p>
+<p>By the way, depending on your location in the world, 4G/LTE might not be an option anyway.<br>
+The Boron works on NB-IoT and Cat-M1, which is not quite the ‘regular’ 4G used by cell phones.<br>
+For me in Canada, I have to stick with 3G.<br>
+More information here:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/lte-4g-or-3g-difference-and-compatibility-with-boron/39542/12">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/lte-4g-or-3g-difference-and-compatibility-with-boron/39542/12" target="_blank" rel="noopener" title="03:34PM - 03 March 2018">Particle – 3 Mar 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/lte-4g-or-3g-difference-and-compatibility-with-boron/39542/12" target="_blank" rel="noopener">LTE, 4G or 3G difference and compatibility with Boron</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #FFFF99;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Connectivity</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #FFFF99;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">BLE // NFC</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>@peekay123,  Thanks for the response!  I assumed that would be the case; I find it disappointing, especially given the advertising by these telcos…  I will plan conservatively, and stick with 3G for now.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/4</link>
+        <pubDate>Wed, 20 Jun 2018 03:03:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-4</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[travlytle]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve asked about boron supporting CAN and they say it will not.  I believe this is due to main processor change not having CAN.  But a daughter board could be made with SPI/I2C controller.  This pushes Carloop out of 4G/LTE I believe.  Hopefully this isn’t true or someone is creating a carloop with support for this board.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/3</link>
+        <pubDate>Wed, 20 Jun 2018 02:36:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-3</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nathan">@Nathan</a>,</p>
+<p>Since the new devices are not yet released, there is no way to be absolutely sure.</p>
+<p>In terms of hardware interface, we do know there will be differences, since Particle has created an adapter; see this link:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.particle.io/iot-connectivity/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/0bb66a7b72e26a570099785b032496df2c50cfa3.png" class="site-icon" data-dominant-color="006D8A" width="32" height="32">
+
+      <a href="https://www.particle.io/iot-connectivity/" target="_blank" rel="noopener">Particle</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/443;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/5308719b6961352e2cb88200caf78ac525509639_2_690x444.png" class="thumbnail" data-dominant-color="8B8D7C" width="690" height="444"></div>
+
+<h3><a href="https://www.particle.io/iot-connectivity/" target="_blank" rel="noopener">IoT Network Solutions — Products &amp; Services | Particle</a></h3>
+
+  <p>IoT network solutions that are optimized to easily connect your device to the Internet over Wi-Fi, cellular, NFC, or BLE.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>In terms of the system firmware, and support for CAN, we can only assume it will still be supported.  However, it is still an assumption for all its worth.</p>
+<p>Also, in the particle community, I recall a post where Particle committed to continuing to support the existing hardware, meaning we can expect to still be able to get Photon and Electron devices.</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/2</link>
+        <pubDate>Sun, 18 Feb 2018 06:50:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-2</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+      <item>
+        <title>3rd Generation Particle Compatibility</title>
+        <dc:creator><![CDATA[nathan]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>Is the Carloop compatible with the new 3rd generation devices (Boron, Argon, Xenon)?</p>
+<p>I will be ordering a few Boron devices and wanted to know if I can plug it into the spot where my electron is now.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/3rd-generation-particle-compatibility/538/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3rd-generation-particle-compatibility/538/1</link>
+        <pubDate>Tue, 13 Feb 2018 21:33:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-538-1</guid>
+        <source url="https://community.carloop.io/t/3rd-generation-particle-compatibility/538.rss">3rd Generation Particle Compatibility</source>
+      </item>
+  </channel>
+</rss>

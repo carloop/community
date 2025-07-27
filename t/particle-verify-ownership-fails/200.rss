@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Particle &quot;verify ownership&quot; fails</title>
+    <link>https://community.carloop.io/t/particle-verify-ownership-fails/200</link>
+    <description>I was able to claim the Particle Photon on the Carloop, flash test code, fork and modify test code, flash and test.  All was going good.
+
+So at first, it worked fine.
+
+Then I took it outside to the car.  Duh, of course the wifi doesn&#39;t work outside the house.  After a bit of circular issues of trying to get it to work on my phone&#39;s hotspot while using the phone app to connect, it stopped connecting.
+
+Actually, it connects, passes all the connect checklists, but fails on the &quot;verify ownership&quot; part and I get &quot;Oops!&quot;
+
+Note, to reconnect, I have to change ownership (from myself to myself.)  I worry this is the core of the issue.
+
+I&#39;ve spent a good deal of time down the rabbit hole to fix this -- trying to install particle-cli on a Linux VM (installed can-utils but /dev/ttyACM0 doesn&#39;t appear), trying to install particle-cli on Mac OS X (brew won&#39;t install dfu-util) and generally banging my tiny fists on the keyboard. :)
+
+At the top, I&#39;m sure it&#39;s a Particle Cloud ownership issue because I switched owners.  But Particle seems to rely on forums to fix their problems and doesn&#39;t have a direct line.
+
+I&#39;m a bit dizzy with a couple days spent trying to get it to work.
+
+Has anyone solved this?</description>
+    
+    <lastBuildDate>Tue, 10 Jan 2017 22:35:47 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Particle &quot;verify ownership&quot; fails</title>
+        <dc:creator><![CDATA[Kikiorg]]></dc:creator>
+        <description><![CDATA[
+            <p>First, I’m not quite done, since I still don’t see the Carloop from the command line (I think this is because it isn’t connected to anything yet – still no /dev/ttyACM0.) And it was too rainy to carry my computer outside to the car. <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> Plus, still I can’t connect it to the app without changing ownership (the phone app doesn’t allow it; cancel is the only other option.) And I can’t connect anyway, because it’s connected to my phone’s hotspot from the web, and I have to turn on wifi and turn off hotspot to do that.</p>
+<p>And I also wanted to isolate what I did to get it working – there were so many things I tried!</p>
+<p>It has been pretty complicated, so I took a little brain break before I retraced my steps.  This thread won’t be useful if I don’t verify and then write up better what I did.</p>
+          <p><a href="https://community.carloop.io/t/particle-verify-ownership-fails/200/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-verify-ownership-fails/200/5</link>
+        <pubDate>Tue, 10 Jan 2017 22:35:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-200-5</guid>
+        <source url="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss">Particle &quot;verify ownership&quot; fails</source>
+      </item>
+      <item>
+        <title>Particle &quot;verify ownership&quot; fails</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey, <a class="mention" href="https://community.carloop.io/u/kikiorg">@Kikiorg</a> welcome!<br>
+Were you able to get it working? - Can we change the title to solved?</p>
+          <p><a href="https://community.carloop.io/t/particle-verify-ownership-fails/200/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-verify-ownership-fails/200/4</link>
+        <pubDate>Tue, 10 Jan 2017 22:21:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-200-4</guid>
+        <source url="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss">Particle &quot;verify ownership&quot; fails</source>
+      </item>
+      <item>
+        <title>Particle &quot;verify ownership&quot; fails</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="Kikiorg" data-post="1" data-topic="200">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/kikiorg/48/113_2.png" class="avatar"> Kikiorg:</div>
+<blockquote>
+<p>Note, to reconnect, I have to change ownership (from myself to myself.)</p>
+</blockquote>
+</aside>
+<p>As mentioned in the parallel <a href="https://community.particle.io/t/photon-verify-device-ownership-failed/13838/5" rel="noopener nofollow ugc">Particle community thread</a> that’s not the case.</p>
+<aside class="quote no-group" data-username="Kikiorg" data-post="2" data-topic="200">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/kikiorg/48/113_2.png" class="avatar"> Kikiorg:</div>
+<blockquote>
+<p>After the fail, it breathes green.</p>
+</blockquote>
+</aside>
+<p>That indicates that the running code does cut the cloud connection and <em>not</em> failed WiFi!<br>
+It actually means good WiFi and successfully connected but no Particle cloud (intentionally or by blocking code depends on the code - as said)</p>
+          <p><a href="https://community.carloop.io/t/particle-verify-ownership-fails/200/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-verify-ownership-fails/200/3</link>
+        <pubDate>Tue, 10 Jan 2017 18:56:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-200-3</guid>
+        <source url="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss">Particle &quot;verify ownership&quot; fails</source>
+      </item>
+      <item>
+        <title>Particle &quot;verify ownership&quot; fails</title>
+        <dc:creator><![CDATA[Kikiorg]]></dc:creator>
+        <description><![CDATA[
+            <p>After the fail, it breathes green.  This is supposed to indicate failed wifi, but the wifi is good (I’m writing on it now) and that part of the checklist succeeded.</p>
+          <p><a href="https://community.carloop.io/t/particle-verify-ownership-fails/200/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-verify-ownership-fails/200/2</link>
+        <pubDate>Tue, 10 Jan 2017 18:26:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-200-2</guid>
+        <source url="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss">Particle &quot;verify ownership&quot; fails</source>
+      </item>
+      <item>
+        <title>Particle &quot;verify ownership&quot; fails</title>
+        <dc:creator><![CDATA[Kikiorg]]></dc:creator>
+        <description><![CDATA[
+            <p>I was able to claim the Particle Photon on the Carloop, flash test code, fork and modify test code, flash and test.  All was going good.</p>
+<p>So at first, it worked fine.</p>
+<p>Then I took it outside to the car.  Duh, of course the wifi doesn’t work outside the house.  After a bit of circular issues of trying to get it to work on my phone’s hotspot while using the phone app to connect, it stopped connecting.</p>
+<p>Actually, it connects, passes all the connect checklists, but fails on the “verify ownership” part and I get “Oops!”</p>
+<p>Note, to reconnect, I have to change ownership (from myself to myself.)  I worry this is the core of the issue.</p>
+<p>I’ve spent a good deal of time down the rabbit hole to fix this – trying to install particle-cli on a Linux VM (installed can-utils but /dev/ttyACM0 doesn’t appear), trying to install particle-cli on Mac OS X (brew won’t install dfu-util) and generally banging my tiny fists on the keyboard. <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>At the top, I’m sure it’s a Particle Cloud ownership issue because I switched owners.  But Particle seems to rely on forums to fix their problems and doesn’t have a direct line.</p>
+<p>I’m a bit dizzy with a couple days spent trying to get it to work.</p>
+<p>Has anyone solved this?</p>
+          <p><a href="https://community.carloop.io/t/particle-verify-ownership-fails/200/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/particle-verify-ownership-fails/200/1</link>
+        <pubDate>Tue, 10 Jan 2017 18:02:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-200-1</guid>
+        <source url="https://community.carloop.io/t/particle-verify-ownership-fails/200.rss">Particle &quot;verify ownership&quot; fails</source>
+      </item>
+  </channel>
+</rss>

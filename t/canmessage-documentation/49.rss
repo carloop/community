@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CANMessage documentation?</title>
+    <link>https://community.carloop.io/t/canmessage-documentation/49</link>
+    <description>So I got my carloop hooked up to my Impreza WRX and have been able to get the raw CAN messages. I&#39;ve looked into the carloop library and it seems like it&#39;s configured using `canDriver` which then results in my loop function getting `CANMessage`&#39;s. I can see in one of the examples a small listing of hex codes to messages. Does anyone know where there might be documentation about the `canDriver` in use and a good way to debug/log out what `CANMessage`&#39;s that I am receiving?
+
+I&#39;m obviously just getting started here and have a long way to go. Any pointers to good documentation would be incredibly helpful. I need to get the data in a readable format, right now I&#39;ve been able to get a log of all the message ID&#39;s but I don&#39;t know how to make heads or tails of the raw data yet.
+
+My ultimate goal is to have my cell phone provide a wifi signal which is running a webserver that the particle can connect with so that i&#39;d be able to view live stats about the car while it&#39;s on the road. An alternative to this would be picking up an electron or some other board with bluetooth.</description>
+    
+    <lastBuildDate>Thu, 09 Aug 2018 21:23:32 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/canmessage-documentation/49.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you for the reply.  It does look like there may be something off in the code.  With the code I posted, I only removed the web links in the comments. The rest of the code was as I downloaded it.  However, I may well have copied it wrong or something.  The next step will be to use the USB Serial line.  Data that looks like “1570.0:0500”, would definitely make things easier to decode.  I’m trying to do this with a 2012 KIA Sorento.  I know there is plenty of OBD2 data because I use Torque on a Samsung tablet and connect via a ELM 327 Bluetooth device, and it works fine.  I’ll re-download the code and try it again.  Thanks for your tips and help.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/14</link>
+        <pubDate>Thu, 09 Aug 2018 21:23:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-14</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Just a side note, the code you posted does not appear to be exactly the same as what I found on GitHub here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/towynlin/carloop-obd-publisher">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/towynlin/carloop-obd-publisher" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/1ed01fde407e3e46e543390f2e24d1d76e2e6885_2_690x345.png" class="thumbnail" data-dominant-color="F1ECED" width="690" height="345"></div>
+
+<h3><a href="https://github.com/towynlin/carloop-obd-publisher" target="_blank" rel="noopener">GitHub - towynlin/carloop-obd-publisher: Firmware for Particle Electron,...</a></h3>
+
+  <p>Firmware for Particle Electron, publishes OBD data - towynlin/carloop-obd-publisher</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Thanks for posting the code.  Now I know what you are asking about.</p>
+<aside class="quote no-group" data-username="ruhandsomeiii" data-post="10" data-topic="49">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/r/848f3c/48.png" class="avatar"> ruhandsomeiii:</div>
+<blockquote>
+<p>What I’m looking for just a little help with understanding something like “1570.0:05000007fd”, how do I read this?</p>
+</blockquote>
+</aside>
+<p>The part before the “:” is the timestamp.  Your device had been running for 1570.0 seconds when it received the CAN message.  I find it rather bizarre that all the messages have the same timestamp.  That suggests an error in the code.</p>
+<p>After the “:” are the bytes of the message starting with the PID<br>
+“05” is the PID.<br>
+You can look up the PIDs here:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+According to the chart, PID 05 is the engine coolant temperature and has 1 additional byte of data.<br>
+The next byte is “00”.  If you do the calculation in the chart 00 -40 = -40 deg C.<br>
+That does not really make sense.<br>
+Another clue that there is something wrong with your code is that the message should stop after one extra byte, something like this:<br>
+“1570.0:0500”</p>
+<p>By the way, are you checking the USB Serial line to see if you are getting the battery voltage and the number of messages?  That should give you some  more clues if things are working.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/13</link>
+        <pubDate>Thu, 09 Aug 2018 19:21:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-13</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for your reply. I downloaded the Carloop OBD Publisher on GitHub.  I included it below, the code appears to work, I just can’t understand how to decode it using the Wiki</p>
+<p><span class="hashtag-raw">#include</span> “application.h”<br>
+<span class="hashtag-raw">#include</span> “carloop.h”<br>
+<span class="hashtag-raw">#include</span> “base85.h”</p>
+<p>SYSTEM_MODE(SEMI_AUTOMATIC);<br>
+SYSTEM_THREAD(ENABLED);</p>
+<p>void sendObdRequest();<br>
+void waitForObdResponse();<br>
+void delayUntilNextRequest();<br>
+void printValuesAtInterval();<br>
+void printValues();<br>
+String dumpMessage(const CANMessage &amp;message);<br>
+bool byteArray8Equal(uint8_t a1[8], uint8_t a2[8]);</p>
+<p>Carloop carloop;</p>
+<p>int canMessageCount = 0;</p>
+<p>// OBD CAN message IDs<br>
+const auto OBD_CAN_BROADCAST_ID    = 0X7DF;<br>
+const auto OBD_CAN_REQUEST_ID      = 0x7E0;<br>
+const auto OBD_CAN_REPLY_ID_MIN    = 0x7E8;<br>
+const auto OBD_CAN_REPLY_ID_MAX    = 0x7EF;</p>
+<p>// OBD services / modes<br>
+const auto OBD_MODE_CURRENT_DATA = 0x01;</p>
+<p>// OBD PIDs<br>
+const auto OBD_PID_SUPPORTED_PIDS_01_20                  = 0x00;<br>
+// MIL = malfunction indicator lamp = check engine light<br>
+const auto OBD_PID_MIL_STATUS                            = 0x01;<br>
+const auto OBD_PID_FUEL_SYSTEM_STATUS                    = 0x03;<br>
+const auto OBD_PID_ENGINE_LOAD                           = 0x04;<br>
+const auto OBD_PID_COOLANT_TEMPERATURE                   = 0x05;<br>
+const auto OBD_PID_SHORT_TERM_FUEL_TRIM                  = 0x06;<br>
+const auto OBD_PID_LONG_TERM_FUEL_TRIM                   = 0x07;<br>
+const auto OBD_PID_ENGINE_RPM                            = 0x0c;<br>
+const auto OBD_PID_VEHICLE_SPEED                         = 0x0d;<br>
+const auto OBD_PID_TIMING_ADVANCE                        = 0x0e;<br>
+const auto OBD_PID_INTAKE_AIR_TEMPERATURE                = 0x0f;<br>
+const auto OBD_PID_MAF_AIR_FLOW_RATE                     = 0x10;<br>
+const auto OBD_PID_THROTTLE    	                         = 0x11;<br>
+const auto OBD_PID_O2_SENSORS_PRESENT                    = 0x13;<br>
+const auto OBD_PID_O2_SENSOR_2                           = 0x15;<br>
+const auto OBD_PID_OBD_STANDARDS                         = 0x1c;<br>
+const auto OBD_PID_ENGINE_RUN_TIME                       = 0x1f;<br>
+const auto OBD_PID_SUPPORTED_PIDS_21_40                  = 0x20;<br>
+const auto OBD_PID_DISTANCE_TRAVELED_WITH_MIL_ON         = 0x21;<br>
+const auto OBD_PID_COMMANDED_EVAPORATIVE_PURGE           = 0x2e;<br>
+const auto OBD_PID_FUEL_TANK_LEVEL_INPUT                 = 0x2f;<br>
+const auto OBD_PID_WARM_UPS_SINCE_CODES_CLEARED          = 0x30;<br>
+const auto OBD_PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED = 0x31;<br>
+const auto OBD_PID_ABSOLUTE_BAROMETRIC_PRESSURE          = 0x33;<br>
+const auto OBD_PID_O2_SENSOR_1                           = 0x34;<br>
+const auto OBD_PID_CATALYST_TEMPERATURE_BANK1_SENSOR1    = 0x3c;<br>
+const auto OBD_PID_SUPPORTED_PIDS_41_60                  = 0x40;<br>
+const auto OBD_PID_MONITOR_STATUS                        = 0X41;<br>
+const auto OBD_PID_CONTROL_MODULE_VOLTAGE                = 0X42;<br>
+const auto OBD_PID_ABSOLUTE_LOAD_VALUE                   = 0X43;<br>
+const auto OBD_PID_FUEL_AIR_COMMANDED_EQUIV_RATIO        = 0X44;<br>
+const auto OBD_PID_RELATIVE_THROTTLE                     = 0X45;<br>
+const auto OBD_PID_AMBIENT_AIR_TEMPERATURE               = 0X46;<br>
+const auto OBD_PID_ABSOLUTE_THROTTLE_B                   = 0X47;<br>
+const auto OBD_PID_ACCELERATOR_PEDAL_POSITION_D          = 0X49;<br>
+const auto OBD_PID_ACCELERATOR_PEDAL_POSITION_E          = 0X4a;<br>
+const auto OBD_PID_COMMANDED_THROTTLE_ACTUATOR           = 0X4c;</p>
+<p>const size_t NUM_PIDS_TO_REQUEST = 30;<br>
+const uint8_t pidsToRequest[NUM_PIDS_TO_REQUEST] = {<br>
+OBD_PID_ENGINE_LOAD,<br>
+OBD_PID_COOLANT_TEMPERATURE,<br>
+OBD_PID_SHORT_TERM_FUEL_TRIM,<br>
+OBD_PID_LONG_TERM_FUEL_TRIM,<br>
+OBD_PID_ENGINE_RPM,<br>
+OBD_PID_VEHICLE_SPEED,<br>
+OBD_PID_TIMING_ADVANCE,<br>
+OBD_PID_INTAKE_AIR_TEMPERATURE,<br>
+OBD_PID_MAF_AIR_FLOW_RATE,<br>
+OBD_PID_THROTTLE,<br>
+OBD_PID_O2_SENSOR_2,<br>
+OBD_PID_ENGINE_RUN_TIME,<br>
+OBD_PID_DISTANCE_TRAVELED_WITH_MIL_ON,<br>
+OBD_PID_COMMANDED_EVAPORATIVE_PURGE,<br>
+OBD_PID_FUEL_TANK_LEVEL_INPUT,<br>
+OBD_PID_WARM_UPS_SINCE_CODES_CLEARED,<br>
+OBD_PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED,<br>
+OBD_PID_ABSOLUTE_BAROMETRIC_PRESSURE,<br>
+OBD_PID_O2_SENSOR_1,<br>
+OBD_PID_CATALYST_TEMPERATURE_BANK1_SENSOR1,<br>
+OBD_PID_MONITOR_STATUS,<br>
+OBD_PID_CONTROL_MODULE_VOLTAGE,<br>
+OBD_PID_ABSOLUTE_LOAD_VALUE,<br>
+OBD_PID_FUEL_AIR_COMMANDED_EQUIV_RATIO,<br>
+OBD_PID_RELATIVE_THROTTLE,<br>
+OBD_PID_AMBIENT_AIR_TEMPERATURE,<br>
+OBD_PID_ABSOLUTE_THROTTLE_B,<br>
+OBD_PID_ACCELERATOR_PEDAL_POSITION_D,<br>
+OBD_PID_ACCELERATOR_PEDAL_POSITION_E,<br>
+OBD_PID_COMMANDED_THROTTLE_ACTUATOR<br>
+};<br>
+uint8_t pidIndex = NUM_PIDS_TO_REQUEST - 1;</p>
+<p>String dumpForPublish;</p>
+<p>auto *obdLoopFunction = sendObdRequest;<br>
+unsigned long transitionTime = 0;<br>
+uint8_t lastMessageData[8];</p>
+<p>void setup() {<br>
+Serial.begin(115200);<br>
+carloop.begin();<br>
+Particle.connect();<br>
+transitionTime = millis();<br>
+}</p>
+<p>void loop() {<br>
+carloop.update();<br>
+printValuesAtInterval();<br>
+obdLoopFunction();<br>
+}</p>
+<p>/*************** Begin: OBD Loop Functions ****************/</p>
+<p>void sendObdRequest() {<br>
+pidIndex = (pidIndex + 1) % NUM_PIDS_TO_REQUEST;</p>
+<pre><code>CANMessage message;
+message.id = OBD_CAN_BROADCAST_ID;
+message.len = 8; // just always use 8
+message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+message.data[1] = OBD_MODE_CURRENT_DATA; // OBD MODE
+message.data[2] = pidsToRequest[pidIndex]; // OBD PID
+
+carloop.can().transmit(message);
+
+obdLoopFunction = waitForObdResponse;
+transitionTime = millis();
+</code></pre>
+<p>}</p>
+<p>void waitForObdResponse() {<br>
+if (millis() - transitionTime &gt;= 100) {<br>
+obdLoopFunction = delayUntilNextRequest;<br>
+transitionTime = millis();<br>
+return;<br>
+}</p>
+<pre><code>String dump;
+CANMessage message;
+while (carloop.can().receive(message)) {
+	canMessageCount++;
+	if (message.id == 0x130) {
+		// This message gets sent every tenth of a second,
+		// so only publish it when the value changes.
+		if (!byteArray8Equal(message.data, lastMessageData)) {
+			memcpy(lastMessageData, message.data, 8);
+			dump += dumpMessage(message);
+		}
+	} else {
+		dump += dumpMessage(message);
+	}
+}
+
+Serial.write(dump);
+dumpForPublish += dump;
+// change to:
+// if &gt; 196 binary bytes
+// when each time stamp is exactly 2 bytes encoding integer tenths of a second
+// and 1-5 data bytes follow
+// then we base85 encode the binary to get close to the 255-byte publish limit
+if (dumpForPublish.length() &gt;= 220) {
+	Particle.publish("m", dumpForPublish, 60, PRIVATE);
+	dumpForPublish.remove(0);
+}
+</code></pre>
+<p>}</p>
+<p>void delayUntilNextRequest() {<br>
+if (millis() - transitionTime &gt;= 80) {<br>
+obdLoopFunction = sendObdRequest;<br>
+transitionTime = millis();<br>
+}<br>
+}</p>
+<p>/*************** End: OBD Loop Functions ****************/</p>
+<p>void printValuesAtInterval() {<br>
+static const unsigned long interval = 20000;<br>
+static unsigned long lastDisplay = 0;<br>
+if (millis() - lastDisplay &lt; interval) {<br>
+return;<br>
+}<br>
+lastDisplay = millis();<br>
+printValues();<br>
+}</p>
+<p>void printValues() {<br>
+Serial.printf("Battery voltage: %12f ", carloop.battery());<br>
+Serial.printf(“CAN messages: %12d “, canMessageCount);<br>
+Serial.println(””);<br>
+}</p>
+<p>String dumpMessage(const CANMessage &amp;message) {<br>
+// change to: each timestamp as exactly 2 bytes<br>
+// as unsigned integer tenths of a second<br>
+// wrap around carefully<br>
+// maybe (quick stab) – uint16_t t = (millis() / 100) &amp; 0xffff<br>
+String str = String::format(“%.1f:”, millis() / 1000.0);<br>
+int startIdx = 0;<br>
+int lastIdx = message.len - 1;<br>
+if (message.id &gt;= 0x700) {<br>
+// We can ignore the first two bytes<br>
+// data[0] is the length<br>
+// data[1] is the UDS service response ID, always 0x41 for me<br>
+// data[2] is important to include - it’s the PID<br>
+startIdx = 2;<br>
+if (message.data[0] &lt; message.len) {<br>
+lastIdx = message.data[0];<br>
+}<br>
+}<br>
+// hmm… Since the binary data can include zeros<br>
+// I may have to do the base85 encoding on the fly<br>
+// rather than right before publish…<br>
+for (int i = startIdx; i &lt;= lastIdx; i++) {<br>
+str += String::format(“%02x”, message.data[i]);<br>
+}<br>
+str += “,”;<br>
+return str;<br>
+}</p>
+<p>bool byteArray8Equal(uint8_t a1[8], uint8_t a2[8]) {<br>
+for (int i = 0; i &lt; 8; i++) {<br>
+if (a1[i] != a2[i]) return false;<br>
+}<br>
+return true;<br>
+}</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/12</link>
+        <pubDate>Thu, 09 Aug 2018 13:29:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-12</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ruhandsomeiii">@ruhandsomeiii</a>,</p>
+<p>You will need to tell us which program you downloaded, since it will likely be necessary to read the code to see what this output is.  Without any description, it is difficult to say.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/11</link>
+        <pubDate>Thu, 09 Aug 2018 05:14:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-11</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Need help, just received my Carloop and Electron. I download the program to read OBD2 data and because I’m new to this, I can’t make heads or tails of the output. I’ve looked at the Wiki reference, and it’s still greek to me. Can someone read this and at least point me in the right direction. i.e., event: m data: {“data”:“1570.0:05000007fd,1570.0:000010ff00ff0000,1570.0:ff035b0402006910,1570.0:0000000000000000,1570.0:45320c0b32310071,1570.0:fa6e000000460000,1570.0:1d3233300e836b3d,1570.0:86b47f0c11200018,1570.0:dcad008700000000,1570.0:0000,1570.0:1000000000000000,1570.0:00”,“ttl”:60,“published_at”:“2018-08-07T21:16:56.149Z”,“coreid”:"XXXXX}</p>
+<p>What I’m looking for just a little help with understanding something like “1570.0:05000007fd”, how do I read this?</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/10</link>
+        <pubDate>Thu, 09 Aug 2018 02:14:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-10</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/samueldavid">@samueldavid</a>,</p>
+<p>Did you fix up your code according to the suggestions in this thread?<br>
+<a href="https://carloop.dyndns.org/t/problems-whit-carloop-how-to-start-read-cam-bus/638" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/problems-whit-carloop-how-to-start-read-cam-bus/638</a></p>
+<p>If you think you have those problems solved, please go back to that thread and post your updated code.  I am guessing you still need to work on your code a bit more before you get messages that are meaningful.  Once you get some good messages, then we can start decoding them.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/9</link>
+        <pubDate>Sun, 10 Jun 2018 02:56:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-9</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="Myztiq" data-post="1" data-topic="49">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/f9ae1b/48.png" class="avatar"> Myztiq:</div>
+<blockquote>
+<p>An alternative to this would be picking up an electron or some other board with bluetooth.</p>
+</blockquote>
+</aside>
+<p>I would first try <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> suggestion using the <code>TCPserver</code> documentation.  If you want to use a board with bluetooth, we recommend the <a href="http://redbear.cc/duo/">Redbear Duo</a>.  It has a microcontroller with bluetooth radio, a CAN bus, and is compatible with Carloop’s pinout.  You can re-use your code from Particle because it uses Particle’s WEB IDE.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/7</link>
+        <pubDate>Mon, 23 May 2016 16:31:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-7</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[Myztiq]]></dc:creator>
+        <description><![CDATA[
+            <p>Those CAN driver docs are exactly what I was looking for. This is my second day now working with c++ and the photon so it’s all a little greek for me still. Now that I can read data from the car the next step is exactly that, setting up the TCPServer and seeing if I can get data to the phone live.</p>
+<p>First steps will be a simple tool to display live car stats via ODB-II.</p>
+<p>This was much easier than I was expecting, I hope the TCPServer stuff goes just as well!</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/6</link>
+        <pubDate>Sun, 22 May 2016 18:05:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-6</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>You got so far already. This is awesome!</p>
+<p>In addition to the id and data you’ll want to print the message length (number of data bytes that actually have data inside).</p>
+<p>The docs for the CAN driver is here:<br>
+<a href="https://docs.particle.io/reference/firmware/photon/#can-canbus-" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/reference/firmware/photon/#can-canbus-</a></p>
+<p>For the server, you can create a <code>TCPServer</code> <a href="https://docs.particle.io/reference/firmware/photon/#tcpserver">https://docs.particle.io/reference/firmware/photon/#tcpserver</a><br>
+A good place to check for examples of using the <code>TCPServer</code> is the Particle community at <a href="https://community.particle.io">https://community.particle.io</a></p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/5</link>
+        <pubDate>Sun, 22 May 2016 17:41:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-5</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[Myztiq]]></dc:creator>
+        <description><![CDATA[
+            <p>Good news! I just got an output of my cars RPM using the other example provided. I’m not entirely sure what the other OBD-II data that I’m getting above is but I understand now how to communicate and get messages off the bus.</p>
+<p><img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> Awesome.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/4</link>
+        <pubDate>Sun, 22 May 2016 17:41:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-4</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[Myztiq]]></dc:creator>
+        <description><![CDATA[
+            <p>Happily! To get this data I took the carloop minimal example – carloop_minimal.cpp</p>
+<p>And modified the <code>updateCanMessageCount</code> to match what I have here. I’m unsure if I’m even outputting the data in the right formats. This is the recording from nothing to starting up the car. I can always collect more data if that’s useful.</p>
+<pre><code class="lang-auto">void updateCanMessageCount()
+{
+    CANMessage message;
+    while(carloop.can().receive(message))
+    {
+      Serial.printf("ID:\tBit 0\tBit 1\t Bit 2\tBit 3\tBit 4\tBit 5\tBit 6\tBit 7\tBit 8");
+      Serial.println("");
+      Serial.print(message.id, HEX);
+      Serial.print("\t");
+      Serial.print(message.data[0], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[1], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[2], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[3], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[4], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[5], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[6], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[7], HEX);
+      Serial.print("\t");
+      Serial.print(message.data[8], HEX);
+      Serial.println("\tEND");
+      canMessageCount++;
+    }
+}
+</code></pre>
+<pre><code class="lang-auto">ID:	Bit 0	Bit 1	 Bit 2	Bit 3	Bit 4	Bit 5	Bit 6	Bit 7	Bit 8
+410	13	0	2D	15	0	A7	7	C1	53
+411	5	FF	7F	0	1	0	10	4	53
+412	0	82	1	82	1	19	80	84	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	EA	0	0	0	0	1	53
+514	0	0	77	4	CC	19	7	0	53
+620	30	0	3	0	0	0	0	0	53
+75	0	0	0	0	0	8	6	1E	53
+513	0	0	0	0	0	0	0	0	53
+512	F0	F0	0	0	90	46	42	40	53
+511	0	0	0	0	0	0	0	4	53
+70	F2	7F	0	FF	7C	80	6	D3	53
+80	F2	7F	0	0	B8	7F	6	92	53
+501	0	0	0	FF	0	47	0	0	53
+576	0	0	0	0	14	13	26	BD	53
+410	13	0	2D	15	0	AD	7	C1	53
+411	5	FF	7F	0	1	0	10	4	53
+412	0	83	1	83	1	19	80	84	53
+600	0	F3	7	3E	22	2A	4	0	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	FB	0	0	0	0	1	53
+410	13	0	2D	15	0	AD	7	C1	53
+411	5	FF	7F	0	1	0	10	4	53
+412	0	83	1	83	1	19	80	84	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	8C	0	0	0	0	1	53
+514	0	0	77	4	CC	19	9	0	53
+620	30	0	3	0	0	0	0	0	53
+75	0	0	0	0	0	8	7	3	53
+513	0	0	0	0	0	0	0	0	53
+512	F0	F0	0	0	90	47	42	40	53
+511	0	0	0	0	0	0	0	4	53
+70	FD	7F	0	FF	63	80	7	C	53
+80	1B	80	0	0	C5	7F	7	D4	53
+501	0	0	0	FF	0	48	0	0	53
+576	0	0	0	0	16	3	27	17	53
+410	13	0	2D	15	0	A0	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	81	1	81	1	19	80	84	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	9D	0	0	0	0	1	53
+410	13	0	2D	15	0	A7	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	80	1	80	1	19	80	84	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	AE	0	0	0	0	1	53
+514	0	0	77	4	CC	19	B	0	53
+620	30	0	3	0	0	0	0	0	53
+75	0	0	0	0	0	8	8	B8	53
+513	0	0	0	0	0	0	0	0	53
+512	F0	F0	0	0	90	48	42	40	53
+511	0	0	0	0	0	0	0	4	53
+70	3	80	0	FF	A0	80	8	3A	53
+80	5	80	0	0	B9	7F	8	95	53
+501	0	0	0	FF	0	49	0	0	53
+576	0	0	0	0	18	8	28	2B	53
+410	13	0	2D	15	0	A7	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	80	1	80	1	19	80	84	53
+601	8	DA	0	3C	0	64	0	0	53
+2	C	80	BF	0	0	0	0	1	53
+410	13	0	2D	15	0	95	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	7F	1	7F	1	19	80	84	53
+600	0	DD	7	3E	23	2A	4	0	53
+601	8	DA	0	3B	0	64	0	0	53
+2	C	80	40	0	0	0	0	1	53
+514	0	0	77	4	CC	19	D	0	53
+620	30	0	3	0	0	0	0	0	53
+75	0	0	0	0	0	8	9	A5	53
+513	0	0	0	0	0	0	0	0	53
+512	F0	F0	0	0	90	49	42	40	53
+511	0	0	0	0	0	0	0	4	53
+70	FA	7F	0	FF	AD	80	9	8D	53
+80	E9	7F	0	0	B1	7F	9	26	53
+501	0	0	0	FF	0	4A	0	0	53
+576	0	0	0	0	1A	33	29	7A	53
+410	13	0	2D	15	0	9E	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	7F	1	7F	1	19	80	84	53
+601	8	DA	0	3B	0	64	0	0	53
+2	C	80	51	0	0	0	0	1	53
+410	13	0	2D	15	0	9E	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	80	1	80	1	19	80	84	53
+601	8	DA	0	3B	0	64	0	0	53
+2	C	80	62	0	0	0	0	1	53
+514	0	0	77	4	8C	19	F	0	53
+620	30	0	3	0	0	0	0	0	53
+75	0	0	0	0	0	8	A	82	53
+513	0	0	0	0	0	0	0	0	53
+512	F0	F0	0	0	90	4A	42	40	53
+511	0	0	0	0	0	0	0	4	53
+70	FA	7F	0	FF	AF	80	A	A9	53
+80	9	80	0	0	A5	7F	A	6	53
+501	0	0	0	FF	0	4B	0	0	53
+576	0	0	0	0	1C	7	2A	B4	53
+410	13	0	2D	15	0	8B	7	C1	53
+411	5	FF	BF	0	1	0	10	4	53
+412	0	80	1	80	1	19	80	84	53
+</code></pre>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/3</link>
+        <pubDate>Sun, 22 May 2016 17:03:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-3</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Glad to know it is working for you!  Can you share a sample of the raw data that you are seeing?</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/2</link>
+        <pubDate>Sun, 22 May 2016 13:58:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-2</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+      <item>
+        <title>CANMessage documentation?</title>
+        <dc:creator><![CDATA[Myztiq]]></dc:creator>
+        <description><![CDATA[
+            <p>So I got my carloop hooked up to my Impreza WRX and have been able to get the raw CAN messages. I’ve looked into the carloop library and it seems like it’s configured using <code>canDriver</code> which then results in my loop function getting <code>CANMessage</code>’s. I can see in one of the examples a small listing of hex codes to messages. Does anyone know where there might be documentation about the <code>canDriver</code> in use and a good way to debug/log out what <code>CANMessage</code>’s that I am receiving?</p>
+<p>I’m obviously just getting started here and have a long way to go. Any pointers to good documentation would be incredibly helpful. I need to get the data in a readable format, right now I’ve been able to get a log of all the message ID’s but I don’t know how to make heads or tails of the raw data yet.</p>
+<p>My ultimate goal is to have my cell phone provide a wifi signal which is running a webserver that the particle can connect with so that i’d be able to view live stats about the car while it’s on the road. An alternative to this would be picking up an electron or some other board with bluetooth.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-documentation/49/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-documentation/49/1</link>
+        <pubDate>Sun, 22 May 2016 07:30:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-49-1</guid>
+        <source url="https://community.carloop.io/t/canmessage-documentation/49.rss">CANMessage documentation?</source>
+      </item>
+  </channel>
+</rss>

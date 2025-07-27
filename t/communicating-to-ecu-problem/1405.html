@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Communicating to ECU problem - Car Hacking - Carloop Community</title>
+    <meta name="description" content="hello every one 
+i have ECU model : siemens continental SIM2K-34VR 
+and i want to communicate to it by can protocol i have sent this pid request : 
+txHeader.DLC = 3; 
+txHeader.IDE = CAN_ID_STD; 
+txHeader.StdId = 0x7DF; 
+T&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="1405.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="ogFPQiFcCmf9RcpLsVpntowJr">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="ogFPQiFcCmf9RcpLsVpntowJr"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Communicating to ECU problem&#39;" href="1405.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/communicating-to-ecu-problem/1405">
+<meta name="twitter:url" content="/t/communicating-to-ecu-problem/1405">
+<meta property="og:title" content="Communicating to ECU problem">
+<meta name="twitter:title" content="Communicating to ECU problem">
+<meta property="og:description" content="hello every one  i have ECU model : siemens continental SIM2K-34VR  and i want to communicate to it by can protocol i have sent this pid request :  txHeader.DLC = 3;  txHeader.IDE = CAN_ID_STD;  txHeader.StdId = 0x7DF;  TxMessage.data[0] = 0x02;  TxMessage.data[1] = 0x01;  TxMessage.data[2] = 0x00;  TxMessage.data[3] = 0x00;  TxMessage.data[4] = 0x00;  TxMessage.data[5] = 0x00;  TxMessage.data[6] = 0x00;  TxMessage.data[7] = 0x00;  but the received can message is this :  ID: 0x1C3  Rx:     0x00 ...">
+<meta name="twitter:description" content="hello every one  i have ECU model : siemens continental SIM2K-34VR  and i want to communicate to it by can protocol i have sent this pid request :  txHeader.DLC = 3;  txHeader.IDE = CAN_ID_STD;  txHeader.StdId = 0x7DF;  TxMessage.data[0] = 0x02;  TxMessage.data[1] = 0x01;  TxMessage.data[2] = 0x00;  TxMessage.data[3] = 0x00;  TxMessage.data[4] = 0x00;  TxMessage.data[5] = 0x00;  TxMessage.data[6] = 0x00;  TxMessage.data[7] = 0x00;  but the received can message is this :  ID: 0x1C3  Rx:     0x00 ...">
+<meta property="og:article:section" content="Car Hacking">
+<meta property="og:article:section:color" content="AB9364">
+<meta property="article:published_time" content="2024-06-11T22:19:08+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="1405.html">Communicating to ECU problem</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/car-hacking/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Car Hacking</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Communicating to ECU problem'>
+      <link itemprop='url' href='1405.html'>
+      <meta itemprop='datePublished' content='2024-06-11T22:19:07Z'>
+        <meta itemprop='articleSection' content='Car Hacking'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ehsan.html'><span itemprop='name'>ehsan</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="1405.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2024-06-11T22:19:08Z' class='post-time'>
+                    June 11, 2024, 10:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-11T22:19:08Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hello every one<br>
+i have ECU model : siemens continental SIM2K-34VR<br>
+and i want to communicate to it by can protocol i have sent this pid request :<br>
+txHeader.DLC = 3;<br>
+txHeader.IDE = CAN_ID_STD;<br>
+txHeader.StdId = 0x7DF;</p>
+<p>TxMessage.data[0] = 0x02;<br>
+TxMessage.data[1] = 0x01;<br>
+TxMessage.data[2] = 0x00;<br>
+TxMessage.data[3] = 0x00;<br>
+TxMessage.data[4] = 0x00;<br>
+TxMessage.data[5] = 0x00;<br>
+TxMessage.data[6] = 0x00;<br>
+TxMessage.data[7] = 0x00;</p>
+<p>but the received can message is this :<br>
+ID: 0x1C3<br>
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00</p>
+<p>i haven’t connect anything else to ECU just +12V and GND and SWITCH power<br>
+is it because of this ?or sth else?</p>
+<p>how can i found the standard iso of my ECU i search all around the internet but didn’t get anything usefull</p>
+<p>appreciate your help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/shawn5670.html'><span itemprop='name'>shawn5670</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-06T06:44:43Z' class='post-time'>
+                    July 6, 2024,  6:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-06T06:44:43Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello there, <img src="../../images/emoji/twitter/smiling_face_with_three_hearts.png?v=12" title=":smiling_face_with_three_hearts:" class="emoji" alt=":smiling_face_with_three_hearts:" loading="lazy" width="20" height="20"><br>
+You need to check few things to solve you issue you are facing:</p>
+<ol>
+<li>Ensure that your CAN message format (CAN_ID_STD) and ID (0x7DF) are correctly set up for the OBD-II diagnostic request.</li>
+<li>Verify the wiring connections for CAN-H and CAN-L between your device and the ECU.</li>
+<li>Double-check the power connections (+12V, GND, and switched power) to ensure they are properly connected and stable.</li>
+</ol>
+<p>As for finding the standard ISO for your ECU, it’s typically available through the manufacturer’s documentation or support channels. If online searches haven’t been fruitful, reaching out directly to Siemens Continental support could provide you with the specific information you need.</p>
+<p>Feel free to provide more details or updates so we can assist you further.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Communicating to ECU problem</title>
+    <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405</link>
+    <description>hello every one 
+i have ECU model : siemens continental SIM2K-34VR
+and i want to communicate to it by can protocol i have sent this pid request :
+ txHeader.DLC = 3;
+txHeader.IDE = CAN_ID_STD;
+ txHeader.StdId = 0x7DF;
+
+TxMessage.data[0] = 0x02;
+TxMessage.data[1] = 0x01;
+TxMessage.data[2] = 0x00;
+TxMessage.data[3] = 0x00;
+TxMessage.data[4] = 0x00;
+TxMessage.data[5] = 0x00;
+TxMessage.data[6] = 0x00;
+TxMessage.data[7] = 0x00;
+
+but the received can message is this :
+ID: 0x1C3
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00  
+
+i haven&#39;t connect anything else to ECU just +12V and GND and SWITCH power 
+is it because of this ?or sth else?
+
+how can i found the standard iso of my ECU i search all around the internet but didn&#39;t get anything usefull
+
+appreciate your help.</description>
+    
+    <lastBuildDate>Sat, 06 Jul 2024 06:44:43 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/communicating-to-ecu-problem/1405.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Communicating to ECU problem</title>
+        <dc:creator><![CDATA[shawn5670]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello there, <img src="https://carloop.dyndns.org/images/emoji/twitter/smiling_face_with_three_hearts.png?v=12" title=":smiling_face_with_three_hearts:" class="emoji" alt=":smiling_face_with_three_hearts:" loading="lazy" width="20" height="20"><br>
+You need to check few things to solve you issue you are facing:</p>
+<ol>
+<li>Ensure that your CAN message format (CAN_ID_STD) and ID (0x7DF) are correctly set up for the OBD-II diagnostic request.</li>
+<li>Verify the wiring connections for CAN-H and CAN-L between your device and the ECU.</li>
+<li>Double-check the power connections (+12V, GND, and switched power) to ensure they are properly connected and stable.</li>
+</ol>
+<p>As for finding the standard ISO for your ECU, it’s typically available through the manufacturer’s documentation or support channels. If online searches haven’t been fruitful, reaching out directly to Siemens Continental support could provide you with the specific information you need.</p>
+<p>Feel free to provide more details or updates so we can assist you further.</p>
+          <p><a href="https://community.carloop.io/t/communicating-to-ecu-problem/1405/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405/2</link>
+        <pubDate>Sat, 06 Jul 2024 06:44:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1405-2</guid>
+        <source url="https://community.carloop.io/t/communicating-to-ecu-problem/1405.rss">Communicating to ECU problem</source>
+      </item>
+      <item>
+        <title>Communicating to ECU problem</title>
+        <dc:creator><![CDATA[ehsan]]></dc:creator>
+        <description><![CDATA[
+            <p>hello every one<br>
+i have ECU model : siemens continental SIM2K-34VR<br>
+and i want to communicate to it by can protocol i have sent this pid request :<br>
+txHeader.DLC = 3;<br>
+txHeader.IDE = CAN_ID_STD;<br>
+txHeader.StdId = 0x7DF;</p>
+<p>TxMessage.data[0] = 0x02;<br>
+TxMessage.data[1] = 0x01;<br>
+TxMessage.data[2] = 0x00;<br>
+TxMessage.data[3] = 0x00;<br>
+TxMessage.data[4] = 0x00;<br>
+TxMessage.data[5] = 0x00;<br>
+TxMessage.data[6] = 0x00;<br>
+TxMessage.data[7] = 0x00;</p>
+<p>but the received can message is this :<br>
+ID: 0x1C3<br>
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00</p>
+<p>i haven’t connect anything else to ECU just +12V and GND and SWITCH power<br>
+is it because of this ?or sth else?</p>
+<p>how can i found the standard iso of my ECU i search all around the internet but didn’t get anything usefull</p>
+<p>appreciate your help.</p>
+          <p><a href="https://community.carloop.io/t/communicating-to-ecu-problem/1405/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405/1</link>
+        <pubDate>Tue, 11 Jun 2024 22:19:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1405-1</guid>
+        <source url="https://community.carloop.io/t/communicating-to-ecu-problem/1405.rss">Communicating to ECU problem</source>
+      </item>
+  </channel>
+</rss>

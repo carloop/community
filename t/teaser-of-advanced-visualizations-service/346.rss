@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Teaser of Advanced Visualizations Service</title>
+    <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346</link>
+    <description>Hey all,
+
+Some of you may know a project that I shared here roughly 6 months ago. In that project, shared on hackster.io [here](https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991), I detailed steps of walking though some code I wrote to get your OBDII compliant vehicle communicating with an app called Blynk. It&#39;s been a wild ride since then and I&#39;ve built a team very talented folks who love data. 
+
+Currently, all I can share are some screenshots, but we will be producing some user/role permissions that will allow anyone to play with the data as they see fit and within the next couple of months we&#39;d like to open it up for anyone here to have some early access to getting their car on this service. 
+
+&lt;img src=&quot;/uploads/default/original/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd.png&quot; width=&quot;690&quot; height=&quot;365&quot;&gt;
+
+The above shot is a map showing a route that I typically take to and from our sailing group.
+
+&lt;img src=&quot;/uploads/default/original/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c.png&quot; width=&quot;689&quot; height=&quot;308&quot;&gt;
+
+Here you can see in the top left a visualization showing Engine RPM vs Vehicle Speed. If you look closely, you can see that each of these bands correspond to a particular gear that I&#39;m in (1-6)
+
+&lt;img src=&quot;/uploads/default/original/1X/b8b853b0190714c351e9e5fef816a5206e44e99d.png&quot; width=&quot;602&quot; height=&quot;310&quot;&gt;
+
+This view is really neat - shows how much time I&#39;ve spent, for the duration of a selected time range, between 0 and 10 km/h. I&#39;ve noticed that going to and from work, I spend roughly 30 percent of my trip not moving or in very annoying speed ranges. Taking only right turns (some UPS story I heard as a kid) I&#39;ve been able to reduce that time by 50 percent.
+
+Anyways, just wanted to share. I know these are just screenshots but I&#39;d love to have anyone&#39;s feedback who wants to throw some this way. Looking forward to sharing some more soon.</description>
+    
+    <lastBuildDate>Mon, 19 Jun 2017 14:34:51 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[asaulmachado]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey man,</p>
+<p>It is wonderful. Congratulations.</p>
+<p>will it work here in brazil?</p>
+<p>I am just kidding.</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/7</link>
+        <pubDate>Mon, 19 Jun 2017 14:34:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-7</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the kudos! The goal is that this will be just one component of the final product. Happy to hear others are interested. More to come soon!</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/6</link>
+        <pubDate>Tue, 06 Jun 2017 23:17:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-6</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>WOW!! This is amazing, <a class="mention" href="https://community.carloop.io/u/egarl004">@egarl004</a> !!</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/5</link>
+        <pubDate>Tue, 06 Jun 2017 21:56:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-5</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>oh man nice, I wouldn’t mind trying that out on my 14 charger.</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/4</link>
+        <pubDate>Tue, 06 Jun 2017 17:41:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-4</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>No need for the 3g electron. I’m currently using a redbear duo. The device is collecting a considerable amount of data, so we log that data to an SD card and upload upon successful wifi connection such as your home or work. Of course the mobile hotspot feature on your phone will work if needed.</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/3</link>
+        <pubDate>Tue, 06 Jun 2017 17:28:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-3</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>we would need 3g or could we use the photon or redbear duo?</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/2</link>
+        <pubDate>Tue, 06 Jun 2017 15:06:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-2</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+      <item>
+        <title>Teaser of Advanced Visualizations Service</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey all,</p>
+<p>Some of you may know a project that I shared here roughly 6 months ago. In that project, shared on <a href="http://hackster.io" rel="noopener nofollow ugc">hackster.io</a> <a href="https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991" rel="noopener nofollow ugc">here</a>, I detailed steps of walking though some code I wrote to get your OBDII compliant vehicle communicating with an app called Blynk. It’s been a wild ride since then and I’ve built a team very talented folks who love data.</p>
+<p>Currently, all I can share are some screenshots, but we will be producing some user/role permissions that will allow anyone to play with the data as they see fit and within the next couple of months we’d like to open it up for anyone here to have some early access to getting their car on this service.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd.png" data-download-href="//carloop-community.dyndns.org/uploads/default/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd" title="Screen Shot 2017-06-04 at 12.26.44 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd_2_690x365.png" width="690" height="365" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd_2_690x365.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd_2_1035x547.png 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/7892e22c2ad4a10b3f9fb26a442a1d56a196d4fd_2_1380x730.png 2x" data-dominant-color="E4EDED"></a></div><p></p>
+<p>The above shot is a map showing a route that I typically take to and from our sailing group.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c.png" data-download-href="//carloop-community.dyndns.org/uploads/default/5efcf68b34e4946ff31d0ad20ee106de3e62852c" title="Screen Shot 2017-06-04 at 12.27.01 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c_2_689x308.png" width="689" height="308" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c_2_689x308.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c_2_1033x462.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/5efcf68b34e4946ff31d0ad20ee106de3e62852c.png 2x" data-dominant-color="EEE9F5"></a></div><p></p>
+<p>Here you can see in the top left a visualization showing Engine RPM vs Vehicle Speed. If you look closely, you can see that each of these bands correspond to a particular gear that I’m in (1-6)</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/b8b853b0190714c351e9e5fef816a5206e44e99d.png" width="602" height="310"></p>
+<p>This view is really neat - shows how much time I’ve spent, for the duration of a selected time range, between 0 and 10 km/h. I’ve noticed that going to and from work, I spend roughly 30 percent of my trip not moving or in very annoying speed ranges. Taking only right turns (some UPS story I heard as a kid) I’ve been able to reduce that time by 50 percent.</p>
+<p>Anyways, just wanted to share. I know these are just screenshots but I’d love to have anyone’s feedback who wants to throw some this way. Looking forward to sharing some more soon.</p>
+          <p><a href="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346/1</link>
+        <pubDate>Sun, 04 Jun 2017 16:57:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-346-1</guid>
+        <source url="https://community.carloop.io/t/teaser-of-advanced-visualizations-service/346.rss">Teaser of Advanced Visualizations Service</source>
+      </item>
+  </channel>
+</rss>

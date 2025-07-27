@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Pre-Sales question</title>
+    <link>https://community.carloop.io/t/pre-sales-question/409</link>
+    <description>Hey, So i&#39;m looking at Carloop and thinking i might give this a go. I was interesting in purchasing a pro before it was discontinue.
+
+Having been thinking it for a few weeks now. I was wondering if you could use a CarLoop 3G (I&#39;m based in the UK?) to transmit the data over the data connection but also somehow use the GPS location from the mobile device to send this GPS co-ordinates at the same time?
+
+Would someone be able to let me know if this is possible (and any guides) to help my get started and how difficult it will be.
+
+Is there anyway to test the device on a workbench rather than having to plug it into a car to test go back and re-try?
+
+Thanks
+
+Johnny</description>
+    
+    <lastBuildDate>Tue, 21 Nov 2017 22:13:58 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/pre-sales-question/409.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Pre-Sales question</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jnymris">@jnymris</a>,</p>
+<p>I have not tried to build a simulator, so I am not able to help you out there.</p>
+<p>I am not quite sure what happened to the Carloop packages.  I do not work for Carloop myself.<br>
+You can still get any of the packages by buying the parts separately.  The different packages are just Carloop Basic along with a Photon, Electron, RedbearDuo or GPS.<br>
+You can buy a Photon or Electron (numerous different versions of cellular connecitivity) from <a href="http://Particle.io">Particle.io</a>.<br>
+You can buy a RedbearDuo fro Redbear Labs.<br>
+The GPS that came with Carloop turned out to not be that great; you can easily find a better one somewhere else.<br>
+Of course, you might be better off finding these parts through a local distributor since you are in the UK and not in the US.</p>
+          <p><a href="https://community.carloop.io/t/pre-sales-question/409/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-sales-question/409/4</link>
+        <pubDate>Tue, 21 Nov 2017 22:13:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-409-4</guid>
+        <source url="https://community.carloop.io/t/pre-sales-question/409.rss">Pre-Sales question</source>
+      </item>
+      <item>
+        <title>Pre-Sales question</title>
+        <dc:creator><![CDATA[jnymris]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you for the detailed response. That sounds promising and sounds like exactly what i’m looking for</p>
+<p>I’ve got a website at the moment and I’m looking to add additional functionality with the use of a Carloop device.</p>
+<p>I’m going to be honest here and I’m not one for the electrical side of things and was wondering is it possible to purchase the whole of the CAN Simulator hardware (apart from the RPI) I don’t even know how to read the diagram let alone solder. (I’d even purchase the software being installed on a SD Card if that was an option).</p>
+<p>If there is a way I can purchase that I will happily purchase that and a Carloop Basic (the only one in the store today? What happened to the other devices?).</p>
+<p>I’m not sure if this is carloop can offer or if another member of the community would be happy to assist with? I’m based in the UK if that helps?</p>
+          <p><a href="https://community.carloop.io/t/pre-sales-question/409/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-sales-question/409/3</link>
+        <pubDate>Thu, 09 Nov 2017 19:33:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-409-3</guid>
+        <source url="https://community.carloop.io/t/pre-sales-question/409.rss">Pre-Sales question</source>
+      </item>
+      <item>
+        <title>Pre-Sales question</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jnymris">@jnymris</a>,</p>
+<p>I don’t see the CarloopPro listed any more.  If I remember, it included a Carloop, a Particle Electron and a GPS.  The GPS it included is the old one, which I think the Carloop guys are working on replacing with a newer higher performance GPS (take that into consideration).</p>
+<p>I think you answered your own question without realizing it.  Yes, you can transmit data over the cellular network with an Electron.  Yes, that data includes GPS data.  I think there is example code to even do just that.  However, how much data you send will affect how quickly you go through your data plan.  Your device will do pretty much anything you program it to do; search for the Particle Electron projects to get an idea of what is possible … it goes way beyond just Carloop (but Carloop is one of the coolest uses).</p>
+<p>You can take the Electron out of the Carloop and install it on a breadboard or in other products.  Check out more at <a href="http://Particle.io">Particle.io</a>.  When it comes to testing, it often makes sense to use a Particle Photon (on WiFi) to save from using up your cellular data.  The Photon and Electron are very very similar, except in battery management, sleep modes and of course Cellular vs WiFi.</p>
+<p>As for CANbus testing on the bench, you could do a setup with a CANbus simulator on the other end.  I know some people have used a RPi3 to make a CANbus simulator.  If you use a RPi, you will need to put together (or buy) a CANbus transceiver circuit.</p>
+<p>As for guides, the complete documentation for the Electron is in the docs on <a href="http://Particle.io">Particle.io</a>.  The docs specific to the Carloop part are here at <a href="http://Carloop.io">Carloop.io</a>.  Also, search for projects that other people have done with Carloop; often you can borrow/share code with them.</p>
+          <p><a href="https://community.carloop.io/t/pre-sales-question/409/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-sales-question/409/2</link>
+        <pubDate>Mon, 07 Aug 2017 13:10:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-409-2</guid>
+        <source url="https://community.carloop.io/t/pre-sales-question/409.rss">Pre-Sales question</source>
+      </item>
+      <item>
+        <title>Pre-Sales question</title>
+        <dc:creator><![CDATA[jnymris]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey, So i’m looking at Carloop and thinking i might give this a go. I was interesting in purchasing a pro before it was discontinue.</p>
+<p>Having been thinking it for a few weeks now. I was wondering if you could use a CarLoop 3G (I’m based in the UK?) to transmit the data over the data connection but also somehow use the GPS location from the mobile device to send this GPS co-ordinates at the same time?</p>
+<p>Would someone be able to let me know if this is possible (and any guides) to help my get started and how difficult it will be.</p>
+<p>Is there anyway to test the device on a workbench rather than having to plug it into a car to test go back and re-try?</p>
+<p>Thanks</p>
+<p>Johnny</p>
+          <p><a href="https://community.carloop.io/t/pre-sales-question/409/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-sales-question/409/1</link>
+        <pubDate>Sun, 06 Aug 2017 21:57:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-409-1</guid>
+        <source url="https://community.carloop.io/t/pre-sales-question/409.rss">Pre-Sales question</source>
+      </item>
+  </channel>
+</rss>

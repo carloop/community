@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>What is your Carloop project?</title>
+    <link>https://community.carloop.io/t/what-is-your-carloop-project/41</link>
+    <description>Hey! We&#39;ve gotten great feedback so far from the Carloop Community and via private messages.  We&#39;d love to hear from you and your project on this thread.  Bonus points for adding pictures!</description>
+    
+    <lastBuildDate>Mon, 09 Apr 2018 02:57:05 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/what-is-your-carloop-project/41.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>Connect my Ram 2500 to my Home Assistant so it can automatically lock the doors at night in case I forget. For now, it will be Photon based, but when my 1 year trial of Sirrus expires I can switch to a Electron and have similar functionality.</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/6</link>
+        <pubDate>Mon, 09 Apr 2018 02:57:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-6</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="IBICO" data-post="4" data-topic="41">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/ibico/48/252_2.png" class="avatar"> IBICO:</div>
+<blockquote>
+<p>I hope it is possible to do.</p>
+</blockquote>
+</aside>
+<p>All of that is possible to do.  Some of the functions you want will need some custom hardware added on (monitoring the car temperature &amp; controlling the heater), some things are already there (monitoring the car voltage) and a lot of what you want is going to need some custom firmware.</p>
+<p>I recommend you break it down into manageable chunks … it looks like you have at least 7 individual projects before combining them all together into a super-project.</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/5</link>
+        <pubDate>Mon, 26 Mar 2018 04:02:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-5</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[IBICO]]></dc:creator>
+        <description><![CDATA[
+            <p>I bougth it today so I could connect my 2015 Octavia with my smart house project. The plan is to connect my car to a Fibaro Home center 2 and monitor temperature, voltage etc so i could start the heater or charger using automation. The work calendar would sync with the smarth house so it know when to turn on the heat in the car. Also to get a message when the car got fault by reading fault codes.  I hope it is possible to do.</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/4</link>
+        <pubDate>Sat, 24 Mar 2018 12:40:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-4</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I agree on your assessment of the Chevy Volt app.  It takes forever to grab data (albeit limited) from the car and send it back to your phone.  I’m excited to see what you come up with!</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/3</link>
+        <pubDate>Sun, 05 Jun 2016 20:29:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-3</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[fonix]]></dc:creator>
+        <description><![CDATA[
+            <p>I haven’t gotten to coding anything yet - still researching CAN and OBD codes for my particular vehicle - but I plan on using Carloop as a state-of-charge and driving efficiency tracker for my 2013 Chevy Volt. Right now I’m using a Photon, but ultimately I’d like to use an Electron with a GPS unit for driving efficiency and state-of-charge status in near-real time. The Chevy app for state of charge is pretty slow and nowhere near as data-rich as this data scientist would like!</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/2</link>
+        <pubDate>Fri, 03 Jun 2016 16:48:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-2</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+      <item>
+        <title>What is your Carloop project?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey! We’ve gotten great feedback so far from the Carloop Community and via private messages.  We’d love to hear from you and your project on this thread.  Bonus points for adding pictures!</p>
+          <p><a href="https://community.carloop.io/t/what-is-your-carloop-project/41/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-is-your-carloop-project/41/1</link>
+        <pubDate>Fri, 13 May 2016 17:45:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-41-1</guid>
+        <source url="https://community.carloop.io/t/what-is-your-carloop-project/41.rss">What is your Carloop project?</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Hardware assembly and github code configration</title>
+    <link>https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084</link>
+    <description>Hello, I wanted to buy the basic but they are sold out So my next best option is buy carloop without the photon. I already have the photon and know how to download and extract the github code
+How long does it take to configure the Carloop to get it all up and running? Is there a video or tutorial on it. I was not able to find anything here https://carloop.readme.io/docs Is is possible to download a third-party App from Apple Store that does OBD2 scanning as the one on the https://www.carloop.io/apps/ are very basic like mileage reader and code scanner
+
+Here is what I am looking for in a ODB2 scanner
+1. Read diagnostic trouble codes, both generic and manufacturer-specific, and display their meaning (over 3000 generic code definitions in the database).
+2. Clear trouble codes and turn off the MIL (&quot;Check Engine&quot; light)
+3. Display current sensor data, including:
+4. Engine RPM
+5. Calculated Load Value
+6. Coolant Temperature
+7. Fuel System Status
+8. Vehicle Speed
+9. Short Term Fuel Trim
+10. Long Term Fuel Trim
+11. Intake Manifold Pressure
+12. Timing Advance
+13. Intake Air Temperature
+15. Air Flow Rate
+16. Absolute Throttle Position
+17. Oxygen sensor voltages/associated short term fuel trims
+18. Fuel System status
+19. Fuel Pressure
+
+And save that on an SD Card in CSV format 
+And I have Kia Rio 2002 Model so not all Hardware in the Market support it</description>
+    
+    <lastBuildDate>Tue, 27 Oct 2020 23:11:39 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Hardware assembly and github code configration</title>
+        <dc:creator><![CDATA[Odb7]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, I wanted to buy the basic but they are sold out So my next best option is buy carloop without the photon. I already have the photon and know how to download and extract the github code<br>
+How long does it take to configure the Carloop to get it all up and running? Is there a video or tutorial on it. I was not able to find anything here <a href="https://carloop.readme.io/docs" class="inline-onebox" rel="noopener nofollow ugc">Getting Started with Carloop</a> Is is possible to download a third-party App from Apple Store that does OBD2 scanning as the one on the <a href="https://www.carloop.io/apps/">https://www.carloop.io/apps/</a> are very basic like mileage reader and code scanner</p>
+<p>Here is what I am looking for in a ODB2 scanner</p>
+<ol>
+<li>Read diagnostic trouble codes, both generic and manufacturer-specific, and display their meaning (over 3000 generic code definitions in the database).</li>
+<li>Clear trouble codes and turn off the MIL (“Check Engine” light)</li>
+<li>Display current sensor data, including:</li>
+<li>Engine RPM</li>
+<li>Calculated Load Value</li>
+<li>Coolant Temperature</li>
+<li>Fuel System Status</li>
+<li>Vehicle Speed</li>
+<li>Short Term Fuel Trim</li>
+<li>Long Term Fuel Trim</li>
+<li>Intake Manifold Pressure</li>
+<li>Timing Advance</li>
+<li>Intake Air Temperature</li>
+<li>Air Flow Rate</li>
+<li>Absolute Throttle Position</li>
+<li>Oxygen sensor voltages/associated short term fuel trims</li>
+<li>Fuel System status</li>
+<li>Fuel Pressure</li>
+</ol>
+<p>And save that on an SD Card in CSV format<br>
+And I have Kia Rio 2002 Model so not all Hardware in the Market support it</p>
+          <p><a href="https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084/1</link>
+        <pubDate>Tue, 27 Oct 2020 23:11:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1084-1</guid>
+        <source url="https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084.rss">Hardware assembly and github code configration</source>
+      </item>
+  </channel>
+</rss>

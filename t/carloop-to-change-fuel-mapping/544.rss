@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop to change fuel mapping?</title>
+    <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544</link>
+    <description>I have done some looking into this carloop system, and i was curious if it is at all possible to perhaps change the fuel mapping through the obd2 port with the Carloop or if it is done through specialist equipment?</description>
+    
+    <lastBuildDate>Wed, 28 Feb 2018 13:50:01 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[adamengineering]]></dc:creator>
+        <description><![CDATA[
+            <p>send me a full log, then send me another log with the KEY removed and i will send you the key for that seed to confirm if my algorithm is correcct</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/9</link>
+        <pubDate>Wed, 28 Feb 2018 13:50:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-9</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[adamengineering]]></dc:creator>
+        <description><![CDATA[
+            <p>hi</p>
+<p>send me the log</p>
+<p>info@adamengineering.co.za</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/8</link>
+        <pubDate>Wed, 28 Feb 2018 13:48:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-8</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I have several tools that can preform a full flash “efi live” “autel maxisys” “cardone flash 2”<br>
+I’m interested in downloading/uploading stock calibration files. Not modifying them just backing them up. Using the carloop I’ve been able to log and see what’s going on. With one of the tools I can see the seed/key request then it uploads a bootloader and then data download.</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/7</link>
+        <pubDate>Wed, 28 Feb 2018 12:51:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-7</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[adamengineering]]></dc:creator>
+        <description><![CDATA[
+            <p>hi</p>
+<p>well depends what level SKC (Seed Key Calculation) you after and what function you looking to perform. theres a few ways of doing this</p>
+<p>easy -:</p>
+<p>log any tool which already supports the function you want and i will identify what its doing and if i have the algorithm already, if not we use the same too to pass the SKC and if possible dump the flash/firmware of ecu if we can get it in other manners and i look for this SKC you need</p>
+<p>more difficult -:</p>
+<p>if no tool supports the function you require, then we need to dump the firmware of ECU and extract the SKC and test to see which is it you need and find the commands required to perform the function.</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/6</link>
+        <pubDate>Wed, 28 Feb 2018 09:33:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-6</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I would love it if someone would code the algorithms for Carloop.<br>
+Even better if it was available in a library.</p>
+<p>I would be interested in having it done for both CAN and K-Line (I am still working on a CarloopRetro that communicates on K-Line).</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/5</link>
+        <pubDate>Tue, 27 Feb 2018 21:29:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-5</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>What info do you need? I’ve been getting into the seedkey stuff. if I have enough seed/key combos can you help me with the algo? I have access to a warehouse full of ECU’s and have been logging data as much as I can <img src="//carloop-community.dyndns.org/images/emoji/twitter/raised_hands/4.png?v=12" title=":raised_hands:t4:" class="emoji" alt=":raised_hands:t4:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/4</link>
+        <pubDate>Tue, 27 Feb 2018 20:27:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-4</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[adamengineering]]></dc:creator>
+        <description><![CDATA[
+            <p>hi</p>
+<p>carloop will allow you to communicate on the canbus to put new parameters, but you need the seed/key algorithms for allowing you access to the ECU. i can help you with this as its what we specialise in. the extraction of sed/key algorithms. you would also need the checksum algorithms as specified by <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a><br>
+regards</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/3</link>
+        <pubDate>Mon, 26 Feb 2018 09:47:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-3</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pallaformaggio">@PallaFormaggio</a>,</p>
+<p>It is going to depend on how your car works!<br>
+Does you car allow loading new engine control parameters for fuel &amp; air?  Most cars do, but not all.<br>
+Does your car do this communication on the CANbus attached to the OBD2 port?  Many cars have more than one communications bus; you have to be on the correct bus.  Does the correct bus operate on the CAN protocol, or some other protocol?</p>
+<p>Carloop was designed to communicate on CANbus on the OBD2 port.  You can adapt carloop to communicate on other ports by adding plug adapters, as required.  (For example, some Jeeps have a custom CAN bus hidden behind the radio that can control car functions.)  However, if the message protocol is something not compatible with CAN, then carloop will not work.  (For example, my 2004 Subaru uses K-Line instead of CAN.)</p>
+<p>If it can be done, you will need to look into whether the messages need security IDs or checksums in order for the car to accept the new table.  You can program this into your carloop, but you have to know what your car needs.</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/2</link>
+        <pubDate>Tue, 20 Feb 2018 16:45:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-2</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+      <item>
+        <title>Carloop to change fuel mapping?</title>
+        <dc:creator><![CDATA[PallaFormaggio]]></dc:creator>
+        <description><![CDATA[
+            <p>I have done some looking into this carloop system, and i was curious if it is at all possible to perhaps change the fuel mapping through the obd2 port with the Carloop or if it is done through specialist equipment?</p>
+          <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544/1</link>
+        <pubDate>Tue, 20 Feb 2018 11:10:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-544-1</guid>
+        <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+      </item>
+  </channel>
+</rss>

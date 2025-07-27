@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CANmessage help</title>
+    <link>https://community.carloop.io/t/canmessage-help/629</link>
+    <description>would anyone know how to combine parts of a canmessage to an &quot;int&quot;
+example 
+      message.data = 01020304050607;
+       int myInt =  message.data[3], message.data[4], message.data[5], message.data[6] ;
+
+I was thinking something like the above. any help is appreciated.</description>
+    
+    <lastBuildDate>Wed, 09 May 2018 21:37:08 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/canmessage-help/629.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CANmessage help</title>
+        <dc:creator><![CDATA[ems]]></dc:creator>
+        <description><![CDATA[
+            <p>message.data<span class="chcklst-box checked fa fa-check-square-o fa-fw"></span> represents one bit where that bit is the <em>x</em> bit value of an 8, 16, 32 bit value.</p>
+<p>The first 8-bits of any value would be like this:</p>
+<p>bit = value<br>
+0 = 0x01<br>
+1 = 0x02<br>
+2 = 0x04<br>
+3 = 0x08<br>
+4 = 0x10<br>
+5 = 0x20<br>
+6 = 0x40<br>
+7 = 0x80</p>
+<p>(0x being hex, base 16, prefix).</p>
+<p>The long way would be to use bit shifting to make the value for each and then sum it.</p>
+<p>message.data[3] &lt;&lt; 3 … if the bit is set this value will be 0x08<br>
+message.data[4] &lt;&lt; 4 … if the bit is set this value will be 0x10</p>
+<p>int myInt = (message.data[3] &lt;&lt; 3) + (message.data[4] &lt;&lt; 4) + (message.data[5] &lt;&lt; 5) + (message.data[6]  &lt;&lt; 6);</p>
+<p>OR you can use bitmasking which would be the shorter way…</p>
+<p>Let’s say you just want to know if bits 3, 4, 5, 6 are set in an 8 bit value and you specifically do NOT want to know the value of bits 0, 1, 2, and 7.</p>
+<p>myInt = message.data &amp; 0x78;</p>
+<p>What the above will do is only set bits 3, 4, 5, 6 in your myInt value if they are set in the message.data value and it will specifically ignore the value of bits 0, 1, 2 and 7 if they are set.</p>
+<p>That said, if bits 3-6 represent a distinct value, you need to shift that value over once you have it–</p>
+<p>myInt = (message.data &amp; 0x78) &gt;&gt; 3;</p>
+          <p><a href="https://community.carloop.io/t/canmessage-help/629/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-help/629/2</link>
+        <pubDate>Wed, 09 May 2018 21:37:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-629-2</guid>
+        <source url="https://community.carloop.io/t/canmessage-help/629.rss">CANmessage help</source>
+      </item>
+      <item>
+        <title>CANmessage help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>would anyone know how to combine parts of a canmessage to an “int”<br>
+example<br>
+message.data = 01020304050607;<br>
+int myInt =  message.data[3], message.data[4], message.data[5], message.data[6] ;</p>
+<p>I was thinking something like the above. any help is appreciated.</p>
+          <p><a href="https://community.carloop.io/t/canmessage-help/629/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canmessage-help/629/1</link>
+        <pubDate>Wed, 09 May 2018 21:02:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-629-1</guid>
+        <source url="https://community.carloop.io/t/canmessage-help/629.rss">CANmessage help</source>
+      </item>
+  </channel>
+</rss>

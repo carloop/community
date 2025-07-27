@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>OBDII splitter will it work?</title>
+    <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328</link>
+    <description>ok I&#39;ve been having trouble sending commands with the carloop so my plan is to use a splitter and a Matco Maxiumus 2.0 scanner to sniff and see what commands the scanner is sending to the car. 
+I&#39;m hoping this would work and wondering if any has taken this approach using the carloop device. the matco scanner is amazing it has a lot of features. I&#39;ve read online a few people doing this with other devices successfully and be able to get a lot of information. I&#39;m hoping to run &quot;cansniffer&quot; and let it filter out and then connect the matco device to see what is being sent to the car once plugged in. fingers crossed. if this works I can hopefully do it with other devices and maybe see the &quot;magic&quot; code to enable sending commands or what exactly is going on and being sent.</description>
+    
+    <lastBuildDate>Thu, 03 Aug 2017 00:37:13 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I just got my carloop OBDII splitter and man right from the start no problems! Works great!! I have a Matco Maximus 2.0 scanner and the ZAuto tazer I’m going to scan also the “avidcode” device that I’m trying so hard to replicate.</p>
+<p>If anyone has any tips please share.</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/8</link>
+        <pubDate>Thu, 03 Aug 2017 00:37:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-8</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Maybe that’s why I was getting erratic behavior when I was using my friends OBDII splitter. I didn’t realize that would be the cause. I appreciate it I’m going to lookin into this and do more testing.</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/7</link>
+        <pubDate>Mon, 29 May 2017 04:10:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-7</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The only thing to be aware of is what ID your Carloop has on the CANbus.  The Carloop usually uses an ID in the same range as diagnostic tools.  If your Carloop and Diagnostic tool have the same ID, then expect some strange behavior.  I am sure you can set the ID in the Carloop firmware.  Other than that, using a splitter <em><strong>should</strong></em> work just fine with both the Carloop and Diagnostic tool.</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/6</link>
+        <pubDate>Mon, 29 May 2017 03:47:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-6</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>thanks going to order one this weekend. almost was about to order one on amazon but it looked really cheap.</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/5</link>
+        <pubDate>Thu, 25 May 2017 16:53:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-5</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Very cool.  Yeah, I used our <a href="https://store.carloop.io/products/obd-ii-splitter-y-cable">cable splitter</a> to sniff the diagnostic tools and replicate messages with Carloop</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/4</link>
+        <pubDate>Thu, 25 May 2017 16:24:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-4</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>this is good too! <a href="http://articles.sae.org/9495/" rel="noopener nofollow ugc">http://articles.sae.org/9495/</a></p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/3</link>
+        <pubDate>Thu, 25 May 2017 02:54:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-3</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>browsing around and found this bit of info.</p>
+<p>the seed and key, ie one module asks for a seed, the other gives him one, then requesting module then sends a matching key, if its legit the auth was complete. In the case of door locks I believe I’ve seen 3 byte seeds and keys, that I believe rarely repeat. Thats 16,777,215 possible combonations for you just to once unlock the door.</p>
+<p>read the entire thread here <a href="https://canhack.org/board/viewtopic.php?f=7&amp;t=134" rel="noopener nofollow ugc">canhack.org</a></p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/2</link>
+        <pubDate>Thu, 25 May 2017 02:24:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-2</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+      <item>
+        <title>OBDII splitter will it work?</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>ok I’ve been having trouble sending commands with the carloop so my plan is to use a splitter and a Matco Maxiumus 2.0 scanner to sniff and see what commands the scanner is sending to the car.<br>
+I’m hoping this would work and wondering if any has taken this approach using the carloop device. the matco scanner is amazing it has a lot of features. I’ve read online a few people doing this with other devices successfully and be able to get a lot of information. I’m hoping to run “cansniffer” and let it filter out and then connect the matco device to see what is being sent to the car once plugged in. fingers crossed. if this works I can hopefully do it with other devices and maybe see the “magic” code to enable sending commands or what exactly is going on and being sent.</p>
+          <p><a href="https://community.carloop.io/t/obdii-splitter-will-it-work/328/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-splitter-will-it-work/328/1</link>
+        <pubDate>Thu, 25 May 2017 00:52:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-328-1</guid>
+        <source url="https://community.carloop.io/t/obdii-splitter-will-it-work/328.rss">OBDII splitter will it work?</source>
+      </item>
+  </channel>
+</rss>

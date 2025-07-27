@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Other OBD protocols apart from CAN</title>
+    <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69</link>
+    <description>I see that Carloop supports CAN, which is awesome and works on most of the newer cars. I have a 2003 Honda Civic and it uses ISO-9141 OBD protocol. So far I have been using ELM327, but those products become expensive. Does Carloop support (or will support) other OBD protocols like ELM327 does - so basically like an open source version of ELM327?
+
+Thank you.</description>
+    
+    <lastBuildDate>Mon, 06 Jun 2016 22:54:00 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Other OBD protocols apart from CAN</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>As Alan mentioned Carloop is only wired to use CAN, not ISO 9141 (K-Line) or J1850 (PWM) since those protocols are not in use in cars newer than 2008.</p>
+          <p><a href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/5</link>
+        <pubDate>Mon, 06 Jun 2016 22:54:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-69-5</guid>
+        <source url="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss">Other OBD protocols apart from CAN</source>
+      </item>
+      <item>
+        <title>Other OBD protocols apart from CAN</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>The Photon has only one CAN bus so we’ve matched the CAN bus pins on the Photon to pins 6 and 14 on the DLC (Data Link Connector - more commonly referred to as OBD port).  See diagram from our Github repo: <a href="https://github.com/carloop/hardware/blob/master/CANdlestick.v2/particle-can-v2.1.pdf">https://github.com/carloop/hardware/blob/master/CANdlestick.v2/particle-can-v2.1.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/4</link>
+        <pubDate>Mon, 06 Jun 2016 21:22:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-69-4</guid>
+        <source url="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss">Other OBD protocols apart from CAN</source>
+      </item>
+      <item>
+        <title>Other OBD protocols apart from CAN</title>
+        <dc:creator><![CDATA[maxmiaggi]]></dc:creator>
+        <description><![CDATA[
+            <p>The OBD also has ISO 9141-2 K/L (pins 7, 15) bus and J1850 +/- (pins 2, 10) bus. How about those? Can Carloop read from those yet?</p>
+          <p><a href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/3</link>
+        <pubDate>Mon, 06 Jun 2016 21:17:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-69-3</guid>
+        <source url="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss">Other OBD protocols apart from CAN</source>
+      </item>
+      <item>
+        <title>Other OBD protocols apart from CAN</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, Carloop will support CAN protocol that is broadcast on pins CAN-H and CAN-L on the OBD-II (DLC) connector.  Your assumption is correct, the combination of Carloop + Particle or Redbear will give you access to all the CAN messages on the bus.  The ELM327 integrated circuit (not in Carloop) contains firmware that has a pre-established CAN messages decoder.  You can do the same thing with Carloop and write your own software to decode any message on the bus.</p>
+<p>Stay tuned for more news on how you can contribute to our open data dictionary</p>
+          <p><a href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/2</link>
+        <pubDate>Mon, 06 Jun 2016 21:13:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-69-2</guid>
+        <source url="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss">Other OBD protocols apart from CAN</source>
+      </item>
+      <item>
+        <title>Other OBD protocols apart from CAN</title>
+        <dc:creator><![CDATA[maxmiaggi]]></dc:creator>
+        <description><![CDATA[
+            <p>I see that Carloop supports CAN, which is awesome and works on most of the newer cars. I have a 2003 Honda Civic and it uses ISO-9141 OBD protocol. So far I have been using ELM327, but those products become expensive. Does Carloop support (or will support) other OBD protocols like ELM327 does - so basically like an open source version of ELM327?</p>
+<p>Thank you.</p>
+          <p><a href="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/other-obd-protocols-apart-from-can/69/1</link>
+        <pubDate>Mon, 06 Jun 2016 18:33:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-69-1</guid>
+        <source url="https://community.carloop.io/t/other-obd-protocols-apart-from-can/69.rss">Other OBD protocols apart from CAN</source>
+      </item>
+  </channel>
+</rss>

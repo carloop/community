@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+    <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677</link>
+    <description>I&#39;m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I&#39;m not sure what the `OBD auto` header would be that they use, or what CAN ID to send this data with. I&#39;ve tried sending via CAN ID 0x700 ~ 0x7f7 with no response seen above 0x700.
+
+### Torque PID settings
+```
+PID: 221440
+Long Name: Boost (that&#39;s what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+```
+
+### My current WIP app
+which just send data to the USB Serial output
+
+```
+#include &quot;Particle.h&quot;
+#include &lt;carloop.h&gt;
+
+/*
+PID: 221440
+Long Name: Boost (that&#39;s what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+*/
+
+// Don&#39;t block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+unsigned int MSG_ID = 0x7df;
+int rpm = 0;
+float mph = 0.0f;
+
+// Send a message at a regular time interval
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 1000; /* ms */
+    uint32_t now = millis();
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        CANMessage message;
+
+        // A CAN message has an ID that identifies the content inside
+        message.id = MSG_ID;
+
+        // It can have from 0 to 8 data bytes
+        message.len = 8;
+
+        // Pass the data to be transmitted in the data array
+        message.data[0] = 0x03;
+        message.data[1] = 0x22;
+        message.data[2] = 0x14; //boost
+        message.data[3] = 0x40;
+        // message.data[2] = 0x04; // transmission oil temp
+        // message.data[3] = 0x61;
+        
+        // message.data[4] = 0x55;
+        // message.data[5] = 0x55;
+        // message.data[6] = 0x55;
+        // message.data[7] = 0x55;
+
+        // Send the message on the bus!
+        carloop.can().transmit(message);
+
+        lastTransmitTime = now;
+        
+        if (MSG_ID &lt; 0x7e7) {
+            MSG_ID++;
+        } else {
+            MSG_ID = 0x7df;
+        }
+        
+        // Serial.printlnf(&quot;sent for message id: %03x&quot;, MSG_ID);
+    }
+}
+
+void recvMessage() {
+    CANMessage message;
+    if (carloop.can().receive(message)) {
+        if (message.id &gt;= 0x700) {
+            Serial.printf(&quot;time:%f,id:0x%03x,data:&quot;, millis() / 1000.0, message.id);
+            for (int i = 0; i &lt; message.len; i++) {
+                if (i == 0) {
+                    Serial.print(&quot;0x&quot;);
+                }
+                Serial.printf(&quot;%02x&quot;, message.data[i]);
+            }
+            Serial.println();
+        } else if (message.id == 0x201) {
+            rpm = (message.data[0] &lt;&lt; 8) + message.data[1];
+        } else if (message.id == 0x20f) {
+            mph = ((((message.data[2] &lt;&lt; 8) + message.data[3]) - 10000) / 100) * 0.621371f;
+        }
+        Serial.printlnf(&quot;RPM: %5d  MPH: %5.1f&quot;, rpm, mph);
+        // delay(50);
+    }
+}
+
+void setup() {
+    carloop.begin();
+}
+
+void loop() {
+    
+    // Send every 1 second
+    sendMessage();
+    
+    // Receive as fast as possible
+    recvMessage();
+}
+```
+
+I can read the RPM and MPH, but they update too slowly to be useful.  I&#39;m sure it&#39;s possible to query them directly, but my crash course today hasn&#39;t yielded the answer.  My brain is telling me I can&#39;t just send a message to CAN ID 0x201 to query the RPM, that would be like writing a new RPM value.
+
+### Resources
+
+[Wiki OBD-II PIDs](https://en.wikipedia.org/wiki/OBD-II_PIDs)
+[Ford Fiesta PIDs](https://groups.google.com/d/msg/openxc/FrZA8-pDs6A/G_iAsVucN_EJ)
+[Ford PIDs 2003-2004](http://www.paladinmicro.com/documents/200304PIDs.pdf)
+[ELM327 v2.2 Datasheet](https://itunes.apple.com/us/book/elm327-v2.2/id1195663285?ls=1&amp;mt=11) (This is a pretty informative datasheet that explains a lot about how CAN / OBD / PID works in cars)</description>
+    
+    <lastBuildDate>Mon, 23 Jul 2018 15:51:36 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+        <dc:creator><![CDATA[BDub]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="BDub" data-post="4" data-topic="677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/bdub/48/302_2.png" class="avatar"> BDub:</div>
+<blockquote>
+<p>Torque Pro app with a Vgate WiFi OBDII Elm327 dongle</p>
+</blockquote>
+</aside>
+<p>BTW just an update.  It also doesn’t work with the dongle and Torque Pro, but Torque Pro does have a boost gauge that does seem to work.  I don’t know how accurate it is though.  I’ll have to reverse engineer how they do that.  I’m almost thinking a mechanical boost gauge is going to be better though, and I’m now more interested in making a dedicated Neopixel RPM heads up display.  I’ll update on that when I receive my pixel strips and start working on it.</p>
+          <p><a href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/5</link>
+        <pubDate>Mon, 23 Jul 2018 15:51:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-677-5</guid>
+        <source url="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss">2018 Ford Fiesta ST Boost and RPM gauge</source>
+      </item>
+      <item>
+        <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+        <dc:creator><![CDATA[BDub]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Response" class="inline-onebox" rel="noopener nofollow ugc">OBD-II PIDs - Wikipedia</a></p>
+<blockquote>
+<p>7Fh this a general response usually indicating the module doesn’t recognize the request.</p>
+</blockquote>
+<p>Hmm, I might be back at square one.  I think I’ll try the other CAN ID’s 0x7e1 - 0x7e7 next.</p>
+<hr>
+<p>EDIT: So it seems like maybe my car doesn’t support that extended Boost PID, because with 0x7e0 and a different PID I’m getting a valid response.  Others are saying it works though, so I’m going to see if it works in the native Torque Pro app with a Vgate WiFi OBDII Elm327 dongle.  I can sniff the traffic hopefully then with the Carloop on a Y-cable <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<pre><code class="lang-auto">CAN ID: 0x7e0 PID: 220461
+Response: id:0x7e8,data:0x0562046107aa0000
+</code></pre>
+<p>This is supposedly a Transmission Temperature, and when I run 0x07 and 0xAA through the equation and convert to Fahrenheit it comes out to 87.18F which seems pretty reasonable considering the outside temp was rising recently and at 92F.  My car had been off for quite a while.</p>
+          <p><a href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/4</link>
+        <pubDate>Mon, 09 Jul 2018 03:32:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-677-4</guid>
+        <source url="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss">2018 Ford Fiesta ST Boost and RPM gauge</source>
+      </item>
+      <item>
+        <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+        <dc:creator><![CDATA[BDub]]></dc:creator>
+        <description><![CDATA[
+            <p>So earlier I did cycle through CAN ID <strong>0x7df to 0x7e7</strong> and also <strong>0x700 to 0x7e7</strong>, but was thinking maybe I should have tried one of them for a longer period of time.</p>
+<p>After reading up more about how to talk to the ECU directly, I decided to change the code to just use 0x7e0 as the CAN ID for this boost request that uses the extended format.</p>
+<p>I also made sure I’m receiving right after transmitting so as not to miss any response from the ECU.</p>
+<p>I started getting a response right away from 0x7e8</p>
+<h3><a name="id0x7e8data0x037f223100000000-1" class="anchor" href="https://community.carloop.io#id0x7e8data0x037f223100000000-1"></a>id:0x7e8,data:0x037f223100000000</h3>
+<p>This is great! Now I need to know what this means because this doesn’t seem to be the Boost data since it never changes from this value.  I’m guessing this is some kind of prompt or maybe a flow control message?  Not sure why it would need to be though since boost is contained in two bytes.</p>
+<p>So 0x03 bytes?, 0x7f, 0x22, 0x31.  I’ll have to dig into this a bit later after a movie.  If anyone is following along and can point me to the decoding reference for this, please feel free to drop in a link.</p>
+<h3><a name="updated-boost-code-2" class="anchor" href="https://community.carloop.io#updated-boost-code-2"></a>Updated Boost Code:</h3>
+<pre><code class="lang-auto">#include "Particle.h"
+#include &lt;carloop.h&gt;
+
+/*
+PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+*/
+
+// Getting response now!
+// id:0x7e8,data:0x037f223100000000
+
+// Don't block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+unsigned int MSG_ID = 0x7e0;
+int rpm = 0;
+float mph = 0.0f;
+
+// Send a message at a regular time interval
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 200; /* ms */
+    uint32_t now = millis();
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        digitalWrite(D7, !digitalRead(D7));
+        CANMessage message;
+
+        // A CAN message has an ID that identifies the content inside
+        message.id = MSG_ID;
+
+        // It can have from 0 to 8 data bytes
+        message.len = 8;
+
+        // Pass the data to be transmitted in the data array
+        message.data[0] = 0x03;
+        message.data[1] = 0x22;
+        message.data[2] = 0x14; //boost
+        message.data[3] = 0x40;
+        // message.data[2] = 0x04; // transmission oil temp
+        // message.data[3] = 0x61;
+
+        // Send the message on the bus!
+        carloop.can().transmit(message);
+
+        lastTransmitTime = now;
+        
+        // Serial.printlnf("sent for message id: %03x", MSG_ID);
+    }
+}
+
+void recvMessage() {
+    uint32_t startRecv = millis();
+    const uint32_t RECV_TIMEOUT = 100UL;
+    CANMessage message;
+    while (millis() - startRecv &lt;= RECV_TIMEOUT) {
+        if (carloop.can().receive(message)) {
+            if (message.id &gt;= 0x700) {
+                Serial.printf("time:%f,id:0x%03x,data:", millis() / 1000.0, message.id);
+                for (int i = 0; i &lt; message.len; i++) {
+                    if (i == 0) {
+                        Serial.print("0x");
+                    }
+                    Serial.printf("%02x", message.data[i]);
+                }
+                Serial.println();
+            }
+        }
+    }
+}
+
+void setup() {
+    pinMode(D7, OUTPUT);
+    carloop.begin();
+}
+
+void loop() {
+    
+    // Send every 1 second
+    sendMessage();
+    
+    // Receive as fast as possible
+    recvMessage();
+}
+</code></pre>
+          <p><a href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/3</link>
+        <pubDate>Mon, 09 Jul 2018 00:46:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-677-3</guid>
+        <source url="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss">2018 Ford Fiesta ST Boost and RPM gauge</source>
+      </item>
+      <item>
+        <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+        <dc:creator><![CDATA[BDub]]></dc:creator>
+        <description><![CDATA[
+            <p>Did some more reading today and learned about Mode 1 PID’s.  My car supports RPM and SPEED mode 1 PID’s, so it’s pretty easy to make that request and send the info to a Gauge on the Blynk app.</p>
+<h3><a name="heres-the-app-i-started-with-1" class="anchor" href="https://community.carloop.io#heres-the-app-i-started-with-1"></a>Here’s the app I started with:</h3>
+<p><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino" class="inline-onebox" rel="noopener nofollow ugc">carloop/MODE_1_to_Blynk.ino at master · egarl004/carloop · GitHub</a></p>
+<h3><a name="reduce-the-number-of-pids-to-polls-here-to-2-2" class="anchor" href="https://community.carloop.io#reduce-the-number-of-pids-to-polls-here-to-2-2"></a>Reduce the number of PIDs to polls here to 2:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="316" style="counter-reset: li-counter 315 ;">
+          <li>const size_t NUM_PIDS_TO_REQUEST = 102;</li>
+          <li></li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="comment-out-the-pids-in-the-array-to-just-the-rpm-and-speed-3" class="anchor" href="https://community.carloop.io#comment-out-the-pids-in-the-array-to-just-the-rpm-and-speed-3"></a>Comment out the PIDs in the array to just the RPM and SPEED:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="335" style="counter-reset: li-counter 334 ;">
+          <li>OBD_PID_ENGINE_RPM,</li>
+          <li>OBD_PID_VEHICLE_SPEED,</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="comment-out-everything-except-for-rpm-and-speed-4" class="anchor" href="https://community.carloop.io#comment-out-everything-except-for-rpm-and-speed-4"></a>Comment out everything except for RPM and SPEED:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="583" style="counter-reset: li-counter 582 ;">
+          <li>	    String StringENGINE_RPM                             = String(ENGINE_RPM);</li>
+          <li>	    String StringVEHICLE_SPEED                          = String(VEHICLE_SPEED);</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I found that a decimal place on these values was annoying, so you can format that away like this:</p>
+<pre><code class="lang-auto">String StringENGINE_RPM    = String::format("%.0f", ENGINE_RPM);
+String StringVEHICLE_SPEED = String::format("%.0f", VEHICLE_SPEED);
+</code></pre>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="621" style="counter-reset: li-counter 620 ;">
+          <li>	    Blynk.virtualWrite(V7, StringENGINE_RPM);</li>
+          <li>	    Blynk.virtualWrite(V8, StringVEHICLE_SPEED);</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="change-the-update-rate-to-100-ms-per-value-or-in-this-case-200ms-5" class="anchor" href="https://community.carloop.io#change-the-update-rate-to-100-ms-per-value-or-in-this-case-200ms-5"></a>Change the update rate to 100 ms per value, or in this case 200ms</h3>
+<p>I found it will update at 100 ms for just one value (which might be nice for a dedicated RPM display).</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="557" style="counter-reset: li-counter 556 ;">
+          <li>void publishValuesAtInterval() {</li>
+          <li>    static const unsigned long interval2 = 10000;</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="other-edits-to-make-the-app-compile-and-function-properly-6" class="anchor" href="https://community.carloop.io#other-edits-to-make-the-app-compile-and-function-properly-6"></a>Other edits to make the app compile and function properly:</h3>
+<p>There were some other edits I made as well, like commenting out</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="564" style="counter-reset: li-counter 563 ;">
+          <li>publishValues();</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>And moving Blynk.begin() after Particle.connect() … necessary when using SEMI_AUTOMATIC mode, otherwise the system hangs in a disconnected from WiFi state trying to connect to Blynk.</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="439" style="counter-reset: li-counter 438 ;">
+          <li>    Blynk.begin(auth);</li>
+          <li>	Serial.begin(115200);</li>
+          <li>	carloop.begin();</li>
+          <li>	Particle.connect();</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<hr>
+<p>Still looking to figure out how to get that boost gauge though …</p>
+          <p><a href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/2</link>
+        <pubDate>Sun, 08 Jul 2018 21:48:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-677-2</guid>
+        <source url="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss">2018 Ford Fiesta ST Boost and RPM gauge</source>
+      </item>
+      <item>
+        <title>2018 Ford Fiesta ST Boost and RPM gauge</title>
+        <dc:creator><![CDATA[BDub]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I’m not sure what the <code>OBD auto</code> header would be that they use, or what CAN ID to send this data with. I’ve tried sending via CAN ID 0x700 ~ 0x7f7 with no response seen above 0x700.</p>
+<h3><a name="torque-pid-settings-1" class="anchor" href="https://community.carloop.io#torque-pid-settings-1"></a>Torque PID settings</h3>
+<pre><code class="lang-auto">PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+</code></pre>
+<h3><a name="my-current-wip-app-2" class="anchor" href="https://community.carloop.io#my-current-wip-app-2"></a>My current WIP app</h3>
+<p>which just send data to the USB Serial output</p>
+<pre><code class="lang-auto">#include "Particle.h"
+#include &lt;carloop.h&gt;
+
+/*
+PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+*/
+
+// Don't block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+unsigned int MSG_ID = 0x7df;
+int rpm = 0;
+float mph = 0.0f;
+
+// Send a message at a regular time interval
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 1000; /* ms */
+    uint32_t now = millis();
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        CANMessage message;
+
+        // A CAN message has an ID that identifies the content inside
+        message.id = MSG_ID;
+
+        // It can have from 0 to 8 data bytes
+        message.len = 8;
+
+        // Pass the data to be transmitted in the data array
+        message.data[0] = 0x03;
+        message.data[1] = 0x22;
+        message.data[2] = 0x14; //boost
+        message.data[3] = 0x40;
+        // message.data[2] = 0x04; // transmission oil temp
+        // message.data[3] = 0x61;
+        
+        // message.data[4] = 0x55;
+        // message.data[5] = 0x55;
+        // message.data[6] = 0x55;
+        // message.data[7] = 0x55;
+
+        // Send the message on the bus!
+        carloop.can().transmit(message);
+
+        lastTransmitTime = now;
+        
+        if (MSG_ID &lt; 0x7e7) {
+            MSG_ID++;
+        } else {
+            MSG_ID = 0x7df;
+        }
+        
+        // Serial.printlnf("sent for message id: %03x", MSG_ID);
+    }
+}
+
+void recvMessage() {
+    CANMessage message;
+    if (carloop.can().receive(message)) {
+        if (message.id &gt;= 0x700) {
+            Serial.printf("time:%f,id:0x%03x,data:", millis() / 1000.0, message.id);
+            for (int i = 0; i &lt; message.len; i++) {
+                if (i == 0) {
+                    Serial.print("0x");
+                }
+                Serial.printf("%02x", message.data[i]);
+            }
+            Serial.println();
+        } else if (message.id == 0x201) {
+            rpm = (message.data[0] &lt;&lt; 8) + message.data[1];
+        } else if (message.id == 0x20f) {
+            mph = ((((message.data[2] &lt;&lt; 8) + message.data[3]) - 10000) / 100) * 0.621371f;
+        }
+        Serial.printlnf("RPM: %5d  MPH: %5.1f", rpm, mph);
+        // delay(50);
+    }
+}
+
+void setup() {
+    carloop.begin();
+}
+
+void loop() {
+    
+    // Send every 1 second
+    sendMessage();
+    
+    // Receive as fast as possible
+    recvMessage();
+}
+</code></pre>
+<p>I can read the RPM and MPH, but they update too slowly to be useful.  I’m sure it’s possible to query them directly, but my crash course today hasn’t yielded the answer.  My brain is telling me I can’t just send a message to CAN ID 0x201 to query the RPM, that would be like writing a new RPM value.</p>
+<h3><a name="resources-3" class="anchor" href="https://community.carloop.io#resources-3"></a>Resources</h3>
+<p><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" rel="noopener nofollow ugc">Wiki OBD-II PIDs</a><br>
+<a href="https://groups.google.com/d/msg/openxc/FrZA8-pDs6A/G_iAsVucN_EJ" rel="noopener nofollow ugc">Ford Fiesta PIDs</a><br>
+<a href="http://www.paladinmicro.com/documents/200304PIDs.pdf" rel="noopener nofollow ugc">Ford PIDs 2003-2004</a><br>
+<a href="https://itunes.apple.com/us/book/elm327-v2.2/id1195663285?ls=1&amp;mt=11" rel="noopener nofollow ugc">ELM327 v2.2 Datasheet</a> (This is a pretty informative datasheet that explains a lot about how CAN / OBD / PID works in cars)</p>
+          <p><a href="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677/1</link>
+        <pubDate>Sun, 08 Jul 2018 03:15:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-677-1</guid>
+        <source url="https://community.carloop.io/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677.rss">2018 Ford Fiesta ST Boost and RPM gauge</source>
+      </item>
+  </channel>
+</rss>

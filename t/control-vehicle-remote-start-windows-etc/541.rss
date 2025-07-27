@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Control vehicle (remote start, windows, etc)</title>
+    <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541</link>
+    <description>I&#39;ve got my Carloop up and running, including GPS. I&#39;d like to build an app that allows me to control some of the vehicle functions. I read in this forum that it depends on what the vehicle supports. I&#39;m just not sure where to find what the vehicle supports.
+
+I did come across this (https://github.com/egarl004/carloop/blob/master/Discovered-PIDs/Ford%20F150%202016) Github repo, which seems to identify PID&#39;s for a truck similar to mine (I&#39;ve got a 2015 F-150), but none of the PID&#39;s reference vehicle functions.
+
+Any help is much appreciated!</description>
+    
+    <lastBuildDate>Tue, 20 Feb 2018 15:35:25 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nickhough">@nickhough</a>,</p>
+<p>Searching for OBD2 might be tripping you up.  OBD2 is the message protocol for diagnostics, which is running on the CAN bus.  I would try searching for “commands on CAN bus” or “CAN remote start” or “network bus commands” or, or or…</p>
+<p>The power of carloop is that it can send or receive any CAN bus message, and is not limited to just reading OBD2.</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/7</link>
+        <pubDate>Tue, 20 Feb 2018 15:35:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-7</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[nickhough]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> - Thanks again! Any recommendations for search terms? I’ve tried things like “OBD2 remote start”, but I haven’t had much luck finding relevant results. I’ll check out those forums.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/6</link>
+        <pubDate>Sun, 18 Feb 2018 13:49:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-6</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[nickhough]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> -</p>
+<p>Right now I only have the ability to use the GPS with the headers, although I do have the JST cable on order. I can do some testing via USB inside and outside the cab of the truck, but not via the OBD2 port. I’ll report back when I’ve got some results.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/5</link>
+        <pubDate>Sun, 18 Feb 2018 13:46:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-5</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nickhough">@nickhough</a>,</p>
+<p>To find out what your truck supports and if there are other hidden busses in the truck, head on over to forums specific to your truck.  You will need to do some searching around.</p>
+<p>Maybe start with these, though I did not check to see if these links were useful forums or not:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.f150forum.com/">
+  <header class="source">
+
+      <a href="https://www.f150forum.com/" target="_blank" rel="noopener">f150forum.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.f150forum.com/" target="_blank" rel="noopener">Ford F150 Forum - Community of Ford Truck Fans</a></h3>
+
+  <p>The premier site for Ford F-150 truck enthusiasts</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p><a href="http://www.fordf150.net/forums" class="onebox" target="_blank" rel="noopener">www.fordf150.net/forums</a></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.fordf150.net">
+  <header class="source">
+
+      <a href="https://www.fordf150.net" target="_blank" rel="noopener">fordf150.net</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.fordf150.net" target="_blank" rel="noopener">FordF150.net - Your Ford F150 Truck Enthusiast Site - 2018 Ford F150</a></h3>
+
+  <p>Ford F150 .net - 2021 Ford Trucks Enthusiast Site. Features technical articles, photos, classifieds, forums, and more.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+That should give you an idea on how to get started.  The best bet is to find someone else trying to do the same sort of things as you and team up with them.</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/4</link>
+        <pubDate>Sun, 18 Feb 2018 07:04:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-4</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nickhough">@nickhough</a>,</p>
+<p>I did have a 2008 F-250 for a while.  There can be a lot of electrical noise going on inside those trucks.  Also, the metal roof of a crew cab (don’t know if you have that) can be a large shield that blocks signal.   Also, certain Fords (not mine) had a metal film on the window glass to reduce heating inside from the sun, which again would form a shield.</p>
+<p>So, I recommend an experiments.  Move the GPS to a side window of the truck that is open (maybe not the easiest experiment in winter).  If that works, then you likely have an issue with the signal being shielded.  If that does not work, then we might want to investigate electrical power quality from your truck.</p>
+<p>Once you have some results, we can make some recommendations to help out.</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/3</link>
+        <pubDate>Sun, 18 Feb 2018 07:00:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-3</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[nickhough]]></dc:creator>
+        <description><![CDATA[
+            <p>Actually, I can’t seem to get the GPS to pickup a signal in my truck. Works in my living room, but that’s not very helpful. <img src="//carloop-community.dyndns.org/images/emoji/twitter/joy.png?v=12" title=":joy:" class="emoji" alt=":joy:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/2</link>
+        <pubDate>Sat, 17 Feb 2018 20:09:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-2</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+      <item>
+        <title>Control vehicle (remote start, windows, etc)</title>
+        <dc:creator><![CDATA[nickhough]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve got my Carloop up and running, including GPS. I’d like to build an app that allows me to control some of the vehicle functions. I read in this forum that it depends on what the vehicle supports. I’m just not sure where to find what the vehicle supports.</p>
+<p>I did come across this (<a href="https://github.com/egarl004/carloop/blob/master/Discovered-PIDs/Ford%20F150%202016" class="inline-onebox" rel="noopener nofollow ugc">carloop/Discovered-PIDs/Ford F150 2016 at master · egarl004/carloop · GitHub</a>) Github repo, which seems to identify PID’s for a truck similar to mine (I’ve got a 2015 F-150), but none of the PID’s reference vehicle functions.</p>
+<p>Any help is much appreciated!</p>
+          <p><a href="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541/1</link>
+        <pubDate>Sat, 17 Feb 2018 19:16:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-541-1</guid>
+        <source url="https://community.carloop.io/t/control-vehicle-remote-start-windows-etc/541.rss">Control vehicle (remote start, windows, etc)</source>
+      </item>
+  </channel>
+</rss>

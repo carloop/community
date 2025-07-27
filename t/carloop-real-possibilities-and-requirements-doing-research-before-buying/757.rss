@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop real possibilities and requirements , doing research before buying</title>
+    <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757</link>
+    <description>Hello all ,  I&#39;ve been reading this forum for a year now, but I still have tons of questions , I know there is a post similar to this one from 2017 (http://carloop.dyndns.org/t/noob-question-before-buying/327 ).
+My project is with a 2014 Honda Jazz, Anyway I&#39;ll try to keep it short. 
+1. What are the risks of using carloop if trying to write to the car computer 
+2. Protocol requirements ( canbus ? OBDII ? once I get this information i can research my car&#39;s specifications )
+3. Is it posible to control car functions , let&#39;s say lights , doors,  A\C from a phone or computer remotely , is it dangerous ? can I brick my car ? I suppose you get the idea of what I&#39;m trying to do here .
+
+I think that&#39;s it for now, thanks for reading, and answering , I don&#39;t mind doing more research on this or other forums if I&#39;m pointed in the right direction.
+
+Share pictures of your cool projects  !</description>
+    
+    <lastBuildDate>Wed, 28 Sep 2022 20:22:35 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop real possibilities and requirements , doing research before buying</title>
+        <dc:creator><![CDATA[bjoern_leines]]></dc:creator>
+        <description><![CDATA[
+            <p>Awesome conclusion! Sounds super interesting building a possibility to comunicate with ur impreza via K-Line.<br>
+I’m wondering if there’s already a template for FlexRay communication as this is currently widely used in european or at least german cars.</p>
+          <p><a href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/5</link>
+        <pubDate>Wed, 28 Sep 2022 20:22:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-757-5</guid>
+        <source url="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss">Carloop real possibilities and requirements , doing research before buying</source>
+      </item>
+      <item>
+        <title>Carloop real possibilities and requirements , doing research before buying</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ebaena">@ebaena</a>,</p>
+<p>I will try here to put your questions in perspective.  There is a lot going on here, much more beyond Carloop, including things like Honda’s engineering, the technologies, your designs and your judgement.</p>
+<p>Let me start off with question 2, since I can answer that factually.<br>
+The protocol that Carloop does is CANbus.  Carloop can send and receive ANY and ALL CANbus messages.  That includes exchanging OBDII messages over CANbus.  That makes Carloop a very powerful tool.  Is it the right tool?</p>
+<p>Here in Canada, it is regulated that cars must provide the OBDII messages over CANbus through a connector located near the steering column (I am not using the legal wording here).<br>
+So, if your car is a Honda in Canada, it will do OBDII over CANbus.  Most likely, if your car is in the USA or the EU, it will be the same.  There is also nothing legal to say that is the only bus in your car, or what protocols may be used on other buses.  For example, in <a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>’s vehicle, there is another bus accessed in behind the radio inside the dashboard; it just so happens that it uses CANbus but it could have been something else.<br>
+The conclusion is, to know your protocol requirements, you have to know what your car uses.  If it is some propriety protocol, you will have to reverse-engineer it to be able to communicate on it.</p>
+<p>Now, I am going to mix the first part of question 3 with part of question 1.<br>
+You do not write directly to the car computer.  What you do is send a message to a module (which is pretty much a computer).  There may be many different modules in your car:  ECU for the engine, BCM is body control module, ABS, Airbags, etc could all be different modules.<br>
+The question is what the module does with the message.  That depends on the design of the module and the design of the car.  The module might store something in memory, it might control a function, it might send a message back, it might send a message to another module, it could even ignore the message.  So it all depends on the design of the module.</p>
+<p>Now the rest of question 3.<br>
+What is possible depends on the module.  If a module allows the control of something and is capable, then it can be controlled.  Again, it depends on the car.  For example, to control the lights then the lights have to be connected to a module and the module has to allow that control.  Maybe you can or maybe you cannot.<br>
+Modules may use security measures like encryption, call-backs, confirming with another sensor.  You would need to know the design of the car, or be able to reverse-engineer it.  Then again, they may not have any protection.</p>
+<p>As for danger; it is absolutely dangerous if you are messing with a safety system.  What are the safety systems in your car? What things are connected with the safety systems? … that is complicated to answer.  For anything you do, you will have to evaluate all the risks and decide if you accept the risk or not.  You will have to take responsibility for what you do, or not do.</p>
+<p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> was able to brick a module in his car.  Can you do the same in your car?  Only if your car uses the same module.  You might be able to brick your car in totally different ways.</p>
+<p>In general, you are going to have to research your car.  How you go about it is up to you.<br>
+For example, I am working on adding the K-Line protocol to Carloop; it is nicknamed CarloopRetro since it is an older protocol.  If it works, then ISO9141, KWP2000 and KWP Fast Init messages will be able to be exchanged.  OBDII can be done in those messages also.  I bought a scrap Subaru Impreza to take out the modules and put on my bench lab so I can work on K-Line.  It is not cheap, but it is pretty safe working on a bench instead of a real car.</p>
+<p>I hope this gives you a sense of some of the details and some of the bigger picture at the same time.  What you accomplish is what you make of it!</p>
+          <p><a href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/4</link>
+        <pubDate>Fri, 09 Nov 2018 04:48:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-757-4</guid>
+        <source url="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss">Carloop real possibilities and requirements , doing research before buying</source>
+      </item>
+      <item>
+        <title>Carloop real possibilities and requirements , doing research before buying</title>
+        <dc:creator><![CDATA[ebaena]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey dubb45 ,</p>
+<p>Thanks for answering , hmm a test bench , that sounds like a good idea before trying to write crazy codes to my daily driver.<br>
+Do you have any suggestions about requirements , I know my car should have some modern protocols or interfaces to be able to read , write and modify some values. but I’m still lost in that part.</p>
+<p>Thanks for your help, if anyone has more info or want to ask some questions .feel free to do it . or maybe the admins can create a sticky post just for noobs !</p>
+          <p><a href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/3</link>
+        <pubDate>Thu, 08 Nov 2018 17:04:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-757-3</guid>
+        <source url="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss">Carloop real possibilities and requirements , doing research before buying</source>
+      </item>
+      <item>
+        <title>Carloop real possibilities and requirements , doing research before buying</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>All that is possible with carloop. Yes you can “brick” your car I’ve done it (wrote all FF’s to my BCM) car was acting crazy I managed to solve it good thing I had made a copy of my BCM before. I’m Currently reading/writing to a chrylser BCM on my bench setup no problem enabling disabling features like a dealer would do lol “adding sales codes” <img src="//carloop-community.dyndns.org/images/emoji/twitter/joy.png?v=12" title=":joy:" class="emoji" alt=":joy:" loading="lazy" width="20" height="20"> the carloop is like a bridge in between your code and the car or atleast that’s how I see it and that makes it easy to control whatever you want. If you have the right info then you can do what you want to these “computers on wheels”</p>
+          <p><a href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/2</link>
+        <pubDate>Thu, 08 Nov 2018 03:32:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-757-2</guid>
+        <source url="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss">Carloop real possibilities and requirements , doing research before buying</source>
+      </item>
+      <item>
+        <title>Carloop real possibilities and requirements , doing research before buying</title>
+        <dc:creator><![CDATA[ebaena]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello all ,  I’ve been reading this forum for a year now, but I still have tons of questions , I know there is a post similar to this one from 2017 (<a href="http://carloop.dyndns.org/t/noob-question-before-buying/327" class="inline-onebox">Noob question before buying - Getting Started - Carloop Community</a> ).<br>
+My project is with a 2014 Honda Jazz, Anyway I’ll try to keep it short.</p>
+<ol>
+<li>What are the risks of using carloop if trying to write to the car computer</li>
+<li>Protocol requirements ( canbus ? OBDII ? once I get this information i can research my car’s specifications )</li>
+<li>Is it posible to control car functions , let’s say lights , doors,  A\C from a phone or computer remotely , is it dangerous ? can I brick my car ? I suppose you get the idea of what I’m trying to do here .</li>
+</ol>
+<p>I think that’s it for now, thanks for reading, and answering , I don’t mind doing more research on this or other forums if I’m pointed in the right direction.</p>
+<p>Share pictures of your cool projects  !</p>
+          <p><a href="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757/1</link>
+        <pubDate>Wed, 07 Nov 2018 21:58:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-757-1</guid>
+        <source url="https://community.carloop.io/t/carloop-real-possibilities-and-requirements-doing-research-before-buying/757.rss">Carloop real possibilities and requirements , doing research before buying</source>
+      </item>
+  </channel>
+</rss>

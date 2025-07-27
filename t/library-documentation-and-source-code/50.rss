@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Library documentation and source code</title>
+    <link>https://community.carloop.io/t/library-documentation-and-source-code/50</link>
+    <description>The library to interface with the Carloop is available on GitHub.
+
+I have been adding documentation and example applications. Let me know if anything is unclear. GitHub issues and pull request welcome!
+
+https://github.com/carloop/carloop-library</description>
+    
+    <lastBuildDate>Tue, 23 Aug 2016 02:11:50 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/library-documentation-and-source-code/50.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Awesome! the current Carloop is available at our new store: <a href="https://store.carloop.io">https://store.carloop.io</a> and we have a few left before we receive some more. Would be amazing to see SocketCAN work with Carloop!</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/7</link>
+        <pubDate>Mon, 22 Aug 2016 16:48:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-7</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Putting myself down for the new carloop then.</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/6</link>
+        <pubDate>Mon, 22 Aug 2016 13:24:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-6</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I agree, the <code>can-utils</code> component is pretty amazing, and specifically <code>cansniffer</code> command.  I wonder if we can first try via USB.  <a class="mention" href="https://community.carloop.io/u/nprobert">@nprobert</a> have you tried it yet?</p>
+<p>Being a Linux guy, you might be the perfect person to help us figure this one out. This would be really a huge step forward for the project!</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/5</link>
+        <pubDate>Fri, 19 Aug 2016 15:07:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-5</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>SocketCAN is pretty useful.  You can set up a virtual CAN network for simulation purposes.  You can run CAN over Ethernet (EtherType 0x88b5).  Even tunnel it over UDP.<br>
+As for Carloop working with SocketCAN, you’ll have to find out if there is driver support for the chipset you’re using via USB.  If there is, you’re in luck.</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/4</link>
+        <pubDate>Fri, 19 Aug 2016 14:08:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-4</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s a great feature to have. We talked about SocketCAN at the <a href="https://carloop.dyndns.org/t/car-hax-meetup-projects/106">Car Hax meetup</a> this week.</p>
+<p>Do you know what would be needed to add support for Carloop to SocketCAN? Are there examples of other bridges between Linux and an external CAN adapter not connected by a wire to the computer?</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/3</link>
+        <pubDate>Fri, 19 Aug 2016 13:49:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-3</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Being a Linux guy, I would like to see SocketCAN support along with a Python 2/3 wrapper.  I’ve seen so many low cost hardware interfaces here and there, but nobody comes up with real good software.  I want to see an open source version of Vehicle Spy and/or more support in WireShark for OBD2, UDS, ISO-TP, J1939, …</p>
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/2</link>
+        <pubDate>Fri, 19 Aug 2016 12:27:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-2</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+      <item>
+        <title>Library documentation and source code</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>The library to interface with the Carloop is available on GitHub.</p>
+<p>I have been adding documentation and example applications. Let me know if anything is unclear. GitHub issues and pull request welcome!</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/carloop-library">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/carloop-library" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/7acbef7aba99a9f5da03572f4711fa02474bdfc5_2_690x345.png" class="thumbnail" data-dominant-color="F3EFF1" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/carloop-library" target="_blank" rel="noopener">GitHub - carloop/carloop-library: Carloop library for the Particle platform</a></h3>
+
+  <p>Carloop library for the Particle platform. Contribute to carloop/carloop-library development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/library-documentation-and-source-code/50/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/library-documentation-and-source-code/50/1</link>
+        <pubDate>Sun, 22 May 2016 20:13:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-50-1</guid>
+        <source url="https://community.carloop.io/t/library-documentation-and-source-code/50.rss">Library documentation and source code</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Convert the Simple Logger&#39;s output to CSV</title>
+    <link>https://community.carloop.io/t/convert-the-simple-loggers-output-to-csv/86</link>
+    <description>Thanks to redM0nk for posting an awesome Python script that parses the output of the Simple Data Logger and converts it to a nicely formatted CSV file.  Check it out: https://github.com/carloop/simple_logger/blob/master/CAN_Parser.py</description>
+    
+    <lastBuildDate>Fri, 01 Jul 2016 12:21:24 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/convert-the-simple-loggers-output-to-csv/86.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Convert the Simple Logger&#39;s output to CSV</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks to redM0nk for posting an awesome Python script that parses the output of the Simple Data Logger and converts it to a nicely formatted CSV file.  Check it out: <a href="https://github.com/carloop/simple_logger/blob/master/CAN_Parser.py" class="inline-onebox">simple_logger/CAN_Parser.py at master · carloop/simple_logger · GitHub</a></p>
+          <p><a href="https://community.carloop.io/t/convert-the-simple-loggers-output-to-csv/86/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/convert-the-simple-loggers-output-to-csv/86/1</link>
+        <pubDate>Fri, 01 Jul 2016 12:21:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-86-1</guid>
+        <source url="https://community.carloop.io/t/convert-the-simple-loggers-output-to-csv/86.rss">Convert the Simple Logger&#39;s output to CSV</source>
+      </item>
+  </channel>
+</rss>

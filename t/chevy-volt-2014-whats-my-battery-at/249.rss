@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+    <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249</link>
+    <description>I&#39;m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input from the community on how best to overcome obstacles.
+
+Code: https://github.com/drewwells/carloop/
+
+I&#39;m assuming you know how to get going with Particle in Carloop here. You can flash updates by calling `particle flash (device name)`. Note this will perform an OTA update, you may wish to add `--serial` to perform a serial upgrade. I found serial to be a pain since I had to physically plug the USB cable into the device. Eventually, I just put an ATT sim in the device with gigabytes of data allowance.
+
+Speaking of, this code assumes you are using an AT&amp;T sim, so there&#39;s some code in there activating that and would need to be removed if you wish to use the Particle sim.
+
+What is working
+
+1. Ambient Temperature (this is the most common data sent via the CAN bus and has become my reliability check)
+2. State of Charge (percentage of battery that is charged, range goes up to ~88% and I&#39;m not sure what the lower limit is yet)
+3. Fuel Tank Level Input, no idea why I&#39;m looking at this
+4. Charger voltage (works with the car on or off)
+5. Charger amperage (works with the car on or off)
+
+
+What is not working
+
+1. State of Charge is very infrequent, often updating only 1-2 per 4hour charging session. The value updates continuously while the car is on. This is true of most of the data.
+2. My car will report errors while particle is plugged in. I had to unplug Particle this morning to get the car to turn on. Check Engine light will turn on and off due to these errors or the radio/AC may shut off.
+3. GPS is broken, not sure if it&#39;s hardware or software issue
+4. Higher level functionality is missing. Ideally, the raw data would be processed for more useful functionality like what time will my car be charged. Current (max SOC - current SOC) / charger amp / charger volt would give the time to max charge.
+
+The project is a branch off the extremely helpful starter guide on hackster.io https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991 . All credits go to Emerson for getting this far! Also credits to the gm-volt community for collecting PIDs for the car https://docs.google.com/spreadsheets/d/1HgWCnosdRqZYoWHEl7ylAxjxv4UFVeisWiR7gcr8H6I/edit#gid=0</description>
+    
+    <lastBuildDate>Thu, 04 May 2017 16:47:36 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[Mutley]]></dc:creator>
+        <description><![CDATA[
+            <p>For the SOC, I found out the signal on the Battery CAN network of what appear to be the usable SOC. The problem is that this message is sent on the Battery CAN BUS and it’s located on the other OBDII connector (X84B) which is on the passenger side (the 1st GEN Volt has 2 OBDII connector, the driver side has 3 CAN , and the other has 2 CAN network. The Bolt is wired the same way BTW).</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/9</link>
+        <pubDate>Thu, 04 May 2017 16:47:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-9</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[Mutley]]></dc:creator>
+        <description><![CDATA[
+            <p>The Chevy Volt GPS on the CAN works, although when I used it, there’s a slight bits remapping required for Latitude or Longitude, I don’t recall. I could check my stuff, but I was able to get the path on the map (shifted a bit of course) of the drive I did with the Carloop in cellular data mode (so theoretically, in real-time).</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/8</link>
+        <pubDate>Thu, 04 May 2017 16:43:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-8</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><span class="mention">@drew</span>, if you get a solution working to use the Chevy Volt GPS, I am sure others here would appreciate the solution.  There are a few people with Volts on this forum.</p>
+<p>In the case of the Carloop GPS module (included in the Pro, or could be purchased separately), I suggest checking out the sample apps here.  All the samples have the source code openly available on GitHub.</p>
+<p>Also, there have been some issues with the Carloop GPS unit.  If you try one of the examples and that does not work, then contact Carloop (there are some other threads about this).</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/7</link>
+        <pubDate>Fri, 14 Apr 2017 21:07:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-7</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>Sorry, I didn’t mean carloop is unreliable. I mean the Chevy Volt’s GPS will be unreliable, it’s been difficult pulling any data from this car. I want to instead pull from the tracker in the carloop.</p>
+<p>As I understand it, the Carloop Pro comes with a tracker… but I’m not able to talk to it. Do you have some tips on getting it to work.</p>
+<p>I’ll try that trick with OnStar, but if that’s what it takes… the GPS of the car isn’t of much use.</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/6</link>
+        <pubDate>Thu, 13 Apr 2017 13:28:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-6</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, we are working on a new version of the Carloop GPS that is much more consistent and reliable.  Regarding the Chevy Volt GPS, here are a few more CAN IDs (including the GPS coordinates which will need to be changed to degrees and seconds):</p>
+<blockquote>
+<pre><code> CAN ID  | Byte Location | Data          | Units           |   
+|--------|---------------|---------------|-----------------|
+| 32A    | Bytes 1-4     | GPS Latitude  | Milliarcseconds |  
+| 32A    | Bytes 5-8     | GPS Longitude | Milliarcseconds |   
+| 0C9    | Byte 5        | Accelerator   | 0-254 (0-100%)  | 
+| 3E9	 | Bytes 1-2     | Vehicle Speed | 1/100 mph       |
+</code></pre>
+</blockquote>
+<p>source: <a href="http://evtools.info/ChevyVoltOBD2CAN.html" class="inline-onebox">evtools.info</a></p>
+<p>My theory is that you need to request the vehicle’s location using the On Star mobile app and that will update the GPS coordinates.  I haven’t confirmed that will work but it would be interesting to measure using candump from can-utils when that happens.</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/5</link>
+        <pubDate>Wed, 12 Apr 2017 17:12:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-5</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>The carloop GPS doesn’t report it is valid from my carloop pro kit. I haven’t played with the on board GPS but think carloop would be more consistent.</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/4</link>
+        <pubDate>Wed, 12 Apr 2017 16:53:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-4</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/dreww">@dreww</a> this is amazing!  Regarding the GPS - are you talking about the Carloop GPS or the Chevy Volt’s on board GPS?  I have a theory about the Chevy Volt on-board GPS and I’d love to try it out to see if it works.</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/3</link>
+        <pubDate>Wed, 12 Apr 2017 16:28:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-3</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Congratulations!  Keep up the (hard) work.  I am sure you will get a lot more working…</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/2</link>
+        <pubDate>Wed, 05 Apr 2017 03:38:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-2</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+      <item>
+        <title>Chevy Volt (2014) - What&#39;s my battery at?</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input from the community on how best to overcome obstacles.</p>
+<p>Code: <a href="https://github.com/drewwells/carloop/" class="inline-onebox" rel="noopener nofollow ugc">GitHub - drewwells/carloop</a></p>
+<p>I’m assuming you know how to get going with Particle in Carloop here. You can flash updates by calling <code>particle flash (device name)</code>. Note this will perform an OTA update, you may wish to add <code>--serial</code> to perform a serial upgrade. I found serial to be a pain since I had to physically plug the USB cable into the device. Eventually, I just put an ATT sim in the device with gigabytes of data allowance.</p>
+<p>Speaking of, this code assumes you are using an AT&amp;T sim, so there’s some code in there activating that and would need to be removed if you wish to use the Particle sim.</p>
+<p>What is working</p>
+<ol>
+<li>Ambient Temperature (this is the most common data sent via the CAN bus and has become my reliability check)</li>
+<li>State of Charge (percentage of battery that is charged, range goes up to ~88% and I’m not sure what the lower limit is yet)</li>
+<li>Fuel Tank Level Input, no idea why I’m looking at this</li>
+<li>Charger voltage (works with the car on or off)</li>
+<li>Charger amperage (works with the car on or off)</li>
+</ol>
+<p>What is not working</p>
+<ol>
+<li>State of Charge is very infrequent, often updating only 1-2 per 4hour charging session. The value updates continuously while the car is on. This is true of most of the data.</li>
+<li>My car will report errors while particle is plugged in. I had to unplug Particle this morning to get the car to turn on. Check Engine light will turn on and off due to these errors or the radio/AC may shut off.</li>
+<li>GPS is broken, not sure if it’s hardware or software issue</li>
+<li>Higher level functionality is missing. Ideally, the raw data would be processed for more useful functionality like what time will my car be charged. Current (max SOC - current SOC) / charger amp / charger volt would give the time to max charge.</li>
+</ol>
+<p>The project is a branch off the extremely helpful starter guide on <a href="http://hackster.io" rel="noopener nofollow ugc">hackster.io</a> <a href="https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991" class="inline-onebox" rel="noopener nofollow ugc">Visualize Car Data With Carloop And Blynk - Hackster.io</a> . All credits go to Emerson for getting this far! Also credits to the gm-volt community for collecting PIDs for the car <a href="https://docs.google.com/spreadsheets/d/1HgWCnosdRqZYoWHEl7ylAxjxv4UFVeisWiR7gcr8H6I/edit#gid=0" class="inline-onebox" rel="noopener nofollow ugc">Volt PIDs - Google Sheets</a></p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249/1</link>
+        <pubDate>Wed, 05 Apr 2017 02:05:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-249-1</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-2014-whats-my-battery-at/249.rss">Chevy Volt (2014) - What&#39;s my battery at?</source>
+      </item>
+  </channel>
+</rss>

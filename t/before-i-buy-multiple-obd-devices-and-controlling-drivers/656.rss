@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Before I Buy: Multiple OBD devices and Controlling Drivers?</title>
+    <link>https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656</link>
+    <description>I am planning out a little project to control an intake manifold butterfly for my 2008 Honda Accord.
+
+Currently, I have a generic ELM327 Wi-Fi OBD dongle for use with my iPhone to monitor a handful of PIDs while driving.
+
+I am thinking of getting the Carloop Basic to constantly poll for RPM and set two GPIO lines either high or low depending on whether or not the RPM is above a certain number. The GPIO lines would control a DRV8871 motor driver.
+It looks like the Photon would have some available digital output pins, but I&#39;d like to confirm there are at least two outputs that I can use.
+
+With an OBD splitter, could my wireless dongle and the Carloop be able to run at the same time, with a fast response rate? 
+I don&#39;t monitor my RPM with the phone app if that matters.</description>
+    
+    <lastBuildDate>Tue, 05 Jun 2018 02:18:47 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Before I Buy: Multiple OBD devices and Controlling Drivers?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/willyum">@WILLYum</a>,</p>
+<p>For the CANbus polling rate, it depends on what you need performance-wise, as well as how hard you are working the Carloop.</p>
+<p>For performance, you will probably want to do some experimentation to see how fast the car is generating the RPM messages on the CANbus, and how a delay affects the manifold pressure.</p>
+<p>As for how hard you are working the Carloop, it depends on your application code.   The Photon has a STM32F205 processor on board which includes built-in CANbus support.  That means it should be able to get the CANbus messages very quickly.  You can even setup filters (see the CANbus documentation on <a href="http://particle.io">particle.io</a>) to only look at the messages you are interested in.  The only things remaining are if you are using WiFi, cloud, GPS or other functions at the same time; all these will slow down the performance.  The final factor is to carefully design your code so that you do not have any blocking code (where the code is stuck waiting for something before it can continue.).  I assume with an application containing no extras will be much better performance than what you will need.</p>
+          <p><a href="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/4</link>
+        <pubDate>Tue, 05 Jun 2018 02:18:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-656-4</guid>
+        <source url="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656.rss">Before I Buy: Multiple OBD devices and Controlling Drivers?</source>
+      </item>
+      <item>
+        <title>Before I Buy: Multiple OBD devices and Controlling Drivers?</title>
+        <dc:creator><![CDATA[WILLYum]]></dc:creator>
+        <description><![CDATA[
+            <p>The DRV8871 takes steady state (for my purposes, at least), logic level input and registers anything above 1.5V as high, so from what you said, I should be good. Thanks for the info!</p>
+<p>Given a standard CAN bus, does the Carloop have a decently fast polling rate? I don’t have a specced rate I have to meet, but it is a bit of a performance project so I wouldn’t exactly want a 1 second delay between reaching X RPM and having the Photon set the pins.</p>
+          <p><a href="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/3</link>
+        <pubDate>Mon, 04 Jun 2018 04:23:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-656-3</guid>
+        <source url="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656.rss">Before I Buy: Multiple OBD devices and Controlling Drivers?</source>
+      </item>
+      <item>
+        <title>Before I Buy: Multiple OBD devices and Controlling Drivers?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/willyum">@WILLYum</a>,</p>
+<p>To do your project to control the intake manifold butterfly, the photon should do nicely.  Does the digital output just need to be steady or does it need to be PWM?  If you need PWM, it might take a closer look to ensure the available pins can do PWM.  For steady state, no problem.  Remember, the digital outputs are 3.3V, but are compatible with 5V signals, so long as the motor driver can accept the 3.3V transition (which is a bit lower than the 5V transition); it usually works okay.  Also, I do not know how much current would go through those pins.  If the driver takes just logic level control signals, you should be okay.  I gave you the detailed version; in summary it should work.</p>
+<p>As for using your wireless dongle and the Carloop at the same time, you might get some message collisions if Carloop’s ID on the CANbus is the same as the ID of the wireless dongle.<br>
+You should be fine as long as they are both not sending at the same time.</p>
+          <p><a href="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/2</link>
+        <pubDate>Mon, 04 Jun 2018 04:09:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-656-2</guid>
+        <source url="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656.rss">Before I Buy: Multiple OBD devices and Controlling Drivers?</source>
+      </item>
+      <item>
+        <title>Before I Buy: Multiple OBD devices and Controlling Drivers?</title>
+        <dc:creator><![CDATA[WILLYum]]></dc:creator>
+        <description><![CDATA[
+            <p>I am planning out a little project to control an intake manifold butterfly for my 2008 Honda Accord.</p>
+<p>Currently, I have a generic ELM327 Wi-Fi OBD dongle for use with my iPhone to monitor a handful of PIDs while driving.</p>
+<p>I am thinking of getting the Carloop Basic to constantly poll for RPM and set two GPIO lines either high or low depending on whether or not the RPM is above a certain number. The GPIO lines would control a DRV8871 motor driver.<br>
+It looks like the Photon would have some available digital output pins, but I’d like to confirm there are at least two outputs that I can use.</p>
+<p>With an OBD splitter, could my wireless dongle and the Carloop be able to run at the same time, with a fast response rate?<br>
+I don’t monitor my RPM with the phone app if that matters.</p>
+          <p><a href="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656/1</link>
+        <pubDate>Mon, 04 Jun 2018 01:49:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-656-1</guid>
+        <source url="https://community.carloop.io/t/before-i-buy-multiple-obd-devices-and-controlling-drivers/656.rss">Before I Buy: Multiple OBD devices and Controlling Drivers?</source>
+      </item>
+  </channel>
+</rss>

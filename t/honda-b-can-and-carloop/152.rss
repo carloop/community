@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Honda B-CAN and Carloop</title>
+    <link>https://community.carloop.io/t/honda-b-can-and-carloop/152</link>
+    <description>My 2012 Honda Odyssey has two CAN systems, one is High Speed CAN and one is Low Speed CAN.  In Hondaspeak, high speed CAN is called F-CAN and low speed CAN is called B-CAN and it runs at 125 kbps.   B-CAN controls &quot;less important&quot; things like climate control, audio, door locks, the blind spot indication system, and so on.  B-CAN connects to HS-CAN via the instrument cluster.  Interestingly, you can pull B-CAN error codes without a scan tool.
+
+As far as I can tell, there is no diagnostic connector for B-CAN, so I would have to tap into the system by splicing wires and cobbling it together with a Carloop.  
+
+Should be a fun project, looking forward to posting some results.
+
+Below is a picture showing some of the systems controlled by F-CAN and what is controlled by B-CAN.
+
+&lt;img src=&quot;/uploads/default/original/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb.jpg&quot; width=&quot;488&quot; height=&quot;500&quot;&gt;</description>
+    
+    <lastBuildDate>Thu, 25 Feb 2021 17:58:02 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[Jpoint]]></dc:creator>
+        <description><![CDATA[
+            <p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/0ee0fe91cfd0340d03824b696b431926a1c2bfaf.png" width="662" height="289"></p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/32">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/32</link>
+        <pubDate>Thu, 25 Feb 2021 17:58:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-32</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[Jpoint]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="alanm" data-post="30" data-topic="152">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>logging can traffic from the vehicle’s CAN bus.  Even better if you can press the tailgate open button switch so you have that event logged. Once you have that log, repla</p>
+</blockquote>
+</aside>
+<p>The van is in the scrap yard being scavenged. No way to do this. The PTG is simply waiting for a signal from the B-can to say everything is good to go at the 33Mhz signal. The actual buttons to trigger the tailgate to open and close are directly wired with a common (-).</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/31">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/31</link>
+        <pubDate>Thu, 25 Feb 2021 17:49:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-31</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, I would recommend logging can traffic from the vehicle’s CAN bus.  Even better if you can press the tailgate open button switch so you have that event logged. Once you have that log, replay it with the motor controller properly wired to 12V and ignition. Hopefully you will see it moving and you can see which CAN messages make that happen.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/30">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/30</link>
+        <pubDate>Thu, 25 Feb 2021 16:59:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-30</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[Jpoint]]></dc:creator>
+        <description><![CDATA[
+            <p>The other option is to wire the motor directly (fused) and put a two way switch and use the limit switches from the tailgate latch for the end of travel points. I can weld and fabricate but the programming I only have limited building automation experience in a commercial/industrial setting.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76" title="20210215_225348.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/2e1e9be23ab117dfdc55f8d289a61c11b3c9bb76_2_1332x1000.jpg 2x"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/29">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/29</link>
+        <pubDate>Tue, 23 Feb 2021 21:09:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-29</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[Jpoint]]></dc:creator>
+        <description><![CDATA[
+            <p>HELP!<br>
+I stole the rear power tailgate motor, PTG controller and tailgate latch from a 2009 Odyssey. I want to use it as a standalone system for a home project coupled with a motorcycle battery and maintainer (act as a UPS system).<br>
+How do I bypass the B-Can? I think its stuck in safe mode. I’m hoping someone can direct me (as newbie) on bypassing this B-can signal (comes from the side door MICU B-Can line) so get this unit to function. Or even SELL me a module to plug in and give the signal to the PTG to function (i.e. vehicle speed is less than 1.2 mph). I’ve used the info from the PTG of a CR-V since it is likely the same.</p>
+<p><a href="https://hondamanual.org/products/11017" class="onebox" target="_blank" rel="noopener nofollow ugc">https://hondamanual.org/products/11017</a></p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/28</link>
+        <pubDate>Tue, 23 Feb 2021 21:05:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-28</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Sorry for the very slow reply.  It has been a few years since I played around with this, but I have started messing around with it again.  Right now I am trying to figure out how to grab the temperature on the B-Can line.</p>
+<p>In terms of connecting to the USB2Can, you want to make sure to connect CAN High, CAN Low, and ground.  If you don’t grab ground, it will not work.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/27</link>
+        <pubDate>Sat, 21 Nov 2020 16:53:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-27</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[Chad2000]]></dc:creator>
+        <description><![CDATA[
+            <p>This may be old hat,  but I just found out on my 2005 Acura TL, it has only 1 B-CAN pin.  But on the 2012-2014 TL’s, they have a B-CAN low and a B-CAN high.  So I guess that means I cannot use the bluetooth that I wanted to transplant into my car…  The reason I wanted to do that is because all the 04-08 TL’s have failing bluetooths.   So I wanted to Up it to a newer model that has been hopefully redesigned.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/26</link>
+        <pubDate>Mon, 10 Aug 2020 02:27:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-26</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[carloop_tinker]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a>  could you share the pin-outs used for the B-CAN to USB2CAN connection, please.<br>
+and what settings used?</p>
+<p><strong>my settings</strong>:<br>
+default jumper is intact (120 ohm terminating resistor)<br>
+sudo ip link set can0 type can bitrate 125000<br>
+sudo ip link set up can0<br>
+candump can0 -s 0 -L -l any,0:0,<span class="hashtag-raw">#FFFFFFFF</span></p>
+<p>I am attempting to connect via the rear fuse panel on my 2011 Odyssey - to pins 2 &amp; 7 of the <a href="https://www.amazon.com/gp/product/B07P9JGXXB/" rel="noopener nofollow ugc">DB 9 Connector</a>.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/8ad5aeeae846d3ecc6b5f18dfc60a701a4be00fc.png" data-download-href="//carloop-community.dyndns.org/uploads/default/8ad5aeeae846d3ecc6b5f18dfc60a701a4be00fc" title="Odyssey.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/8ad5aeeae846d3ecc6b5f18dfc60a701a4be00fc.png" width="523" height="499" data-dominant-color="E4E1EA"></a></div><p></p>
+<p>FWIW, I am attempting to capture door lock telemetry.  However, the results i am getting don’t seem to have a pattern</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/25</link>
+        <pubDate>Sun, 02 Aug 2020 05:55:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-25</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[HVoggenauer]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,<br>
+i’m new hiere.</p>
+<p>What i’m searching for. I’ve a 2007 Acura TL (US-Market) which has F-CAN high, F-CAN low and B-CAN.<br>
+I’ve installed a 2019 Honda Connect Android Radio (European Market) and i want them to communicate. The new Honda has F-CAN high, F-CAN low, B-CAN high and B-CAN low.</p>
+<p>Can i get help here and what do i need to get them connected?</p>
+<p>regards<br>
+Hans</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/24</link>
+        <pubDate>Mon, 27 Apr 2020 09:01:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-24</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>My heated seat module on our 2012 Odyssey was found under the passenger seat.  I would recommend you pickup the Honda factory service manual for your car, it will have answers to all of your questions.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/23</link>
+        <pubDate>Mon, 13 Jan 2020 19:28:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-23</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[nokoa]]></dc:creator>
+        <description><![CDATA[
+            <p>Where are these modules located? I don’t have heated seats, I thought I could hook onto the motorized seat, maybe to the seatbelt fastened sensor. Even if I do find them, I am not sure which is B-CANH B-CANL out of the whole wires down there.</p>
+<p>For the motorized seat there’s a harness going to the floor of the car from the seat, I followed it to under the seat, and it gets split into 3 connectors. One big one and 2 smaller one. Disconnecting the big one disabled all movement on the seat. On this connector for example how do I determine which are the 2 can wires, or if there would just be 1. Also which is ground?</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/22</link>
+        <pubDate>Sun, 12 Jan 2020 19:06:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-22</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, I was able to access B-CAN at the wiring for our heated seat module.  Really you could do this at any module that has a B-CAN connection.  Please be sure to let us know if you are able to successfully control HVAC over B-CAN!</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/21</link>
+        <pubDate>Fri, 10 Jan 2020 19:29:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-21</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[nokoa]]></dc:creator>
+        <description><![CDATA[
+            <p>I know this is an old thread, but I couldn’t find an answer for this. I am trying to hook into the B-CAN to hopefully control the ac. I am trying to do this on a 2017 Honda Accord, it has soft AC buttons. I am not sure where to exactly find access to B-CAN, can I access it through the motorized driver seat? I saw that previously someone accessed it through the option connector, but I couldn’t find it on the fuse box.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/20</link>
+        <pubDate>Fri, 10 Jan 2020 18:02:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-20</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I doubt that ISO9141 would interface with the nav or climate control.<br>
+Back in those days, those systems were typically discrete and not integrated together.<br>
+As a guess, the only thing on the ISO9141 are the OBD2 and re-flashing the engine control mapping.</p>
+<p>Most likely, the climate controls are mechanical, with levers, louvres and mechanical thermostats; there is probably no software there at all.</p>
+<p>The navigation system is most likely a plug-in replacement for the usual radio/stereo system.  It likely has only connections for power, speakers and the antennae (radio &amp; GPS).</p>
+<p>That being said, I am still working on CarloopRetro, which is intended to do ISO9141.<br>
+An oscilloscope just arrived, so I can now look into signal integrity in my prototyping.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/19</link>
+        <pubDate>Tue, 31 Jul 2018 02:38:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-19</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[yuvch]]></dc:creator>
+        <description><![CDATA[
+            <p>You’re absolutely right. I just realised that the CAN bus standard was implemented after 2007.</p>
+<p>It uses the ISO9141 protocol but I’m not sure if the nav or climate control module are even using that.</p>
+<p>I’ll have to do some more research. Thanks for pointing that out, idk how it flew over my head</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/18</link>
+        <pubDate>Thu, 26 Jul 2018 06:47:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-18</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Based on the pinouts it does not look like the 2004 Odyssey uses CAN for either of these modules.  You would see BCAN_H / BCAN_L or something like that on the pinout of one of the connectors.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/17</link>
+        <pubDate>Wed, 25 Jul 2018 20:59:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-17</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[yuvch]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a> , I am trying to figure out a way to control A/C that’s on my navigation unit I am planning to replace with a carpc. Heres the connecter (DISPLAY UNIT CONNECTER A (5P)) that gives the navigation unit A/C control: <a href="https://www.manualslib.com/manual/939368/Honda-2004-Odyssey.html?page=2034#manual" class="inline-onebox" rel="noopener nofollow ugc">Honda 2004 Odyssey Service Manual (Page 2034 of 2459) | ManualsLib</a> .</p>
+<p>I’m a newbie at this, I assume that the connecter is linked in with B-CAN. How would I capture the data I’d need from there?</p>
+<p>Maybe I should do something similiar to what you did with your BSI system. Take out the Navigation unit and connect it to my own CAN Network, replay the data to my car. I seriously doubt it would work with a nav unit tho.</p>
+<p>If only the stinkin a/c controls weren’t in the nav</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/16</link>
+        <pubDate>Wed, 25 Jul 2018 20:38:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-16</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, I think this one is for you (there is more than one Alan here <img src="//carloop-community.dyndns.org/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20">)</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/15</link>
+        <pubDate>Mon, 31 Jul 2017 03:55:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-15</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Also here’s an update on my project.</p>
+<p>This all started because I purchased a metric cluster for our 2012 Odyssey, and the cluster was showing an error for the blind spot indication (BSI) system, which our van does not have.  I discovered that the BSI system is on the low speed 125 kbps B-CAN fbus.</p>
+<p>In the interest of science, I purchased the BSI module for our van off eBay.  I figured out the pinout from the shop manual, connected the pins for power, ground, BCAN H/L, and the mirror indicators, and I powered it up.  </p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f" title="BSI_module.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_562x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_750x1000.JPG 2x"></a></div><br>
+I knew it was working because on boot the LED’s for the mirrors lit up.  Using my USB2CAN, I ran CANDUMP and saw the following 29-bit messages:<p></p>
+<p>(1501182476.597224) can0 1610FF9F#<br>
+(1501182476.601778) can0 12F8AC9F#09<br>
+(1501182476.901628) can0 12F8AC9F#09<br>
+(1501182477.201563) can0 12F8AC9F#09<br>
+(1501182477.501585) can0 12F8AC9F#09<br>
+(1501182479.601400) can0 12F8AC9F#09<br>
+(1501182479.621410) can0 12F8AC9F#08<br>
+(1501182479.921487) can0 12F8AC9F#08<br>
+(1501182480.101490) can0 12F8AC9F#11<br>
+(1501182480.401726) can0 12F8AC9F#11<br>
+(1501182480.591237) can0 1610FF9F#<br>
+(1501182480.701417) can0 12F8AC9F#11<br>
+(1501182481.001430) can0 12F8AC9F#11<br>
+(1501182481.301328) can0 12F8AC9F#11</p>
+<p>I haven’t figured out what 1610FF9F# means, but I did discover that 12F8AC9F#08 indicates everything is OK, 12F8AC9F#09 turns on just the BSI warning light to indicate self test (while starting the car), and 12F8AC9F#11 indicates a fault.</p>
+<p>Armed with this information, I created a carloop transmit script that send the “BSI is OK” 12F8AC9F#08 message every 20 milliseconds.  The message is sent to the bus via the B-CAN lines under the passenger seat, and I am powering the Photon via USB on switched power so I don’t have to worry about battery drain. Voila, no more BSI errors!</p>
+<p>void loop() {<br>
+// Send a message at a regular time interval<br>
+unsigned long now = millis();<br>
+if (now - lastTransmitTime &gt; transmitInterval) {<br>
+CANMessage message;<br>
+// A CAN message has an ID that identifies the content inside<br>
+message.id = 0x12F8AC9F;<br>
+message.extended = true;<br>
+// It can have from 0 to 8 data bytes<br>
+message.len = 1;<br>
+// Pass the data to be transmitted in the data array<br>
+message.data[0] = 0x08;<br>
+// Send the message on the bus!<br>
+carloop.can().transmit(message);<br>
+lastTransmitTime = now;<br>
+}<br>
+}</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/14</link>
+        <pubDate>Sun, 30 Jul 2017 18:07:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-14</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Alan,</p>
+<p>Actually my question this time was whether socketcan-serial works with 29 bit ID’s on a Carloop.  Do I need to add “message.extended = true” to the socketcan_serial.ino file?</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/13</link>
+        <pubDate>Sun, 30 Jul 2017 17:50:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-13</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>hey <a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a>,<br>
+Great to have you back! Yes, you can get 29 bit arbitration IDs using <code>candump</code> as oppossed to <code>cansniffer</code>.</p>
+<p><code>cansniffer</code> doesn’t yet have the 29-bit arbitration ID implemented.  See the issue brought up in 2016 on can-utils repo: <a href="https://github.com/linux-can/can-utils/issues/30" class="inline-onebox">cansniffer filtering · Issue #30 · linux-can/can-utils · GitHub</a></p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/11</link>
+        <pubDate>Sat, 29 Jul 2017 04:07:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-11</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey guys, long time no post.  I have picked up my project again and am making good progress…more on that soon.</p>
+<p>I was still wondering if socketcan-serial can handle 29 bit arbitration ID’s.</p>
+<p>I was able to successfully figure out some messages sent by a Blind Spot Indication module that I picked up when I analyzed it with a USB2CAN.  I have tried doing the same thing with a Carloop using socketcan-serial and I am not reading getting any messages off the bus.  It is low speed can (125 kbit) so I changed the speed from s6 to s4 in the slcand command, but it still doesn’t seem to pickup these 29 bit ID’s</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/10</link>
+        <pubDate>Fri, 28 Jul 2017 19:07:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-10</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Great work! I’m quite sure that can-utils also works with 29 bit IDs.  We’ve been pretty busy but I’d love to help out on this project!  Sounds like you are making great progress, <a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a></p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/9</link>
+        <pubDate>Wed, 16 Nov 2016 04:03:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-9</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Today I managed to access BCAN using a USB CAN device.  It turns out that cansniffer does not work with extended 29 bit arbitration ID’s.  When I ran cansniffer nothing would happen, but with candump I was able to get some data.  When I played back the data with canplayer, I could get doors to lock/unlock, lights to flash, and the heated seats to turn on and off.<br>
+So I am still not sure if Carloop’s socketcan app will work with 29 bit ID’s, will have to try that later.  For now glad that I managed to hack into the body CAN system on my Honda!</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/8</link>
+        <pubDate>Wed, 16 Nov 2016 01:53:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-8</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+      <item>
+        <title>Honda B-CAN and Carloop</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Just curious, does <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>’s  socketcan serial app support  CAN messages with extended 29 bit arbitration ID’s?</p>
+<p>I am pretty sure that Honda B-can uses extended ID’s.</p>
+          <p><a href="https://community.carloop.io/t/honda-b-can-and-carloop/152/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-b-can-and-carloop/152/7</link>
+        <pubDate>Fri, 11 Nov 2016 19:57:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-152-7</guid>
+        <source url="https://community.carloop.io/t/honda-b-can-and-carloop/152.rss">Honda B-CAN and Carloop</source>
+      </item>
+  </channel>
+</rss>

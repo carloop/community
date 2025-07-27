@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Civic Touring 2017 unable to read ODB2 messages</title>
+    <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603</link>
+    <description>Hey folks. So ive got the photon talking SLCAN over to my linux PC using slcand and it SEEMS to work (I get data using candump/cansniffer). What im trying to do is to make sure its actually communicating over CAN so im trying to do something super simple like query the ODB2 for engine RPM. I seem to never get a response to this message. Im tried using cansend/cansniffer over SLCAN and thinking that maybe something is wrong with the SLCAN implementation also tried to have code run directly on the photon looking for ODB2 replies over an id of 0x700.
+
+Im stumped since I get nothing.
+
+What im trying to send with cansend is: `cansend can0 7df#02010c0000000000` - I do see 7df in cansniffer but no replies whatsoever (ID over 0x700)
+
+I&#39;ve also tried a custom application: https://github.com/frk2/carloop-obd-publisher/blob/master/application.cpp
+
+Also no replies. I can see other can messages just fine. Im guessing im missing something basic here - what am I doing wrong?
+
+Thanks!</description>
+    
+    <lastBuildDate>Thu, 19 Apr 2018 05:00:59 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Ah ha, that was the thread I was trying to think of; it is not easy at 1am local time.<br>
+Thanks <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> for finding this for <a class="mention" href="https://community.carloop.io/u/frk1206">@frk1206</a>.</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/8</link>
+        <pubDate>Thu, 19 Apr 2018 05:00:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-8</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/frk1206">@frk1206</a> cool! Actually, I remembered someone else had a similar issue with Hondas and sending <code>7DF</code> for sure will NOT work.  You need to send <code>0x18DB33F1</code> - see this thread: <a href="https://carloop.dyndns.org/t/handling-29-bit-extended-format/239/16" class="inline-onebox">Handling 29-Bit (Extended) Format - Getting Started - Carloop Community</a></p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/7</link>
+        <pubDate>Wed, 18 Apr 2018 07:36:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-7</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[frk1206]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> This looks promising will try it out soon!</p>
+<p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> I do get canbus data - but only at 500kbit/s - switching to any other baud rate I get no can messages.</p>
+<p>I suspect the civic is expecting 29-bit ODB2 query/broadcast messages and replying similarly. Will test that out tomorrow!</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/6</link>
+        <pubDate>Tue, 17 Apr 2018 05:04:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-6</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/frk1206">@frk1206</a> I suspect you might be querying the wrong baud rate.  When you setup your <code>slcan</code> daemon on linux have you tried different baud rates?</p>
+<p>e.g.<br>
+<code>slcand -o -c -s5 /dev/ttyACM0 can0</code> -  250 kbps<br>
+<code>slcand -o -c -s4 /dev/ttyACM0 can0</code> -  125 kbps</p>
+<p>Full list:<br>
+Here’s a list of the CAN bus speed parameters that can be passed to slcand:</p>
+<ul>
+<li><code>-s0</code> 10 kbit/s</li>
+</ul>
+<ul>
+<li><code>-s1</code> 20 kbit/s</li>
+<li><code>-s2</code> 50 kbit/s</li>
+<li><code>-s3</code> 100 kbit/s</li>
+<li><code>-s4</code> 125 kbit/s</li>
+<li><code>-s5</code> 250 kbit/s</li>
+<li><code>-s6</code> 500 kbit/s</li>
+<li><code>-s7</code> 800 kbit/s</li>
+<li><code>-s8</code> 1 Mbit/s</li>
+</ul>
+<p>The extended / non-extended IDs should still come through.  See this thread: <a href="https://carloop.dyndns.org/t/handling-29-bit-extended-format/239" class="inline-onebox">Handling 29-Bit (Extended) Format - Getting Started - Carloop Community</a></p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/5</link>
+        <pubDate>Tue, 17 Apr 2018 04:05:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-5</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/frk1206">@frk1206</a>,</p>
+<p>Yes, there are CRC checks on the CAN message data. However, that is transparent to you as it is taken care of by the STM chip on your Photon.  The STM chip has built-in CAN messaging support.</p>
+<p>So, when everything works on the 2015 Toyota but not on the 2017 Honda, my first assumption is that the Honda may use CAN extended format.  See Wikipedia here for a description:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/CAN_bus#Extended_frame_format">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/CAN_bus#Extended_frame_format" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/CAN_bus#Extended_frame_format" target="_blank" rel="noopener">CAN bus | Extended frame format</a></h3>
+
+<p>The frame format is as follows on from here in the table below:
+</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Others have dealt with this, so a quick search of this forum should turn up what you are looking for.</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/4</link>
+        <pubDate>Mon, 16 Apr 2018 04:03:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-4</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[frk1206]]></dc:creator>
+        <description><![CDATA[
+            <p>Also noob question: Is there some sort of CRC/Md5 checks on the data thats received via CAN? Just wondering if the data I see on the civic is legit real CAN or is it possible im just looking at garbage?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/3</link>
+        <pubDate>Mon, 16 Apr 2018 02:04:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-3</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[frk1206]]></dc:creator>
+        <description><![CDATA[
+            <p>So - everything works fine and as expected on my 2015 Toyota 4Runner. So something specific with the honda. Any ideas?</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/2</link>
+        <pubDate>Mon, 16 Apr 2018 01:44:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-2</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+      <item>
+        <title>Civic Touring 2017 unable to read ODB2 messages</title>
+        <dc:creator><![CDATA[frk1206]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey folks. So ive got the photon talking SLCAN over to my linux PC using slcand and it SEEMS to work (I get data using candump/cansniffer). What im trying to do is to make sure its actually communicating over CAN so im trying to do something super simple like query the ODB2 for engine RPM. I seem to never get a response to this message. Im tried using cansend/cansniffer over SLCAN and thinking that maybe something is wrong with the SLCAN implementation also tried to have code run directly on the photon looking for ODB2 replies over an id of 0x700.</p>
+<p>Im stumped since I get nothing.</p>
+<p>What im trying to send with cansend is: <code>cansend can0 7df#02010c0000000000</code> - I do see 7df in cansniffer but no replies whatsoever (ID over 0x700)</p>
+<p>I’ve also tried a custom application: <a href="https://github.com/frk2/carloop-obd-publisher/blob/master/application.cpp" class="inline-onebox" rel="noopener nofollow ugc">carloop-obd-publisher/application.cpp at master · frk2/carloop-obd-publisher · GitHub</a></p>
+<p>Also no replies. I can see other can messages just fine. Im guessing im missing something basic here - what am I doing wrong?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603/1</link>
+        <pubDate>Mon, 16 Apr 2018 01:26:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-603-1</guid>
+        <source url="https://community.carloop.io/t/civic-touring-2017-unable-to-read-odb2-messages/603.rss">Civic Touring 2017 unable to read ODB2 messages</source>
+      </item>
+  </channel>
+</rss>

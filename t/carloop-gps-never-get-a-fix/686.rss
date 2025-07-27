@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop GPS - Never get a fix</title>
+    <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686</link>
+    <description>I&#39;ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour and never got a GPS fix?
+
+Here&#39;s the code:
+// Run our code even when out of range of Wi-Fi / cellular.
+SYSTEM_THREAD(ENABLED);
+
+#include &lt;carloop.h&gt;
+#include &quot;CANProtocolBase.h&quot;
+#include &quot;CANProtocol_OBD.h&quot;
+
+// Forward declerations
+void printGPSInfo(TinyGPSPlus &amp;gps);
+void printCANInfo();
+void printAccelerometerInfo();
+String formatFloat(float val, bool valid, int len, int prec);
+String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t);
+
+// Blue LED
+int _led1 = D7;
+// Timestamp for debug messages
+unsigned long _lastDebugMsg = millis();
+
+// Threshold to trigger a publish
+// 9000 is VERY sensitive, 12000 will still detect small bumps
+int _accelThreshold = 40000;
+
+// Our Carloop object
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+// Our protocol object
+CANProtocolBase* canProtocol = new CANProtocol_OBD();
+
+ // for publishing values
+String buf;
+
+// A FuelGauge for checking on the battery state
+FuelGauge fuel;
+
+void setup() {
+
+    // Fire up serial for debug output
+    Serial.begin();
+
+    // We&#39;re going to use the LED attached to D7 to indicate if we&#39;re in Simulation mode or not.  It will be on
+    // when we are in simulation mode, off otherwise.
+    pinMode(_led1, OUTPUT);
+/*
+    // Toggle the led
+    for(int i=0; i++ ; i&lt;10) {
+      digitalWrite(_led1, HIGH);
+      delay(500);
+      digitalWrite(_led1, LOW);
+      delay(500);
+    }
+    */
+    Serial.println(&quot;Proxi-Carloop-GPS Evaluation&quot;);
+
+    // Start up the Carloop using the default configuration.
+    //carloop.begin();
+}
+
+void loop() {
+    unsigned long now;
+    now = millis();
+    carloop.update();
+    //canProtocol-&gt;loop();
+
+    if (millis() - _lastDebugMsg &gt; 1000) {
+      Serial.println(&quot;====Debug info====&quot;);
+      printGPSInfo(carloop.gps());
+      /*
+      printCANInfo();
+      printAccelerometerInfo();
+      */
+      _lastDebugMsg = millis();
+    }
+}
+
+void printGPSInfo(TinyGPSPlus &amp;gps) {
+
+  Serial.printf(&quot;GPS %6d chars: \n&quot;, gps.charsProcessed()); //
+  Serial.printf(&quot;Lat: %s\n&quot;, formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6).c_str());
+  Serial.printf(&quot;Lon: %s\n&quot;, formatFloat(gps.location.lng(), gps.location.isValid(), 11, 6).c_str());
+  Serial.printf(&quot;Date/Time: %s&quot;, formatDateTime(gps.date, gps.time).c_str());
+
+  /*
+  String s;
+  s += String::format(&quot;GPS %6d chars: &quot;, gps.charsProcessed());
+  s += formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6);
+  s += formatFloat(gps.location.lng(), gps.location.isValid(), 12, 6);
+  s += formatDateTime(gps.date, gps.time);
+  Serial.println(s.c_str());
+  */
+}
+
+void printCANInfo() {
+
+}
+
+void printAccelerometerInfo() {
+
+}
+
+String formatFloat(float val, bool valid, int len, int prec) {
+  String s;
+  if (!valid) {
+    while(len-- &gt; 1) {
+      s += &#39;*&#39;;
+    }
+    s += &#39; &#39;;
+  }
+  else {
+    char format[10];
+    snprintf(format, sizeof(format), &quot;%%%d.%df&quot;, len, prec);
+    s += String::format(format, val);
+      /* code */
+  }
+
+  return s;
+}
+
+String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t) {
+  String s;
+
+  // Date portion
+  if (!d.isValid()) {
+    s += &quot;********** &quot;;
+  }
+  else {
+    s += String::format(&quot;%02d/%02d/%02d&quot;, d.month(), d.day(), d.year());
+  }
+
+  // Time portion
+  if (!t.isValid()) {
+    s += &quot;******** &quot;;
+  }
+  else {
+    s += String::format(&quot;%02d:%02d:%02d &quot;, t.hour(), t.minute(), t.second());
+  }
+
+  return s;
+}</description>
+    
+    <lastBuildDate>Sun, 12 Aug 2018 22:07:08 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank for you suggestions. I took your advice from a previous post and flashed particle firmware version 0.8.0-rc.9 with the corresponding Carloop-Minimal code. After waiting for about 5 to 10 minutes, I started receiving GPS information. Particle firmware version 0.7.0 is a no-go. I did try firmware version 0.6.4, but either I didn’t wait long enough to get a fix or it just didn’t work for me. In either case, thanks for the help. Using version 0.8.0-rc, the battery, and the latest Carloop library seems to work well.  Again, Thanks for the help.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/14</link>
+        <pubDate>Sun, 12 Aug 2018 22:07:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-14</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks, I’ll see about this as well.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/12</link>
+        <pubDate>Sun, 12 Aug 2018 22:04:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-12</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>You need to do</p>
+<pre><code>digitalWrite(D4, HIGH);
+</code></pre>
+<p>I’m not quite sure about the D4 pin. You have to see the code. There is a npn transistor that blinks a led when get a fix, but you need to send to HIGH that pin. By default the led doesnt blink.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/11</link>
+        <pubDate>Sun, 12 Aug 2018 20:33:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-11</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ruhandsomeiii">@ruhandsomeiii</a>,</p>
+<p>Are you saying that you get no information at all, or the information is all zeros?<br>
+The code shown above should work fine.</p>
+<p>If you are getting just zeros, then make sure you have a clear view of the sky, give it a couple of minutes, and absolutely make sure your power supply provides enough volts, amps and that the power quality is clean.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/10</link>
+        <pubDate>Sun, 12 Aug 2018 18:28:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-10</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>I just received my Carloop GPS board.  Can someone point me to an example particle electron app that actually works with the Carloop GPS board.  I’ve tried the carloop_minimal example app and I get battery voltage, but I don’t get GPS information.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/9</link>
+        <pubDate>Sat, 11 Aug 2018 20:29:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-9</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Not to beat on a dead horse, BUT…</p>
+<aside class="quote no-group" data-username="cyclin_al1" data-post="5" data-topic="686">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d6d6ee/48.png" class="avatar"> cyclin_al1:</div>
+<blockquote>
+<p>Have you gotten any data on your power quality yet?</p>
+</blockquote>
+</aside>
+<p>No GPS will acquire a lock if it does not have sufficient power to run the antenna.<br>
+GPS antennae are normally active antennae and consume power.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/8</link>
+        <pubDate>Fri, 03 Aug 2018 03:43:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-8</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I just looked at the schematics and see that the LED is not set by the code so it’s a GPS issue of some sort.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/7</link>
+        <pubDate>Tue, 31 Jul 2018 23:08:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-7</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve reviewed the Carloop code and I don’t see where the LED ever get’s initialized or used.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/6</link>
+        <pubDate>Tue, 31 Jul 2018 22:56:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-6</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Have you gotten any data on your power quality yet?  You want to have sufficient voltage with very low ripple, plus enough amps to supply the peak current loads, not just the average load.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/5</link>
+        <pubDate>Tue, 31 Jul 2018 02:40:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-5</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>In my case I’m receiving valid GPS data, bit the fix LED on the Carloop GPS adapter is never lit.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/4</link>
+        <pubDate>Thu, 26 Jul 2018 20:21:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-4</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a>,</p>
+<p>Just to confirm, are you receiving the full set of data over serial, or are you receiving only partial data?  If you are getting partial data and the rest of the fields are filled with zeros, then maybe you do not actually have a GPS fix.</p>
+<p>If you do not have a GPS fix, then the most likely thing to look into is whether or not you are supplying adequate power.  Insufficient power might result in not being able to get a fix.</p>
+<p>If you are getting a full data set and you actually have a fix, then try the sample code with no changes and see if you get the same behaviour.  I am not able to say exactly what the behaviour should be; my order got lost and I am waiting for a replacement GPS to be shipped to me.  When I get my GPS, then I will be able to help in better detail.</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/3</link>
+        <pubDate>Fri, 20 Jul 2018 04:42:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-3</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I noticed that I had commented out the Carloop.begin()  I corrected that and then I eventually saw valid GPS data through the serial port debug messages.  However, I never saw the GPS Fix light enabled.  Are we suppose to manage that through our code?</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/2</link>
+        <pubDate>Wed, 18 Jul 2018 02:51:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-2</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+      <item>
+        <title>Carloop GPS - Never get a fix</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour and never got a GPS fix?</p>
+<p>Here’s the code:<br>
+// Run our code even when out of range of Wi-Fi / cellular.<br>
+SYSTEM_THREAD(ENABLED);</p>
+<p><span class="hashtag-raw">#include</span> &lt;carloop.h&gt;<br>
+<span class="hashtag-raw">#include</span> “CANProtocolBase.h”<br>
+<span class="hashtag-raw">#include</span> “CANProtocol_OBD.h”</p>
+<p>// Forward declerations<br>
+void printGPSInfo(TinyGPSPlus &amp;gps);<br>
+void printCANInfo();<br>
+void printAccelerometerInfo();<br>
+String formatFloat(float val, bool valid, int len, int prec);<br>
+String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t);</p>
+<p>// Blue LED<br>
+int _led1 = D7;<br>
+// Timestamp for debug messages<br>
+unsigned long _lastDebugMsg = millis();</p>
+<p>// Threshold to trigger a publish<br>
+// 9000 is VERY sensitive, 12000 will still detect small bumps<br>
+int _accelThreshold = 40000;</p>
+<p>// Our Carloop object<br>
+Carloop carloop;</p>
+<p>// Our protocol object<br>
+CANProtocolBase* canProtocol = new CANProtocol_OBD();</p>
+<p>// for publishing values<br>
+String buf;</p>
+<p>// A FuelGauge for checking on the battery state<br>
+FuelGauge fuel;</p>
+<p>void setup() {</p>
+<pre><code>// Fire up serial for debug output
+Serial.begin();
+
+// We're going to use the LED attached to D7 to indicate if we're in Simulation mode or not.  It will be on
+// when we are in simulation mode, off otherwise.
+pinMode(_led1, OUTPUT);
+</code></pre>
+<p>/*<br>
+// Toggle the led<br>
+for(int i=0; i++ ; i&lt;10) {<br>
+digitalWrite(_led1, HIGH);<br>
+delay(500);<br>
+digitalWrite(_led1, LOW);<br>
+delay(500);<br>
+}<br>
+*/<br>
+Serial.println(“Proxi-Carloop-GPS Evaluation”);</p>
+<pre><code>// Start up the Carloop using the default configuration.
+//carloop.begin();
+</code></pre>
+<p>}</p>
+<p>void loop() {<br>
+unsigned long now;<br>
+now = millis();<br>
+carloop.update();<br>
+//canProtocol-&gt;loop();</p>
+<pre><code>if (millis() - _lastDebugMsg &gt; 1000) {
+  Serial.println("====Debug info====");
+  printGPSInfo(carloop.gps());
+  /*
+  printCANInfo();
+  printAccelerometerInfo();
+  */
+  _lastDebugMsg = millis();
+}
+</code></pre>
+<p>}</p>
+<p>void printGPSInfo(TinyGPSPlus &amp;gps) {</p>
+<p>Serial.printf(“GPS %6d chars: \n”, gps.charsProcessed()); //<br>
+Serial.printf(“Lat: %s\n”, formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6).c_str());<br>
+Serial.printf(“Lon: %s\n”, formatFloat(gps.location.lng(), gps.location.isValid(), 11, 6).c_str());<br>
+Serial.printf(“Date/Time: %s”, formatDateTime(gps.date, gps.time).c_str());</p>
+<p>/*<br>
+String s;<br>
+s += String::format("GPS %6d chars: ", gps.charsProcessed());<br>
+s += formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6);<br>
+s += formatFloat(gps.location.lng(), gps.location.isValid(), 12, 6);<br>
+s += formatDateTime(gps.date, gps.time);<br>
+Serial.println(s.c_str());<br>
+*/<br>
+}</p>
+<p>void printCANInfo() {</p>
+<p>}</p>
+<p>void printAccelerometerInfo() {</p>
+<p>}</p>
+<p>String formatFloat(float val, bool valid, int len, int prec) {<br>
+String s;<br>
+if (!valid) {<br>
+while(len-- &gt; 1) {<br>
+s += '<em>';<br>
+}<br>
+s += ’ ';<br>
+}<br>
+else {<br>
+char format[10];<br>
+snprintf(format, sizeof(format), “%%%d.%df”, len, prec);<br>
+s += String::format(format, val);<br>
+/</em> code */<br>
+}</p>
+<p>return s;<br>
+}</p>
+<p>String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t) {<br>
+String s;</p>
+<p>// Date portion<br>
+if (!d.isValid()) {<br>
+s += “********** “;<br>
+}<br>
+else {<br>
+s += String::format(”%02d/%02d/%02d”, d.month(), d.day(), d.year());<br>
+}</p>
+<p>// Time portion<br>
+if (!t.isValid()) {<br>
+s += "******** “;<br>
+}<br>
+else {<br>
+s += String::format(”%02d:%02d:%02d ", t.hour(), t.minute(), t.second());<br>
+}</p>
+<p>return s;<br>
+}</p>
+          <p><a href="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-gps-never-get-a-fix/686/1</link>
+        <pubDate>Wed, 18 Jul 2018 01:48:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-686-1</guid>
+        <source url="https://community.carloop.io/t/carloop-gps-never-get-a-fix/686.rss">Carloop GPS - Never get a fix</source>
+      </item>
+  </channel>
+</rss>

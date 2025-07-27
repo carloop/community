@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Pre Purchase Questions</title>
+    <link>https://community.carloop.io/t/pre-purchase-questions/606</link>
+    <description>I&#39;m new to the car hacking community and I had a few questions about the carloop. My idea was to be able to control the locks of my car through the carloop. I purchased a different board called the machine m2 and I was wondering if the developer software works with the macchina m2? I&#39;m planning on working on a VW gti MK5 and I am aware that the can bus data can&#39;t be read through the OBD2 port due to a gateway module and I&#39;m fine splicing my way into the comfort bus to access and control the locks on my car that way.</description>
+    
+    <lastBuildDate>Sun, 22 Apr 2018 05:43:25 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/pre-purchase-questions/606.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Pre Purchase Questions</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/kman833">@kman833</a>,</p>
+<p>I do not know of anything to specifically answer your question.<br>
+Also, I do not know your level of experience, so I will have to take a guess to start.</p>
+<p>Carloop works with Particle devices, not Arduino devices.<br>
+However, they are both microcontrollers based on the Wiring language.  Writing sketches is similar but not the same on both.  If you know one, you have experience so that it should not be too hard to learn the other on your own.  If you have no experience at all, look for a programming course at highschool, college, university or even online.  A course in the C or C++ (or similar) languages or microcontrollers could go a long way in helping.  Going to a makerspace could also be very valuable to gain experience.</p>
+<p>When it comes to CANbus, it is just another communications protocol.  That is over-simplifying, but if you can use Serial, I2C, SPI, 1wire or other communications protocol then it will not be too hard to figure out CANbus.  Wikipedia has some good resources on CANbus and OBD2.</p>
+<p>Where it gets really interesting is knowing what those messages will do to your car, or what your car is telling you in those messages.  The more you know about cars and automotive, the better.<br>
+One popular resource to help out in this area is the “Car Hackers Handbook”; you can find it online:<br>
+<a href="http://opengarages.org/handbook/" class="onebox" target="_blank" rel="noopener">http://opengarages.org/handbook/</a></p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions/606/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions/606/4</link>
+        <pubDate>Sun, 22 Apr 2018 05:43:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-606-4</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions/606.rss">Pre Purchase Questions</source>
+      </item>
+      <item>
+        <title>Pre Purchase Questions</title>
+        <dc:creator><![CDATA[kman833]]></dc:creator>
+        <description><![CDATA[
+            <p>Do you know of any courses or anything that would teach me how to write can bus arduino sketches?</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions/606/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions/606/3</link>
+        <pubDate>Sat, 21 Apr 2018 17:55:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-606-3</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions/606.rss">Pre Purchase Questions</source>
+      </item>
+      <item>
+        <title>Pre Purchase Questions</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/kman833">@kman833</a>,</p>
+<p>Your VW is similar to a whole lot of other vehicles.  You can access the CAN bus available on the OBD2 port for vehicle diagnostics using the OBD2 messages.  That’s required by law in the USA, Canada and some other countries.  For vehicle security, the module that does the OBD2 functions is also a gateway preventing access to the other communications busses in the vehicle.  This is where you need some research on your particular vehicle.</p>
+<p>It seems you have done some of the research, and the communications bus you need is called the comfort bus.  Does this bus use the CANbus protocol?  Is there a convenient place to hook into the wiring of this bus?  (For example, on some Dodge vehicles, it is known as a secondary CANbus and can be hooked up near the car radio using the Carloop CANhitch (rather than the Carloop itself)).  On the chance that VW uses something other than CANbus, then Carloop will not work.  If the VW does use CANbus, then you are all set to get started.</p>
+<p>I had never heard of macchina.cc before.  I took a look and their hardware looks interesting.  They have packed in all the hardware to cover all the different communication protocols ever used on OBD and OBD2.  That said, there can be proprietary protocols which may or may not also be available on the port; that is where even the hardware has to be customized.  However, they are relying on their community to develop the firmware.  I admit that I did not look further so see what firmware has been developed and shared in the community.</p>
+<p>As for developer software, there are quite some differences that will show up in firmware development.  The Particle devices used in Carloop have STM microprocessors with built-in CANbus support.  Carloop has a firmware library already available, so you can jump right into doing the firmware for your particular application.  The Arduino devices used in Macchina have Cortex M3 microprocessors.  I have not worked with these to know if any automotive protocols have built-in support in these processors.</p>
+<p>For example, I am working on adding K-Line support to the Particle devices, which I have nicknamed CarloopRetro.  I had the hardware figured out in a couple of weeks.  However, it has been roughly a year working on K-Line support for the STM microprocessors since it is not built-in.  When that is done, then I can add ISO 9141, KWP2000 &amp; KWP Fast Init to the Carloop library (older protocols than CAN).  I cannot say if macchina has already solved these challenges; I am certain it can be done for both Carloop and macchina.</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions/606/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions/606/2</link>
+        <pubDate>Thu, 19 Apr 2018 04:59:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-606-2</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions/606.rss">Pre Purchase Questions</source>
+      </item>
+      <item>
+        <title>Pre Purchase Questions</title>
+        <dc:creator><![CDATA[kman833]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m new to the car hacking community and I had a few questions about the carloop. My idea was to be able to control the locks of my car through the carloop. I purchased a different board called the machine m2 and I was wondering if the developer software works with the macchina m2? I’m planning on working on a VW gti MK5 and I am aware that the can bus data can’t be read through the OBD2 port due to a gateway module and I’m fine splicing my way into the comfort bus to access and control the locks on my car that way.</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions/606/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions/606/1</link>
+        <pubDate>Tue, 17 Apr 2018 17:54:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-606-1</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions/606.rss">Pre Purchase Questions</source>
+      </item>
+  </channel>
+</rss>

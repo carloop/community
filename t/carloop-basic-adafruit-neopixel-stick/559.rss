@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Basic + Adafruit NeoPixel Stick?</title>
+    <link>https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559</link>
+    <description>Hello,
+
+I&#39;ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own &quot;RPM&quot; Gauge, similar to those in racecars. For that I would use a Carloop Basic and a Adafruit NeoPixel Stick (https://www.adafruit.com/product/1426)
+
+Now, after some google Foo, it appears that the Particle Photon can Power them with 3.3V.
+But what about the Power output of the OBD-2 Port? Does anyone know the limitations or are these Vehicle specific?
+
+Maybe someone has already done something along those lines?</description>
+    
+    <lastBuildDate>Mon, 05 Mar 2018 04:57:16 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Basic + Adafruit NeoPixel Stick?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/redimo">@redimo</a>,</p>
+<p>Can I assume that your Focus will still be street-worthy while being setup for the track?  Sounds very fun…  My project car is a 2004 Impreza that needs a head gasket.  I am free to do what I want with the project as we already had to get another daily driver in the meantime.  Eventually I hope for full cage and a hotbits suspension.</p>
+<p>For the reference to the transistor, see this thread here on the Particle forums:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10" target="_blank" rel="noopener" title="08:05AM - 28 January 2018">Particle – 28 Jan 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/easiest-way-to-wire-the-photon-to-neopixels/13150/10" target="_blank" rel="noopener">Easiest way to wire the Photon to Neopixels</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #BF1E2E;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Hardware</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>While using a logic level shifter (of any kind - see bellow) is advisable, well manufactured NeoPixels can usually cope with the 3.3V data as the LOW/HIGH threshold sits somewhere round about 3V.  But lesser quality LEDs tend to have higher...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>By the way, since you are thinking of eventually using a SD Card and probably want to track vehicle dynamics, please read this thread before you go IMU shopping.  I bought this one, but have not yet tried it; looks like it may not work well for race-car purposes:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837" target="_blank" rel="noopener" title="10:02PM - 18 April 2017">Particle – 18 Apr 17</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837" target="_blank" rel="noopener">Is there a good library for Adafruit 9-DOF Absolute Orientation IMU Fusion...</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Firmware</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Libraries</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>that will let me get the compass data?</p>
+
+  <p>
+    <span class="label1">Reading time: 1 mins 🕑</span>
+      <span class="label2">Likes: 2 ❤</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/4</link>
+        <pubDate>Mon, 05 Mar 2018 04:57:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-559-4</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559.rss">Carloop Basic + Adafruit NeoPixel Stick?</source>
+      </item>
+      <item>
+        <title>Carloop Basic + Adafruit NeoPixel Stick?</title>
+        <dc:creator><![CDATA[redimo]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a><br>
+Perfect, thanks for the reply.</p>
+<p>I currently drive a Focus RS 17’ that I want to slowly turn into my Trackweapon, and whilst I am waiting for my KW Coilovers and Sway bars I want to start working on a shift light, as looking down during the track is quite bothersome and the optimal shifting isnt at redline.</p>
+<p>Anyway, sounds cool!</p>
+<p>I might not use a SD at the beginning, but maybe later.</p>
+<p>With the transistor you mean one between + and GND, right? Im not so knowledgable in electronics <img src="//carloop-community.dyndns.org/images/emoji/twitter/stuck_out_tongue.png?v=12" title=":stuck_out_tongue:" class="emoji" alt=":stuck_out_tongue:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/3</link>
+        <pubDate>Sun, 04 Mar 2018 17:46:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-559-3</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559.rss">Carloop Basic + Adafruit NeoPixel Stick?</source>
+      </item>
+      <item>
+        <title>Carloop Basic + Adafruit NeoPixel Stick?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/redimo">@redimo</a>, I have pretty much the same idea.  Only in a rally car, because those are the best (just joking) and I prefer a solo car.  Then again Solo I events are solo and on the track…  Anyway, my idea is a NeoPixel ring and a 4-digit 7-segment LED display installed into the body of a standard guage.</p>
+<p>Unless you have something out of the ordinary, your car will provide +12V at the OBD-2 port.  I would assume it could supply plenty of current as the dashboard and the associated interior lighting are likely to be on the same circuit.<br>
+The Carloop has an onboard regulator to bring that down to +5V (1 A).  I recommend using that +5V (VIN on the Photon) to power the NeoPixels.  144mA is the nominal current requirement and I expect would be no problem for the Carloop, but you might have to pay attention if you are also using a SD Card at the same time.</p>
+<p>Note that it is recommended to use a capacitor on the wire supplying the power to the neopixels.</p>
+<p>The output pin on the Photon will be 3.3V and it should be strong enough for the neopixel “input” line.  However, if it turns out to not be strong enough, use the 3.3V to control a transistor that will drive it to 5V.  You do not need a bi-directional converter as the signal is only needed one-way only.</p>
+<p>In summary, you should have no problem at all doing this.</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/2</link>
+        <pubDate>Sun, 04 Mar 2018 05:29:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-559-2</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559.rss">Carloop Basic + Adafruit NeoPixel Stick?</source>
+      </item>
+      <item>
+        <title>Carloop Basic + Adafruit NeoPixel Stick?</title>
+        <dc:creator><![CDATA[redimo]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I’ve found the Carloop and must say it sounds pretty interesting. Considering I want to use my current Car for Trackuse, I would like to make my own “RPM” Gauge, similar to those in racecars. For that I would use a Carloop Basic and a Adafruit NeoPixel Stick (<a href="https://www.adafruit.com/product/1426" class="inline-onebox" rel="noopener nofollow ugc">NeoPixel Stick - 8 x 5050 RGB LED with Integrated Drivers : ID 1426 : $5.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits</a>)</p>
+<p>Now, after some google Foo, it appears that the Particle Photon can Power them with 3.3V.<br>
+But what about the Power output of the OBD-2 Port? Does anyone know the limitations or are these Vehicle specific?</p>
+<p>Maybe someone has already done something along those lines?</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559/1</link>
+        <pubDate>Fri, 02 Mar 2018 16:25:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-559-1</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-adafruit-neopixel-stick/559.rss">Carloop Basic + Adafruit NeoPixel Stick?</source>
+      </item>
+  </channel>
+</rss>

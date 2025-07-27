@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>FREEDIAG - Free diagnostic software for OBD-II compliant motor vehicles</title>
+    <link>https://community.carloop.io/t/freediag-free-diagnostic-software-for-obd-ii-compliant-motor-vehicles/79</link>
+    <description>Very interesting open source OBD-II scanner.  Will investigate and report back results! https://github.com/fenugrec/freediag</description>
+    
+    <lastBuildDate>Mon, 13 Jun 2016 14:22:09 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/freediag-free-diagnostic-software-for-obd-ii-compliant-motor-vehicles/79.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>FREEDIAG - Free diagnostic software for OBD-II compliant motor vehicles</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Very interesting open source OBD-II scanner.  Will investigate and report back results! <a href="https://github.com/fenugrec/freediag" class="inline-onebox">GitHub - fenugrec/freediag: OBD2 scantool</a></p>
+          <p><a href="https://community.carloop.io/t/freediag-free-diagnostic-software-for-obd-ii-compliant-motor-vehicles/79/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/freediag-free-diagnostic-software-for-obd-ii-compliant-motor-vehicles/79/1</link>
+        <pubDate>Mon, 13 Jun 2016 14:22:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-79-1</guid>
+        <source url="https://community.carloop.io/t/freediag-free-diagnostic-software-for-obd-ii-compliant-motor-vehicles/79.rss">FREEDIAG - Free diagnostic software for OBD-II compliant motor vehicles</source>
+      </item>
+  </channel>
+</rss>

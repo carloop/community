@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Questions on product</title>
+    <link>https://community.carloop.io/t/questions-on-product/845</link>
+    <description>Hi Folks,
+
+We are working on a new project,
+
+We looked at all the products, but we could not identify which would be the best to meet our need.
+
+We are new to the subject, we need to ask some questions to direct our work to the best of our possible.
+
+Some characteristics are the basis of our project, so... follows the list of doubts,
+
+1)
+- Calculate distance traveled from point A to point B. (Amount of miles(kilometer) used in the route).
+
+ - Route travel time in minutes and seconds.
+
+- Amount of fuel used in the route.
+
+- Location of car parked.
+
+- Car Diagnostics.
+
+2) we will send this information to a webservice.
+
+We know that some doubts have already been clarified in the forum, even so we would like a overview.
+
+And finally,
+
+Does the device work on all cars in South America? (Argentina, Brazil and Chile)
+
+
+Thank you for your assistance.</description>
+    
+    <lastBuildDate>Tue, 09 Apr 2019 01:57:53 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/questions-on-product/845.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Questions on product</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/lucasdeluca">@LucasDeLuca</a>,</p>
+<p>Some of your questions are difficult to answer because the answer depends more on the car and your laws than on Carloop.</p>
+<p>Carloop will communicate with any car that uses CANbus on the OBD2 connector and has a 12V electrical system.<br>
+You will have to add some power regulation circuitry to function on 24V systems.</p>
+<p>In North America, all modern cars must use CANbus by law (example 2018 Subaru Impreza works just fine).  However, old cars (from before the current version of the law) may have partial implementations of CANbus or may use other protocols (example 2004 Subaru Impreza uses ISO9141 and is not compatible with Carloop).</p>
+<p>You will need to check your laws and your car to verify the compatibility.  I am not able to answer which cars in South America will work with Carloop.</p>
+<p>If your car does use CANbus, the odometer is available on Service 01 PID 166.<br>
+See the mandatory PIDs here:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+There can still be custom PIDs that may offer even more information, depending on the vehicle.</p>
+<p>An alternate way to get the distance is from a GPS.  Carloop can communicate with any GPS that uses Serial communications.  More advanced communications can be done with some other GPS units, such as the Carloop GPS.</p>
+<p>Your Carloop has a micro-controller which can run a clock to get travel time.  A more accurate method but slightly harder to implement is to use GPS time.</p>
+<p>Location of where the car is parked can only be done through a connected GPS unit.</p>
+<p>Car diagnostics can be done through the mandatory PIDs according to  the link above.  Additional diagnostics may be available depending on custom PIDs for your car.</p>
+<p>How do you want to send this information to a webservice?<br>
+Carloop Basic uses the Particle Photon microcontroller, which has built-in WiFi  (tether to your cell phone or upload the data when parked close enough to your home WiFi.).<br>
+Carloop Bluetooth uses the Redbear Duo microcontroller, which has built-in WiFi and Bluetooth Low Energy (BLE).  Note that the RedbearDuo is no longer being produced by Redbear labs or by Particle.<br>
+Carloop 3G uses the Particle Electron 3G microcontroller, which has cellular 3G.</p>
+<p>You can even get just the Carloop, and then get the Electron separately from Particle since there are 3 versions:</p>
+<ul>
+<li>3G Kit (Americas/Aus)</li>
+<li>3G Kit (Eur/Asia/Afr)</li>
+<li>2G Kit (Global) (but cellular service for 2G may be ending soon)</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/questions-on-product/845/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/questions-on-product/845/2</link>
+        <pubDate>Tue, 09 Apr 2019 01:57:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-845-2</guid>
+        <source url="https://community.carloop.io/t/questions-on-product/845.rss">Questions on product</source>
+      </item>
+      <item>
+        <title>Questions on product</title>
+        <dc:creator><![CDATA[LucasDeLuca]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Folks,</p>
+<p>We are working on a new project,</p>
+<p>We looked at all the products, but we could not identify which would be the best to meet our need.</p>
+<p>We are new to the subject, we need to ask some questions to direct our work to the best of our possible.</p>
+<p>Some characteristics are the basis of our project, so… follows the list of doubts,</p>
+<ol>
+<li></li>
+</ol>
+<ul>
+<li>
+<p>Calculate distance traveled from point A to point B. (Amount of miles(kilometer) used in the route).</p>
+</li>
+<li>
+<p>Route travel time in minutes and seconds.</p>
+</li>
+<li>
+<p>Amount of fuel used in the route.</p>
+</li>
+<li>
+<p>Location of car parked.</p>
+</li>
+<li>
+<p>Car Diagnostics.</p>
+</li>
+</ul>
+<ol start="2">
+<li>we will send this information to a webservice.</li>
+</ol>
+<p>We know that some doubts have already been clarified in the forum, even so we would like a overview.</p>
+<p>And finally,</p>
+<p>Does the device work on all cars in South America? (Argentina, Brazil and Chile)</p>
+<p>Thank you for your assistance.</p>
+          <p><a href="https://community.carloop.io/t/questions-on-product/845/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/questions-on-product/845/1</link>
+        <pubDate>Fri, 29 Mar 2019 19:38:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-845-1</guid>
+        <source url="https://community.carloop.io/t/questions-on-product/845.rss">Questions on product</source>
+      </item>
+  </channel>
+</rss>

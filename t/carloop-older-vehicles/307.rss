@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop &amp; Older Vehicles</title>
+    <link>https://community.carloop.io/t/carloop-older-vehicles/307</link>
+    <description>As someone with a good amount of programming experience, but never before involved in the iot world, I really like what i&#39;ve been able to do with particle and carloop.
+
+One thing I would love to have is the ability to read older protocols.  I&#39;m trying to get data from an 05 Dodge Grand Caravan, but sadly, I can&#39;t do that with Carloop.
+
+I know cars moving forward will use CAN, but there are a lot older cars and heavy duty trucks out there that do not.
+
+What are the chances of getting an ELM327 chip onto carloop 3.0?  That would be fantastic!  As it stands right now, I don&#39;t think I can use carloop in my use case.  Please correct me if I&#39;m wrong!</description>
+    
+    <lastBuildDate>Tue, 29 Aug 2017 03:37:45 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-older-vehicles/307.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop &amp; Older Vehicles</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/moreckert">@moreckert</a>,</p>
+<p>Carloop does only CANbus.  It comes down to a hardware protocol issue.</p>
+<p>There is work on doing a version nicknamed “Carloop Retro” to handle K-Line (ISO 9141, KWP2000 &amp; KWP fast init).  However, the work on this is ongoing.  It uses a different transceiver chip in the circuit board and the code is going to be timing-sensitive.</p>
+<p>Other hardware protocols need someone to take on those projects.</p>
+<p>One thing you should do is check out which protocols your cars actually use.<br>
+There is a good list here:<br>
+<a href="http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf" class="onebox" target="_blank" rel="noopener">http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-older-vehicles/307/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-older-vehicles/307/3</link>
+        <pubDate>Tue, 29 Aug 2017 03:37:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-307-3</guid>
+        <source url="https://community.carloop.io/t/carloop-older-vehicles/307.rss">Carloop &amp; Older Vehicles</source>
+      </item>
+      <item>
+        <title>Carloop &amp; Older Vehicles</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello</p>
+<p>Just read your post from this spring. I just bought Carloop, then found out it won’t work on my 2 cars (pre 2008 and no CAN).<br>
+Have you had any success?<br>
+What would Carloop need to read this older data?</p>
+<p>Sorry I am most familiar with the mechanical side of the car than the computer side so be patient with me.</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/carloop-older-vehicles/307/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-older-vehicles/307/2</link>
+        <pubDate>Wed, 16 Aug 2017 13:31:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-307-2</guid>
+        <source url="https://community.carloop.io/t/carloop-older-vehicles/307.rss">Carloop &amp; Older Vehicles</source>
+      </item>
+      <item>
+        <title>Carloop &amp; Older Vehicles</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>As someone with a good amount of programming experience, but never before involved in the iot world, I really like what i’ve been able to do with particle and carloop.</p>
+<p>One thing I would love to have is the ability to read older protocols.  I’m trying to get data from an 05 Dodge Grand Caravan, but sadly, I can’t do that with Carloop.</p>
+<p>I know cars moving forward will use CAN, but there are a lot older cars and heavy duty trucks out there that do not.</p>
+<p>What are the chances of getting an ELM327 chip onto carloop 3.0?  That would be fantastic!  As it stands right now, I don’t think I can use carloop in my use case.  Please correct me if I’m wrong!</p>
+          <p><a href="https://community.carloop.io/t/carloop-older-vehicles/307/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-older-vehicles/307/1</link>
+        <pubDate>Tue, 16 May 2017 04:57:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-307-1</guid>
+        <source url="https://community.carloop.io/t/carloop-older-vehicles/307.rss">Carloop &amp; Older Vehicles</source>
+      </item>
+  </channel>
+</rss>

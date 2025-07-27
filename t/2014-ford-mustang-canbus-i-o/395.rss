@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>2014 Ford Mustang CANBUS I/O</title>
+    <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395</link>
+    <description>I have a 2014 Ford Mustang, and I&#39;d like to learn how to use an android device (installed in car and/or remote) to control functions, send and receive commands, and retrofit features the car didn&#39;t have originally. 
+
+For instance, I&#39;d love to create an android app with the 8 buttons used to control my car&#39;s HVAC - Fan+, Fan-, Temp+, Temp-, Defrost, Zone 1/2/3, and recirculate allowing me to entirely remove the old, clunky buttons in the center console, and replace them with an android tablet. 
+
+Some potential ideas:
+Monitor the CANHIGH and CANLOW messages for other events in the car, and use them to automate tasks on the installed android device - I press the seek+ button on my steering wheel, the android device in my dash skips to the next song/station (and multimedia variations thereof).
+
+If I brake hard,causing the car&#39;s accelerometers and brake pressure to go over a threshold, have the installed device broadcast a signal to enable the hazard lights for a set interval. 
+
+If I press the door unlock button on my remote 4 times, roll down the windows.
+
+If I am backing up, utilize the OEM proximity sensors to overlay a visualization of detected objects behind the car onto the camera feed (I can see the sensor PID output using my phone and an OBD diagnostic app already).
+
+These sort of ideas intrigue me, and it seems that carloop is a ready made way to get started, but I&#39;m not yet familiar with programming with a specific goal in mind. I know I&#39;ll need:
+
+Carloop Basic or Bluetooth
+MicroUSB Cable
+Particle Photon
+CAN Hitch
+
+How does the Particle IDE translate to other uses? I looked around for a tutorial on a start-finish project like I&#39;m envisioning, but I didn&#39;t see one. Any advice or tips would be appreciated!</description>
+    
+    <lastBuildDate>Sat, 29 Aug 2020 13:34:02 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[ddrossow]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,<br>
+I’m not sure if I’m in the right place or not but have a question.  I have a 2014 mustang we bought used, with an aftermarket stereo and climate control.  It a Metra 99-5839 kit and a Sony avx5000.  Apparently when this unit is installed the car needs to be put to sleep properly or the canBus will continue to search for the stereo which intern kills the battery in a couple of days.  Is Carloop something that could help me in this situation?  I’ve read on another forum that the stereo can be, “deprogramed”.  I don’t have much experience with sort of thing but have a problem that I need fixed.  I appreciate your time and knowledge.<br>
+Dan</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/6</link>
+        <pubDate>Sat, 29 Aug 2020 13:34:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-6</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I should also mention that is pretty easy (maybe not for a beginner) to design hardware to add on to these microprocessors.  Carloop is just one example.</p>
+<p>Other things I am working on with Photons/RedbearDuos:</p>
+<ul>
+<li>ventilation controller for a dog kennel</li>
+<li>rally displays in a rally car</li>
+<li>home security system</li>
+<li>CarloopRetro (K-Line for older cars, instead of CANbus)</li>
+</ul>
+<p>With a bit of experience with circuits, then it is not too difficult to learn how to do all this as well.  The real difficult part is sticking to just one project at a time and getting it done.</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/5</link>
+        <pubDate>Tue, 25 Jul 2017 16:32:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-5</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The Carloop is basically a transceiver that allows a microprocessor (in your case, the Redbear Duo) to communicate on the CANbus.  The Redbear Duo is essentially a tiny computer with WiFi &amp; BLE.  The design of the RedbearDuo is based on the Particle Photon and adding the BLE capability.  There is a whole lot these little computers can do.  Other users have contributed a lot of libraries on the Particle IDE to provide pre-built functions.  It will do anything you want, so long as you (and the community) can write the code to do it.</p>
+<p>In general, PIDs are the parameters you can read based on the OBD-II protocol, which is communicated over the CANbus; so the PIDs are pretty much standard.  However, there are manufacturer-specifc PIDs that are optional.</p>
+<p>Beyond this, there are other messages on the CANbus, and this is where is really gets interesting.  you can even send commands onto the CANbus, which is not something that is part of OBD-II (except for requesting PIDs).</p>
+<p>I find the best website to describe the PIDs is Wikipedia:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>There are other websites that provide tables &amp; more technical data, these are better as a programmers reference in my opinion, and Wikipedia is better for general description.</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/4</link>
+        <pubDate>Tue, 25 Jul 2017 16:27:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-4</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[rvsidekick6]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there!</p>
+<p>Ford uses HSCAN, MSCAN, and LSCAN (Hi medium low) for communications. Each module in the car is connected with each protocol, I believe, as the wiring diagrams indicate  that fairly well. I’ll likely use WIFI to communicate, as the bluetooth chip in the android device I installed is a touch flakey, and goes through a weird abstraction processes. I’m not sure what all the Carloop can do, true!</p>
+<p>I’m downloading the desktop IDE and poking around, and I’ll hopefully have a carloop and duo shipped soon! Documentation of PID’s used for Ford vehicles are scarce, and even more so for my particular application. Is there a website that I can educate myself in general about PIDs and HEX? Looking online, I see information about equations, names, headers…  I’m eager to get started for sure. The standard canbus does have the information I need, I’m fairly sure - the bluetooth OBD2 scanner I have does not monitor a specific CAN speed, but with the right app, shows the information from all the connected modules, on down to the radio and parking sensors!</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/3</link>
+        <pubDate>Tue, 25 Jul 2017 15:35:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-3</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/rvsidekick6">@rvsidekick6</a>,</p>
+<p>You have some really cool ideas!  I think you have not found projects like your ideas because possible no one has done them yet.</p>
+<p>For starters, I think you underestimate the power of Carloop, or at least the microprocessor attached to it.  That microprocessor is very powerful and can be programmed to do a lot of functions; it does not have to be a dumb machine that simply communicates to your android device.  More than likely, you can put the brains of your project in the microprocessor and use your android device as an interface to view/record/command.</p>
+<p>How do you want your android device to communicate with Carloop?<br>
+Here are the microprocessors that plug into Carloop and their communications (besides USB):</p>
+<ul>
+<li>Particle Photon (WiFi)</li>
+<li>Particle Electron (Cellular)</li>
+<li>Redbear Duo (WiFi &amp; Bluetooth LE)<br>
+My first guess would be Bluetooth; my second guess would be SoftAP over WiFi.</li>
+</ul>
+<p>When it comes to your car, you are going to need to do some hacking work.  Is all of the information you need to monitor and send commands on the standard CANbus?  If yes, then great; it should be fairly easy (except for the car hacking part).</p>
+<p>If your car has more than one CANbus, it might be more complicated.  For example, someone with a Jeep hacked into another CANbus from behind the radio.  He had to figure out the communications protocol on that bus as well.</p>
+<p>Some cars have busses other than CANbus.  Carloop does not do these; but maybe we can guide you in creating a device that does.  For example, I am working on something called CarloopRetro to do the older K-Line (ISO 9141 &amp; KWP2000).</p>
+<p>You could even be in a situation where you need to access multiple CANbusses and other busses.  Worst case, you might need multiple Carloops and custom devices working together.</p>
+<p>The Particle IDE is just a development environment you install on your computer for writing code for Particle devices (I am simplifying quite a bit).  If you use a Photon or Electron, you are probably going to get very familiar using it.  With stuff this advanced that you want to do, I guess Particle Build (the all in the Cloud through a web-browser version) would not be the way to go.</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/2</link>
+        <pubDate>Mon, 24 Jul 2017 03:53:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-2</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+      <item>
+        <title>2014 Ford Mustang CANBUS I/O</title>
+        <dc:creator><![CDATA[rvsidekick6]]></dc:creator>
+        <description><![CDATA[
+            <p>I have a 2014 Ford Mustang, and I’d like to learn how to use an android device (installed in car and/or remote) to control functions, send and receive commands, and retrofit features the car didn’t have originally.</p>
+<p>For instance, I’d love to create an android app with the 8 buttons used to control my car’s HVAC - Fan+, Fan-, Temp+, Temp-, Defrost, Zone 1/2/3, and recirculate allowing me to entirely remove the old, clunky buttons in the center console, and replace them with an android tablet.</p>
+<p>Some potential ideas:<br>
+Monitor the CANHIGH and CANLOW messages for other events in the car, and use them to automate tasks on the installed android device - I press the seek+ button on my steering wheel, the android device in my dash skips to the next song/station (and multimedia variations thereof).</p>
+<p>If I brake hard,causing the car’s accelerometers and brake pressure to go over a threshold, have the installed device broadcast a signal to enable the hazard lights for a set interval.</p>
+<p>If I press the door unlock button on my remote 4 times, roll down the windows.</p>
+<p>If I am backing up, utilize the OEM proximity sensors to overlay a visualization of detected objects behind the car onto the camera feed (I can see the sensor PID output using my phone and an OBD diagnostic app already).</p>
+<p>These sort of ideas intrigue me, and it seems that carloop is a ready made way to get started, but I’m not yet familiar with programming with a specific goal in mind. I know I’ll need:</p>
+<p>Carloop Basic or Bluetooth<br>
+MicroUSB Cable<br>
+Particle Photon<br>
+CAN Hitch</p>
+<p>How does the Particle IDE translate to other uses? I looked around for a tutorial on a start-finish project like I’m envisioning, but I didn’t see one. Any advice or tips would be appreciated!</p>
+          <p><a href="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395/1</link>
+        <pubDate>Sun, 23 Jul 2017 16:18:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-395-1</guid>
+        <source url="https://community.carloop.io/t/2014-ford-mustang-canbus-i-o/395.rss">2014 Ford Mustang CANBUS I/O</source>
+      </item>
+  </channel>
+</rss>

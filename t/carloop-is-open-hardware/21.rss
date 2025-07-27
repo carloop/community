@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop is Open Hardware</title>
+    <link>https://community.carloop.io/t/carloop-is-open-hardware/21</link>
+    <description>The Carloop device is open hardware. All schematics, circuit board layouts and bill of materials are available for free on GitHub.
+
+See our hardware repository for more information: https://github.com/carloop/hardware</description>
+    
+    <lastBuildDate>Thu, 23 Jun 2016 14:02:43 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/carloop-is-open-hardware/21.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Sure thing. I’m on vacation right right now. I’ll set this up next week when I’m back.</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/7</link>
+        <pubDate>Thu, 23 Jun 2016 14:02:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-7</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[subbu]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> that would be great. I will buy the angled OBD connector from you. Let me know how to pay for it.</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/6</link>
+        <pubDate>Thu, 23 Jun 2016 00:14:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-6</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, it is complete and working! The bill of materials is good too.</p>
+<p>The angled OBD connector will be hard to get. If you go ahead with the build I can sell and ship you a connector. Let me know!</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/5</link>
+        <pubDate>Wed, 22 Jun 2016 22:17:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-5</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[subbu]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, I am thinking of making particle-can-v3.1 board from oshpark. Is it a complete working version? Are there any software changes for that version?</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/4</link>
+        <pubDate>Wed, 22 Jun 2016 18:04:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-4</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Any software on Linux should support Socket-CAN interfaces.</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/3</link>
+        <pubDate>Fri, 17 Jun 2016 15:11:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-3</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>It’s in Carloop’s DNA!</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/2</link>
+        <pubDate>Mon, 28 Mar 2016 22:02:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-2</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+      <item>
+        <title>Carloop is Open Hardware</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>The Carloop device is open hardware. All schematics, circuit board layouts and bill of materials are available for free on GitHub.</p>
+<p>See our hardware repository for more information: <a href="https://github.com/carloop/hardware" class="inline-onebox">GitHub - carloop/hardware: OBD-II CAN adapter for Particle Electron, Photon, and RedBear Duo</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-is-open-hardware/21/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-open-hardware/21/1</link>
+        <pubDate>Mon, 28 Mar 2016 22:01:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-21-1</guid>
+        <source url="https://community.carloop.io/t/carloop-is-open-hardware/21.rss">Carloop is Open Hardware</source>
+      </item>
+  </channel>
+</rss>

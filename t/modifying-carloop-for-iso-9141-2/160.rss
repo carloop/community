@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Modifying Carloop for ISO 9141-2</title>
+    <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160</link>
+    <description>I just came across CANdlestick on the Particle forums today, and dug in enough to find my way here.
+At first glance, the Carloop looks like a great little package to do some really interesting things.
+
+My first thought is doing a rally computer for navigation car rallies (precision driving with puzzles to find the route; arriving early or late costs major points), and I would need to get some data from the car (speed mainly) and GPS.
+
+My second though was how it could help setting up a performance rally (high speed with one car at a time) car.
+
+My project car is a 2004 Subaru Impreza, which I believe uses ISO 9141-2 instead of ODB2.
+I also have a 2010 Subaru Forester and a 2015 RAM1500, which of course do support ODB2.
+
+So, my first question is whether the Carloop hardware could be easily modified to use jumpers or dip switches to switch the Photon CAN Rx/Tx between the ODB2 and the ISO 9141-2?
+
+That directly leads to the second question if there is interest in doing an ISO 9141-2 library?
+
+Finally, is it straight forward to get an order to Canada by ordering directly from your online Store?
+(I had to go through buyapi.ca to get my Photon...)
+
+Thanks,
+Alan</description>
+    
+    <lastBuildDate>Wed, 29 Mar 2017 03:46:57 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, bump … any guidance on the above?</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/17</link>
+        <pubDate>Wed, 29 Mar 2017 03:46:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-17</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>This is tough work doing a board layout!</p>
+<p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, when you suggest making the circuit board bigger towards the right, I assume that the OBD Connector is on the left side in carloop v2 to agree with the board orientation in Eagle?</p>
+<p>Is there any reason to avoid making the board bigger on the left side?  My thought at the moment is to move the power circuitry out to the left and then add the K-Line transceiver to the center (where power used to be), just above the CAN transceiver.  That might even allow a microSD card on the left, similar to the carloop XL design.</p>
+<p>Are there any significant reasons for the power circuitry changes between v2 and XL?  My parts for prototyping match the parts list for XL, which will make following the v2 layout more challenging.</p>
+<p>Also in XL, is it correct to assume that C6 &amp; C7 are meant to be located as close as possible to the microSD card?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/16</link>
+        <pubDate>Mon, 27 Mar 2017 02:51:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-16</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, Thanks!  I do not think I would have realized that on my own …</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/15</link>
+        <pubDate>Sun, 26 Mar 2017 05:32:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-15</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I noticed that too. It’s because last time I worked on the board I only had the documentation layer visible in Eagle. You can make more layers visible. Eagle is a strange beast…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fbeebd12848722cc20593fa5fdd8cf49f5227911.png" data-download-href="//carloop-community.dyndns.org/uploads/default/fbeebd12848722cc20593fa5fdd8cf49f5227911" title="carloop layout.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fbeebd12848722cc20593fa5fdd8cf49f5227911_2_588x500.png" width="588" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/fbeebd12848722cc20593fa5fdd8cf49f5227911_2_588x500.png, //carloop-community.dyndns.org/uploads/default/original/1X/fbeebd12848722cc20593fa5fdd8cf49f5227911.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/fbeebd12848722cc20593fa5fdd8cf49f5227911.png 2x" data-dominant-color="888887"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b95eae07321096385baf97e74f9c601439333b2f.png" data-download-href="//carloop-community.dyndns.org/uploads/default/b95eae07321096385baf97e74f9c601439333b2f" title="carloop layout 2.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/b95eae07321096385baf97e74f9c601439333b2f_2_594x500.png" width="594" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/b95eae07321096385baf97e74f9c601439333b2f_2_594x500.png, //carloop-community.dyndns.org/uploads/default/original/1X/b95eae07321096385baf97e74f9c601439333b2f.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/b95eae07321096385baf97e74f9c601439333b2f.png 2x" data-dominant-color="929694"></a></div><p></p>
+<p>I’ll update the repository so this doesn’t happen to the next person.</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/14</link>
+        <pubDate>Sat, 25 Mar 2017 19:50:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-14</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a><br>
+I am back to working on this, but again I failed to check the board files before sitting down to work.  I think it has to do with being excited to find the time to work on this, while it is late at night at the same time.</p>
+<p>Anyways, the .brd file for v2.3 seems to just have some text?  Should it be like that, have I missed something, or is the wrong file on GitHub?</p>
+<p>Now that I look more closely, v2.2 has a real board layout.  Could I take this .brd file and rename it to match my schematic and do a step in Eagle to re-create airwires and link it to the schematic?  In essence, I am looking for a shortcut, but I have a feeling I have more work to do.</p>
+<p>Thanks for any further guidance on this!</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/13</link>
+        <pubDate>Sat, 25 Mar 2017 19:41:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-13</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, the V3 board is actually more like “Carloop XL”. It was a prototype for another form factor that we didn’t actually produce.</p>
+<p>The V2 files for Eagle on <a href="https://github.com/carloop/hardware/tree/master/Carloop.v2">the GitHub hardware repository</a> are the right ones for the Carloop in the store. It’s a 2 layout circuit board that fits the limits of the free version of Eagle. A good file to look at to understand the layout is the <a href="https://github.com/carloop/hardware/blob/master/Carloop.v2/Carloop-v2.3-pcb-combined.pdf">combined PCB layout PDF</a>.</p>
+<p>The squares at the bottom of the board are to avoid a copper ground plane below the antenna of the Photon. They are not actually cutouts.</p>
+<p>You should be able to add additional hardware by making the circuit board bigger towards the right.</p>
+<p>Does this help?</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/12</link>
+        <pubDate>Sat, 11 Feb 2017 21:01:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-12</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The schematic for the addition of K-Line is available.  The board layout needs some work.  Any response to the questions above?</p>
+<p><a href="https://github.com/cyclin-al/hardware/tree/CarloopRetro/CarloopRetro.v0">https://github.com/cyclin-al/hardware/tree/CarloopRetro/CarloopRetro.v0</a></p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/11</link>
+        <pubDate>Fri, 10 Feb 2017 04:27:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-11</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, Can I ask some questions about the Carloop-v3.1 hardware?</p>
+<p>I took the schematic and added in everything needed to get a K-Line Transceiver working.<br>
+I even have parts on-hand for prototyping and testing (including a dedicated car in the garage).<br>
+That has all gone relatively well, including all the bumps along the way to learn Eagle.</p>
+<p>I just looked at the board layout and realized it is quite different from what you are selling in the store.<br>
+(I think I prefer the ‘flat’ orientation in the store rather than the ‘edge’ orientation in v3.1.)<br>
+Which version is in the store?  I assume it is v2.x…<br>
+I am having some difficulty understanding the board layout, and finally realized that there must be more than 2 layers, which is hidden from the free version of Eagle.  Is this the case?<br>
+There are two objects which appear to be holes in the board.  Is there some purpose for these?<br>
+You have done a great job at creating a compact board!  I do not see an easy way to add another transceiver chip, capacitor and ESD protecting diode without increasing the board size.</p>
+<p>Any other advice at this point?</p>
+<p>My next step is to learn more about GitHub so I can share my progress.<br>
+Cheers!</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/10</link>
+        <pubDate>Fri, 03 Feb 2017 05:29:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-10</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>No we work out of MakeWorks @ 1139 College St.</p>
+<p>Our prices in general are competitive and our business is growing like crazy but I appreciate the feedback.  If we get to the point where we are buying Carloop’s in bulk we could offer better pricing on them.  But for now our price is going to be better for most people than paying $35 for USPS Priority Mail and the typical Canada Post $10 import fee.</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/9</link>
+        <pubDate>Fri, 11 Nov 2016 14:46:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-9</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a>, I think you misunderstood the main focus of what I am looking for.  I am looking mainly for the components of a Carloop to build up an ISO 9141 version  (maybe it could be called a CarloopRetro?  Someone could also do a KWP200 version and call it Carloop2000?).  I would certainly prefer to not have to disassemble a perfectly good Carloop to get the components.</p>
+<p>It looks like you have a decent business model, but you might want to look at your margins for competitiveness.  I thought about it and realized that I can drive from my office in Canada to a UPS Store in the US in 40 minutes.  A Carloop would be within my personal duty-free limit for a day-trip.  From your business address, I assume you work/attend Ryerson University?</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/8</link>
+        <pubDate>Fri, 11 Nov 2016 04:57:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-8</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>FYI if you are still interested in picking one up, I have just started offering Carloop products in my Canadian store, <a href="https://elmwoodelectronics.ca/collections/carloop" rel="noopener nofollow ugc">Elmwood Electronics</a></p>
+<p>This way you don’t have to worry about duties/etc.  I have placed a small order with the Carloop guys and hope to have them within a week.</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/7</link>
+        <pubDate>Thu, 10 Nov 2016 17:45:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-7</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Forgot to include a link to the MC33660 ISO K Line Serial Link Interface:</p>
+<p><a href="http://www.nxp.com/products/interface-and-connectivity/interface-and-system-management/advanced-automotive-safety/airbag/iso-k-line-serial-link-interface:MC33660" class="inline-onebox">MC33660 | ISO K Line Serial Link Interface | NXP Semiconductors</a>?</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/6</link>
+        <pubDate>Thu, 10 Nov 2016 04:49:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-6</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>This probably belongs on another forum, but where should I look for information to go about sourcing the parts to prototype this?  I assume the companies are interested in selling reels of circuits, and I am looking for 3 or 4 pieces.  Is it fair to try to get samples?</p>
+<p>My business is certification, so the tables are turned and I am not familiar with the logistics of development.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/5</link>
+        <pubDate>Thu, 10 Nov 2016 04:48:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-5</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the suggestions.  I did my research, and the ISO 9141 does have different transceiver circuits.</p>
+<p>It looks like the options for the ISO transceiver are becoming fewer and fewer since it is now more of a legacy protocol.</p>
+<p>So, it looks like my design will replace the carloop CAN transceiver (TJA1049T) with an ISO K Line Serial Link Interface (MC33660) from the same company.</p>
+<p>By the way, for everyone’s benefit, I found a link which describes which vehicles use which OBD protocol.<br>
+<a href="http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf" class="onebox" target="_blank" rel="noopener">http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf</a><br>
+There are 2 other popular legacy protocols: KWP200 and J1850.</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/4</link>
+        <pubDate>Thu, 10 Nov 2016 04:44:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-4</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>This sounds like a fun hobby <img src="//carloop-community.dyndns.org/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"></p>
+<p>ISO 9141-2 is a different electrical interface than CAN so you would need to research what kind of transistor or integrated circuit is needed to talk to other computers over this protocol. I believe they are different enough that you’d need option 3.</p>
+<p>A good way to start is to look at the <a href="https://github.com/carloop/hardware">Carloop hardware schematics</a> and the <a href="https://github.com/sparkfun/OBD-II_UART">Sparkfun OBD UART schematics</a>. You can replace the CAN transceiver by an ISO 9141-2 transceiver circuit. You can scale up the SMT parts to ease manual assembly. <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+<p>Please do share your updates here!</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/3</link>
+        <pubDate>Sat, 05 Nov 2016 18:30:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-3</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Just to clarify my idea to access the ISO 9141, I see 3 possibilities.</p>
+<p>Possibility 1:  Buy a complete Carloop, cut the traces and add a jumper block/dip switch to allow reconfiguration.<br>
+Possibility 2:  Buy an unassembled Carloop, make the same modifications above and then solder the unit.<br>
+Possibility 3:  Use the githug source to buy parts and customize the circuit board.</p>
+<p>Can you offer any opinions on what possibility is most practical to do?<br>
+I used to be at a moderate/advanced skill level for soldering, but I am now stale and have not soldered SMT devices (it has been quite a while).</p>
+<p>I would certainly commit to posting what I accomplish in case others would also like to work with ISO 9141.</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/2</link>
+        <pubDate>Fri, 04 Nov 2016 03:12:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-2</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+      <item>
+        <title>Modifying Carloop for ISO 9141-2</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I just came across CANdlestick on the Particle forums today, and dug in enough to find my way here.<br>
+At first glance, the Carloop looks like a great little package to do some really interesting things.</p>
+<p>My first thought is doing a rally computer for navigation car rallies (precision driving with puzzles to find the route; arriving early or late costs major points), and I would need to get some data from the car (speed mainly) and GPS.</p>
+<p>My second though was how it could help setting up a performance rally (high speed with one car at a time) car.</p>
+<p>My project car is a 2004 Subaru Impreza, which I believe uses ISO 9141-2 instead of ODB2.<br>
+I also have a 2010 Subaru Forester and a 2015 RAM1500, which of course do support ODB2.</p>
+<p>So, my first question is whether the Carloop hardware could be easily modified to use jumpers or dip switches to switch the Photon CAN Rx/Tx between the ODB2 and the ISO 9141-2?</p>
+<p>That directly leads to the second question if there is interest in doing an ISO 9141-2 library?</p>
+<p>Finally, is it straight forward to get an order to Canada by ordering directly from your online Store?<br>
+(I had to go through buyapi.ca to get my Photon…)</p>
+<p>Thanks,<br>
+Alan</p>
+          <p><a href="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160/1</link>
+        <pubDate>Thu, 03 Nov 2016 03:31:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-160-1</guid>
+        <source url="https://community.carloop.io/t/modifying-carloop-for-iso-9141-2/160.rss">Modifying Carloop for ISO 9141-2</source>
+      </item>
+  </channel>
+</rss>

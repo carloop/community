@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>[SOLVED] Excessive Heat?</title>
+    <link>https://community.carloop.io/t/solved-excessive-heat/34</link>
+    <description>Has anyone experience heat on the Candlestick board? 
+
+I flashed the example Carloop code on the Electron and a simple onboard led function call. I left the onboard led on, stopped the engine, came back 10 minutes later. It was really hot both the Electron and the stick itself (what you want to call it anyway? Candlestick or Carloop?)
+
+I want to be able to leave it and forget it but not with this kinda heat. Any suggestion?</description>
+    
+    <lastBuildDate>Sat, 28 May 2016 16:38:45 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/solved-excessive-heat/34.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>For some reason, it’s still very hot. I used S10V4F5.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6" title="IMG_0006.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6_2_374x500.jpg" width="374" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6_2_374x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6_2_561x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/8eb47fd9526d474ffb7c2fa608cfd96ff5c417d6_2_748x1000.jpg 2x" data-dominant-color="A44647"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03" title="IMG_0010.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03_2_374x500.jpg" width="374" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03_2_374x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03_2_561x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/0fa2d08e65cf640aefb32e92b58ac08ba50c0c03_2_748x1000.jpg 2x" data-dominant-color="AA3D42"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/8c48ccd9435cde7486601944589cea15d9f1f45a.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/8c48ccd9435cde7486601944589cea15d9f1f45a" title="IMG_0008.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/8c48ccd9435cde7486601944589cea15d9f1f45a_2_374x500.jpg" width="374" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/8c48ccd9435cde7486601944589cea15d9f1f45a_2_374x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/8c48ccd9435cde7486601944589cea15d9f1f45a_2_561x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/8c48ccd9435cde7486601944589cea15d9f1f45a_2_748x1000.jpg 2x" data-dominant-color="874148"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/10</link>
+        <pubDate>Sat, 28 May 2016 16:38:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-10</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>looks like it should work. Are you looking for something with an Enable pin (SHDN)?</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/9</link>
+        <pubDate>Sat, 21 May 2016 03:49:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-9</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the fix!</p>
+<p>Would this “Pololu 5V Step-Up/Step-Down Voltage Regulator S10V4F5” be okay? <a href="https://www.pololu.com/product/2121/specs" class="inline-onebox" rel="noopener nofollow ugc">Pololu 5V Step-Up/Step-Down Voltage Regulator S10V4F5</a></p>
+<p>** D24V5F5**</p>
+<pre><code>Minimum operating voltage:	5.1 V2
+Maximum operating voltage:	36 V
+Maximum output current:	500 mA
+Output voltage:	5 V
+Reverse voltage protection?:	N
+Maximum quiescent current:	0.2 mA3
+</code></pre>
+<p><strong>S10V4F5</strong></p>
+<pre><code>Minimum operating voltage:	2.5 V
+Maximum operating voltage:	18 V
+Maximum output current:	400 mA2
+Output voltage:	5 V
+Reverse voltage protection?:	N
+Maximum quiescent current:	2 mA3
+</code></pre>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/8</link>
+        <pubDate>Thu, 19 May 2016 18:16:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-8</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Background: The reason Carloop is feeling hot is because the linear regulator is pushing a lot of current when the cellular modem is active, thus heating up the entire board.</p>
+<p>Solution: Replace the Linear Regulator with a Switched Mode Power Supply from Pololu.</p>
+<p><strong>What you’ll need</strong></p>
+<ul>
+<li>Soldering iron</li>
+<li>Desoldering braid</li>
+<li>Solder</li>
+<li><a href="https://www.pololu.com/product/2843">Pololu 5V, 500mA Step-Down Voltage Regulator D24V5F5</a></li>
+</ul>
+<p><strong>Step 1:</strong> Unsolder the stock linear voltage regulator and clean up the remaining solder with the desoldering braid.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/87c44899c9ba531872d5a08ff1fa91cca239cb22.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/87c44899c9ba531872d5a08ff1fa91cca239cb22" title="20160518_112617.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/87c44899c9ba531872d5a08ff1fa91cca239cb22_2_500x290.jpg" width="500" height="290" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/87c44899c9ba531872d5a08ff1fa91cca239cb22_2_500x290.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/87c44899c9ba531872d5a08ff1fa91cca239cb22_2_750x435.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/87c44899c9ba531872d5a08ff1fa91cca239cb22_2_1000x580.jpeg 2x"></a></div><p></p>
+<p><strong>Step 2:</strong> Solder the 3 angled pins to VIN, GND and VOUT on the Pololu 5V Switched Mode Power Supply<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/63cc5a0645eae99e35c74227801f6ff3f25f128e.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/63cc5a0645eae99e35c74227801f6ff3f25f128e" title="20160518_112626.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/63cc5a0645eae99e35c74227801f6ff3f25f128e_2_500x290.jpg" width="500" height="290" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/63cc5a0645eae99e35c74227801f6ff3f25f128e_2_500x290.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/63cc5a0645eae99e35c74227801f6ff3f25f128e_2_750x435.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/63cc5a0645eae99e35c74227801f6ff3f25f128e_2_1000x580.jpg 2x" data-dominant-color="B5A17F"></a></div><p></p>
+<p><strong>Step 3:</strong> Trim the pins and remove the black plastic insulator<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/52b092f95571bf3c5de579a3ee9dd3e653c21566.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/52b092f95571bf3c5de579a3ee9dd3e653c21566" title="20160518_112727.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/52b092f95571bf3c5de579a3ee9dd3e653c21566_2_500x290.jpg" width="500" height="290" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/52b092f95571bf3c5de579a3ee9dd3e653c21566_2_500x290.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/52b092f95571bf3c5de579a3ee9dd3e653c21566_2_750x435.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/52b092f95571bf3c5de579a3ee9dd3e653c21566_2_1000x580.jpg 2x" data-dominant-color="B4A286"></a></div><p></p>
+<p><strong>Step 4:</strong> Solder in place of the linear voltage regulator as shown:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/6d1ff4a56359569c2a55809ee3eddedef18433af.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/6d1ff4a56359569c2a55809ee3eddedef18433af" title="20160518_112934.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6d1ff4a56359569c2a55809ee3eddedef18433af_2_500x290.jpg" width="500" height="290" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/6d1ff4a56359569c2a55809ee3eddedef18433af_2_500x290.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/6d1ff4a56359569c2a55809ee3eddedef18433af_2_750x435.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/6d1ff4a56359569c2a55809ee3eddedef18433af_2_1000x580.jpg 2x" data-dominant-color="B1A491"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/7</link>
+        <pubDate>Thu, 19 May 2016 17:00:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-7</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I also feel the Carloop getting hot in certain cases. I don’t know yet if the cause is current draw of the power supply when the modem is active, or some other cause. I’ll post updates here when I know more.</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/6</link>
+        <pubDate>Fri, 29 Apr 2016 14:59:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-6</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>A post was split to a new topic: <a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37">Carloop with 3rd party SIM</a></p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/5</link>
+        <pubDate>Fri, 29 Apr 2016 14:55:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-5</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t know why your Carloop is feeling hot. The one in my car is not much warmer than body temperature.</p>
+<p>If you are using an Electron with the Particle SIM, your limiting factor is going to be data usage. You can use the dashboard at <a href="https://dashboard.particle.io">https://dashboard.particle.io</a> to check how much data you are using. Publishing every second 24/7 is for sure too much. You can experiment with publishing when the GPS position has changed by a lot.</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/4</link>
+        <pubDate>Mon, 18 Apr 2016 01:05:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-4</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes it came from the Carloop <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>---- IC1 &amp; IC2</p>
+<p>The code I used has publish function every second (battery info). You think that might cause the heat? If so what duration you think it should be to avoid the heat? I would like to update the gps location as often as it could be.</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/3</link>
+        <pubDate>Thu, 14 Apr 2016 18:28:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-3</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey! We haven’t experienced any excessive heat, but that doesn’t sound good.  Can you identify if it is coming from the Electron itself or from Carloop?</p>
+<p>[we call it Carloop <img src="//carloop-community.dyndns.org/images/emoji/twitter/slightly_smiling.png?v=12" title=":slightly_smiling:" class="emoji" alt=":slightly_smiling:" loading="lazy" width="20" height="20"> ]</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/2</link>
+        <pubDate>Thu, 14 Apr 2016 17:40:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-2</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+      <item>
+        <title>[SOLVED] Excessive Heat?</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone experience heat on the Candlestick board?</p>
+<p>I flashed the example Carloop code on the Electron and a simple onboard led function call. I left the onboard led on, stopped the engine, came back 10 minutes later. It was really hot both the Electron and the stick itself (what you want to call it anyway? Candlestick or Carloop?)</p>
+<p>I want to be able to leave it and forget it but not with this kinda heat. Any suggestion?</p>
+          <p><a href="https://community.carloop.io/t/solved-excessive-heat/34/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/solved-excessive-heat/34/1</link>
+        <pubDate>Wed, 13 Apr 2016 11:55:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-34-1</guid>
+        <source url="https://community.carloop.io/t/solved-excessive-heat/34.rss">[SOLVED] Excessive Heat?</source>
+      </item>
+  </channel>
+</rss>

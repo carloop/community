@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop &quot;Hello World&quot; program - Project Share - Carloop Community</title>
+    <meta name="description" content="In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  @jvanier put together this very elegant and simple “Hello World” ap&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="36.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="SYSkCf5AwyiHGU1EikmbCQGvU">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="SYSkCf5AwyiHGU1EikmbCQGvU"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop &quot;Hello World&quot; program&#39;" href="36.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-hello-world-program/36?u=alanm">
+<meta name="twitter:url" content="/t/carloop-hello-world-program/36?u=alanm">
+<meta property="og:title" content="Carloop &quot;Hello World&quot; program">
+<meta name="twitter:title" content="Carloop &quot;Hello World&quot; program">
+<meta property="og:description" content="In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  @jvanier put together this very elegant and simple “Hello World” app for Carloop that works great as a sanity check and a good place to start playing with Carloop.  What does it do?  Blinks the Photon or Electron’s LED if Carloop successfully reads OBD signals on the CAN Bus  Requirements   Photon firmware version has to be at least 0.4.9 (see t...">
+<meta name="twitter:description" content="In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  @jvanier put together this very elegant and simple “Hello World” app for Carloop that works great as a sanity check and a good place to start playing with Carloop.  What does it do?  Blinks the Photon or Electron’s LED if Carloop successfully reads OBD signals on the CAN Bus  Requirements   Photon firmware version has to be at least 0.4.9 (see t...">
+<meta property="og:article:section" content="Project Share">
+<meta property="og:article:section:color" content="25AAE2">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="2 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="2 ?">
+<meta property="article:published_time" content="2016-04-19T23:17:35+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="36.html">Carloop &quot;Hello World&quot; program</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="/c/project-share/8" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Project Share</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop &quot;Hello World&quot; program'>
+      <link itemprop='url' href='36.html'>
+      <meta itemprop='datePublished' content='2016-04-19T23:17:34Z'>
+        <meta itemprop='articleSection' content='Project Share'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="36.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-04-19T23:17:35Z' class='post-time'>
+                    April 19, 2016, 11:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-19T23:17:35Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  <a class="mention" href="../../u/jvanier.html">@jvanier</a> put together this very elegant and simple “Hello World” app for Carloop that works great as a sanity check and a good place to start playing with Carloop.</p>
+<p><strong>What does it do?</strong><br>
+Blinks the Photon or Electron’s LED if Carloop successfully reads OBD signals on the CAN Bus</p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Photon firmware version has to be at least 0.4.9 (see <a href="../carloop-demo-program/18/4.html?u=alanm">this post</a> for more info).</li>
+<li>Electron firmware version at least 0.5.0</li>
+</ul>
+<p><strong>Life Pro Tip:</strong><br>
+Type <code>SYSTEM_MODE(MANUAL);</code> at the top of your .ino file to avoid connecting to WiFi/Cellular and test everything is working as expected.</p>
+<p><strong>Carloop “Hello World” source code</strong><br>
+<a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/obd_blink.cpp" class="onebox" target="_blank" rel="noopener">https://github.com/carloop/carloop-library/blob/master/firmware/examples/obd_blink.cpp</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cannibalbus.html'><span itemprop='name'>cannibalbus</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-19T16:43:48Z' class='post-time'>
+                    January 19, 2018,  4:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-19T16:43:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Alan,</p>
+<p>I have connected today my new carloop photon to the obd2 connector of my vw lupo 2005 and I do not see any blue light blinking, I only see a white light… 0.6.3 Photon firmware version and  SYSTEM_MODE(MANUAL); typed… What is the problem???</p>
+<p>My best regards!!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-26T03:33:47Z' class='post-time'>
+                    January 26, 2018,  3:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-26T03:33:47Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cannibalbus.html">@cannibalbus</a>,</p>
+<p>The blue LED that Alan Mond referred to is the LED associated with pin D7.  This is not the same as the RGB status LED in the centre of the Photon.</p>
+<p>What do you mean SYSTEM_MODE(MANUAL); typed?<br>
+You do have to build the whole program and then flash it to the Photon for it to work…<br>
+Can you let us know exactly how you did this.  Also, are you using Particle IDE, Particle Build or the CLI?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-29T05:03:59Z' class='post-time'>
+                    January 29, 2018,  5:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-29T05:03:59Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cannibalbus.html">@cannibalbus</a>,</p>
+<p>A white light is very strange for a Photon, especially for a recent system firmware.<br>
+Just to be sure, is 0.6.3 the version you are choosing in the IDE or is this the version confirmed to be on the Photon?<br>
+Also just to be sure, the carloop is new to you, but are you also new or experienced using a Particle Photon?</p>
+<p>Here are the Particle Photon documents to confirm the color codes of the RGB LED:<br>
+<a href="https://docs.particle.io/support/troubleshooting/troubleshooting-support/photon/" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/support/troubleshooting/troubleshooting-support/photon/</a></p>
+<p>If you are getting the High-speed flashing white (since I forgot to ask about the pattern of the light), then you might want to leave it running 10 minutes to give it a chance to update the system firmware…</p>
+<p>Let’s focus on getting your Photon up and running; then we can move on to getting the Carloop going!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cannibalbus.html'><span itemprop='name'>cannibalbus</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/fe969dbad2432353c45af0a40913b91ed087580c.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-29T06:27:27Z' class='post-time'>
+                    January 29, 2018,  6:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-29T06:27:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, the version and IDE is correct… But my carloop can does not respond, no blue led blinking.</p>
+<p>And I think that carloop is a very small and undstable… You need a new design like a obdII diagnosis:</p>
+<aside class="onebox amazon" data-onebox-src="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK">
+  <header class="source">
+
+      <a href="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK" target="_blank" rel="noopener nofollow ugc">amazon.de</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:424/500;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fe969dbad2432353c45af0a40913b91ed087580c_2_424x500.jpeg" class="thumbnail" data-dominant-color="4D4B4B" width="424" height="500"></div>
+
+<h3><a href="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK" target="_blank" rel="noopener nofollow ugc">EXZA OBD II Diagnosetool HHOBD Wifi 10599 uneingeschraenkt 1St. : Amazon.de:...</a></h3>
+
+
+
+<p>EXZA OBD II Diagnosetool HHOBD Wifi 10599 uneingeschraenkt 1St. Verpackungsgröße: Inhalt: 1 Stück Originalqualität von EXZA</p>
+
+<p>
+  
+  
+  
+  
+  <strong></strong>
+</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/95265d517d34b1e9929e8db9f9e79ba36fd78069" title="obdII.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069_2_336x500.jpg" width="336" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069_2_336x500.jpg,//carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg,//carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg" data-dominant-color="414040"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">obdII.jpg</span><span class="informations">408×606 22.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>But that’s another problem!</p>
+<p>I have tried everything, also with metasploit and socketcan… and my device show a red light… dont work!!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-30T05:03:30Z' class='post-time'>
+                    January 30, 2018,  5:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-30T05:03:30Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cannibalbus.html">@cannibalbus</a>,</p>
+<p>You are correct that carloop is very small.  It was designed to be very small.<br>
+However, I do not agree that carloop is unstable.  Rather, carloop is a very powerful tool and needs to be treated as a powerful tool.  It is capable of much greater functionality than an OBD-II diagnosis tool.  With that greater functionality comes greater complexity and the user must take care to use it appropriately.</p>
+<p>As far as I am aware, every carloop problem has been a user problem, or a case where the car uses a protocol other than CANbus and only one case where the carloop itself had an issue; that case was resolved by replacing the power regulator chip on the carloop.  There could be something else that I am not aware of; I do not work for Carloop.</p>
+<p>I have to make an assumption given the little information you have provided.  Issues with white lights and red lights showing on the Photon leads me to assume that you have an issue with the setup of the Photon.  Also, when you describe the lights, you MUST provide the color of the light AND the light pattern, in accordance with the link I provided you earlier.  For example, for red lights it is critical to count the number of flashes in the pattern.  Also, it is important to described exactly what you did to cause the red lights.  If describing it is difficult, then maybe posting a video might be another way to communicate.</p>
+<p>Please remove the Photon from the Carloop, and then attach the Photon to your computer using a USB cable.<br>
+Follow the instructions starting at the top of this page to put your Photon into listening mode and display the system firmware version.<br>
+<a href="https://docs.particle.io/support/troubleshooting/troubleshooting-tools/photon/#display-system-firmware-version" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/support/troubleshooting/troubleshooting-tools/photon/#display-system-firmware-version</a></p>
+<p>When you do this, please provide the actions and responses step-by-step so that we can help you out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Skip.html'><span itemprop='name'>Skip</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-08T23:13:00Z' class='post-time'>
+                    January 8, 2019, 11:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-08T23:13:00Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am struggling to get my Carloop to read any ODB-II messages from my 2018 Honda Ridgeline.</p>
+<p>I am using:<br>
+Photon - Device OS/firmware version 0.7.0<br>
+Carloop - R2.3</p>
+<p>Using the particle IDE I compiled the “Hello World” app (copied from <a href="https://carloop.readme.io/docs/usage" class="inline-onebox" rel="noopener nofollow ugc">Hello World</a>) and included carloop.h from the particle library.  I flashed this to my photon which puts it into the breathing white - WiFi module off - mode expected with SYSTEM_MODE MANUAL.</p>
+<p>When I connect the Carloop to the ODB connector it powers up and resumes the breathing white - with the truck running or not the blue LED (D7) never blinks.</p>
+<p>If I put the Photon into safe mode it enables WiFi and reconnects to the Particle cloud/</p>
+<p>Using an Actron CP9180 ODB scanner I verified that the ODB connection in my truck is working.</p>
+<p>Obviously I’m missing something or doing something wrong.  Can anyone suggest what steps I should take next in diagnosing this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-09T15:12:11Z' class='post-time'>
+                    January 9, 2019,  3:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-09T15:12:11Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/Skip.html">@Skip</a>,<br>
+The Hello World program is intended to get familiar with Carloop and see something happen. It is the equivalent of creating a website that just says “Hello World” in plain text, just HTML with no css.</p>
+<p>Take a look at this more advanced project: <a href="../turn-your-carloop-into-a-remote-obd-ii-reader/93.html" class="inline-onebox">Turn your Carloop into a remote OBD-II reader - Project Share - Carloop Community</a></p>
+<p>Or this sample app (2nd from the top): <a href="https://www.carloop.io/apps/">https://www.carloop.io/apps/</a></p>
+<p>Hope this helps!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Skip.html'><span itemprop='name'>Skip</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-10T01:08:17Z' class='post-time'>
+                    January 10, 2019,  1:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-10T01:08:17Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Alan,</p>
+<p>As you indicated in your introduction to this thread, “Hello World” is a simple program that lets you know if Carloop successfully reads ODB signals on the CAN Bus.  At this point this is exactly what I’m looking for - to see something happen and confirm that I can read an ODB signal.  Unfortunately, it is NOT WORKING!</p>
+<p>Since this is the same program that you use to test every Carloop you ship I was hoping that you could provide me with some guidance as to what I might be doing wrong, what the problem might be, or suggest some diagnostic steps…</p>
+<p>Could the issue somehow be related to the make of car I’m testing with?  Even though my Actron scanner doesn’t have any issue with the Honda I did see some notes under other topics about Hondas having different CAN speeds and ID lengths - any thoughts?</p>
+<p>As to your suggestion to switching to a different or more complicated app I don’t see how this will help me when I can’t get the most basic app to work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-06T02:23:52Z' class='post-time'>
+                    March 6, 2019,  2:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-06T02:23:52Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="Skip" data-post="9" data-topic="36">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/s/ebca7d/48.png" class="avatar"> Skip:</div>
+<blockquote>
+<p>ggestion to switching to a different or more complicated app I don’t see how this will help me when I can’t get the most basic app to work.</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="../../u/Skip.html">@Skip</a> sorry for the delay.  If you try flashing the SocketCAN firmware to your Particle device, do you see CAN messages? Here is the “how-to” article: <a href="../use-carloop-with-socketcan-and-can-utils/117.html" class="inline-onebox">Use Carloop with SocketCAN and can-utils - Software - Carloop Community</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

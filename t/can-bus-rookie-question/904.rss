@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can Bus Rookie question</title>
+    <link>https://community.carloop.io/t/can-bus-rookie-question/904</link>
+    <description>I have a 2001 Porsche Boxster with an Audi 2.7t engine in it. Im using a Megasquirt3Pro Ultimate and a petski3 can bus dbw module to control the engine. It has some can bus funtionality , but I can&#39;t manually enter specific can bus info for the different systems. Currently Im able to get rpm to the factory can bus dash, but coolant, and speedo dont funtion (both can bus). Does any one have any ideas?
+
+Can I convert can bus data from the megasquirt through the carloop, to the factory porsche can bus?
+
+Thank You.</description>
+    
+    <lastBuildDate>Thu, 18 Jul 2019 18:50:20 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/can-bus-rookie-question/904.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can Bus Rookie question</title>
+        <dc:creator><![CDATA[tottestad]]></dc:creator>
+        <description><![CDATA[
+            <p>I have a 2001 Porsche Boxster with an Audi 2.7t engine in it. Im using a Megasquirt3Pro Ultimate and a petski3 can bus dbw module to control the engine. It has some can bus funtionality , but I can’t manually enter specific can bus info for the different systems. Currently Im able to get rpm to the factory can bus dash, but coolant, and speedo dont funtion (both can bus). Does any one have any ideas?</p>
+<p>Can I convert can bus data from the megasquirt through the carloop, to the factory porsche can bus?</p>
+<p>Thank You.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-rookie-question/904/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-rookie-question/904/1</link>
+        <pubDate>Thu, 18 Jul 2019 18:50:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-904-1</guid>
+        <source url="https://community.carloop.io/t/can-bus-rookie-question/904.rss">Can Bus Rookie question</source>
+      </item>
+  </channel>
+</rss>

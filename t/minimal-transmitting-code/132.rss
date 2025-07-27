@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Minimal transmitting code</title>
+    <link>https://community.carloop.io/t/minimal-transmitting-code/132</link>
+    <description>Hello!
+I was wondering what the most barebones code for transmitting a command if a condition is met can be over the CAN BUS could be.  Hypothetically I would want to send something along the lines of: &quot;3D 11 04 00 C3&quot; on the CAN BUS if the speedometer reads 20 km/h.  I found this:
+#include &quot;carloop/carloop.h&quot;
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+void setup()
+{
+    carloop.begin();
+}
+
+void loop()
+{
+    carloop.update();
+    CANMessage message;
+    if(carloop.can().receive(message)) {
+        // Do awesome things with message!
+    }
+}
+AND THIS:
+
+Velocity: 0x3CA
+Expressed in:[km] h
+Frequency: 6.7 Hz
+Minimum Timestamp: 100
+But I think that I am missing something.  Ideally I would want this to be standalone (so no serial printing required).  What could I do?
+
+P.S.
+How does one turn 8 bit messages in hex numbers?
+
+Thank you very much</description>
+    
+    <lastBuildDate>Tue, 04 Oct 2016 13:31:38 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/minimal-transmitting-code/132.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Minimal transmitting code</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Here is an example of a simple transmit.</p>
+<pre><code class="lang-auto">#include "application.h"
+#include "carloop/carloop.h"
+
+// Don't block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+void setup() {
+  // Configure the CAN bus speed for 500 kbps, the standard speed for the OBD-II port.
+  // Other common speeds are 250 kbps and 1 Mbps.
+  // If you don't call setCANSpeed, 500 kbps is used.
+  carloop.setCANSpeed(500000);
+
+  // Connect to the CAN bus
+  carloop.begin();
+}
+
+unsigned long lastTransmitTime = 0;
+const unsigned long transmitInterval = 100; /* ms */
+  
+void loop() {
+  // Send a message at a regular time interval
+  unsigned long now = millis();
+  if (now - lastTransmitTime &gt; transmitInterval) {
+    CANMessage message;
+
+    // A CAN message has an ID that identifies the content inside
+    message.id = 0x123;
+
+    // It can have from 0 to 8 data bytes
+    message.len = 8;
+
+    // Pass the data to be transmitted in the data array
+    message.data[0] = 10;
+    message.data[1] = 20;
+    message.data[2] = 30;
+    message.data[3] = 40;
+
+    // You can of course pass dynamic data
+    message.data[4] = (uint8_t)(now &gt;&gt; 24);
+    message.data[5] = (uint8_t)(now &gt;&gt; 16);
+    message.data[6] = (uint8_t)(now &gt;&gt; 8);
+    message.data[7] = (uint8_t)(now);
+
+    // Send the message on the bus!
+    carloop.can().transmit(message);
+
+    lastTransmitTime = now;
+  }
+}
+</code></pre>
+<p>Find the latest version and instructions on how to flash it to your Carloop on GitHub.</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/app-simple-transmit">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/app-simple-transmit" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f96b4a9570510d92104c80c2b56b87e9f6d96c39_2_690x345.png" class="thumbnail" data-dominant-color="F5F0F2" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/app-simple-transmit" target="_blank" rel="noopener">GitHub - carloop/app-simple-transmit: Carloop app showing how to transmit a...</a></h3>
+
+  <p>Carloop app showing how to transmit a CAN message. Contribute to carloop/app-simple-transmit development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/minimal-transmitting-code/132/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/minimal-transmitting-code/132/3</link>
+        <pubDate>Tue, 04 Oct 2016 13:31:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-132-3</guid>
+        <source url="https://community.carloop.io/t/minimal-transmitting-code/132.rss">Minimal transmitting code</source>
+      </item>
+      <item>
+        <title>Minimal transmitting code</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi and welcome!</p>
+<p>I’m out at Maker Faire in New York for a busy weekend. I’ll write and test a working example for you as soon as possible. Stay tuned.</p>
+          <p><a href="https://community.carloop.io/t/minimal-transmitting-code/132/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/minimal-transmitting-code/132/2</link>
+        <pubDate>Sun, 02 Oct 2016 02:24:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-132-2</guid>
+        <source url="https://community.carloop.io/t/minimal-transmitting-code/132.rss">Minimal transmitting code</source>
+      </item>
+      <item>
+        <title>Minimal transmitting code</title>
+        <dc:creator><![CDATA[Kronos]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello!<br>
+I was wondering what the most barebones code for transmitting a command if a condition is met can be over the CAN BUS could be.  Hypothetically I would want to send something along the lines of: “3D 11 04 00 C3” on the CAN BUS if the speedometer reads 20 km/h.  I found this:<br>
+<span class="hashtag-raw">#include</span> “carloop/carloop.h”<br>
+Carloop carloop;</p>
+<p>void setup()<br>
+{<br>
+carloop.begin();<br>
+}</p>
+<p>void loop()<br>
+{<br>
+carloop.update();<br>
+CANMessage message;<br>
+if(carloop.can().receive(message)) {<br>
+// Do awesome things with message!<br>
+}<br>
+}<br>
+AND THIS:</p>
+<p>Velocity: 0x3CA<br>
+Expressed in:[km] h<br>
+Frequency: 6.7 Hz<br>
+Minimum Timestamp: 100<br>
+But I think that I am missing something.  Ideally I would want this to be standalone (so no serial printing required).  What could I do?</p>
+<p>P.S.<br>
+How does one turn 8 bit messages in hex numbers?</p>
+<p>Thank you very much</p>
+          <p><a href="https://community.carloop.io/t/minimal-transmitting-code/132/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/minimal-transmitting-code/132/1</link>
+        <pubDate>Sun, 02 Oct 2016 00:41:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-132-1</guid>
+        <source url="https://community.carloop.io/t/minimal-transmitting-code/132.rss">Minimal transmitting code</source>
+      </item>
+  </channel>
+</rss>

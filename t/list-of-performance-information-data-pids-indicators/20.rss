@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>List of Performance Information Data (PIDs) indicators</title>
+    <link>https://community.carloop.io/t/list-of-performance-information-data-pids-indicators/20</link>
+    <description>This is a great reference to get an idea of which live signals are available on OBD-II compatible vehicles: http://www.totalcardiagnostics.com/support/Knowledgebase/Article/View/43/6/reading-performance-information-data-pid</description>
+    
+    <lastBuildDate>Mon, 28 Mar 2016 21:57:36 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/list-of-performance-information-data-pids-indicators/20.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>List of Performance Information Data (PIDs) indicators</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>This is a great reference to get an idea of which live signals are available on OBD-II compatible vehicles: <a href="http://www.totalcardiagnostics.com/support/Knowledgebase/Article/View/43/6/reading-performance-information-data-pid" class="inline-onebox">Reading Performance Information Data (PID) | Car OBD Diagnostics, ECU Chip Tuning &amp; Auto Repair Support</a></p>
+          <p><a href="https://community.carloop.io/t/list-of-performance-information-data-pids-indicators/20/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-performance-information-data-pids-indicators/20/1</link>
+        <pubDate>Mon, 28 Mar 2016 21:57:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-20-1</guid>
+        <source url="https://community.carloop.io/t/list-of-performance-information-data-pids-indicators/20.rss">List of Performance Information Data (PIDs) indicators</source>
+      </item>
+  </channel>
+</rss>

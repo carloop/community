@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop GPS - Never get a fix - Carloop Community</title>
+    <meta name="description" content="I’ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="686.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="blWj23hXwZDmeXq8DwMc4f18z">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="blWj23hXwZDmeXq8DwMc4f18z"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop GPS - Never get a fix&#39;" href="686.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-gps-never-get-a-fix/686">
+<meta name="twitter:url" content="/t/carloop-gps-never-get-a-fix/686">
+<meta property="og:title" content="Carloop GPS - Never get a fix">
+<meta name="twitter:title" content="Carloop GPS - Never get a fix">
+<meta property="og:description" content="I’ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour and never got a GPS fix?  Here’s the code:  // Run our code even when out of range of Wi-Fi / cellular.  SYSTEM_THREAD(ENABLED);  #include &lt;carloop.h&gt;  #include “CANProtocolBase.h”  #include “CANProtocol_OBD.h”  // Forward declerations  void printGPSInfo(TinyGPSPlus &amp;gps);  void...">
+<meta name="twitter:description" content="I’ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour and never got a GPS fix?  Here’s the code:  // Run our code even when out of range of Wi-Fi / cellular.  SYSTEM_THREAD(ENABLED);  #include &lt;carloop.h&gt;  #include “CANProtocolBase.h”  #include “CANProtocol_OBD.h”  // Forward declerations  void printGPSInfo(TinyGPSPlus &amp;gps);  void...">
+<meta property="article:published_time" content="2018-07-18T01:48:24+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="686.html">Carloop GPS - Never get a fix</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop GPS - Never get a fix'>
+      <link itemprop='url' href='686.html'>
+      <meta itemprop='datePublished' content='2018-07-18T01:48:23Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="686.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-07-18T01:48:24Z' class='post-time'>
+                    July 18, 2018,  1:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-18T01:48:24Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve slightly modified the GPS example and installed it on a Carloop with an Electron using the 12pin extenders.  I brought the device outside with direct access to the sky on a clear day.  I waited for more than an hour and never got a GPS fix?</p>
+<p>Here’s the code:<br>
+// Run our code even when out of range of Wi-Fi / cellular.<br>
+SYSTEM_THREAD(ENABLED);</p>
+<p><span class="hashtag-raw">#include</span> &lt;carloop.h&gt;<br>
+<span class="hashtag-raw">#include</span> “CANProtocolBase.h”<br>
+<span class="hashtag-raw">#include</span> “CANProtocol_OBD.h”</p>
+<p>// Forward declerations<br>
+void printGPSInfo(TinyGPSPlus &amp;gps);<br>
+void printCANInfo();<br>
+void printAccelerometerInfo();<br>
+String formatFloat(float val, bool valid, int len, int prec);<br>
+String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t);</p>
+<p>// Blue LED<br>
+int _led1 = D7;<br>
+// Timestamp for debug messages<br>
+unsigned long _lastDebugMsg = millis();</p>
+<p>// Threshold to trigger a publish<br>
+// 9000 is VERY sensitive, 12000 will still detect small bumps<br>
+int _accelThreshold = 40000;</p>
+<p>// Our Carloop object<br>
+Carloop carloop;</p>
+<p>// Our protocol object<br>
+CANProtocolBase* canProtocol = new CANProtocol_OBD();</p>
+<p>// for publishing values<br>
+String buf;</p>
+<p>// A FuelGauge for checking on the battery state<br>
+FuelGauge fuel;</p>
+<p>void setup() {</p>
+<pre><code>// Fire up serial for debug output
+Serial.begin();
+
+// We're going to use the LED attached to D7 to indicate if we're in Simulation mode or not.  It will be on
+// when we are in simulation mode, off otherwise.
+pinMode(_led1, OUTPUT);
+</code></pre>
+<p>/*<br>
+// Toggle the led<br>
+for(int i=0; i++ ; i&lt;10) {<br>
+digitalWrite(_led1, HIGH);<br>
+delay(500);<br>
+digitalWrite(_led1, LOW);<br>
+delay(500);<br>
+}<br>
+*/<br>
+Serial.println(“Proxi-Carloop-GPS Evaluation”);</p>
+<pre><code>// Start up the Carloop using the default configuration.
+//carloop.begin();
+</code></pre>
+<p>}</p>
+<p>void loop() {<br>
+unsigned long now;<br>
+now = millis();<br>
+carloop.update();<br>
+//canProtocol-&gt;loop();</p>
+<pre><code>if (millis() - _lastDebugMsg &gt; 1000) {
+  Serial.println("====Debug info====");
+  printGPSInfo(carloop.gps());
+  /*
+  printCANInfo();
+  printAccelerometerInfo();
+  */
+  _lastDebugMsg = millis();
+}
+</code></pre>
+<p>}</p>
+<p>void printGPSInfo(TinyGPSPlus &amp;gps) {</p>
+<p>Serial.printf(“GPS %6d chars: \n”, gps.charsProcessed()); //<br>
+Serial.printf(“Lat: %s\n”, formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6).c_str());<br>
+Serial.printf(“Lon: %s\n”, formatFloat(gps.location.lng(), gps.location.isValid(), 11, 6).c_str());<br>
+Serial.printf(“Date/Time: %s”, formatDateTime(gps.date, gps.time).c_str());</p>
+<p>/*<br>
+String s;<br>
+s += String::format("GPS %6d chars: ", gps.charsProcessed());<br>
+s += formatFloat(gps.location.lat(), gps.location.isValid(), 11, 6);<br>
+s += formatFloat(gps.location.lng(), gps.location.isValid(), 12, 6);<br>
+s += formatDateTime(gps.date, gps.time);<br>
+Serial.println(s.c_str());<br>
+*/<br>
+}</p>
+<p>void printCANInfo() {</p>
+<p>}</p>
+<p>void printAccelerometerInfo() {</p>
+<p>}</p>
+<p>String formatFloat(float val, bool valid, int len, int prec) {<br>
+String s;<br>
+if (!valid) {<br>
+while(len-- &gt; 1) {<br>
+s += '<em>';<br>
+}<br>
+s += ’ ';<br>
+}<br>
+else {<br>
+char format[10];<br>
+snprintf(format, sizeof(format), “%%%d.%df”, len, prec);<br>
+s += String::format(format, val);<br>
+/</em> code */<br>
+}</p>
+<p>return s;<br>
+}</p>
+<p>String formatDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t) {<br>
+String s;</p>
+<p>// Date portion<br>
+if (!d.isValid()) {<br>
+s += “********** “;<br>
+}<br>
+else {<br>
+s += String::format(”%02d/%02d/%02d”, d.month(), d.day(), d.year());<br>
+}</p>
+<p>// Time portion<br>
+if (!t.isValid()) {<br>
+s += "******** “;<br>
+}<br>
+else {<br>
+s += String::format(”%02d:%02d:%02d ", t.hour(), t.minute(), t.second());<br>
+}</p>
+<p>return s;<br>
+}</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-18T02:51:58Z' class='post-time'>
+                    July 18, 2018,  2:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-18T02:51:58Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I noticed that I had commented out the Carloop.begin()  I corrected that and then I eventually saw valid GPS data through the serial port debug messages.  However, I never saw the GPS Fix light enabled.  Are we suppose to manage that through our code?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-20T04:42:50Z' class='post-time'>
+                    July 20, 2018,  4:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-20T04:42:50Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/nlwelch.html">@nlwelch</a>,</p>
+<p>Just to confirm, are you receiving the full set of data over serial, or are you receiving only partial data?  If you are getting partial data and the rest of the fields are filled with zeros, then maybe you do not actually have a GPS fix.</p>
+<p>If you do not have a GPS fix, then the most likely thing to look into is whether or not you are supplying adequate power.  Insufficient power might result in not being able to get a fix.</p>
+<p>If you are getting a full data set and you actually have a fix, then try the sample code with no changes and see if you get the same behaviour.  I am not able to say exactly what the behaviour should be; my order got lost and I am waiting for a replacement GPS to be shipped to me.  When I get my GPS, then I will be able to help in better detail.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-26T20:21:24Z' class='post-time'>
+                    July 26, 2018,  8:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-26T20:21:24Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In my case I’m receiving valid GPS data, bit the fix LED on the Carloop GPS adapter is never lit.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-31T02:40:49Z' class='post-time'>
+                    July 31, 2018,  2:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-31T02:40:49Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you gotten any data on your power quality yet?  You want to have sufficient voltage with very low ripple, plus enough amps to supply the peak current loads, not just the average load.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-31T22:56:50Z' class='post-time'>
+                    July 31, 2018, 10:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-31T22:56:50Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve reviewed the Carloop code and I don’t see where the LED ever get’s initialized or used.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-31T23:08:51Z' class='post-time'>
+                    July 31, 2018, 11:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-31T23:08:51Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just looked at the schematics and see that the LED is not set by the code so it’s a GPS issue of some sort.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-03T03:43:54Z' class='post-time'>
+                    August 3, 2018,  3:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-03T03:43:54Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Not to beat on a dead horse, BUT…</p>
+<aside class="quote no-group" data-username="cyclin_al1" data-post="5" data-topic="686">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d6d6ee/48.png" class="avatar"> cyclin_al1:</div>
+<blockquote>
+<p>Have you gotten any data on your power quality yet?</p>
+</blockquote>
+</aside>
+<p>No GPS will acquire a lock if it does not have sufficient power to run the antenna.<br>
+GPS antennae are normally active antennae and consume power.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ruhandsomeiii.html'><span itemprop='name'>ruhandsomeiii</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-11T20:29:34Z' class='post-time'>
+                    August 11, 2018,  8:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-11T20:29:34Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just received my Carloop GPS board.  Can someone point me to an example particle electron app that actually works with the Carloop GPS board.  I’ve tried the carloop_minimal example app and I get battery voltage, but I don’t get GPS information.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-12T18:28:31Z' class='post-time'>
+                    August 12, 2018,  6:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-12T18:28:31Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/ruhandsomeiii.html">@ruhandsomeiii</a>,</p>
+<p>Are you saying that you get no information at all, or the information is all zeros?<br>
+The code shown above should work fine.</p>
+<p>If you are getting just zeros, then make sure you have a clear view of the sky, give it a couple of minutes, and absolutely make sure your power supply provides enough volts, amps and that the power quality is clean.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-12T20:33:38Z' class='post-time'>
+                    August 12, 2018,  8:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-12T20:33:38Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You need to do</p>
+<pre><code>digitalWrite(D4, HIGH);
+</code></pre>
+<p>I’m not quite sure about the D4 pin. You have to see the code. There is a npn transistor that blinks a led when get a fix, but you need to send to HIGH that pin. By default the led doesnt blink.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ruhandsomeiii.html'><span itemprop='name'>ruhandsomeiii</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-12T22:04:59Z' class='post-time'>
+                    August 12, 2018, 10:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-12T22:04:59Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks, I’ll see about this as well.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ruhandsomeiii.html'><span itemprop='name'>ruhandsomeiii</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-12T22:07:08Z' class='post-time'>
+                    August 12, 2018, 10:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-12T22:07:08Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank for you suggestions. I took your advice from a previous post and flashed particle firmware version 0.8.0-rc.9 with the corresponding Carloop-Minimal code. After waiting for about 5 to 10 minutes, I started receiving GPS information. Particle firmware version 0.7.0 is a no-go. I did try firmware version 0.6.4, but either I didn’t wait long enough to get a fix or it just didn’t work for me. In either case, thanks for the help. Using version 0.8.0-rc, the battery, and the latest Carloop library seems to work well.  Again, Thanks for the help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

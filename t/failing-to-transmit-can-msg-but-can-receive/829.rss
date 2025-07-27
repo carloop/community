@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Failing to transmit CAN msg, but can receive?</title>
+    <link>https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829</link>
+    <description>I have a very simple test harness consisting of a CARLOOP with an Electron.  The test harness simply listens for CAN messages and when they are available it reports them through a Log.info.  It also attempts to write a simple message every 500ms.  I&#39;m using KVaser CANKing to randomly generate messages and thus have another CAN node on the bus.  Using the serial monitor I can see that the Electron is receiving the messages.  However, I never see messages transmitted from the Electron.  Eventually the app reports a failed to send which I&#39;m sure is due to the queue being full.
+
+Any advice on why the CAN receive is working, but the CAN transmit isn&#39;t will be greatly appreciated!!</description>
+    
+    <lastBuildDate>Mon, 04 Mar 2019 04:40:59 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Failing to transmit CAN msg, but can receive?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a>,</p>
+<p>As I understand it, CANbus is designed with a loop-back, meaning anything transmitted is also read back by the device doing the sending.</p>
+<p>The first thing I would recommend checking is the termination on your test harness.  If the signal quality is sufficiently poor due to the termination on the CANbus lines, then the loop-back may not function properly. In a typical CANbus on an OBD2 port, the termination is handled inside of the vehicle, so there is no termination hardware built into Carloop.</p>
+<p>One other thing to check, but I really doubt it is the problem, it to make sure the Carloop and the KVaser devices are not both using the same CAN ID.</p>
+          <p><a href="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829/2</link>
+        <pubDate>Mon, 04 Mar 2019 04:40:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-829-2</guid>
+        <source url="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829.rss">Failing to transmit CAN msg, but can receive?</source>
+      </item>
+      <item>
+        <title>Failing to transmit CAN msg, but can receive?</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I have a very simple test harness consisting of a CARLOOP with an Electron.  The test harness simply listens for CAN messages and when they are available it reports them through a Log.info.  It also attempts to write a simple message every 500ms.  I’m using KVaser CANKing to randomly generate messages and thus have another CAN node on the bus.  Using the serial monitor I can see that the Electron is receiving the messages.  However, I never see messages transmitted from the Electron.  Eventually the app reports a failed to send which I’m sure is due to the queue being full.</p>
+<p>Any advice on why the CAN receive is working, but the CAN transmit isn’t will be greatly appreciated!!</p>
+          <p><a href="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829/1</link>
+        <pubDate>Thu, 28 Feb 2019 20:57:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-829-1</guid>
+        <source url="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829.rss">Failing to transmit CAN msg, but can receive?</source>
+      </item>
+  </channel>
+</rss>

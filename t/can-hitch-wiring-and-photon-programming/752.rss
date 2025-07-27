@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CAN-hitch wiring and photon programming</title>
+    <link>https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752</link>
+    <description>How exactly is the CAN-hitch wired to a photon?  I assume the 3v3 pin goes to the photon 3v3 and the gnd and gnd match up.  Photon lists pin d2 to rx and d1 to tx but the picture of a CAN-hitch on a breadboard and what looks like a photon has d1 to tx but it shows d0 to rx.
+
+Also would the sample app for can transmit be the same on a hitch as a carloop basic?  I assume it would, just want to verify.</description>
+    
+    <lastBuildDate>Mon, 05 Nov 2018 05:08:26 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CAN-hitch wiring and photon programming</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/timc">@TimC</a>,</p>
+<p>On the Carloop, D0 is connected to CANa_Enable.  D1 is connected to CANa_TX. D2 is connected to CANa_RX.</p>
+<p>If you connect up the CAN-hitch in exactly the same way, then there will be no difference between the CAN-hitch and the Carloop, at least for the CANbus capability anyway.  The app does not know the difference between the two, so as long as it is connected the same, the app will function the same way; meaning it will function just fine.</p>
+          <p><a href="https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752/2</link>
+        <pubDate>Mon, 05 Nov 2018 05:08:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-752-2</guid>
+        <source url="https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752.rss">CAN-hitch wiring and photon programming</source>
+      </item>
+      <item>
+        <title>CAN-hitch wiring and photon programming</title>
+        <dc:creator><![CDATA[TimC]]></dc:creator>
+        <description><![CDATA[
+            <p>How exactly is the CAN-hitch wired to a photon?  I assume the 3v3 pin goes to the photon 3v3 and the gnd and gnd match up.  Photon lists pin d2 to rx and d1 to tx but the picture of a CAN-hitch on a breadboard and what looks like a photon has d1 to tx but it shows d0 to rx.</p>
+<p>Also would the sample app for can transmit be the same on a hitch as a carloop basic?  I assume it would, just want to verify.</p>
+          <p><a href="https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752/1</link>
+        <pubDate>Thu, 01 Nov 2018 03:54:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-752-1</guid>
+        <source url="https://community.carloop.io/t/can-hitch-wiring-and-photon-programming/752.rss">CAN-hitch wiring and photon programming</source>
+      </item>
+  </channel>
+</rss>

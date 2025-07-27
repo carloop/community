@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Car Hacking - Carloop Community</title>
+    <link>https://community.carloop.io/c/car-hacking/11</link>
+    <description>Topics in the &#39;Car Hacking&#39; category This category is intended for all topics related to Car Hacking, tips, tricks, and new open source tools that work well to hack different cars.</description>
+    
+      <lastBuildDate>Tue, 11 Jun 2024 22:19:07 +0000</lastBuildDate>
+      <atom:link href="https://community.carloop.io/c/car-hacking/11.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Communicating to ECU problem</title>
+          <dc:creator><![CDATA[ehsan]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>hello every one<br>
+i have ECU model : siemens continental SIM2K-34VR<br>
+and i want to communicate to it by can protocol i have sent this pid request :<br>
+txHeader.DLC = 3;<br>
+txHeader.IDE = CAN_ID_STD;<br>
+txHeader.StdId = 0x7DF;</p>
+<p>TxMessage.data[0] = 0x02;<br>
+TxMessage.data[1] = 0x01;<br>
+TxMessage.data[2] = 0x00;<br>
+TxMessage.data[3] = 0x00;<br>
+TxMessage.data[4] = 0x00;<br>
+TxMessage.data[5] = 0x00;<br>
+TxMessage.data[6] = 0x00;<br>
+TxMessage.data[7] = 0x00;</p>
+<p>but the received can message is this :<br>
+ID: 0x1C3<br>
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00</p>
+<p>i haven’t connect anything else to ECU just +12V and GND and SWITCH power<br>
+is it because of this ?or sth else?</p>
+<p>how can i found the standard iso of my ECU i search all around the internet but didn’t get anything usefull</p>
+<p>appreciate your help.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/communicating-to-ecu-problem/1405">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405</link>
+          <pubDate>Tue, 11 Jun 2024 22:19:07 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1405</guid>
+          <source url="https://community.carloop.io/t/communicating-to-ecu-problem/1405.rss">Communicating to ECU problem</source>
+        </item>
+        <item>
+          <title>Mitsubishi Outlander PHEV</title>
+          <dc:creator><![CDATA[mat_the_w]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hey Folks,</p>
+<p>After doing a bit of googling, I’ve not been able to find any good resources on PIDs for the Outlander PHEV.</p>
+<p>I’m just after my SOC really.</p>
+<p>Anyone have any good sources of codes?</p>
+<p>Thanks!</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/mitsubishi-outlander-phev/1030">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/mitsubishi-outlander-phev/1030</link>
+          <pubDate>Fri, 15 May 2020 20:49:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1030</guid>
+          <source url="https://community.carloop.io/t/mitsubishi-outlander-phev/1030.rss">Mitsubishi Outlander PHEV</source>
+        </item>
+        <item>
+          <title>Message detection</title>
+          <dc:creator><![CDATA[fiti]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Good morning here!!</p>
+<p>While talking about car hacking, one of the most important parts of your research would probably be identifying which CAN message is generating a specific action. During my research I found several ways of doing this, some more and some others less effective. I use Socketcan and linux for this.</p>
+<p>Do you have any cool method you use for finding CAN messages on the mess the car is generating? Share it and I will include it on this same post to have all of them together <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Some of this methods are:</p>
+<ul>
+<li>Recording traffic while executing an action (e.g open a door) and replaying and splitting it recursively checking if the action is repeated, until you have only one message left.</li>
+<li>Recording traffic on several captures, some of them performing the action and some of them not. The message we want will be on all of the “action captures” and on none of the “captures without the action”. This can be automated easily with a python script.</li>
+</ul>
+<p>Cheers!!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/message-detection/981">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/message-detection/981</link>
+          <pubDate>Fri, 17 Jan 2020 10:17:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-981</guid>
+          <source url="https://community.carloop.io/t/message-detection/981.rss">Message detection</source>
+        </item>
+        <item>
+          <title>Problems sending traffic through Carloop</title>
+          <dc:creator><![CDATA[fiti]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi all!!<br>
+I am experiencing some troubles while sending CAN messages to an Opel Corsa 2018. I already read several posts on this forum related to this but none of them did work for me so I will try to explain this as much as possible, wondering any of you guys had similar problems/know how to fix this:<br>
+Intro:</p>
+<ul>
+<li>I am using a 2018 Opel Corsa.</li>
+<li>My goal is being able to intercept traffic (done) and reproduce the same traffic (not done), in order to reproduce the action (e.g turn on lights) and then splitting the dump in two recursively till I get one packet left. This packet will be the one generating the action.</li>
+<li>I followed this post (<a href="https://www.carloop.io/apps/app-socketcan/">https://www.carloop.io/apps/app-socketcan/</a>) to flash my Photon and configure it on my Linux VM.</li>
+</ul>
+<p>Problem:</p>
+<ul>
+<li>I can perfectly sniff traffic but, when I try to replay it I can see (using “ifconfig can0” and looking at TX packets) that no packet is sent.<br>
+Note1: As far as I disconnect the photon from my car and I try again, I can see all the traffic I want to send, passing through the interface. If I connect the photon to the car, and send packets again, I don’t get anything.<br>
+Note2: I get that famous error of “write: No buffer space available”, but even before getting it there are not packets sent (but canplayer thinks it is sending them).</li>
+</ul>
+<p>Things I tried:</p>
+<ul>
+<li>Adding txqueuelen 10000 to can0 configuration</li>
+<li>Use canplayer with -g  but it appears to ignore that parameter (or looks like that)</li>
+<li>Create a basic script to manually sleep between each packet (sent with cansend)</li>
+<li>Adding UART speed to the serial port while configuring with slcand (slcand -o -t hw -s6 -S 3000000 /dev/ACMX can0). This only made the error “write: No buffer space available”, to appear faster.</li>
+</ul>
+<p>I have no clue on what can be happening, is it something related with slcand configuration? Maybe I need to do some modifications on the firmware? (this is the one I used <a href="https://go.particle.io/shared_apps/59375f5fba82211476001274" class="inline-onebox" rel="noopener nofollow ugc">Particle Web IDE</a>)</p>
+<p>Hope you can throw me some useful hints… Hehe</p>
+<p>PS: If anyone knows any other method to know which message ID is responsible for an action on the car (whatever is valid, lights, open/close doors, turn on/off radio…) it is more than welcome!! <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Thanks in advance!<br>
+Cheers!</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/problems-sending-traffic-through-carloop/979">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/problems-sending-traffic-through-carloop/979</link>
+          <pubDate>Tue, 14 Jan 2020 23:38:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-979</guid>
+          <source url="https://community.carloop.io/t/problems-sending-traffic-through-carloop/979.rss">Problems sending traffic through Carloop</source>
+        </item>
+        <item>
+          <title>2015+ Charger Steering Wheel Button Messages?</title>
+          <dc:creator><![CDATA[frischky]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi.</p>
+<p>Just looking to see if anybody has a list or access to a 2015+ Charger or Challenger (I believe they are similar) and has a list of the various CANBUS messages for the various steering wheel buttons?</p>
+<p>Have installed a 2016 cluster in my car (2011), but it’s looking for a newer message format on the CAN-C network</p>
+<p>Any help is appreciated.</p>
+<p>Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/2015-charger-steering-wheel-button-messages/959">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/2015-charger-steering-wheel-button-messages/959</link>
+          <pubDate>Thu, 05 Dec 2019 16:35:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-959</guid>
+          <source url="https://community.carloop.io/t/2015-charger-steering-wheel-button-messages/959.rss">2015+ Charger Steering Wheel Button Messages?</source>
+        </item>
+        <item>
+          <title>Ford Transit 2019 CAN Message IDs (PIDs)</title>
+          <dc:creator><![CDATA[ararat]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi everyone. I found list of CAN message PIDs avaialble:</p>
+<aside class="onebox googledocs" data-onebox-src="https://docs.google.com/spreadsheets/d/1VRUHsYoYOPgy2IM-ITQkKnsA4tLnRwug0m6dG207SmU/edit?usp=sharing">
+  <header class="source">
+
+      <a href="https://docs.google.com/spreadsheets/d/1VRUHsYoYOPgy2IM-ITQkKnsA4tLnRwug0m6dG207SmU/edit?usp=sharing" target="_blank" rel="noopener nofollow ugc">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/spreadsheets/d/1VRUHsYoYOPgy2IM-ITQkKnsA4tLnRwug0m6dG207SmU/edit?usp=sharing" target="_blank" rel="noopener nofollow ugc"><span class="googledocs-onebox-logo g-sheets-logo"></span></a>
+
+<h3><a href="https://docs.google.com/spreadsheets/d/1VRUHsYoYOPgy2IM-ITQkKnsA4tLnRwug0m6dG207SmU/edit?usp=sharing" target="_blank" rel="noopener nofollow ugc">Ford Transit CAN messages</a></h3>
+
+<p>Ford Transit 2019
+
+Mesage ID,Payload,Description
+342,7 byte,8 byte,mileage
+115,7 byte,8 byte,RPM</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I want find Fuel level, Fuel consumption.<br>
+Who can help me?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/ford-transit-2019-can-message-ids-pids/913">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/ford-transit-2019-can-message-ids-pids/913</link>
+          <pubDate>Tue, 20 Aug 2019 15:02:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-913</guid>
+          <source url="https://community.carloop.io/t/ford-transit-2019-can-message-ids-pids/913.rss">Ford Transit 2019 CAN Message IDs (PIDs)</source>
+        </item>
+        <item>
+          <title>Searching the OBD command to initiate a DPF regeneration</title>
+          <dc:creator><![CDATA[gurlavie]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>Need the community help to solve this long lasting mystery I just cant resolve.</p>
+<p>I am trying to find the right code to send through Carloop, so I can trigger a DPF regeneration my self.  Without the need for a mechanics.<br>
+Pajero, 2008, Diesel, 7 seats.</p>
+<p>Background:<br>
+When I get the DPF light on, sometimes I just cant make it in time to clear it by driving.<br>
+Then the light starts flashing and the check engine turns on.<br>
+At this point I have to go to the mechanics for a computerized triggered DPF regeneration.</p>
+<p>The mechanics then just clicks on his OBD computer and triggers the Regeneration.<br>
+It takes about an hour of still standing, engine on, high RPM, and the DPF is cleared.<br>
+You can see the system he is using  here :</p>
+<ol>
+<li>The KPI I am monitoring is “Soot loading by summation” - <a href="https://i.imgur.com/fO0m3lQ.jpg" rel="noopener nofollow ugc">https://i.imgur.com/fO0m3lQ.jpg</a></li>
+</ol>
+<p>Any idea ?</p>
+<p>– I found the instructions for Toyota, but it doesnt help. (see here - <a href="http://forum.canb.us/topic/105/obd-ii-commands-and-response/2" rel="noopener nofollow ugc">http://forum.canb.us/topic/105/obd-ii-commands-and-response/2</a>)</p>
+<p>Thanks<br>
+Gur</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/searching-the-obd-command-to-initiate-a-dpf-regeneration/854">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/searching-the-obd-command-to-initiate-a-dpf-regeneration/854</link>
+          <pubDate>Fri, 12 Apr 2019 14:46:41 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-854</guid>
+          <source url="https://community.carloop.io/t/searching-the-obd-command-to-initiate-a-dpf-regeneration/854.rss">Searching the OBD command to initiate a DPF regeneration</source>
+        </item>
+        <item>
+          <title>CAN bus instrument cluster in older vehicle</title>
+          <dc:creator><![CDATA[skilescm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hello all,<br>
+New to the Carloop community but not to mobile electronics and software development.</p>
+<p>I’m working on a project where I’m upgrading the interior of my 2003 Ford Excursion with the dash and other interior panels from a 2008-2010 F250. A large majority of the components are just simple wiring diagrams and splicing into the newer harnesses.</p>
+<p>The gauge cluster and A/C controls are a different animal though. They are CAN bus devices and as of right now have been widely accepted as incompatible for people doing these swaps.</p>
+<p>My plan/goal is to emulate a CAN signal for the gauge cluster and send the proper commands to move the needles. I can retrieve the values I need over the ODB2 port in the vehicle right now.</p>
+<p>I know this isn’t a small undertaking but I’m pretty determined to figure out how to make it happen. Any tips or suggestions would be greatly appreciated.</p>
+            <p><small>11 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818</link>
+          <pubDate>Wed, 06 Feb 2019 19:18:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-818</guid>
+          <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+        </item>
+        <item>
+          <title>My own ECU simulator</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>I’m building my own car simulator using the next components:</p>
+<ul>
+<li>Arduino UNO</li>
+<li>mcp2515 <a href="https://www.ebay.com/itm/For-Arduino-MCP2515-CAN-Bus-Module-TJA1050-Receiver-SPI-Module-/311520457612" rel="noopener nofollow ugc">breakout</a></li>
+<li>A obd female cable extension</li>
+</ul>
+<p>I’m using the next code:</p>
+<pre><code>#include &lt;SPI.h&gt;
+#include &lt;mcp_can.h&gt;
+
+const int SPI_CS_PIN = 10; 
+INT32U canId = 0x000; 
+MCP_CAN CAN(SPI_CS_PIN);
+unsigned char len = 0;
+unsigned char buf[8]; 
+int PID = 0; 
+int MODE = 0;
+
+void setup() {
+  Serial.begin(9600); 
+
+  if(CAN_OK == CAN.begin(CAN_500KBPS)) {
+    Serial.println("Init done");
+  } else {
+    Serial.println("Error on init");
+  }  
+}
+
+void loop() {
+  //CAN.readMsgBuf(&amp;len, buf); 
+  if(CAN_MSGAVAIL == CAN.checkReceive()) {
+
+    CAN.readMsgBuf(&amp;len, buf); 
+    canId = CAN.getCanId(); 
+    PID = buf[2]; 
+    MODE = buf[1];
+
+    Serial.print("PID ");
+    Serial.print(PID, HEX);
+    Serial.print(" MODE ");
+    Serial.println(MODE);
+
+    if(MODE == 1) {
+      unsigned char OBDIImsg[8] = {4, 65, 0x0C, 0, 0, 0, 0, 0};       
+      
+      switch (PID){
+        case 0: // PID 00 hex
+          OBDIImsg[0] = 6;
+          OBDIImsg[3] = 0x88;
+          OBDIImsg[4] = 0x18;
+          OBDIImsg[5] = 0x80;
+          OBDIImsg[6] = 0x13;
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg); // Respuesta
+          break;      
+        case 12:
+          OBDIImsg[3] = 100 * 4 / 256;
+          OBDIImsg[4] = 100 - (100 * 4 / 256);
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);
+          break;
+        case 13:
+          OBDIImsg[3] = 75;
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);
+          break;
+        case 4:
+          OBDIImsg[3] = 98;
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);
+          break;
+        case 31: // PID 19 hex
+          OBDIImsg[3] = (millis()/1000)/256;
+          OBDIImsg[4] = (millis()/1000) - (millis()/1000)/256;
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);
+          break;     
+        case 47: // PID 2F hex
+          OBDIImsg[3] = 60; 
+          CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);
+          break;
+      }      
+    } else if (MODE == 3) {
+      unsigned char OBDIImsg[8] = {6, 67, 0, 0, 0, 0, 0, 0};
+
+      OBDIImsg[2] = 1; // Número de DTCs = 1
+      OBDIImsg[3] = 2; // P0217 Sobrecalentamiento del motor HIGH
+      OBDIImsg[4] = 23; // P0217 Sobrecalentamiento del motor LOW
+
+      CAN.sendMsgBuf(0x7E8, 0, 8, OBDIImsg);    
+    }    
+  }
+}
+</code></pre>
+<p>If I test the code using the elm327 (bluetooth) and an app in my phone, the messages are sent/received as expected; When I connect the Carloop adapter and a sample code reader sketch the communication isn’t done.</p>
+<p>Also, I’ve tested the carloop adapter and the same sketch in my car and the communication is performed well.</p>
+<p>Is there any consideration I have to do in the arduino side to be compatible with the carloop adapter/library ?</p>
+<p>UPDATE</p>
+<p>I’m trying other approach; I’m using the can hitch connected as follows:</p>
+<p>Particle Photon (ECU Simulator) ==&gt; Carloop CAN Hitch ==&gt; Female extension OBD cable ===&gt; Carloop adapter ===&gt; Particle electron</p>
+<p>Again, this setup works with the ELM327; the photon receives all the requests sent by the phone app through the ELM327, but also again, the photon (the ECU simulator) doesn’t receives messages when switched to the electron.</p>
+<p>My code is :</p>
+<pre><code>#include &lt;carloop.h&gt;
+
+const auto OBD_REQUEST_ID      = 0x7E0;
+const auto OBD_REPLY_ID        = 0x7E8;
+const auto OBD_PID_SERVICE     = 0x01;
+
+SYSTEM_THREAD(ENABLED); // To not block the main program while searching for WiFi
+Carloop&lt;CarloopRevision2&gt; carloop; // Instantiate Carloop Object
+
+SYSTEM_MODE(SEMI_AUTOMATIC);
+
+int mode = 0;
+int pid = 0;
+
+void processMode1(int pid);
+void processMode2(int pid);
+
+void setup() {
+    carloop.begin(); // Creates the appropriate CANChannel
+    Serial.begin(9600); // Open serial connection at 9600 baud, bits per second
+    Serial.print("Starting Up \n");
+    
+    WiFi.connect();
+}
+void loop() {
+    CANMessage message;
+
+    while(carloop.can().receive(message)) {
+        mode = message.data[1];
+        pid = message.data[2];
+        
+        Serial.print("Mode ");
+        Serial.print(mode);
+        Serial.print(" Pid ");
+        Serial.println(pid);
+        
+        if(mode == 1) {
+            processMode1(pid);
+        }
+    }
+}
+
+void processMode1(int pid) {
+    CANMessage message;
+    message.id = 0x7E8;
+    message.len = 8;
+        
+    if(pid == 0) {
+        message.data[0] = 6;
+        message.data[3] = 0x88;
+        message.data[4] = 0x18;
+        message.data[5] = 0x80;
+        message.data[6] = 0x13;
+    } else if(pid == 12) {
+        message.data[3] = 100 * 4 / 256;
+        message.data[4] = 100 - (100 * 4 / 256);        
+    } else if(pid == 13) {
+        message.data[3] = 75;
+    } else if(pid == 4) {
+        message.data[3] = 98;
+    } else if(pid == 31) {
+        message.data[3] = (millis() / 1000)/256;
+        message.data[4] = (millis() / 1000) - (millis() / 1000) / 256;
+    } else if(pid == 47) {
+        message.data[3] = 60;
+    }
+    
+    carloop.can().transmit(message);
+}
+
+void processMode2(int pid) {
+    
+} 
+</code></pre>
+<p>The electron code as I wrote before works when I connect to my car. Any ideas ?</p>
+            <p><small>18 posts - 4 participants</small></p>
+            <p><a href="https://community.carloop.io/t/my-own-ecu-simulator/720">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/my-own-ecu-simulator/720</link>
+          <pubDate>Fri, 07 Sep 2018 22:29:43 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-720</guid>
+          <source url="https://community.carloop.io/t/my-own-ecu-simulator/720.rss">My own ECU simulator</source>
+        </item>
+        <item>
+          <title>Fuel consumption calculation</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi All,</p>
+<p>As far as I see, there is a formula to calculate the fuel consumption from Manifold Air Pressure reading, but some of the cars has no MAP sensor. Is there a formula to calculate the fuel consumption from Intake manifold air pressure for example ?</p>
+<p>Thanks</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/fuel-consumption-calculation/610">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/fuel-consumption-calculation/610</link>
+          <pubDate>Fri, 20 Apr 2018 22:09:34 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-610</guid>
+          <source url="https://community.carloop.io/t/fuel-consumption-calculation/610.rss">Fuel consumption calculation</source>
+        </item>
+        <item>
+          <title>Ask for error codes</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>How can I ask for the error codes?</p>
+<p>Thanks</p>
+            <p><small>9 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/ask-for-error-codes/583">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/ask-for-error-codes/583</link>
+          <pubDate>Thu, 29 Mar 2018 03:24:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-583</guid>
+          <source url="https://community.carloop.io/t/ask-for-error-codes/583.rss">Ask for error codes</source>
+        </item>
+        <item>
+          <title>Interfacing with aftermarket starter</title>
+          <dc:creator><![CDATA[wochanda]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>I recently installed an aftermarket starter module in my 2006 Venza (<a href="https://www.directechs.com/product.aspx?sku=DB3" rel="noopener nofollow ugc">Directed DB3</a>).</p>
+<p>Right now it lets me start the car by hitting lock x3, but the range isn’t great.  I want to use an Electron to start via the internet.</p>
+<p>The DB3 adapter has an interface for an internet starter - <a href="https://www.viper.com/smartstart/" rel="noopener nofollow ugc">Viper SmartStart</a>, but I’m not keen on the price or monthly fee.</p>
+<p>I found a thread where someone reverse engineered the interface protocol a bit, but i’m not sure if it works, and how to use this to make a Carloop/Electron work.</p><aside class="onebox discoursetopic" data-onebox-src="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/c709ed32ff439134cbd331609813585e4f8be5e4.png" class="site-icon" data-dominant-color="00878F" width="32" height="32">
+
+      <a href="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934" target="_blank" rel="noopener nofollow ugc" title="02:46PM - 18 January 2012">Arduino Forum – 18 Jan 12</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:463/500;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/dc8699eebc2ee160e86015bffb35c58fdeb7cc98.jpeg" class="thumbnail" data-dominant-color="AEAEAF" width="463" height="500"></div>
+
+<div class="title-wrapper">
+  <h3><a href="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934" target="_blank" rel="noopener nofollow ugc">Interfacing with car alarm</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #0088CC;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Using Arduino</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #0088CC;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Project Guidance</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hi everyone,  I'm new here, and new to arduino. I don't have much experience with electronics but I've got some experience coding.  Last year I got and installed a new alarm on my car. It's a Viper 5701. I've checked and it's SmartStart compatible...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Anyone have any experience or ideas?</p>
+<p>Thanks!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/interfacing-with-aftermarket-starter/550</link>
+          <pubDate>Fri, 23 Feb 2018 20:02:57 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-550</guid>
+          <source url="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550.rss">Interfacing with aftermarket starter</source>
+        </item>
+        <item>
+          <title>Carloop to change fuel mapping?</title>
+          <dc:creator><![CDATA[PallaFormaggio]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>I have done some looking into this carloop system, and i was curious if it is at all possible to perhaps change the fuel mapping through the obd2 port with the Carloop or if it is done through specialist equipment?</p>
+            <p><small>9 posts - 4 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-to-change-fuel-mapping/544</link>
+          <pubDate>Tue, 20 Feb 2018 11:10:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-544</guid>
+          <source url="https://community.carloop.io/t/carloop-to-change-fuel-mapping/544.rss">Carloop to change fuel mapping?</source>
+        </item>
+        <item>
+          <title>Hack a car to achieve drive-by-wire and eventually self-driving? Any experiences?</title>
+          <dc:creator><![CDATA[nancylee]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hi guys. There is a self-driving development platform hackathon for car drive-by-wire hacking <a href="https://www.pixmoving.com/move-it" rel="noopener nofollow ugc">https://www.pixmoving.com/move-it</a></p>
+<p>Hacking include:<br>
+● Hacking of car control, both lateral and longitudinal controls, to achieve drive-by-wire<br>
+● Self-driving setup and test of 1/16 scale car powered by Raspberry Pi<br>
+● Installation and test run of open source self-driving software on full-sized car</p>
+<p>Prizes and reimburse offered for the outcomes. Looks very promising and cool. The relevant skills would be a plus. Anyone interested?</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.pixmoving.com/move-it">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/b81d0cbd900ab51c7a8d863c87796def707a1139.png" class="site-icon" data-dominant-color="3EB0EC" width="192" height="192">
+
+      <a href="https://www.pixmoving.com/move-it" target="_blank" rel="noopener nofollow ugc">pixmoving</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/269;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6cea7f79e22f224af0b0381d449d0a11c17e184d_2_690x269.jpeg" class="thumbnail" data-dominant-color="827D7A" width="690" height="269"></div>
+
+<h3><a href="https://www.pixmoving.com/move-it" target="_blank" rel="noopener nofollow ugc">PIX Moving | Move-it Hackathon For Self-driving</a></h3>
+
+  <p>Move-it is a hackathon for self-driving, aiming to build an affordable development platform(chassis) for self-driving, solving various engineering challenges along the process. Move-It Hackathon is a reflection for transportation revolution. It’s an...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517</link>
+          <pubDate>Wed, 24 Jan 2018 07:09:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-517</guid>
+          <source url="https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517.rss">Hack a car to achieve drive-by-wire and eventually self-driving? Any experiences?</source>
+        </item>
+        <item>
+          <title>Pyvit Python help</title>
+          <dc:creator><![CDATA[SemiSilent]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Hey all,<br>
+Been a member for a while but haven’t posted anything yet as life has been nuts. I’m starting to do some fuzzing of my car network. Don’t worry I know the dangers and am developing on a test bench a CANable, and a Raspberry Pi. I’ve written some simple scripts using can-utils and Python. I was looking around the webs and found a Python library called “pyvit” and it seemed a bit better than running 'system.os(cansend can0 message) each time.</p>
+<p>I’m running into an issue though with my PoC code:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/24fbe80abd901725863c073bd6fb6e0a5d4ad28e" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e_2_690x132.png" width="690" height="132" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e_2_690x132.png, //carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png 2x" data-dominant-color="626163"></a></div><br>
+I’ve ran multiple variants of the code and examples of this code are available on several sites which are identical. However I can not get passed this issue. I’ve emailed the CANable site but got no response. Hoping someone here might have some insight?<p></p>
+<p>Thanks in advance!</p>
+            <p><small>5 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/pyvit-python-help/503">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/pyvit-python-help/503</link>
+          <pubDate>Sat, 13 Jan 2018 03:00:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-503</guid>
+          <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+        </item>
+        <item>
+          <title>Honda Odyssey CAN Findings</title>
+          <dc:creator><![CDATA[mscreations]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Well, I finally got my carloop giving me useful information. I have a 2014 Honda Odyssey Touring Elite I’m playing with. So far I’ve only attached to the F-CAN which is 500kbps. The more interesting CAN stuff is probably going to be on the B-CAN (33.33kbps) but I haven’t tried patching into it yet.</p>
+<p>So without further ado…<br>
+CAN ID: 0x164 Byte 0<br>
+0b 1xxx xxxx = Accel/Resume Cruise Button<br>
+0b x1xx xxxx = Decel/Set Cruise Button<br>
+0b xx1x xxxx = Cruise On/Off Switch<br>
+0b 11xx xxxx = Cruise Cancel Switch<br>
+0b xxxx x1xx = Emergency Brake On/Off</p>
+<p>0b xxxx xx00 = Headlights off<br>
+0b xxxx xx01 = Parking lights on/off<br>
+0b xxxx xx00 = Auto Mode/Lights off (daytime)<br>
+0b xxxx xx10 = Auto Mode/Lights on (dark) ALSO for Headlights on<br>
+0b xxxx xx11 = High beams</p>
+<p>Byte 2 0b xx1x xxxx = Fog lights on/off</p>
+<p>CAN ID: 0x324 Byte 4 Looks to be the set speed for cruise control.<br>
+CAN ID: 0x255 Bytes 0-3 Look to be wheel speed sensors. Related to vehicle speed<br>
+CAN ID: 0x40c Continuously keeps transmitting the vehicle VIN #. Not sure if this is related to the immobilizer or not.</p>
+<p>CAN ID: 0x294 Byte 0<br>
+0b x1xx xxxx = Right Turn Signal<br>
+0b xx1x xxxx = Left Turn Signal<br>
+0b xxxx 1xxx = Intermittent Wipers<br>
+0b xxx1 xxxx = Lo Wipers<br>
+0b xxx1 1xxx = Hi/Mist Wipers</p>
+<p>CAN ID: 0x35e Byte 1 0b xxxx 1xxx = LDW on/off (1 = off, 0 = on)<br>
+CAN ID: 0x1a4 Byte 3 0b xxx1 xxxx = Traction control on/off</p>
+<p>CAN ID: 0x405 Byte 4<br>
+0b 1xxx xxxx = Drivers sliding door open<br>
+0b x1xx xxxx = Passenger Door Open<br>
+0b xx1x xxxx = Driver Door Open<br>
+Byte 5<br>
+0b xxxx xxx1 = Passenger Sliding Door Open<br>
+0b xxxx xx1x = Rear tailgate open</p>
+<p>I’m still looking for a few specific things. I know that the TPMS is connected to F-CAN and I’m hoping that the actual pressure of each tire is available on the CAN. The Forward Collision Warning/Lane Departure Warning (FCW/LDW) module is also on the F-CAN and is supremely temperamental to issues on the CAN bus. I had tried overriding a message and the FCW module starts throwing out warnings pretty easily. I also haven’t quite figured out if the gear range is on the CANBUS (or rather what the IDs are for it).</p>
+<p>I also noticed quite a bit of “oddness” with my car. Although connecting to F-CAN yielded 11-bit identifiers, I had to modify the VIN Reader app to send/receive 29-bit identifiers in order to query the VIN number. When I have the carloop setup as a socketcan device it is programmed to only accept 11-bit identifiers. This may prove to be a hinderance if I run into any more 29-bit identifiers. Especially since cansniffer can’t work with anything other than 11-bit identifiers.</p>
+<p>Another issue that I’m not sure will work yet is the B-CAN baud rate of 33.33kbps. I modified the socketcan example to add in a new value (S9) that corresponds to 33333 for the rate. It seems to get set correctly, but I have not tried to see whether I can actually get information off the bus yet. Has anyone else had an odd baud rate to contend with before?</p>
+<p>As always, if anyone can expand on what I’ve found I’d appreciate it. I’ll post more updates as I find them.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/honda-odyssey-can-findings/410">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/honda-odyssey-can-findings/410</link>
+          <pubDate>Mon, 07 Aug 2017 00:58:18 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-410</guid>
+          <source url="https://community.carloop.io/t/honda-odyssey-can-findings/410.rss">Honda Odyssey CAN Findings</source>
+        </item>
+        <item>
+          <title>ADS pre OBD connections to CARLOOP BMW</title>
+          <dc:creator><![CDATA[scrapsparcs]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>I have a 1994 BMW E32 740 which had a pre OBD connector for car coding. It has a round pin connector under the hood, which some people connect out thru a serial port.<br>
+Apparently serial connections use a data transfer protocol that is different from OBD.<br>
+What I would like to hear about is anyone who knows how to use this output to provide data to a CarLoop.</p>
+<p>Because these cars are getting pretty old, most of the forums where these t tools are discussed are not very active<br>
+Two that come to mind are</p>
+<p><a href="http://www.interfaces4beemers.net/adsobd.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.interfaces4beemers.net/adsobd.html</a><br>
+and</p>
+<p><a href="http://openlabs.co/OSHW/Tiny-ADS-Interface-r2" class="onebox" target="_blank" rel="noopener nofollow ugc">http://openlabs.co/OSHW/Tiny-ADS-Interface-r2</a></p>
+<p>I’m hoping someone in Carloop community can help me get my car connected.</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/ads-pre-obd-connections-to-carloop-bmw/348">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/ads-pre-obd-connections-to-carloop-bmw/348</link>
+          <pubDate>Tue, 06 Jun 2017 20:16:34 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-348</guid>
+          <source url="https://community.carloop.io/t/ads-pre-obd-connections-to-carloop-bmw/348.rss">ADS pre OBD connections to CARLOOP BMW</source>
+        </item>
+        <item>
+          <title>VW Jetta Electrical Wiring Diagram</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Full electrical system description for a VW Jetta. CAN bus architecture described on page 20: <a href="http://www.vaglinks.com/Docs/VW/Misc/VWUSA.COM_VW_MK5_Jetta_ElectricalSystem_SSP_873403.pdf">http://www.vaglinks.com/Docs/VW/Misc/VWUSA.COM_VW_MK5_Jetta_ElectricalSystem_SSP_873403.pdf</a></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/vw-jetta-electrical-wiring-diagram/325">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/vw-jetta-electrical-wiring-diagram/325</link>
+          <pubDate>Wed, 24 May 2017 18:46:46 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-325</guid>
+          <source url="https://community.carloop.io/t/vw-jetta-electrical-wiring-diagram/325.rss">VW Jetta Electrical Wiring Diagram</source>
+        </item>
+        <item>
+          <title>Ford Fusion 2017 CAN Message IDs</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Found this interesting list of CAN message IDs avaialble on the DLC (OBD-II port) of a 2017 Ford Fusion: <a href="https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing">https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing</a></p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277</link>
+          <pubDate>Tue, 02 May 2017 08:38:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-277</guid>
+          <source url="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277.rss">Ford Fusion 2017 CAN Message IDs</source>
+        </item>
+        <item>
+          <title>Carloop SALE on Massdrop!</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Here’s the deal: Massdrop is offering Carloop on their DIY-Tech category for a discount during their 7 day drop.</p>
+<p>If you were thinking about getting Carloop at a discounted price for a group buy, your meetup group or makerspace this is a great opportunity to do so.</p>
+<p>Deal starts 4/19/2017 and ends 4/26/2017.  The more people join the lower the cost.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://drop.com/buy/carloop-starter-kits-basic-bluetooth-3g">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/4d931b943ce30df9dd7c3f8cf7879f06f9f165a6.jpeg" class="site-icon" data-dominant-color="626262" width="192" height="192">
+
+      <a href="https://drop.com/buy/carloop-starter-kits-basic-bluetooth-3g" target="_blank" rel="noopener">Drop</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:600/315;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/f2996ce56f974b4c37321117f37803da82d41df4.jpeg" class="thumbnail" data-dominant-color="A4A59F" width="600" height="315"></div>
+
+<h3><a href="https://drop.com/buy/carloop-starter-kits-basic-bluetooth-3g" target="_blank" rel="noopener">Carloop Starter Kits: Basic, Bluetooth &amp; 3G | Dev Kits | Drop</a></h3>
+
+  <p>Drop exclusive price and reviews: Carloop Starter Kits: Basic, Bluetooth &amp; 3G | Connected to your car's Engine Control Module (a mini computer that monitors...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-sale-on-massdrop/265">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-sale-on-massdrop/265</link>
+          <pubDate>Wed, 19 Apr 2017 03:52:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-265</guid>
+          <source url="https://community.carloop.io/t/carloop-sale-on-massdrop/265.rss">Carloop SALE on Massdrop!</source>
+        </item>
+        <item>
+          <title>Metaspoit HW Bridge</title>
+          <dc:creator><![CDATA[Phil]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>Is anyone working on metaspoit HW bridge support for carloop as described here…?<br>
+<a href="https://community.rapid7.com/community/transpo-security/blog/2017/02/02/exiting-the-matrix" class="onebox" target="_blank" rel="noopener nofollow ugc">https://community.rapid7.com/community/transpo-security/blog/2017/02/02/exiting-the-matrix</a></p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/metaspoit-hw-bridge/221">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/metaspoit-hw-bridge/221</link>
+          <pubDate>Thu, 23 Feb 2017 04:10:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-221</guid>
+          <source url="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss">Metaspoit HW Bridge</source>
+        </item>
+        <item>
+          <title>Announcing Two New Carloop Accessories</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>We are very excited to announce our latest addition to the Carloop Store!  Please give your warmest welcome to:</p>
+<ul>
+<li>Female OBD-II Port: <a href="https://store.carloop.io/products/female-obd-ii-port">https://store.carloop.io/products/female-obd-ii-port</a></li>
+<li>OBD-I Splitter Y-Cable: <a href="https://store.carloop.io/products/obd-ii-splitter-y-cable">https://store.carloop.io/products/obd-ii-splitter-y-cable</a></li>
+</ul>
+<p>We’ve searched high and low for a quality supplier of these two items and we’ve found one that meets our standards.  I’ve already used the Y-Cable to quickly figure out how to send the right CAN Messages to select specific OBD-II modes or reverse engineer proprietary scan tools.</p>
+<p>And of course, the Female OBD-II Port was thoroughly tested on our Carloop Dashboard.  (See pic below)<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/94c2e1ccef77c46de08414eeaced431292dbd286.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/94c2e1ccef77c46de08414eeaced431292dbd286" title="IMG_0720.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_500x500.JPG" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_500x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_750x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_1000x1000.jpeg 2x" data-dominant-color="493930"></a></div><p></p>
+<p>Here’s a close-up:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/9563028618a665f71cd46e1cf011afff825afedd.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/9563028618a665f71cd46e1cf011afff825afedd" title="IMG_0901.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_500x500.JPG" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_500x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_750x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_1000x1000.JPG 2x" data-dominant-color="7B756E"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/announcing-two-new-carloop-accessories/171">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/announcing-two-new-carloop-accessories/171</link>
+          <pubDate>Fri, 11 Nov 2016 20:48:02 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-171</guid>
+          <source url="https://community.carloop.io/t/announcing-two-new-carloop-accessories/171.rss">Announcing Two New Carloop Accessories</source>
+        </item>
+        <item>
+          <title>J1939 on my boat</title>
+          <dc:creator><![CDATA[mpo881]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>I have just started reading about Carloop. Although my topic appears in Car Hacking, I really would like to use it on my boat. It is a 2007 and uses J1939 protocol. I apologize upfront for my newbie question but will Carloop read J1939? I did a search of the forum and found only one reference. If anyone can point me in the right direction I would appreciate it.<br>
+Thanks very much</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/j1939-on-my-boat/119</link>
+          <pubDate>Thu, 01 Sep 2016 16:01:00 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-119</guid>
+          <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+        </item>
+        <item>
+          <title>Car Hax Meetup Projects</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>This topic is the specifically related to the <a href="http://www.meetup.com/Car-Hax/">Car Hax Meetup</a> it’s a forum to discuss progress on current Car Hacking projects.  Feel free to add any project proposals you’d like to work on and <img src="//carloop-community.dyndns.org/images/emoji/twitter/thumbsup.png?v=12" title=":thumbsup:" class="emoji" alt=":thumbsup:" loading="lazy" width="20" height="20"> the ones you’d like to join.</p>
+            <p><small>16 posts - 6 participants</small></p>
+            <p><a href="https://community.carloop.io/t/car-hax-meetup-projects/106">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/car-hax-meetup-projects/106</link>
+          <pubDate>Thu, 18 Aug 2016 17:54:06 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-106</guid>
+          <source url="https://community.carloop.io/t/car-hax-meetup-projects/106.rss">Car Hax Meetup Projects</source>
+        </item>
+        <item>
+          <title>About the Car Hacking category</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>This category is intended for all topics related to Car Hacking, tips, tricks, and new open source tools that work well to hack different cars.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/about-the-car-hacking-category/105">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/about-the-car-hacking-category/105</link>
+          <pubDate>Thu, 18 Aug 2016 17:43:49 +0000</pubDate>
+          <discourse:topicPinned>Yes</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-105</guid>
+          <source url="https://community.carloop.io/t/about-the-car-hacking-category/105.rss">About the Car Hacking category</source>
+        </item>
+  </channel>
+</rss>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop basic - Can&#39;t see any CAN message</title>
+    <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731</link>
+    <description>Hello everyone,
+
+I&#39;m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car.
+
+I could do some basic stuffs with the carloop (particle led blinking, socketcan firmware flashing). But then when I plug the carloop with socketcan firmware to my obd2 port, candump/cansniffer couldn&#39;t see any can messages from the car. I could only see messages send by me using cansend. I even used cangen during a while to probe for PIDs.
+
+For information, it&#39;s a Renault Grand Scenic 3 from 2014.
+
+One other thing: the commands &quot;particle serial identify&quot; or &quot;particle serial monitor&quot; all returned an error &quot;serial timeout&quot;.
+
+What do you think about this case? Thanks in advance for your help.
+
+Cheers</description>
+    
+    <lastBuildDate>Tue, 25 Sep 2018 20:41:29 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> the carloop takes power from both my car and the usb connection.  And when it’s only plugged into the car, the photon’s led blinks, so I guess the photon is plugged into the carloop.<br>
+Ngocdh</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/10</link>
+        <pubDate>Tue, 25 Sep 2018 20:41:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-10</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, the Carloop basic comes with the Photon already plugged in.  Maybe try unplugging it then plugging it back in, just to make sure the connection is secure.</p>
+<p>Oh, I just thought of something.  The Carloop power supply expects to get its power from the car.  I am not sure if the CAN transceiver chip will power up if that supply is missing.  So, I forgot to ask earlier if you are plugging it into a car, or just using power from USB?  (I will have to try that one myself.)</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/9</link>
+        <pubDate>Tue, 25 Sep 2018 19:59:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-9</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>And it’s a carloop basic unit that I just purchased, so yes I supposed the photon is plugged into the carloop, or am I missing something maybe?<br>
+Ngocdh</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/8</link>
+        <pubDate>Tue, 25 Sep 2018 19:51:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-8</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks alot <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> for the thorough analysis of my screenshot. It’s very much appreciated.<br>
+Actually the part where the photon was offline is irrelevant, that was when I restarted the photon. You can see that the VIN reader app could detect the photon when it was back online.<br>
+I have only one photon and one particle account.<br>
+I did try many times to plug the Carloop directly to the OBD2, or to the splitter, with or without the ELM327, and all that with Windows, Linux, and Linux VM. Nothing could make the carloop read anything from the CAN bus.<br>
+Seeing that operations work quite well with the photon, I’m thinking there’s a problem with the carloop, because so far, it’s the only component that hasn’t show any “signal”. The led was on when I plugged the carloop to the car without usb cable though.<br>
+Ngocdh</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/7</link>
+        <pubDate>Tue, 25 Sep 2018 19:48:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-7</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ngocdh">@ngocdh</a>, It looks like from your screen shot that you got the particle serial monitor working okay.<br>
+It also looks like that VIN reader app flashed okay, since it is trying to read the VIN.<br>
+Usually, that is all it takes to get going…</p>
+<p>Can you verify that your Photon is plugged into the Carloop securely?<br>
+Also, can you verify that the Carloop is plugged into the OBD2 splitter securely?<br>
+You could even try plugging the Carloop directly into the car without using the splitter.<br>
+Those checks all address potential connection problems.  After that, I would suspect a problem with the Carloop or the Photon.</p>
+<p>One thing that is strange from your screenshot is that “dhp” shows as offline when you do particle list, but the particle serial monitor is working.   Do you have more than one Photon, or more than one particle account?  Is the Photon named “dhp” plugged into the Carloop?</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/6</link>
+        <pubDate>Tue, 25 Sep 2018 19:22:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-6</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello Alan,</p>
+<p>Yes I tried with both virtual and non-virtual Linux.</p>
+<p>Cheers</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/5</link>
+        <pubDate>Mon, 24 Sep 2018 22:41:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-5</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>hey, from your screenshot it looks like you are using a Windows Operating System. Have you tried using a Linux Virtual Machine with socketcan?</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/4</link>
+        <pubDate>Mon, 24 Sep 2018 22:01:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-4</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>Ok, so I flashed the VIN reader app (<a href="https://www.carloop.io/apps/app-vin-reader/">https://www.carloop.io/apps/app-vin-reader/</a>), but it seems that the CAN interface doesn’t work (my car was on, and the ELM327 worked fine):<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/1575a15eb9eb40642295f74e02ac0827810e9521.jpg" width="647" height="349"></p>
+<p>I’m thinking my carloop basic unit is faulty.</p>
+<p>May I get some help from <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> or <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> please?</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/3</link>
+        <pubDate>Mon, 24 Sep 2018 21:22:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-3</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>So here’s what I’ve done so far: I bought a wifi ELM327 and a OBD2 splitter to sniff CAN messages using the carloop.<br>
+The ELM327 works well, while I’ve still got nothing on the carloop.</p>
+<p>Any chance there’s a problem with my carloop?</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/2</link>
+        <pubDate>Sat, 22 Sep 2018 19:18:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-2</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+      <item>
+        <title>Carloop basic - Can&#39;t see any CAN message</title>
+        <dc:creator><![CDATA[ngocdh]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello everyone,</p>
+<p>I’m quite new here. My carloop basic just came in yesterday and I already need your help to start playing with my car.</p>
+<p>I could do some basic stuffs with the carloop (particle led blinking, socketcan firmware flashing). But then when I plug the carloop with socketcan firmware to my obd2 port, candump/cansniffer couldn’t see any can messages from the car. I could only see messages send by me using cansend. I even used cangen during a while to probe for PIDs.</p>
+<p>For information, it’s a Renault Grand Scenic 3 from 2014.</p>
+<p>One other thing: the commands “particle serial identify” or “particle serial monitor” all returned an error “serial timeout”.</p>
+<p>What do you think about this case? Thanks in advance for your help.</p>
+<p>Cheers</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731/1</link>
+        <pubDate>Fri, 21 Sep 2018 17:02:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-731-1</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-cant-see-any-can-message/731.rss">Carloop basic - Can&#39;t see any CAN message</source>
+      </item>
+  </channel>
+</rss>

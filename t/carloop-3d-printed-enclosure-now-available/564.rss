@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CarLoop 3D Printed Enclosure now available</title>
+    <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564</link>
+    <description>I&#39;ve had my CarLoop for a couple days but the first thing I wanted to do was get an enclosure around it and my Particle Photon.  I sat down and designed one in Fusion 360 and made the STL files available on Thingiverse for printing.  So anyone with a 3D printer can make a case in about 1.5 hours of printing.
+
+I designed the case to be a SnapFit case which means there are no screws.  I also left a plug hole exposed to connect a USB cable to the Particle Photon.  I placed a 3MM hole just above the Particle Photon&#39;s Status LED so you can see the status.  You can also cut a small piece of 3mm Clear or Translucent filament and place it in the hole and it acts like a light pipe showing the status a little more vividly.
+
+This is simply my first iteration.  Might tweak it for an antenna or if I decide to get a GPS, I&#39;ll make a deeper case.  I&#39;ll be sure to share any alterations here.
+
+Link to download on Thingiverse is here --&gt; [CarLoop and Particle Photon Enclosure](https://www.thingiverse.com/thing:2817522)
+
+Have fun and happy printing!
+
+&lt;img src=&quot;/uploads/default/original/1X/912f214aab5e5b1f09823802d6197d03ecfc0552.png&quot; width=&quot;354&quot; height=&quot;472&quot;&gt;&lt;img src=&quot;/uploads/default/original/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4.png&quot; width=&quot;375&quot; height=&quot;500&quot;&gt;</description>
+    
+    <lastBuildDate>Tue, 13 Mar 2018 11:25:57 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="https://www.thingiverse.com/thing:2824397" rel="noopener nofollow ugc">CarLoop Particle Photon &amp; GPS Enclosure</a> is now up at Thingiverse.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ead4ace46067154bd06a4e71c09a86504459a068.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/ead4ace46067154bd06a4e71c09a86504459a068" title="IMG_1671.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ead4ace46067154bd06a4e71c09a86504459a068_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ead4ace46067154bd06a4e71c09a86504459a068_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/ead4ace46067154bd06a4e71c09a86504459a068_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/ead4ace46067154bd06a4e71c09a86504459a068_2_1332x1000.jpg 2x" data-dominant-color="7C644F"></a></div><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/31756800d8570ba909812fb240bee2f4e2b70c54.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/31756800d8570ba909812fb240bee2f4e2b70c54" title="IMG_1670.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/31756800d8570ba909812fb240bee2f4e2b70c54_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/31756800d8570ba909812fb240bee2f4e2b70c54_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/31756800d8570ba909812fb240bee2f4e2b70c54_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/31756800d8570ba909812fb240bee2f4e2b70c54_2_1332x1000.jpg 2x" data-dominant-color="80604A"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/6</link>
+        <pubDate>Tue, 13 Mar 2018 11:25:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-6</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I just finished the rough resize.  Firing up the printer now.  I’ll post the end result in a couple hours.</p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/5</link>
+        <pubDate>Mon, 12 Mar 2018 23:33:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-5</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[osmosis311]]></dc:creator>
+        <description><![CDATA[
+            <p>Please do!  Would really love to have a case that also fits the GPS!</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/4</link>
+        <pubDate>Mon, 12 Mar 2018 13:48:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-4</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I just ordered the GPS unit today.  Going to work on a case design for that once I get it.  I already have a second version with a button that allows resetting of the particle photon.</p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/3</link>
+        <pubDate>Fri, 09 Mar 2018 14:04:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-3</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Looks nice!</p>
+<p>I am assuming in general having a port for an antenna or the JST cable for the GPS might be more useful than the larger case, or maybe do both variations.</p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/2</link>
+        <pubDate>Thu, 08 Mar 2018 04:27:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-2</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+      <item>
+        <title>CarLoop 3D Printed Enclosure now available</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve had my CarLoop for a couple days but the first thing I wanted to do was get an enclosure around it and my Particle Photon.  I sat down and designed one in Fusion 360 and made the STL files available on Thingiverse for printing.  So anyone with a 3D printer can make a case in about 1.5 hours of printing.</p>
+<p>I designed the case to be a SnapFit case which means there are no screws.  I also left a plug hole exposed to connect a USB cable to the Particle Photon.  I placed a 3MM hole just above the Particle Photon’s Status LED so you can see the status.  You can also cut a small piece of 3mm Clear or Translucent filament and place it in the hole and it acts like a light pipe showing the status a little more vividly.</p>
+<p>This is simply my first iteration.  Might tweak it for an antenna or if I decide to get a GPS, I’ll make a deeper case.  I’ll be sure to share any alterations here.</p>
+<p>Link to download on Thingiverse is here → <a href="https://www.thingiverse.com/thing:2817522" rel="noopener nofollow ugc">CarLoop and Particle Photon Enclosure</a></p>
+<p>Have fun and happy printing!</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/912f214aab5e5b1f09823802d6197d03ecfc0552.png" width="354" height="472"></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4.png" data-download-href="//carloop-community.dyndns.org/uploads/default/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4" title="CarLoopPhotonEnclosureLED.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4_2_375x500.png" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4_2_375x500.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4_2_562x750.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/b6c6daad7d5abffd3945e579ea7b5bf1fcfc62c4.png 2x" data-dominant-color="5F5353"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564/1</link>
+        <pubDate>Wed, 07 Mar 2018 12:24:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-564-1</guid>
+        <source url="https://community.carloop.io/t/carloop-3d-printed-enclosure-now-available/564.rss">CarLoop 3D Printed Enclosure now available</source>
+      </item>
+  </channel>
+</rss>

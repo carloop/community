@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Unlock your car remotely</title>
+    <link>https://community.carloop.io/t/unlock-your-car-remotely/56</link>
+    <description>Hey @protechcaraudio, during Maker Faire you showed us some interesting links that help you unlock a car via CAN.  I think there are a lot of people here that would love to know how to do that.  I know it is very manufacturer dependent but are there some that are easier than others?  Which car would you try first?</description>
+    
+    <lastBuildDate>Tue, 31 May 2016 17:49:27 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/unlock-your-car-remotely/56.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Unlock your car remotely</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/myztiq">@Myztiq</a>, someone recently sent out this XML file containing a ton of decoded CAN messages for Subaru.  Let me know if useful at all: <a href="http://www.romraider.com/forum/download/file.php?id=9917&amp;sid=d3ec4265382e98e678406b626714ceee">http://www.romraider.com/forum/download/file.php?id=9917&amp;sid=d3ec4265382e98e678406b626714ceee</a></p>
+          <p><a href="https://community.carloop.io/t/unlock-your-car-remotely/56/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/unlock-your-car-remotely/56/4</link>
+        <pubDate>Tue, 31 May 2016 17:49:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-56-4</guid>
+        <source url="https://community.carloop.io/t/unlock-your-car-remotely/56.rss">Unlock your car remotely</source>
+      </item>
+      <item>
+        <title>Unlock your car remotely</title>
+        <dc:creator><![CDATA[Myztiq]]></dc:creator>
+        <description><![CDATA[
+            <p>I could be totally wrong here, but from what I was able to tell I only got messages on my Impreza WRX when the car was actually turned on. The Electron was in fact turned on, but I can take a look again when I get back around to my car in a few days. Overall working with the Electron and reading CAN messages was relatively easy to get started. It may just be because I was monitoring for CAN messages instead of initiating calls myself. Triggering lock/unlock with my fob did not trigger any messages however.</p>
+          <p><a href="https://community.carloop.io/t/unlock-your-car-remotely/56/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/unlock-your-car-remotely/56/3</link>
+        <pubDate>Mon, 30 May 2016 23:17:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-56-3</guid>
+        <source url="https://community.carloop.io/t/unlock-your-car-remotely/56.rss">Unlock your car remotely</source>
+      </item>
+      <item>
+        <title>Unlock your car remotely</title>
+        <dc:creator><![CDATA[protechcaraudio]]></dc:creator>
+        <description><![CDATA[
+            <p>The easiest to play around with would probably be American cars. Around 2003 GM and Chrysler started introducing CAN controled door locks. I’m still waiting on my carloop but once I get it, I’ll post what I got working on my Buick. Japanese cars are less likely to have CAN connected locks. Any vehicle can be interfaced with using relays triggered by an output of the Electron.  To find out if your vehicle uses CAN to lock and unlock you would need to log or monitor the CAN data while using the locks. Try pressing the unlock button on the driver and passenger doors, try pressing unlock from the keyless transmitter, and try turning the key in the driver and passenger door cylinders.  Some, all, or none of these will produce a reusable CAN message for unlock depending on the vehicle.</p>
+          <p><a href="https://community.carloop.io/t/unlock-your-car-remotely/56/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/unlock-your-car-remotely/56/2</link>
+        <pubDate>Tue, 24 May 2016 23:42:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-56-2</guid>
+        <source url="https://community.carloop.io/t/unlock-your-car-remotely/56.rss">Unlock your car remotely</source>
+      </item>
+      <item>
+        <title>Unlock your car remotely</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/protechcaraudio">@protechcaraudio</a>, during Maker Faire you showed us some interesting links that help you unlock a car via CAN.  I think there are a lot of people here that would love to know how to do that.  I know it is very manufacturer dependent but are there some that are easier than others?  Which car would you try first?</p>
+          <p><a href="https://community.carloop.io/t/unlock-your-car-remotely/56/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/unlock-your-car-remotely/56/1</link>
+        <pubDate>Tue, 24 May 2016 16:58:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-56-1</guid>
+        <source url="https://community.carloop.io/t/unlock-your-car-remotely/56.rss">Unlock your car remotely</source>
+      </item>
+  </channel>
+</rss>

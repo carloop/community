@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Welcome to Carloop</title>
+    <link>https://community.carloop.io/t/welcome-to-carloop/8</link>
+    <description>Congratulations on joining the Carloop community!
+
+You are at the right place if you want to make apps for your car, using OBD signals, GPS and the power of the [Particle platform](https://particle.io).
+
+You&#39;re welcome here whether you&#39;re a web programmer, an embedded pro, a car enthusiast or someone just curious to learn about connected cars.
+
+Go to https://carloop.io to get your own Carloop device and come back here to exchange ideas on what you an do with it.
+
+If you&#39;re curious about on-board diagnostics (OBD) or CAN, go ahead an ask a question. We&#39;ll be happy to answer.</description>
+    
+    <lastBuildDate>Mon, 28 Mar 2016 22:07:18 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/welcome-to-carloop/8.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Welcome to Carloop</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            
+          <p><a href="https://community.carloop.io/t/welcome-to-carloop/8/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/welcome-to-carloop/8/2</link>
+        <pubDate>Mon, 28 Mar 2016 22:07:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-8-2</guid>
+        <source url="https://community.carloop.io/t/welcome-to-carloop/8.rss">Welcome to Carloop</source>
+      </item>
+      <item>
+        <title>Welcome to Carloop</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Congratulations on joining the Carloop community!</p>
+<p>You are at the right place if you want to make apps for your car, using OBD signals, GPS and the power of the <a href="https://particle.io">Particle platform</a>.</p>
+<p>You’re welcome here whether you’re a web programmer, an embedded pro, a car enthusiast or someone just curious to learn about connected cars.</p>
+<p>Go to <a href="https://carloop.io">https://carloop.io</a> to get your own Carloop device and come back here to exchange ideas on what you an do with it.</p>
+<p>If you’re curious about on-board diagnostics (OBD) or CAN, go ahead an ask a question. We’ll be happy to answer.</p>
+          <p><a href="https://community.carloop.io/t/welcome-to-carloop/8/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/welcome-to-carloop/8/1</link>
+        <pubDate>Sun, 07 Feb 2016 07:23:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-8-1</guid>
+        <source url="https://community.carloop.io/t/welcome-to-carloop/8.rss">Welcome to Carloop</source>
+      </item>
+  </channel>
+</rss>

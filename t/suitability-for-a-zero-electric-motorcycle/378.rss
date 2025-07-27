@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Suitability for a Zero electric motorcycle?</title>
+    <link>https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378</link>
+    <description>I&#39;m trying to assemble a datalogging and control package for the Zero electric motorcycle community.
+
+The OBD-II plug on a Zero does not behave normally, and aside from CAN bus access, the main feature we want is to read a serial terminal off of the main bike board.
+
+Per http://zeromanual.com/index.php/How_to_build_a_cable_to_access_the_MBB, attaching to pins 8 and 9 yields the RX/TX pair for the serial terminal.
+
+Q: Can the Carloop read from those pins in a straightforward way and be configured to primarily work that way?
+
+I&#39;m looking through the app examples but it&#39;s not clear about arbitrary pin access and I&#39;ve seen that many OBD plugs don&#39;t even wire up vendor-allocated pins like these.
+
+One nice-to-have feature would be if it accepted power from another port, as well.</description>
+    
+    <lastBuildDate>Fri, 07 Jul 2017 04:05:08 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Suitability for a Zero electric motorcycle?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/briantrice">@briantrice</a>,</p>
+<p>The zero electric bike forum and all the vehicle hacking looks really cool!</p>
+<p>The Carloop is hardwired to follow the standards for OBD-II.  Unfortunately, the zero bikes are not wired that way.  Thanks for the link; that was exactly the information needed to help you out.</p>
+<p>It looks like Carloop is not going to do what you want.<br>
+However, you could use it as design as inspiration to design your own solution still using a Photon/Electron/RedbearDuo.</p>
+<p>The main clues is your interface is TTL Serial with Rx/Tx at 38400 baud.<br>
+The Carloop interface is CANbus, which is a differential (not TTL) bi-directional (Rx &amp; Tx share the same wires).</p>
+<p>A great resource for the OBD connector is on Wikipedia:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector" target="_blank" rel="noopener">On-board diagnostics | OBD-II diagnostic connector</a></h3>
+
+<p>The OBD-II specification provides for a standardized hardware interface — the female 16-pin (2x8) J1962 connector, where type A is used for 12-volt vehicles and type B for 24-volt vehicles. Unlike the OBD-I connector, which was sometimes found under the hood of the vehicle, the OBD-II connector is required to be within 2 feet (0.61&nbsp;m) of the steering wheel (unless an exemption is applied for by the manufacturer, in which case it is still somewhere within reach of the driver).
+ SAE J1962 defines t...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Carloop is hardwired for the OBD connector as follows:<br>
+Pin 6 is CAN-High<br>
+Pin 14 is CAN-Low<br>
+Pin 4 is chassis GND, which is connected to power GND in Carloop (not really required or recommended)<br>
+Pin 5 is signal GND, which is connected to power GND in Carloop<br>
+Pin 16 is Battery +12V, which provides power to Carloop</p>
+<p>What I do not know is if the zero bike has a CANbus interface on the standard pins 6 &amp; 14 of the OBD connector.</p>
+<p>The reason for not providing arbitrary access to the pins is that would make Carloop more complicated (matrix switch &amp; complex circuit board) plus it would be less protected.  The other pins are “Manufacturer discretion” which could be used for something totally different that might not be compatible with Carloop or even harmful to the Carloop electronics.  For example, putting CANbus voltages on a TTL Serial interface would probably damage the TTL Serial circuitry.</p>
+<p>The Photon/Electron/RedbearDuo have Serial interfaces.  In fact, Carloop connects a Serial interface to the GPS connector.</p>
+<p>You could re-design the Carloop circuit to add connections from pins 8 &amp; 9 to a serial interface of the microprocessor device, plus modify the power source circuitry to something that works for you.</p>
+<p>It is doable, but it will take some work.  I am doing something similar, except I am re-designing Carloop to add a K-Line interface for pins 7 &amp; 15 of the OBD connector, which means adding a K-Line transceiver chip into the circuit.</p>
+          <p><a href="https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378/2</link>
+        <pubDate>Fri, 07 Jul 2017 04:05:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-378-2</guid>
+        <source url="https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378.rss">Suitability for a Zero electric motorcycle?</source>
+      </item>
+      <item>
+        <title>Suitability for a Zero electric motorcycle?</title>
+        <dc:creator><![CDATA[briantrice]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m trying to assemble a datalogging and control package for the Zero electric motorcycle community.</p>
+<p>The OBD-II plug on a Zero does not behave normally, and aside from CAN bus access, the main feature we want is to read a serial terminal off of the main bike board.</p>
+<p>Per <a href="http://zeromanual.com/index.php/How_to_build_a_cable_to_access_the_MBB" class="inline-onebox" rel="noopener nofollow ugc">How to build a cable to access the MBB - Unofficial Zero Manual</a>, attaching to pins 8 and 9 yields the RX/TX pair for the serial terminal.</p>
+<p>Q: Can the Carloop read from those pins in a straightforward way and be configured to primarily work that way?</p>
+<p>I’m looking through the app examples but it’s not clear about arbitrary pin access and I’ve seen that many OBD plugs don’t even wire up vendor-allocated pins like these.</p>
+<p>One nice-to-have feature would be if it accepted power from another port, as well.</p>
+          <p><a href="https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378/1</link>
+        <pubDate>Thu, 06 Jul 2017 19:01:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-378-1</guid>
+        <source url="https://community.carloop.io/t/suitability-for-a-zero-electric-motorcycle/378.rss">Suitability for a Zero electric motorcycle?</source>
+      </item>
+  </channel>
+</rss>

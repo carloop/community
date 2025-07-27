@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Can I use the Photon to drive an SPI display? - Carloop Community</title>
+    <meta name="description" content="Hi Carloop community! 
+I’d like to use a Carloop &amp;amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I’d like to know if I can still use SPI with the Photon while the Carloop is installed so I can d&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="451.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="CLvgqk7fNkQ2hAlVT9gDh7oRg">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="CLvgqk7fNkQ2hAlVT9gDh7oRg"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Can I use the Photon to drive an SPI display?&#39;" href="451.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/can-i-use-the-photon-to-drive-an-spi-display/451">
+<meta name="twitter:url" content="/t/can-i-use-the-photon-to-drive-an-spi-display/451">
+<meta property="og:title" content="Can I use the Photon to drive an SPI display?">
+<meta name="twitter:title" content="Can I use the Photon to drive an SPI display?">
+<meta property="og:description" content="Hi Carloop community!  I’d like to use a Carloop &amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I’d like to know if I can still use SPI with the Photon while the Carloop is installed so I can display via a couple of:  OLED Breakout Board - 16-bit Color 1.5 w/microSD holder [EYESPI Connector] : ID 1431 : $39.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits  Any examples of something similar?  Hopefully I can get my corporate overlords to allow me to open ...">
+<meta name="twitter:description" content="Hi Carloop community!  I’d like to use a Carloop &amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I’d like to know if I can still use SPI with the Photon while the Carloop is installed so I can display via a couple of:  OLED Breakout Board - 16-bit Color 1.5 w/microSD holder [EYESPI Connector] : ID 1431 : $39.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits  Any examples of something similar?  Hopefully I can get my corporate overlords to allow me to open ...">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="4 ?">
+<meta property="article:published_time" content="2017-10-01T06:19:23+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="451.html">Can I use the Photon to drive an SPI display?</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Can I use the Photon to drive an SPI display?'>
+      <link itemprop='url' href='451.html'>
+      <meta itemprop='datePublished' content='2017-10-01T06:19:22Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/WarriorOfWire.html'><span itemprop='name'>WarriorOfWire</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="451.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2017-10-01T06:19:23Z' class='post-time'>
+                    October 1, 2017,  6:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-01T06:19:23Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Carloop community!</p>
+<p>I’d like to use a Carloop &amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I’d like to know if I can still use SPI with the Photon while the Carloop is installed so I can display via a couple of:  <a href="https://www.adafruit.com/product/1431" class="inline-onebox" rel="noopener nofollow ugc">OLED Breakout Board - 16-bit Color 1.5 w/microSD holder [EYESPI Connector] : ID 1431 : $39.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits</a></p>
+<p>Any examples of something similar?  Hopefully I can get my corporate overlords to allow me to open source my efforts once ready for general consumption.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/99de0e745dbe2c0c99d47f06bc1394639ca92dff.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-03T13:37:51Z' class='post-time'>
+                    October 3, 2017,  1:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-03T13:37:51Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="../../u/WarriorOfWire.html">@WarriorOfWire</a>,</p>
+<p>I have had some ideas for using a Photon with Carloop and other devices, but have not had the chance to do anything along these lines yet.</p>
+<p>For SPI, the Photon has hardware support for SPI on the sets of pins in the Photon documents here:<br>
+<a href="https://docs.particle.io/reference/firmware/photon/#spi" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/reference/firmware/photon/#spi</a></p>
+<p>That part was easy enough to find.  The next part is the Carloop design, which is not quite so easy to find, but is on GitHub here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/hardware">
+  <header class="source">
+      <img src="../../favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/hardware" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/99de0e745dbe2c0c99d47f06bc1394639ca92dff_2_690x345.png" class="thumbnail" data-dominant-color="F1EFF0" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/hardware" target="_blank" rel="noopener">GitHub - carloop/hardware: OBD-II CAN adapter for Particle Electron, Photon,...</a></h3>
+
+  <p>OBD-II CAN adapter for Particle Electron, Photon, and RedBear Duo - carloop/hardware</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>In comparing the two, the pins for the ‘SPI’ Object are A2-A5 and are not used by Carloop.  These pins are all available and you can use it to do SPI, so this should be quite easy.</p>
+<p>Looking more closely, there is a design in work for a CarloopXL, which uses SPI for a SD Card.  If that design eventually comes out, you would have to use multiple chip select lines (SPI-SS) for each device, such as A2 already used for the SD Card, plus some other available pin (D6 maybe to select your SPI display device).</p>
+<p>One thing to keep in mind with your design is the performance.  You will need to experiment to see how busy the Photon is taking care of the CANbus and the SPI to see if the performance is fast enough.  It may be okay.  If you are looking at performance issues, using CAN filters (see the Photon documentation) can help reduce the Photon workload in taking care of the CANbus.</p>
+<p>Let us know how your project goes!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/WarriorOfWire.html'><span itemprop='name'>WarriorOfWire</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-21T22:20:31Z' class='post-time'>
+                    October 21, 2017, 10:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-21T22:20:31Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just for Future Googler:</p>
+<p>I was successful in using an Adafruit 1.5" OLED display via SPI.  It was good enough that I have since moved on to a 4d Systems 7" display, connected via Serial1 (hope I never need gps…).  Performance of this configuration is not as it needs to be, but it has less to do with the data interface and more to do with how the screen’s messaging is implemented:  You have to wait for the screen to send back an ACK byte, which takes 25-32 milliseconds <em>per widget</em> with no bulk/batch update API.  I’m still working with them to try to find a higher refresh rate option, as I’d like 6-8 visualizations with smooth animation, and it’s visibly choppy just with 4.</p>
+<p>The Photon is an outstanding piece of hardware, and I’m even driving the non-touch “SuperBright” 7" display straight from the vIN pin on the Photon.  Can’t wait to resolve the performance issue and get this thing in my dashboard!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-22T04:50:45Z' class='post-time'>
+                    October 22, 2017,  4:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-22T04:50:45Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>On the particle forums, there are threads on the topic of using 4D displays.  I think peekay123 is one of the experts there.<br>
+Take a look among these postings to see if you can improve the performance of your display:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest" target="_blank" rel="noopener">community.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest" target="_blank" rel="noopener">Search results for 'peekay123 display order:latest' - Particle</a></h3>
+
+  <p>Discourse about Particle devices, the Particle cloud, and all things related to connected devices in the IoT era.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/WarriorOfWire.html'><span itemprop='name'>WarriorOfWire</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/f4109c9fd62fc60a54e7ce0eecc6c82eafb74cf2.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-04T07:44:34Z' class='post-time'>
+                    March 4, 2018,  7:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-04T07:44:34Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well, after writing a new display stack, a new 4d systems library and several python programs for post-processing images &amp; metadata we have a complete Carloop integration with a Link ECU in a 1987 Toyota MR2.  It’s smooth enough for me <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<div class="youtube-onebox lazy-video-container" data-video-id="oSTz-JVOXLs" data-video-title="Toyota MR2 Custom Instrument Cluster" data-video-start-time="" data-provider-name="youtube">
+  <a href="https://www.youtube.com/watch?v=oSTz-JVOXLs" target="_blank" rel="noopener nofollow ugc">
+    <img class="youtube-thumbnail" src="//carloop-community.dyndns.org/uploads/default/original/1X/f4109c9fd62fc60a54e7ce0eecc6c82eafb74cf2.jpeg" title="Toyota MR2 Custom Instrument Cluster" data-dominant-color="626569" width="690" height="388">
+  </a>
+</div>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="2">
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-04T17:06:33Z' class='post-time'>
+                    March 4, 2018,  5:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-04T17:06:33Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Very cool! Do you have pics of how you wired it all together?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/WarriorOfWire.html'><span itemprop='name'>WarriorOfWire</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-04T19:47:27Z' class='post-time'>
+                    March 4, 2018,  7:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-04T19:47:27Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Most of the integration is under a dashboard, really difficult to photograph.  I packaged the Photon and Carloop into a plug-in box though, maybe that’s interesting?  I would have <em><strong>loved</strong></em> to have <em>just holes</em> rather than an OBD2 connector, as I could have made the same thing more compact and with 1 connector rather than 2.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c" title="IMAG2615.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_666x500.jpeg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_666x500.jpeg,//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_999x750.jpeg,//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_1332x1000.jpeg"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMAG2615.jpg</span><span class="informations">4032×3024 1.4 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca" title="IMAG2619.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_666x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_999x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_1332x1000.jpg"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMAG2619.jpg</span><span class="informations">4032×3024 2.25 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/ec323d39239ba48d80927d2ca1eebadf1e7a771b" title="IMAG2621.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_666x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_999x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_1332x1000.jpg"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMAG2621.jpg</span><span class="informations">4032×3024 1.16 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-06T03:33:56Z' class='post-time'>
+                    March 6, 2018,  3:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-06T03:33:56Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Very cool!  I love how you did the display.</p>
+<p>I am also surprised that a 1987 car uses CAN bus.</p>
+<p>Very high-tech for a car of that vintage.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/WarriorOfWire.html'><span itemprop='name'>WarriorOfWire</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-06T05:53:40Z' class='post-time'>
+                    March 6, 2018,  5:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-06T05:53:40Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well, I had to add that.  I rewired the engine to use a Link G4+ Monsoon and programmed the CAN messages to ship all that data and lots more up front.  It’s a little more technical than when it rolled off the line 3 decades ago!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-06T14:55:19Z' class='post-time'>
+                    March 6, 2018,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-06T14:55:19Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In that case: Wow!  That is impressive.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

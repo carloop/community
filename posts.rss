@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Community - Latest posts</title>
+    <link>https://community.carloop.io</link>
+    <description>Latest posts</description>
+      <item>
+        <title>Carloop Not Communicating with Vehicle’s OBD-II Port</title>
+        <dc:creator><![CDATA[@keral]]></dc:creator>
+        <description><![CDATA[ <p>Hello</p>
+<p>I recently set up my Carloop device and followed the initial setup guide; but I’m having trouble getting it to communicate with my vehicle’s OBD-II port. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>The device powers on correctly when plugged in, and I can connect it to my computer, but I’m not receiving any data from the car’s ECU. I’ve tried using different vehicles to rule out compatibility issues, but the problem persists. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>I have double-checked my connections and verified that the CAN library is correctly installed. I’ve also attempted to send basic requests to the OBD-II system but am not getting any response. Could this be due to specific vehicle manufacturer restrictions / is there a common troubleshooting step I might be missing? <img src="https://carloop.dyndns.org/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"> I have checked <a href="https://carloop.dyndns.org/c/getting-started/5" class="inline-onebox">Getting Started - Carloop Community</a> <a href="https://www.igmguru.com/cloud-computing/microsoft-azure-solution-architect-az-300-training" rel="noopener nofollow ugc">Azure</a> guide for reference .</p>
+<p>Has anyone else encountered this issue when getting started with Carloop? I’d appreciate any advice on debugging this connection issue and ensuring that my setup is correctly configured.</p>
+<p>Thanks in advance! <img src="https://carloop.dyndns.org/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p> ]]></description>
+        <link>https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420#post_1</link>
+        <pubDate>Fri, 31 Jan 2025 08:41:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2973</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@Paddy_SP]]></dc:creator>
+        <description><![CDATA[ <p>Thanks again for the info - I have an Autel MaxiDAS, so should be able to reset it with that.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2#post_25</link>
+        <pubDate>Sun, 10 Nov 2024 21:27:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2970</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p>Although you probably could find the ID for resetting center point and get your ecu to send it, if you just get the system to not have any trouble codes by getting it an RPM and VSS signal, any decent repair shop with a bi-directional scan tool should be able to reset that for you if you don’t have your own.  It cannot be reset if there are any codes in the EPAS computer.  Once I made this simulator for my car, all the trouble codes went away and I was able to use a Snap-on scan tool at work to recenter the torque sensor.  You would need to attach an OBD2 port to your CAN wiring going between the ECU and EPAS module, then you can use a scan tool to check or clear codes and recenter the torque sensor.  There is a procedure from Toyota that uses the scan tool to do it. Basically you hook up the scanner, with the steering wheel pointed straight ahead on flat ground, then push the “button” on the scanner screen, the scanner will then have you go through a series of key on/ key off/ key on and possibly turn the wheel left and right, it walks you through it on the screen.  When your done, the module remembers where the center point is and it will make the return to center much better.  I believe most people complaining online about return to center after going around a turn have the system in limp mode or the center point is unknown.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2#post_24</link>
+        <pubDate>Sun, 10 Nov 2024 19:25:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2969</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@Paddy_SP]]></dc:creator>
+        <description><![CDATA[ <p><a class="mention" href="https://community.carloop.io/u/timc">@TimC</a> - many thanks for getting back on this so quickly, it’s much appreciated!</p>
+<p>Yes, as you said, my Gen3 system is three-phase. As I’ve now got a handle on the rpm and speed side of things, I guess the only other subject I’d like to go further into is that of establishing the centre* point - it’d be really handy if I could do it via the S12, so I’ll need to find out what the ID for that is.</p>
+<p>*Brit spelling</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2#post_23</link>
+        <pubDate>Sun, 10 Nov 2024 15:37:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2968</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p><a class="mention" href="https://community.carloop.io/u/paddy_sp">@Paddy_SP</a><br>
+I used the gen 2 column, from a 2008 specifically.  I’m pretty sure they did change the column between the two generations, mine has a 12v dc brushed  two wire motor, and I believe the gen 3 has a three phase AC brush-less motor.  I’m like 80% sure the CAN id’s did not change.  There is a thread on <a href="http://Pro-touring.com" rel="noopener nofollow ugc">Pro-touring.com</a> where a guy was using the column from a Subaru BRZ I think which is basically a rebadged Toyota and he used the same or very similar CAN id’s to mess with his, no idea if he actually finished the project however.</p>
+<p>Yes, the 2C4 is rpm on gen 2 (80% sure on gen3) and doesn’t need to make any changes, a steady engine rpm input is all that is needed to get it to power on immediately without the 10 second delay.</p>
+<p>0B4 is the speed id for gen 2.  You would need to have the S12 vary the last three bits, where I have 06, 66, and B5.  The 06 and 66 will change based off the speed using the formula in my code, and the B5 is a checksum, which will change as the first two bits change.  That formula is also in my code above from August 18th, 2024.</p>
+<p>The 0B4 Id is what lets the EPAS ECU think its still communicating with the Prius since it thinks it’s coming from the ABS controller, and that eliminates the “lost communication with ABS code” that puts it in limp mode.  Once that’s eliminated you can actually use a scan tool to set the torque center point and the return to center ability gets way better as well.</p>
+<p>That’s about as much as I can help, since I don’t have any experience with the S12 ECU, but even if you don’t get the assist variable working like factory, you could possibly get a set speed you like and have the ECU output it statically like I do, my car drives great with the max assist level (06 66 B5 = 10 mph).</p>
+<p><a class="mention" href="https://community.carloop.io/u/dsm_wiseman">@DSM_WISEMAN</a>,<br>
+Sorry I can’t help beyond what I’ve provided here, I don’t have the time and I’m not willing to take the responsibility of actually producing these things.  If you can find someone local to you who does robotics or fixes electronics you could possibly show them this thread and see if they can help if you can’t figure it out on your own.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2#post_22</link>
+        <pubDate>Sun, 10 Nov 2024 15:00:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2967</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@Paddy_SP]]></dc:creator>
+        <description><![CDATA[ <p>Thanks for a most informative thread - I have a quick question - which generation of Prius column did you use? I have a Gen3 column (and rack) here for my project car and I’d really like it to have adaptive-speed as it’s going to be a bit of a monster…</p>
+<p>Actually - I have a second question too… I’m fitting a Syvecs S12 ECU to the car, and as this has programmable CAN outputs it’d be really helpful to know what I should be transmitting to the Prius’ CAN.</p>
+<p>I see from the above that 2C4 is engine rpm and 0B4 is vehicle speed - is that a) correct and b) applicable to a Gen3 Prius?</p>
+<p>Any help would be most appreciated!</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2#post_21</link>
+        <pubDate>Sun, 10 Nov 2024 13:55:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2966</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@DSM_WISEMAN Marko]]></dc:creator>
+        <description><![CDATA[ <p>Is there a way we could make it happen the same way you made your own? Im willing to pay for your help, but I really need this to work properly</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_20</link>
+        <pubDate>Tue, 29 Oct 2024 12:34:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2964</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p>Unfortunately that is beyond my ability.  It is possible to do but I was stretching my programming knowledge to accomplish what I have.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_19</link>
+        <pubDate>Tue, 29 Oct 2024 12:20:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2963</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@DSM_WISEMAN Marko]]></dc:creator>
+        <description><![CDATA[ <p>Hey TIM,</p>
+<p>I made the profile on here so that I could reply to you, is there any way I could get in contact with you? Im in the process of doing the Prius EPS on my car, and I’ve tried the GPS kit some company offers, but because of the delays, I want to integrate it directly from my cars VSS, can you help me out in doing so? Either VSS or speedo on the gauge cluster… Would be amazing if you could help me out, I’m willing to pay for your help…</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_18</link>
+        <pubDate>Mon, 28 Oct 2024 16:29:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2962</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p>The code i posted on Aug 18, 2024 uses a library that includes the MCP2515 so it should work, if it does please post the results for future users.  The original code from the top of this thread I’m not sure of.  The code i posted originally has been running in my car reliably since 2020 using the particle photon board and a carloop can hitch which is basically the SN65HVD320.  The most recent post on Aug 18 2024 also works on my test bench.  I wanted to be able to recreate everything if I had a failure and the Photon and the CanHitch have been discontinued.  Using the code from Aug 18 with an ESP32 board and either the SN65HVD320 or the MCP2515 should also work reliably.</p>
+<p>You could add a pot to adjust the assist level or even use a speed sensor like the Prius/Yaris did originally, but the code as it is written wont support that, it will need modifying that is above my coding ability to read the inputs from the board and modify the can output code to vary the assist.</p>
+<p>That said you can use the current code and change the b6 and b7 bytes per the formula listed in the comments on my code to change between the different assist levels to see what works best for you.  My heavy American muscle car with a big V8 needs the max assist level to drive comfortably, so I left mine with b6 = 06 and b7 = 66 in hex, which is the equivalent of 10 mph.  You may find your Mini is happier with a higher speed and less assist.  You can always change the code and reflash until you are happy with the results.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_17</link>
+        <pubDate>Fri, 20 Sep 2024 13:59:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2958</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@JapMini Anand Naidoo]]></dc:creator>
+        <description><![CDATA[ <p><a class="mention" href="https://community.carloop.io/u/halcyoncv">@halcyoncv</a> can I connect a pot to adjust the VSS values so as to increase and decrease sensitivity of the EPS?  I just found this post and I’m completely new to ESP32 and CANBUS.  I’ve been searching for months for info on how to get this Toyota Yaris EPS column working so that I can install it in my classic mini.</p>
+<p><a class="mention" href="https://community.carloop.io/u/timc">@TimC</a> Thanks for all the info.  I’m going to try your code and the code from halcyoncv.</p>
+<p><a class="mention" href="https://community.carloop.io/u/halcyoncv">@halcyoncv</a> and <a class="mention" href="https://community.carloop.io/u/timc">@TimC</a> can I use the MCP2515 can bus transceiver module with the code above instead of the waveshare SN65HVD320?</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_16</link>
+        <pubDate>Fri, 20 Sep 2024 12:22:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2957</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p>Thanks for the code <a class="mention" href="https://community.carloop.io/u/halcyoncv">@halcyoncv</a>.  It does look cleaner than the original code I posted years ago.  That original code has been working in my car since 2020 reliably, however the new particle stuff doesn’t have native CAN support, so I found a workaround solution, using the ESP32 board and the code I posted on Aug 18th.  That code has been working on my test bench with a 08 Prius EPS system.  I am also currently sniffing the CAN bus to add the code needed to turn on an EPS warning light if the Pruis EPS module has any codes set.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_15</link>
+        <pubDate>Sat, 31 Aug 2024 11:36:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2954</guid>
+      </item>
+      <item>
+        <title>How to Configure AWS Big Data with My Volkswagen Atlas?</title>
+        <dc:creator><![CDATA[@halcyoncv halcyoncv]]></dc:creator>
+        <description><![CDATA[ <p>Hey everyone,</p>
+<p>I am diving into a new project where I am trying to set up my Volkswagen Atlas (2019 model) to send data directly to AWS for storage and analysis. As I have seen many people using this in my surrounding. I’ve got Carloop up and running, and now I am looking to leverage AWS Big Data tools to collect and analyze all the information from my car.</p>
+<p>I was doing research about the same I came across these resources/articles <a href="https://aws.amazon.com/solutions/case-studies/volkswagen-group-case-study/" class="inline-onebox" rel="noopener nofollow ugc">Volkswagen Group iSI Case Study | IoT | AWS</a> <a href="https://www.igmguru.com/blog/what-is-aws-big-data" rel="noopener nofollow ugc">what is AWS big data?</a>, however, they are information but I wanted to learn from community members.</p>
+<p>Has anyone here done something similar? I’m particularly interested in any tips on configuring the data pipeline from Carloop to AWS, and what services you’d recommend for real-time processing and long-term storage. Any pitfalls to avoid or best practices to follow would be awesome to know.</p>
+<p>Thanks in advance for the help!</p>
+<p>Best Regards,</p> ]]></description>
+        <link>https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411#post_1</link>
+        <pubDate>Fri, 30 Aug 2024 04:56:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2953</guid>
+      </item>
+      <item>
+        <title>How to Request VIN</title>
+        <dc:creator><![CDATA[@halcyoncv halcyoncv]]></dc:creator>
+        <description><![CDATA[ <p>Hi,</p>
+<p>I have been through the VIN reader app but I didn’t find any options? Is it due to the completability issue.</p> ]]></description>
+        <link>https://community.carloop.io/t/how-to-request-vin/153?page=2#post_24</link>
+        <pubDate>Thu, 29 Aug 2024 05:04:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2952</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@halcyoncv halcyoncv]]></dc:creator>
+        <description><![CDATA[ <p>Hi,</p>
+<p>I think you should try modifying the <code>sendMessage</code> function to send both the RPM and VSS messages at regular intervals. Here’s an updated version of your code:</p>
+<pre><code class="lang-auto">// This #include statement was automatically added by the Particle IDE.
+#include &lt;carloop.h&gt;
+
+#include "application.h"
+#include "carloop/carloop.h"
+
+SYSTEM_THREAD(ENABLED);
+
+Carloop carloop;
+
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 100; /* ms */
+    uint32_t now = millis();
+
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        CANMessage rpmMessage;
+        CANMessage vssMessage;
+
+        // RPM Message
+        rpmMessage.id = 0x2C4;
+        rpmMessage.len = 8;
+        rpmMessage.data[0] = 0x06;
+        rpmMessage.data[1] = 0x8A;
+        rpmMessage.data[2] = 0x00;
+        rpmMessage.data[3] = 0x19;
+        rpmMessage.data[4] = 0x00;
+        rpmMessage.data[5] = 0x00;
+        rpmMessage.data[6] = 0x92;
+        rpmMessage.data[7] = 0x09;
+        carloop.can().transmit(rpmMessage);
+
+        // VSS Message
+        vssMessage.id = 0x0B4;
+        vssMessage.len = 8;
+        vssMessage.data[0] = 0x00;
+        vssMessage.data[1] = 0x00;
+        vssMessage.data[2] = 0x00;
+        vssMessage.data[3] = 0x00;
+        vssMessage.data[4] = 0x8D;
+        vssMessage.data[5] = 0x06; // Adjust this for different MPH values
+        vssMessage.data[6] = 0x66; // Adjust this for different MPH values
+        vssMessage.data[7] = 0xB5;
+        carloop.can().transmit(vssMessage);
+
+        lastTransmitTime = now;
+    }
+}
+
+void setup() {
+    carloop.setCANSpeed(500000);
+    carloop.begin();
+}
+
+void loop() {
+    sendMessage();
+}
+
+</code></pre>
+<p>This code sends the RPM message and the VSS message in sequence, at intervals of 100 ms. You can adjust the <code>vssMessage.data[5]</code> and <code>vssMessage.data[6]</code> values to simulate different speeds. This should help you avoid the limp mode and get the desired assist level from the EPS module.</p>
+<p>I hope this help you <img src="https://carloop.dyndns.org/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>Thanks</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_14</link>
+        <pubDate>Thu, 29 Aug 2024 05:00:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2951</guid>
+      </item>
+      <item>
+        <title>Message detection</title>
+        <dc:creator><![CDATA[@halcyoncv halcyoncv]]></dc:creator>
+        <description><![CDATA[ <p>Hi <a class="mention" href="https://community.carloop.io/u/fiti">@fiti</a> <img src="https://carloop.dyndns.org/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20">,</p>
+<p>Your methods are spot on! I’ve found that keeping an eye on message ID changes and data byte shifts can be a real game-changer. Plus, comparing traffic when the system is in different states (like when doors are open or closed) can really help pinpoint the relevant messages. Tools like SavvyCAN make this process a breeze.</p> ]]></description>
+        <link>https://community.carloop.io/t/message-detection/981#post_2</link>
+        <pubDate>Mon, 26 Aug 2024 07:13:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2949</guid>
+      </item>
+      <item>
+        <title>Modifying can transmit sample app to control retrofit electric power steering</title>
+        <dc:creator><![CDATA[@TimC]]></dc:creator>
+        <description><![CDATA[ <p>Since the Carloop stuff has been discontinued, and Particle has replaced the Photon with the Photon2 which has no native CAN on its board, requiring an external MCP25625 board to convert SPI to CAN, I started searching for a workaround.  I’ve got a solution that I’m still testing, but the prototype works on the bench.</p>
+<p>I used an ESP-32 board and Arduino IDE.  In particular, I bought this:<br>
+<a href="https://www.amazon.com/Development-Microcontroller-Integrated-Antenna-Amplifiers/dp/B09GK74F7N" class="inline-onebox" rel="noopener nofollow ugc">Amazon.com</a>, (AISN B09GK74F7N)  Which is  a ESP32-WROOM microcontroller, it replaces the Particle Photon which has been discontinued.</p>
+<p>I also bought this: <a href="https://www.amazon.com/SN65HVD230-CAN-Board-Communication-Development/dp/B00KM6XMXO" class="inline-onebox" rel="noopener nofollow ugc">Amazon.com</a> (AISN B00KM6XMXO)  Which replaces the Carloop CANHitch also discontinued.  This is a waveshare SN65HVD320 board which is basically 99% identical to the CANHitch.</p>
+<p>You’ll also need a buck converter to drop the car battery voltage to 5v for the ESP32.</p>
+<p>Wiring is simple, 5v in from the buck converter to the VIN pin on the ESP32, ground from the buck converter to the GND pin on the ESP32, 3v3 pin on ESP32 to the 3.3V pin on the SN65 board.  GND from ESP32 to GND on SN65.  ESP32 Pin D4 (gpio4) to SN65 CANRx pin, and ESP32 D5 (gpio5) to SN65 CANTx pin.</p>
+<p>The SN65 waveshare board has a 120 ohm terminating resistor onboard, so you’ll need to twist two wires together and attach them to the CAN H and CAN L terminals on the SN65.  At the other end you’ll need to solder another 120ohm resistor as the second terminating resistor.  Anywhere along the twisted pair (my twisted pair is only 1 foot long) you can splice in a OBD2 connector and the Prius EPS module.  OBD2 connector is only needed if you wish to be able to check for codes or recenter the torque sensor in the future, it will also need 12v Bat, not ignition on pin 16 and ground on pins 4 and 5, pin 6 is CAN H and 14 is CAN L on the OBD2.</p>
+<p>The buck converter will need an ignition hot 12v source and a ground.  It can tee into the igniton 12v input to the Pruis EPS module so they power up together.</p>
+<p>You’ll need to download the Arduino IDE, I’m running version 2.3.2.<br>
+Start a new sketch, name it CAN_simulator or similar.</p>
+<p>Follow online instructions about using a ESP32 board on Arduino, in the IDE, select Tools&gt;&gt;Board&gt;&gt;Boards Manager, and search ESP32 by Espressif Systems.  DO NOT INSTALL THE LATEST VERSION IT WILL GIVE COMPILE ERRORS!  Instead, install version 2.0.11 and refuse all updates.</p>
+<p>Then you have to pick the correct brand of ESP32 board, so go to: Tools&gt;&gt;Boards&gt;&gt;ESP32&gt;&gt;DOIT ESP32 DEVKIT V1, once the ESP32 is connected to the PC with a USB cable youll need to figure out which port it’s on and select the correct port as well.</p>
+<p>You can copy/ paste my code below.</p>
+<pre><code class="lang-auto">// Copyright (c) Sandeep Mistry. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// Modified code for EPAS CAN BUS simulator by Tim Capps.
+// This code will output a vehicle speed and rpm signal to bypass Gen2 Prius EPAS fail safe mode.
+
+// THIS CODE WORKS&gt;  INSTALLED 8/18/24 and tested.
+
+
+#include &lt;CAN.h&gt;
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+
+  // start the CAN bus at 500 kbps
+  if (!CAN.begin(500E3)) {
+    while (1);
+  }
+}
+
+void loop() {
+      
+  //Sending Engine RPM Data on CANBUS.  RPM doesnt need to change, just be above 0 to enable EPS.
+  CAN.beginPacket(0x2C4); //2C4 is engine speed, having engine speed reported causes EPS to power on immediately at key on.
+  CAN.write(0x06); //b1,    b1b2=rpm (maybe b1b2 - 400?)
+  CAN.write(0x8A); //b2,    so 068A = 1674rpm converting 68A in hex calculator to decimal (may have to subtract 400, not sure)
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x19); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x92); //extra data, not used by EPS
+  CAN.write(0x09); //checksum,  checksum=ID+length+sum of data, so 02+C4(ID)+08(length)+06+8A+00+19+00+00+92 = 209 in hex.  
+                    //Checksum only uses last 2 digits or last byte, so 209 means checksum is 09
+  CAN.endPacket(); //You can open calculator in Windows, click programming, click either hex or dec(imal) to convert hex to decimal or add hex for checksum.
+
+  //Sending Vehicle speed data on CANBUS.  Having a vehicle speed allows you to taylor the desired assist output and "dead zone" where there is no assist.
+  //It is possible to add code to make this CAN ID change with a speed (frequency) input to the ESP32 so it varies assist with Speed like OEM.  I don't have skills for that.
+  //Prius has 3 basic stages of assist (it varies in proportion to speed but there are "steps" not totally linear)
+  //    Step 1 is roughly 0-15mph, max assist and 0 "deadband"
+  //    Step 2 is roughly 15-45mph, medium assist and roughly 5 degree +/- straight ahead has reduced assist for more road feel "deadband"
+  //    Step 3 is roughly 45mph and above, minimum assist and roughly 10 degree +/- straight ahead has reduced assist "deadband"
+  CAN.beginPacket(0x0B4); //0B4 is vehicle speed, having engine speed reported causes EPS to power on immediately at key on.
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x8D); //counter that iterates from 00-FF (0-255 in decimal) in the stock Prius datastream it counts and resets.  It can remain static for this application.
+  CAN.write(0x06); //b6,    6th byte, speed=(b6 b7)*0.0062 in MPH
+  CAN.write(0x66); //b7,    7th byte, so 06(b6) 66(b7) in hex = 1638 in decimal, 1638 * 0.0062 = 10.15MPH
+  CAN.write(0xB5); //checksum,  checksum=ID+length+sum of data, so 00+B4(ID)+08(length)+00+00+00+00+8D+06+66 = 1B5 in hex.  
+                    //Checksum only uses last 2 digits or last byte, so 1B5 means checksum is B5
+  CAN.endPacket(); 
+  delay (20);
+
+}
+</code></pre>
+<p>You’ll need to install the correct libraries to get it to compile properly as well, you can search the Arduino IDE library manager for CAN by sandeep Mistry version 0.3.1 or go to git hub and download the code as a zip file and link to it from the IDE library manager.  The library git hub link is here: <a href="https://github.com/sandeepmistry/arduino-CAN.git" class="inline-onebox" rel="noopener nofollow ugc">GitHub - sandeepmistry/arduino-CAN: An Arduino library for sending and receiving data using CAN bus.</a></p>
+<p>Verify the code to see if there are compile errors if not verify/compile it to the ESP32 board and test it out.</p> ]]></description>
+        <link>https://community.carloop.io/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856#post_13</link>
+        <pubDate>Sun, 18 Aug 2024 20:05:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2947</guid>
+      </item>
+      <item>
+        <title>Help Needed with Setting Up Carloop GPS on My Vehicle</title>
+        <dc:creator><![CDATA[@shawn5670 Shawn Bieber]]></dc:creator>
+        <description><![CDATA[ <p>Hello guys! <img src="https://carloop.dyndns.org/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>I am trying to get my Carloop GPS up and running in my car, but I’m stuck!  No matter what I try, I can’t seem to get a signal.</p>
+<p><strong>Here’s what I’ve done so far:</strong></p>
+<ul>
+<li>Plugged the Carloop thingy (is that what it’s called?) into the OBD-II port in my car.</li>
+<li>Downloaded the Carloop library onto my Particle device (hope I did that right!).</li>
+<li>Uploaded the sample GPS code to the device (fingers crossed!).</li>
+<li>Checked the Particle console for GPS info, but it’s blank.</li>
+<li>Double-checked everything, and the device seems connected, but the GPS data is missing in action.</li>
+</ul>
+<p>I also check this: <a href="https://carloop.dyndns.org/t/help-with-carloop-code-reader-app/415">https://carloop.dyndns.org/t/help-with-carloop-code-reader-app</a><a href="https://www.igmguru.com/salesforce/salesforce-developer-training/" rel="noopener nofollow ugc">salesforce-dev</a> But I have not found any solution. Anyone else ever face this issue?  Maybe I’m missing something super simple?  Any troubleshooting tips from the experts would be a lifesaver!</p>
+<p>Thanks in advance</p>
+<p>Respected community member <img src="https://carloop.dyndns.org/images/emoji/twitter/smiling_face_with_three_hearts.png?v=12" title=":smiling_face_with_three_hearts:" class="emoji" alt=":smiling_face_with_three_hearts:" loading="lazy" width="20" height="20"></p> ]]></description>
+        <link>https://community.carloop.io/t/help-needed-with-setting-up-carloop-gps-on-my-vehicle/1408#post_1</link>
+        <pubDate>Mon, 22 Jul 2024 08:58:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2946</guid>
+      </item>
+      <item>
+        <title>How to Request VIN</title>
+        <dc:creator><![CDATA[@shawn5670 Shawn Bieber]]></dc:creator>
+        <description><![CDATA[ <p>I also thanks to jvanier. it is really helpful for me.</p> ]]></description>
+        <link>https://community.carloop.io/t/how-to-request-vin/153?page=2#post_23</link>
+        <pubDate>Wed, 17 Jul 2024 16:38:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2945</guid>
+      </item>
+      <item>
+        <title>Troubleshooting Stepper Motor Issues with Blackbox X32 in CNC Setup</title>
+        <dc:creator><![CDATA[@shawn5670 Shawn Bieber]]></dc:creator>
+        <description><![CDATA[ <p>Hi everyone, <img src="https://carloop.dyndns.org/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>I was recently working on a CNC project and using a Blackbox X32 controller along with Nema 23 stepper motors. I’m experiencing some issues with the setup and could use some advice from those who have experience with similar configurations.<br>
+Here are the specifics of my setup:</p>
+<ul>
+<li>Blackbox X32 controller</li>
+<li>Nema 23 stepper motors</li>
+</ul>
+<p>But I am facing some specific issues like:</p>
+<ol>
+<li>Sometimes the motors skip steps or move erratically.</li>
+<li>The motors and controller seem to get quite hot after a short period of operation.</li>
+<li>There’s a lot of noise from the motors during operation, which I suspect might be due to improper tuning.</li>
+</ol>
+<p>I have tried adjusting the current settings on the Blackbox X32 and checking all connections, but the problems persist. Has anyone else encountered similar issues or have any tips on how to resolve them? Are there specific settings or configurations I should be aware of for this setup?</p>
+<p>Any help or suggestions would be greatly appreciated!</p> ]]></description>
+        <link>https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407#post_1</link>
+        <pubDate>Mon, 08 Jul 2024 06:00:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2944</guid>
+      </item>
+      <item>
+        <title>Communicating to ECU problem</title>
+        <dc:creator><![CDATA[@shawn5670 Shawn Bieber]]></dc:creator>
+        <description><![CDATA[ <p>Hello there, <img src="https://carloop.dyndns.org/images/emoji/twitter/smiling_face_with_three_hearts.png?v=12" title=":smiling_face_with_three_hearts:" class="emoji" alt=":smiling_face_with_three_hearts:" loading="lazy" width="20" height="20"><br>
+You need to check few things to solve you issue you are facing:</p>
+<ol>
+<li>Ensure that your CAN message format (CAN_ID_STD) and ID (0x7DF) are correctly set up for the OBD-II diagnostic request.</li>
+<li>Verify the wiring connections for CAN-H and CAN-L between your device and the ECU.</li>
+<li>Double-check the power connections (+12V, GND, and switched power) to ensure they are properly connected and stable.</li>
+</ol>
+<p>As for finding the standard ISO for your ECU, it’s typically available through the manufacturer’s documentation or support channels. If online searches haven’t been fruitful, reaching out directly to Siemens Continental support could provide you with the specific information you need.</p>
+<p>Feel free to provide more details or updates so we can assist you further.</p> ]]></description>
+        <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405#post_2</link>
+        <pubDate>Sat, 06 Jul 2024 06:44:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2943</guid>
+      </item>
+      <item>
+        <title>Communicating to ECU problem</title>
+        <dc:creator><![CDATA[@ehsan ehsan5454132434]]></dc:creator>
+        <description><![CDATA[ <p>hello every one<br>
+i have ECU model : siemens continental SIM2K-34VR<br>
+and i want to communicate to it by can protocol i have sent this pid request :<br>
+txHeader.DLC = 3;<br>
+txHeader.IDE = CAN_ID_STD;<br>
+txHeader.StdId = 0x7DF;</p>
+<p>TxMessage.data[0] = 0x02;<br>
+TxMessage.data[1] = 0x01;<br>
+TxMessage.data[2] = 0x00;<br>
+TxMessage.data[3] = 0x00;<br>
+TxMessage.data[4] = 0x00;<br>
+TxMessage.data[5] = 0x00;<br>
+TxMessage.data[6] = 0x00;<br>
+TxMessage.data[7] = 0x00;</p>
+<p>but the received can message is this :<br>
+ID: 0x1C3<br>
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00</p>
+<p>i haven’t connect anything else to ECU just +12V and GND and SWITCH power<br>
+is it because of this ?or sth else?</p>
+<p>how can i found the standard iso of my ECU i search all around the internet but didn’t get anything usefull</p>
+<p>appreciate your help.</p> ]]></description>
+        <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405#post_1</link>
+        <pubDate>Tue, 11 Jun 2024 22:19:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-2941</guid>
+      </item>
+  </channel>
+</rss>

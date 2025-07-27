@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Troubleshooting - Carloop Community</title>
+    <link>https://community.carloop.io/c/troubleshooting/10</link>
+    <description>Topics in the &#39;Troubleshooting&#39; category Post your issues here and to help others troubleshoot their Carloops!</description>
+    
+      <lastBuildDate>Mon, 08 Jul 2024 06:00:20 +0000</lastBuildDate>
+      <atom:link href="https://community.carloop.io/c/troubleshooting/10.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Troubleshooting Stepper Motor Issues with Blackbox X32 in CNC Setup</title>
+          <dc:creator><![CDATA[shawn5670]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hi everyone, <img src="https://carloop.dyndns.org/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>I was recently working on a CNC project and using a Blackbox X32 controller along with Nema 23 stepper motors. I’m experiencing some issues with the setup and could use some advice from those who have experience with similar configurations.<br>
+Here are the specifics of my setup:</p>
+<ul>
+<li>Blackbox X32 controller</li>
+<li>Nema 23 stepper motors</li>
+</ul>
+<p>But I am facing some specific issues like:</p>
+<ol>
+<li>Sometimes the motors skip steps or move erratically.</li>
+<li>The motors and controller seem to get quite hot after a short period of operation.</li>
+<li>There’s a lot of noise from the motors during operation, which I suspect might be due to improper tuning.</li>
+</ol>
+<p>I have tried adjusting the current settings on the Blackbox X32 and checking all connections, but the problems persist. Has anyone else encountered similar issues or have any tips on how to resolve them? Are there specific settings or configurations I should be aware of for this setup?</p>
+<p>Any help or suggestions would be greatly appreciated!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407</link>
+          <pubDate>Mon, 08 Jul 2024 06:00:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1407</guid>
+          <source url="https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407.rss">Troubleshooting Stepper Motor Issues with Blackbox X32 in CNC Setup</source>
+        </item>
+        <item>
+          <title>CAN ID and Bytes for Ford Focus 2017</title>
+          <dc:creator><![CDATA[Chris]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Good evening, does anyone have the CAN IDs and bytes for starting the 2017 Ford Focus odometer?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256</link>
+          <pubDate>Tue, 17 May 2022 18:12:17 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1256</guid>
+          <source url="https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256.rss">CAN ID and Bytes for Ford Focus 2017</source>
+        </item>
+        <item>
+          <title>Candump stops receiving data after 64 lines</title>
+          <dc:creator><![CDATA[manomight]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Was finally able to setup my carloop with particle photon.<br>
+First carloop was defective and had to replace.  Now the replacement is working.</p>
+<p>Hello world LED blinking works<br>
+VIN Reader works</p>
+<p>Followed all of the instructions here: <a href="https://www.carloop.io/apps/app-socketcan/">https://www.carloop.io/apps/app-socketcan/</a></p>
+<p>Problem comes when running candump can0</p>
+<p>On my 2018 Nissan, 64 lines of output come right when turning on the ignition, then nothing else.  All of the IDs are 71D 72D 71F 72F.</p>
+<p>On my 2012 Nissan, constant output is received as expected.</p>
+<p>Per this website (at the bottom <a href="https://harrisonsand.com/can-on-the-raspberry-pi/" class="inline-onebox" rel="noopener nofollow ugc">https://harrisonsand.com/posts/can-on-the-raspberry-pi/</a>) it looks like there could be a gateway / firewall in my vehicle preventing code output?</p>
+<p>Any thoughts?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/candump-stops-receiving-data-after-64-lines/999">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/candump-stops-receiving-data-after-64-lines/999</link>
+          <pubDate>Mon, 17 Feb 2020 03:03:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-999</guid>
+          <source url="https://community.carloop.io/t/candump-stops-receiving-data-after-64-lines/999.rss">Candump stops receiving data after 64 lines</source>
+        </item>
+        <item>
+          <title>Carloop Pro - No GPS Fix</title>
+          <dc:creator><![CDATA[Siceth]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hey there,</p>
+<p>I have the <a href="https://store.carloop.io/products/carloop-pro-1">Carloop Pro</a> and 'm having troubles getting a GPS fix simliar to that of many other threads here. I’m running the unedited <a href="https://github.com/carloop/carloop-library/blob/master/examples/carloop_minimal/carloop_minimal.cpp" rel="noopener nofollow ugc">carloop-minimal</a> code on OS 1.4.0 and despite being outside on a clear day for 30 minutes, I can’t aquire a GPS status.</p>
+<p>It seems like using an external antenna or using jumper wires on the JST-SH ports wouldn’t be optimal for my situation. Are there any other easy ways to debug this? How can I tell if the boards are bad? Any direction is appreciated.</p>
+<p>Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-pro-no-gps-fix/928">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-pro-no-gps-fix/928</link>
+          <pubDate>Mon, 23 Sep 2019 21:44:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-928</guid>
+          <source url="https://community.carloop.io/t/carloop-pro-no-gps-fix/928.rss">Carloop Pro - No GPS Fix</source>
+        </item>
+        <item>
+          <title>UART RX was disabled</title>
+          <dc:creator><![CDATA[jgosnell]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hardware: Electron with Carloop GPS/CAN<br>
+Particle OS: 1.2.1rc2</p>
+<p>I have a very basic test app that enables GPS and spews its output to serial. However, I am seeing repeated frame errors in the output, like in the following:</p>
+<pre><code class="lang-auto">$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GPGSV,1,1,00*79
+$GLGSV,1,1,00*65
+$GNGLL,,,,,,V,N*7A
+$GNTXT,01,01,01,More than 100 frame errors, UART RX was disabled*70
+$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+</code></pre>
+<p>Am I doing something wrong, or is this a known issue? Does this impact behavior/performance? I’m also not able to ever get a GPS fix — I’ve even tried letting it run outside for a couple of hours with no luck.</p>
+<p>Thanks,<br>
+Jason</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/uart-rx-was-disabled/888">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/uart-rx-was-disabled/888</link>
+          <pubDate>Mon, 10 Jun 2019 17:42:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-888</guid>
+          <source url="https://community.carloop.io/t/uart-rx-was-disabled/888.rss">UART RX was disabled</source>
+        </item>
+        <item>
+          <title>Can&#39;t read any OBDII data</title>
+          <dc:creator><![CDATA[chanson]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I have an electron connected to my carloop. I’m not able to read any CAN data. The red LED lights up when I have it connected to the OBDII port, and I can connect to the the electron, but it doesn’t seem to read any data from any of my cars. I tried the example VIN reader app, and it couldn’t even do that. I upgraded the device OS from 0.5.4 to 1.1.0</p>
+<p>Any ideas?</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/cant-read-any-obdii-data/879">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/cant-read-any-obdii-data/879</link>
+          <pubDate>Sat, 25 May 2019 19:47:59 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-879</guid>
+          <source url="https://community.carloop.io/t/cant-read-any-obdii-data/879.rss">Can&#39;t read any OBDII data</source>
+        </item>
+        <item>
+          <title>GPS Fix Inconsistency Issue</title>
+          <dc:creator><![CDATA[jnbankston]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hello,<br>
+I have a Carloop with the GPS module. At times it gets a fix very quickly when there is open sky at other times it never gets a fix. The question I have is would it be possible to program the Carloop to retry the gps connection until a fix is obtained?<br>
+Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/gps-fix-inconsistency-issue/796">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/gps-fix-inconsistency-issue/796</link>
+          <pubDate>Sat, 29 Dec 2018 02:52:28 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-796</guid>
+          <source url="https://community.carloop.io/t/gps-fix-inconsistency-issue/796.rss">GPS Fix Inconsistency Issue</source>
+        </item>
+        <item>
+          <title>Photon wont connect to A2 security on new iphone xs. Ideas?</title>
+          <dc:creator><![CDATA[jimbo69ny]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I have 2 wifi Photon OBD2 dongles that send CAN data to an IP address that I can check on my phone or tablet. Previously both Photons would connect to the wifi hotspot on my verizon cell phone. I had an iphone 6. It worked well.</p>
+<p>I finally upgraded and got a new iphone xs. I tried to connect the two Photons and they wont connect to the new wifi of the iphone xs. I took my sim card out of my phone and plugged into my verizon ready ipad (its not currently activated with its own service), went through the set up process, and the Photons connected no problem.</p>
+<p>So it definitely has something to do with the new A2 security in the new iphone xs. Any ideas? I could sign up the ipad with its own Verizon service but thats another $20 a month! Id prefer not to spend that when I already have it on the iphone.</p>
+            <p><small>7 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/photon-wont-connect-to-a2-security-on-new-iphone-xs-ideas/779">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/photon-wont-connect-to-a2-security-on-new-iphone-xs-ideas/779</link>
+          <pubDate>Tue, 04 Dec 2018 13:42:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>Yes</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-779</guid>
+          <source url="https://community.carloop.io/t/photon-wont-connect-to-a2-security-on-new-iphone-xs-ideas/779.rss">Photon wont connect to A2 security on new iphone xs. Ideas?</source>
+        </item>
+        <item>
+          <title>Verify carloop board</title>
+          <dc:creator><![CDATA[nabilblk]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hi ,</p>
+<p>My photon and electron are working fine .<br>
+But the led didn’t show light when connected to 2 cars .</p>
+<p>I want to know how to verify if the carloop board is smoked ?</p>
+<p>Thanks in advance</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/verify-carloop-board/663">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/verify-carloop-board/663</link>
+          <pubDate>Mon, 18 Jun 2018 19:28:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-663</guid>
+          <source url="https://community.carloop.io/t/verify-carloop-board/663.rss">Verify carloop board</source>
+        </item>
+        <item>
+          <title>Inconsistent OBD data</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I’m testing my sketch in 3 different cars :</p>
+<ul>
+<li>Seat Toledo 2015</li>
+<li>Mazda 3 2015</li>
+<li>Hyundai elantra 2017</li>
+</ul>
+<p>And I have consistent data in the Seat toledo (meaning that the data I ask for, the data I got from the car - RPM, Speed, Module Voltage-), but when I test the same sketch on the Mazda and Toledo, most of the time the cars doesn’t give me the data I asked (few times the car gives me the module voltage, or the speed, and ALWAYS the RPMS).</p>
+<p>I  changed the timing between the send and receive function, and the behaviour is almost the same in the Mazda and Hyundai.</p>
+<p>My sketch is :</p>
+<pre><code>SYSTEM_MODE(SEMI_AUTOMATIC);
+SYSTEM_THREAD(ENABLED);
+
+#include &lt;carloop.h&gt;
+
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+void sendObdRequest();
+void waitForObdResponse();
+
+int maxUnreadMessage = 5;
+int currentPid;
+int currentPidIndex = 0;
+
+const auto OBD_REQUEST_ID      = 0x7E0;
+const auto OBD_REPLY_ID        = 0x7E8;
+const auto OBD_PID_SERVICE     = 0x01;
+
+const auto PID_ENGINE_RPM = 0x0C ;
+const auto PID_VEHICLE_SPEED = 0x0D ;
+const auto PID_CONTROL_MODULE_VOLTAGE = 0x42;
+
+const byte PIDS[] = { 
+    PID_ENGINE_RPM,
+    PID_VEHICLE_SPEED,
+    PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED,
+    PID_CONTROL_MODULE_VOLTAGE
+};
+
+float ENGINE_RPM = 0;
+int VEHICLE_SPEED = 0;
+float CONTROL_MODULE_VOLTAGE = 0;
+
+void setup() {
+    
+    Serial.begin(9600);    
+    
+    carloop.begin();
+
+    maxUnreadMessage = sizeof(PIDS);
+
+    parseConfig();    
+}
+
+void loop() {
+    carloop.update();
+    sendObdRequest();
+    
+    delay(100);
+    
+    waitForObdResponse();
+}
+
+void sendObdRequest() {
+    if(currentPidIndex == sizeof(PIDS)) {
+        currentPidIndex = 0;
+    }
+
+    currentPid = PIDS[currentPidIndex];
+    currentPidIndex++;
+
+    CANMessage message;
+    message.id = OBD_REQUEST_ID;
+    message.len = 8;
+    message.data[0] = 0x02;
+    message.data[1] = OBD_PID_SERVICE;
+    message.data[2] = currentPid;//This is the data we want to ask to the car
+    carloop.can().transmit(message);
+
+}
+
+void waitForObdResponse() {
+    bool responseReceived = false;
+    CANMessage message;
+    
+    while (carloop.can().receive(message)) {
+        if(message.id == OBD_REPLY_ID &amp;&amp; message.data[2] == currentPid) {
+            parseMessage(message.data);
+            break;
+        }
+    }
+}
+
+void parseMessage(byte data[]) {
+
+    if (data[2] == 12) {
+        ENGINE_RPM = ((data[3] * 256) + data[4]) / 4;
+    }
+
+    if (data[2] == 13) {
+        VEHICLE_SPEED =(int) data[3];
+    }
+
+    if (data[2] == 66) {
+        CONTROL_MODULE_VOLTAGE = (256 * data[3] + data[4])/1000;
+    }    
+}
+</code></pre>
+<p>Any ideas ? I’m changed the delay(100) to delay(1000) (and some values in between) and I got better results, but not consistent results yet.</p>
+<p>Is there any issue I have to consider in terms of timing between send/receive responses?</p>
+<p>Thanks</p>
+            <p><small>6 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/inconsistent-obd-data/654">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/inconsistent-obd-data/654</link>
+          <pubDate>Sun, 03 Jun 2018 23:04:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-654</guid>
+          <source url="https://community.carloop.io/t/inconsistent-obd-data/654.rss">Inconsistent OBD data</source>
+        </item>
+        <item>
+          <title>Car stops responding after a few seconds for packet transmission</title>
+          <dc:creator><![CDATA[Snir]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hello Guys,<br>
+I’m having an odd issue which i couldn’t find a useful solution or reason for.<br>
+I’m connected directly to my canbus to the OBD 2.<br>
+I’m getting canbus traffic and everything works well.</p>
+<p>After i figured out the can id for my RPM, i performed a replay attack with socketCan.<br>
+The attack worked and the RPM did respond, but only for a second or less, and than stopped.<br>
+Another attempt was failed, and the RPM didn’t respond at all. The only way to make it respond again was to unplug my connection, plug it back, and reconfigure the can0 interface for socket can.</p>
+<p>Details:<br>
+Car: Kia Picanto 2017<br>
+Hardware: Cantact v1.0<br>
+Software: SocketCan - can utils<br>
+Running:<br>
+<strong>“while true; do cansend can0 316#4532F53D322F007F; sleep 0.002; done”</strong></p>
+<p>Also because i transmit a lot of packets, i increased my kernel queue buffer:<br>
+<strong>sudo ifconfig can0 txqueuelen 10000</strong></p>
+<p>Anybody familiar with this issue? or what cause it? any solutions found?<br>
+Or maybe did i miss something on my experiment?</p>
+<p>Thanks a lot!<br>
+Snir</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/car-stops-responding-after-a-few-seconds-for-packet-transmission/635">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/car-stops-responding-after-a-few-seconds-for-packet-transmission/635</link>
+          <pubDate>Mon, 14 May 2018 16:15:32 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-635</guid>
+          <source url="https://community.carloop.io/t/car-stops-responding-after-a-few-seconds-for-packet-transmission/635.rss">Car stops responding after a few seconds for packet transmission</source>
+        </item>
+        <item>
+          <title>Can simulator: CAN chip not responding</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error :</p>
+<p>Error occured: CAN chip not responding</p>
+<p>And no more errors. Is there a way to figure out why this is happening ?</p>
+            <p><small>33 posts - 5 participants</small></p>
+            <p><a href="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/can-simulator-can-chip-not-responding/614</link>
+          <pubDate>Thu, 26 Apr 2018 00:45:59 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-614</guid>
+          <source url="https://community.carloop.io/t/can-simulator-can-chip-not-responding/614.rss">Can simulator: CAN chip not responding</source>
+        </item>
+        <item>
+          <title>[Resolved] Fixing the crash on Particle 0.7.0 firmware</title>
+          <dc:creator><![CDATA[jvanier]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <h3><a name="the-crash-is-fixed-in-the-carloop-library-version-210-1" class="anchor" href="https://community.carloop.io#the-crash-is-fixed-in-the-carloop-library-version-210-1"></a>The crash is fixed in the Carloop library version 2.1.0</h3>
+<p>To upgrade your application running in the Particle Web IDE <a href="https://build.particle.io/libs/carloop/2.1.0/tab/carloop.cpp">open the Carloop library version 2.1.0</a>, click Include in project and select your application.</p>
+<p>To upgrade your application built with the Particle CLI, run <code>particle library add carloop</code></p>
+<p>To get your Photon or Electron back online if it’s in a loop of booting, connecting to the cloud then blinking red and crashing, <strong>hold the SETUP button, tap RESET and let go of SETUP.</strong> The device will connect to the Particle Cloud and start breathing magenta instead of cyan. This is called Safe mode. You will then be able to flash your application that includes the fixed version of the library.</p>
+<h3><a name="original-thread-2" class="anchor" href="https://community.carloop.io#original-thread-2"></a>Original thread</h3>
+<p>With the release of Particle firmware 0.7.0 for the Photon and Electron the Carloop library started crashing in the <code>begin()</code> method.</p>
+<p>I’ll document how I’m investigating the issue in this thread.</p>
+            <p><small>11 posts - 5 participants</small></p>
+            <p><a href="https://community.carloop.io/t/resolved-fixing-the-crash-on-particle-0-7-0-firmware/604">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/resolved-fixing-the-crash-on-particle-0-7-0-firmware/604</link>
+          <pubDate>Tue, 17 Apr 2018 01:56:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-604</guid>
+          <source url="https://community.carloop.io/t/resolved-fixing-the-crash-on-particle-0-7-0-firmware/604.rss">[Resolved] Fixing the crash on Particle 0.7.0 firmware</source>
+        </item>
+        <item>
+          <title>SPEED PID inconsistent read/transform data</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>This is a simple issue and I know that you guys are reading the speed properly.</p>
+<p>I’m trying to read the speed but I never get a speed higher than 70 Km/h . I did a 2 hours trip on a highway, and I expected to get a higher speed (I was reading the panel to see the “average” speed I was driving) with no luck.</p>
+<p>This is how I read/parse the speed</p>
+<p><code>int VEHICLE_SPEED =(int) data[3];</code></p>
+<p>Am I doing something wrong ?</p>
+<p>Thanks</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/speed-pid-inconsistent-read-transform-data/591">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/speed-pid-inconsistent-read-transform-data/591</link>
+          <pubDate>Mon, 02 Apr 2018 05:22:04 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-591</guid>
+          <source url="https://community.carloop.io/t/speed-pid-inconsistent-read-transform-data/591.rss">SPEED PID inconsistent read/transform data</source>
+        </item>
+        <item>
+          <title>Carloop Smoking Peripheral Boards</title>
+          <dc:creator><![CDATA[cgd1021]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I flashed my particle photon with carloop code from the particle library today, hooked it up to the ODB port on my land rover and the photon smoked immediately.  Everything I have read says that there should be regulation in both the carloop PCB and the photon but evidently that regulation wasn’t enough to protect from the voltage coming out of the port. I just bought the car and it is a 2002 - I’m wondering if the ODB port is a custom install and wired incorrectly - any ideas on where to start? I guess measuring the 12V supply would be a good start? Any other thoughts?</p>
+            <p><small>14 posts - 4 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-smoking-peripheral-boards/590">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-smoking-peripheral-boards/590</link>
+          <pubDate>Mon, 02 Apr 2018 04:14:24 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-590</guid>
+          <source url="https://community.carloop.io/t/carloop-smoking-peripheral-boards/590.rss">Carloop Smoking Peripheral Boards</source>
+        </item>
+        <item>
+          <title>Electron is not reading messages</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I’m dealing with the carloop_minimal sketch in my electron.</p>
+<p>The thing is that is not reading messages et all. Is there a way to diagnose why the electron is not receiving any message?</p>
+<p>BTW: I have two photon with the same sketch and they are reading messages from the can bus with (as far) no problems.</p>
+<p>Thanks</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/electron-is-not-reading-messages/587">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/electron-is-not-reading-messages/587</link>
+          <pubDate>Sat, 31 Mar 2018 06:16:18 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-587</guid>
+          <source url="https://community.carloop.io/t/electron-is-not-reading-messages/587.rss">Electron is not reading messages</source>
+        </item>
+        <item>
+          <title>Carloop.begin makes photon crashes</title>
+          <dc:creator><![CDATA[maleficarum]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I have a simple sketch that query for RPM. Its been working days before, but now photon crashes when executes Carloop.begin() (if I remove the line , the photon works good, but no obd readings).</p>
+<p>Is there any known issue related to that behaviour ?</p>
+<p>Thanks</p>
+            <p><small>29 posts - 9 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-begin-makes-photon-crashes/584">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-begin-makes-photon-crashes/584</link>
+          <pubDate>Fri, 30 Mar 2018 03:32:10 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-584</guid>
+          <source url="https://community.carloop.io/t/carloop-begin-makes-photon-crashes/584.rss">Carloop.begin makes photon crashes</source>
+        </item>
+        <item>
+          <title>Custom Vin Reader App (App works fine, but not when imported to my script)</title>
+          <dc:creator><![CDATA[jnymris]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I’ve decided to purchase a Carloop Wifi (With the Photon).</p>
+<p>Up until now I’ve only bee playing with the Photon functionaility and have been able to get what I am looking for from this.</p>
+<p>I am now moving onto the Carloop section and this is where i’m struggling. When trying to read any data from the carloop from my app I don’t get any response back at all.</p>
+<p>I uploaded my source code to: <a href="https://bitbucket.org/jnymris/carloop/src" rel="noopener nofollow ugc">BitBucket/jnymris/carloop</a></p>
+<p>I’ve tried to add as much debugging as possible and I can see it appears to get this far:</p>
+<p>(Line 101)  Particle.publish(“Debug/Status/readVIN()”,“starting”);</p>
+<p>But does not appear to reach any further. Using the (<a href="https://www.carloop.io/apps/app-vin-reader/">Vin Reader App</a> this appears to pull it successfully?</p>
+<p>Any suggestions as to where i am going wrong?</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/custom-vin-reader-app-app-works-fine-but-not-when-imported-to-my-script/576">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/custom-vin-reader-app-app-works-fine-but-not-when-imported-to-my-script/576</link>
+          <pubDate>Wed, 21 Mar 2018 14:22:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-576</guid>
+          <source url="https://community.carloop.io/t/custom-vin-reader-app-app-works-fine-but-not-when-imported-to-my-script/576.rss">Custom Vin Reader App (App works fine, but not when imported to my script)</source>
+        </item>
+        <item>
+          <title>GPS Troubleshooting</title>
+          <dc:creator><![CDATA[nickhough]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>When I very first received my new GPS about a week ago, I was able to get a signal using a very basic sketch. Now, even with the most basic sketch, I can’t seem to get a signal. I’ve stood outside, using a JST cable, GPS facing the sky for 5 minutes and still no signal.</p>
+<p>Can someone provide sample code on what I might do to troubleshoot the GPS unit? I’m not convinced it’s working now, but not really sure how to test it.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/gps-troubleshooting/555">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/gps-troubleshooting/555</link>
+          <pubDate>Wed, 28 Feb 2018 00:38:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-555</guid>
+          <source url="https://community.carloop.io/t/gps-troubleshooting/555.rss">GPS Troubleshooting</source>
+        </item>
+        <item>
+          <title>GPS suddenly stopped getting fixes</title>
+          <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I’ve been using the GP-735T from sparkfun for like three days without any problem. It was getting fixes pretty quickly, but it suddenly stopped working. It’s not getting fixes even when I take a walk or go out with my car.</p>
+<p>Is this a problem with the carloop or there is a chance that this is a malfunction with the GPS ?</p>
+<p>Thanks.</p>
+            <p><small>6 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/gps-suddenly-stopped-getting-fixes/473">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/gps-suddenly-stopped-getting-fixes/473</link>
+          <pubDate>Mon, 06 Nov 2017 16:58:34 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-473</guid>
+          <source url="https://community.carloop.io/t/gps-suddenly-stopped-getting-fixes/473.rss">GPS suddenly stopped getting fixes</source>
+        </item>
+        <item>
+          <title>Battery Draining!</title>
+          <dc:creator><![CDATA[egarl004]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hey everyone!</p>
+<p>Running into some issues with carloop draining my battery… I perform some safety checks in the code and have logged the number of times the device goes into deep sleep based on battery voltage (after calling carloop.update of course) throughout the course of an evening. Everything is as expected compared to my sleep duration.</p>
+<p>I do have a gps connected as well as a micro sd card reader. Is there a chance that either one of these devices is draining my battery over the course of 2 days?</p>
+<p>EDIT - I just looked up the current draw of the gp-735 module. 37ma. Seems likely that if this is continuously powered then it could pull my battery down over the weekend. Any way to put the GPS module to sleep or switch the power to the jst pin?</p>
+            <p><small>10 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/battery-draining/465">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/battery-draining/465</link>
+          <pubDate>Tue, 24 Oct 2017 15:23:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-465</guid>
+          <source url="https://community.carloop.io/t/battery-draining/465.rss">Battery Draining!</source>
+        </item>
+        <item>
+          <title>Unable To Flash Any Carloop Sample Apps To Device</title>
+          <dc:creator><![CDATA[jamesthall90]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I just purchased a Carloop device with the Particle Electron. Setup went just fine, and I’m able to see the device in on Particle with no issues. For some reason, however, I have not been successful in flashing ANY of the Carloop sample apps to my device. Every time I try, I’m met with the same error message, which is as follows:</p>
+<pre><code>Start flashing...
+Error during flash.
+lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: fatal error: carloop.h: No such file or 
+directory #include "carloop.h" ^ compilation terminated. make[1]: *** [../build/target/user/platform-
+10lib/carloop/examples/carloop_minimal/carloop_minimal.o] Error 1 make: *** [user] Error 2
+</code></pre>
+<p>Someone please help! Thank you.</p>
+            <p><small>5 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/unable-to-flash-any-carloop-sample-apps-to-device/442">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/unable-to-flash-any-carloop-sample-apps-to-device/442</link>
+          <pubDate>Thu, 21 Sep 2017 18:59:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-442</guid>
+          <source url="https://community.carloop.io/t/unable-to-flash-any-carloop-sample-apps-to-device/442.rss">Unable To Flash Any Carloop Sample Apps To Device</source>
+        </item>
+        <item>
+          <title>Engine SOL fuse blew when using candump</title>
+          <dc:creator><![CDATA[oopykram]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Had the carloop and photon connected to a Nissan 350z and the the Engine SOL fuse blew.<br>
+The car was off, the ignition key was inserted which started can traffic, then the clutch was depressed mutilple times while off and then the can messages stopped.<br>
+Not sure why the Engine SOL fuse would blow because of this.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/engine-sol-fuse-blew-when-using-candump/352">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/engine-sol-fuse-blew-when-using-candump/352</link>
+          <pubDate>Mon, 12 Jun 2017 02:05:04 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-352</guid>
+          <source url="https://community.carloop.io/t/engine-sol-fuse-blew-when-using-candump/352.rss">Engine SOL fuse blew when using candump</source>
+        </item>
+        <item>
+          <title>Can&#39;t get electron connected by linking sim and no usb serial connection</title>
+          <dc:creator><![CDATA[oopykram]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hi, I can’t get the electron to activate when I type in the Sim I’d, it stays like it is trying to but never does.</p>
+<p>When connected to a raspberry pi via USB running raspbian I can’t get the connection to show up when checking with ls /dev/ttyACM* after installing can-utils … I get the error ls: cannot access /dev/ttyACM*:. No such file or directory</p>
+            <p><small>25 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/cant-get-electron-connected-by-linking-sim-and-no-usb-serial-connection/336">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/cant-get-electron-connected-by-linking-sim-and-no-usb-serial-connection/336</link>
+          <pubDate>Sat, 27 May 2017 16:45:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-336</guid>
+          <source url="https://community.carloop.io/t/cant-get-electron-connected-by-linking-sim-and-no-usb-serial-connection/336.rss">Can&#39;t get electron connected by linking sim and no usb serial connection</source>
+        </item>
+        <item>
+          <title>Not transmitting CAN messages [SOLVED]</title>
+          <dc:creator><![CDATA[Jay4255]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>I have a Raspberry Pi 3 in my 2016 Jeep Rubicon Hard Rock with a PiCAN2 Hat spliced in the CAN behind the radio and it’s working fine. The RPi3 is acting as a wireless hotspot and a webserver in addition to a few other things. So that I can connect my phone to the Pi and pull up a webpage I made to and click a link to read/write to/from the CAN bus. I can read the status of the doors, control the windshield wipers, blinkers, etc.</p>
+<p>I purchased Carloop with the RedBear Duo from MassDrop. I’ve added the ReadBear to my particle account and flashed the “minimal transmit” sketch. I can run cansniffer on the Pi3 and never see the Carloop transmit anything to CAN. I initially thought it was something with the RedBear, so I swapped it out with a Photon soldered to the battery shield I use for testing. Same issue! Whatever I transmit never comes across.</p>
+<p>I thought maybe the Pi3 is interfering with the Carloop? I changed the code on the minimal transmit sketch to control the left blinker, so that I could disconnect the Pi3 and have a visual indication. I know that CAN message works because I am able to use it on the Pi3, but nothing happened.</p>
+<p>I have been playing with CAN for a while with the Pi3, I work on PLCs for a living, I have a programming background, but I don’t understand what I’m missing… I read through the getting started section, and the rest of the community, seems pretty straight forward. Any thoughts?</p>
+            <p><small>6 posts - 4 participants</small></p>
+            <p><a href="https://community.carloop.io/t/not-transmitting-can-messages-solved/332">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/not-transmitting-can-messages-solved/332</link>
+          <pubDate>Fri, 26 May 2017 13:48:31 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-332</guid>
+          <source url="https://community.carloop.io/t/not-transmitting-can-messages-solved/332.rss">Not transmitting CAN messages [SOLVED]</source>
+        </item>
+  </channel>
+</rss>

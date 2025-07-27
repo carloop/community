@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Pyvit Python help</title>
+    <link>https://community.carloop.io/t/pyvit-python-help/503</link>
+    <description>Hey all,
+Been a member for a while but haven&#39;t posted anything yet as life has been nuts. I&#39;m starting to do some fuzzing of my car network. Don&#39;t worry I know the dangers and am developing on a test bench a CANable, and a Raspberry Pi. I&#39;ve written some simple scripts using can-utils and Python. I was looking around the webs and found a Python library called &quot;pyvit&quot; and it seemed a bit better than running &#39;system.os(cansend can0 message) each time. 
+
+I&#39;m running into an issue though with my PoC code:
+&lt;img src=&quot;/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png&quot; width=&quot;690&quot; height=&quot;132&quot;&gt;
+I&#39;ve ran multiple variants of the code and examples of this code are available on several sites which are identical. However I can not get passed this issue. I&#39;ve emailed the CANable site but got no response. Hoping someone here might have some insight?
+
+Thanks in advance!</description>
+    
+    <lastBuildDate>Sun, 14 Jan 2018 05:56:50 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/pyvit-python-help/503.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Pyvit Python help</title>
+        <dc:creator><![CDATA[SemiSilent]]></dc:creator>
+        <description><![CDATA[
+            <p>#! /usr/bin/python</p>
+<p>import threading, time, os<br>
+import pyvit.can as can<br>
+from pyvit.hw import socketcan</p>
+<p>dev = socketcan.SocketCanDev(‘can0’)<br>
+dev.start()</p>
+<p>frame = can.Frame (0x123, [1, 2, 3, 4, 5, 6, 7, 8])</p>
+<p>while True:<br>
+dev.send(frame)<br>
+time.sleep(.001)<br>
+t = threading.Thread(args=())<br>
+t.start()</p>
+<p>Have fun DoS’ing your CAN network <img src="//carloop-community.dyndns.org/images/emoji/twitter/stuck_out_tongue.png?v=12" title=":stuck_out_tongue:" class="emoji" alt=":stuck_out_tongue:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/pyvit-python-help/503/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pyvit-python-help/503/5</link>
+        <pubDate>Sun, 14 Jan 2018 05:56:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-503-5</guid>
+        <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+      </item>
+      <item>
+        <title>Pyvit Python help</title>
+        <dc:creator><![CDATA[SemiSilent]]></dc:creator>
+        <description><![CDATA[
+            <p>So I was able to figure this one out and it ended up having a few issues.</p>
+<ol>
+<li></li>
+</ol>
+<p>I had to move the script into the pyvit folder (I wonder if putting pyvit into /usr/bin/ would fix this??)</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>I had to add the environment shebang as bolav stated</p>
+<ol start="3">
+<li></li>
+</ol>
+<p>I had to set the alias of python to use python3. (I could have done this using the shebang I’ve found, but setting the standard to python3 is fine for my own usage</p>
+          <p><a href="https://community.carloop.io/t/pyvit-python-help/503/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pyvit-python-help/503/4</link>
+        <pubDate>Sun, 14 Jan 2018 05:52:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-503-4</guid>
+        <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+      </item>
+      <item>
+        <title>Pyvit Python help</title>
+        <dc:creator><![CDATA[bolav]]></dc:creator>
+        <description><![CDATA[
+            <p>You are missing the shebang. Either add a shebang, or start the script with the python interpreter.</p>
+<p><code>python ./parrot.py</code></p>
+          <p><a href="https://community.carloop.io/t/pyvit-python-help/503/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pyvit-python-help/503/3</link>
+        <pubDate>Sat, 13 Jan 2018 06:27:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-503-3</guid>
+        <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+      </item>
+      <item>
+        <title>Pyvit Python help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I think dev.start(‘can0’) should be dev.start()</p>
+<p>And maybe this too at the top<br>
+from pyvit.hw.socketcan import SocketCanDev<br>
+from pyvit import can</p>
+          <p><a href="https://community.carloop.io/t/pyvit-python-help/503/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pyvit-python-help/503/2</link>
+        <pubDate>Sat, 13 Jan 2018 06:23:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-503-2</guid>
+        <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+      </item>
+      <item>
+        <title>Pyvit Python help</title>
+        <dc:creator><![CDATA[SemiSilent]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey all,<br>
+Been a member for a while but haven’t posted anything yet as life has been nuts. I’m starting to do some fuzzing of my car network. Don’t worry I know the dangers and am developing on a test bench a CANable, and a Raspberry Pi. I’ve written some simple scripts using can-utils and Python. I was looking around the webs and found a Python library called “pyvit” and it seemed a bit better than running 'system.os(cansend can0 message) each time.</p>
+<p>I’m running into an issue though with my PoC code:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/24fbe80abd901725863c073bd6fb6e0a5d4ad28e" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e_2_690x132.png" width="690" height="132" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e_2_690x132.png, //carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/24fbe80abd901725863c073bd6fb6e0a5d4ad28e.png 2x" data-dominant-color="626163"></a></div><br>
+I’ve ran multiple variants of the code and examples of this code are available on several sites which are identical. However I can not get passed this issue. I’ve emailed the CANable site but got no response. Hoping someone here might have some insight?<p></p>
+<p>Thanks in advance!</p>
+          <p><a href="https://community.carloop.io/t/pyvit-python-help/503/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pyvit-python-help/503/1</link>
+        <pubDate>Sat, 13 Jan 2018 03:00:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-503-1</guid>
+        <source url="https://community.carloop.io/t/pyvit-python-help/503.rss">Pyvit Python help</source>
+      </item>
+  </channel>
+</rss>

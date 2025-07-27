@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop check fuel consumption</title>
+    <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789</link>
+    <description>Hi, 
+
+I&#39;m totally new to the things like OBD, CAN and also Particle, but I&#39;d like to use the Carloop it for a school project. 
+
+So I&#39;ve a question regarding the possibilities of Carloop. I&#39;d like to work with the cost of a trip thus I want to know how much fuel is consumed in one trip so that I can calculate how much that trip costs you (on fuel).
+
+Can the carloop read this data of fuel consumption in a trip or is there a way to calculate it?
+
+Kind regards.
+Bente</description>
+    
+    <lastBuildDate>Tue, 09 Apr 2019 01:31:28 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/bentev">@BenteV</a>,</p>
+<p>Sorry for taking a while; work has been busy.</p>
+<p>Most likely the Carloop is not reading the PID when the ignition is off because the ECU (engine control unit) does not have power so it cannot respond to anything on the bus.  On the other hand, you can probably assume the ignition is off when there is no response to that PID.</p>
+<p>Another way to verify that is checking the voltage of the 12V line where the Carloop is connected.  If the voltage is around 12V or slightly less, you can be fairly certain the ignition is off and the alternator is not running to charge the battery.  When the engine is running and the alternator is running, then you will most likely see a voltage closer to 13.4V typical.  This advice applies to gasoline engines and some diesels; it will probably not work for hybrids or electrics.  My memory says that the Carloop has a voltage divider connected to the A1 pin of the Particle device, which you would need to calibrate (and should also confirm this with the schematic which can be found on Github) to be able to read the voltage.</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/10</link>
+        <pubDate>Tue, 09 Apr 2019 01:31:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-10</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[BenteV]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for your reply. I can’t read any value for this PID. But I commemorated another concept thus I won’t need this PID anymore. Since this is a project for my master’s thesis and I’m not a developer / engineer I won’t be going to do heavy math because it isn’t the scope of my thesis.</p>
+<p>But I will continue to use the carloop in my project. But now I’ve a new question. Is there a way to read if the car is running / ignition is on. I’ve tried to turn on the D7 led when RPM is above 300 rpm and off when the motor is of and it’s below 300rpm but the carloop isn’t reading pid anymore when the ignition is off so this didn’t work.</p>
+<p>Any ideas?</p>
+<p>This is the code I’m using now</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">// This #include statement was automatically added by the Particle IDE.
+#include &lt;carloop.h&gt;
+#include &lt;blynk.h&gt;
+#include "base85.h"
+
+SYSTEM_MODE(AUTOMATIC);
+SYSTEM_THREAD(ENABLED);
+
+void sendObdRequest();
+void waitForObdResponse();
+void delayUntilNextRequest();
+void printValuesAtInterval(); 
+void publishValuesAtInterval();
+void printValues();
+void getEngineLoad();
+void receiveObdRequestVIN();
+void sendObdRequestVIN();
+
+//PLACE YOUR BLYNK AUTHENTICATION KEY IN BELOW AS SHOWN IN EXAMPLE BELOW:
+char auth[] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
+String dumpMessage(const CANMessage &amp;message);
+bool byteArray8Equal(uint8_t a1[8], uint8_t a2[8]);
+
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+int canMessageCount = 0;
+
+float DISTANCE_TRAVELED_SINCE_CODES_CLEARED;
+float ENGINE_RPM;
+
+
+//GLOBAL INTEGERS FOR USE IN PERFORMING MATH AND EXTRACTION OF OBDII DATA//
+int data0;
+int data1;
+int data2;
+int data3;
+int data4;
+int data5;
+int data6;
+int data7;
+
+// OBD CAN MESSAGE IDs
+const auto OBD_CAN_BROADCAST_ID    = 0X7DF;
+const auto OBD_CAN_REQUEST_ID      = 0x7E0;
+const auto OBD_CAN_REPLY_ID_MIN    = 0x7E8;
+const auto OBD_CAN_REPLY_ID_MAX    = 0x7EF;
+
+const String key = "XXXXXXXXXXXXXXXXX";
+
+// OBD MODES
+const auto OBD_MODE_CURRENT_DATA = 0x01;
+
+//LIST OF ALL (Almost) MODE 1 PIDS THAT YOU ARE CAPABLE OF POLLING. NOT ALL WILL BE AVAILABLE TO YOU.//
+const auto OBD_PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED = 0x31;
+const auto OBD_PID_ENGINE_RPM                            = 0x0c;
+
+//SUM THE TOTAL AMOUNT OF PIDS YOU WOULD LIKE TO REQUEST AND PLACE THAT IN const size_t NUM_PIDS_TO_REQUEST// 
+const size_t NUM_PIDS_TO_REQUEST = 2;
+
+//COMMENT OUT OR REMOVE THE PIDS THAT YOU DO NOT HAVE TO INCREASE EFFECIENCY BUT BE SURE TO UPDATE THE ABOVE CONSTANT//
+const uint8_t pidsToRequest[NUM_PIDS_TO_REQUEST] = {
+    OBD_PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED,
+    OBD_PID_ENGINE_RPM
+};
+    
+    
+uint8_t pidIndex = NUM_PIDS_TO_REQUEST - 1;
+String dumpForPublish;
+
+auto *obdLoopFunction = sendObdRequest;
+unsigned long transitionTime = 0;
+uint8_t lastMessageData[8];
+
+
+void setup() {
+    Blynk.begin(auth);
+	Serial.begin(115200);
+	carloop.begin();
+	Particle.connect();
+	transitionTime = millis();
+	pinMode(7,OUTPUT);
+}
+
+
+void loop() {
+	carloop.update();
+	printValuesAtInterval();
+	publishValuesAtInterval();
+	obdLoopFunction();
+	waitForObdResponse();
+    math();
+
+}
+
+
+void sendObdRequest() {
+	pidIndex = (pidIndex + 1) % NUM_PIDS_TO_REQUEST;
+
+	CANMessage message;
+	message.id = OBD_CAN_BROADCAST_ID;
+	message.len = 8; // just always use 8
+	message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+	message.data[1] = OBD_MODE_CURRENT_DATA; // OBD MODE
+	message.data[2] = pidsToRequest[pidIndex]; // OBD PID
+
+	carloop.can().transmit(message);
+
+	obdLoopFunction = waitForObdResponse;
+	transitionTime = millis();
+}
+
+void waitForObdResponse() {
+	if (millis() - transitionTime &gt;= 10) {
+		obdLoopFunction = delayUntilNextRequest;
+		transitionTime = millis();
+		return;
+	}
+    bool responseReceived = false;
+	String dump;
+	CANMessage message;
+	while (carloop.can().receive(message)) {
+		canMessageCount++;
+		if (message.id == 0x130) {
+			if (!byteArray8Equal(message.data, lastMessageData)) {
+				memcpy(lastMessageData, message.data, 8);
+			}
+		} else {
+			if (message.id &gt;= OBD_CAN_REPLY_ID_MIN &amp;&amp;
+					message.id &lt;= OBD_CAN_REPLY_ID_MAX &amp;&amp;
+					message.data[2] == pidsToRequest[pidIndex]) {
+				    responseReceived = true;
+                    data0 = message.data[0];
+                    data1 = message.data[1];
+			        data2 = message.data[2];
+                    data3 = message.data[3];
+                    data4 = message.data[4];
+                    data5 = message.data[5];
+                    data6 = message.data[6];
+                    data7 = message.data[7];
+                    return;
+					}
+		return;
+		}
+	return;
+	}
+}
+
+
+void delayUntilNextRequest() {
+	if (millis() - transitionTime &gt;= 8) {
+		obdLoopFunction = sendObdRequest;
+		transitionTime = millis();
+	}
+}
+
+/*************** End: OBD Loop Functions ****************/
+
+
+void printValuesAtInterval() {
+	static const unsigned long interval = 500;
+	static unsigned long lastDisplay = 0;
+	if (millis() - lastDisplay &lt; interval) {
+		return;
+	}
+	lastDisplay = millis();
+	printValues();
+}
+
+void printValues() {
+    //PRINT VALUES FOR DEBUGING//
+    //Serial.print("Engine Load: ");
+    //Serial.println(ENGINE_LOAD);
+}
+
+void publishValuesAtInterval() {
+    static const unsigned long interval2 = 3000;
+	static unsigned long lastDisplay2 = 0;
+    if(millis() - lastDisplay2 &lt; interval2) {
+        return;
+    }
+    lastDisplay2 = millis();
+    publishValuesAtInterval();
+    blynkValues();
+}
+
+void blynkValues() {
+     if(ENGINE_RPM &gt; 300){
+        digitalWrite(7,HIGH);
+    }else if(ENGINE_RPM &lt; 100){
+        digitalWrite(7,LOW);
+    }
+    
+    //TODO: ONLY SEND DATA WHEN THE ENGINE IS ON
+    Blynk.run();
+    
+	String StringDISTANCE_TRAVELED_SINCE_CODES_CLEARED  = String(DISTANCE_TRAVELED_SINCE_CODES_CLEARED);
+	String StringENGINE_RPM                             = String(ENGINE_RPM);
+	    
+	//PUBLISH STRINGS TO BLYNK//
+	Blynk.virtualWrite(V19, StringDISTANCE_TRAVELED_SINCE_CODES_CLEARED);
+	Blynk.virtualWrite(V7, StringENGINE_RPM);
+
+}
+
+void math() {
+
+//void mathENGINE_RPM() {
+
+    if (data2 == 12) {
+        float RPM1;
+        float RPM2;
+        RPM1 = data3;
+        RPM2 = data4;
+        ENGINE_RPM = ((RPM1*256)+RPM2)/4;
+    }
+//}
+
+//void mathOBD_PID_DISTANCE_TRAVELED_SINCE_CODES_CLEARED() {
+    
+    if (data2 == 49) {
+        float distanceTraveledSinceCodesClearedA;
+        float distanceTraveledSinceCodesClearedB;
+        distanceTraveledSinceCodesClearedA = data3; 
+        distanceTraveledSinceCodesClearedB = data4;
+        DISTANCE_TRAVELED_SINCE_CODES_CLEARED = 256*distanceTraveledSinceCodesClearedA + distanceTraveledSinceCodesClearedB;
+    }
+//}
+}
+
+bool byteArray8Equal(uint8_t a1[8], uint8_t a2[8]) {
+	for (int i = 0; i &lt; 8; i++) {
+		if (a1[i] != a2[i]) return false;
+	}
+	return true;
+}
+</code></pre>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/9</link>
+        <pubDate>Wed, 27 Mar 2019 15:49:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-9</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/bentev">@BenteV</a>,</p>
+<p>Following up on my question about the standards, your 2011 Fabia has a PID “OBD standards this vehicle confoms to”.<br>
+Can you read off the value for this PID and see what you get?<br>
+That might help in figuring out why (although it will not help with a solution).</p>
+<p>There might be another way to accomplish calculating the fuel consumption.  You can read the PIDs for MAF air flow and Vehicle speed.  Look into calculations/averaging/integration so that you might be able to calculate the fuel consumption.  It might be heavy on the math, but you might be able to get something out of it.</p>
+<p>A totally different approach might be to design a bridge circuit so that your Particle device can use its ADC to sense the analogue electrical signal from the fuel tank.</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/8</link>
+        <pubDate>Tue, 05 Mar 2019 04:04:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-8</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[BenteV]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>, sorry my fault, I meant Fuel Tank Level Input.</p>
+<p>Thanks for the response. I’ve uploaded the PID that I can read from the 2 vehicles. But since the Octavia 2018 is my parents car and the Fabia 2011 is mine I’d like to be able to calculate how much fuel is consumed in one trip in this car. Do you think it’s possible with the readable PID’s of the Fabia?</p>
+<p>These PID’s are the ones I can read from my Skoda Octavia 2018<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/10dc9e733895691afcf7439a02fb86a4f0f1059f.png" data-download-href="//carloop-community.dyndns.org/uploads/default/10dc9e733895691afcf7439a02fb86a4f0f1059f" title="Schermafbeelding 2019-02-26 om 17.18.11.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/10dc9e733895691afcf7439a02fb86a4f0f1059f.png" width="600" height="499" data-dominant-color="282828"></a></div><p></p>
+<p>And these are the PID’s in my Skoda Fabia 2011<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/965c3dfae02279e84e7fe94b6f23f0f983961e73.png" data-download-href="//carloop-community.dyndns.org/uploads/default/965c3dfae02279e84e7fe94b6f23f0f983961e73" title="Schermafbeelding 2019-02-27 om 10.47.34.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/965c3dfae02279e84e7fe94b6f23f0f983961e73_2_488x500.png" width="488" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/965c3dfae02279e84e7fe94b6f23f0f983961e73_2_488x500.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/965c3dfae02279e84e7fe94b6f23f0f983961e73_2_732x750.png 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/965c3dfae02279e84e7fe94b6f23f0f983961e73_2_976x1000.png 2x" data-dominant-color="272727"></a></div><p></p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/7</link>
+        <pubDate>Mon, 04 Mar 2019 08:37:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-7</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/bentev">@BenteV</a>,</p>
+<p>I cannot say exactly why there is the difference between the two vehicles.</p>
+<p>One possible reason is mentioned here in a small note “In 2017, all previous standards were revoked because there were more than 24 standards produced over 35 years.”  It could be possible the 2011 vehicle used an older EOBD standard, but that is only a guess:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/On-board_diagnostics#EOBD">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/On-board_diagnostics#EOBD" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/On-board_diagnostics#EOBD" target="_blank" rel="noopener">On-board diagnostics | EOBD</a></h3>
+
+<p>The European on-board diagnostics (EOBD) regulations are the European equivalent of OBD-II, and apply to all passenger cars of category M1 (with no more than 8 passenger seats and a Gross Vehicle Weight rating of 2500&nbsp;kg or less) first registered within EU member states since January 1, 2001 for petrol (gasoline) engined cars and since January 1, 2004 for diesel engined cars.
+ For newly introduced models, the regulation dates applied a year earlier – January 1, 2000 for petrol and January 1, 2003...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>When you indicate “Fuel Intake level”, do you mean “Fuel Tank Level Input”? Service 01 PID 0x2F is a standard PID which should be present for any vehicle that meets the EOBD2 standards.  If you meant some other PID, then it would likely be a custom PID, which the manufacturer Skoda could do whatever they want.  The list of standard PIDs is here:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Service_01" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/6</link>
+        <pubDate>Mon, 04 Mar 2019 04:21:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-6</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[BenteV]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks dubb45</p>
+<p>I followed this tutorial <a href="https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991" class="inline-onebox" rel="noopener nofollow ugc">Visualize Car Data With Carloop And Blynk - Hackster.io</a> and I’m reading multiple values.</p>
+<p>Is there any explanation why some cars can read the Fuel Intake level and other don’t? Because I can’t read this value in my Skoda Fabia 2011 but I can read it in a Skoda Octavia 2018.</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/5</link>
+        <pubDate>Wed, 27 Feb 2019 14:13:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-5</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Just read through this, it should give you an idea on what to do.<br>
+<a href="https://carloop.dyndns.org/t/how-do-i-read-messages/162" class="inline-onebox">How do I read messages? - Getting Started - Carloop Community</a></p>
+<p>But basically send a message and wait for a reply. There’s a few sketches posted on the forum to get you started.</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/4</link>
+        <pubDate>Wed, 20 Feb 2019 18:38:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-4</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[BenteV]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>,</p>
+<p>I started working with my carloop this week. First I did the ‘Hello World’ project and it worked, then I did the read VIN project which also worked fine, I could read the VIN of my Skoda Fabia 2011 in both the webpage and also in the Particle app.</p>
+<p>But now I’m stuck, I’ve no idea of what I need to do next…</p>
+<p>I understand the things I need to do, like you said, to calculate the change in fuel level. But what I don’t understand is how I call that OBD-II PID. First I would just like to read the fuel tank level in % but I’ve no idea on how to do that.</p>
+<p>Can you help me with this, I understand that it’s a very simple maybe even dumb question but I really don’t know what to do.</p>
+<p>Thanks in advance!</p>
+<p>Bente</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/3</link>
+        <pubDate>Wed, 20 Feb 2019 14:34:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-3</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/bentev">@BenteV</a>,</p>
+<p>My apologies for not responding sooner; I cannot post from my work computer so I have to wait until I get home.</p>
+<p>The short answer is “it depends”.</p>
+<p>If your car is modern, it will use OBD2 running on CANbus.  If so, Carloop can do the job, or at least most of it.</p>
+<p>If you look here, there is some good information on the OBD2 PIDs:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+You can see the Fuel Tank Level is Service 01 PID 2F.  It is a percentage, so you can calculate the change in fuel level between the beginning and end of the trip if you know the capacity of the tank of your car.</p>
+<p>There is another way of doing it by calculation based on the mass air flow (MAF) and integrating over time.</p>
+<p>If you need help with further detail, then let us know here.</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/2</link>
+        <pubDate>Fri, 21 Dec 2018 04:59:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-2</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+      <item>
+        <title>Carloop check fuel consumption</title>
+        <dc:creator><![CDATA[BenteV]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>I’m totally new to the things like OBD, CAN and also Particle, but I’d like to use the Carloop it for a school project.</p>
+<p>So I’ve a question regarding the possibilities of Carloop. I’d like to work with the cost of a trip thus I want to know how much fuel is consumed in one trip so that I can calculate how much that trip costs you (on fuel).</p>
+<p>Can the carloop read this data of fuel consumption in a trip or is there a way to calculate it?</p>
+<p>Kind regards.<br>
+Bente</p>
+          <p><a href="https://community.carloop.io/t/carloop-check-fuel-consumption/789/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-check-fuel-consumption/789/1</link>
+        <pubDate>Mon, 17 Dec 2018 16:56:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-789-1</guid>
+        <source url="https://community.carloop.io/t/carloop-check-fuel-consumption/789.rss">Carloop check fuel consumption</source>
+      </item>
+  </channel>
+</rss>

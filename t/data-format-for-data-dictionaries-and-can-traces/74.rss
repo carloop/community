@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Data format for data dictionaries and CAN traces</title>
+    <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74</link>
+    <description>Since we&#39;re trying to exchange data about CAN data dictionaries (which messages are available in which cars and how to decode messages into useful signals) and CAN traces (list of timestamped messages from a specific car), @alanm and I thought it would be great to all use the same data formats.
+
+Here&#39;s our proposal for a data format for CAN data dictionaries and CAN traces based on JSON. Feel free to open GitHub pull requests to contribute improvements!
+
+https://github.com/carloop/data-dictionaries</description>
+    
+    <lastBuildDate>Tue, 23 Aug 2016 02:01:26 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s a good idea for sure. I added that to the Carloop library GitHub so we can discuss the implementation.</p>
+<aside class="onebox githubissue" data-onebox-src="https://github.com/carloop/carloop-library/issues/5">
+  <header class="source">
+
+      <a href="https://github.com/carloop/carloop-library/issues/5" target="_blank" rel="noopener">github.com/carloop/carloop-library</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/carloop/carloop-library/issues/5" target="_blank" rel="noopener">Decode CAN messages from the included data dictionary</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2016-08-23" data-time="02:00:41" data-timezone="UTC">02:00AM - 23 Aug 16 UTC</span>
+      </div>
+
+
+      <div class="user">
+        <a href="https://github.com/monkbroc" target="_blank" rel="noopener">
+          <img alt="monkbroc" src="//carloop-community.dyndns.org/uploads/default/original/1X/d6de8182213be48b2e6ae46ef1922a225caa14de.jpeg" class="onebox-avatar-inline" width="20" height="20" data-dominant-color="8C746F">
+          monkbroc
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">Use the data dictionary format in https://carloop.dyndns.org/t/data-format-for<span class="show-more-container"><a href="https://community.carloop.io" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">-data-dictionaries-and-can-traces/74/3 to automatically decode CAN messages on the device.</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/6</link>
+        <pubDate>Tue, 23 Aug 2016 02:01:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-6</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Really great idea. Have been looking into similar ideas for this too. Might be useful to throw together some rough implementation code to show how this would be used for decoding some messages, i think this would encourage people to use a data dictionary instead of just rolling their own hard-coded versions. It would be nice to also have this for the carloop firmware, but also for server side as i like the idea of keeping the data as raw as possible to keep the bandwidth cost down and sorting it out server side.</p>
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/5</link>
+        <pubDate>Mon, 22 Aug 2016 20:08:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-5</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Since DBC is proprietary as you mention I agree too that using JSON would be best. Thanks for sharing these other open source projects.</p>
+<p>I looked at the CANard format and it’s almost the same as what I put together. I’ll to just update our format to be compatible.</p>
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/4</link>
+        <pubDate>Fri, 10 Jun 2016 20:08:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-4</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Since this is an open source project we are open to suggestions.  <a class="mention" href="https://community.carloop.io/u/nprobert">@nprobert</a>, we agree JSON would be easiest and that is the format we’d like to use as well.  Here is the first CAN data dictionary on the repo: <a href="https://github.com/carloop/data-dictionaries/blob/master/chevy_volt_2013.json" class="inline-onebox">data-dictionaries/chevy_volt_2013.json at master · carloop/data-dictionaries · GitHub</a></p>
+<p>It’s just a start, and hopefully we can continue adding JSON files for other makes and models.</p>
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/3</link>
+        <pubDate>Fri, 10 Jun 2016 17:21:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-3</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>The Vector .dbc file format is a proprietary format used for their CAN tools.  A number of other CAN tool vendors also use it.  Vector offers a library to read/write the format.  Btw, Kvaser has a free editor for download.</p>
+<p>I’d much rather work in a saner format like JSON or XML.  CANard uses JSON.  Kayak has it’s own format.  Busmaster (Bosch/ETAS) is free and uses it’s own format.  There is a GitHub project called canmatrix that converts between the different formats.</p>
+<p>Has Carloop settled on a format yet?  I would go with JSON as we can find lots of open source software to support it.</p>
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/2</link>
+        <pubDate>Fri, 10 Jun 2016 16:16:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-2</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+      <item>
+        <title>Data format for data dictionaries and CAN traces</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Since we’re trying to exchange data about CAN data dictionaries (which messages are available in which cars and how to decode messages into useful signals) and CAN traces (list of timestamped messages from a specific car), <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> and I thought it would be great to all use the same data formats.</p>
+<p>Here’s our proposal for a data format for CAN data dictionaries and CAN traces based on JSON. Feel free to open GitHub pull requests to contribute improvements!</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/data-dictionaries">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/data-dictionaries" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/2288e5c1210aa51753d114012be5969133f7e2f6_2_690x345.png" class="thumbnail" data-dominant-color="F3F3F4" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/data-dictionaries" target="_blank" rel="noopener">GitHub - carloop/data-dictionaries: CAN data dictionaries for cars in production</a></h3>
+
+  <p>CAN data dictionaries for cars in production. Contribute to carloop/data-dictionaries development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74/1</link>
+        <pubDate>Wed, 08 Jun 2016 03:29:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-74-1</guid>
+        <source url="https://community.carloop.io/t/data-format-for-data-dictionaries-and-can-traces/74.rss">Data format for data dictionaries and CAN traces</source>
+      </item>
+  </channel>
+</rss>

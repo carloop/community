@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Flashing Carloop via Webservice</title>
+    <link>https://community.carloop.io/t/flashing-carloop-via-webservice/354</link>
+    <description>Hey again!
+
+Wondering if anyone could point me to some documentation regarding learning how to flash particle outside of the web ide but via a web service(i.e. not cli). I love how slick the interaction is with the [carloop.io/apps](http://carloop.io/apps ) page, and I&#39;m trying to implement something similar with some added form fields.</description>
+    
+    <lastBuildDate>Tue, 20 Jun 2017 00:22:18 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/flashing-carloop-via-webservice/354.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Flashing Carloop via Webservice</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi folks,</p>
+<p>Here’s the documentation for flashing Particle outside the Web IDE.</p>
+<p>You can use the API directly: <a href="https://docs.particle.io/reference/api/#flash-a-device-with-source-code">https://docs.particle.io/reference/api/#flash-a-device-with-source-code</a></p>
+<pre><code class="lang-auto">$ curl -X PUT "https://api.particle.io/v1/devices/0123456789abcdef01234567?access_token=1234" \
+       -F "file=@app.ino" \
+       -F "file1=@project.properties"
+</code></pre>
+<p><code>project.properties</code> tells the cloud compiler what libraries you want to use. For Carloop, put this in <code>project.properties</code>:</p>
+<pre><code class="lang-auto">dependencies.carloop=1.1.1
+</code></pre>
+<p>If you are building a web app, you can also use the Particle Javascript library: <a href="https://docs.particle.io/reference/javascript/#flashing">https://docs.particle.io/reference/javascript/#flashing</a></p>
+<p>This is what the apps page does here: <a href="https://github.com/carloop/app-reminder/blob/master/docs/reminder.js#L137" class="inline-onebox">app-reminder/docs/reminder.js at master · carloop/app-reminder · GitHub</a></p>
+          <p><a href="https://community.carloop.io/t/flashing-carloop-via-webservice/354/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/flashing-carloop-via-webservice/354/3</link>
+        <pubDate>Tue, 20 Jun 2017 00:22:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-354-3</guid>
+        <source url="https://community.carloop.io/t/flashing-carloop-via-webservice/354.rss">Flashing Carloop via Webservice</source>
+      </item>
+      <item>
+        <title>Flashing Carloop via Webservice</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Ping <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> or <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a></p>
+          <p><a href="https://community.carloop.io/t/flashing-carloop-via-webservice/354/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/flashing-carloop-via-webservice/354/2</link>
+        <pubDate>Thu, 15 Jun 2017 04:19:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-354-2</guid>
+        <source url="https://community.carloop.io/t/flashing-carloop-via-webservice/354.rss">Flashing Carloop via Webservice</source>
+      </item>
+      <item>
+        <title>Flashing Carloop via Webservice</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey again!</p>
+<p>Wondering if anyone could point me to some documentation regarding learning how to flash particle outside of the web ide but via a web service(i.e. not cli). I love how slick the interaction is with the <a href="http://carloop.io/apps">carloop.io/apps</a> page, and I’m trying to implement something similar with some added form fields.</p>
+          <p><a href="https://community.carloop.io/t/flashing-carloop-via-webservice/354/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/flashing-carloop-via-webservice/354/1</link>
+        <pubDate>Wed, 14 Jun 2017 04:01:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-354-1</guid>
+        <source url="https://community.carloop.io/t/flashing-carloop-via-webservice/354.rss">Flashing Carloop via Webservice</source>
+      </item>
+  </channel>
+</rss>

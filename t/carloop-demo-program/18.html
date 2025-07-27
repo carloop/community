@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop demo program - Getting Started - Carloop Community</title>
+    <meta name="description" content="The easiest way to get started with Carloop is to use the demo program included in the library. 
+The demo program will print the battery voltage, number of CAN messages and GPS position to the USB serial port. 
+To use it&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="18.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="vT3oYzvtmTqoG25c7hDxhvq0Z">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="vT3oYzvtmTqoG25c7hDxhvq0Z"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop demo program&#39;" href="18.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-demo-program/18">
+<meta name="twitter:url" content="/t/carloop-demo-program/18">
+<meta property="og:title" content="Carloop demo program">
+<meta name="twitter:title" content="Carloop demo program">
+<meta property="og:description" content="The easiest way to get started with Carloop is to use the demo program included in the library.  The demo program will print the battery voltage, number of CAN messages and GPS position to the USB serial port.  To use it connect a Particle Photon or Particle Electron into your Carloop. Then go to the Particle Build online code editor. Go to the library section (bookmark icon), search for Carloop and click “Use this example”.  The demo program is made with the carloop-library">
+<meta name="twitter:description" content="The easiest way to get started with Carloop is to use the demo program included in the library.  The demo program will print the battery voltage, number of CAN messages and GPS position to the USB serial port.  To use it connect a Particle Photon or Particle Electron into your Carloop. Then go to the Particle Build online code editor. Go to the library section (bookmark icon), search for Carloop and click “Use this example”.  The demo program is made with the carloop-library">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="3 ?">
+<meta property="article:published_time" content="2016-03-28T21:51:53+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="18.html">Carloop demo program</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop demo program'>
+      <link itemprop='url' href='18.html'>
+      <meta itemprop='datePublished' content='2016-03-28T21:51:53Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="18.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-03-28T21:51:53Z' class='post-time'>
+                    March 28, 2016,  9:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-03-28T21:51:53Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The easiest way to get started with Carloop is to use <a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/carloop_minimal.cpp">the demo program included in the library.</a></p>
+<p>The demo program will print the battery voltage, number of CAN messages and GPS position to the USB serial port.</p>
+<p>To use it connect a Particle Photon or Particle Electron into your Carloop. Then go to the <a href="https://build.particle.io">Particle Build online code editor.</a> Go to the library section (bookmark icon), search for Carloop and click “Use this example”.</p>
+<p>The demo program is made with the <a href="../carloop-library-released/17.html">carloop-library</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/e5fb1400adb1792a46ea70700fb4abef355663cb.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-03-28T22:19:57Z' class='post-time'>
+                    March 28, 2016, 10:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-03-28T22:19:57Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Maybe it is easier if we add some screenshots to go along with it.</p>
+<p>Step 1: Create a new Particle App<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/e5fb1400adb1792a46ea70700fb4abef355663cb.png" data-download-href="//carloop-community.dyndns.org/uploads/default/e5fb1400adb1792a46ea70700fb4abef355663cb" title="Screen Shot 2016-03-28 at 3.14.08 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/e5fb1400adb1792a46ea70700fb4abef355663cb_2_690x403.png" width="690" height="403" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/e5fb1400adb1792a46ea70700fb4abef355663cb_2_690x403.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/e5fb1400adb1792a46ea70700fb4abef355663cb_2_1035x604.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/e5fb1400adb1792a46ea70700fb4abef355663cb_2_1380x806.png" data-dominant-color="4F504C"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-03-28 at 3.14.08 PM.png</span><span class="informations">1440×842 70.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Step 2: Add the Carloop library to your app<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/17b0d913da1fe6acf58fac347ef92febf335b254.png" data-download-href="//carloop-community.dyndns.org/uploads/default/17b0d913da1fe6acf58fac347ef92febf335b254" title="Screen Shot 2016-03-28 at 3.16.56 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/17b0d913da1fe6acf58fac347ef92febf335b254_2_690x386.png" width="690" height="386" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/17b0d913da1fe6acf58fac347ef92febf335b254_2_690x386.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/17b0d913da1fe6acf58fac347ef92febf335b254_2_1035x579.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/17b0d913da1fe6acf58fac347ef92febf335b254_2_1380x772.png" data-dominant-color="474B48"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-03-28 at 3.16.56 PM.png</span><span class="informations">1440×806 52 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Step 3: Click on Include in App<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/47040261c0346337c3d4050c4336fcbec70344f5.png" data-download-href="//carloop-community.dyndns.org/uploads/default/47040261c0346337c3d4050c4336fcbec70344f5" title="Screen Shot 2016-03-28 at 3.17.59 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/47040261c0346337c3d4050c4336fcbec70344f5_2_690x385.png" width="690" height="385" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/47040261c0346337c3d4050c4336fcbec70344f5_2_690x385.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/47040261c0346337c3d4050c4336fcbec70344f5_2_1035x577.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/47040261c0346337c3d4050c4336fcbec70344f5_2_1380x770.png" data-dominant-color="464D4C"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-03-28 at 3.17.59 PM.png</span><span class="informations">1440×805 121 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Step 4: You are done!<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/4a818326376fe4d9c0077c7bf8befe55df5fc25d.png" data-download-href="//carloop-community.dyndns.org/uploads/default/4a818326376fe4d9c0077c7bf8befe55df5fc25d" title="Screen Shot 2016-03-28 at 3.19.09 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/4a818326376fe4d9c0077c7bf8befe55df5fc25d_2_690x384.png" width="690" height="384" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/4a818326376fe4d9c0077c7bf8befe55df5fc25d_2_690x384.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/4a818326376fe4d9c0077c7bf8befe55df5fc25d_2_1035x576.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/4a818326376fe4d9c0077c7bf8befe55df5fc25d_2_1380x768.png" data-dominant-color="252621"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-03-28 at 3.19.09 PM.png</span><span class="informations">1440×803 33.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Izeroman.html'><span itemprop='name'>Izeroman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-12T07:21:14Z' class='post-time'>
+                    April 12, 2016,  7:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-12T07:21:14Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I got these errors.</p>
+<p>carloop/carloop.h:20:38: error: ‘CAN_D1_D2’ was not declared in this scope<br>
+static constexpr auto CAN_PINS = CAN_D1_D2;</p>
+<p>carloop/carloop.h:51:5: error: ‘CANChannel’ does not name a type<br>
+CANChannel &amp;can();</p>
+<p>carloop/carloop.h:68:5: error: ‘CANChannel’ does not name a type<br>
+CANChannel canDriver;</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/b70625299146aa215200ccf0992e6f6b05630f6b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-12T15:35:06Z' class='post-time'>
+                    April 12, 2016,  3:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-12T15:35:06Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It looks like you might be using an older version of Particle’s firmware. Try changing your target device’s firmware to version 0.4.9 or later to be able to use CAN. In order to do so:</p>
+<ol>
+<li>
+<p>Go to <a href="https://build.particle.io/">https://build.particle.io/</a> environment.</p>
+</li>
+<li>
+<p>Click on the Devices icon:<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/b70625299146aa215200ccf0992e6f6b05630f6b.png" width="162" height="131"></p>
+</li>
+<li>
+<p>Click on your device (Electron or Photon) and select 0.4.9 or later in the dropdown:<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/0258f3f677476b4a7cc64f55500ebe15ee60e4f4.png" width="257" height="184"></p>
+</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Izeroman.html'><span itemprop='name'>Izeroman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-12T15:49:24Z' class='post-time'>
+                    April 12, 2016,  3:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-12T15:49:24Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you, I was on 0.4.8</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-12T15:59:55Z' class='post-time'>
+                    April 12, 2016,  3:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-12T15:59:55Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great to hear.  I’ll also add that to the ‘Getting Started with Carloop’ topic.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/RJRJ.html'><span itemprop='name'>RJRJ</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-29T01:15:32Z' class='post-time'>
+                    December 29, 2019,  1:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-29T01:15:32Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m finally getting started with this <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">  and when I click devices, it asks for a device ID. Where do I get that? Using the particle app, it tries to look for a Photon-XXX wifi ssid, but mine has a DUO-YWTS ssid. Is mine obsolete?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/goof2092.html'><span itemprop='name'>goof2092</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-07-21T10:10:45Z' class='post-time'>
+                    July 21, 2020, 10:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-07-21T10:10:45Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+New here. I followed the instructions for the demo app but unfortunately, I did not get any feedback from either a Photon or the Electron 3G. I tested with a Mercedes Benz w2003 and a Toyota Hilux D4D 2015 model.</p>
+<p>I then went head and tried can-utils on a linux laptop as well but got nothing in the console when sniffing for packets.</p>
+<p>Any pointers what to try next?</p>
+<p>Thank you</p>
+<p>Katongo.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-07-21T14:25:07Z' class='post-time'>
+                    July 21, 2020,  2:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-07-21T14:25:07Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey Katongo, have you confirmed that pins 6 &amp;14 have CAN bus traffic on the OBD-II port?  In other words, if you take a multimeter lead to one of them and the other lead to ground, what voltage are you getting?</p>
+<p>If you are in fact on a CAN bus, you should see some traffic. However, there are some vehicle ECUs that only broadcast upon a “request” CAN message first.  Here is a thread that will guide you on how to send those request messages:  <a href="../how-to-request-vin/153.html" class="inline-onebox">How to Request VIN - Software - Carloop Community</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-07-21T14:26:33Z' class='post-time'>
+                    July 21, 2020,  2:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-07-21T14:26:33Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/RJRJ.html">@RJRJ</a>,<br>
+It looks like you have a Redbear Duo. Those are a bit different to get setup.  Have you checked the Particle documentation and forums?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/goof2092.html'><span itemprop='name'>goof2092</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-07-21T17:50:39Z' class='post-time'>
+                    July 21, 2020,  5:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-07-21T17:50:39Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/alanm">@alanm</a>, I will check on that and give feedback soon. Many thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/goof2092.html'><span itemprop='name'>goof2092</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-07-28T07:19:23Z' class='post-time'>
+                    July 28, 2020,  7:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-07-28T07:19:23Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/alanm">@alanm</a>,</p>
+<p>I tested pins 6 and 14 using a multimeter and on both the reading was zero (0).</p>
+<p>I will now proceed to test with the demo app and report back.</p>
+<p>Thank you.</p>
+<p>Katongo</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

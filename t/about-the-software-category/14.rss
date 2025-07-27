@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>About the Software category</title>
+    <link>https://community.carloop.io/t/about-the-software-category/14</link>
+    <description>Discussion about libraries, vehicle data dictionaries, and overall software questions.</description>
+    
+    <lastBuildDate>Thu, 18 Feb 2016 06:46:41 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/about-the-software-category/14.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>About the Software category</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Discussion about libraries, vehicle data dictionaries, and overall software questions.</p>
+          <p><a href="https://community.carloop.io/t/about-the-software-category/14/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/about-the-software-category/14/1</link>
+        <pubDate>Thu, 18 Feb 2016 02:34:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-14-1</guid>
+        <source url="https://community.carloop.io/t/about-the-software-category/14.rss">About the Software category</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Displaying Can Messages Remotely</title>
+    <link>https://community.carloop.io/t/displaying-can-messages-remotely/172</link>
+    <description>Just got my carloop up and running, how can I display the messages from my car parked outside to my desktop inside? I know I could use my laptop and just do serial.print but I want to work from inside since it is WiFi connected.
+
+I tried using publish to do Particle.publish(&quot;Data ID: &quot;, message.id); but that doesn&#39;t work for some reason. What is the current best solution.</description>
+    
+    <lastBuildDate>Sat, 19 Nov 2016 00:59:56 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/displaying-can-messages-remotely/172.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Displaying Can Messages Remotely</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/a_storm">@A_Storm</a> , have you tried the TCP Server? <a href="https://github.com/carloop/simple_logger" class="inline-onebox">GitHub - carloop/simple_logger: Serial and TCP CAN bus logger for Carloop</a></p>
+          <p><a href="https://community.carloop.io/t/displaying-can-messages-remotely/172/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/displaying-can-messages-remotely/172/2</link>
+        <pubDate>Sat, 19 Nov 2016 00:59:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-172-2</guid>
+        <source url="https://community.carloop.io/t/displaying-can-messages-remotely/172.rss">Displaying Can Messages Remotely</source>
+      </item>
+      <item>
+        <title>Displaying Can Messages Remotely</title>
+        <dc:creator><![CDATA[A_Storm]]></dc:creator>
+        <description><![CDATA[
+            <p>Just got my carloop up and running, how can I display the messages from my car parked outside to my desktop inside? I know I could use my laptop and just do serial.print but I want to work from inside since it is WiFi connected.</p>
+<p>I tried using publish to do Particle.publish("Data ID: ", message.id); but that doesn’t work for some reason. What is the current best solution.</p>
+          <p><a href="https://community.carloop.io/t/displaying-can-messages-remotely/172/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/displaying-can-messages-remotely/172/1</link>
+        <pubDate>Sat, 12 Nov 2016 05:56:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-172-1</guid>
+        <source url="https://community.carloop.io/t/displaying-can-messages-remotely/172.rss">Displaying Can Messages Remotely</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>J1939 on my boat</title>
+    <link>https://community.carloop.io/t/j1939-on-my-boat/119</link>
+    <description>I have just started reading about Carloop. Although my topic appears in Car Hacking, I really would like to use it on my boat. It is a 2007 and uses J1939 protocol. I apologize upfront for my newbie question but will Carloop read J1939? I did a search of the forum and found only one reference. If anyone can point me in the right direction I would appreciate it.
+Thanks very much</description>
+    
+    <lastBuildDate>Tue, 06 Sep 2016 23:34:25 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/j1939-on-my-boat/119.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>J1939 on my boat</title>
+        <dc:creator><![CDATA[mpo881]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the reply. No I do not have either <img src="//carloop-community.dyndns.org/images/emoji/twitter/cry.png?v=12" title=":cry:" class="emoji" alt=":cry:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-on-my-boat/119/5</link>
+        <pubDate>Tue, 06 Sep 2016 23:34:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-119-5</guid>
+        <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+      </item>
+      <item>
+        <title>J1939 on my boat</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>The format of the CAN message will adhere to the J1939 format, although I’m not sure if the Message IDs will be the same. It would be great to test with SocketCAN. do you have a linux computer or a Raspberry Pi?</p>
+          <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-on-my-boat/119/4</link>
+        <pubDate>Tue, 06 Sep 2016 22:49:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-119-4</guid>
+        <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+      </item>
+      <item>
+        <title>J1939 on my boat</title>
+        <dc:creator><![CDATA[mpo881]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for your reply. I have a follow up question related to J1939. If I have two different brands of boats will the data output be the same if they both use J1939? In other words brand A fuel flow be the same output as Brand B fuel flow if they both use J1939?</p>
+<p>Thanks again</p>
+          <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-on-my-boat/119/3</link>
+        <pubDate>Sat, 03 Sep 2016 15:53:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-119-3</guid>
+        <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+      </item>
+      <item>
+        <title>J1939 on my boat</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey! definitely possible and something I’d be curious to hear how it goes!  J1939 had its origins in the heavy duty truck world but now has moved into other areas (e.g. boats!) and medium duty to even light duty trucks.</p>
+<p>I would first look up the J1939 protocol and check whether there are any open source interpreters like this really nice one based on SocketCAN and native on linux: <a href="http://elinux.org/J1939" class="inline-onebox">J1939 - eLinux.org</a></p>
+<p>Based on the SocketCAN porting example, you should be able to adapt the J1939 SocketCAN to the Photon. See this post for more direction there: <a href="https://carloop.dyndns.org/t/use-carloop-with-socketcan-and-can-utils/117" class="inline-onebox">Use Carloop with SocketCAN and can-utils - Software - Carloop Community</a></p>
+<p>Keep us posted!</p>
+          <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-on-my-boat/119/2</link>
+        <pubDate>Sat, 03 Sep 2016 04:52:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-119-2</guid>
+        <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+      </item>
+      <item>
+        <title>J1939 on my boat</title>
+        <dc:creator><![CDATA[mpo881]]></dc:creator>
+        <description><![CDATA[
+            <p>I have just started reading about Carloop. Although my topic appears in Car Hacking, I really would like to use it on my boat. It is a 2007 and uses J1939 protocol. I apologize upfront for my newbie question but will Carloop read J1939? I did a search of the forum and found only one reference. If anyone can point me in the right direction I would appreciate it.<br>
+Thanks very much</p>
+          <p><a href="https://community.carloop.io/t/j1939-on-my-boat/119/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-on-my-boat/119/1</link>
+        <pubDate>Thu, 01 Sep 2016 16:01:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-119-1</guid>
+        <source url="https://community.carloop.io/t/j1939-on-my-boat/119.rss">J1939 on my boat</source>
+      </item>
+  </channel>
+</rss>

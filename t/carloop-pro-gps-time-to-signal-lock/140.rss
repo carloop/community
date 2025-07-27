@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Pro GPS time to signal lock</title>
+    <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140</link>
+    <description>Hello,
+
+I got the Carloop pro basic application to work and connected via USB I can see the data (see below).
+
+The &quot;HASGPS&quot; was something I added just to see if GPS was enabled on the device. After being plugged in with clear line of site to the sky with no clouds for 20 minutes there is still no lat/lng is outputted.
+
+Is there anything I can do to speed up the time to lock? The timestamp begins to display after 20-30 seconds, which makes me think that there is some signal being received. It did work briefly the other night, but I cannot get it to lock on since then.
+
+I&#39;ve tried moving the device so the side with the label is facing up and also facing down. I&#39;ve tried it with the battery + usb plugged in and also with just the usb plugged in. I can&#39;t seem to get the GPS coordinates to output via USB.
+
+Thanks
+
+```
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  36549 chars: ********** *********** 10/04/2016 23:17:15
+Battery voltage:     4.350586 CAN messages:            0 HASGPS 1 GPS  36768 chars: ********** *********** 10/04/2016 23:17:16
+Battery voltage:     4.367988 CAN messages:            0 HASGPS 1 GPS  36987 chars: ********** *********** 10/04/2016 23:17:17
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37206 chars: ********** *********** 10/04/2016 23:17:18
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37425 chars: ********** *********** 10/04/2016 23:17:19
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  37517 chars: ********** *********** 10/04/2016 23:17:20
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37863 chars: ********** *********** 10/04/2016 23:17:21
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  38082 chars: ********** *********** 10/04/2016 23:17:22
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  38301 chars: ********** *********** 10/04/2016 23:17:23
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  38528 chars: ********** *********** 10/04/2016 23:17:24
+```</description>
+    
+    <lastBuildDate>Tue, 01 Aug 2017 03:30:48 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> &amp; <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, You should be aware of this finding (voltage level powering the GPS)!</p>
+<p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,<br>
+All the carloop stuff is on Github:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <img width="280" height="280" src="//carloop-community.dyndns.org/uploads/default/original/1X/2633197ec0987f8e86d152706ca1ae308cbf17b4.png" class="thumbnail onebox-avatar" data-dominant-color="000000">
+
+<h3><a href="https://github.com/carloop" target="_blank" rel="noopener">Carloop</a></h3>
+
+  <p>Carloop is a 100% open source project that makes it easy to connect Particle devices to the OBD-II port in your car. - Carloop</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>In the hardware repository, I looked at the schematic and indeed the GPS is connected to 3.3V on GPS connector pins 2 &amp; 5.  The good news is there is a 5V supply on the Carloop board.</p>
+<p>If you are able, can you breakout both sides of the GPS connector or a breadboard or something similar?  Be sure not to connect 5V with the 3.3V!  You could then test if the GPS_RX and GPS_TX would still work fine at 3.3V levels while power to the GPS is at 5V.  If it does not work, then logic conversion between 5V and 3.3V might be needed.</p>
+<p>If you are adventurous and the test above passed, you could cut the 3.3V trace on the circuit board to disconnect the GPS power from 3.3V.  You would then also have to cut the power trace from the GPS connector going to the CAN transceiver IC.  Next, use a jumper wire to re-connect the CAN transceiver IC to 3.3V.  Then you could use another jumper wire to connect GPS power to 5V.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/32">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/32</link>
+        <pubDate>Tue, 01 Aug 2017 03:30:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-32</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> ok… I have changed my code to interpret the output as characters.</p>
+<p>Current code version here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://build.particle.io/shared_apps/597ec4d40c782fae7300051a">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/49256a8a180897b67890839ee4b3cf585b9ed11f.png" class="site-icon" data-dominant-color="006D8A" width="32" height="32">
+
+      <a href="https://build.particle.io/shared_apps/597ec4d40c782fae7300051a" target="_blank" rel="noopener nofollow ugc">build.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://build.particle.io/shared_apps/597ec4d40c782fae7300051a" target="_blank" rel="noopener nofollow ugc">Particle Web IDE</a></h3>
+
+  <p>Write and flash code to your Particle devices</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I am getting NMEA sentences clearly now:</p>
+<pre><code>$GPRMC,055131.00,V,,,,,,,310717,,,N*7D
+$GPVTG,,,,,,,,,N*30
+$GPGGA,055131.00,,,,,0,00,99.99,,,,,,*65
+$GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+$GPGLL,,,,,055131.00,V,N*49 
+</code></pre>
+<p>In GPGLL I should have GPS coordinates (see: <a href="https://cdn.sparkfun.com/datasheets/GPS/GP-735T-150203.pdf" rel="noopener nofollow ugc">https://cdn.sparkfun.com/datasheets/GPS/GP-735T-150203.pdf</a>)</p>
+<p>How it’s possible that this GP-735T module connected directly works fine (see couple of posts above)<br>
+and once it’s going over Carloop board - it’s having issues to get GPS fix?<br>
+Wrong power level delivered to GPS?</p>
+<p>Cross checked once more:</p>
+<ul>
+<li>Once it’s connected via Carloop board - it’s getting 3.3V and cannot get GPS fix at all.</li>
+<li>Once connected directly via TTL-to-USB - it’s getting 5V and gets first GPS fix in 1-2 minutes.</li>
+</ul>
+<p>Any ideas how to solve it with some rewiring on existing board?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/31">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/31</link>
+        <pubDate>Mon, 31 Jul 2017 05:57:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-31</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,</p>
+<p>I could not see your code, just a blank page.  Does a share on particle have a time limit?</p>
+<p>I did look at your Serial monitor output.  Without the code, I could not understand it.<br>
+However, if I had to take a wild guess, it would be that the output is showing the ASCII code for each character.  If my guess is right, then 10=line feed, 13=carriage return, and numbers just above 32 are numerical digits.  If that is the case, just printing the character instead of its ASCII code would result in something easily interpreted.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/30">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/30</link>
+        <pubDate>Mon, 31 Jul 2017 03:47:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-30</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> Now via Serial1 I am receiving some data. But get confused with it’s structure.</p>
+<p>That’s my code:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://build.particle.io/shared_apps/597dd0058b5b396f86000781">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/49256a8a180897b67890839ee4b3cf585b9ed11f.png" class="site-icon" data-dominant-color="006D8A" width="32" height="32">
+
+      <a href="https://build.particle.io/shared_apps/597dd0058b5b396f86000781" target="_blank" rel="noopener nofollow ugc">build.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://build.particle.io/shared_apps/597dd0058b5b396f86000781" target="_blank" rel="noopener nofollow ugc">Particle Web IDE</a></h3>
+
+  <p>Write and flash code to your Particle devices</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>And that’s the Serial monitor output:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://pastebin.com/3UBqUGrL">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/f7ff6cce22bf3e3b1fa1c722cb12f2f527a87179.png" class="site-icon" data-dominant-color="B4B6B9" width="16" height="16">
+
+      <a href="https://pastebin.com/3UBqUGrL" target="_blank" rel="noopener nofollow ugc">Pastebin</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://pastebin.com/3UBqUGrL" target="_blank" rel="noopener nofollow ugc">Serial1 output - Pastebin.com</a></h3>
+
+  <p>Pastebin.com is the number one paste tool since 2002. Pastebin is a website where you can store text online for a set period of time.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Numbers returned seams to give some pattern - but what is that?<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/aa1f2135263264d6ccd23327fd36b86149c5750b.PNG" data-download-href="//carloop-community.dyndns.org/uploads/default/aa1f2135263264d6ccd23327fd36b86149c5750b" title="Serial1_output_vizualized.PNG"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/aa1f2135263264d6ccd23327fd36b86149c5750b.PNG" width="690" height="48" data-dominant-color="BECCB9"></a></div><p></p>
+<p>Should it be that Carloop Serial1 returns NMEA structured sentences (GPGGA, GPGLL, GPGSA, GPGSV, GPRMC, GPVTG, and GPTXT) ?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/29">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/29</link>
+        <pubDate>Sun, 30 Jul 2017 12:19:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-29</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,</p>
+<p>I just want to confirm if that solved it?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/28</link>
+        <pubDate>Thu, 27 Jul 2017 01:29:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-28</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,</p>
+<p>My apologies, but I went to sleep for the night and then realized that we are off-track.  I assumed Carloop was using a serial interface on the pins you indicated.</p>
+<p>However, I went back and verified the Carloop library and the hardware.<br>
+Carloop actually connects the GPS serial interface to the Particle device pins RX &amp; TX.  Therefore, you can use the hardware serial capabilities of Serial1.</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">ParticleSoftSerial ss(RX_PIN,TX_PIN);
+ss.begin(GPS_BAUD); 
+</code></pre>
+<p>should be changed to</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">Serial1.begin(GPS_BAUD); 
+</code></pre>
+<p>Another way to go about it is to use the gps capability built into the Carloop library.<br>
+My apologies, I should have caught that error right away.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/27</link>
+        <pubDate>Tue, 25 Jul 2017 04:21:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-27</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a> I have tried all of the hints from you. And still no connection via serial to GPS module.</p>
+<p>What’s next?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/26</link>
+        <pubDate>Mon, 24 Jul 2017 05:02:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-26</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,</p>
+<p>The first thing I would suggest is to follow the Particle naming convention for pins (instead of the Arduino-style pin numbering).<br>
+I am guessing you are using pins D4 &amp; D5?<br>
+In that case, you should have the following:</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">#define RX_PIN  D4 // GPS TX
+#define TX_PIN  D5 // GPS RX
+</code></pre>
+<p>Try that out first.</p>
+<p>Having the serial wired correctly is very important when using hardware serial.  However, software serial (which you are doing with the ParticleSoftSerial library) can be done with whatever pins you specify.  The second thing to try is to switch D4 &amp; D5 in the defines above and see if that works.</p>
+<p>If those two things don’t solve it, then let us know and we can help dig deeper.  You proved the GPS works, so now it must be Carloop, the Electron 2G (since it is Carloop Pro, if I remember correctly)  or the code.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/25</link>
+        <pubDate>Mon, 24 Jul 2017 03:18:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-25</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p>Second check is to run simple code passing data from GPS module serial connection (over pins 4 &amp; 5)<br>
+to Particle Serial output.</p>
+<pre><code>// This #include statement was automatically added by the Particle IDE.
+#include &lt;ParticleSoftSerial.h&gt;
+
+#define RX_PIN  4 // GPS TX
+#define TX_PIN  5 // GPS RX
+#define GPS_BAUD  9600  // GP-735 default baud rate
+
+ParticleSoftSerial ss(RX_PIN,TX_PIN);
+
+void setup() {
+  Serial.begin(115200); // Begin serial communication with computer
+  
+  Serial.println("Start, communication open."); 
+  
+  ss.begin(GPS_BAUD); // Begin serial communication with GPS
+
+  Serial.println("Start, GPS serial opened"); 
+}
+
+void loop() {
+	
+	if(ss.available()) {
+	
+		Serial.println("Serial to GPS avaliable.");
+		Serial.println(ss.read());
+	
+	} else {
+	
+		Serial.println("Serial to GPS not avaliable");
+		
+	}
+
+}
+</code></pre>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://build.particle.io/shared_apps/59746a84de3cfe5d8c0007aa">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/49256a8a180897b67890839ee4b3cf585b9ed11f.png" class="site-icon" data-dominant-color="006D8A" width="32" height="32">
+
+      <a href="https://build.particle.io/shared_apps/59746a84de3cfe5d8c0007aa" target="_blank" rel="noopener nofollow ugc">build.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://build.particle.io/shared_apps/59746a84de3cfe5d8c0007aa" target="_blank" rel="noopener nofollow ugc">Particle Web IDE</a></h3>
+
+  <p>Write and flash code to your Particle devices</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>And this code is returning “Serial to GPS not avaliable”…<br>
+So my Carloop Pro have trouble to talk over serial to GPS module.<br>
+Any ideas?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/24</link>
+        <pubDate>Sun, 23 Jul 2017 09:36:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-24</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p>I have connected GPS GP-735T module directly via TTL-to-USB converter to my laptop.<br>
+And then with with u-blox software I tried to check it <a href="https://www.u-blox.com/en/u-center-download-windows" class="inline-onebox" rel="noopener nofollow ugc">u-center</a></p>
+<p>It’s working fine and getting very quickly GPS fix  (screen from data capture):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/10ffcf041c6a64969df344b407269305c6fb1bab.PNG" data-download-href="//carloop-community.dyndns.org/uploads/default/10ffcf041c6a64969df344b407269305c6fb1bab" title="GPSCapture.PNG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/10ffcf041c6a64969df344b407269305c6fb1bab_2_690x406.PNG" width="690" height="406" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/10ffcf041c6a64969df344b407269305c6fb1bab_2_690x406.PNG, //carloop-community.dyndns.org/uploads/default/optimized/1X/10ffcf041c6a64969df344b407269305c6fb1bab_2_1035x609.PNG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/10ffcf041c6a64969df344b407269305c6fb1bab_2_1380x812.PNG 2x" data-dominant-color="323935"></a></div><p></p>
+<p>I think issue is somewhere at Carloop Pro module with wiring or code…</p>
+<p>Can you confirm that this wiring is ok? Shouldn’t it be that TX/RX pins (3,4) should be crossed to RX/TX on the other side?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040" title="CarloopConnectionGPS.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040_2_562x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/a4e2fbb14f13dd00a345a61c5c89e8fbb8a70040_2_750x1000.JPG 2x" data-dominant-color="AAAAA8"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/23</link>
+        <pubDate>Sun, 23 Jul 2017 08:49:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-23</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I think this GPS unit outputs serial data in the NMEA format.  In theory, you can use any device with a serial port to receive it and then display the raw data in a terminal.</p>
+<p>NMEA, with way more detail than you need, is described at this link:<br>
+<a href="http://www.gpsinformation.org/dale/nmea.htm" class="onebox" target="_blank" rel="noopener">http://www.gpsinformation.org/dale/nmea.htm</a></p>
+<p>You could even use a Particle device to take the serial data from the serial port, and then echo it to the serial over USB port (a very simple firmware; just a few lines).  Connect the USB to a computer and then use a terminal software (such as PuTTy) to view the data stream.</p>
+<p>That would at least let you know what the GPS is doing.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/22</link>
+        <pubDate>Wed, 19 Jul 2017 03:08:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-22</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried to run GPS only code to see what’s wrong.<br>
+Response is = “Sattelites in view: 0” (couple of hours of checking)<br>
+Code here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://build.particle.io/shared_apps/596b367d6997aaa745000c09">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/49256a8a180897b67890839ee4b3cf585b9ed11f.png" class="site-icon" data-dominant-color="006D8A" width="32" height="32">
+
+      <a href="https://build.particle.io/shared_apps/596b367d6997aaa745000c09" target="_blank" rel="noopener nofollow ugc">build.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://build.particle.io/shared_apps/596b367d6997aaa745000c09" target="_blank" rel="noopener nofollow ugc">Particle Web IDE</a></h3>
+
+  <p>Write and flash code to your Particle devices</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> - any chance to get new GPS module by post?<br>
+or maybe you can suggest some good substitute (as I cannot find GP-735T in any online store in Poland)</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/21</link>
+        <pubDate>Sun, 16 Jul 2017 10:28:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-21</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p>Is there some option to test GPS module directly without using Electron board? I am not getting GPS fix following open-sky prerequisite (by using carloop_minimal example). Maybe there is an error for GPS handling once device is in Europe <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/20</link>
+        <pubDate>Sat, 15 Jul 2017 22:10:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-20</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/pawelmanu">@pawelmanu</a>,</p>
+<p>Have you not gotten a GPS lock ever, or is it difficult to get a lock?<br>
+Try it out somewhere with a clear view of the sky, with no signal shields.<br>
+Unfortunately, a metal car roof or a metal solar film on a windshield make good signal shields…</p>
+<p>In case there is a hardware issue, <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> and <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> should be aware you are having difficulty.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/19</link>
+        <pubDate>Wed, 05 Jul 2017 01:57:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-19</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[pawelmanu]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Team, what’s the proceeding if I have rev 2.3 and I also have problems to lock GPS signal?<br>
+Any tricks? Or should I replace the module?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/18</link>
+        <pubDate>Tue, 04 Jul 2017 20:29:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-18</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/jmb">@jmb</a> that’s a bummer!  You can send us your GPS module and we will send you a different one.  We have had really bad results with this GPS version and we are going to be announcing our next GPS version shortly.  Our initial tests are really good but we want to make enough units to provide anyone that wants to upgrade.  Please send me an e-mail at <a href="mailto:alan@carloop.io">alan@carloop.io</a> so I can send you instructions on replacement of the current version.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/17</link>
+        <pubDate>Fri, 14 Apr 2017 04:41:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-17</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[jmb]]></dc:creator>
+        <description><![CDATA[
+            <p>Help? Who do I contact for a replacement? I’ve tried everything. I think I got a dud GPS module. It’s quite frustrating as the applications I had in mind are all critical on using position data! So I’m a bit stuck…</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/16</link>
+        <pubDate>Fri, 14 Apr 2017 03:41:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-16</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[jmb]]></dc:creator>
+        <description><![CDATA[
+            <p>Sadly I seem to be having the same problem described above. It ran all afternoon today with clear access to the sky, but no GPS fix. <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/15</link>
+        <pubDate>Thu, 13 Apr 2017 04:06:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-15</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[Affarram]]></dc:creator>
+        <description><![CDATA[
+            <p>Im having the same issue as <a class="mention" href="https://community.carloop.io/u/kogs">@kogs</a>. I let it run for a pretty long time and unplugged it a few times to see if that would help. I finally decided to read the data directly from the gps unit using Serial1<br>
+if (Serial1.available()) {<br>
+Serial.write(Serial1.read());<br>
+}<br>
+This is what my output looks like…<br>
+$GPRMC,035129.00,V,151216,N<em>71<br>
+$GPVTG,N</em>30<br>
+$GPGGA,035129.00,0,00,99.99,<em>6A<br>
+$GPGSA,A,1,99.99,99.99,99.99</em>30<br>
+$GPGSV,1,1,02,03,21,32,20<em>78<br>
+$GPGLL,035129.00,V,N</em>46</p>
+<p>As far as i can tell by looking at the <a href="http://www.hobbytronics.co.uk/datasheets/sparkfun/GP-735T-150203.pdf" rel="noopener nofollow ugc">datasheet</a> it is not acquiring a signal from enough satellites to determine my location. Is there something I can try to get it to work better?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/14</link>
+        <pubDate>Thu, 15 Dec 2016 03:57:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-14</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/kogs">@kogs</a>,<br>
+I shipped a new GPS and cable your way.  I suspect it is a bad cable but keep us posted on this community post so everyone can benefit from what you learn.</p>
+<p>Alan</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/13</link>
+        <pubDate>Wed, 07 Dec 2016 21:29:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-13</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[kogs]]></dc:creator>
+        <description><![CDATA[
+            <p>I just received my Carloop Pro in the mail today, and after running it for several hours - inside, on the front porch, and finally for a couple hours in the back yard with a clear view of the sky - I’m unable to get a GPS fix. My results are basically the same as Lucas’ first post, but I don’t even get a time signal from the GPS unit. Here’s an example of the output:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png" data-download-href="//carloop-community.dyndns.org/uploads/default/ea8524035f8efc8a7ed6b4f2658a897abe91b862" title="NoGPS.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862_2_690x202.png" width="690" height="202" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862_2_690x202.png, //carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png 2x" data-dominant-color="434343"></a></div><p></p>
+<p>It’s a revision 2.3.</p>
+<p>Thanks!<br>
+-Matt</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/12</link>
+        <pubDate>Tue, 06 Dec 2016 05:26:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-12</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[TylerB]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the info! I’ll dive in to this and see what I can figure out!</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/11</link>
+        <pubDate>Thu, 10 Nov 2016 17:13:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-11</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[TylerB]]></dc:creator>
+        <description><![CDATA[
+            <p>Using an external antenna mounted to the roof significantly improves performance, but I am really hoping to keep the unit self contained, if possible.</p>
+<p>I may end up having to go with an external antenna. Does anyone know of one that plugs right in to the 6 pin JST on the carloop board?</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/10</link>
+        <pubDate>Thu, 10 Nov 2016 17:12:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-10</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ll have to dig up that respective post where one of the Particle gurus had described who he’s done that.<br>
+I don’t think it’s in the stock AssetTracker stock repo but rather in a repo called <em>Fancy AssetTracker</em> (or so)</p>
+<hr>
+<p>Yup, that was the name. It was a project of Dave Middlecamp</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/dmiddlecamp/fancy-asset-tracker">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/dmiddlecamp/fancy-asset-tracker" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/c9a2a8026a4c2bc0a636f1cb86bedf17d7af6457_2_690x345.png" class="thumbnail" data-dominant-color="F0ECEE" width="690" height="345"></div>
+
+<h3><a href="https://github.com/dmiddlecamp/fancy-asset-tracker" target="_blank" rel="noopener nofollow ugc">GitHub - dmiddlecamp/fancy-asset-tracker: a place for fancy asset tracker demos!</a></h3>
+
+  <p>a place for fancy asset tracker demos! Contribute to dmiddlecamp/fancy-asset-tracker development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>But as it seems, the respective <code>ephemeris-loader</code> sample isn’t in there.<br>
+Maybe you can ping/bump <a class="mention" href="https://community.carloop.io/u/dave">@Dave</a> on the Particle forum in the respective thread</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37" target="_blank" rel="noopener nofollow ugc" title="04:32PM - 02 March 2016">Particle – 2 Mar 16</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37" target="_blank" rel="noopener nofollow ugc">Adafruit GPS Photon problem</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Heya @Eric24,  Sure thing!  If you have time and want to take a stab at it, here’s the info I collected so far:    Checkout the last few lines in that readme, it links to another awesome project that actually implemented this.  I was going to use...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/9</link>
+        <pubDate>Thu, 10 Nov 2016 08:46:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-9</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+      <item>
+        <title>Carloop Pro GPS time to signal lock</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Another possibility is that some car windshields have a micro metal film over the surface to reduce glare and keep some of the solar heat out of the car.  This could be the cause of some shielding of the GPS signal.  To test the theory, try getting a GPS lock with the GPS antenna outside of the car and see if the lock time improves significantly.</p>
+          <p><a href="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140/8</link>
+        <pubDate>Thu, 10 Nov 2016 04:27:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-140-8</guid>
+        <source url="https://community.carloop.io/t/carloop-pro-gps-time-to-signal-lock/140.rss">Carloop Pro GPS time to signal lock</source>
+      </item>
+  </channel>
+</rss>

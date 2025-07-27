@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>can2.0B EFF help</title>
+    <link>https://community.carloop.io/t/can2-0b-eff-help/532</link>
+    <description>has anyone came across can2.0b eff frames. trying to use canutils to dump eff frames. 
+ive been into mopar stuff for a bit and this is the first time ive come across this, its on a 2013 dodge dart.
+ive been able to sniff the ECU on the bench of my 14 charger, and various other dodge models but this one is the first ive seen with Extended frame format. 
+ive tested with an arduino and mpc2515 library and have been able to receive the extended frames. im trying my hand at wrting a skectch for the carloop but im not getting any data or maybe am not coding it right lol iv&#39;e seen a sample on here and just want to be able to use canutils first to determine what id&#39;s i need to look at. any help much appreciated. the crazy part is i can connect a cheap elm327 and request vin and it works. but if i connect the carloop (socketcan sketch) i dont see any data flowing by which leads me to belive i need to setup EFF with carloop receive filter. 
+  [code]
+#include &quot;OBDMessage.h&quot;
+
+#include &lt;carloop.h&gt;
+#include &lt;application.h&gt;
+ 
+SYSTEM_THREAD(ENABLED);
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+void setup() {
+  CANChannel can(CAN_D1_D2);
+  //can.addFilter(0, 0, CAN_FILTER_EXTENDED);
+  Serial.begin(115200);
+  can.begin(500000 , CAN_FILTER_EXTENDED);
+
+}
+
+void loop() {
+tester();
+CANMessage message;
+if (carloop.can().receive(message)) {
+ Serial.println(&quot;ID;&quot;);
+ Serial.print(message.id);
+ Serial.println(&quot;message data: &quot;);
+Serial.print(message.data[0]);
+Serial.print(message.data[1]);
+Serial.print(message.data[2]);
+Serial.print(message.data[3]);
+Serial.print(message.data[4]);
+Serial.print(message.data[5]);
+Serial.print(message.data[6]);
+Serial.print(message.data[7]);
+}
+
+}
+
+void tester() {
+
+CANMessage message;
+  OBDMessage obd;
+  unsigned long start = millis();
+  unsigned long timeout = 200; // ms
+  while(millis() - start &lt; timeout) {
+    if (carloop.can().receive(message)) {
+if (message.id &gt;= 0x0814F001 ){
+       // Serial.println(&quot;Got reply from ECU&quot;);
+
+        // Add the data to our OBD message
+        bool needsFlowControl = obd.addMessageData(message);
+
+        if (needsFlowControl) {
+          // Sending flow control
+          CANMessage flowControl = obd.flowControlMessage();
+          carloop.can().transmit(flowControl);
+         // Serial.println(&quot;Sent flow control&quot;);
+        }
+
+        // Use the data when the message is complete
+        if (obd.complete()) {
+          String vin = &quot;&quot;;
+          // VIN is 17 character and can be left-padded with zeros
+          for (int i = obd.size() - 200; i &lt; obd.size(); i++) {
+            vin += String((char)obd.data()[i]);
+          }
+          Serial.println(vin);
+          
+           
+          if (Particle.connected()) {
+            Particle.publish(&quot;BCC&quot;, vin, PRIVATE);
+          }
+
+          obd.clear();
+          //Serial.println(&quot;Done&quot;);
+          return;
+        }
+      }
+    }
+  }
+
+  Serial.println(&quot;NO DATA RECEVIED!!!&quot;);
+  if (Particle.connected()) {
+    Particle.publish(&quot;NO DATA RECEVIED!!!&quot;, PRIVATE);
+  }
+}
+[/code]</description>
+    
+    <lastBuildDate>Tue, 13 Feb 2018 23:57:17 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/can2-0b-eff-help/532.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>can2.0B EFF help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>yes heres the arduino code sample from the examples. i didn’t touch anything and its pulling data as is.</p>
+<pre><code class="lang-auto">// CAN Receive Example
+//
+
+#include &lt;mcp_can.h&gt;
+#include &lt;SPI.h&gt;
+
+long unsigned int rxId;
+unsigned char len = 0;
+unsigned char rxBuf[8];
+char msgString[128];                        // Array to store serial string
+
+#define CAN0_INT 2                              // Set INT to pin 2
+MCP_CAN CAN0(10);                               // Set CS to pin 10
+
+
+void setup()
+{
+  Serial.begin(115200);
+  
+  // Initialize MCP2515 running at 16MHz with a baudrate of 500kb/s and the masks and filters disabled.
+  if(CAN0.begin(MCP_ANY, CAN_500KBPS, MCP_16MHZ) == CAN_OK)
+    Serial.println("MCP2515 Initialized Successfully!");
+  else
+    Serial.println("Error Initializing MCP2515...");
+  
+  CAN0.setMode(MCP_NORMAL);                     // Set operation mode to normal so the MCP2515 sends acks to received data.
+
+  pinMode(CAN0_INT, INPUT);                            // Configuring pin for /INT input
+  
+  Serial.println("MCP2515 Library Receive Example...");
+}
+
+void loop()
+{
+  if(!digitalRead(CAN0_INT))                         // If CAN0_INT pin is low, read receive buffer
+  {
+    CAN0.readMsgBuf(&amp;rxId, &amp;len, rxBuf);      // Read data: len = data length, buf = data byte(s)
+    
+    if((rxId &amp; 0x80000000) == 0x80000000)     // Determine if ID is standard (11 bits) or extended (29 bits)
+      sprintf(msgString, "Extended ID: 0x%.8lX  DLC: %1d  Data:", (rxId &amp; 0x1FFFFFFF), len);
+    else
+      sprintf(msgString, "Standard ID: 0x%.3lX       DLC: %1d  Data:", rxId, len);
+  
+    Serial.print(msgString);
+  
+    if((rxId &amp; 0x40000000) == 0x40000000){    // Determine if message is a remote request frame.
+      sprintf(msgString, " REMOTE REQUEST FRAME");
+      Serial.print(msgString);
+    } else {
+      for(byte i = 0; i&lt;len; i++){
+        sprintf(msgString, " 0x%.2X", rxBuf[i]);
+        Serial.print(msgString);
+      }
+    }
+        
+    Serial.println();
+  }
+}
+
+/*********************************************************************************************************
+  END FILE
+*********************************************************************************************************/</code></pre>
+<p>and that would explain why i cant see any data and my autel maxisys can see it fine. i know its ISO 15765-4 CAN (29 bit ID, 500 kbit/s) i can even use a cheap bluetooth elm327 to comminicate and pull info.</p>
+<p>i guess i passed this up on the particle docs</p>
+<pre><code class="lang-auto">addFilter()
+
+Filter which messages will be added to the receive queue.
+// SYNTAX
+can.addFilter(id, mask);
+can.addFilter(id, mask, type);By default all messages are received. When filters are added, only messages matching the filters will be received. Others will be discarded.Parameters:
+id: the id pattern to match
+mask: the mask pattern to match
+type (optional): CAN_FILTER_STANDARD (default) or CAN_FILTER_EXTENDED
+Returns: boolean true if the filter was added, false if there are too many filters (14 filters max).</code></pre>
+<p>im going to try and see if anything comes up using the “extended” filter.</p>
+          <p><a href="https://community.carloop.io/t/can2-0b-eff-help/532/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can2-0b-eff-help/532/3</link>
+        <pubDate>Tue, 13 Feb 2018 19:01:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-532-3</guid>
+        <source url="https://community.carloop.io/t/can2-0b-eff-help/532.rss">can2.0B EFF help</source>
+      </item>
+      <item>
+        <title>can2.0B EFF help</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>,  Can you link or share that arduino code that does work?  Maybe comparing the code may provide some clues.</p>
+<p>I have not tried anything with EFF yet.</p>
+<p>Another possibility, which I do not think is likely, is that the system firmware of the Photon/Electron/RedbearDuo would need to be updated to support EFF…</p>
+          <p><a href="https://community.carloop.io/t/can2-0b-eff-help/532/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can2-0b-eff-help/532/2</link>
+        <pubDate>Tue, 13 Feb 2018 18:41:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-532-2</guid>
+        <source url="https://community.carloop.io/t/can2-0b-eff-help/532.rss">can2.0B EFF help</source>
+      </item>
+      <item>
+        <title>can2.0B EFF help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>has anyone came across can2.0b eff frames. trying to use canutils to dump eff frames.<br>
+ive been into mopar stuff for a bit and this is the first time ive come across this, its on a 2013 dodge dart.<br>
+ive been able to sniff the ECU on the bench of my 14 charger, and various other dodge models but this one is the first ive seen with Extended frame format.<br>
+ive tested with an arduino and mpc2515 library and have been able to receive the extended frames. im trying my hand at wrting a skectch for the carloop but im not getting any data or maybe am not coding it right lol iv’e seen a sample on here and just want to be able to use canutils first to determine what id’s i need to look at. any help much appreciated. the crazy part is i can connect a cheap elm327 and request vin and it works. but if i connect the carloop (socketcan sketch) i dont see any data flowing by which leads me to belive i need to setup EFF with carloop receive filter.</p>
+<pre><code class="lang-auto">#include "OBDMessage.h"
+
+#include &lt;carloop.h&gt;
+#include &lt;application.h&gt;
+ 
+SYSTEM_THREAD(ENABLED);
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+void setup() {
+  CANChannel can(CAN_D1_D2);
+  //can.addFilter(0, 0, CAN_FILTER_EXTENDED);
+  Serial.begin(115200);
+  can.begin(500000 , CAN_FILTER_EXTENDED);
+
+}
+
+void loop() {
+tester();
+CANMessage message;
+if (carloop.can().receive(message)) {
+ Serial.println("ID;");
+ Serial.print(message.id);
+ Serial.println("message data: ");
+Serial.print(message.data[0]);
+Serial.print(message.data[1]);
+Serial.print(message.data[2]);
+Serial.print(message.data[3]);
+Serial.print(message.data[4]);
+Serial.print(message.data[5]);
+Serial.print(message.data[6]);
+Serial.print(message.data[7]);
+}
+
+}
+
+void tester() {
+
+CANMessage message;
+  OBDMessage obd;
+  unsigned long start = millis();
+  unsigned long timeout = 200; // ms
+  while(millis() - start &lt; timeout) {
+    if (carloop.can().receive(message)) {
+if (message.id &gt;= 0x0814F001 ){
+       // Serial.println("Got reply from ECU");
+
+        // Add the data to our OBD message
+        bool needsFlowControl = obd.addMessageData(message);
+
+        if (needsFlowControl) {
+          // Sending flow control
+          CANMessage flowControl = obd.flowControlMessage();
+          carloop.can().transmit(flowControl);
+         // Serial.println("Sent flow control");
+        }
+
+        // Use the data when the message is complete
+        if (obd.complete()) {
+          String vin = "";
+          // VIN is 17 character and can be left-padded with zeros
+          for (int i = obd.size() - 200; i &lt; obd.size(); i++) {
+            vin += String((char)obd.data()[i]);
+          }
+          Serial.println(vin);
+          
+           
+          if (Particle.connected()) {
+            Particle.publish("BCC", vin, PRIVATE);
+          }
+
+          obd.clear();
+          //Serial.println("Done");
+          return;
+        }
+      }
+    }
+  }
+
+  Serial.println("NO DATA RECEVIED!!!");
+  if (Particle.connected()) {
+    Particle.publish("NO DATA RECEVIED!!!", PRIVATE);
+  }
+}</code></pre>
+          <p><a href="https://community.carloop.io/t/can2-0b-eff-help/532/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can2-0b-eff-help/532/1</link>
+        <pubDate>Fri, 09 Feb 2018 16:39:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-532-1</guid>
+        <source url="https://community.carloop.io/t/can2-0b-eff-help/532.rss">can2.0B EFF help</source>
+      </item>
+  </channel>
+</rss>

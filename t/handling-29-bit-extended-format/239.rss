@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Handling 29-Bit (Extended) Format</title>
+    <link>https://community.carloop.io/t/handling-29-bit-extended-format/239</link>
+    <description>Based on some research online, I suspect my car is using 29-bit IDs (as opposed to 11-bit).  A few questions:
+
+1.  Is there any easy way to confirm this?
+
+2.  How do I go about handling message requests and responses differently for 29-bit?  I know CANMessage has an &quot;extended&quot; property, i.e.
+
+message.extended = true;
+
+...but what else needs to be handled differently when constructing the message and parsing the response?  For example, would the Message ID for retrieving PIDs be different from the usual 0x7DF?
+
+Thanks,
+Mike</description>
+    
+    <lastBuildDate>Fri, 16 Aug 2019 01:46:26 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="alanm" data-post="24" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>SAE J1939 standards</p>
+</blockquote>
+</aside>
+<p><a href="http://www.simmasoftware.com/j1939-presentation.pdf" rel="noopener nofollow ugc">Understanding SAE J1939</a></p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/26</link>
+        <pubDate>Fri, 16 Aug 2019 01:46:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-26</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[ashoksam]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> thanks for your reply.I have gone through the SAE J1939 standard document,but i am not getting any document which will helps me . If you have any sample document for 29 -bit identifiers with Request and response and what is the range of identifier which will use most of the OEM’s,Please provide it gonna help a lot for me.<br>
+Thanks in advance.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/25</link>
+        <pubDate>Thu, 08 Aug 2019 06:51:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-25</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Cool - glad to hear it is helpful!  For Heavy Duty vehicles you should look into the SAE J1939 standards to determine how to request diagnostic data.  It is a completely different standard than OBD-II</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/24</link>
+        <pubDate>Wed, 07 Aug 2019 18:57:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-24</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[ashoksam]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> I have gone through this post. Based on your post i understand what are the CAN request and CAN response identifer for 11 bit. Similiar  to the 11 bit is there any standard CAN request and CAN response identifier for 29-bit which will supports  all kind of heavy duty vehicles like trucks,buses etc.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/23</link>
+        <pubDate>Tue, 06 Aug 2019 12:01:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-23</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m having a similar issue.  I’ve coded now for both 11 bit and 29 bit messages - thanks for the heads-up and the information.  That said, I’m a bit concerned/puzzled by the need for 5 bytes with specific data.  Is this detail documented somewhere?</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/22</link>
+        <pubDate>Wed, 08 Aug 2018 17:37:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-22</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/egarl004">@egarl004</a> and <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>,</p>
+<p>Sorry for the late reply, just saw your messages now.  This is what I needed to use to construct the request message:</p>
+<p>CANMessage message;<br>
+message.id = 0x18DB33F1;<br>
+message.len = 8;         // message will always be 8 bytes<br>
+message.extended = true;<br>
+message.data[0] = 0x02;  // 2 bytes of data in message<br>
+message.data[1] = 0x01;  // Get current data<br>
+message.data[2] = pid;   // The PID to retrieve (replace with appropriate hex value for the PID)<br>
+message.data[3] = 0x09;  // Not sure why, but the last 5 bytes need to be set this way<br>
+message.data[4] = 0x13;<br>
+message.data[5] = 0x00;<br>
+message.data[6] = 0x20;<br>
+message.data[7] = 0xE0;</p>
+<p>When waiting for the response, a quick way to filter out most/all of the garbage is to just look for anything with an ID above 7DF:</p>
+<p>const auto REPLY_ID_MIN = 0x7DF;<br>
+if (replyMessage.id &gt;= REPLY_ID_MIN)<br>
+{<br>
+// Probably the response; log details…<br>
+}</p>
+<p>My vehicle never seems to send messages above 7DF unless it’s a diagnostic response.  You can probably also use the canFilter() method to limit the received messages but I couldn’t tell you offhand how to populate it in this case.</p>
+<p>Hope this helps.</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/21</link>
+        <pubDate>Mon, 24 Jul 2017 18:43:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-21</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>,  did you get your code to a point where it could be used as a complete example, or have some good pointers for <a class="mention" href="https://community.carloop.io/u/egarl004">@egarl004</a> ?</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/20</link>
+        <pubDate>Fri, 14 Jul 2017 03:24:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-20</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>Running into similar issues here with a Honda Pilot. Anyone have some example code? I’ve changed my message ID but could use some pointers with the rest.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/19</link>
+        <pubDate>Thu, 13 Jul 2017 23:31:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-19</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, lots of great detail!</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/18</link>
+        <pubDate>Fri, 14 Apr 2017 20:45:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-18</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>!  Very helpful document.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/17</link>
+        <pubDate>Fri, 14 Apr 2017 13:26:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-17</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="mike_b" data-post="13" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/977dab/48.png" class="avatar"> mike_b:</div>
+<blockquote>
+<p>I need to use message ID 18db33f1 to send the request; 7DF does not work</p>
+</blockquote>
+</aside>
+<p>Yes, that is correct.  <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>, in response to your question, based on the ISO 15765-4 Standard for CAN messages, that request ID is required for CAN buses with extended (29-bit) format.  See table from ISO standard:</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/3b22ccb33ad88d8b159a23411d5fef5446178737.png" width="576" height="247"></p>
+<p>For 11 bit identifiers, the correct CAN IDs are:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png" data-download-href="//carloop-community.dyndns.org/uploads/default/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8_2_620x500.png" width="620" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8_2_620x500.png, //carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png 2x" data-dominant-color="DFDFDF"></a></div><p></p>
+<p>For those of you trying to learn more about <em>Diagnostics on</em><br>
+<em>Controller Area Networks (CAN)</em>, this standard goes into quite a bit of detail: <a href="https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/iso_15765-4.pdf">https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/iso_15765-4.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/16</link>
+        <pubDate>Fri, 14 Apr 2017 05:15:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-16</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>[quote=“mike_b, post:13, topic:239”]<br>
+I won’t paste the values in here in case this is some kind of proprietary key not meant to be released to the public<br>
+[/quote]no need to worry, <a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>! Luckily we are allowed to peek under the CAN bus hood all we want <img src="//carloop-community.dyndns.org/images/emoji/twitter/thumbsup.png?v=12" title=":thumbsup:" class="emoji" alt=":thumbsup:" loading="lazy" width="20" height="20"> <a href="https://www.wired.com/2016/10/hacking-car-pacemaker-toaster-just-became-legal/" class="inline-onebox">You Can Legally Hack Your Own Car, Pacemaker, or Smartphone Now | WIRED</a></p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/15</link>
+        <pubDate>Fri, 14 Apr 2017 04:59:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-15</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>, Great sleuthing to figure out what is going on in your car!</p>
+<p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, Any ideas what is going on with this solution?</p>
+<p>It appears to violate the legislated OBDII requirements (at least in North America).  On the other hand, could you be plugged into a CANbus other than the one used for OBDII.  My only <em>wild</em> guess is that some module is sending on a secondary bus to another module, and then that second module forwards to the OBDII CANbus.<br>
+Then again, I am focusing on the older K-Line, so I could have missed some new development…?</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/14</link>
+        <pubDate>Tue, 11 Apr 2017 03:28:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-14</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>,</p>
+<p>Thank you for the clarification and additional ideas!  I figured out the problem and I have a very interesting explanation.</p>
+<p>I have one of those generic scan tools that you can plug into the OBD port and check/reset trouble codes, see live data, etc.  The scan tool works perfectly fine when I plug it in to my car.  It reads live data like Vehicle Speed which the Carloop was unable to do.  So I wanted to figure out why the scan tool worked and the Carloop didn’t.</p>
+<p>I bought a simple OBD Y-splitter and connected the scan tool to one end and the Carloop to the other, so I could use the Carloop to monitor messages being sent to and from the scan tool.  I discovered a few interesting things from this:</p>
+<ul>
+<li>I need to use message ID 18db33f1 to send the request; 7DF does <em>not</em> work</li>
+<li>The response has a message ID of 18daf111 or 18daf11d (probably depends on the responding ECU)</li>
+<li>The last 5 bytes in the message data <em>must</em> be populated with a specific set of values; if these are set to 00 or 55, you will <em>not</em> get a reply; I won’t paste the values in here in case this is some kind of proprietary key not meant to be released to the public</li>
+</ul>
+<p>After I made those adjustments, the Carloop worked perfectly to retrieve Vehicle Speed and RPM (didn’t try anything else).  Hopefully this post has a few tips that help others.  Thanks to everyone for your help!</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/13</link>
+        <pubDate>Mon, 10 Apr 2017 20:50:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-13</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>, sorry for the delay.  I can see the forums but not post when I am at the office.</p>
+<p>Pseudo-code for what I am thinking is this:</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">serial.print "waiting for receive to start" // debug messages to USB serial
+ while ( NOT canDriver.receive(replyMessage) OR timeout &lt; 5 sec)
+{ } // wait for receive to start
+if (timeout reached 5 sec)
+{
+serial.print ("receive did not start within 5 sec")
+} else {
+serial.print ("receive started")
+ while ( canDriver.receive(replyMessage) OR timeout &lt; 5 sec)
+{ } // receiving
+if (timeout reached 5 sec)
+{
+serial.print ("receive did not complete within 5 sec")
+} else {
+serial.print ("receive successful")
+}
+</code></pre>
+<p>You may not need this in the final code, but this could help out with experimenting and debugging.  If you monitor serial over USB, you will be able to see how far the receiving gets before you run into problems.  You can also take this pseudo-code and add in some additional functionality to do re-tries.</p>
+<p>Also, do you have an oscilloscope or logic analyzer to monitor the message receiving?  You could probe D2 (CAN_RX) on the Particle device (not sure if it is Photon or Electron or a compound) to see if there is signal activity on receiving.  Also, you could probe pin 6 of the OBDII connector, but you would need a logic analyzer to tell the difference to sending out the request versus receiving a response.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/12</link>
+        <pubDate>Sat, 08 Apr 2017 02:38:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-12</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>,</p>
+<p>Thanks for the suggestions--  regarding the Particle system mode stuff, I already have that covered (system mode MANUAL with system thread enabled).</p>
+<p>This comment is very interesting though:</p>
+<aside class="quote no-group" data-username="cyclin_al1" data-post="10" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d6d6ee/48.png" class="avatar"> cyclin_al1:</div>
+<blockquote>
+<p>I wonder if your code checks to see if it receiving before the receiving actually starts.  If that is the case, your code will exit the loop before receiving (which is unintended), instead of exiting the loop after receiving is complete (which is what I think you want).</p>
+</blockquote>
+</aside>
+<p>I’m not totally sure what you mean here and I don’t recall seeing any sample code anywhere that does anything special with the receive() call beyond what I’m already doing.  Can you please provide a simple example with code/pseudocode to clarify this point?  You mentioned to put something like an if/while “to see that receiving actually gets started” but I don’t understand how that translates to code.</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/11</link>
+        <pubDate>Wed, 05 Apr 2017 13:30:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-11</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>, I wonder if you need a strategic check for start of receiving in your code?  It is difficult to tell from posting just a snippet, but there is one thing I wonder about.[quote=“mike_b, post:9, topic:239”]<br>
+while (canDriver.receive(replyMessage))<br>
+[/quote]<br>
+I wonder if your code checks to see if it receiving before the receiving actually starts.  If that is the case, your code will exit the loop before receiving (which is unintended), instead of exiting the loop after receiving is complete (which is what I think you want).<br>
+What I would suggest is putting in a delay or some sort of if/while to see that receiving actually gets started.  Once you know it is started, then you can check to see when it completes receiving.</p>
+<p>One other thing to note, which is a Particle thing, not a carloop thing.<br>
+If for some reason, the receiving is not completed within a reasonable time, you will be stuck in that loop for too long.  This is called blocking code.  Particle devices need time once in a while to keep the connection alive (WiFi, Cellular or BLE) and to do some general housekeeping.  If you block for too long, you will lose your connection and then your code will behave strangely.  I recommend using a timeout to exit from loops, and then you can handle the timeout error OR you can use a SYSTEM_MODE (if I remember correctly) that puts your code and the Particle code in separate threads.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/10</link>
+        <pubDate>Wed, 05 Apr 2017 03:54:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-10</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>,</p>
+<p>Thanks for the clarification!  Let me paste a bit of code in here and I would like you to let me know if this code should work, given the discussion above.</p>
+<p><strong>Filtering (for now, just include anything with an extended message format); this runs before calling canDriver.begin()</strong></p>
+<p>canDriver.addFilter(0, 0, CAN_FILTER_EXTENDED);</p>
+<p><strong>Request message construction:</strong></p>
+<p>CANMessage message;<br>
+message.id = 0x7DF;<br>
+message.len = 8;         // message will always be 8 bytes<br>
+message.data[0] = 0x02;  // 2 bytes of data in message<br>
+message.data[1] = 0x01;  // Get current data<br>
+message.data[2] = 0x0C;  // The PID to retrieve (Engine RPM)<br>
+message.data[3] = 0x00;<br>
+message.data[4] = 0x00;<br>
+message.data[5] = 0x00;<br>
+message.data[6] = 0x00;<br>
+message.data[7] = 0x00;</p>
+<pre><code>if (!canDriver.transmit(message))
+{
+  Serial.println("Unable to transmit message!");
+}
+</code></pre>
+<p><strong>The below code runs in a loop that sleeps for just 10ms between loops:</strong></p>
+<p>CANMessage replyMessage;<br>
+int messageCount = canDriver.available();</p>
+<pre><code>if (messageCount &gt; 0)
+{
+  while (canDriver.receive(replyMessage))
+  {
+    // Got an extended message; light up the LED
+    digitalWrite(ledPin, HIGH);
+  }
+}
+</code></pre>
+<p>So you can see that the above code is pretty forgiving and doesn’t even look for a reply specifically with the ID of 0x18DAF111 (just looks for any extended message).  I still can’t get a reply though (i.e. blue LED doesn’t light up).  What am I not doing correctly?</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/9</link>
+        <pubDate>Tue, 04 Apr 2017 13:51:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-9</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="mike_b" data-post="7" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/977dab/48.png" class="avatar"> mike_b:</div>
+<blockquote>
+<p>n mind, how would I figure out the broadcast ID where I need to send the request?  Am I still supposed to send the request to 0x7DF and then expect a reply from 0x18DAF111?  Or do I send the request to 0x18DAF111?</p>
+</blockquote>
+</aside>
+<p>Hi <a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>, I want to clarify something regarding CAN Message IDs. When sending CAN messages on the bus, all modules that are connected to that bus will be able to receive the CAN message you are sending.  Similarly, when you connect Carloop to the OBD-II port you can see CAN messages being broadcasted by other modules on the bus.</p>
+<p>People sometimes confuse the Arbitration ID (0x7DF in this case) being tied to module or node. That is simply not the case, since many modules can send and receive CAN messages with same IDs.  The confusion stems from the practice in the 90s to assign CAN IDs to the modules but as the CAN bus wikipedia article explains that practice is no longer valid:</p>
+<blockquote>
+<p>In the early 1990s, the choice of IDs for messages was done simply on the basis of identifying the type of data and the sending node; however, as the ID is also used as the message priority, this led to poor real-time performance. In those scenarios, a low CAN bus utilization of circa 30% was commonly required to ensure that all messages would meet their deadlines. However, if IDs are instead determined based on the deadline of the message, the lower the numerical ID and hence the higher the message priority, then bus utilizations of 70 to 80% can typically be achieved before any message deadlines are missed.</p>
+</blockquote>
+<p>In other words, you should send request 0x7DF (with the appropriate data e.g. 01100011) and see a response from the ECM as a new message with Arbitration ID 0x18DAF111 and its corresponding data. It has nothing to do with the sending / receiving node.  Hope this clarifies some of the confusion surrounding CAN.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/8</link>
+        <pubDate>Mon, 03 Apr 2017 20:23:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-8</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>,</p>
+<p>I know for sure the car is on 500 kbits because it says so in the manual (and the other bitrates don’t return any messages).</p>
+<p>Using an OBD scan tool I found out today that the ECM on the vehicle actually has an ID of 0x18DAF111, which would indicate that I should expect replies using this 29-bit message ID.  I googled this ID and found some other hits where this ID was used as the reply ID for Honda vehicles.</p>
+<p>So with that in mind, how would I figure out the broadcast ID where I need to send the request?  Am I still supposed to send the request to 0x7DF and then expect a reply from 0x18DAF111?  Or do I send the request to 0x18DAF111?</p>
+<p>Thanks,<br>
+MIke</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/7</link>
+        <pubDate>Mon, 03 Apr 2017 20:03:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-7</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Programmatically, you would probably have to cycle through different baud rates until you get a valid response.  Just be sure to wait long enough for a timeout between trying different speeds, or you might miss the response.</p>
+<p>As for accessing both low speed and high speed layers simultaneously, are you referring to pins 6 &amp; 14 on the connector (see link)?<br>
+<a href="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector" class="inline-onebox">On-board diagnostics - Wikipedia</a>.</p>
+<p>Yes, carloop is connected to both these pins.  As for what the existing firmware will do, or what could be possible if firmware was written would be better answered by <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>.</p>
+<p>If you are referring to primary and secondary CANbuses, then you would need to develop another version of carloop hardware (call it carloop-multi?) that uses the electron (since it has a second CAN channel) with a second CAN transceiver chip in the hardware.</p>
+<p>I am working on something similar (calling it carloopRetro) that has both a CAN transceiver and a K-Line transceiver.  However, I doubt that CAN and K-Line would ever be used at the same time.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/6</link>
+        <pubDate>Wed, 29 Mar 2017 03:45:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-6</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>Sorry if I’m a bit off topic. Is there some way to detect the baud rate programmatically? Also can you access both low speed and high speed layers simultaneously?</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/5</link>
+        <pubDate>Wed, 29 Mar 2017 02:55:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-5</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes. You should still be able to to send the usual diagnostic requests to 0x7DF.</p>
+<p>Try different CAN speeds. Maybe your car doesn’t use the usual 500 kbit/s. I’d try 250 kbit/s and 1,000 kbit/s.</p>
+<p>Change it in <code>setup()</code> with <code>carloop.setCANSpeed(250000);</code> before <code>carloop.begin();</code></p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/4</link>
+        <pubDate>Sat, 25 Mar 2017 20:28:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-4</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>Julien,</p>
+<p>Thanks!  Can you please clarify on this:</p>
+<aside class="quote no-group" data-username="jvanier" data-post="2" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/jvanier/48/426_2.png" class="avatar"> jvanier:</div>
+<blockquote>
+<p>Since the PID messages are legislated the 0x7DF messages should be the same.</p>
+</blockquote>
+</aside>
+<p>Does this mean that even if the vehicle uses 29-bit messages, that I should still be able to send the usual diagnostic requests to 0x7DF and expect to get a reply on 0x7E8?  This is part of my struggle where I’m trying to figure out why I’m not getting anything back on 0x7E8 (or one of the neighboring addresses).</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/3</link>
+        <pubDate>Sat, 25 Mar 2017 20:18:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-3</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+      <item>
+        <title>Handling 29-Bit (Extended) Format</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Both 11-bit and 29-bit messages can coexist on the same bus.</p>
+<p>Since the PID messages are legislated the 0x7DF messages should be the same.</p>
+<p><code>message.id</code> is a 32-bit value. When receiving a message with an 11-bit ID, only the lower 11 bits will be filled in and <code>message.extended</code> will be false. When receiving a message with a 29-bit ID, the lower 29 bits will be filled in and <code>message.extended</code> will be true.</p>
+<p>While you could have messages with the same 11-bit and 29-bit ID on the same bus (0x110 and 0x‭00000110)‬ or 29-bit IDs smaller than 0x7FF, that would be super confusing and I hope no car manufacturer does this!</p>
+<p>So if you just print the IDs you should be able to see if you have 29-bit IDs in there. You can also print <code>message.extended</code> to be sure.</p>
+          <p><a href="https://community.carloop.io/t/handling-29-bit-extended-format/239/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/handling-29-bit-extended-format/239/2</link>
+        <pubDate>Sat, 25 Mar 2017 19:34:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-239-2</guid>
+        <source url="https://community.carloop.io/t/handling-29-bit-extended-format/239.rss">Handling 29-Bit (Extended) Format</source>
+      </item>
+  </channel>
+</rss>

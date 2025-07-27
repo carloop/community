@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>What features would you request for Carloop 3.0?</title>
+    <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183</link>
+    <description>Hello!
+We cannot express how thankful @jvanier and I are about this community&#39;s support and enthusiasm so far! Thanks for being so awesome!  Since you&#39;ve been with us since the beginning, we&#39;d like to ask: What are some features, enhancements, and improvements you&#39;d like to see for Carloop 3.0?  What is important to you?
+
+We have our pencils sharpened and ready to take notes so fire away!</description>
+    
+    <lastBuildDate>Mon, 09 Apr 2018 02:58:51 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>With a Photon, you can do MQTT today.  No extra hardware required.  Check out the MQTT library in the Particle online IDE.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/31">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/31</link>
+        <pubDate>Mon, 09 Apr 2018 02:58:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-31</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ibico">@IBICO</a>,</p>
+<p>All the things you listed are functions that Carloop can help you accomplish.  However, this thread is about what you would change with the Carloop itself… is there anything you would change in the Carloop itself to help in your projects?</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/30">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/30</link>
+        <pubDate>Mon, 26 Mar 2018 03:58:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-30</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[IBICO]]></dc:creator>
+        <description><![CDATA[
+            <p>Smart home connection with MQTT or similar to get in home automation like fibaro home central or similar.   ex. put on heating system or charger if car is cold or get low battery. open garage door when car is close to home. warn if car is outside a dedicated area or drive to fast (kids loan the car)</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/29">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/29</link>
+        <pubDate>Sat, 24 Mar 2018 11:47:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-29</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jerseytechguy">@JerseyTechGuy</a>,  You are never too late to the game.  There is a new GPS that plugs in on top of the Carloop or with a JST cable.  The GPS circuit board happens to also have a microSD card slot.  That should already cover a lot of what you are looking for.</p>
+<p>For 9DOF sensors or an integrated IMU, I would recommend doing some careful research first before selecting one for the purpose of car telemetry.  Check out this thread for some of the limitations you might come up against (I have the example sensor on hand; I might be looking for a replacement):</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837/7">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837/7" target="_blank" rel="noopener" title="12:12PM - 14 May 2017">Particle – 14 May 17</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/is-there-a-good-library-for-adafruit-9-dof-absolute-orientation-imu-fusion-breakout-bno055/31837/7" target="_blank" rel="noopener">Is there a good library for Adafruit 9-DOF Absolute Orientation IMU Fusion...</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Firmware</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #F7941D;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Libraries</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hi, l have on order the adafruit NXP. I have also used the BNO055 and they don’t work as hoped. They fail when velocity is applied to the IMU, due to the auto calibration which can’t be switched off. Adafruit are saying the new IMU can do as well...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/28</link>
+        <pubDate>Thu, 08 Mar 2018 04:33:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-28</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m a little late to the game but thought I’d post my thoughts anyway. SD and GPS are definitely tops on the list that I would like to see.  One problem I expect living where I do in northern NJ is to have no WiFi or Cellular Access in many areas.  The ability data-log to an SD card and Upload the data to a Rest Service when connectivity is available is a must.  The ability to add a 9DOF sensor for additional telemetry data would be great.  Having 9DOF built right in would be even better</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/27</link>
+        <pubDate>Wed, 07 Mar 2018 14:50:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-27</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[ytwytw]]></dc:creator>
+        <description><![CDATA[
+            <p>Is there any ETA for the new Carloop 3.0?</p>
+<p>I am waiting for it coming out for my new Car Tracking Project for school.</p>
+<p>I would love to see GPS+SD Card slot on the board, as I am still debating whether use the official supported particle board or go with STM32</p>
+<p>Thanks,</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/26</link>
+        <pubDate>Wed, 23 Aug 2017 14:25:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-26</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/sinusoiddelta">@SinusoidDelta</a>, I took a list at all the protocols you listed, and it is all possible.  However, the Carloop hardware has to be able to work for all the hardware protocols.  The rest are communications protocols running on top of that hardware.  Any communication protocol can be coded into the firmware as long as you have the right hardware underneath.</p>
+<p>In your list, there are only 4 hardware protocols.</p>
+<ol>
+<li>CANbus, which is already done by Carloop</li>
+<li>K-Line (the hardware layer for ISO9141, KWP &amp; KWP2000), which I am working on a CarloopRetro to do this; a schematic is already on GitHub.  However, I am only managing 30 minutes a month (I do not work for Carloop), so it will be a long time coming.</li>
+<li>Off-Road</li>
+<li>Heavy machinery</li>
+</ol>
+<p><a class="mention" href="https://community.carloop.io/u/elhajj33">@elhajj33</a>, you can code firmware to emulate the elm327 on CANbus for Carloop.  As mentioned above, you need to have the hardware layer to be able to emulate the elm327 on other protocols.  However, once you have the hardware, you can code firmware to do whatever you want, which could be much more than the limited functions of elm327.  Don’t get me wrong, elm327 emulation is something I would love to see as it is extremely useful, but Carloop allows for much more than that.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/25</link>
+        <pubDate>Mon, 29 May 2017 04:33:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-25</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>I think 3.0 should feature a j2534 or “layer one” pass thru device. J2534 was intended to unify access to embedded protocols:</p>
+<p>ISO9141<br>
+ISO14230 (KWP2000)<br>
+J1850<br>
+CAN (ISO11898)<br>
+ISO15765<br>
+SAE J2610<br>
+J1939 (since 2005)</p>
+<p>Some resource info:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.kvaser.com/about-can/can-standards/j2534/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/61e737759f4298782723b41ca3a834583ec256e2.png" class="site-icon" data-dominant-color="E22E2E" width="16" height="16">
+
+      <a href="https://www.kvaser.com/about-can/can-standards/j2534/" target="_blank" rel="noopener nofollow ugc">Kvaser</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:600/338;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/29ece9a0113aa69108bc6c89f7519dff8d765567.jpeg" class="thumbnail" data-dominant-color="F0F0F0" width="504" height="62"></div>
+
+<h3><a href="https://www.kvaser.com/about-can/can-standards/j2534/" target="_blank" rel="noopener nofollow ugc">Introduction to SAE J2534</a></h3>
+
+  <p>In this introduction, Kvaser explains how the J2534 enables flash programming of an emission-related ECU over CAN bus, regardless of the original protocol.</p>
+
+  <p>
+    <span class="label1">Est. reading time: 8 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/24</link>
+        <pubDate>Wed, 17 May 2017 05:55:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-24</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>i would love to see elm327 support to read data from vehicles with older protocols</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/23</link>
+        <pubDate>Tue, 16 May 2017 04:59:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-23</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>awwwwwwwww yeahhhhhhhh… apparently I needed 20 characters to respond</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/22</link>
+        <pubDate>Mon, 24 Apr 2017 23:16:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-22</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="egarl004" data-post="19" data-topic="183">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/egarl004/48/91_2.png" class="avatar"> egarl004:</div>
+<blockquote>
+<p>Definitely like the sd card slot.</p>
+</blockquote>
+</aside>
+<p>There might be something in the works (in the next 2 months) that you will really really like in that case!</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/21</link>
+        <pubDate>Mon, 24 Apr 2017 23:04:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-21</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The V3 changes might be what the carloop founders are calling CarloopXL.  Not sure if they are planning on producing it or not.  It is bigger but more capable!</p>
+<p>If you are looking at the CarloopRetro branch, then that is a development to add in K-Line support (ISO9141-2 and KWP2000) for older cars.  I need to get it done…</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/20</link>
+        <pubDate>Mon, 24 Apr 2017 18:42:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-20</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>Just noticed some V3 changes on git… does this mean Carloop 3.0 is close?!.. Definitely like the sd card slot.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/19</link>
+        <pubDate>Mon, 24 Apr 2017 17:43:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-19</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="raminf" data-post="16" data-topic="183">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/raminf/48/455_2.png" class="avatar"> raminf:</div>
+<blockquote>
+<p>Add-on Bluetooth and/or BLE HW support so mobile phones could talk to the Carloop directly.</p>
+</blockquote>
+</aside>
+<p>hey <a class="mention" href="https://community.carloop.io/u/raminf">@raminf</a> as I was reviewing everyone’s feature requests, I came across this one and wanted to mention we currently support BLE via the Carloop Bluetooth combo! <a href="https://store.carloop.io/products/carloop-bluetooth">https://store.carloop.io/products/carloop-bluetooth</a></p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/18</link>
+        <pubDate>Wed, 28 Dec 2016 20:50:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-18</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[Mitchell]]></dc:creator>
+        <description><![CDATA[
+            <ol>
+<li>
+<p>Carloop should not connect the two grounds together (chassis ground on pin 4 and signal ground on pin 5). These grounds are for difference purposes and connecting them together by plugging-in Carloop could add noise to the OBDII bus and therefore create major problems. As a temporary work-around I cut the pin 4 wire in my OBDII extension cable. I believe Carloop should only connect to pin 5 signal ground.</p>
+</li>
+<li>
+<p>It would be great if there was a jumper option for the +12v supply to Carloop. While pin 16 is usual, on the Nissan Leaf pin 8 is only on when the car is on which could be preferable for some applications.</p>
+</li>
+<li>
+<p>Expanding on the suggestions above, it would be great if Carloop had a second CAN bus input and this would have jumper options to be any other pins on the OBDII connector, as many cars such as the Nissan Leaf have other CAN busses on other pins. If this second bus could be software-selected that would be even better (so by default pins 6/14 are selected, but by asserting a GPIO pin, whichever other OBDII pins were selected on the jumpers would be used instead).</p>
+</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/17</link>
+        <pubDate>Tue, 20 Dec 2016 21:02:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-17</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[raminf]]></dc:creator>
+        <description><![CDATA[
+            <p>Some ideas in no particular order:</p>
+<ul>
+<li>
+<p>Support for a micro-SD card so you can store captured data and look at it offline. Plus a sample app that could be loaded to read and filter the message and save them to files on SD. This way someone can put together a CANBus logger in a few minutes.</p>
+</li>
+<li>
+<p>A GUI data visualizer that can show CANBus captured data and a way to see what’s going on. Something like <a href="http://savvycan.com" rel="noopener nofollow ugc">SavvyCAN</a>.</p>
+</li>
+<li>
+<p>A standard way to define and share CAN message IDs, parameters, and descriptive text. This could be a JSON file, or something more complex. Then when writing apps you could easily interpret the fields and dump them out instead of manually having to crack the data. I know the DBC format exists, but that requires proprietary software. Also, a way to share the data with other people so owners of a certain model vehicle can help fill-in the gaps.</p>
+</li>
+<li>
+<p>A high-level object-oriented API for CAN messages. For example, instead of just CANMessage you could have CANTemperatureMessage, or CANSpeedMessage, etc. to hide the gory byte and bit twiddling that needs to happen.</p>
+</li>
+<li>
+<p>Support for a high-level messaging protocol like MQTT so CANBus messages could be pushed out to the net and apps can subscribe to them when they’re updated.</p>
+</li>
+<li>
+<p>Instead of the single fixed CAN module you could move to a more flexible hardware solution that can be reprogrammed for all different kinds of communication schemes. Something like a <a href="https://www.xilinx.com/products/intellectual-property/do-di-can.html" rel="noopener nofollow ugc">Xilinx FPGA with CAN IP</a> or one from <a href="http://www.latticesemi.com/en/Products/DesignSoftwareAndIP/IntellectualProperty/IPCore/CastCores/CANBusControllerCore.aspx" rel="noopener nofollow ugc">Lattice</a>. This way those who need other protocols like FlexRay or LinBus could just add it in.</p>
+</li>
+<li>
+<p>A simple mechanism for playing back recorded CAN messages. For example, to record steering wheel angles and then, if the car has hardware to support it, play them back to make the vehicle turn.</p>
+</li>
+<li>
+<p>Add-on Bluetooth and/or BLE HW support so mobile phones could talk to the Carloop directly.</p>
+</li>
+<li>
+<p>Finally, integration with something beefier than the Particle. Perhaps something like the <a href="http://www.nvidia.com/object/jetson-tx1-module.html" rel="noopener nofollow ugc">Nvidia Jetson TX1</a>. This could be used for people wanting to try DIY self-driving projects <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/16</link>
+        <pubDate>Thu, 15 Dec 2016 21:04:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-16</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/mtkapp27">@mtkapp27</a>,</p>
+<p>You can probably control all of that through the CANbuses.  However, you will have to do some of the figuring out.  Your car likely has multiple CANbuses, not just the main one that OBDII runs on.  It may even have some Hyundai proprietary buses.  You, or maybe with help from others on a Sonata forum will have to figure all that out.</p>
+<p>If you want an electronic tool to hook up to the bus, then CANbus along with some improvements mentioned above are the way to go.  You will then have to figure out (hack) the messages.  Yep, those ODBII messages will be the easy ones.</p>
+<p>Specifically for the remote start, you will need some remote car starter hardware in case it is not yet built in.  Sometimes, the hardware is there, but you have to pay for the code to unlock it.  One thing to think about before modifying any of the settings, is how that will affect your warranty.  Also, what will the dealer do if they catch you.  You might have to create a base configuration file so you can return your car to specification before taking it in for service.  What you do will be your choice and your risk.</p>
+<p>Good luck!</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/15</link>
+        <pubDate>Tue, 13 Dec 2016 05:28:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-15</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[mtkapp27]]></dc:creator>
+        <description><![CDATA[
+            <p>Honestly, I have not tried carloop yet, but if possible here are some ideas.</p>
+<p>I have a Hyundai Sonata with the full tech package. I have to pay Hyundai a yearly service fee to get some of the neat features built into the car which to me is BS. I would like to remote start my car (not with their app), turn on/off heat (and heated seats), lock/unlock the doors, and get the system health report. Not sure that can be done through the OBD port, but maybe with a newer product. Also, my dash has a display and I would like to change the view. For instance, I would like to see both my Digital speed AND efficiency at the same time. Currently I have to toggle between screens. Also, I am sure there could be a lot more if I had a way to program the touch screen too.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/14</link>
+        <pubDate>Mon, 12 Dec 2016 04:11:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-14</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Repeating a bit of the above…</p>
+<ol>
+<li>Easy ability to connect the Carloop to a non-OBD port connection.  Just some headers with CAN H, CAN L and ground would be nice.  Would be useful for applications such as B-CAN where the bus is not on the OBD connector.</li>
+<li>Support for K-line would be handy for reverse engineering diagnostic tools</li>
+<li>Someday I would like to see Carloop ported to other boards, such as the Adafruit Feather or maybe even the PyCom WiPy / LoPy.</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/13</link>
+        <pubDate>Sun, 11 Dec 2016 02:48:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-13</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/cyberchucktx">@cyberchucktx</a>,</p>
+<p>You can probably do all that with a modern car, but it will take more work than just using ODBII.<br>
+On modern cars, the ODBII messages are required by law (for emissions testing, etc.) and so the message format is public knowledge.  Things like the vehicle speed sensor (VSS) are part of ODBII and you can calculate an average speed from that.  The mass airflow sensor (MAF) is also part of ODBII and can help calculate your fuel efficiency.</p>
+<p>However, the ODBII messages are sent over the main CANbus.  Other messages are probably sent over it as well.  A modern car might even have more than one CANbus or even other protocols.  Things like braking, turning the steering wheel, using the turn signal are probably on some bus, but you have to find it for your car; it is often custom to the model or manufacturer.  The current Carloop will access the main CANbus, but you will have to car-hack to discover all the other messages going on.</p>
+<p>Maybe Carloop 3.0 can be designed to tap into those other CANbuses or other protocols.  Once tapped in, some car-hacking might reverse-engineer the messages and discover how to get all that info.  Personally, I am working on tapping into K-Line, which is older than CANbus.</p>
+<p>The combination of Carloop and the expertise on a vehicle-specific forum might prove to be very powerful.<br>
+We all have to work on it to make it happen!</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/12</link>
+        <pubDate>Sat, 10 Dec 2016 04:34:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-12</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyberchucktx]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m new here, so this might not be possible. But I’m curious to find out if it is possible to use ODBII to build a “driving profile” based on car measurements of things like average speed, number of times the brakes are applied, number of times a left turn is made, etc.</p>
+<p>Once patterns are established driver Best Practices could be suggested such as how to get better mileage, etc.</p>
+<p>Or are there already apps that do this sort of thing?</p>
+<p>Charlie in Houston, TX</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/11</link>
+        <pubDate>Fri, 09 Dec 2016 19:05:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-11</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/corollan">@corollan</a>, I may have a different opinion from yours.  Instead of integrating those ICs, I prefer how CarLoop is done now which is more bare-bones and gives greater flexibility.  If we have basic communications protocols implemented in CarLoop (CANbus, K-Line, J1850, etc.) then we can do pretty much whatever we want.  If we really want the ELM327 functionality, then we (CarLoop community) could write a CarLoop Library in firmware for the AT command set that the ELM series uses.  This way, we can use CarLoop <strong>instead</strong> of the ELM327 and be able to do much more as well.  CarLoop looks to be a very powerful tool, but the flip side is integrating with ELM327 might get some applications up and running more quickly &amp; easily compared with CarLoop as it is now.</p>
+<p>The STN1110 is one I am not yet familiar with (NOTE: I better go take a look).</p>
+<p>This is just my opinion and am open to discussing it further.  I may have missed something along the way!</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/10</link>
+        <pubDate>Fri, 09 Dec 2016 04:36:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-10</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/scrapsparcs">@scrapsparcs</a>, I checked my list (see the link in the thread about ISO 9141) and it looks like BMW used mostly ISO 9141-2 (which is K-Line) between 2005 and 1996.  In some models they used KWP2000 (which is a different message format on K-Line).  My best guess is that you will also be looking for a K-Line solution.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/9</link>
+        <pubDate>Fri, 09 Dec 2016 04:21:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-9</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[seibert]]></dc:creator>
+        <description><![CDATA[
+            <p>+1 for being able to select multiple CAN interfaces.  My Nissan Leaf has 3, and the detailed battery stats are reported on the non-default one, unfortunately.</p>
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/8</link>
+        <pubDate>Thu, 08 Dec 2016 20:59:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-8</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+      <item>
+        <title>What features would you request for Carloop 3.0?</title>
+        <dc:creator><![CDATA[scrapsparcs]]></dc:creator>
+        <description><![CDATA[
+            <p>I would like to use Carloop with a 1994 BMW that has pre OBD2  ADS. I have a conversion cable to a sixteen pin OBD connector, but I am not sure the Carloop will receive data correctly as most instructions say a “Real Serial Port” is required. Is this the K Line issue?</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.bimmerforums.com/forum/showthread.php?1650885-%28Almost%29-free-DIY-ADS-interface%2Fpage20">
+  <header class="source">
+
+      <a href="https://www.bimmerforums.com/forum/showthread.php?1650885-%28Almost%29-free-DIY-ADS-interface%2Fpage20" target="_blank" rel="noopener nofollow ugc">Bimmerforums - The Ultimate BMW Forum</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.bimmerforums.com/forum/showthread.php?1650885-%28Almost%29-free-DIY-ADS-interface%2Fpage20" target="_blank" rel="noopener nofollow ugc">(Almost) free DIY ADS interface - Page 20</a></h3>
+
+  <p>Bimmerforums is the preferred online BMW Forum and community for BMW owners. At Bimmerforums, you will find technical how-to information maintenance specifics audio advice wheel and tire combinations and model specific details not found anywhere...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183/7</link>
+        <pubDate>Thu, 08 Dec 2016 19:53:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-183-7</guid>
+        <source url="https://community.carloop.io/t/what-features-would-you-request-for-carloop-3-0/183.rss">What features would you request for Carloop 3.0?</source>
+      </item>
+  </channel>
+</rss>

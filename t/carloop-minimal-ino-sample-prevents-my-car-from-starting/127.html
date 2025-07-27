@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop-minimal.ino sample prevents my car from starting - Troubleshooting - Carloop Community</title>
+    <meta name="description" content="I’ve got the carloop-minimal.ino sample flashed on my Electron and tried to test in in my 2007 Renault Espace 2.0DCI, but whenever I’ve got the Carloop plugged in on engine start, the car won’t start and report loss of o&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="127.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="vCTdOpLzIpwRuL8IHH1rjbLum">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="vCTdOpLzIpwRuL8IHH1rjbLum"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop-minimal.ino sample prevents my car from starting&#39;" href="127.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-minimal-ino-sample-prevents-my-car-from-starting/127">
+<meta name="twitter:url" content="/t/carloop-minimal-ino-sample-prevents-my-car-from-starting/127">
+<meta property="og:title" content="Carloop-minimal.ino sample prevents my car from starting">
+<meta name="twitter:title" content="Carloop-minimal.ino sample prevents my car from starting">
+<meta property="og:description" content="I’ve got the carloop-minimal.ino sample flashed on my Electron and tried to test in in my 2007 Renault Espace 2.0DCI, but whenever I’ve got the Carloop plugged in on engine start, the car won’t start and report loss of oil pressure.  If I plug it in (or switch on the Electron) after the car was started, I get a warning/service symbol in the dashboard and different messages like “check parking brakes” (and once even the automatic windscreen wipers started).  But as far as I understand the sample ...">
+<meta name="twitter:description" content="I’ve got the carloop-minimal.ino sample flashed on my Electron and tried to test in in my 2007 Renault Espace 2.0DCI, but whenever I’ve got the Carloop plugged in on engine start, the car won’t start and report loss of oil pressure.  If I plug it in (or switch on the Electron) after the car was started, I get a warning/service symbol in the dashboard and different messages like “check parking brakes” (and once even the automatic windscreen wipers started).  But as far as I understand the sample ...">
+<meta property="og:article:section" content="Troubleshooting">
+<meta property="og:article:section:color" content="BF1E2E">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="2 ?">
+<meta property="article:published_time" content="2016-09-16T13:27:48+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="127.html">Carloop-minimal.ino sample prevents my car from starting</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/troubleshooting/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Troubleshooting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop-minimal.ino sample prevents my car from starting'>
+      <link itemprop='url' href='127.html'>
+      <meta itemprop='datePublished' content='2016-09-16T13:27:48Z'>
+        <meta itemprop='articleSection' content='Troubleshooting'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="127.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-09-16T13:27:48Z' class='post-time'>
+                    September 16, 2016,  1:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-16T13:27:48Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve got the <code>carloop-minimal.ino</code> sample flashed on my Electron and tried to test in in my 2007 Renault Espace 2.0DCI, but whenever I’ve got the Carloop plugged in on engine start, the car won’t start and report loss of oil pressure.<br>
+If I plug it in (or switch on the Electron) after the car was started, I get a warning/service symbol in the dashboard and different messages like “check parking brakes” (and once even the automatic windscreen wipers started).</p>
+<p>But as far as I understand the sample it should only read things but not send messages or interfere with the bus otherwise.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/736378fb8bf9e604060c147347a56d558bd5b2c2.GIF">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-16T14:06:33Z' class='post-time'>
+                    September 16, 2016,  2:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-16T14:13:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/ScruffR.html">@ScruffR</a>, welcome to the Carloop community!  It’s great to have you.</p>
+<p>Can you try using a Photon? we had a similar issue in one of the early Carloop R2.1 but not with this version.</p>
+<p>And once you do, can you take a picture of your installed Photon (before plugging it into the OBD-II port) to make sure the orientation is correct?</p>
+<p>Finally, without installing Carloop, turn your car’s ignition on, keep engine off and measure the voltage between pin 4 and pin 6 on the OBD-II port.  Repeat for pin 14.  Your should read around 2.5V.  See diagram below:<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/736378fb8bf9e604060c147347a56d558bd5b2c2.GIF" width="514" height="192"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-16T14:50:26Z' class='post-time'>
+                    September 16, 2016,  2:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-16T14:50:26Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here the pics<br>
+with Photon<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee.png" data-download-href="//carloop-community.dyndns.org/uploads/default/f6b863fc97168be8d96c134fa9a9f1fc423d0fee" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee_2_690x312.png" width="690" height="312" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee_2_690x312.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee_2_1035x468.png,//carloop-community.dyndns.org/uploads/default/original/1X/f6b863fc97168be8d96c134fa9a9f1fc423d0fee.png" data-dominant-color="605E59"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Pasted image</span><span class="informations">1297×588 785 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+with Electron<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496.png" data-download-href="//carloop-community.dyndns.org/uploads/default/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496_2_634x500.png" width="634" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496_2_634x500.png,//carloop-community.dyndns.org/uploads/default/original/1X/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496.png,//carloop-community.dyndns.org/uploads/default/original/1X/9c1edbc370f5f7d73f195d24aa4b3cd9bf6bf496.png" data-dominant-color="464847"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Pasted image</span><span class="informations">750×591 474 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-17T09:53:52Z' class='post-time'>
+                    September 17, 2016,  9:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-17T15:09:51Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/alanm">@alanm</a>, I’ve now measured the voltage and it looks like this:</p>
+<pre><code class="lang-plaintext">Ignition off
+ 6 -&gt; GND (4) 1.38V
+14 -&gt; GND (4) 1.38V
+
+Ignition on
+ 6 -&gt; GND (4) 2.50V
+14 -&gt; GND (4) 2.25V
+</code></pre>
+<p>With the Photon the car behaves just the same as with the Electron.<br>
+I’m no trying the <code>obd-blink.ino</code> with the GPS module detached too.</p>
+<p><em>Update:</em><br>
+With that code the car doesn’t even try to start and on unplugging the Carloop complains: “Check ignition lock”, although I haven’t got an “ignition lock” as I’ve got keyless entry and drive.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-17T15:54:56Z' class='post-time'>
+                    September 17, 2016,  3:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-17T15:54:56Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There’s a few things we can try.</p>
+<p>Does the car start if you don’t have the Photon or Electron plugged in? This would rule out electrical issues on the Carloop like short-circuited CAN traces.</p>
+<p>Maybe the CAN bus is running at a different speed for the Renault so the Carloop believes there are errors on the bus and tries to correct them. Add <code>carloop.setCANSpeed(250000);</code> before <code>carloop.begin();</code> in <code>setup();</code> to use a different speed like 250 kbit/s (the default is 500 kbit/s). If 250 kbit doesn’t work, you can try 1 Mbit/s or 125 kbit/s.</p>
+<p>Actually according to <a href="http://pinoutsguide.com/CarElectronics/renault_obd2_diag_pinout.shtml">this Renault OBD-II page</a> the CAN bus for OBD is at 250 kbit/s.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-17T16:19:16Z' class='post-time'>
+                    September 17, 2016,  4:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-17T17:44:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for coming back on this <img src="//carloop-community.dyndns.org/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="jvanier" data-post="5" data-topic="127">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/jvanier/48/426_2.png" class="avatar"> jvanier:</div>
+<blockquote>
+<p>Does the car start if you don’t have the Photon or Electron plugged in?</p>
+</blockquote>
+</aside>
+<p>Yes, the car works fine with an “empty” Carloop plugged in but also with an Electron/Photon with only Tinker on it.</p>
+<p>I’ll have a read thorugh that linked page and come back after some tests.</p>
+<hr>
+<p><em>Update:</em><br>
+Yup, Julien, that was it <code>250000</code> is liked better by my car <img src="//carloop-community.dyndns.org/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"> (although that Renault list states <em>"Renault Espace 4: 2.0 dCi, Diesel (175HP)	2006	CAN 11bit (500kb)</em>" <img src="//carloop-community.dyndns.org/images/emoji/twitter/confused.png?v=12" title=":confused:" class="emoji" alt=":confused:" loading="lazy" width="20" height="20">)<br>
+My noobish thought was, since the device is only “listening” but not transmitting, it might just not understand things with the wrong baud rate, so I never thought that could cause the car to play up.<br>
+Lesson learnt <img src="//carloop-community.dyndns.org/images/emoji/twitter/blush.png?v=12" title=":blush:" class="emoji" alt=":blush:" loading="lazy" width="20" height="20"></p>
+<p>Now  I can get on to learn what signals my two ton computer produces and how to use them <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-18T02:02:30Z' class='post-time'>
+                    September 18, 2016,  2:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-18T02:02:30Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you have a linux laptop or a raspberry pi you can try using can-utils with the socketcan driver to identify which signals messages are changing when you step on the accelerator pedal for instance or unlock your doors.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-18T02:13:33Z' class='post-time'>
+                    September 18, 2016,  2:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-18T04:18:22Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="ScruffR" data-post="6" data-topic="127">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/scruffr/48/434_2.png" class="avatar"> ScruffR:</div>
+<blockquote>
+<p>Yup, Julien, that was it 250000 is liked better by my car</p>
+</blockquote>
+</aside>
+<p>Very nice!</p>
+<aside class="quote no-group" data-username="ScruffR" data-post="6" data-topic="127">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/scruffr/48/434_2.png" class="avatar"> ScruffR:</div>
+<blockquote>
+<p>since the device is only “listening” but not transmitting</p>
+</blockquote>
+</aside>
+<p>Yeah, CAN is like that. Even a device that’s only listening must respond to errors and in this case the different baud rate caused the Carloop to think every message was corrupted <img src="//carloop-community.dyndns.org/images/emoji/twitter/sweat.png?v=12" title=":sweat:" class="emoji" alt=":sweat:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

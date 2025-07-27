@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Hacking cars as weather stations</title>
+    <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84</link>
+    <description>I think it would be awesome if cars could be hacked to upload current weather conditions (temp, humidity, wiper speed) to The Weather Underground (WU), which currently has a network of 200,000 personal weather stations uploading data to WU / The Weather Channel (now owned by IBM). WU has a free dev API for up to 500 calls/day, here: https://www.wunderground.com/weather/api/</description>
+    
+    <lastBuildDate>Tue, 23 Aug 2016 10:46:31 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, looks like its possible. Can i contact you off-forum to discuss?</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/8</link>
+        <pubDate>Tue, 23 Aug 2016 10:46:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-8</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Snow removal is a big thing in Michigan as well so I’m interested to know what you find out!</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/7</link>
+        <pubDate>Tue, 23 Aug 2016 01:58:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-7</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Im not sure what they do with it, i know that some of the vehicles “snow routes” are shown to the public on the local councils website, along with the tracking from the vehicle. I’ll ask some questions in the office tomorrow as the guys have just finished the summer serviceing of a couple of them.</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/6</link>
+        <pubDate>Mon, 22 Aug 2016 22:41:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-6</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/paradoxewan">@paradoxewan</a> if you already have that data, would be cool to see it as Weather Underground station!</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/5</link>
+        <pubDate>Mon, 22 Aug 2016 22:30:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-5</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>This is a really brilliant idea. Over here (Scotland) the gritter fleet have got complete weather stations on board and send all the telemetry back when the are out gritting, but its a really expensive system.</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/4</link>
+        <pubDate>Mon, 22 Aug 2016 20:15:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-4</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/lukedmurphy">@lukedmurphy</a>, that’s an interesting concept! You could connect the GPS GP-735 to Carloop and it would work quite nicely.  You can get intake air temperature from the OBD-II list of standard variables and only mark the data valid when the car is moving (to get the most accurate results).  Do you think anyone at WU might be interested in giving it a shot??</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/3</link>
+        <pubDate>Fri, 01 Jul 2016 12:04:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-3</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Don’t know if WU handles moving stations, unless you have a GPS position to report the data.  You can buy vehicle mounted weather stations, but they seem to be oriented towards emergency responder deployment.</p>
+<p>Anyways, who wants to drive around with a large antenna thingy?  But I’ve seen HAM Radio aficionados drive around with a dozen antennas on their (usually beater) cars.  Then you have the storm chasers with doppler radar and what not, lol.</p>
+<p>Not all vehicles have enough of the sensors needed.  Of the sensors you might have available on the CAN bus: sun sensor (dash day/night modes), rain sensors (automatic wipers), light sensor (automatic low/high beam), temperature sensor (for hvac), barometric pressure, …  Such sensors tend to be low resolution and not very accurate.  I don’t think we could measure wind speed on a moving vehicle too well.</p>
+<p>Some vehicles have vertical accelerometers, but that might be useful for road roughness measurement and pot hole detection.</p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/2</link>
+        <pubDate>Thu, 30 Jun 2016 17:47:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-2</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+      <item>
+        <title>Hacking cars as weather stations</title>
+        <dc:creator><![CDATA[lukedmurphy]]></dc:creator>
+        <description><![CDATA[
+            <p>I think it would be awesome if cars could be hacked to upload current weather conditions (temp, humidity, wiper speed) to The Weather Underground (WU), which currently has a network of 200,000 personal weather stations uploading data to WU / The Weather Channel (now owned by IBM). WU has a free dev API for up to 500 calls/day, here: <a href="https://www.wunderground.com/weather/api/" class="inline-onebox" rel="noopener nofollow ugc">Login | Weather Underground</a></p>
+          <p><a href="https://community.carloop.io/t/hacking-cars-as-weather-stations/84/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hacking-cars-as-weather-stations/84/1</link>
+        <pubDate>Tue, 28 Jun 2016 18:35:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-84-1</guid>
+        <source url="https://community.carloop.io/t/hacking-cars-as-weather-stations/84.rss">Hacking cars as weather stations</source>
+      </item>
+  </channel>
+</rss>

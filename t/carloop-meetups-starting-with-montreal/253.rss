@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop meetups? Starting with Montreal?</title>
+    <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253</link>
+    <description>I just received my shiny new Carloop and was wondering if there were other Carloopers in the area. It would be interesting to meet up periodically to exchange in person.
+
+I have no idea of the geographical distribution of all of you... Perhaps one of the founders could comment here based on shipments of the devices?
+
+In any case, I&#39;ll throw the first bottle out into the ocean. I&#39;m in Montreal and would be glad to help organize something. If you&#39;re in the area, drop me a note.
+
+It may be short notice, but if anyone from the Montreal area is reading this in the next few days, there&#39;s already a &quot;Hack and tell&quot; event scheduled for this Wednesday April 12th on the theme of Transport/Travel -- ideal for a little show &amp; tell of what you&#39;ve done so far with Carloop! It&#39;s still open to new presenters: https://www.meetup.com/Montreal-Hack-and-Tell/</description>
+    
+    <lastBuildDate>Wed, 29 May 2019 14:56:50 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[jmb]]></dc:creator>
+        <description><![CDATA[
+            <p>Ah! Sadly I’m not in Montreal anymore, but on the other coast now. Good luck!</p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/6</link>
+        <pubDate>Wed, 29 May 2019 14:56:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-6</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[clusty]]></dc:creator>
+        <description><![CDATA[
+            <p>I am starting myself with Carloop and am from Montreal <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/5</link>
+        <pubDate>Wed, 29 May 2019 13:02:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-5</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[Mutley]]></dc:creator>
+        <description><![CDATA[
+            <p>Wow I missed this! I’m Montreal too! Let me know if you want to organize another one!</p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/4</link>
+        <pubDate>Thu, 04 May 2017 16:51:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-4</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[jmb]]></dc:creator>
+        <description><![CDATA[
+            <p>For info, though there was not much to “show &amp; tell” at this point other than a mod of a sample app on the <a href="http://build.particle.io" rel="noopener nofollow ugc">build.particle.io</a> IDE, everyone at the Hack&amp;Tell meetup was quite intrigued by the kit I showed and described. There could be potential for a little community of hackers playing away with this! Do you guys have a special demo rate or some sponsored devices we could request by any chance? It would be interesting to see what creative things would come from having a critical mass of developers nearby tinkering away…</p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/3</link>
+        <pubDate>Thu, 13 Apr 2017 04:15:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-3</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jmb">@jmb</a>,  Good idea!</p>
+<p>The founders of carloop appear to be in Silicon Valley, so not close to us.</p>
+<p>However, I am in the Ottawa area, so not really that far from you.<br>
+I have been working on modifying carloop, which I am nicknaming CarloopRetro, to include K-Line (ISO 9141 &amp; KWP 2000) in addition to the CANbus.</p>
+<p>Aside from carlooping, I keep contacts with MCO (Motorsport Club of Ottawa).  I suggest you could also look into SMCC (the motorsport club in the Montreal area).</p>
+<p>Cheers!</p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/2</link>
+        <pubDate>Sun, 09 Apr 2017 02:41:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-2</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+      <item>
+        <title>Carloop meetups? Starting with Montreal?</title>
+        <dc:creator><![CDATA[jmb]]></dc:creator>
+        <description><![CDATA[
+            <p>I just received my shiny new Carloop and was wondering if there were other Carloopers in the area. It would be interesting to meet up periodically to exchange in person.</p>
+<p>I have no idea of the geographical distribution of all of you… Perhaps one of the founders could comment here based on shipments of the devices?</p>
+<p>In any case, I’ll throw the first bottle out into the ocean. I’m in Montreal and would be glad to help organize something. If you’re in the area, drop me a note.</p>
+<p>It may be short notice, but if anyone from the Montreal area is reading this in the next few days, there’s already a “Hack and tell” event scheduled for this Wednesday April 12th on the theme of Transport/Travel – ideal for a little show &amp; tell of what you’ve done so far with Carloop! It’s still open to new presenters: <a href="https://www.meetup.com/Montreal-Hack-and-Tell/" rel="noopener nofollow ugc">https://www.meetup.com/Montreal-Hack-and-Tell/</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253/1</link>
+        <pubDate>Sat, 08 Apr 2017 21:56:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-253-1</guid>
+        <source url="https://community.carloop.io/t/carloop-meetups-starting-with-montreal/253.rss">Carloop meetups? Starting with Montreal?</source>
+      </item>
+  </channel>
+</rss>

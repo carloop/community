@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Pre Purchase Questions on Bluetooth</title>
+    <link>https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724</link>
+    <description>Hello,
+
+I am a novice starting out here, I have been doing a lot of reading of the topics already posted and would like to ask some questions based on my project before I decide which Carloop to purchase. 
+
+My project I want to look into is using the Carloop to get CAN output via Bluetooth so that RealDash app can read the signals and I can use the app on the Tablet as a customizable Dash.The difficulty is, that the ecu I am working with is an Aftermarket ECU that has J1939 protocol. I have seen that we can create a Scanner based on SocketCAN and plan to do that to create the signal that can be broadcasted. I have a list of PID&#39;s from the ECU Company to setup up for the App to read the signal. 
+
+My question is I want to buy the Carloop with Bluetooth cause that is the end goal of my projects needs, but how difficult is it going to be to start with this module vs the normal module, or is there no difference in setting it up with the SocketCAN vs the normal Carloop.
+
+I plan to take my Can Lo and Hi signals and pin them into a ODB2 Plug so that it reads correctly with the module.</description>
+    
+    <lastBuildDate>Tue, 25 Sep 2018 20:21:53 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Pre Purchase Questions on Bluetooth</title>
+        <dc:creator><![CDATA[Dustin]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey I understand, I pulled the trigger and bought the Bluetooth one. My plan is to learn on a regular car with normal obd2 protocols. Once I can get familiar with that I will hook up the Socket Can and try to read the j1939.</p>
+<p>My ecu runs on 12v so no issues on the 24v system but thanks for looking out for that. I will take a look at the 2.3 version and make sure I get the 12v hooked up. I noticed the board had the labels for the pins so that takes all the guess work out for pinning in the signals.</p>
+<p>Once I get started I will create a new thread for any questions. Thanks for responding!</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/3</link>
+        <pubDate>Tue, 25 Sep 2018 20:21:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-724-3</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724.rss">Pre Purchase Questions on Bluetooth</source>
+      </item>
+      <item>
+        <title>Pre Purchase Questions on Bluetooth</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dustin">@Dustin</a>,</p>
+<p>Sorry for not answering earlier, but I have been away for a while.<br>
+It looks like no one else stepped up in the meantime.</p>
+<p>.There should be no difference in difficulty starting up with CarloopBluetooth or CarloopBasic.<br>
+Any of the regular Carloop apps (which do not use Bluetooth functionality) will run just the same way on a CarloopBluetooth.  The Bluetooth capability is extra and does not take away from anything else.  However, it will take some work on your part to program the Bluetooth functions you would like to have.</p>
+<p>If you take a look at the Hardware design of Carloop (it is Carloop version 2.3 on GitHub), you will see that it uses four connections on the OBD2 port.  You missed +12V and signal GND.  The chassis GND does not matter; it might even be better to leave this one disconnected.<br>
+Watch out for the power supply requirement.  J1939 is often used with heavy machinery like diesel trucks, bulldozers, etc. which often run on +24V instead of +12V.  Carloop was designed for +12V, but +24V is too much for Carloop and will damage it.</p>
+<p><strong>If your aftermarket ECU allows it</strong>, you could even get more advanced with Carloop and use it to change PIDs to control your equipment.</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/2</link>
+        <pubDate>Tue, 25 Sep 2018 19:51:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-724-2</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724.rss">Pre Purchase Questions on Bluetooth</source>
+      </item>
+      <item>
+        <title>Pre Purchase Questions on Bluetooth</title>
+        <dc:creator><![CDATA[Dustin]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I am a novice starting out here, I have been doing a lot of reading of the topics already posted and would like to ask some questions based on my project before I decide which Carloop to purchase.</p>
+<p>My project I want to look into is using the Carloop to get CAN output via Bluetooth so that RealDash app can read the signals and I can use the app on the Tablet as a customizable Dash.The difficulty is, that the ecu I am working with is an Aftermarket ECU that has J1939 protocol. I have seen that we can create a Scanner based on SocketCAN and plan to do that to create the signal that can be broadcasted. I have a list of PID’s from the ECU Company to setup up for the App to read the signal.</p>
+<p>My question is I want to buy the Carloop with Bluetooth cause that is the end goal of my projects needs, but how difficult is it going to be to start with this module vs the normal module, or is there no difference in setting it up with the SocketCAN vs the normal Carloop.</p>
+<p>I plan to take my Can Lo and Hi signals and pin them into a ODB2 Plug so that it reads correctly with the module.</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724/1</link>
+        <pubDate>Mon, 10 Sep 2018 19:33:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-724-1</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-questions-on-bluetooth/724.rss">Pre Purchase Questions on Bluetooth</source>
+      </item>
+  </channel>
+</rss>

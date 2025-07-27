@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How to decode OBD-II data using raw CAN messages</title>
+    <link>https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66</link>
+    <description>A lot of people have asked us what is a good example application for Carloop.  We are working on some example apps for sure, but in the meantime, here is a great Wikipedia article that very clearly outlines how to request PIDs from the ECU.  It also explains how to read the response and convert them into physical values.
+
+Take a look: https://en.wikipedia.org/wiki/OBD-II_PIDs#Mode_1_PID_00</description>
+    
+    <lastBuildDate>Tue, 04 Apr 2017 13:18:34 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How to decode OBD-II data using raw CAN messages</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>Can you give details on how messages are received? I see that most of the apps follow a similar pattern.</p>
+<p>Transmit Query<br>
+Go into receive loop for 10ms</p>
+<p>I noticed that often no answers come back for my queries especially while the car is off. I can ask for HYBRID_BATTERY_REMAINING every 10seconds for 30-45 mins and receive only one response.</p>
+          <p><a href="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/3</link>
+        <pubDate>Tue, 04 Apr 2017 13:18:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-66-3</guid>
+        <source url="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66.rss">How to decode OBD-II data using raw CAN messages</source>
+      </item>
+      <item>
+        <title>How to decode OBD-II data using raw CAN messages</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>More great info on this article by Hackaday: <a href="http://hackaday.com/2013/10/22/can-hacking-the-in-vehicle-network/" class="inline-onebox">CAN Hacking: The In-vehicle Network | Hackaday</a></p>
+          <p><a href="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/2</link>
+        <pubDate>Fri, 03 Jun 2016 06:23:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-66-2</guid>
+        <source url="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66.rss">How to decode OBD-II data using raw CAN messages</source>
+      </item>
+      <item>
+        <title>How to decode OBD-II data using raw CAN messages</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>A lot of people have asked us what is a good example application for Carloop.  We are working on some example apps for sure, but in the meantime, here is a great Wikipedia article that very clearly outlines how to request PIDs from the ECU.  It also explains how to read the response and convert them into physical values.</p>
+<p>Take a look: <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Mode_1_PID_00" class="inline-onebox">OBD-II PIDs - Wikipedia</a></p>
+          <p><a href="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66/1</link>
+        <pubDate>Fri, 03 Jun 2016 05:47:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-66-1</guid>
+        <source url="https://community.carloop.io/t/how-to-decode-obd-ii-data-using-raw-can-messages/66.rss">How to decode OBD-II data using raw CAN messages</source>
+      </item>
+  </channel>
+</rss>

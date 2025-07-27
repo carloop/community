@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Features I&#39;m looking to try and create with carloop</title>
+    <link>https://community.carloop.io/t/features-im-looking-to-try-and-create-with-carloop/279</link>
+    <description>I&#39;ve used a device called &quot;Avidcode&quot; and the list of features it had was amazing you connect the device to your OBDII port and select the features you want. you would have to push a combination of buttons to pull it up 
+trying to recreate some of the features they had on their device. the avidcode is no longer made or supported. 
+I&#39;m hoping the carloop can me help out. along wont basic OBDII features I have an idea of what I want t do already. I just need the right PID&#39;S and I&#39;m golden. I was able to get a couple of .BIN files from the avidcode and man the features list the had planned was amazing!!!! most of the info from the bin is unreadable but there a few sections that show a hint of codes. I even see a few refrences on what PID to look for! example: config.equipment.climate$0124@40-43 
+this is my fist time really getting into CANBUS hacking. I&#39;m trying to figure out how to make sense of all the info in the .BIN files.</description>
+    
+    <lastBuildDate>Thu, 04 May 2017 01:43:56 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/features-im-looking-to-try-and-create-with-carloop/279.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Features I&#39;m looking to try and create with carloop</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve used a device called “Avidcode” and the list of features it had was amazing you connect the device to your OBDII port and select the features you want. you would have to push a combination of buttons to pull it up<br>
+trying to recreate some of the features they had on their device. the avidcode is no longer made or supported.<br>
+I’m hoping the carloop can me help out. along wont basic OBDII features I have an idea of what I want t do already. I just need the right PID’S and I’m golden. I was able to get a couple of .BIN files from the avidcode and man the features list the had planned was amazing!!! most of the info from the bin is unreadable but there a few sections that show a hint of codes. I even see a few refrences on what PID to look for! example: config.equipment.climate$0124@40-43<br>
+this is my fist time really getting into CANBUS hacking. I’m trying to figure out how to make sense of all the info in the .BIN files.</p>
+          <p><a href="https://community.carloop.io/t/features-im-looking-to-try-and-create-with-carloop/279/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/features-im-looking-to-try-and-create-with-carloop/279/1</link>
+        <pubDate>Thu, 04 May 2017 01:43:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-279-1</guid>
+        <source url="https://community.carloop.io/t/features-im-looking-to-try-and-create-with-carloop/279.rss">Features I&#39;m looking to try and create with carloop</source>
+      </item>
+  </channel>
+</rss>

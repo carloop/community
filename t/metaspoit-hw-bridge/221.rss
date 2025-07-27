@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Metaspoit HW Bridge</title>
+    <link>https://community.carloop.io/t/metaspoit-hw-bridge/221</link>
+    <description>Is anyone working on metaspoit HW bridge support for carloop as described here...?
+https://community.rapid7.com/community/transpo-security/blog/2017/02/02/exiting-the-matrix</description>
+    
+    <lastBuildDate>Sat, 04 Mar 2017 15:29:32 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Metaspoit HW Bridge</title>
+        <dc:creator><![CDATA[Phil]]></dc:creator>
+        <description><![CDATA[
+            <p>Hmm. I don’t seem to be getting consistent responses from the device. Strangely, it always responds…but not always correctly.</p>
+<pre><code class="lang-auto">curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%           
+
+curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%                                                                                                                                          
+
+curl http://10.0.0.28:8080/custom_methods
+{ "Methods": [ { "method_name": "led",  "method_desc": "Changes the state of the LED",  "args": [    { "arg_name": "state", "arg_type": "string", "required": true }   ],  "return": "string" }  ] }%                                                                                                                                        
+
+curl http://10.0.0.28:8080/custom_methods
+{ "Methods": [ { "method_name": "led",  "method_desc": "Changes the state of the LED",  "args": [    { "arg_name": "state", "arg_type": "string", "required": true }   ],  "return": "string" }  ] }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "Methods": [ { "method_name": "led",  "method_desc": "Changes the state of the LED",  "args": [    { "arg_name": "state", "arg_type": "string", "required": true }   ],  "return": "string" }  ] }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "Methods": [ { "method_name": "led",  "method_desc": "Changes the state of the LED",  "args": [    { "arg_name": "state", "arg_type": "string", "required": true }   ],  "return": "string" }  ] }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "status", "not supported" }%                                                                                                                                         
+
+curl http://10.0.0.28:8080/custom_methods
+{ "Methods": [ { "method_name": "led",  "method_desc": "Changes the state of the LED",  "args": [    { "arg_name": "state", "arg_type": "string", "required": true }   ],  "return": "string" }  ] }% 
+</code></pre>
+          <p><a href="https://community.carloop.io/t/metaspoit-hw-bridge/221/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/metaspoit-hw-bridge/221/4</link>
+        <pubDate>Sat, 04 Mar 2017 15:29:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-221-4</guid>
+        <source url="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss">Metaspoit HW Bridge</source>
+      </item>
+      <item>
+        <title>Metaspoit HW Bridge</title>
+        <dc:creator><![CDATA[Phil]]></dc:creator>
+        <description><![CDATA[
+            <p>Got it loaded on the particle and connecting in metasploit. Thanks! Still not actually talking on the CAN bus, but I think it’s likely a configuration issue.</p>
+          <p><a href="https://community.carloop.io/t/metaspoit-hw-bridge/221/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/metaspoit-hw-bridge/221/3</link>
+        <pubDate>Mon, 27 Feb 2017 16:00:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-221-3</guid>
+        <source url="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss">Metaspoit HW Bridge</source>
+      </item>
+      <item>
+        <title>Metaspoit HW Bridge</title>
+        <dc:creator><![CDATA[Craig]]></dc:creator>
+        <description><![CDATA[
+            <p>Yup.  I have a blog post about how to write your own Photon based HWBridge relays that will be out soon but in the meantime simply search for the spark-msf-relay library.  You can add the carloop example app from that and it should just work.</p>
+<p>Let me know if you have any problems.</p>
+<p>Craig</p>
+          <p><a href="https://community.carloop.io/t/metaspoit-hw-bridge/221/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/metaspoit-hw-bridge/221/2</link>
+        <pubDate>Thu, 23 Feb 2017 08:14:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-221-2</guid>
+        <source url="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss">Metaspoit HW Bridge</source>
+      </item>
+      <item>
+        <title>Metaspoit HW Bridge</title>
+        <dc:creator><![CDATA[Phil]]></dc:creator>
+        <description><![CDATA[
+            <p>Is anyone working on metaspoit HW bridge support for carloop as described here…?<br>
+<a href="https://community.rapid7.com/community/transpo-security/blog/2017/02/02/exiting-the-matrix" class="onebox" target="_blank" rel="noopener nofollow ugc">https://community.rapid7.com/community/transpo-security/blog/2017/02/02/exiting-the-matrix</a></p>
+          <p><a href="https://community.carloop.io/t/metaspoit-hw-bridge/221/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/metaspoit-hw-bridge/221/1</link>
+        <pubDate>Thu, 23 Feb 2017 04:10:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-221-1</guid>
+        <source url="https://community.carloop.io/t/metaspoit-hw-bridge/221.rss">Metaspoit HW Bridge</source>
+      </item>
+  </channel>
+</rss>

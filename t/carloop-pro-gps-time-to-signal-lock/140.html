@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop Pro GPS time to signal lock - Carloop Community</title>
+    <meta name="description" content="Hello, 
+I got the Carloop pro basic application to work and connected via USB I can see the data (see below). 
+The “HASGPS” was something I added just to see if GPS was enabled on the device. After being plugged in with &amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="140.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="uZL0SqFwsyucJPEnCuhYrTsVb">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="uZL0SqFwsyucJPEnCuhYrTsVb"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop Pro GPS time to signal lock&#39;" href="140.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-pro-gps-time-to-signal-lock/140">
+<meta name="twitter:url" content="/t/carloop-pro-gps-time-to-signal-lock/140">
+<meta property="og:title" content="Carloop Pro GPS time to signal lock">
+<meta name="twitter:title" content="Carloop Pro GPS time to signal lock">
+<meta property="og:description" content="Hello,  I got the Carloop pro basic application to work and connected via USB I can see the data (see below).  The “HASGPS” was something I added just to see if GPS was enabled on the device. After being plugged in with clear line of site to the sky with no clouds for 20 minutes there is still no lat/lng is outputted.  Is there anything I can do to speed up the time to lock? The timestamp begins to display after 20-30 seconds, which makes me think that there is some signal being received. It did...">
+<meta name="twitter:description" content="Hello,  I got the Carloop pro basic application to work and connected via USB I can see the data (see below).  The “HASGPS” was something I added just to see if GPS was enabled on the device. After being plugged in with clear line of site to the sky with no clouds for 20 minutes there is still no lat/lng is outputted.  Is there anything I can do to speed up the time to lock? The timestamp begins to display after 20-30 seconds, which makes me think that there is some signal being received. It did...">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="6 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="2 ?">
+<meta property="article:published_time" content="2016-10-04T23:24:18+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="next" href="140-1.html?page=2">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="140.html">Carloop Pro GPS time to signal lock</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop Pro GPS time to signal lock'>
+      <link itemprop='url' href='140.html'>
+      <meta itemprop='datePublished' content='2016-10-04T23:24:18Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/lucas.html'><span itemprop='name'>lucas</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="140.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-10-04T23:24:18Z' class='post-time'>
+                    October 4, 2016, 11:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-04T23:24:18Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I got the Carloop pro basic application to work and connected via USB I can see the data (see below).</p>
+<p>The “HASGPS” was something I added just to see if GPS was enabled on the device. After being plugged in with clear line of site to the sky with no clouds for 20 minutes there is still no lat/lng is outputted.</p>
+<p>Is there anything I can do to speed up the time to lock? The timestamp begins to display after 20-30 seconds, which makes me think that there is some signal being received. It did work briefly the other night, but I cannot get it to lock on since then.</p>
+<p>I’ve tried moving the device so the side with the label is facing up and also facing down. I’ve tried it with the battery + usb plugged in and also with just the usb plugged in. I can’t seem to get the GPS coordinates to output via USB.</p>
+<p>Thanks</p>
+<pre><code class="lang-auto">Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  36549 chars: ********** *********** 10/04/2016 23:17:15
+Battery voltage:     4.350586 CAN messages:            0 HASGPS 1 GPS  36768 chars: ********** *********** 10/04/2016 23:17:16
+Battery voltage:     4.367988 CAN messages:            0 HASGPS 1 GPS  36987 chars: ********** *********** 10/04/2016 23:17:17
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37206 chars: ********** *********** 10/04/2016 23:17:18
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37425 chars: ********** *********** 10/04/2016 23:17:19
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  37517 chars: ********** *********** 10/04/2016 23:17:20
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  37863 chars: ********** *********** 10/04/2016 23:17:21
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  38082 chars: ********** *********** 10/04/2016 23:17:22
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  38301 chars: ********** *********** 10/04/2016 23:17:23
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  38528 chars: ********** *********** 10/04/2016 23:17:24
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/lucas.html'><span itemprop='name'>lucas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-04T23:29:59Z' class='post-time'>
+                    October 4, 2016, 11:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-04T23:29:59Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Quick update, it just locked, but it seems to take a full 5 minutes of running before outputting a GPS coordinate. Is there anything I can do to speed this time up?</p>
+<p>Thanks</p>
+<pre><code class="lang-auto">Battery voltage:     4.188164 CAN messages:            0 HASGPS 1 GPS   4734 chars: ********** *********** 00/00/2000 00:00:00
+Battery voltage:     4.199765 CAN messages:            0 HASGPS 1 GPS   4912 chars: ********** *********** 00/00/2000 00:00:00
+Battery voltage:     4.199765 CAN messages:            0 HASGPS 1 GPS   5117 chars: ********** *********** 00/00/2000 23:22:14
+Battery voltage:     4.193964 CAN messages:            0 HASGPS 1 GPS   5322 chars: ********** *********** 00/00/2000 23:22:15
+Battery voltage:     4.193964 CAN messages:            0 HASGPS 1 GPS   5533 chars: ********** *********** 10/04/2016 23:22:16
+Battery voltage:     4.205566 CAN messages:            0 HASGPS 1 GPS   5744 chars: ********** *********** 10/04/2016 23:22:17
+Battery voltage:     4.205566 CAN messages:            0 HASGPS 1 GPS   5955 chars: ********** *********** 10/04/2016 23:22:18
+...
+Battery voltage:     4.350586 CAN messages:            0 HASGPS 1 GPS  80890 chars: ********** *********** 10/04/2016 23:27:01
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  81196 chars: ********** *********** 10/04/2016 23:27:02
+Battery voltage:     4.367988 CAN messages:            0 HASGPS 1 GPS  81502 chars: ********** *********** 10/04/2016 23:27:03
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  81808 chars: ********** *********** 10/04/2016 23:27:04
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  82225 chars:   37.778935 -122.47364310/04/2016 23:27:05
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  82642 chars:   37.778931 -122.47363510/04/2016 23:27:06
+Battery voltage:     4.367988 CAN messages:            0 HASGPS 1 GPS  83047 chars:   37.778931 -122.47364310/04/2016 23:27:07
+Battery voltage:     4.362187 CAN messages:            0 HASGPS 1 GPS  83452 chars:   37.778946 -122.47364310/04/2016 23:27:08
+Battery voltage:     4.356387 CAN messages:            0 HASGPS 1 GPS  83857 chars:   37.778950 -122.47364310/04/2016 23:27:09
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-05T05:14:36Z' class='post-time'>
+                    October 5, 2016,  5:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-05T05:14:36Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/lucas.html">@lucas</a>,<br>
+Thanks for the feedback and helping us test the GPS in even more real world scenarios. We are working on potential improvements to the firmware to help with this issue. Either me or <a class="mention" href="../../u/jvanier.html">@jvanier</a> will reply with an update.</p>
+<p>By the way, after the GPS found the satellite fix once, did it take as long for subsequent fixes in your experience?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/lucas.html'><span itemprop='name'>lucas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-05T16:52:03Z' class='post-time'>
+                    October 5, 2016,  4:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-05T16:52:03Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>After waiting through the 5 minute period to get the initial fix, the subsequent fixes after restarting the device were acquired in ~20 seconds. Much faster!</p>
+<p>Was it slow to get a fix because the device wasn’t powered on in over a day?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-25T17:13:32Z' class='post-time'>
+                    October 25, 2016,  5:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-25T17:13:32Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Late to the party, but in order to get a proper fix, the GPS receiver needs to know the current positions of all satellites to be able to calculate its own position from the data it gets of the individual sats in sight.<br>
+That position almanach is downloaded via low bandwidth transmittion in the sat data stream and hence takes a long time to download. Once that almanach is stored and not outdated subsequent fixes go quick.</p>
+<p>A faster way to get a fix after having the device depowered for longer is to download the almanach via a higher bandwidth connection (cellular on Electron or WiFi on Photon) - at least this is how it can be done with the Particle AssetTracker.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-29T16:58:00Z' class='post-time'>
+                    October 29, 2016,  4:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-29T16:58:00Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Super informative. Let us know if you have more information. Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TylerB.html'><span itemprop='name'>TylerB</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-09T22:33:50Z' class='post-time'>
+                    November 9, 2016, 10:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-09T22:33:50Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey ScruffR!</p>
+<p>Thanks for the info. I took a look at the AssetTracker code and couldn’t see anywhere the almanac was being downloaded over a faster connection. I may have simply missed it.</p>
+<p>Could you possibly point me in the right direction for that?</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T04:27:49Z' class='post-time'>
+                    November 10, 2016,  4:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T04:27:49Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Another possibility is that some car windshields have a micro metal film over the surface to reduce glare and keep some of the solar heat out of the car.  This could be the cause of some shielding of the GPS signal.  To test the theory, try getting a GPS lock with the GPS antenna outside of the car and see if the lock time improves significantly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ScruffR.html'><span itemprop='name'>ScruffR</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/c9a2a8026a4c2bc0a636f1cb86bedf17d7af6457.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T08:46:28Z' class='post-time'>
+                    November 10, 2016,  8:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T08:56:18Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ll have to dig up that respective post where one of the Particle gurus had described who he’s done that.<br>
+I don’t think it’s in the stock AssetTracker stock repo but rather in a repo called <em>Fancy AssetTracker</em> (or so)</p>
+<hr>
+<p>Yup, that was the name. It was a project of Dave Middlecamp</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/dmiddlecamp/fancy-asset-tracker">
+  <header class="source">
+      <img src="../../favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/dmiddlecamp/fancy-asset-tracker" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/c9a2a8026a4c2bc0a636f1cb86bedf17d7af6457_2_690x345.png" class="thumbnail" data-dominant-color="F0ECEE" width="690" height="345"></div>
+
+<h3><a href="https://github.com/dmiddlecamp/fancy-asset-tracker" target="_blank" rel="noopener nofollow ugc">GitHub - dmiddlecamp/fancy-asset-tracker: a place for fancy asset tracker demos!</a></h3>
+
+  <p>a place for fancy asset tracker demos! Contribute to dmiddlecamp/fancy-asset-tracker development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>But as it seems, the respective <code>ephemeris-loader</code> sample isn’t in there.<br>
+Maybe you can ping/bump <a class="mention" href="../../u/Dave.html">@Dave</a> on the Particle forum in the respective thread</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37" target="_blank" rel="noopener nofollow ugc" title="04:32PM - 02 March 2016">Particle – 2 Mar 16</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/adafruit-gps-photon-problem/20229/37" target="_blank" rel="noopener nofollow ugc">Adafruit GPS Photon problem</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Heya @Eric24,  Sure thing!  If you have time and want to take a stab at it, here’s the info I collected so far:    Checkout the last few lines in that readme, it links to another awesome project that actually implemented this.  I was going to use...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TylerB.html'><span itemprop='name'>TylerB</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T17:12:02Z' class='post-time'>
+                    November 10, 2016,  5:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T17:12:02Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Using an external antenna mounted to the roof significantly improves performance, but I am really hoping to keep the unit self contained, if possible.</p>
+<p>I may end up having to go with an external antenna. Does anyone know of one that plugs right in to the 6 pin JST on the carloop board?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TylerB.html'><span itemprop='name'>TylerB</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T17:13:08Z' class='post-time'>
+                    November 10, 2016,  5:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T17:13:08Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for the info! I’ll dive in to this and see what I can figure out!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/kogs.html'><span itemprop='name'>kogs</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-06T05:26:56Z' class='post-time'>
+                    December 6, 2016,  5:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-06T05:26:56Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just received my Carloop Pro in the mail today, and after running it for several hours - inside, on the front porch, and finally for a couple hours in the back yard with a clear view of the sky - I’m unable to get a GPS fix. My results are basically the same as Lucas’ first post, but I don’t even get a time signal from the GPS unit. Here’s an example of the output:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png" data-download-href="//carloop-community.dyndns.org/uploads/default/ea8524035f8efc8a7ed6b4f2658a897abe91b862" title="NoGPS.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862_2_690x202.png" width="690" height="202" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862_2_690x202.png,//carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png,//carloop-community.dyndns.org/uploads/default/original/1X/ea8524035f8efc8a7ed6b4f2658a897abe91b862.png" data-dominant-color="434343"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">NoGPS.png</span><span class="informations">922×271 83.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>It’s a revision 2.3.</p>
+<p>Thanks!<br>
+-Matt</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-07T21:29:32Z' class='post-time'>
+                    December 7, 2016,  9:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-07T21:29:32Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/kogs.html">@kogs</a>,<br>
+I shipped a new GPS and cable your way.  I suspect it is a bad cable but keep us posted on this community post so everyone can benefit from what you learn.</p>
+<p>Alan</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/Affarram'><span itemprop='name'>Affarram</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-15T03:57:47Z' class='post-time'>
+                    December 15, 2016,  3:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-15T03:57:47Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Im having the same issue as <a class="mention" href="../../u/kogs.html">@kogs</a>. I let it run for a pretty long time and unplugged it a few times to see if that would help. I finally decided to read the data directly from the gps unit using Serial1<br>
+if (Serial1.available()) {<br>
+Serial.write(Serial1.read());<br>
+}<br>
+This is what my output looks like…<br>
+$GPRMC,035129.00,V,151216,N<em>71<br>
+$GPVTG,N</em>30<br>
+$GPGGA,035129.00,0,00,99.99,<em>6A<br>
+$GPGSA,A,1,99.99,99.99,99.99</em>30<br>
+$GPGSV,1,1,02,03,21,32,20<em>78<br>
+$GPGLL,035129.00,V,N</em>46</p>
+<p>As far as i can tell by looking at the <a href="http://www.hobbytronics.co.uk/datasheets/sparkfun/GP-735T-150203.pdf" rel="noopener nofollow ugc">datasheet</a> it is not acquiring a signal from enough satellites to determine my location. Is there something I can try to get it to work better?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jmb.html'><span itemprop='name'>jmb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-13T04:06:53Z' class='post-time'>
+                    April 13, 2017,  4:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-13T04:06:53Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sadly I seem to be having the same problem described above. It ran all afternoon today with clear access to the sky, but no GPS fix. <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jmb.html'><span itemprop='name'>jmb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T03:41:21Z' class='post-time'>
+                    April 14, 2017,  3:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T03:41:21Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Help? Who do I contact for a replacement? I’ve tried everything. I think I got a dud GPS module. It’s quite frustrating as the applications I had in mind are all critical on using position data! So I’m a bit stuck…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T04:41:04Z' class='post-time'>
+                    April 14, 2017,  4:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T04:41:04Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/jmb.html">@jmb</a> that’s a bummer!  You can send us your GPS module and we will send you a different one.  We have had really bad results with this GPS version and we are going to be announcing our next GPS version shortly.  Our initial tests are really good but we want to make enough units to provide anyone that wants to upgrade.  Please send me an e-mail at <a href="mailto:alan@carloop.io">alan@carloop.io</a> so I can send you instructions on replacement of the current version.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/pawelmanu.html'><span itemprop='name'>pawelmanu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-04T20:29:16Z' class='post-time'>
+                    July 4, 2017,  8:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-04T20:29:16Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Team, what’s the proceeding if I have rev 2.3 and I also have problems to lock GPS signal?<br>
+Any tricks? Or should I replace the module?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-05T01:57:04Z' class='post-time'>
+                    July 5, 2017,  1:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-05T01:57:04Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/pawelmanu.html">@pawelmanu</a>,</p>
+<p>Have you not gotten a GPS lock ever, or is it difficult to get a lock?<br>
+Try it out somewhere with a clear view of the sky, with no signal shields.<br>
+Unfortunately, a metal car roof or a metal solar film on a windshield make good signal shields…</p>
+<p>In case there is a hardware issue, <a class="mention" href="/u/alanm">@alanm</a> and <a class="mention" href="../../u/jvanier.html">@jvanier</a> should be aware you are having difficulty.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/pawelmanu.html'><span itemprop='name'>pawelmanu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-15T22:10:16Z' class='post-time'>
+                    July 15, 2017, 10:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-15T22:10:16Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there some option to test GPS module directly without using Electron board? I am not getting GPS fix following open-sky prerequisite (by using carloop_minimal example). Maybe there is an error for GPS handling once device is in Europe <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="140-1.html?page=2">next page ?</a></b></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

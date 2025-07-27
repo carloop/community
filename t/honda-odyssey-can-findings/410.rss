@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Honda Odyssey CAN Findings</title>
+    <link>https://community.carloop.io/t/honda-odyssey-can-findings/410</link>
+    <description>Well, I finally got my carloop giving me useful information. I have a 2014 Honda Odyssey Touring Elite I&#39;m playing with. So far I&#39;ve only attached to the F-CAN which is 500kbps. The more interesting CAN stuff is probably going to be on the B-CAN (33.33kbps) but I haven&#39;t tried patching into it yet.
+
+So without further ado...
+CAN ID: 0x164 Byte 0
+0b 1xxx xxxx = Accel/Resume Cruise Button
+0b x1xx xxxx = Decel/Set Cruise Button
+0b xx1x xxxx = Cruise On/Off Switch
+0b 11xx xxxx = Cruise Cancel Switch
+0b xxxx x1xx = Emergency Brake On/Off
+
+0b xxxx xx00 = Headlights off
+0b xxxx xx01 = Parking lights on/off
+0b xxxx xx00 = Auto Mode/Lights off (daytime)
+0b xxxx xx10 = Auto Mode/Lights on (dark) ALSO for Headlights on
+0b xxxx xx11 = High beams
+
+Byte 2 0b xx1x xxxx = Fog lights on/off
+
+CAN ID: 0x324 Byte 4 Looks to be the set speed for cruise control.
+CAN ID: 0x255 Bytes 0-3 Look to be wheel speed sensors. Related to vehicle speed
+CAN ID: 0x40c Continuously keeps transmitting the vehicle VIN #. Not sure if this is related to the immobilizer or not.
+
+CAN ID: 0x294 Byte 0
+0b x1xx xxxx = Right Turn Signal
+0b xx1x xxxx = Left Turn Signal
+0b xxxx 1xxx = Intermittent Wipers
+0b xxx1 xxxx = Lo Wipers
+0b xxx1 1xxx = Hi/Mist Wipers
+
+CAN ID: 0x35e Byte 1 0b xxxx 1xxx = LDW on/off (1 = off, 0 = on)
+CAN ID: 0x1a4 Byte 3 0b xxx1 xxxx = Traction control on/off
+
+CAN ID: 0x405 Byte 4
+0b 1xxx xxxx = Drivers sliding door open
+0b x1xx xxxx = Passenger Door Open
+0b xx1x xxxx = Driver Door Open
+Byte 5
+0b xxxx xxx1 = Passenger Sliding Door Open
+0b xxxx xx1x = Rear tailgate open
+
+I&#39;m still looking for a few specific things. I know that the TPMS is connected to F-CAN and I&#39;m hoping that the actual pressure of each tire is available on the CAN. The Forward Collision Warning/Lane Departure Warning (FCW/LDW) module is also on the F-CAN and is supremely temperamental to issues on the CAN bus. I had tried overriding a message and the FCW module starts throwing out warnings pretty easily. I also haven&#39;t quite figured out if the gear range is on the CANBUS (or rather what the IDs are for it).
+
+I also noticed quite a bit of &quot;oddness&quot; with my car. Although connecting to F-CAN yielded 11-bit identifiers, I had to modify the VIN Reader app to send/receive 29-bit identifiers in order to query the VIN number. When I have the carloop setup as a socketcan device it is programmed to only accept 11-bit identifiers. This may prove to be a hinderance if I run into any more 29-bit identifiers. Especially since cansniffer can&#39;t work with anything other than 11-bit identifiers.
+
+Another issue that I&#39;m not sure will work yet is the B-CAN baud rate of 33.33kbps. I modified the socketcan example to add in a new value (S9) that corresponds to 33333 for the rate. It seems to get set correctly, but I have not tried to see whether I can actually get information off the bus yet. Has anyone else had an odd baud rate to contend with before?
+
+As always, if anyone can expand on what I&#39;ve found I&#39;d appreciate it. I&#39;ll post more updates as I find them.</description>
+    
+    <lastBuildDate>Wed, 09 Aug 2017 15:52:26 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/honda-odyssey-can-findings/410.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Honda Odyssey CAN Findings</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Nice work!</p>
+<p>I’ve done a ton of work on our 2012 Honda Odyssey which I imagine is pretty similar.  Check out my BCAN work here:  <a href="https://carloop.dyndns.org/t/honda-b-can-and-carloop/152" class="inline-onebox">Honda B-CAN and Carloop - Carloop Community</a></p>
+<p>BCAN on our vans runs at 125 kbps and it exclusively uses 29-bit identifiers.  You are correct, there are a bunch more interesting systems on the BCAN network.  You will not be able to tap into BCAN at the OBD2 port, unless the '14 is different than the '12.  I had to tap in at one of the heated seat modules.</p>
+<p>Also regarding TPMS, check out this thread: <a href="https://carloop.dyndns.org/t/honda-tire-pressure-monitor-light-project/137/26" class="inline-onebox">Honda tire pressure monitor light project - Project Share - Carloop Community</a></p>
+<p>On the 2012, the tire pressure is not shared on the bus, it only shares if it is good or not.  TPMS is at 0x333</p>
+          <p><a href="https://community.carloop.io/t/honda-odyssey-can-findings/410/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-odyssey-can-findings/410/3</link>
+        <pubDate>Wed, 09 Aug 2017 15:52:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-410-3</guid>
+        <source url="https://community.carloop.io/t/honda-odyssey-can-findings/410.rss">Honda Odyssey CAN Findings</source>
+      </item>
+      <item>
+        <title>Honda Odyssey CAN Findings</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mscreations">@mscreations</a> Cool stuff, you have accomplished some really good work.</p>
+<p>What would be really cool is to have a library (spreadsheet/database/etc) of all the messages &amp; IDs, which could be used to make coding faster.</p>
+<p>Also, I suggest trying some Honda enthusiast forums to post what you have found, and also to see what other people have found for your model.  A group of Odyssey owners working together could probably get some huge breakthroughs…</p>
+          <p><a href="https://community.carloop.io/t/honda-odyssey-can-findings/410/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-odyssey-can-findings/410/2</link>
+        <pubDate>Mon, 07 Aug 2017 13:16:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-410-2</guid>
+        <source url="https://community.carloop.io/t/honda-odyssey-can-findings/410.rss">Honda Odyssey CAN Findings</source>
+      </item>
+      <item>
+        <title>Honda Odyssey CAN Findings</title>
+        <dc:creator><![CDATA[mscreations]]></dc:creator>
+        <description><![CDATA[
+            <p>Well, I finally got my carloop giving me useful information. I have a 2014 Honda Odyssey Touring Elite I’m playing with. So far I’ve only attached to the F-CAN which is 500kbps. The more interesting CAN stuff is probably going to be on the B-CAN (33.33kbps) but I haven’t tried patching into it yet.</p>
+<p>So without further ado…<br>
+CAN ID: 0x164 Byte 0<br>
+0b 1xxx xxxx = Accel/Resume Cruise Button<br>
+0b x1xx xxxx = Decel/Set Cruise Button<br>
+0b xx1x xxxx = Cruise On/Off Switch<br>
+0b 11xx xxxx = Cruise Cancel Switch<br>
+0b xxxx x1xx = Emergency Brake On/Off</p>
+<p>0b xxxx xx00 = Headlights off<br>
+0b xxxx xx01 = Parking lights on/off<br>
+0b xxxx xx00 = Auto Mode/Lights off (daytime)<br>
+0b xxxx xx10 = Auto Mode/Lights on (dark) ALSO for Headlights on<br>
+0b xxxx xx11 = High beams</p>
+<p>Byte 2 0b xx1x xxxx = Fog lights on/off</p>
+<p>CAN ID: 0x324 Byte 4 Looks to be the set speed for cruise control.<br>
+CAN ID: 0x255 Bytes 0-3 Look to be wheel speed sensors. Related to vehicle speed<br>
+CAN ID: 0x40c Continuously keeps transmitting the vehicle VIN #. Not sure if this is related to the immobilizer or not.</p>
+<p>CAN ID: 0x294 Byte 0<br>
+0b x1xx xxxx = Right Turn Signal<br>
+0b xx1x xxxx = Left Turn Signal<br>
+0b xxxx 1xxx = Intermittent Wipers<br>
+0b xxx1 xxxx = Lo Wipers<br>
+0b xxx1 1xxx = Hi/Mist Wipers</p>
+<p>CAN ID: 0x35e Byte 1 0b xxxx 1xxx = LDW on/off (1 = off, 0 = on)<br>
+CAN ID: 0x1a4 Byte 3 0b xxx1 xxxx = Traction control on/off</p>
+<p>CAN ID: 0x405 Byte 4<br>
+0b 1xxx xxxx = Drivers sliding door open<br>
+0b x1xx xxxx = Passenger Door Open<br>
+0b xx1x xxxx = Driver Door Open<br>
+Byte 5<br>
+0b xxxx xxx1 = Passenger Sliding Door Open<br>
+0b xxxx xx1x = Rear tailgate open</p>
+<p>I’m still looking for a few specific things. I know that the TPMS is connected to F-CAN and I’m hoping that the actual pressure of each tire is available on the CAN. The Forward Collision Warning/Lane Departure Warning (FCW/LDW) module is also on the F-CAN and is supremely temperamental to issues on the CAN bus. I had tried overriding a message and the FCW module starts throwing out warnings pretty easily. I also haven’t quite figured out if the gear range is on the CANBUS (or rather what the IDs are for it).</p>
+<p>I also noticed quite a bit of “oddness” with my car. Although connecting to F-CAN yielded 11-bit identifiers, I had to modify the VIN Reader app to send/receive 29-bit identifiers in order to query the VIN number. When I have the carloop setup as a socketcan device it is programmed to only accept 11-bit identifiers. This may prove to be a hinderance if I run into any more 29-bit identifiers. Especially since cansniffer can’t work with anything other than 11-bit identifiers.</p>
+<p>Another issue that I’m not sure will work yet is the B-CAN baud rate of 33.33kbps. I modified the socketcan example to add in a new value (S9) that corresponds to 33333 for the rate. It seems to get set correctly, but I have not tried to see whether I can actually get information off the bus yet. Has anyone else had an odd baud rate to contend with before?</p>
+<p>As always, if anyone can expand on what I’ve found I’d appreciate it. I’ll post more updates as I find them.</p>
+          <p><a href="https://community.carloop.io/t/honda-odyssey-can-findings/410/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-odyssey-can-findings/410/1</link>
+        <pubDate>Mon, 07 Aug 2017 00:58:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-410-1</guid>
+        <source url="https://community.carloop.io/t/honda-odyssey-can-findings/410.rss">Honda Odyssey CAN Findings</source>
+      </item>
+  </channel>
+</rss>

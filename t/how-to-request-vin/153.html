@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to Request VIN - Software - Carloop Community</title>
+    <meta name="description" content="Hey guys, 
+Looking to request VIN via an OBD request. I’m generally familiar with J1939 and CAN but I’m stuck with requesting mode 9 pid 2. 
+Here is how I’m creating my message to be transmitted 
+void sendObdRequest(){
+C&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="153.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="Ps4hH6diPwJzYJ4vGpcusmPdN">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="Ps4hH6diPwJzYJ4vGpcusmPdN"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to Request VIN&#39;" href="153.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/how-to-request-vin/153">
+<meta name="twitter:url" content="/t/how-to-request-vin/153">
+<meta property="og:title" content="How to Request VIN">
+<meta name="twitter:title" content="How to Request VIN">
+<meta property="og:description" content="Hey guys,  Looking to request VIN via an OBD request. I’m generally familiar with J1939 and CAN but I’m stuck with requesting mode 9 pid 2.  Here is how I’m creating my message to be transmitted  void sendObdRequest(){ CANMessage message; message.id = OBD_CAN_BROADCAST_ID; message.len = 8; // just always use 8 message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes message.data[1] = 0x09; message.data[2] = 0x02; carloop.can().transmit(message); waitForObdResponse(); }  And then I...">
+<meta name="twitter:description" content="Hey guys,  Looking to request VIN via an OBD request. I’m generally familiar with J1939 and CAN but I’m stuck with requesting mode 9 pid 2.  Here is how I’m creating my message to be transmitted  void sendObdRequest(){ CANMessage message; message.id = OBD_CAN_BROADCAST_ID; message.len = 8; // just always use 8 message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes message.data[1] = 0x09; message.data[2] = 0x02; carloop.can().transmit(message); waitForObdResponse(); }  And then I...">
+<meta property="og:article:section" content="Software">
+<meta property="og:article:section:color" content="0E76BD">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="3 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="7 ?">
+<meta property="article:published_time" content="2016-10-26T00:22:36+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="next" href="153-1.html?page=2">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="153.html">How to Request VIN</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/software/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Software</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to Request VIN'>
+      <link itemprop='url' href='153.html'>
+      <meta itemprop='datePublished' content='2016-10-26T00:22:36Z'>
+        <meta itemprop='articleSection' content='Software'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="153.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-10-26T00:22:36Z' class='post-time'>
+                    October 26, 2016, 12:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-26T00:22:36Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey guys,</p>
+<p>Looking to request VIN via an OBD request. I’m generally familiar with J1939 and CAN but I’m stuck with requesting mode 9 pid 2.</p>
+<p>Here is how I’m creating my message to be transmitted</p>
+<pre><code>void sendObdRequest(){
+CANMessage message;
+message.id = OBD_CAN_BROADCAST_ID;
+message.len = 8; // just always use 8
+message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+message.data[1] = 0x09;
+message.data[2] = 0x02;
+carloop.can().transmit(message);
+waitForObdResponse();
+}
+</code></pre>
+<p>And then I’m waiting for the message with the following:</p>
+<pre><code>void waitForObdResponse(){
+bool responseReceived = false;
+Serial.println("I made it to wait for obd response");
+CANMessage message;
+while (carloop.can().receive(message)) {
+    Serial.println("message received");
+    if(message.data[2] == 0x02) {
+	responseReceived = true;
+	data0 = message.data[0];
+        data1 = message.data[1];
+        data2 = message.data[2];
+        data3 = message.data[3];
+        data4 = message.data[4];
+        data5 = message.data[5];
+        data6 = message.data[6];
+        data7 = message.data[7];
+        Serial.println("VIN message data seen");
+    return;
+	}
+    }
+}
+</code></pre>
+<p>I’m never entering the “if(message.data[2] == 0x02”</p>
+<p>Thanks for the help!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-28T18:38:53Z' class='post-time'>
+                    October 28, 2016,  6:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-28T18:38:53Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ll take a look over the weekend and release a sample app to get the VIN.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-28T19:03:41Z' class='post-time'>
+                    October 28, 2016,  7:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-28T19:03:41Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice! Thanks so much. I know its not supported on all vehicles, but in general, request frames that have data across more than one message would be super helpful!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-29T16:56:51Z' class='post-time'>
+                    October 29, 2016,  4:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-29T16:56:51Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here’s a progress update.</p>
+<p>The protocol for sending OBD messages is called <a href="https://en.wikipedia.org/wiki/ISO_15765-2">ISO_15765-2</a>. Since CAN doesn’t support message with more than 8 bytes, long data like the Vehicle Identification Number (VIN) are encoded across several messages.</p>
+<p>Here’s the full exchange to get my VIN 3FADP4FJ2BM11391. I’ll go into what each message means below. In addition I am working on publishing a class that automates the decoding this protocol.</p>
+<pre><code class="lang-auto">  can0  7DF   [8]  02 09 02 00 00 00 00 00
+  can0  7E8   [8]  10 14 49 02 01 33 46 41
+  can0  7E0   [8]  30 00 00 00 00 00 00 00
+  can0  7E8   [8]  21 44 50 34 46 4A 32 42
+  can0  7E8   [8]  22 4D 31 31 33 39 31 33
+</code></pre>
+<p>You have the right request to get the VIN. It’s a Parameter ID (PID) request (0x09) for the VIN (0x02). You send that as a broadcast message (0x7DF) with a length of 2.</p>
+<p>The first message sent in reply by the ECU (ID 0x7E8) starts with 0x1014 which means extended message with a length of 0x14 = 20 bytes. Then 0x49 means a reply to the 0x09 PID request and 0x02 is the PID that was requested. The start of the data follows.</p>
+<p>Next the requestor must send a flow control message to say: “OK to continue sending the rest of the message”. The flow control message must be sent with a CAN ID that is the ID of the reply from the ECU minus 8. So the flow control here is sent with ID 0x7E0 with data 0x30 followed by 7 times 0x00.</p>
+<p>Then the ECU sends each subsequent piece of data with a frame that starts with 0x2y where y is a sequence number. The other 7 bytes are data.</p>
+<p>I generated the exchange using the Carloop in running the <a href="../use-carloop-with-socketcan-and-can-utils/117.html">socketcan firmware</a>.</p>
+<p>I ran these commands on my Linux laptop after flashing the socketcan firmware and connecting the Carloop to my car with the ignition and and to my laptop by USB:</p>
+<pre><code class="lang-auto">sudo slcand -o -c -s6 /dev/ttyACM* can0
+sudo ifconfig can0 up
+# See all messages with ID larger than 0x780
+candump can0,780:780
+# In a different terminal
+cansend can0 7df#0209020000000000 &amp;&amp; sleep 0.01 &amp;&amp; cansend can0 7e0#3000000000000000
+</code></pre>
+<p>I’ll keep working on wrapping this request into a demo app I can share with everybody.</p>
+<p>Here’s the beginning of the OBD message decoder class:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.cpp">
+  <header class="source">
+
+      <a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.cpp" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.cpp" target="_blank" rel="noopener">carloop/app-code-reader/blob/master/src/OBDMessage.cpp</a></h4>
+
+
+      <pre><code class="lang-cpp">/* OBDMessage implements the ISO 15765-2 transport used for OBD-II messages
+ *
+ * Since CAN messages can only contain 8 bytes and diagnostic messages
+ * can be longer, OBD-II uses a protocol called ISO 15765-2 to transmit
+ * longer messages inside CAN frames.
+ *
+ * Short messages (up to 6 bytes) are transmitted in a single CAN frame.
+ * 
+ * Longer messages are split between a first frame and consecutive
+ * frames. When the listener receives a first frame it must send a flow
+ * control frame before the sender will transmit the consecutive frames.
+ *
+ * The type of message is part of the first byte of the ISO 15765-2
+ * message. The number of data bytes in the entire message follows the
+ * type (either half a byte for a single-frame message or 2 bytes for a
+ * multiple-frame message).
+ *
+ * OBDMessage reconstructs the data sent in multiple frames.
+ *
+ * Reference: https://en.wikipedia.org/wiki/ISO_15765-2
+</code></pre>
+
+
+
+  This file has been truncated. <a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.cpp" target="_blank" rel="noopener">show original</a>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.h">
+  <header class="source">
+
+      <a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.h" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.h" target="_blank" rel="noopener">carloop/app-code-reader/blob/master/src/OBDMessage.h</a></h4>
+
+
+      <pre><code class="lang-h">/* OBDMessage implements the ISO 15765-2 transport used for OBD-II messages
+ *
+ * Since CAN messages can only contain 8 bytes and diagnostic messages
+ * can be longer, OBD-II uses a protocol called ISO 15762-2 to transmit
+ * longer messages inside CAN frames.
+ *
+ * Short messages (up to 6 bytes) are transmitted in a single CAN frame.
+ * 
+ * Longer messages are split between a first frame and consecutive
+ * frames. When the listener receives a first frame it must send a flow
+ * control frame before the sender will transmit the consecutive frames.
+ *
+ * OBDMessage reconstructs the data sent in multiple frames.
+ *
+ * Reference: https://en.wikipedia.org/wiki/ISO_15765-2
+ *
+ * Copyright 2016 1000 Tools, Inc
+ *
+ * Distributed under the MIT license. See LICENSE.txt for more details.
+ */
+</code></pre>
+
+
+
+  This file has been truncated. <a href="https://github.com/carloop/app-code-reader/blob/master/src/OBDMessage.h" target="_blank" rel="noopener">show original</a>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>To use it you’d do (I have not tested the code yet. I’ll fix errors in this code as soon as I have time to test it):</p>
+<pre><code class="lang-auto">void setup() {
+  carloop.begin();
+
+  CANMessage message;
+  message.id = OBD_CAN_BROADCAST_ID;
+  message.len = 8; // just always use 8
+  message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+  message.data[1] = 0x09;
+  message.data[2] = 0x02;
+  carloop.can().transmit(message);
+}
+
+void loop() {
+  static OBDMessage obd;
+  CANMessage message;
+  if (carloop.can().receive(message)) {
+    if (message.id == 0x7E8) {
+      // Add the data to our OBD message
+      bool needsFlowControl = obd.addMessageData(message);
+
+      if (needsFlowControl) {
+        // Sending flow control
+        CANMessage flowControl = obd.flowControlMessage();
+        carloop.can().transmit(flowControl);
+      }
+
+      // Use the data when the message is complete
+      if (obd.complete()) {
+        for (auto it = obd.data().begin(); it != obd.data().end(); ++it) {
+          uint8_t data = *it;
+          Serial.printf("%c", data);
+        }
+        Serial.println("");
+        obd.clear();
+      }
+  }
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="2">
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="6">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-30T14:51:36Z' class='post-time'>
+                    October 30, 2016,  2:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-30T14:51:36Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think we are extremely close. Running your code with some slight modifications I was able to receive message id 0x7E8, and adding some print statements, able to see that the code was indeed sending a flow control message.</p>
+<p>However, it seems that the obd.complete function never returns true. Hope my trial helps.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-31T02:14:53Z' class='post-time'>
+                    October 31, 2016,  2:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-31T02:14:53Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had the time to wrap up the code above in an app. Check out the VIN reader app at <a href="https://carloop.io/apps/">https://carloop.io/apps/</a></p>
+<p>The app is available on GitHub at <a href="https://github.com/carloop/app-vin-reader" class="inline-onebox">GitHub - carloop/app-vin-reader: VIN reader</a></p>
+<p>When I run the code in my car with the ignition on, I get the correct VIN. <img src="//carloop-community.dyndns.org/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"></p>
+<p>Here’s the debug log through Serial:</p>
+<pre><code class="lang-auto">Reading VIN
+Got reply from ECU
+Sent flow control
+Got reply from ECU
+Got reply from ECU
+VIN: 3FADP4FJ2BM113913
+Done
+</code></pre>
+<p>You are right that there’s something fishy with the <code>obd.complete()</code> function because at some point while tweaking the <code>Serial.print</code> statements I didn’t get <code>complete()</code> to return true anymore. There must be a bug in the <code>OBDMessage</code> class causing this. <img src="//carloop-community.dyndns.org/images/emoji/twitter/unamused.png?v=12" title=":unamused:" class="emoji" alt=":unamused:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-31T02:31:02Z' class='post-time'>
+                    October 31, 2016,  2:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-31T02:31:02Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice! I will definitely check it out. I’ve just finished scaling and offsets for all Mode 1 PIDs (I am no programmer by trade, so it’s probably horribly inefficient but it works nonetheless) Hoping I will have time to post a project to <a href="http://hackster.io" rel="noopener nofollow ugc">hackster.io</a> tomorrow.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-31T11:51:34Z' class='post-time'>
+                    October 31, 2016, 11:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-31T11:51:34Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That would be awesome!  The folks from <a href="http://Hackster.io">Hackster.io</a> hooked us up with a nice project page, so you could add your Carloop projects here: <a href="https://www.hackster.io/carloop/projects" class="inline-onebox">Hackster.io - The community dedicated to learning hardware.</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/ninfeinous.html'><span itemprop='name'>ninfeinous</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-08T08:44:44Z' class='post-time'>
+                    June 8, 2017,  8:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-08T08:44:44Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello ,<br>
+Please the data D2= 0x49 found in line 2 is always the same for all multiple frames obd messages  ?<br>
+Regards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-09T02:33:54Z' class='post-time'>
+                    June 9, 2017,  2:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-09T02:33:54Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/ninfeinous.html">@ninfeinous</a>, I think the information you are looking for regarding multi-frame CANbus messages is on Wikipedia here:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/CAN_bus">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/CAN_bus" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/CAN_bus" target="_blank" rel="noopener">CAN bus</a></h3>
+
+<p>
+ A controller area network (CAN bus) is a vehicle bus standard designed to allow microcontrollers and devices to communicate with each other. It is a message-based protocol, designed originally for multiplex electrical wiring within automobiles to save on copper, but it can also be used in many other contexts. For each device, the data in a frame is transmitted serially but in such a way that if more than one device transmits at the same time, the highest priority device can continue while the o...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The byte of date you are asking about was answered in the details above.  It is essentially saying the message is a response to a specific request.  This way you can search for the message containing the response you need, out of the many messages going across the CANbus:</p>
+<aside class="quote no-group" data-username="jvanier" data-post="4" data-topic="153">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/jvanier/48/426_2.png" class="avatar"> jvanier:</div>
+<blockquote>
+<p>0x49 means a reply to the 0x09 PID request and 0x02 is the PID that was requested</p>
+</blockquote>
+</aside>
+<p>Does this help you out?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/geetanjali.html'><span itemprop='name'>geetanjali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-08-24T11:35:59Z' class='post-time'>
+                    August 24, 2017, 11:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-08-24T11:35:59Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>i am trying to get response from OBD2 through STN chip<br>
+here is the response of emulator<br>
+0902<br>
+7E810144902014D4154<br>
+7E82134303330393642<br>
+7E8224E4C3030303135<br>
+i not getting how to decode can anyone help???</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/geetanjali.html'><span itemprop='name'>geetanjali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-08-24T11:36:36Z' class='post-time'>
+                    August 24, 2017, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-08-24T11:36:36Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>this is for vin pid plz rpy fast</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/smeric.html'><span itemprop='name'>smeric</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/2ea921c6fcec3d4232a7ffb34f17e0a5c9e56548.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-08-27T08:50:07Z' class='post-time'>
+                    August 27, 2017,  8:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-08-27T08:50:07Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/2ea921c6fcec3d4232a7ffb34f17e0a5c9e56548.png" width="356" height="81"></p>
+<p>Ascii code of 4D(hex) - 77(DECIMAL) “M”  -  41(hex) - 65(DECIMAL) “A”<br>
+First 3 byte is CAN ID. After that split that data 2 by 2,<br>
+if there is a data on D1 “10” thats means there will come more data. D2 = hex(14) that means total byte will come (14 hex = 20 decimal )<br>
+if rows first byte(D1)  is 2x that is information byte and you can take all bytes after thats</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/smeric.html'><span itemprop='name'>smeric</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-08-27T08:51:09Z' class='post-time'>
+                    August 27, 2017,  8:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-08-27T08:51:09Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I did that in excel<br>
+you can use HEXTODEC() and CHAR() function on excel</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+                  Split this topic 
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-29T02:53:51Z' class='post-time'>
+                    September 29, 2017,  2:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-29T02:53:51Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A post was split to a new topic: <a href="../j1939-protocol-on-carloop/448.html">J1939 Protocol on Carloop</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/famatte.html'><span itemprop='name'>famatte</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-16T21:19:31Z' class='post-time'>
+                    November 16, 2017,  9:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-16T21:19:31Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jvanier" data-post="4" data-topic="153">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/jvanier/48/426_2.png" class="avatar"> jvanier:</div>
+<blockquote>
+<p>broadcast message (0x7DF)</p>
+</blockquote>
+</aside>
+<p>Is 7DF default for any car to get diagnosis ? I’m trying to send data like (cansend can0 7df#0209020000000000) and nothing happens. All can-tools are woking fine. I’m trying it on a Honda 2016 (Brazil) .</p>
+<p>Thanks in advance</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-17T02:04:03Z' class='post-time'>
+                    November 17, 2017,  2:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-17T02:04:03Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>7DF is the broadcast address for OBD-II, so as long as your car supports OBD-II you should be able to use that mode. You might want to try different CAN bus speeds like 250000 bits/s and 1000000 bits/s.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/slgtech.html'><span itemprop='name'>slgtech</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-15T00:35:19Z' class='post-time'>
+                    January 15, 2018, 12:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-15T00:35:19Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>First, thanks for this post. Great information. When testing my code, I am able to send the 0902 request for the VIN and I receive the initial response, I then send the Flow control message and receive the second frame of the VIN. However, I never can get the third frame of the VIN.  I have tried numerous troubleshooting steps to isolate the problem but I am at a loss. No matter what I do, I can only get two thirds of the VIN (2 of 3) frames. Do you have any ideas what could be causing this. My code is in C so its slightly different than the C++ provided.  Thanks for any assistance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-01-19T03:56:46Z' class='post-time'>
+                    January 19, 2018,  3:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-19T03:56:46Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/slgtech.html">@slgtech</a>,</p>
+<p>You mentioned specifically sending a Flow control message to request the second frame.  That seems to work fine, because you say that you then receive the second frame.  However, you do not mention a Flow control message to request the third frame.  Can you check to ensure you are sending a request for the third frame?  Also, does the Flow control message have a frame number built into it (I do not have the details on-hand at the moment about the Flow control message format, just covering all the possible bases.)?</p>
+<p>Look into that and let us know if that helps.  If not, we can dig in deeper and try to figure it out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/dougie'><span itemprop='name'>dougie</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-05T16:57:30Z' class='post-time'>
+                    December 5, 2019,  4:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-06T17:15:37Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Fantastic Thread with good explanations…</p>
+<p>However I got stuck at a point.</p>
+<p>A diagnostic device sends a Remote Transmission Request and<br>
+I need to simulate my ECU by sending the VIN via CAN</p>
+<p>VIN is: SALLDWBP8DA431032</p>
+<p>I converted VIN to HEX as:  53 41 4C 4C 44 57 42 50 38 44 41 34 33 31 30 33 32</p>
+<p>So I thougt the ECU (7E8) should respond</p>
+<p>(0.1) 7E8 10 14 49 02 01 53 41 4C<br>
+(0.2) 7E8 21 4C 44 57 42 50 38 44<br>
+(0.3) 7E8 22 41 34 33 31 30 33 32</p>
+<p>Is this correct?</p>
+<p>Questions: Between the 1st and 2nd message there should be the requestors flow control message… may I ignore that and simply continue transmitting? Bus Speed is 500k</p>
+<p>BR<br>
+Ralf</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="153-1.html?page=2">next page ?</a></b></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

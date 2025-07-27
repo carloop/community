@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Can simulator: CAN chip not responding - Troubleshooting - Carloop Community</title>
+    <meta name="description" content="I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error : 
+Error occured: CAN chip not responding 
+And no more errors. Is there a way to figure out &amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="614.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="l1U6Y3RExbE6NorMPnDYP3MVf">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="l1U6Y3RExbE6NorMPnDYP3MVf"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Can simulator: CAN chip not responding&#39;" href="614.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/can-simulator-can-chip-not-responding/614">
+<meta name="twitter:url" content="/t/can-simulator-can-chip-not-responding/614">
+<meta property="og:title" content="Can simulator: CAN chip not responding">
+<meta name="twitter:title" content="Can simulator: CAN chip not responding">
+<meta property="og:description" content="I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error :  Error occured: CAN chip not responding  And no more errors. Is there a way to figure out why this is happening ?">
+<meta name="twitter:description" content="I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error :  Error occured: CAN chip not responding  And no more errors. Is there a way to figure out why this is happening ?">
+<meta property="og:article:section" content="Troubleshooting">
+<meta property="og:article:section:color" content="BF1E2E">
+<meta property="article:published_time" content="2018-04-26T00:45:59+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="next" href="614-1.html?page=2">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="614.html">Can simulator: CAN chip not responding</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/troubleshooting/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Troubleshooting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Can simulator: CAN chip not responding'>
+      <link itemprop='url' href='614.html'>
+      <meta itemprop='datePublished' content='2018-04-26T00:45:59Z'>
+        <meta itemprop='articleSection' content='Troubleshooting'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="614.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-04-26T00:45:59Z' class='post-time'>
+                    April 26, 2018, 12:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-26T00:45:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I printed the shared can simulator PCB design and soldered the components, but when I run the simulator-program I get the error :</p>
+<p>Error occured: CAN chip not responding</p>
+<p>And no more errors. Is there a way to figure out why this is happening ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-26T04:52:39Z' class='post-time'>
+                    April 26, 2018,  4:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-26T04:52:39Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/maleficarum">@maleficarum</a>,</p>
+<p>I am not sure what tools you have, but I would suggest checking some basic things to start.<br>
+Also, I have not actually used this simulator myself.</p>
+<p>If you have a multimeter, I would suggest checking:</p>
+<ul>
+<li>are the power rails correct (5V, 12V, etc.)?</li>
+<li>are any signal lines directly connected to a power rail or to ground (best done with everything disconnected)?</li>
+<li>check your power supply to make sure the voltage is within range and that it can supply enough or more than enough current?</li>
+<li>are any signal lines directly connected to another signal line?</li>
+<li>are all the chips installed in the correct orientation?</li>
+</ul>
+<p>Some of the things above can also be carefully inspected to be absolutely sure.</p>
+<p>Can you verify that the computer is communicating on the correct bus (not sure if it is Serial or USB or something else)?</p>
+<p>Let us know how far you get with that.<br>
+After that, then we can look into some more advanced troubleshooting.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-22T08:15:44Z' class='post-time'>
+                    May 22, 2018,  8:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-22T08:15:44Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/maleficarum">@maleficarum</a> - You ever figure out what was causing your issue?</p>
+<p>I have two SIM boards I made. The first one I am getting the same message as you. Haven’t got to try out the other board yet. Plan on doing that tomorrow.</p>
+<p>I think there is enough interest in these things, that if someone had a run of say 100 professionally made, they would sell pretty quickly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-22T11:43:56Z' class='post-time'>
+                    May 22, 2018, 11:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-22T11:43:56Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I didn’t give a time to check the board. I do prefer to connect the device directly to a car.</p>
+<p>I haven’t a spare components to compare connections or discard soldering errors.</p>
+<p>I’m waiting for components to arrive to assemble a second board.</p>
+<p>If I achive something, Ill let you know.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-23T03:50:45Z' class='post-time'>
+                    May 23, 2018,  3:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-23T03:50:45Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve request more parts to assemble a new PCB, but it will take a while; in the mean time, if you can get working your PCB, tell me what was the error, so I can be careful with that issue.</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-23T07:39:52Z' class='post-time'>
+                    May 23, 2018,  7:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-23T07:39:52Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried my 2nd board, and I get the same error. I am decent at soldering some things, but these tiny components where beyond my skill level. There was a local electronics shop that I had do these two. I bought enough parts to make 3 of these, so I have the ability to make one more.</p>
+<p>I’m taking both these boards to work tomorrow. There is a guy there who repairs all the hardware that we test on. He has a bad ass soldering station, nice large magnify glass. We’ll go through and try to test as much as we can.</p>
+<p><a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a> - Here are some pics of what was done. I printed out the schematics from the github page and gave to the guy who did the soldering. He was very confident he could do it.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3.png" data-download-href="//carloop-community.dyndns.org/uploads/default/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3" title="IMG_1104.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3_2_666x500.png" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3_2_666x500.png,//carloop-community.dyndns.org/uploads/default/original/1X/1d76516db1c9d7652fe6ce5fc2ba595f61f195b3.png" data-dominant-color="4E4134"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_1104.png</span><span class="informations">1280×960 1.43 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/424faa2e4d186c54889f8057481e792d9c1145d0.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-23T07:40:26Z' class='post-time'>
+                    May 23, 2018,  7:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-23T07:40:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>And another since I am tied to one picture per post</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/424faa2e4d186c54889f8057481e792d9c1145d0.png" data-download-href="//carloop-community.dyndns.org/uploads/default/424faa2e4d186c54889f8057481e792d9c1145d0" title="IMG_1105.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/424faa2e4d186c54889f8057481e792d9c1145d0_2_666x500.png" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/424faa2e4d186c54889f8057481e792d9c1145d0_2_666x500.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/424faa2e4d186c54889f8057481e792d9c1145d0_2_999x750.png,//carloop-community.dyndns.org/uploads/default/original/1X/424faa2e4d186c54889f8057481e792d9c1145d0.png" data-dominant-color="443931"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_1105.png</span><span class="informations">1280×960 1.41 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/964f820c331002de88e098c0ffb2dd32311d6e27.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-23T07:41:02Z' class='post-time'>
+                    May 23, 2018,  7:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-23T07:41:02Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>And the last one…</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/964f820c331002de88e098c0ffb2dd32311d6e27.png" data-download-href="//carloop-community.dyndns.org/uploads/default/964f820c331002de88e098c0ffb2dd32311d6e27" title="IMG_1106.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/964f820c331002de88e098c0ffb2dd32311d6e27_2_666x500.png" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/964f820c331002de88e098c0ffb2dd32311d6e27_2_666x500.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/964f820c331002de88e098c0ffb2dd32311d6e27_2_999x750.png,//carloop-community.dyndns.org/uploads/default/original/1X/964f820c331002de88e098c0ffb2dd32311d6e27.png" data-dominant-color="423C35"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_1106.png</span><span class="informations">1280×960 1.55 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/bb04035c000031eeceb80c566513641b8ebe5f9e.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-24T02:14:37Z' class='post-time'>
+                    May 24, 2018,  2:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-24T02:14:37Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is my first versión of the pcb. Looks like trey’s pcb (the Components looks well oriented).</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/bb04035c000031eeceb80c566513641b8ebe5f9e.jpeg" data-download-href="//carloop-community.dyndns.org/uploads/default/bb04035c000031eeceb80c566513641b8ebe5f9e" title="307E0773-0296-44AF-A6A1-7081E0852CE3.jpeg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/bb04035c000031eeceb80c566513641b8ebe5f9e_2_375x500.jpeg" width="375" height="500" data-dominant-color="7A574F"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">307E0773-0296-44AF-A6A1-7081E0852CE3.jpeg</span><span class="informations">3024×4032 2.13 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-24T09:15:15Z' class='post-time'>
+                    May 24, 2018,  9:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-24T09:15:15Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So I took both my boards to work. The guy there tested them, and one had a bad 120ohm resistor, he replaced that. Then on the MCP2515 board connections, I don’t know how many cold solder joints he said there were on each board. So he re-did every connection on both boards. These boards are now bad ass looking, like a robot did it on the assembly line. Everything is also pin indexed as it should be.</p>
+<p>All said and done, I still get the exact same message, on both boards.</p>
+<p>I went through each board connection, and followed the wiring schematic, checking for continuity, everything checks out.</p>
+<p>This code is now 2 years old. I’m thinking something is different, possibly with the Raspbian version, or this was developed on a RasPi 2 instead of a RasPi 3 B that I am using, if that even matters.</p>
+<p>I’m currently running version:<br>
+Linux raspberrypi 4.14.34-v7+ <span class="hashtag-raw">#1110</span> SMP Mon Apr 16 15:18:51 BST 2018 armv7l GNU/Linux</p>
+<p>I’ve also tried to initialize the MCP2515 with the OS, and I can’t get that to work either. I keep getting the below in my dmesg:<br>
+[    4.872985] mcp251x spi0.0: Cannot initialize MCP2515. Wrong wiring?<br>
+[    4.873023] mcp251x spi0.0: Probe failed, err=19</p>
+<p>I’m at a loss. I don’t feel it’s the hardware, I feel it’s something with the OS.</p>
+<p>Anyone using this on the latest Raspberry PI 3 B or B+ boards with the latest OS?</p>
+<p><a class="mention" href="../../u/jvanier.html">@jvanier</a> - Any pointers on this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/b299ba034d82743c8cf7216dfff9bd771520a872.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-25T11:43:35Z' class='post-time'>
+                    May 25, 2018, 11:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-25T11:43:35Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s cool to see other folks experimenting with the CAN simulator board!</p>
+<p>I haven’t haven’t tried this hardware and code with a new Raspberry Pi. It was originally built with a Pi 2. I haven’t tried it with the latest and greatest Raspbian. I’ll try that over the weekend.</p>
+<p>The hardware I’m using had a mistake where the CAN transceiver IC2 pin 8 (top left) was not grounded. I fixed it in the schematic, but it would be good to check that the top left pin of IC2 is at ground with a multimeter.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b299ba034d82743c8cf7216dfff9bd771520a872.png" data-download-href="//carloop-community.dyndns.org/uploads/default/b299ba034d82743c8cf7216dfff9bd771520a872" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/b299ba034d82743c8cf7216dfff9bd771520a872.png" width="644" height="500" data-dominant-color="713752"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image.png</span><span class="informations">1099×853 30.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-25T19:22:51Z' class='post-time'>
+                    May 25, 2018,  7:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-25T19:22:51Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ll definitely check that when I get home later today.</p>
+<p>One thing I see from other schematics on the web, is the use of GPIO25 on the Pi for the Interrupt to the MCP2515 Pin12.</p>
+<p>I don’t see that on your board. I am very new to all of this, and still don’t truly understand what the interrupts are used for. Is it not needed in your implementation?</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Trey.html'><span itemprop='name'>Trey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-25T20:13:04Z' class='post-time'>
+                    May 25, 2018,  8:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-25T20:13:04Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had one of the boards with me here at work. I went and tested IC2 Pin8, and it is for sure NOT grounded.</p>
+<p>I guess there is no path to ground in the PCB design? I got your version 1 board. Is this fixed in your version 2 board? I grabbed version 1, as that was listed in your Assembly Instructions.</p>
+<p>I’m hopeful now that once I ground IC2 Pin8, everything will work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-26T14:24:09Z' class='post-time'>
+                    May 26, 2018,  2:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-26T14:24:09Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I grounded the IC2 pin 8, I checked with a multimeter but I still getting the same error :</p>
+<p><code>Error occured: CAN chip not responding</code></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/6ac07f86261aee55154a76fef0c2f7edf08254b0" title="2018-05-26 09.24.36.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_375x500.jpg" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_375x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_562x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/6ac07f86261aee55154a76fef0c2f7edf08254b0_2_750x1000.jpg" data-dominant-color="695A59"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">2018-05-26 09.24.36.jpg</span><span class="informations">960×1280 106 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-27T04:02:28Z' class='post-time'>
+                    May 27, 2018,  4:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-27T04:02:28Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have not built one of these myself, so take my thoughts with a grain of salt.<br>
+I plan to build one in the next few months; reality means it will be more likely in the next year.</p>
+<p><a class="mention" href="/u/maleficarum">@maleficarum</a>,</p>
+<p>Can you do some testing on your board to ensure that the pins on the chips are not shorted to other pins, that power and ground make it to where they should?  Essentially go over your board trace by trace to ensure there are no opens or shorts.  Also, look for cold solder joints that are not connected when they should be.  Also, look for excess solder that could be shorting pins together.</p>
+<p>This is meticulous work and will take a bit of time.  Compare everything you check with the schematic.  Unofortunately, it is necessary to be this detailed to eliminate board assembly as a possible cause for this.</p>
+<p>You should be able to do these tests with a multimeter using a continuity setting, with no power on the simulator circuit board.</p>
+<p><a class="mention" href="../../u/Trey.html">@Trey</a>, You had some help doing these tests from someone at work … did you get yours working?</p>
+<p>Good luck!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-28T15:53:14Z' class='post-time'>
+                    May 28, 2018,  3:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-28T15:53:14Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried the CAN simulator I built 2 years ago as a base. That one still works.</p>
+<p>I then tried the CAN simulator board connected to a Raspberry Pi 3 that had Raspbian from April 2017, Raspbian 8 (jessie). At first it didn’t work because the SPI kernel module was not loaded. I did <code>sudo raspi-config</code> then Interfacing ? SPI ? Enable ? Yes then reboot. After that I could see the SPI module in <code>lsmod | grep spi</code> (outputs <code>spidev</code> and <code>spi_bcm2835</code>). With these changes the simulator program worked.</p>
+<p>I’m in the process of upgrading the Pi to the latest and greatest Raspbian to see if a recent change broke the setup.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-28T16:46:39Z' class='post-time'>
+                    May 28, 2018,  4:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-28T16:46:39Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is what my fully connected setup looks like (click on image to see the full thing). Pi 3 connected to CAN simulator board connected to Carloop.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/b958b50d8d32686f6d46bd98196f22844d41b2c9" title="IMG_20180528_124100.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_247x500.jpg" width="247" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_247x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_370x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/b958b50d8d32686f6d46bd98196f22844d41b2c9_2_494x1000.jpg" data-dominant-color="51473B"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_20180528_124100.jpg</span><span class="informations">1464×2963 1.43 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Disregard the extra capacitor on the 12V regulator board. I was having the issue that connecting a Carloop was drawing too much current and resetting the Pi. I tried adding an extra cap to no avail. Now I just power the Carloop through USB first before plugging it into the simulator board.)</p>
+<p>I flashed <a href="http://carloop.io/apps/app-simple-transmit/">this app</a> (<a href="https://github.com/carloop/app-simple-transmit">source on GitHub</a>) on the Photon connected to the Carloop to transmit a message at a regular interval.</p>
+<p>When running the simulator-program on the Pi 3 it I see the printout of the CAN messages transmitted by Carloop.</p>
+<p>I can reproduce “Error occured: CAN chip not responding” by unplugging the CAN simulator board and restarting the simulator-program.</p>
+<p>This seems to point to a hardware issue. Let me make some additional measurements on my side to help you figure out where the issue might be.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-28T17:01:57Z' class='post-time'>
+                    May 28, 2018,  5:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-28T17:01:57Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So one hardware debug method I like to use is to set <a href="https://www.adafruit.com/product/308">this multimeter from Adafruit</a> to the frequency measurement setting and check if signals I expect to toggle are actually toggling. This is how I originally found out that pin 8 from the CAN transceiver had to be grounded: even though the input lines were toggling, the output lines were not.</p>
+<p>While running the CAN simulator program, the SPI clock (SCK) pin is indicating 73 kHz on the multimeter (that’s not the actual frequency, but it gives an idea the pin is toggling).<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b.png" data-download-href="//carloop-community.dyndns.org/uploads/default/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b" title="can simulator sck.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/05ac88c8e801f38e6db7ccc71a2a05fbe35a126b.png" width="690" height="439" data-dominant-color="26241F"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">can simulator sck.png</span><span class="informations">949×605 48.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>While running the CAN simulator program, the MISO pin is indicating 7.3 kHz on the multimeter.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/79615f19d6f6a4b87b40bf2d5093fbed6373f30d.png" data-download-href="//carloop-community.dyndns.org/uploads/default/79615f19d6f6a4b87b40bf2d5093fbed6373f30d" title="can simulator miso.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/79615f19d6f6a4b87b40bf2d5093fbed6373f30d.png" width="690" height="440" data-dominant-color="262520"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">can simulator miso.png</span><span class="informations">939×600 67 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>While running the CAN simulator program, the MOSI pin is indicating 11 kHz on the multimeter.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e" title="can simulator mosi.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/fccd0af0c6a957637539a3c4be8fdc1cf3e8df8e.png" width="690" height="442" data-dominant-color="262520"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">can simulator mosi.png</span><span class="informations">927×595 66.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-28T17:11:32Z' class='post-time'>
+                    May 28, 2018,  5:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-28T17:11:32Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I upgraded the Raspberry Pi as much as I could. The kernel is now:</p>
+<pre><code class="lang-auto">Linux pi3 4.14.43-v7+ #1115 SMP Fri May 25 14:27:48 BST 2018 armv7l GNU/Linux
+</code></pre>
+<p>The simulator-program is still working on my setup.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-28T17:27:34Z' class='post-time'>
+                    May 28, 2018,  5:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-28T17:27:34Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here’s a closeup of my assembled board.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5" title="IMG_5397.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5_2_690x463.JPG" width="690" height="463" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5_2_690x463.JPG,//carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG,//carloop-community.dyndns.org/uploads/default/original/1X/c294eb9f88cfe1fd08ed1ade69566ac7de6c5ad5.JPG" data-dominant-color="5A5461"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_5397.JPG</span><span class="informations">989×664 104 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="614-1.html?page=2">next page ?</a></b></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

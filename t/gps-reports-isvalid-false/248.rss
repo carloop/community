@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>GPS reports isValid() == false</title>
+    <link>https://community.carloop.io/t/gps-reports-isvalid-false/248</link>
+    <description>I have left my carloop pro on for several hours, and can not get past the isvalid check. Here&#39;s my code lifted from the github repo.
+
+
+	if (!carloop.gps().location.isValid()) {
+		Particle.publish(&quot;GPS&quot;, &quot;invalid, giving up&quot;);
+		return false;
+	}
+
+	float flat = carloop.gps().location.lat();
+	float flng = carloop.gps().location.lng();
+
+Did my carloop pro come with a GPS? Are there other special calls that need to be made to activate the GPS?</description>
+    
+    <lastBuildDate>Thu, 06 Apr 2017 04:23:51 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>GPS reports isValid() == false</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>Not sure why these methods are in carloop. I found this in Particle for doing GPS things. I think these are needed for the carloop() calls to work.</p>
+          <p><a href="https://community.carloop.io/t/gps-reports-isvalid-false/248/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-reports-isvalid-false/248/5</link>
+        <pubDate>Thu, 06 Apr 2017 04:23:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-248-5</guid>
+        <source url="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss">GPS reports isValid() == false</source>
+      </item>
+      <item>
+        <title>GPS reports isValid() == false</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I have not actually used it with a GPS.</p>
+<p>I suggest the following:</p>
+<ul>
+<li>check for any GPS setup code in the setup() section</li>
+<li>try running it outdoors with clear view of the sky</li>
+<li>give it plenty of time to acquire that first signal</li>
+</ul>
+<p>(once you get the first signal, subsequent times will be much faster.  Also, keeping power to the GPS keeps its satellite library alive, which makes reconnection much faster.)</p>
+<p>If that does not work, contact carloop support and see if they can help out.</p>
+          <p><a href="https://community.carloop.io/t/gps-reports-isvalid-false/248/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-reports-isvalid-false/248/4</link>
+        <pubDate>Thu, 06 Apr 2017 03:59:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-248-4</guid>
+        <source url="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss">GPS reports isValid() == false</source>
+      </item>
+      <item>
+        <title>GPS reports isValid() == false</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>I bought the Carloop Pro, it comes with a GPS.</p>
+<blockquote>
+<p>This is the ultimate programmable 3G OBD-II dongle.  Comes with GPS, 3G cellular connectivity and it’s programmable in Particle’s easy to use IDE.</p>
+</blockquote>
+          <p><a href="https://community.carloop.io/t/gps-reports-isvalid-false/248/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-reports-isvalid-false/248/3</link>
+        <pubDate>Wed, 05 Apr 2017 13:08:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-248-3</guid>
+        <source url="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss">GPS reports isValid() == false</source>
+      </item>
+      <item>
+        <title>GPS reports isValid() == false</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>You need to connect a GPS unit.  Take a look at the store for the carloop pro.  You can see clearly that there is a separate GPS receiver that gets plugged into the GPS connector on the carloop.</p>
+<p>If you do have a GPS, the GPS needs to get clear signals from the satellites.  Make sure the GPS is not blocked from the sky by things such as the metal roof of your car or being inside a house.  Trees and clouds can make it difficult to get a signal sometimes.</p>
+          <p><a href="https://community.carloop.io/t/gps-reports-isvalid-false/248/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-reports-isvalid-false/248/2</link>
+        <pubDate>Wed, 05 Apr 2017 03:58:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-248-2</guid>
+        <source url="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss">GPS reports isValid() == false</source>
+      </item>
+      <item>
+        <title>GPS reports isValid() == false</title>
+        <dc:creator><![CDATA[dreww]]></dc:creator>
+        <description><![CDATA[
+            <p>I have left my carloop pro on for several hours, and can not get past the isvalid check. Here’s my code lifted from the github repo.</p>
+<pre><code>if (!carloop.gps().location.isValid()) {
+	Particle.publish("GPS", "invalid, giving up");
+	return false;
+}
+
+float flat = carloop.gps().location.lat();
+float flng = carloop.gps().location.lng();
+</code></pre>
+<p>Did my carloop pro come with a GPS? Are there other special calls that need to be made to activate the GPS?</p>
+          <p><a href="https://community.carloop.io/t/gps-reports-isvalid-false/248/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-reports-isvalid-false/248/1</link>
+        <pubDate>Tue, 04 Apr 2017 17:16:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-248-1</guid>
+        <source url="https://community.carloop.io/t/gps-reports-isvalid-false/248.rss">GPS reports isValid() == false</source>
+      </item>
+  </channel>
+</rss>

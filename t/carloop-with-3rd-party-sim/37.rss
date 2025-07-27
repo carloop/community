@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop with 3rd party SIM</title>
+    <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37</link>
+    <description>Particle sims won&#39;t work in my area. So I use 3rd party sim and what interesting is it requires some sort of ping to keep cellular and Particle cloud connected. This loops updates once every 40 secs. I tried putting the Electron on the Carloop without publishing any data, it&#39;s still very hot.</description>
+    
+    <lastBuildDate>Thu, 19 May 2016 17:02:32 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>We have come up with a workaround for the current Rev 2.2 boards.  See here: <a href="https://carloop.dyndns.org/t/excessive-heat/34/7?u=alanm" class="inline-onebox">[SOLVED] Excessive Heat? - Troubleshooting - Carloop Community</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/8</link>
+        <pubDate>Thu, 19 May 2016 17:02:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-8</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>In the meantime, what would you suggest those of us who own current board version?</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/7</link>
+        <pubDate>Thu, 19 May 2016 03:29:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-7</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>At this point it looks like the power supply circuit will need to be modified in a future board revision.</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/6</link>
+        <pubDate>Wed, 04 May 2016 18:09:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-6</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>I can confirm that the Electron with Particle.keepAlive(45); with Carloop-minimal sketch (no gps unit connected) does produce an unbearable heat on the Carloop unit.</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/5</link>
+        <pubDate>Wed, 04 May 2016 06:10:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-5</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>If you want to send a quick ping to the server every 40 seconds, you can use <code>Particle.keepAlive(40);</code> starting with system firmware 0.5.0. The Particle SIM only needs a ping every 23 minutes. You can play around with different numbers to see what works best for you.</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/4</link>
+        <pubDate>Sun, 01 May 2016 22:55:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-4</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>I call keep_alive() in the void loop (40 sec). Still getting a lot of heat just like publishing once a second.</p>
+<p>P.S I feel like discussing another big heat coming out of Tiny GPS G735T connected to Carloop and Electron - Not to the OBD port - Just sitting not the table. Should it be on other thread?</p>
+<pre><code>long interval = 40000;
+
+void keep_alive()
+{
+ long currentMillis = millis();
+
+  if(currentMillis - previousMillis &gt; interval) {
+
+    previousMillis = currentMillis;
+
+     if (Particle.connected())
+     {
+         Particle.publish("CONNECTION"," Connected");
+     }
+
+    analogvalue = analogRead(photoresistor);
+    Particle.publish("LIGHT", "Lights:" + String::format("%.2f", analogvalue), 60, PRIVATE);
+
+  }
+}
+</code></pre>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/3</link>
+        <pubDate>Sun, 01 May 2016 06:18:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-3</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I moved your post to a different topic since you’re talking about the 3rd party SIM. We can keep discussing the heat issue in the original topic.</p>
+<p>Are you saying there is a pause of 40 seconds between each call of the loop() function?</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/2</link>
+        <pubDate>Fri, 29 Apr 2016 14:57:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-2</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+      <item>
+        <title>Carloop with 3rd party SIM</title>
+        <dc:creator><![CDATA[Izeroman]]></dc:creator>
+        <description><![CDATA[
+            <p>Particle sims won’t work in my area. So I use 3rd party sim and what interesting is it requires some sort of ping to keep cellular and Particle cloud connected. This loops updates once every 40 secs. I tried putting the Electron on the Carloop without publishing any data, it’s still very hot.</p>
+          <p><a href="https://community.carloop.io/t/carloop-with-3rd-party-sim/37/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-with-3rd-party-sim/37/1</link>
+        <pubDate>Fri, 29 Apr 2016 09:53:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-37-1</guid>
+        <source url="https://community.carloop.io/t/carloop-with-3rd-party-sim/37.rss">Carloop with 3rd party SIM</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>When the main CAN bus is not on the OBD-II port</title>
+    <link>https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116</link>
+    <description>The OBD-II port (less commonly know as DLC - Data Link Connector), will have pins 6 and 14 sending regular OBD-II signals upon request.  If you still want to hack your car&#39;s CAN bus and you are not seeing messages, this reference will help you find it on quite a few makes and models and easily accessible CAN bus locations: http://www.jablotron.com/files/canbus/mcb-02_en.pdf</description>
+    
+    <lastBuildDate>Tue, 30 Aug 2016 20:44:28 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>When the main CAN bus is not on the OBD-II port</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Expect the 9 yards of security to happen, especially for AD vehicles.  CAN will go the way of CAN-FD or Automotive Ethernet simply because of the increased data requirements imposed by both the computing and security requirements.</p>
+          <p><a href="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/4</link>
+        <pubDate>Tue, 30 Aug 2016 20:44:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-116-4</guid>
+        <source url="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116.rss">When the main CAN bus is not on the OBD-II port</source>
+      </item>
+      <item>
+        <title>When the main CAN bus is not on the OBD-II port</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>This is going to take a long while to kick in. Firewall is pretty pointless on the current configurations, as there are too many places to jack into. They will need to replace or encrypt the can bus itself, which would take years to agree on a standard. It would have a huge knock on effect on the after-care for vehicles and after market parts. Theres always going to be certain areas that the have to leave open on the OBD side also, for example emissions and diagnostics data otherwise half the world would grind to a hault. Its a interesting problem, id expect to see alot of core engine ECU’s go encrypted perhaps with a ECU dedicated to OBD / Diagnostics though a firewalled type of connection. There are some interesting draft proposals kicking about for exactly this. I guess the more we move towards automated driverless machines, the greater the need for locking down the data bus is going to be.</p>
+          <p><a href="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/3</link>
+        <pubDate>Tue, 30 Aug 2016 20:29:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-116-3</guid>
+        <source url="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116.rss">When the main CAN bus is not on the OBD-II port</source>
+      </item>
+      <item>
+        <title>When the main CAN bus is not on the OBD-II port</title>
+        <dc:creator><![CDATA[nprobert]]></dc:creator>
+        <description><![CDATA[
+            <p>Many OEMs are firewalling and/or removing other CAN access from the OBDII connector.  Only OBD/UDS functions will be available.  Write functions may well require authentication of sorts (and the right tools).</p>
+          <p><a href="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/2</link>
+        <pubDate>Mon, 29 Aug 2016 14:19:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-116-2</guid>
+        <source url="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116.rss">When the main CAN bus is not on the OBD-II port</source>
+      </item>
+      <item>
+        <title>When the main CAN bus is not on the OBD-II port</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>The OBD-II port (less commonly know as DLC - Data Link Connector), will have pins 6 and 14 sending regular OBD-II signals upon request.  If you still want to hack your car’s CAN bus and you are not seeing messages, this reference will help you find it on quite a few makes and models and easily accessible CAN bus locations: <a href="http://www.jablotron.com/files/canbus/mcb-02_en.pdf">http://www.jablotron.com/files/canbus/mcb-02_en.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116/1</link>
+        <pubDate>Sat, 27 Aug 2016 07:54:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-116-1</guid>
+        <source url="https://community.carloop.io/t/when-the-main-can-bus-is-not-on-the-obd-ii-port/116.rss">When the main CAN bus is not on the OBD-II port</source>
+      </item>
+  </channel>
+</rss>

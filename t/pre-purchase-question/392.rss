@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Pre-purchase question</title>
+    <link>https://community.carloop.io/t/pre-purchase-question/392</link>
+    <description>If this has been covered, my apologies, but I&#39;ve searched and can&#39;t find anything.
+
+Presumably, I need a computer to make good use of the carloop.  What computer OS will I need?  Can I use Mac OS X?  
+
+Thanks</description>
+    
+    <lastBuildDate>Tue, 25 Jul 2017 00:51:37 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/pre-purchase-question/392.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Pre-purchase question</title>
+        <dc:creator><![CDATA[prolepsis]]></dc:creator>
+        <description><![CDATA[
+            <p>Great. Thank you so much for your help.</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-question/392/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-question/392/5</link>
+        <pubDate>Tue, 25 Jul 2017 00:51:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-392-5</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-question/392.rss">Pre-purchase question</source>
+      </item>
+      <item>
+        <title>Pre-purchase question</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/prolepsis">@prolepsis</a>,</p>
+<p>Good question about J2534.  The answer will be Yes and No; it will depend on the car and the manufacturer.</p>
+<p>If the J2534 pass-through is done on the standard CANbus used for OBD-II, then it should be possible.  The challenge will be to implement the [quote=“prolepsis, post:3, topic:392”]<br>
+marque specific software<br>
+[/quote]<br>
+so that it will run on the microprocessor you are using with Carloop.  It all depends on finding or reverse-engineering that software.  I would check forums dedicated to the car you are interested in to see if someone there has figured out the protocol.  If it can be done, then Carloop should be able to do it.</p>
+<p>If the J2534 is done over some other CANbus, then you might have to figure out how to access that bus.  For example, someone with a Jeep was accessing another CANbus behind the radio; it was a bit tricky to do.  Again, you can check forums dedicated to your car.</p>
+<p>If the J2534 is done over some bus that is NOT a CANbus, then Carloop will not do it.</p>
+<p>Hope that helps!</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-question/392/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-question/392/4</link>
+        <pubDate>Mon, 24 Jul 2017 03:30:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-392-4</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-question/392.rss">Pre-purchase question</source>
+      </item>
+      <item>
+        <title>Pre-purchase question</title>
+        <dc:creator><![CDATA[prolepsis]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for your clear explanation.</p>
+<p>I have another question you may be able to answer.  Most vehicles now use a J2534 pass-through device and marque specific software to access the vehicle control modules.  Am I correct in thinking that the carloop device does not do that, i.e. it doesn’t provide the J2534 pass-through?</p>
+<p>Thanks <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-question/392/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-question/392/3</link>
+        <pubDate>Mon, 24 Jul 2017 01:21:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-392-3</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-question/392.rss">Pre-purchase question</source>
+      </item>
+      <item>
+        <title>Pre-purchase question</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Carloop itself plugs into one of these microprocessors (you need to get Carloop with one of these unless you already have one):</p>
+<ul>
+<li>Particle Photon (with WiFi),</li>
+<li>Particle Electron (with Cellular) or</li>
+<li>Redbear Duo (with WiFi &amp; Bluetooth Low Energy).<br>
+(they all have USB as well)</li>
+</ul>
+<p>Usually these devices can communicate over the internet with all sorts of other devices such as a Laptop, smartphone, tablet, etc.</p>
+<p>However, you have to write your own firmware for the microprocessor (unless you stick to the simple examples provided by Carloop).  The beauty of Carloop is that it will do almost anything on a car’s CANbus; you just have to write the firmware to do it. When it comes to writing firmware, a proper workstation is best with full keyboard and decent screen.</p>
+<p>The development tools to write firmware are available for most operating systems.  The Particle development tools are available for Windows, Mac OS or Lunix (usually Ubuntu).  I think (but have not confirmed) that the Redbear development tools work on all the same platforms (Redbear is based on Particle).</p>
+<p>For full details, check out <a href="http://particle.io">particle.io</a> and redbear.cc</p>
+<p>You should be fine!</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-question/392/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-question/392/2</link>
+        <pubDate>Sat, 22 Jul 2017 15:49:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-392-2</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-question/392.rss">Pre-purchase question</source>
+      </item>
+      <item>
+        <title>Pre-purchase question</title>
+        <dc:creator><![CDATA[prolepsis]]></dc:creator>
+        <description><![CDATA[
+            <p>If this has been covered, my apologies, but I’ve searched and can’t find anything.</p>
+<p>Presumably, I need a computer to make good use of the carloop.  What computer OS will I need?  Can I use Mac OS X?</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/pre-purchase-question/392/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/pre-purchase-question/392/1</link>
+        <pubDate>Sat, 22 Jul 2017 04:37:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-392-1</guid>
+        <source url="https://community.carloop.io/t/pre-purchase-question/392.rss">Pre-purchase question</source>
+      </item>
+  </channel>
+</rss>

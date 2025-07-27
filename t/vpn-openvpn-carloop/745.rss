@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>VPN (openvpn) Carloop</title>
+    <link>https://community.carloop.io/t/vpn-openvpn-carloop/745</link>
+    <description>Hi guys.
+My name is Vladimir, I am engaged in professional diagnostics of a car and in programming a complete zero, I am interested in this question: is it possible to connect via Carloop via VPN (OpenVpn) so that I can see the vehicle&#39;s IP address on my server for professional diagnostics of a car through a PC.
+thank</description>
+    
+    <lastBuildDate>Wed, 17 Oct 2018 04:33:44 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/vpn-openvpn-carloop/745.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>VPN (openvpn) Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/vladimir">@Vladimir</a>,</p>
+<p>If you use a Carloop and establish a connection to the internet (or to the Particle Cloud, which requires internet), then you can easily identify the IP address of the Photon/Electron/RedbearDuo installed on the Carloop.  You can easily do that on the Particle Console.</p>
+<p>If the car has its own connection to the internet, then you would need some sort of sniffing device (WiFi, Cellular, Bluetooth or BLE to match what the car uses) to monitor the data packets to pick out the IP address.  This is probably easiest away from the city where the only signal will be your car.  In the city, you would probably get a huge list of devices on the internet and you would have no idea which device is your car and which devices are your neighbours’.  I would guess that Bluetooth or BLE need at least intermediate experience in electronics and network communications; the WiFi would be advanced; the Cellular would be expert level.</p>
+          <p><a href="https://community.carloop.io/t/vpn-openvpn-carloop/745/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/vpn-openvpn-carloop/745/3</link>
+        <pubDate>Wed, 17 Oct 2018 04:33:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-745-3</guid>
+        <source url="https://community.carloop.io/t/vpn-openvpn-carloop/745.rss">VPN (openvpn) Carloop</source>
+      </item>
+      <item>
+        <title>VPN (openvpn) Carloop</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>Do you mean a vpn tunnel between each particle device and you server? If so… I think its not possible.</p>
+          <p><a href="https://community.carloop.io/t/vpn-openvpn-carloop/745/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/vpn-openvpn-carloop/745/2</link>
+        <pubDate>Mon, 15 Oct 2018 01:08:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-745-2</guid>
+        <source url="https://community.carloop.io/t/vpn-openvpn-carloop/745.rss">VPN (openvpn) Carloop</source>
+      </item>
+      <item>
+        <title>VPN (openvpn) Carloop</title>
+        <dc:creator><![CDATA[Vladimir]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi guys.<br>
+My name is Vladimir, I am engaged in professional diagnostics of a car and in programming a complete zero, I am interested in this question: is it possible to connect via Carloop via VPN (OpenVpn) so that I can see the vehicle’s IP address on my server for professional diagnostics of a car through a PC.<br>
+thank</p>
+          <p><a href="https://community.carloop.io/t/vpn-openvpn-carloop/745/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/vpn-openvpn-carloop/745/1</link>
+        <pubDate>Sat, 13 Oct 2018 08:29:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-745-1</guid>
+        <source url="https://community.carloop.io/t/vpn-openvpn-carloop/745.rss">VPN (openvpn) Carloop</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ford Fusion 2017 CAN Message IDs</title>
+    <link>https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277</link>
+    <description>Found this interesting list of CAN message IDs avaialble on the DLC (OBD-II port) of a 2017 Ford Fusion: [https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing)</description>
+    
+    <lastBuildDate>Fri, 25 Aug 2017 21:42:14 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Ford Fusion 2017 CAN Message IDs</title>
+        <dc:creator><![CDATA[Goddard]]></dc:creator>
+        <description><![CDATA[
+            <p>This is cool.  Has anyone got further and figured out how to read steering angles, gas, brake, etc…</p>
+          <p><a href="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/3</link>
+        <pubDate>Fri, 25 Aug 2017 21:42:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-277-3</guid>
+        <source url="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277.rss">Ford Fusion 2017 CAN Message IDs</source>
+      </item>
+      <item>
+        <title>Ford Fusion 2017 CAN Message IDs</title>
+        <dc:creator><![CDATA[dahabit]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks Alanm  for your post</p>
+          <p><a href="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/2</link>
+        <pubDate>Sat, 06 May 2017 15:02:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-277-2</guid>
+        <source url="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277.rss">Ford Fusion 2017 CAN Message IDs</source>
+      </item>
+      <item>
+        <title>Ford Fusion 2017 CAN Message IDs</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Found this interesting list of CAN message IDs avaialble on the DLC (OBD-II port) of a 2017 Ford Fusion: <a href="https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing">https://docs.google.com/spreadsheets/d/18nHRuRQi4wzUq77X90SLxduJEEQDZcy8s8bXalCvLtw/edit?usp=sharing</a></p>
+          <p><a href="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277/1</link>
+        <pubDate>Tue, 02 May 2017 08:38:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-277-1</guid>
+        <source url="https://community.carloop.io/t/ford-fusion-2017-can-message-ids/277.rss">Ford Fusion 2017 CAN Message IDs</source>
+      </item>
+  </channel>
+</rss>

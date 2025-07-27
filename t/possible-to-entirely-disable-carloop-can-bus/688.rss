@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Possible to entirely disable Carloop CAN bus?</title>
+    <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688</link>
+    <description>My project involves hooking into the info bus of my vehicle, which is exposed on a different set of pins than the ones that Carloop is connected to. That&#39;s not a problem - I got myself a CAN hitch and successfully hooked into the info bus without using the Carloop at all.
+
+However, I&#39;d still like to use the Carloop connector since it provides power, battery reading, etc. I hooked into the same pins and attempted to disable the CAN bus by writing [this CAN disable signal](https://github.com/carloop/carloop-library/blob/186acf9403c375e9e251769fb4669c9a4d226704/src/carloop.cpp#L85), but that didn&#39;t work and I still seem to get some signals coming from the carloop&#39;s CAN. I later read some documentation ([this](https://github.com/openxc/reference-vi/blob/gh-pages/electrical/design/can.mkd) and [this](https://www.nxp.com/docs/en/data-sheet/TJA1048.pdf)) which seems to indicate that the &quot;disable&quot; signal is really putting the chip in standby mode, which doesn&#39;t entirely shut it up (?).
+
+&lt;img src=&quot;/uploads/default/original/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59.jpg&quot; width=&quot;666&quot; height=&quot;500&quot;&gt;
+
+Currently my wiring just connects to the same CAN pins as Carloop and then sends the standby signal in code. Of course, I could separate the parts and connect the individual pins from the carloop with some jumpers but I was hoping for a less messy solution. Thanks!</description>
+    
+    <lastBuildDate>Sat, 28 Jul 2018 20:45:45 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Possible to entirely disable Carloop CAN bus?</title>
+        <dc:creator><![CDATA[dan]]></dc:creator>
+        <description><![CDATA[
+            <p>Ended up giving up on disabling CAN and going for a more creative solution…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fbe122ed1346499feedcaa61e3b0744031b3c6d7.jpeg" data-download-href="//carloop-community.dyndns.org/uploads/default/fbe122ed1346499feedcaa61e3b0744031b3c6d7" title="A2D6777F-2F16-43B2-B1D0-DA8217CD9350.jpeg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fbe122ed1346499feedcaa61e3b0744031b3c6d7_2_500x500.jpeg" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/fbe122ed1346499feedcaa61e3b0744031b3c6d7_2_500x500.jpeg, //carloop-community.dyndns.org/uploads/default/optimized/1X/fbe122ed1346499feedcaa61e3b0744031b3c6d7_2_750x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/fbe122ed1346499feedcaa61e3b0744031b3c6d7_2_1000x1000.jpeg 2x" data-dominant-color="6D6D6A"></a></div><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/956b0231b85c37b9b80be2326703fd6ac6955263.jpeg" data-download-href="//carloop-community.dyndns.org/uploads/default/956b0231b85c37b9b80be2326703fd6ac6955263" title="D4B3BF99-3AB5-4CEC-9FEF-4E3A305EB0AE.jpeg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/956b0231b85c37b9b80be2326703fd6ac6955263_2_500x500.jpeg" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/956b0231b85c37b9b80be2326703fd6ac6955263_2_500x500.jpeg, //carloop-community.dyndns.org/uploads/default/optimized/1X/956b0231b85c37b9b80be2326703fd6ac6955263_2_750x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/956b0231b85c37b9b80be2326703fd6ac6955263_2_1000x1000.jpeg 2x" data-dominant-color="B5A38B"></a></div><p></p>
+<p>Flipped the relevant headers <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/5</link>
+        <pubDate>Sat, 28 Jul 2018 20:45:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-688-5</guid>
+        <source url="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss">Possible to entirely disable Carloop CAN bus?</source>
+      </item>
+      <item>
+        <title>Possible to entirely disable Carloop CAN bus?</title>
+        <dc:creator><![CDATA[dan]]></dc:creator>
+        <description><![CDATA[
+            <p>Okay, I did a bit of testing without the CAN hitch whatsoever, found a few things.</p>
+<ol>
+<li>Regardless of D0’s pin setting, <em>some</em> CAN messages are getting through. They may be corrupt but I’m getting 3 recurring ids.</li>
+<li>Carloop’s standby mode is opposite to that described in the <a href="https://www.nxp.com/docs/en/data-sheet/TJA1048.pdf" rel="noopener nofollow ugc">documentation</a> of the module it seems to be based off of. LOW is “normal” and HIGH is “standby”.</li>
+<li>Even in standby mode, the channel operates at 500kbps and initiating it at 33kbps breaks it in mysterious ways (in my car, the system claims the traction control module is broken).</li>
+</ol>
+<p>When I get home I’m going to pull out a multimeter and make sure that my messy soldering didn’t accidentally connect pins 5 and 6. If it reads fine, then looks like what I’m going for can’t be achieved. I’ll also try it on a photon, though I’m not confident it will change anything.</p>
+<p>Edit: Soldering’s fine.</p>
+          <p><a href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/4</link>
+        <pubDate>Sat, 21 Jul 2018 06:48:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-688-4</guid>
+        <source url="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss">Possible to entirely disable Carloop CAN bus?</source>
+      </item>
+      <item>
+        <title>Possible to entirely disable Carloop CAN bus?</title>
+        <dc:creator><![CDATA[dan]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t have anything hooked up to the D0 pin, but it’s a relief that you think it should work. I’ll try sending the disable signal in a loop as right now I’m only sending it in setup which could have an effect.</p>
+          <p><a href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/3</link>
+        <pubDate>Fri, 20 Jul 2018 18:47:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-688-3</guid>
+        <source url="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss">Possible to entirely disable Carloop CAN bus?</source>
+      </item>
+      <item>
+        <title>Possible to entirely disable Carloop CAN bus?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dan">@dan</a>,</p>
+<p>It is hard to tell from your photo, but do you have anything from the CANhitch hooked up to the D0 pin (assuming it is the same as a Photon or Electron) of the RedbearDuo?  If you do, then something from the CANhitch could be interfering with diable signal.  Otherwise, it should work okay.  When I receive a RedbearDuo (which is on order), then I can look into this and see if it does the same for me.</p>
+          <p><a href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/2</link>
+        <pubDate>Fri, 20 Jul 2018 04:52:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-688-2</guid>
+        <source url="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss">Possible to entirely disable Carloop CAN bus?</source>
+      </item>
+      <item>
+        <title>Possible to entirely disable Carloop CAN bus?</title>
+        <dc:creator><![CDATA[dan]]></dc:creator>
+        <description><![CDATA[
+            <p>My project involves hooking into the info bus of my vehicle, which is exposed on a different set of pins than the ones that Carloop is connected to. That’s not a problem - I got myself a CAN hitch and successfully hooked into the info bus without using the Carloop at all.</p>
+<p>However, I’d still like to use the Carloop connector since it provides power, battery reading, etc. I hooked into the same pins and attempted to disable the CAN bus by writing <a href="https://github.com/carloop/carloop-library/blob/186acf9403c375e9e251769fb4669c9a4d226704/src/carloop.cpp#L85" rel="noopener nofollow ugc">this CAN disable signal</a>, but that didn’t work and I still seem to get some signals coming from the carloop’s CAN. I later read some documentation (<a href="https://github.com/openxc/reference-vi/blob/gh-pages/electrical/design/can.mkd" rel="noopener nofollow ugc">this</a> and <a href="https://www.nxp.com/docs/en/data-sheet/TJA1048.pdf" rel="noopener nofollow ugc">this</a>) which seems to indicate that the “disable” signal is really putting the chip in standby mode, which doesn’t entirely shut it up (?).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/f1b3e0a43ee252c82f093a170aae129d74f89a59" title="IMG_2386.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59_2_666x500.jpeg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59_2_666x500.jpeg, //carloop-community.dyndns.org/uploads/default/optimized/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59_2_999x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/f1b3e0a43ee252c82f093a170aae129d74f89a59_2_1332x1000.jpeg 2x" data-dominant-color="CDA36C"></a></div><p></p>
+<p>Currently my wiring just connects to the same CAN pins as Carloop and then sends the standby signal in code. Of course, I could separate the parts and connect the individual pins from the carloop with some jumpers but I was hoping for a less messy solution. Thanks!</p>
+          <p><a href="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688/1</link>
+        <pubDate>Thu, 19 Jul 2018 20:10:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-688-1</guid>
+        <source url="https://community.carloop.io/t/possible-to-entirely-disable-carloop-can-bus/688.rss">Possible to entirely disable Carloop CAN bus?</source>
+      </item>
+  </channel>
+</rss>

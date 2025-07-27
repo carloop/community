@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Main site down - Error establishing a database connection</title>
+    <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886</link>
+    <description>http://www.carloop.io/ gives error:
+Error establishing a database connection
+
+Thanks,
+
+Andy</description>
+    
+    <lastBuildDate>Thu, 04 Jul 2019 00:06:53 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="http://carloop.io">carloop.io</a> is up now and we’ve added it to a monitoring service <img src="//carloop-community.dyndns.org/images/emoji/twitter/boom.png?v=12" title=":boom:" class="emoji" alt=":boom:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/6</link>
+        <pubDate>Thu, 04 Jul 2019 00:06:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-6</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p>No worries, thanks for the quick reply!</p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/5</link>
+        <pubDate>Wed, 03 Jul 2019 19:43:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-5</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey Trey, the site was restored the same day (27 days ago).  It must’ve gone down ago.  This is super embarrassing, so we’ll add an alert to make sure we know when the site goes down. This is an open source / side project so we do our best to keep things working.  Thanks for letting me know!</p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/4</link>
+        <pubDate>Wed, 03 Jul 2019 19:30:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-4</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[Trey]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> - Any updates on the site being down? Been down for almost a month.</p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/3</link>
+        <pubDate>Wed, 03 Jul 2019 19:05:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-3</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the heads up!  Will look into it.</p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/2</link>
+        <pubDate>Thu, 06 Jun 2019 18:39:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-2</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+      <item>
+        <title>Main site down - Error establishing a database connection</title>
+        <dc:creator><![CDATA[andy]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="http://www.carloop.io/">http://www.carloop.io/</a> gives error:<br>
+Error establishing a database connection</p>
+<p>Thanks,</p>
+<p>Andy</p>
+          <p><a href="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886/1</link>
+        <pubDate>Thu, 06 Jun 2019 15:57:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-886-1</guid>
+        <source url="https://community.carloop.io/t/main-site-down-error-establishing-a-database-connection/886.rss">Main site down - Error establishing a database connection</source>
+      </item>
+  </channel>
+</rss>

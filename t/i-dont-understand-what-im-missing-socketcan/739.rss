@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>I dont understand what Im missing - Socketcan</title>
+    <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739</link>
+    <description>My goal is to log and save a bunch of various things before I replace the gas engine with a diesel.
+&lt;img src=&quot;/uploads/default/original/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6.png&quot; width=&quot;690&quot; height=&quot;387&quot;&gt;</description>
+    
+    <lastBuildDate>Sat, 20 Oct 2018 13:24:01 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>I understand and thank you very much for your time and effort.  This place is dead with pretty much zero support…  Thanks again!!!</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/17</link>
+        <pubDate>Sat, 20 Oct 2018 13:24:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-17</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Lol good luck didn’t want the offer was just trying to help you out. And chrylser is my area too have my carloop working on a 2014 Dodge Charger. And can change the milage in 2015+ Dodge Charger instrument clusters using a carloop <img src="//carloop-community.dyndns.org/images/emoji/twitter/metal/4.png?v=12" title=":metal:t4:" class="emoji" alt=":metal:t4:" loading="lazy" width="20" height="20"> So it’s very capable just got to know what your doing.</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/16</link>
+        <pubDate>Sat, 20 Oct 2018 02:05:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-16</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>Using Mint 18.1…  Ive tried to read a Chrysler Town&amp; Country 2011 and a 2012 Dodge Ram.  I will be WORKING on a 2015 Yukon.</p>
+<p>Ive also tried Raspbian on a Pi and windows 10</p>
+<p>I will play with your script.  Ive already ordered a CSS Electrics CL1000<br>
+It would be nice to get the Carloop working.  Sad to have wasted my money and 8 times that in time.<br>
+The $100 offer is off the table… Ive moved on.</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/15</link>
+        <pubDate>Sat, 20 Oct 2018 01:00:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-15</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I use this on my Raspberry Pi3 to setup my carloop. I just type “carloop” into the commdline and it does the rest and type “down” to shut down the carloop. you can mod it for your needs.</p>
+<pre><code class="lang-auto">#!/bin/bash
+set -e
+echo "
+#!/bin/bash
+set -e 
+sudo slcand -o -c -s6 /dev/ttyACM*  can0 
+sudo ip link set can0 up txqueuelen 9000 
+sudo ip link set can0 type can 
+sudo ip link set can0 up
+sudo ifconfig can0
+sleep 1
+clear
+echo -e "carloop ready"" &gt; /usr/bin/carloop
+sudo chmod 755 /usr/bin/carloop
+sudo chmod +x /usr/bin/carloop
+echo "#!/bin/bash
+set -e 
+sudo ifconfig can0 down
+echo "can0 shutdown Gracefully "" &gt; /usr/bin/down
+sudo chmod 755 /usr/bin/down
+sudo chmod +x /usr/bin/down
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get clean
+sudo apt-get install can-utils</code></pre>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/14</link>
+        <pubDate>Fri, 19 Oct 2018 12:52:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-14</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>What car are you working with that would help.<br>
+Also what linux distro are you using or is that Mac osx?<br>
+try <a href="https://github.com/linklayer/cantact-app" rel="noopener nofollow ugc">Cantact</a> that works with the socket can sketch out of the box doesn’t need to mod anything cantact-app on Windows and Mac.</p>
+<p>linux you just use <a href="https://wiki.linklayer.com/index.php/SocketCAN" rel="noopener nofollow ugc">SocketCan</a></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/13</link>
+        <pubDate>Fri, 19 Oct 2018 12:42:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-13</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>cant be the wrong pinout.  I got the VIN id to work on two vehicles but not anything to see live can data.  You see the setup above and the failed read.  In the command line setup it defines baud rate. I need a “baby steps” walk through, video, something <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20">  Im about to buy another product… <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+<p>The VIN read was from from a flashed script and web page but anything from the command line I cant get to work.  Im sure its stupid simple but Ive been over it multiple times a day for over a week. Bet I got over 5 hrs invested…  <img src="//carloop-community.dyndns.org/images/emoji/twitter/sob.png?v=12" title=":sob:" class="emoji" alt=":sob:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/12</link>
+        <pubDate>Fri, 19 Oct 2018 10:42:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-12</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Man dude that is the easiest to setup with the carloop they have already provided the necessary sketch. If the vin reader app worked then the sockecan sketch should work fine. I just flashed it last night and have been able to do everything with the carloop from changing instrument cluster milage to enabling/disabling features even sending custom text to the radio and also instrument cluster swap with the carloop. If your not getting any kind of data it might be the wrong baud rate that your setting up the carloop with in canutils. If your still not getting data it you might want to pull up the OBDII pinout of the truck/car your working on the carloop is wired on standard obdii connections sounds like you might be needing a j1939 connector and the carloop wouldn’t work with that and I’m leaning towards that maybe.</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/11</link>
+        <pubDate>Fri, 19 Oct 2018 01:44:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-11</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>Ok I have put off a very expensive project trying to get this work work first.  Im offering $100 paypal for anyone to, via phone, get this up and running with Fileshark on windows or Linux AND Candump, and Cansniffer!!!</p>
+<p>Commit here but quicker response email me: <a href="mailto:Racing4funn@aol.com">Racing4funn@aol.com</a></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/10</link>
+        <pubDate>Thu, 18 Oct 2018 18:34:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-10</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes and thank you very much for your time and reply.<br>
+I did get the VIN app to work. Device works.<br>
+I need to get startup of the vehicle recorded so I can move on to disassembly.</p>
+<p>What to try next?</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/9</link>
+        <pubDate>Wed, 17 Oct 2018 11:01:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-9</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/canoob">@Canoob</a>,</p>
+<p>The request to take a look was to Julien Vanier (jvanier). However, he is a senior engineer over at Particle and they are introducing the new generation of ParicleMesh.  I am guessing he will not have time to take a look at the moment.</p>
+<p>Can I suggest trying to simplify things a bit just so we know what is working and what might not be?<br>
+I am thinking that if you can try the sample app to read the VIN number, then we know that the basics work.<br>
+Once the basics are working, then we can build it up a step at a time to figure out which step is the problem.  Trying to do everything at once might be just too overwhelming to be able to isolate what the issue is.</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/8</link>
+        <pubDate>Wed, 17 Oct 2018 04:42:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-8</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>app on the Photon<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29.png" data-download-href="//carloop-community.dyndns.org/uploads/default/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29" title="Screenshot from 2018-10-16 19-29-05.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29_2_690x387.png" width="690" height="387" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29_2_690x387.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29_2_1035x580.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/34188a11b1e00d8d6dce0e4d7a45bbd4c7f26e29.png 2x" data-dominant-color="5A5D5A"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/7</link>
+        <pubDate>Tue, 16 Oct 2018 23:49:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-7</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>attempt </p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c23a06886d740f4ab8067df998b67d3206bd2d4a.png" data-download-href="//carloop-community.dyndns.org/uploads/default/c23a06886d740f4ab8067df998b67d3206bd2d4a" title="Screenshot from 2018-10-16 19-13-41.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/c23a06886d740f4ab8067df998b67d3206bd2d4a_2_690x387.png" width="690" height="387" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/c23a06886d740f4ab8067df998b67d3206bd2d4a_2_690x387.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/c23a06886d740f4ab8067df998b67d3206bd2d4a_2_1035x580.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/c23a06886d740f4ab8067df998b67d3206bd2d4a.png 2x" data-dominant-color="A5A5A6"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/6</link>
+        <pubDate>Tue, 16 Oct 2018 23:48:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-6</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>Take a look at what?</p>
+<p>I took another shot at this.  To the left are the directions I followed.  As seen in the picture when running candump or cansniffer there is no data.  Tried this on two different cars with them running.  Maybe the Photon is not setup correctly.  The last picture shows it’s current flashed app and it is in the “connected” mode when plugging into the OBD2.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/d4b9158961a757a0fa208b5b4ee095328ad43744.png" data-download-href="//carloop-community.dyndns.org/uploads/default/d4b9158961a757a0fa208b5b4ee095328ad43744" title="Screenshot from 2018-10-16 19-12-11.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/d4b9158961a757a0fa208b5b4ee095328ad43744_2_690x387.png" width="690" height="387" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/d4b9158961a757a0fa208b5b4ee095328ad43744_2_690x387.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/d4b9158961a757a0fa208b5b4ee095328ad43744_2_1035x580.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/d4b9158961a757a0fa208b5b4ee095328ad43744.png 2x" data-dominant-color="B8B8B8"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/5</link>
+        <pubDate>Tue, 16 Oct 2018 23:48:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-5</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/canoob">@Canoob</a>,  I have not used can-utils myself, so my help only goes so far.</p>
+<p>I took a look at the GitHub repository for can-utils, and I did not see anything to explain the a and e parameters.  I am not sure if they are supposed to be values for the colour setting, or if they were meant to be parameters.  Could those be the parameters for a different can-utility?<br>
+<a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, Can you take a look at this please?</p>
+<p>Note that cansniffer is for searching for differences in the CAN messages, so you will not see all the messages, just the messages that changed due to some event.</p>
+<p>If you want to verify that you are receiving CAN messages and want to see all of them, then candump might be the utility you want.</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/4</link>
+        <pubDate>Thu, 11 Oct 2018 03:47:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-4</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>But as seen in the first picture command “a” and “e” is not understood and I see no packets</p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/3</link>
+        <pubDate>Mon, 08 Oct 2018 11:40:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-3</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c.png" data-download-href="//carloop-community.dyndns.org/uploads/default/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c" title="Screenshot from 2018-10-06 16-09-59.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c_2_690x387.png" width="690" height="387" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c_2_690x387.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c_2_1035x580.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/7b7155a767ac2db15daef723f1ea0c3bd77ebe9c.png 2x" data-dominant-color="A1A1A1"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/2</link>
+        <pubDate>Sat, 06 Oct 2018 20:50:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-2</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+      <item>
+        <title>I dont understand what Im missing - Socketcan</title>
+        <dc:creator><![CDATA[Canoob]]></dc:creator>
+        <description><![CDATA[
+            <p>My goal is to log and save a bunch of various things before I replace the gas engine with a diesel.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6.png" data-download-href="//carloop-community.dyndns.org/uploads/default/be2061a067b0c1787beabc3ae4c55b4b6e944aa6" title="Screenshot from 2018-10-06 16-05-31.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6_2_690x387.png" width="690" height="387" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6_2_690x387.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6_2_1035x580.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/be2061a067b0c1787beabc3ae4c55b4b6e944aa6.png 2x" data-dominant-color="C6C6C6"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739/1</link>
+        <pubDate>Sat, 06 Oct 2018 20:50:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-739-1</guid>
+        <source url="https://community.carloop.io/t/i-dont-understand-what-im-missing-socketcan/739.rss">I dont understand what Im missing - Socketcan</source>
+      </item>
+  </channel>
+</rss>

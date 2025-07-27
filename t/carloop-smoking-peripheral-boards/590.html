@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop Smoking Peripheral Boards - Troubleshooting - Carloop Community</title>
+    <meta name="description" content="I flashed my particle photon with carloop code from the particle library today, hooked it up to the ODB port on my land rover and the photon smoked immediately.  Everything I have read says that there should be regulatio&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="590.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="rwQpFxJmHwIWrDxMMqqnH6onR">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="rwQpFxJmHwIWrDxMMqqnH6onR"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop Smoking Peripheral Boards&#39;" href="590.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-smoking-peripheral-boards/590">
+<meta name="twitter:url" content="/t/carloop-smoking-peripheral-boards/590">
+<meta property="og:title" content="Carloop Smoking Peripheral Boards">
+<meta name="twitter:title" content="Carloop Smoking Peripheral Boards">
+<meta property="og:description" content="I flashed my particle photon with carloop code from the particle library today, hooked it up to the ODB port on my land rover and the photon smoked immediately.  Everything I have read says that there should be regulation in both the carloop PCB and the photon but evidently that regulation wasn’t enough to protect from the voltage coming out of the port. I just bought the car and it is a 2002 - I’m wondering if the ODB port is a custom install and wired incorrectly - any ideas on where to start?...">
+<meta name="twitter:description" content="I flashed my particle photon with carloop code from the particle library today, hooked it up to the ODB port on my land rover and the photon smoked immediately.  Everything I have read says that there should be regulation in both the carloop PCB and the photon but evidently that regulation wasn’t enough to protect from the voltage coming out of the port. I just bought the car and it is a 2002 - I’m wondering if the ODB port is a custom install and wired incorrectly - any ideas on where to start?...">
+<meta property="og:article:section" content="Troubleshooting">
+<meta property="og:article:section:color" content="BF1E2E">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="3 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="1 ?">
+<meta property="article:published_time" content="2018-04-02T04:14:25+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="590.html">Carloop Smoking Peripheral Boards</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/troubleshooting/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Troubleshooting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop Smoking Peripheral Boards'>
+      <link itemprop='url' href='590.html'>
+      <meta itemprop='datePublished' content='2018-04-02T04:14:24Z'>
+        <meta itemprop='articleSection' content='Troubleshooting'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cgd1021.html'><span itemprop='name'>cgd1021</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="590.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-04-02T04:14:25Z' class='post-time'>
+                    April 2, 2018,  4:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-02T04:14:25Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I flashed my particle photon with carloop code from the particle library today, hooked it up to the ODB port on my land rover and the photon smoked immediately.  Everything I have read says that there should be regulation in both the carloop PCB and the photon but evidently that regulation wasn’t enough to protect from the voltage coming out of the port. I just bought the car and it is a 2002 - I’m wondering if the ODB port is a custom install and wired incorrectly - any ideas on where to start? I guess measuring the 12V supply would be a good start? Any other thoughts?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/stonej.html'><span itemprop='name'>stonej</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-02T23:45:36Z' class='post-time'>
+                    April 2, 2018, 11:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-02T23:45:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yeah, check voltages. I hooked up one of my Carloops to a J1939 port over the weekend (Truck @ 24v) and it smoked the Carloop adapter… My bad, I didn’t even think twice before plugging it in. My Photon was fine though.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-03T04:41:13Z' class='post-time'>
+                    April 3, 2018,  4:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-03T04:41:13Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cgd1021.html">@cgd1021</a>,<br>
+As <a class="mention" href="../../u/stonej.html">@stonej</a> indicated, there are vehicles that run on 24V, which usually (but not always) have large diesel engines.<br>
+Please check things over carefully.  If the vehicle runs on 24V, it should have a 24V OBD2 port.  Since your vehicle is 2002, it may not be OBD2 compliant, but only OBD and not necessarily follow the standard plug.</p>
+<p>The Carloop has a 12V OBD2 plug on it.  It will not plug into a 24V OBD2 port.  If the vehicle uses the standard port, you should be physically prevented from plugging it in.  So, it comes down to the vehicle.</p>
+<p>The voltage regulator on the Carloop is capable of withstanding approximately 17V and possibly spikes even higher.  Unfortunately, 24V is too much.  It depends on how the regulator failed, to know if that voltage got passed on to the Photon or not.  The Photon is meant to run on 5V.  The regulator on the Photon can withstand somewhere around 8V.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cgd1021.html'><span itemprop='name'>cgd1021</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-03T05:26:20Z' class='post-time'>
+                    April 3, 2018,  5:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-03T05:26:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just went out and took a look at the port - only 4 wires connected, signal ground, chassis ground, battery power and then what looks like an ISO signal. Measured voltage from battery to both grounds, it was sitting consistently at about 12V. I also measured voltage between pin 7 and both ground pins and saw ~6V. That said, I’m not understanding how my Photon could’ve seen any voltage beyond what the carloop was able to regulate to unless the problem is with the 6V at pin 7. This is the only place I have ever connected my carloop so unless the carloop voltage regulator was faulty out of the box or I’m getting some wild voltage swings the only thing I can think of is that the 6V at pin 7 is abnormal. Any ideas? Is this the expected result of connecting a virgin carloop to an ODB port configured for ISO - I just looked at the V2.3 schematic and it looks like PIN 7 isn’t routed anywhere - doesn’t seem like the 6V connection would’ve done anything? <a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a> - looks like you have had some experience with getting a carloop going for ISO - any suggestions?  <div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/9de9862e086ea2df6368d5d90fe5ef0aed9d665c" title="IMG_1932.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c_2_375x500.jpg" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c_2_375x500.jpg,//carloop-community.dyndns.org/uploads/default/original/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c.jpg,//carloop-community.dyndns.org/uploads/default/original/1X/9de9862e086ea2df6368d5d90fe5ef0aed9d665c.jpg" data-dominant-color="6A5F5B"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_1932.jpg</span><span class="informations">480×640 71.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-04T04:52:21Z' class='post-time'>
+                    April 4, 2018,  4:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-04T04:52:21Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/cgd1021.html">@cgd1021</a>,</p>
+<p>I am not familiar with LandRover, but that looks strange to me.  I would go hunting for some LandRover-specific information to see if there is something unusual with that plug.  If LandRover did things totally differently, then who knows what is on each wire…</p>
+<p>Assuming the purple wire is in fact pin 1,  the layout makes sense for Voltage on pin 1 and the grounds on pins 4 &amp; 5.<br>
+What does not make sense is to have something on pin 7 (should be K-Line) without having its partner on pin 15 (the L-Line).</p>
+<p>Carloop does not use pins 7 &amp; 15 (not connected), so any signals there on the OBD port will not have any effect on the Carloop.  That narrows it down to pins 1, 4 or 5 causing something unexpected.  However, pins 4 and 5 are connected together in Carloop, so that limits the effect even further.</p>
+<p>One final conclusion: since you do not have a CANbus (which would be on pins 6 &amp; 14), Carloop is not going to work for this vehicle.  There is a project that is moving very very slowly to do CarloopRetro, which would do K-Line (pins 7 &amp; 15), but this is different hardware (and firmware) from the regular Carloop.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/bholveck'><span itemprop='name'>bholveck</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-24T13:08:34Z' class='post-time'>
+                    April 24, 2018,  1:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-24T13:08:34Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just had the same issue here. I’ve connected to my Renault Scenic. My Photon smoked immediately. 12V on the port <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning2.png?v=12" title=":frowning2:" class="emoji" alt=":frowning2:" loading="lazy" width="20" height="20"></p>
+<p>Carloop board is R2.3</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-24T13:41:26Z' class='post-time'>
+                    April 24, 2018,  1:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-24T13:41:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><span class="mention">@bhoveck</span>,</p>
+<p>It may not be the same issue.  Connecting up Carloop to 24V will definitely blow the power regulator, as was the case for stonej.</p>
+<p>What year of car is the Renault Scenic?  Are you certain that it uses CANbus on the OBD2 port and does not have some proprietary protocol?</p>
+<p>Thank you for providing which version of the Carloop board.</p>
+<p>Have you tried to power the Photon by USB while <strong>removed</strong> from the Carloop?  It is important to distinguish if it was the Carloop, the Photon or both that smoked.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/bholveck'><span itemprop='name'>bholveck</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-26T07:06:51Z' class='post-time'>
+                    April 26, 2018,  7:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-26T07:06:51Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Cyclin_al1 and thanks for the answer.</p>
+<p>The Scenic is from 2013. The photon is smoked as it doesn’t power anymore when connected alone to USB (it also smells bad when USB is connected!)</p>
+<p>However, I don’t know how to check if the Carloop is smoked too or not.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-27T02:10:26Z' class='post-time'>
+                    April 27, 2018,  2:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-27T02:10:26Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/bholveck">@bholveck</a>,</p>
+<p>When you say that it continues to smell bad when USB is connected, it makes me assume that the power regulator on-board the Photon is shot.  You could verify that, as something should be VERY hot in order to cause the bad smell.</p>
+<p>If the assumption about the Photon power regulator is correct, then there are 4 possible causes:</p>
+<ol>
+<li>the car voltage was so high that it blew the Carloop voltage regulator, which let high voltage through to the Photon;</li>
+<li>The voltage regulator on the Carloop was faulty (but this would happen only the first time the Carloop was ever used; not sure if that is the case.);</li>
+<li>High voltage got through the protection on the voltage monitor in Carloop (highly unlikely); or</li>
+<li>Something blew the CAN transceiver chip (highly unlikely; the connections are protected).</li>
+</ol>
+<p>If you want to dig further, you would need to get the schematic and the board layout for Carloop, which is available on GitHub, and use that to guide troubleshooting.</p>
+<p>The Photon is considered a module, and is not really reparable.  However, I have heard of someone replacing the Photon voltage regulator, but we do not know if that is the only problem, and that job takes some advanced soldering skill.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/bholveck'><span itemprop='name'>bholveck</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-18T06:33:35Z' class='post-time'>
+                    June 18, 2018,  6:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-18T06:33:35Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a>,</p>
+<p>Sorry I was away for the last months.</p>
+<p>I confirm that the voltage regulator on the Photon is dead. I mean that if I directly inject 3.3v to the Photon it works correctly.</p>
+<p>I have no idea wether the regulator on the Carloop is faulty or not. It doesn’t seem to be hot when connected to the car and doesn’t seem either to smell burned component.</p>
+<p>Note that all of this happened on the Carloop’s first use. Could it be related with your second point?<br>
+The Photon’s regulator was working well just before that first attempt because I flashed it through USB.</p>
+<p>I’ve just received Photon’s voltage regulators so I’ll try to replace it soon and will keep you in touch.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-19T02:01:49Z' class='post-time'>
+                    June 19, 2018,  2:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-19T02:01:49Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/bholveck">@bholveck</a>,</p>
+<p>Glad to hear you have found a way to get your Photon back up and running.  Based on the community at <a href="http://particle.io">particle.io</a>, I have heard that the voltage regulator has been successfully been replaced.</p>
+<p>What you can do to test the Carloop regulator is to make sure NO devices (Photon, etc.) are installed.  Plug only the Carloop into the car and measure the voltage at the empty VIN socket (where the Photon would go).  It should measure 5V with a multi-meter.  If not, then you know there is a problem with the Carloop voltage regulator circuitry.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/bholveck'><span itemprop='name'>bholveck</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-20T13:15:54Z' class='post-time'>
+                    June 20, 2018,  1:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-20T13:15:54Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="../../u/cyclin_al1.html">@cyclin_al1</a>,</p>
+<p>I just tested and the output voltage is 10.73V !!!<br>
+So now, what’s wrong with the Carloop regulator?!?</p>
+<p>Any hint?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cgd1021.html'><span itemprop='name'>cgd1021</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-20T13:48:35Z' class='post-time'>
+                    June 20, 2018,  1:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-20T13:48:35Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had a hunch that this was my problem too - I checked voltage on my vehicle a while back and it was solid at 12V, but I smoked two different particle modules trying to get my carloop running. The first time I plugged it in the module I was using smoked immediately, wonder if there was a batch with bad voltage regulators? I haven’t touched my carloop since, didn’t want to smoke another module.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-22T04:27:32Z' class='post-time'>
+                    June 22, 2018,  4:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-22T04:27:32Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/bholveck">@bholveck</a>,</p>
+<p>Something definitely failed in the power regulator circuitry.<br>
+I would measure the resistance of R3 &amp; R4 as these provide the feedback to the voltage regulator.<br>
+If those measure okay, then the RT2858 regulator IC itself must have failed.  The only other parts in that circuitry are a couple of diodes for protection (check those too if the regulator is blown), some capacitors and a small 15uH inductor.</p>
+<p><a class="mention" href="../../u/cgd1021.html">@cgd1021</a>, you are measuring 12V at the vehicle.  Did you check the polarity to ensure it is not -12V, since the OBD port has unusual wiring on your Landrover?<br>
+<a class="mention" href="/u/bholveck">@bholveck</a> measured the 10.7V on the Carloop board itself where it is supposed to be 5V.  Have you measured that?  It is a different measurement than the vehicle voltage.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

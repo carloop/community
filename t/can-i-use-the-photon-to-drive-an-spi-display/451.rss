@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can I use the Photon to drive an SPI display?</title>
+    <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451</link>
+    <description>Hi Carloop community!
+
+I&#39;d like to use a Carloop &amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I&#39;d like to know if I can still use SPI with the Photon while the Carloop is installed so I can display via a couple of:  https://www.adafruit.com/product/1431
+
+Any examples of something similar?  Hopefully I can get my corporate overlords to allow me to open source my efforts once ready for general consumption.</description>
+    
+    <lastBuildDate>Tue, 06 Mar 2018 14:55:19 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>In that case: Wow!  That is impressive.</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/10</link>
+        <pubDate>Tue, 06 Mar 2018 14:55:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-10</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[WarriorOfWire]]></dc:creator>
+        <description><![CDATA[
+            <p>Well, I had to add that.  I rewired the engine to use a Link G4+ Monsoon and programmed the CAN messages to ship all that data and lots more up front.  It’s a little more technical than when it rolled off the line 3 decades ago!</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/9</link>
+        <pubDate>Tue, 06 Mar 2018 05:53:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-9</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Very cool!  I love how you did the display.</p>
+<p>I am also surprised that a 1987 car uses CAN bus.</p>
+<p>Very high-tech for a car of that vintage.</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/8</link>
+        <pubDate>Tue, 06 Mar 2018 03:33:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-8</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[WarriorOfWire]]></dc:creator>
+        <description><![CDATA[
+            <p>Most of the integration is under a dashboard, really difficult to photograph.  I packaged the Photon and Carloop into a plug-in box though, maybe that’s interesting?  I would have <em><strong>loved</strong></em> to have <em>just holes</em> rather than an OBD2 connector, as I could have made the same thing more compact and with 1 connector rather than 2.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c" title="IMAG2615.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_666x500.jpeg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_666x500.jpeg, //carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_999x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/670fba037c3b1f3b589ab5fb49d6ba9ecc534a8c_2_1332x1000.jpeg 2x"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca" title="IMAG2619.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/d3885e5084a7bff6376a31a3ee1a08056e5fa7ca_2_1332x1000.jpg 2x"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/ec323d39239ba48d80927d2ca1eebadf1e7a771b" title="IMAG2621.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_666x500.jpg" width="666" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_666x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_999x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/ec323d39239ba48d80927d2ca1eebadf1e7a771b_2_1332x1000.jpg 2x"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/7</link>
+        <pubDate>Sun, 04 Mar 2018 19:47:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-7</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Very cool! Do you have pics of how you wired it all together?</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/6</link>
+        <pubDate>Sun, 04 Mar 2018 17:06:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-6</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[WarriorOfWire]]></dc:creator>
+        <description><![CDATA[
+            <p>Well, after writing a new display stack, a new 4d systems library and several python programs for post-processing images &amp; metadata we have a complete Carloop integration with a Link ECU in a 1987 Toyota MR2.  It’s smooth enough for me <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p><a href="https://www.youtube.com/watch?v=oSTz-JVOXLs">Toyota MR2 Custom Instrument Cluster</a></p>
+
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/5</link>
+        <pubDate>Sun, 04 Mar 2018 07:44:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-5</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>On the particle forums, there are threads on the topic of using 4D displays.  I think peekay123 is one of the experts there.<br>
+Take a look among these postings to see if you can improve the performance of your display:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest" target="_blank" rel="noopener">community.particle.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://community.particle.io/search?q=peekay123%20display%20order%3Alatest" target="_blank" rel="noopener">Search results for 'peekay123 display order:latest' - Particle</a></h3>
+
+  <p>Discourse about Particle devices, the Particle cloud, and all things related to connected devices in the IoT era.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/4</link>
+        <pubDate>Sun, 22 Oct 2017 04:50:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-4</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[WarriorOfWire]]></dc:creator>
+        <description><![CDATA[
+            <p>Just for Future Googler:</p>
+<p>I was successful in using an Adafruit 1.5" OLED display via SPI.  It was good enough that I have since moved on to a 4d Systems 7" display, connected via Serial1 (hope I never need gps…).  Performance of this configuration is not as it needs to be, but it has less to do with the data interface and more to do with how the screen’s messaging is implemented:  You have to wait for the screen to send back an ACK byte, which takes 25-32 milliseconds <em>per widget</em> with no bulk/batch update API.  I’m still working with them to try to find a higher refresh rate option, as I’d like 6-8 visualizations with smooth animation, and it’s visibly choppy just with 4.</p>
+<p>The Photon is an outstanding piece of hardware, and I’m even driving the non-touch “SuperBright” 7" display straight from the vIN pin on the Photon.  Can’t wait to resolve the performance issue and get this thing in my dashboard!</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/3</link>
+        <pubDate>Sat, 21 Oct 2017 22:20:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-3</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/warriorofwire">@WarriorOfWire</a>,</p>
+<p>I have had some ideas for using a Photon with Carloop and other devices, but have not had the chance to do anything along these lines yet.</p>
+<p>For SPI, the Photon has hardware support for SPI on the sets of pins in the Photon documents here:<br>
+<a href="https://docs.particle.io/reference/firmware/photon/#spi" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/reference/firmware/photon/#spi</a></p>
+<p>That part was easy enough to find.  The next part is the Carloop design, which is not quite so easy to find, but is on GitHub here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/hardware">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/hardware" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/99de0e745dbe2c0c99d47f06bc1394639ca92dff_2_690x345.png" class="thumbnail" data-dominant-color="F1EFF0" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/hardware" target="_blank" rel="noopener">GitHub - carloop/hardware: OBD-II CAN adapter for Particle Electron, Photon,...</a></h3>
+
+  <p>OBD-II CAN adapter for Particle Electron, Photon, and RedBear Duo - carloop/hardware</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>In comparing the two, the pins for the ‘SPI’ Object are A2-A5 and are not used by Carloop.  These pins are all available and you can use it to do SPI, so this should be quite easy.</p>
+<p>Looking more closely, there is a design in work for a CarloopXL, which uses SPI for a SD Card.  If that design eventually comes out, you would have to use multiple chip select lines (SPI-SS) for each device, such as A2 already used for the SD Card, plus some other available pin (D6 maybe to select your SPI display device).</p>
+<p>One thing to keep in mind with your design is the performance.  You will need to experiment to see how busy the Photon is taking care of the CANbus and the SPI to see if the performance is fast enough.  It may be okay.  If you are looking at performance issues, using CAN filters (see the Photon documentation) can help reduce the Photon workload in taking care of the CANbus.</p>
+<p>Let us know how your project goes!</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/2</link>
+        <pubDate>Tue, 03 Oct 2017 13:37:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-2</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+      <item>
+        <title>Can I use the Photon to drive an SPI display?</title>
+        <dc:creator><![CDATA[WarriorOfWire]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Carloop community!</p>
+<p>I’d like to use a Carloop &amp; Photon to make a custom display for my Link G4+ ecu.  Very specifically I’d like to know if I can still use SPI with the Photon while the Carloop is installed so I can display via a couple of:  <a href="https://www.adafruit.com/product/1431" class="inline-onebox" rel="noopener nofollow ugc">OLED Breakout Board - 16-bit Color 1.5 w/microSD holder [EYESPI Connector] : ID 1431 : $39.95 : Adafruit Industries, Unique &amp; fun DIY electronics and kits</a></p>
+<p>Any examples of something similar?  Hopefully I can get my corporate overlords to allow me to open source my efforts once ready for general consumption.</p>
+          <p><a href="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451/1</link>
+        <pubDate>Sun, 01 Oct 2017 06:19:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-451-1</guid>
+        <source url="https://community.carloop.io/t/can-i-use-the-photon-to-drive-an-spi-display/451.rss">Can I use the Photon to drive an SPI display?</source>
+      </item>
+  </channel>
+</rss>

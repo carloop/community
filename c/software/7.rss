@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Software - Carloop Community</title>
+    <link>https://community.carloop.io/c/software/7</link>
+    <description>Topics in the &#39;Software&#39; category Discussion about libraries, vehicle data dictionaries, and overall software questions.</description>
+    
+      <lastBuildDate>Tue, 21 Feb 2023 22:52:51 +0000</lastBuildDate>
+      <atom:link href="https://community.carloop.io/c/software/7.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Is SwiftUI a compatible language with CarLoop OBD-II device</title>
+          <dc:creator><![CDATA[Cole.H]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>I am just curious if I can code using the SwiftUI language and have everything still work as intended with the OBD-II communication device? I’m currently in school and want to do my final project on over the air vehicle diagnostic and communication. Does anyone know if this is something that I’m able to do and if so, do you have any tips for me getting into it?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322</link>
+          <pubDate>Tue, 21 Feb 2023 22:52:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1322</guid>
+          <source url="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322.rss">Is SwiftUI a compatible language with CarLoop OBD-II device</source>
+        </item>
+        <item>
+          <title>Need somebody, who can install software from GitHub!</title>
+          <dc:creator><![CDATA[Konstantin]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi guys! There is ready-made software on GitHub:<a href="https://github.com/daftracing/SoftStick" class="inline-onebox" rel="noopener nofollow ugc">GitHub - daftracing/SoftStick: Carloop firmware that emulates Drift Stick hardware</a>. I need to install it correctly on my Carloop. I do not know how to do this, but the program is urgently needed, so I am ready to pay for this installation!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164</link>
+          <pubDate>Mon, 09 Aug 2021 06:24:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1164</guid>
+          <source url="https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164.rss">Need somebody, who can install software from GitHub!</source>
+        </item>
+        <item>
+          <title>Using Particle&#39;s CAN library functions?</title>
+          <dc:creator><![CDATA[tpp]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hello</p>
+<p>I been using the carloop following some examples from this site. For example, I use the carloop.can().receive(message); to receive new messages.<br>
+Now I want to use the “addFilter()” function from the Particle’s CAN library. How can I call that function since now the CAN object is part of the carloop objetc?<br>
+I will try with:</p>
+<pre><code>void setup() {
+
+carloop.setCANSpeed(500000);
+carloop.begin();
+carloop.can().addFilter(0x100, 0x7FF);
+</code></pre>
+<p>but I can’t check with a vehicle right now. Should this work?</p>
+<p>Any help will be greatly appreciated.<br>
+Best,</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/using-particles-can-library-functions/1153">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/using-particles-can-library-functions/1153</link>
+          <pubDate>Thu, 17 Jun 2021 22:59:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1153</guid>
+          <source url="https://community.carloop.io/t/using-particles-can-library-functions/1153.rss">Using Particle&#39;s CAN library functions?</source>
+        </item>
+        <item>
+          <title>Obd-ii simulator</title>
+          <dc:creator><![CDATA[Hicham]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi everyboby,</p>
+<p>Sorry for my English.</p>
+<p>I’m Hicham from France.</p>
+<p>I’m professionnal Radio reseller, and sometimes i have some problemes with radio.</p>
+<p>I want find a solution to simulate some basic CANBUS information like ACC, illumination, steering wheel control, etc… to test unit before i give them to my customer, you see.</p>
+<p>Is somebody can tell me if here or anywhere i can found, or buy a board that i can plugg to my computer by USB and send this info (ACC, Illumination, Vol+ Vol- of the steering control)  by activate bit on a software and send by 2 wires using CANBUS protocol to my Radio unit and see if work well.</p>
+<p>When i see all possibility here, i think this is may be possible.</p>
+<p>Thank a lot by advance</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/obd-ii-simulator/1141">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/obd-ii-simulator/1141</link>
+          <pubDate>Thu, 29 Apr 2021 13:31:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1141</guid>
+          <source url="https://community.carloop.io/t/obd-ii-simulator/1141.rss">Obd-ii simulator</source>
+        </item>
+        <item>
+          <title>Problemas con mi Escudo CAN-BUS y arduino</title>
+          <dc:creator><![CDATA[wladimirC]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>estimados amigos espero puedan ayudarme, estoy iniciando me en esto.</p>
+<p>estoy usando arduino mega2560 + shield canbus ( <a href="https://www.sparkfun.com/products/13262" rel="noopener nofollow ugc">https://www.sparkfun.com/products/13262</a> ) con el siguiente skecht <a href="https://github.com/kahiroka/slcanuino" class="inline-onebox" rel="noopener nofollow ugc">GitHub - kahiroka/slcanuino: USB-CAN(SocketCAN) sketch for Arduino CAN-BUS shield</a>, este se carga sin problema en el arduino. luego desde la maquina linux debian 9 lanzo los siguientes comando.</p>
+<p>sudo slcan_attach -f -s6 -o /dev/ttyACM0<br>
+sudo slcand -S 1000000 ttyACM0 can0<br>
+sudo ifconfig can0 up<br>
+despues…</p>
+<p>candump can0 y en otra terminal cansniffer can0</p>
+<p>pero no obtengo respuestas de parte de mi vehiculo .<br>
+espero su amable ayuda<br>
+saludos.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024</link>
+          <pubDate>Mon, 27 Apr 2020 02:47:07 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1024</guid>
+          <source url="https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024.rss">Problemas con mi Escudo CAN-BUS y arduino</source>
+        </item>
+        <item>
+          <title>Cloud-based free CAN-bus decoder service</title>
+          <dc:creator><![CDATA[can2sky]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi!<br>
+One of the most difficult challenges - to find helpful parameter in the CAN bus. There are a lot of CAN-USB scanners which produce raw CAN-log files for analysys. Someone is experienced enough to recognize CAN J1939 PGNs or CAN-IDs  in raw format like “FEF2, FECA, 20E, 3E9 etc”. But we will make analysis easier.</p>
+<p><a href="http://can2sky.com" rel="noopener nofollow ugc">can2sky.com</a> a free web-service for can-log parsing and visualisation in form of readable parameters and plots. Parser is based on DBC-files, there are some default DBC-parsers including J1939 protocol and 11-bit cars. You can create your own parsers based on it with built-in editor and upload your DBCs too. Further development includes collaboration of users and DBC-sharing between users for p2p CAN bas analysis.</p>
+<p>Main idea of service:</p>
+<ol>
+<li>Find helpful parameters amoung raw CAN bus log to be read by GPS tracker</li>
+<li>Analyze non-standard CAN bus identifiers with a help of plots</li>
+<li>Collaboration with colleagues. Your log can be decoded by your colleagues amound world.</li>
+</ol>
+<p>Manual:</p><aside class="onebox googledocs" data-onebox-src="https://docs.google.com/document/d/1ik4rbaMyAFXXszg3OeMeZ5QGxne66nFdd2u_GT8W8kE/edit">
+  <header class="source">
+
+      <a href="https://docs.google.com/document/d/1ik4rbaMyAFXXszg3OeMeZ5QGxne66nFdd2u_GT8W8kE/edit" target="_blank" rel="noopener nofollow ugc">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/document/d/1ik4rbaMyAFXXszg3OeMeZ5QGxne66nFdd2u_GT8W8kE/edit" target="_blank" rel="noopener nofollow ugc"><span class="googledocs-onebox-logo g-docs-logo"></span></a>
+
+<h3><a href="https://docs.google.com/document/d/1ik4rbaMyAFXXszg3OeMeZ5QGxne66nFdd2u_GT8W8kE/edit" target="_blank" rel="noopener nofollow ugc">can2sky.com - manual</a></h3>
+
+<p>This Doc is private</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Requirements: CAN-USB adapter and software to make CAN bus log in raw text file.</p>
+<p>Please, share your suggestions and ideas.<br>
+Right now only several types of CAN logs can be loaded. But we try to make an universal csv-format very soon.</p>
+<p>Regards,<br>
+Andrew</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/cloud-based-free-can-bus-decoder-service/1012">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/cloud-based-free-can-bus-decoder-service/1012</link>
+          <pubDate>Sun, 15 Mar 2020 08:20:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1012</guid>
+          <source url="https://community.carloop.io/t/cloud-based-free-can-bus-decoder-service/1012.rss">Cloud-based free CAN-bus decoder service</source>
+        </item>
+        <item>
+          <title>Listener/logger project</title>
+          <dc:creator><![CDATA[linuxwins]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Has anyone already written this carloop app?</p>
+<p>turns wifi on in AP mode<br>
+listens on TCP 35000 and connects that to the car bus<br>
+logs the traffic between the client and car</p>
+<p>Maybe the traffic could be viewed by connecting to another port using the same AP?</p>
+<p>Anyway, there are apps and devices out there that can talk to the “elm wifi” adapters. This would make carloop become one of those adapters and also log the results so it’s easier to figure out what the app is saying to the car.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/listener-logger-project/1001">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/listener-logger-project/1001</link>
+          <pubDate>Tue, 18 Feb 2020 12:38:01 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1001</guid>
+          <source url="https://community.carloop.io/t/listener-logger-project/1001.rss">Listener/logger project</source>
+        </item>
+        <item>
+          <title>Question on Fuel Trim calculation for PID&#39;s 6-9</title>
+          <dc:creator><![CDATA[gi_unplugged]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hello. I am trying to figure out which one of two formulas to calculate the Fuel trim is correct for PID’s 6-9.  In various sources I find fuelTrim = (100/128)A - 100.  In other sources I find  fuelTrim=A/1.28 - 100.  And in additional sources, I find both ways as options.  Since (A/1.28)-100 is not equal to (100/128)A-100, which formula is correct? Am I missing a key piece of info here that will help me determine which formula is correct or show that both are correct?  Thanks in advance for your feedback.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865</link>
+          <pubDate>Tue, 30 Apr 2019 11:52:07 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-865</guid>
+          <source url="https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865.rss">Question on Fuel Trim calculation for PID&#39;s 6-9</source>
+        </item>
+        <item>
+          <title>OBD-Schedule PID Request?</title>
+          <dc:creator><![CDATA[nlwelch]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Is anyone aware of an OBD command that allows for scheduling multiple PID requests (instead of requesting them one at a time)?</p>
+<p>I have seen an example but I can’t find any support for it.  It’s possible that it’s a GM specific command.</p>
+<p>Here’s the example (it’s only one step of what appears to be many to complete the transaction), any help will be appreciated!:<br>
+REQUEST : 07 E0 06 2C FE 00 0C 00 0D 00<br>
+The request broken down is:<br>
+•	07 E0 = ECU CAN ID<br>
+•	06 = length of PID request<br>
+•	2C = Dynamic PID Message Scheduling<br>
+•	FE = ID for this DPID<br>
+•	00 0C = Engine Speed (RPM)<br>
+•	00 0D = Vehicle Speed (kmh)</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/obd-schedule-pid-request/843">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/obd-schedule-pid-request/843</link>
+          <pubDate>Wed, 27 Mar 2019 15:05:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-843</guid>
+          <source url="https://community.carloop.io/t/obd-schedule-pid-request/843.rss">OBD-Schedule PID Request?</source>
+        </item>
+        <item>
+          <title>Carloop Schematics - several versions exist - what&#39;s the correct one?</title>
+          <dc:creator><![CDATA[nlwelch]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>There are several versions of PDF’s for the Carloop hardware.  Some show that there is a Carloop2-v3.1 shows a CAN_INT indicating that there is an interrupt pin.  I’d like to be able to wake/sleep my device based on a CAN interrupt.  Is that possible?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-schematics-several-versions-exist-whats-the-correct-one/833">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-schematics-several-versions-exist-whats-the-correct-one/833</link>
+          <pubDate>Sat, 09 Mar 2019 02:13:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-833</guid>
+          <source url="https://community.carloop.io/t/carloop-schematics-several-versions-exist-whats-the-correct-one/833.rss">Carloop Schematics - several versions exist - what&#39;s the correct one?</source>
+        </item>
+        <item>
+          <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+          <dc:creator><![CDATA[nlwelch]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>We’ve noticed an odd condition when our application starts and enables CAN and there is another device on the bus whose baud rate is different.  We log the error passive condition and our app then attempts to transmit data (every second).  We do this as the Particle documentation states that the error state will only be corrected after an attempt to transmit.  If we correct the baud rate (in this case it’s just Kvaser and we set the baud rate to match), the error status continues to report CAN_ERROR_PASSIVE, even though the application successfully transmits CAN messages.</p>
+<p>We are currently coding for this condition and resetting our CAN channel.  Resetting simply consists of:</p>
+<ol>
+<li>
+<p>disableCAN() { executing a can.end(), then turn off the CAN enable pin }</p>
+</li>
+<li>
+<p>enableCAN() { turn on the CAN enable pin, execute can.begin(baudRate) }</p>
+</li>
+</ol>
+<p>Any ideas on why this is happening?</p>
+            <p><small>9 posts - 4 participants</small></p>
+            <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831</link>
+          <pubDate>Mon, 04 Mar 2019 20:45:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-831</guid>
+          <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+        </item>
+        <item>
+          <title>Failing to transmit CAN msg, but can receive?</title>
+          <dc:creator><![CDATA[nlwelch]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>I have a very simple test harness consisting of a CARLOOP with an Electron.  The test harness simply listens for CAN messages and when they are available it reports them through a Log.info.  It also attempts to write a simple message every 500ms.  I’m using KVaser CANKing to randomly generate messages and thus have another CAN node on the bus.  Using the serial monitor I can see that the Electron is receiving the messages.  However, I never see messages transmitted from the Electron.  Eventually the app reports a failed to send which I’m sure is due to the queue being full.</p>
+<p>Any advice on why the CAN receive is working, but the CAN transmit isn’t will be greatly appreciated!!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829</link>
+          <pubDate>Thu, 28 Feb 2019 20:57:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-829</guid>
+          <source url="https://community.carloop.io/t/failing-to-transmit-can-msg-but-can-receive/829.rss">Failing to transmit CAN msg, but can receive?</source>
+        </item>
+        <item>
+          <title>J1939 Library status?</title>
+          <dc:creator><![CDATA[UKTamo]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi All</p>
+<p>I’ve been trawling the internet between Particle and here for any info on a J1939 Library. I’m looking to pick up on gear position (and other details) from an aftermarket TCM which talks J1939.</p>
+<p>I appreciate there’s been some discussions in the past, but nothing conclusive. Is this something the Carloop libraries can do?</p>
+<p>Thanks in advance for any pointers. This is my first foray into CAN/J1939/etc</p>
+<p>Thomas</p>
+            <p><small>6 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/j1939-library-status/784">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/j1939-library-status/784</link>
+          <pubDate>Thu, 13 Dec 2018 22:26:15 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-784</guid>
+          <source url="https://community.carloop.io/t/j1939-library-status/784.rss">J1939 Library status?</source>
+        </item>
+        <item>
+          <title>Clearing Buffers</title>
+          <dc:creator><![CDATA[cachen]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hello, I am just getting started with Carloop and was able to get up and running pretty quickly.  However, I have run into an issue when I am trying to read the most recent value on the CANbus.  My code transmits a request for a parameter, then I try to read the response.</p>
+<p>The code below works however, it appears it gives me the oldest value in the buffer instead of the most recent one.  I put in a 1 second for loop that works but is inefficient.  Is there a way to clear out the buffer?  Or is there another issue with my code.<br>
+for (unsigned long start = millis(); millis() - start &lt; 1000;){<br>
+carloop.update();<br>
+CANMessage messageread;</p>
+<pre><code>     if (carloop.can().receive(messageread)){
+
+        if (messageread.id == 0x18EFF82E) {
+            Serial.print(messageread.data[4], HEX);
+            STread = messageread.data[4], HEX;
+        }
+    }
+
+}
+</code></pre>
+<p>The output I get in the serial monitor is below (the value is transmitted every 500ms and changed from 0 to 1 prior to calling this function).  Thanks in advance for any help.</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/5161bed968788ef9ca3149d0215c0aa38f21da9b.png" width="296" height="429"></p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/clearing-buffers/647">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/clearing-buffers/647</link>
+          <pubDate>Tue, 22 May 2018 14:21:30 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-647</guid>
+          <source url="https://community.carloop.io/t/clearing-buffers/647.rss">Clearing Buffers</source>
+        </item>
+        <item>
+          <title>Having trouble with my pi3 and slcand command to setup the carloop</title>
+          <dc:creator><![CDATA[dubb45]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>like the title says I’m having trouble with my pi3 and slcand command to setup the carloop</p>
+<p>heres a sample script I made to setup the carloop on startup.</p>
+<pre><code class="lang-auto">#!/bin/bash
+set -e
+clear
+program='Carloop'
+echo $program Setup By DUBB45
+ls /dev/ttyACM*
+sleep .5
+sudo slcand -o -c -s4 /dev/ttyACM* can0
+sleep .5
+sudo ip link set can0 up txqueuelen 1000
+sleep .5
+sudo ip link set can0 up txqueuelen 1000
+sleep 1
+ps aux | grep "$program" | grep -v grep &gt; /dev/null
+if [ $? -eq 0 ]; then
+    killall -9 "$program"
+fi
+exit 0
+</code></pre>
+<p>I’ve set it up plenty of times on my PI0 but my first time using the PI3</p>
+            <p><small>16 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/having-trouble-with-my-pi3-and-slcand-command-to-setup-the-carloop/443">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/having-trouble-with-my-pi3-and-slcand-command-to-setup-the-carloop/443</link>
+          <pubDate>Fri, 22 Sep 2017 01:42:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-443</guid>
+          <source url="https://community.carloop.io/t/having-trouble-with-my-pi3-and-slcand-command-to-setup-the-carloop/443.rss">Having trouble with my pi3 and slcand command to setup the carloop</source>
+        </item>
+        <item>
+          <title>OBD-II Protocols</title>
+          <dc:creator><![CDATA[amoux]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Can the carloop module support the five different communication protocols?  If yes, then, will it be possible to have carloop try to connect to the different protocol configurations and its variants until it connects to the compatible one?</p>
+<p><strong>SAE J1850 PWM</strong><br>
+<strong>SAE J1850 VPW</strong><br>
+<strong>ISO 9141-2</strong><br>
+<strong>ISO 14230 KWP2000</strong><br>
+<span class="hashtag-raw">#Variants</span> of ISO14230 with different identifier lenght and bus speed:</p>
+<ul>
+<li>ISO 14230-4 KWP (5 baud init,10.4 Kbaud)</li>
+<li>ISO 14230-4 KWP (fast init,10.4 Kbaud)<br>
+<strong>ISO 15765 CAN</strong><br>
+<span class="hashtag-raw">#Variants</span> of ISO15765 with different identifier lenght and bus speed:</li>
+<li>ISO 15765-4 CAN (11 bit ID,500 Kbaud)</li>
+<li>ISO 15765-4 CAN (29 bit ID,500 Kbaud)</li>
+<li>ISO 15765-4 CAN (11 bit ID,250 Kbaud)</li>
+<li>ISO 15765-4 CAN (29 bit ID,250 Kbaud)</li>
+</ul>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/obd-ii-protocols/431">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/obd-ii-protocols/431</link>
+          <pubDate>Mon, 28 Aug 2017 23:56:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-431</guid>
+          <source url="https://community.carloop.io/t/obd-ii-protocols/431.rss">OBD-II Protocols</source>
+        </item>
+        <item>
+          <title>https://github.com/CaringCaribou/caringcaribou</title>
+          <dc:creator><![CDATA[dubb45]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p><a href="https://github.com/CaringCaribou/caringcaribou" class="inline-onebox" rel="noopener nofollow ugc">GitHub - CaringCaribou/caringcaribou: A friendly car security exploration tool for the CAN bus</a></p>
+<p>I really like this it really helps when sniffing. Still getting used to everything it does but man it has some interesting features. Plus it works with carloops “socket can” sketch. Just bring up your device and then use the python script to run a command. Really dope</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427</link>
+          <pubDate>Sat, 26 Aug 2017 13:26:22 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-427</guid>
+          <source url="https://community.carloop.io/t/https-github-com-caringcaribou-caringcaribou/427.rss">https://github.com/CaringCaribou/caringcaribou</source>
+        </item>
+        <item>
+          <title>UPDATE: Brand new Carloop Docs page!</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hello Everyone!<br>
+We have a new Carloop Docs page!  We are really excited about it because it’s waaaay easier to edit than our previous one.   It is very much under construction, so it is a great opportunity to make a big impact in shaping how Carloop Docs look and feel!  Add your own tips and tricks that you think would be valuable to others!</p>
+<p>The URL is here <img src="//carloop-community.dyndns.org/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20">: <a href="http://docs.carloop.io/">http://docs.carloop.io/</a></p>
+<p>But this is what you really wanted <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20">: <a href="https://github.com/carloop/docs" class="inline-onebox">GitHub - carloop/docs: This is the repository of all documentation for Carloop Hardware and Software</a></p>
+<p>Documentation is one of the reasons open source projects succeed; everyone can add their input!  Think about how many people you can save from falling down the same rabbit hole we’ve all been in many times! <img src="//carloop-community.dyndns.org/images/emoji/twitter/rabbit.png?v=12" title=":rabbit:" class="emoji" alt=":rabbit:" loading="lazy" width="20" height="20"></p>
+<p>The Carloop Docs page content is all in Markdown files so it is super easy to add new files or improve on the existing <code>index.md</code> file on there.</p>
+<p>Looking forward to some great pull requests!<br>
+Thanks!!</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/update-brand-new-carloop-docs-page/400</link>
+          <pubDate>Sat, 29 Jul 2017 02:47:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-400</guid>
+          <source url="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400.rss">UPDATE: Brand new Carloop Docs page!</source>
+        </item>
+        <item>
+          <title>Some stuff from my 14 charger</title>
+          <dc:creator><![CDATA[dubb45]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>this comes from hours of testing but here it is. once I was “on the CANBUS” it was just a matter of hitting buttons off/on<br>
+Steering wheel buttons<br>
+318#00000000100CFF00 <span class="hashtag-raw">#up</span> arrow left side steering wheel<br>
+318#00000000040CFF00 <span class="hashtag-raw">#down</span> arrow left side steering wheel<br>
+318#00000000010CFF00 # back button left side steering wheel<br>
+318#00000000400CFF00 <span class="hashtag-raw">#forward</span> button left side<br>
+318#00000010000CFF00 <span class="hashtag-raw">#behind</span> steering wheel skip track<br>
+318#00000020000CFF00 <span class="hashtag-raw">#behind</span> steering wheel rewind<br>
+318#00000004000CFF00 <span class="hashtag-raw">#volume</span> up right side behind steering wheel<br>
+318#00000008000CFF00 <span class="hashtag-raw">#volume</span> down right side behind steering wheel<br>
+318#00000001000CFF00 <span class="hashtag-raw">#change</span> input behind steering wheel right side<br>
+318#00000040000CFF00 <span class="hashtag-raw">#behind</span> steering wheel middle button seek radio</p>
+<p>Shifter I have the 5-speed V6 I can always connect to the 8-speed and read the data, but it looks like it just increments the 4th number<br>
+332#18507840A9F900FF <span class="hashtag-raw">#park</span><br>
+332#18527940AFF900FF <span class="hashtag-raw">#reverse</span><br>
+332#184E7A40B1F900FF <span class="hashtag-raw">#neutral</span><br>
+332#184E7A40B1F900FF <span class="hashtag-raw">#drive</span><br>
+332#18317C40ADF900FF <span class="hashtag-raw">#manual</span> mode 1 gear<br>
+332#18327C40AFF900FF <span class="hashtag-raw">#manual</span> mode 2 gear<br>
+332#18337C40AFF900FF <span class="hashtag-raw">#manual</span> mode 3 gear<br>
+332#18347C40AFF900FF <span class="hashtag-raw">#manual</span> mode 4 gear<br>
+332#18357C40AFF900FF <span class="hashtag-raw">#manual</span> mode 5 gear</p>
+<p>Sport mode button touch screen this was from my radio the 4.3" (I used a auto tazer to activate sport mode on my V6) ((will log that code soon once I get a splitter)), but the light came on/off in the cluster with the command below.<br>
+2FA#0001000800000000 <span class="hashtag-raw">#off</span><br>
+2FA#0001004800000000 <span class="hashtag-raw">#on</span></p>
+<p>I need a bit of help creating a sketch that will listen for a certain ID and then send my own. if anyone can do that it would be appreciated. i think these should be good for 2011-14 dodge chargers.</p>
+            <p><small>13 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/some-stuff-from-my-14-charger/379">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/some-stuff-from-my-14-charger/379</link>
+          <pubDate>Fri, 07 Jul 2017 15:03:02 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-379</guid>
+          <source url="https://community.carloop.io/t/some-stuff-from-my-14-charger/379.rss">Some stuff from my 14 charger</source>
+        </item>
+        <item>
+          <title>Flashing Carloop via Webservice</title>
+          <dc:creator><![CDATA[egarl004]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hey again!</p>
+<p>Wondering if anyone could point me to some documentation regarding learning how to flash particle outside of the web ide but via a web service(i.e. not cli). I love how slick the interaction is with the <a href="http://carloop.io/apps">carloop.io/apps</a> page, and I’m trying to implement something similar with some added form fields.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/flashing-carloop-via-webservice/354">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/flashing-carloop-via-webservice/354</link>
+          <pubDate>Wed, 14 Jun 2017 04:01:39 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-354</guid>
+          <source url="https://community.carloop.io/t/flashing-carloop-via-webservice/354.rss">Flashing Carloop via Webservice</source>
+        </item>
+        <item>
+          <title>Dude, where&#39;s my car?</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Using Particle’s official Google Maps API library, you can now geolocate your car with Carloop. See link to guide: <a href="https://docs.particle.io/tutorials/integrations/google-maps/">https://docs.particle.io/tutorials/integrations/google-maps/</a></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/dude-wheres-my-car/323">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/dude-wheres-my-car/323</link>
+          <pubDate>Wed, 24 May 2017 13:26:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-323</guid>
+          <source url="https://community.carloop.io/t/dude-wheres-my-car/323.rss">Dude, where&#39;s my car?</source>
+        </item>
+        <item>
+          <title>Google Maps and Particle partner to bring location-aware capabilities to IoT Devices</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <aside class="onebox allowlistedgeneric" data-onebox-src="https://cloud.google.com/blog/products/maps-platform/google-maps-and-particle-partner-to?m=1">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/d3ee79f8c484eb32c303ae015e394e8bfc175f70.png" class="site-icon" data-dominant-color="998B72" width="32" height="32">
+
+      <a href="https://cloud.google.com/blog/products/maps-platform/google-maps-and-particle-partner-to?m=1" target="_blank" rel="noopener">Google Cloud Blog</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/340;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/8a111cd591042c32a93fbd5be4bd79eeda4eadba_2_690x340.png" class="thumbnail" data-dominant-color="FDFDFD" width="690" height="340"></div>
+
+<h3><a href="https://cloud.google.com/blog/products/maps-platform/google-maps-and-particle-partner-to?m=1" target="_blank" rel="noopener">Google Maps and Particle partner to bring location-aware capabilities to IoT...</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/google-maps-and-particle-partner-to-bring-location-aware-capabilities-to-iot-devices/309">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/google-maps-and-particle-partner-to-bring-location-aware-capabilities-to-iot-devices/309</link>
+          <pubDate>Wed, 17 May 2017 04:49:26 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-309</guid>
+          <source url="https://community.carloop.io/t/google-maps-and-particle-partner-to-bring-location-aware-capabilities-to-iot-devices/309.rss">Google Maps and Particle partner to bring location-aware capabilities to IoT Devices</source>
+        </item>
+        <item>
+          <title>SocketCAN / canplayer error: sendto: No buffer space available</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Sometimes when running cangen, canplayer or any other can-utils that sends many messages to the <code>can0</code> socket in linux, you may run into this error:<br>
+<code>sendto: No buffer space available</code></p>
+<p><strong>Solution</strong><br>
+Without changing anything else, type in the command line:<br>
+<code>sudo ifconfig can0 txqueuelen 1000</code></p>
+<p>This will do two things: increase queue length for packet transmission, and generate a default queueing discipline (qdisc) within the <code>can0</code> socket.  There is a great paper <a href="https://rtime.felk.cvut.cz/can/socketcan-qdisc-final.pdf">here</a> that explains in depth why this works.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/socketcan-canplayer-error-sendto-no-buffer-space-available/298">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/socketcan-canplayer-error-sendto-no-buffer-space-available/298</link>
+          <pubDate>Fri, 12 May 2017 07:02:27 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-298</guid>
+          <source url="https://community.carloop.io/t/socketcan-canplayer-error-sendto-no-buffer-space-available/298.rss">SocketCAN / canplayer error: sendto: No buffer space available</source>
+        </item>
+        <item>
+          <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Thanks to <a class="mention" href="https://community.carloop.io/u/elhajj33">@elhajj33</a> I started doing some research on available solutions to create an Access Point on the Particle Photon.  I came across this repo with all the tools necessary to setup a webpage hosted by the Photon! <a href="https://github.com/mebrunet/softap-setup-page" class="inline-onebox">GitHub - mebrunet/softap-setup-page: Builds a softap setup page for the Particle Photon</a></p>
+            <p><small>9 posts - 6 participants</small></p>
+            <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262</link>
+          <pubDate>Fri, 14 Apr 2017 06:14:39 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-262</guid>
+          <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+        </item>
+        <item>
+          <title>How do I setup Masks and Filters for the ID</title>
+          <dc:creator><![CDATA[Turbo3]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>How do I setup Masks and Filters for the CAN ID ? The sequence I would like to implement would look like this using the ELM AT format.</p>
+<p>ATCFxxx<br>
+ATCMyyy<br>
+ATMA</p>
+<p>Setup filter and mask xxx &amp; yyy on the 11 bit Message ID then enable the CAN hardware to pass only those frames that match that pattern to my app. Also how do I stop this monitor mode?</p>
+<p>How many filter/mask pairs does the STM32F205 support?</p>
+<p>Update:I have found the Particle documentation for CAN so I think that is what I need to read.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201</link>
+          <pubDate>Thu, 12 Jan 2017 02:30:22 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-201</guid>
+          <source url="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201.rss">How do I setup Masks and Filters for the ID</source>
+        </item>
+  </channel>
+</rss>

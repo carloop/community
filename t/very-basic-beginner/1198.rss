@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Very Basic Beginner</title>
+    <link>https://community.carloop.io/t/very-basic-beginner/1198</link>
+    <description>I am brand new to carloop, CAN sniffing, to etc. I have a carloop basic and would like to stay capturing CAN traffic on my 2015 Silverado. Despite connecting via the particle WiFi and USB cable, I cannot figure out how to get my raspberry pi 3 to recognize it in a way to allow me to capture can traffic. Any help is really appreciated.</description>
+    
+    <lastBuildDate>Sat, 30 Oct 2021 21:18:52 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/very-basic-beginner/1198.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Very Basic Beginner</title>
+        <dc:creator><![CDATA[dgill]]></dc:creator>
+        <description><![CDATA[
+            <p>I am brand new to carloop, CAN sniffing, to etc. I have a carloop basic and would like to stay capturing CAN traffic on my 2015 Silverado. Despite connecting via the particle WiFi and USB cable, I cannot figure out how to get my raspberry pi 3 to recognize it in a way to allow me to capture can traffic. Any help is really appreciated.</p>
+          <p><a href="https://community.carloop.io/t/very-basic-beginner/1198/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/very-basic-beginner/1198/1</link>
+        <pubDate>Sat, 30 Oct 2021 21:18:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1198-1</guid>
+        <source url="https://community.carloop.io/t/very-basic-beginner/1198.rss">Very Basic Beginner</source>
+      </item>
+  </channel>
+</rss>

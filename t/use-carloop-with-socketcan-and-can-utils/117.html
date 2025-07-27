@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Use Carloop with SocketCAN and can-utils - Software - Carloop Community</title>
+    <meta name="description" content="SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking. 
+You can now use your Carloop as a SocketCAN in&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="117.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="96cpy4gGvENCgwUMYUd344ONO">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="96cpy4gGvENCgwUMYUd344ONO"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Use Carloop with SocketCAN and can-utils&#39;" href="117.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1024x548.png">
+<meta property="og:image" content="/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1024x548.png">
+<meta property="og:url" content="/t/use-carloop-with-socketcan-and-can-utils/117">
+<meta name="twitter:url" content="/t/use-carloop-with-socketcan-and-can-utils/117">
+<meta property="og:title" content="Use Carloop with SocketCAN and can-utils">
+<meta name="twitter:title" content="Use Carloop with SocketCAN and can-utils">
+<meta property="og:description" content="SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking.  You can now use your Carloop as a SocketCAN interface!  Carloop firmware You’ll need special firmware on your Carloop to print received CAN messages to the USB serial port and allow transmitting CAN messages sent to the USB serial port.  Flash the SocketCAN serial firmware application to your Carloop. The easiest way is to g...">
+<meta name="twitter:description" content="SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking.  You can now use your Carloop as a SocketCAN interface!  Carloop firmware You’ll need special firmware on your Carloop to print received CAN messages to the USB serial port and allow transmitting CAN messages sent to the USB serial port.  Flash the SocketCAN serial firmware application to your Carloop. The easiest way is to g...">
+<meta property="og:article:section" content="Software">
+<meta property="og:article:section:color" content="0E76BD">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="2 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="2 ?">
+<meta property="article:published_time" content="2016-08-30T06:16:20+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="117.html">Use Carloop with SocketCAN and can-utils</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/software/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Software</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Use Carloop with SocketCAN and can-utils'>
+      <link itemprop='url' href='117.html'>
+      <meta itemprop='datePublished' content='2016-08-30T06:16:19Z'>
+        <meta itemprop='articleSection' content='Software'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="117.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/f06b31a9cdc9c63ba172655402602c16aa424d61.png">
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-08-30T06:16:20Z' class='post-time'>
+                    August 30, 2016,  6:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-20T13:30:36Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking.</p>
+<p>You can now use your Carloop as a SocketCAN interface!</p>
+<h3><a name="carloop-firmware-1" class="anchor" href="#carloop-firmware-1"></a>Carloop firmware</h3>
+<p>You’ll need special firmware on your Carloop to print received CAN messages to the USB serial port and allow transmitting CAN messages sent to the USB serial port.</p>
+<p>Flash the SocketCAN serial firmware application to your Carloop. The easiest way is to go to <a href="https://build.particle.io">https://build.particle.io</a>, select Libraries on the left, search and select Carloop, then open the <code>socketcan_serial.cpp</code> example, click the <code>Use this example</code> button then flash to your device.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f06b31a9cdc9c63ba172655402602c16aa424d61.png" data-download-href="//carloop-community.dyndns.org/uploads/default/f06b31a9cdc9c63ba172655402602c16aa424d61" title="socketcan example.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_690x369.png" width="690" height="369" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_690x369.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1035x553.png,//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1380x738.png" data-dominant-color="4C5351"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">socketcan example.png</span><span class="informations">1855×993 158 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<h3><a name="linux-computer-setup-2" class="anchor" href="#linux-computer-setup-2"></a>Linux computer setup</h3>
+<p>To use SocketCAN you’ll need a laptop running Linux. You could even do it from a Raspberry Pi.</p>
+<p>Install the <code>can-utils</code> package: <code>sudo apt install can-utils</code></p>
+<p>SocketCAN has drivers to talk to many different devices. Since the Photon/Electron creates a serial port when you connect it to your laptop we’ll use the serial line CAN driver (SLCAN).</p>
+<p>Connect your Carloop to your computer through the USB connector. A serial port named <code>/dev/ttyACM0</code> should now be available. Check with <code>ls /dev/ttyACM*</code></p>
+<p>Link the serial port with a CAN network interface with <code>sudo slcand -o -c -s6 /dev/ttyACM0 can0</code><br>
+(<code>slcand</code> comes from can-utils, <code>s6</code> is the speed <code>ttyACM0</code> is the serial port, <code>can0</code> is the CAN network interface)</p>
+<p>At this point you should see a CAN network when you do <code>ip addr</code></p>
+<pre><code class="lang-auto">3: can0: &lt;NOARP&gt; mtu 16 qdisc pfifo_fast state DOWN group default qlen 10
+    link/can 
+</code></pre>
+<p>When you are ready to start analyzing traffic, you bring up the CAN network with <code>sudo ip link can0 up</code></p>
+<p>You can then use other canutils like candump, cansniffer and cansend.</p>
+<p>Here’s for example what happens when I use <code>candump can0</code> on my Ford Fiesta:</p>
+<div class="youtube-onebox lazy-video-container" data-video-id="igTsTbvPPP0" data-video-title="Fiesta CAN dump" data-video-start-time="" data-provider-name="youtube">
+  <a href="https://www.youtube.com/watch?v=igTsTbvPPP0" target="_blank" rel="noopener">
+    <img class="youtube-thumbnail" src="//carloop-community.dyndns.org/uploads/default/original/1X/96eb38fdd8d56478e40f257a20229ae5350bcb34.jpeg" title="Fiesta CAN dump" data-dominant-color="331E2E" width="480" height="360">
+  </a>
+</div>
+
+<p>Here’s how I found out which message contains the accelerator pedal using <code>cansniffer -cae can0</code> which progressively hides messages that don’t change. The pedal was in message 0xFD byte 3.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c5d66f5e81897722d43d501d332811ded2647f22.png" data-download-href="//carloop-community.dyndns.org/uploads/default/c5d66f5e81897722d43d501d332811ded2647f22" title="cansniffer.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/c5d66f5e81897722d43d501d332811ded2647f22.png" width="690" height="345" data-dominant-color="46243B"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">cansniffer.png</span><span class="informations">772×386 40.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>To stop the CAN interface, do <code>sudo ip link can0 down</code>.</p>
+<p><code>slcand</code> tends to keep running even after you stop the CAN interface. You can close it with <code>sudo pkill slcand</code></p>
+<h3><a name="references-3" class="anchor" href="#references-3"></a>References</h3>
+<p>For details about the SLCAN serial protocol used between SocketCAN and the Carloop firmware, see <a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/socketcan_serial.cpp">the source of the Carloop firmware on GitHub</a>.</p>
+<p>For more details about the can-utils programs, <a href="https://github.com/linux-can/can-utils">see the can-utils repository on GitHub</a>. You can also search online for more info about a particular can-util program.</p>
+<p><a href="http://elinux.org/CAN_Bus">Some info about CAN on Linux</a> and <a href="http://elinux.org/Bringing_CAN_interface_up">how to use different types of CAN interfaces</a>.</p>
+<p><a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/networking/can.txt">The low-level documentation about SocketCAN</a> (this was too detailed for my needs).</p>
+<p>Here’s a lit of the CAN bus speed parameters that can be passed to <code>slcand</code>:</p>
+<ul>
+<li>
+<pre><code> -s0 10 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s1 20 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s2 50 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s3 100 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s4 125 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s5 250 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s6 500 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s7 800 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s8 1 Mbit/s
+</code></pre>
+</li>
+</ul>
+<p>Next steps would be to implement a UDP server in the Particle Photon to send the data wirelessly. <a href="https://github.com/dschanoeh/socketcand">The socketcand would be a good place to start for the protocol</a>.</p>
+<p><em>Now get out there and do amazing things!</em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/max.html'><span itemprop='name'>max</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-21T17:11:27Z' class='post-time'>
+                    September 21, 2017,  5:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-21T17:11:27Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hi,</p>
+<p>your great app works very well on my wifes’s but not at all with mine which is CAN 29bit, 500kb . does anybody manage to use it with an extended CAN ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-26T19:38:13Z' class='post-time'>
+                    September 26, 2017,  7:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-26T19:38:13Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/max.html">@max</a>,<br>
+Check out this thread which deals with extended CAN and a couple of related issues:<br>
+<a href="../handling-29-bit-extended-format/239/8.html" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/handling-29-bit-extended-format/239/8</a></p>
+<p>If that does not work, let us know where you are encountering the roadblock, with details.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/JerseyTechGuy.html'><span itemprop='name'>JerseyTechGuy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-08T18:47:28Z' class='post-time'>
+                    March 8, 2018,  6:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-08T18:47:28Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hoping someone can give me some guidance.  I was able to flash my Photon with the sketch no problem.  Because I don’t have a linux machine I installed a Debian Virtual Machine on my laptop.  I was able to connect to the USB port on the Photon, and install the carloop in my OBD port.  I found the device at tty/ACM1.  Everything else seemed to work correctly with the setup.  When I ran ip addr command, it showed the can network and the status was DOWN.</p>
+<p>Next I tried to bring it up.  The command to bring it up seemed to execute however after checking ip addr again the Status shows UNKNOWN.</p>
+<p>None of the utilities I ran seem to show any traffic on the network.</p>
+<p>Not sure how to proceed to diagnose the issue.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-09T04:14:06Z' class='post-time'>
+                    March 9, 2018,  4:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-09T04:14:06Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/JerseyTechGuy.html">@JerseyTechGuy</a>,</p>
+<p>I have not tried this myself, so I might be limited in how much I can help.<br>
+<a class="mention" href="../../u/dubb45.html">@dubb45</a> has done some of this; any ideas?</p>
+<p>One thing I might suggest is to start with a simpler example, such as getting the VIN number and make sure the Carloop is working okay.  That would let you know if Carloop is working and might give clues if your car is using extended 29-bit CAN messages.  Maybe you have already done this.</p>
+<p>Once we know the basics are working, then it would give us a baseline to help diagnose what is happening in this case.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/JerseyTechGuy.html'><span itemprop='name'>JerseyTechGuy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-09T14:08:37Z' class='post-time'>
+                    March 9, 2018,  2:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-09T14:08:37Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I may certainly be diving in too deep to start.  Yesterday I build an CanBus Simulator based on an article I found online.  It works great with an Arduino and CanBus Shield.  I was able to connect it to an ELM327 Bluetooth Dongle and use an OBD Scanner on my iPhone to read the simulated values.  So this I know works.  I then plugged the CarLoop into this same test unit and did not get anything back.  I’ll try and start more simply.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/dubb45.html'><span itemprop='name'>dubb45</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-09T16:24:53Z' class='post-time'>
+                    March 9, 2018,  4:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-09T16:24:53Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ive ran into that same problem before! using my mac and a VM make sure to install the VM tools with it too. i was using parallels desktop and that did the trick for me.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/JerseyTechGuy.html'><span itemprop='name'>JerseyTechGuy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-12T23:33:10Z' class='post-time'>
+                    March 12, 2018, 11:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-12T23:33:10Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I might try Parallels instead of VMware.  Thanks for the tip.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/porgraming.html'><span itemprop='name'>porgraming</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-25T14:10:07Z' class='post-time'>
+                    April 25, 2018,  2:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-25T14:10:07Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve found out that there is a Windows and Mac program that allowed to communicate directly from Windows or Mac’s to SLCAN devices.<br>
+The program is CANtact (Can be found in <a href="https://github.com/linklayer/cantact-app/releases" class="inline-onebox" rel="noopener nofollow ugc">Releases · linklayer/cantact-app · GitHub</a>).<br>
+I’m still checking it out but it seems like a better solution than running VM every time.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-26T04:44:57Z' class='post-time'>
+                    April 26, 2018,  4:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-26T04:44:57Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/porgraming.html">@porgraming</a>,</p>
+<p>Thanks, I will have to check that out some time soon!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

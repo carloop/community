@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop + Electron + GPS + Bluetooth</title>
+    <link>https://community.carloop.io/t/carloop-electron-gps-bluetooth/514</link>
+    <description>Hi,
+
+I have ordered the Carloop, Electron, and GPS. I need to add Bluetooth to the mix and I am looking for some advice.
+
+I need one bit of clarification though: Obviously the pins of the Electron that are hanging off the end are available for my own use. However, am I correct in assuming that the unmentioned PINs that are plugged into the Carloop are also available for my own use?
+
+&lt;img src=&#39;/uploads/default/original/1X/484dfe69035f4b827caae3eaea5048ba230b81f4.png&#39;&gt;
+
+Are any of the unused pins mentioned below connected to anything, can I connect a jumper to the empty female connection that is adjacent (I see that your diagram has *2 beside each, does that mean both female connectors are connected)?
+
+Reference: https://github.com
+/carloop/hardware/blob/master/Carloop.v2/Carloop-v2.3.pdf
+/carloop/hardware/blob/master/GPS_Shield/GPS_Shield.v1.pdf
+
+VIN
+GND
+TX (GPS TX)
+RX (GPS RX)
+WKP
+DAC
+A5 (GPS Shield)
+A4 (GPS Shield)
+A3 (GPS Shield)
+A2 (GPS Shield)
+A1 (VBAT)
+A0 (GPS EN)
+B5 (Unused / Off end of Carloop / Available)
+B4 (Unused / Off end of Carloop / Available)
+B3 (Unused / Off end of Carloop / Available)
+B2 (Unused / Off end of Carloop / Available)
+B1 (Unused / Off end of Carloop / Available)
+B0 (Unused / Off end of Carloop / Available)
+
+3V3
+RST
+VBAT
+GND
+D7 (Unused / Available)
+D6 (Unused / Available)
+D5 (Unused / Available)
+D4 (GPS Shield)
+D3 (GPS Shield)
+D2 (CAN RX)
+D1 (CAN TX)
+D0 (CAN)
+C5 (Unused / Off end of Carloop / Available)
+C4 (Unused / Off end of Carloop / Available)
+C3 (Unused / Off end of Carloop / Available)
+C2 (Unused / Off end of Carloop / Available)
+C1 (Unused / Off end of Carloop / Available)
+C0 (Unused / Off end of Carloop / Available)
+
+
+
+
+
+
+I am looking to connect either an &quot;HC-05 Bluetooth&quot; chip or an &quot;Adafruit Bluefruit LE UART Friend - Bluetooth Low Energy (BLE)&quot; chip to the Electron. I was thinking of using C0-C1 or C2-C3 for my serial connection as described here: 
+
+Reference: https://github.com/rickkas7/serial_tutorial
+
+Do you see any issue with this setup?
+
+Thanks!</description>
+    
+    <lastBuildDate>Sun, 18 Feb 2018 06:53:09 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop + Electron + GPS + Bluetooth</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nathan">@Nathan</a>,</p>
+<p>Have you considered posting the working code for the HC-05 on Github so that it is available to others?</p>
+<p>Also, you could post your code and schematic using the Bluefruit LE UART Friend and see if the community can spot something to get that working also…</p>
+          <p><a href="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/4</link>
+        <pubDate>Sun, 18 Feb 2018 06:53:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-514-4</guid>
+        <source url="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514.rss">Carloop + Electron + GPS + Bluetooth</source>
+      </item>
+      <item>
+        <title>Carloop + Electron + GPS + Bluetooth</title>
+        <dc:creator><![CDATA[nathan]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for your help!</p>
+<p>I did have trouble with the Adafruit Bluefruit LE UART Friend, I could not receive but sending worked fine - perhaps a wiring or code issue, not sure.</p>
+<p>I ended up connecting a a HC-05 to C0/C1 and it works like a charm so far.</p>
+<p>As a proof of concept for anyone else out there looking for Bluetooth support, this works. If I hit any snags or find useful tips as I go along I will be sure to share them with the community.</p>
+          <p><a href="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/3</link>
+        <pubDate>Tue, 13 Feb 2018 22:07:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-514-3</guid>
+        <source url="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514.rss">Carloop + Electron + GPS + Bluetooth</source>
+      </item>
+      <item>
+        <title>Carloop + Electron + GPS + Bluetooth</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nathan">@Nathan</a> ,</p>
+<p>Your approach looks fine.  I would use the C0/1 or C2/3 combinations and make sure your code communicates with Serial4 or Serial5 as appropriate.  Rick’s information that you found is considered to be the authority; he knows his stuff.</p>
+<p>I would pay attention to how much serial data traffic is going to be going on.  You will have a very busy Electron since you will have both the GPS and your BLE module running off of Serial interfaces at the same time.  Likewise, you have the accelerometer running on an SPI bus and adding SD card access (also SPI) at the same time could lead to a performance hit.</p>
+<p>Note that you won’t have the same capability on a Photon to run an extra serial interface.  You can do it using software instead of hardware serial using the ParticleSoftSerial library, but the Photon will definitely take a performance hit doing that.</p>
+<p>Double check your list of pins.  The drawing shows the chip select/enable lines on D4 &amp; D5, but your list shows them on D3 &amp; D4.</p>
+          <p><a href="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/2</link>
+        <pubDate>Fri, 26 Jan 2018 04:02:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-514-2</guid>
+        <source url="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514.rss">Carloop + Electron + GPS + Bluetooth</source>
+      </item>
+      <item>
+        <title>Carloop + Electron + GPS + Bluetooth</title>
+        <dc:creator><![CDATA[nathan]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>I have ordered the Carloop, Electron, and GPS. I need to add Bluetooth to the mix and I am looking for some advice.</p>
+<p>I need one bit of clarification though: Obviously the pins of the Electron that are hanging off the end are available for my own use. However, am I correct in assuming that the unmentioned PINs that are plugged into the Carloop are also available for my own use?</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/484dfe69035f4b827caae3eaea5048ba230b81f4.png" width="500" height="413"></p>
+<p>Are any of the unused pins mentioned below connected to anything, can I connect a jumper to the empty female connection that is adjacent (I see that your diagram has *2 beside each, does that mean both female connectors are connected)?</p>
+<p>Reference: <a href="https://github.com" rel="noopener nofollow ugc">https://github.com</a><br>
+/carloop/hardware/blob/master/Carloop.v2/Carloop-v2.3.pdf<br>
+/carloop/hardware/blob/master/GPS_Shield/GPS_Shield.v1.pdf</p>
+<p>VIN<br>
+GND<br>
+TX (GPS TX)<br>
+RX (GPS RX)<br>
+WKP<br>
+DAC<br>
+A5 (GPS Shield)<br>
+A4 (GPS Shield)<br>
+A3 (GPS Shield)<br>
+A2 (GPS Shield)<br>
+A1 (VBAT)<br>
+A0 (GPS EN)<br>
+B5 (Unused / Off end of Carloop / Available)<br>
+B4 (Unused / Off end of Carloop / Available)<br>
+B3 (Unused / Off end of Carloop / Available)<br>
+B2 (Unused / Off end of Carloop / Available)<br>
+B1 (Unused / Off end of Carloop / Available)<br>
+B0 (Unused / Off end of Carloop / Available)</p>
+<p>3V3<br>
+RST<br>
+VBAT<br>
+GND<br>
+D7 (Unused / Available)<br>
+D6 (Unused / Available)<br>
+D5 (Unused / Available)<br>
+D4 (GPS Shield)<br>
+D3 (GPS Shield)<br>
+D2 (CAN RX)<br>
+D1 (CAN TX)<br>
+D0 (CAN)<br>
+C5 (Unused / Off end of Carloop / Available)<br>
+C4 (Unused / Off end of Carloop / Available)<br>
+C3 (Unused / Off end of Carloop / Available)<br>
+C2 (Unused / Off end of Carloop / Available)<br>
+C1 (Unused / Off end of Carloop / Available)<br>
+C0 (Unused / Off end of Carloop / Available)</p>
+<p>I am looking to connect either an “HC-05 Bluetooth” chip or an “Adafruit Bluefruit LE UART Friend - Bluetooth Low Energy (BLE)” chip to the Electron. I was thinking of using C0-C1 or C2-C3 for my serial connection as described here:</p>
+<p>Reference: <a href="https://github.com/rickkas7/serial_tutorial" class="inline-onebox" rel="noopener nofollow ugc">GitHub - rickkas7/serial_tutorial: Particle Photon and Electron serial tutorial</a></p>
+<p>Do you see any issue with this setup?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-electron-gps-bluetooth/514/1</link>
+        <pubDate>Mon, 22 Jan 2018 19:58:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-514-1</guid>
+        <source url="https://community.carloop.io/t/carloop-electron-gps-bluetooth/514.rss">Carloop + Electron + GPS + Bluetooth</source>
+      </item>
+  </channel>
+</rss>

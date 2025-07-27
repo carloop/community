@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>2018 Ford Fiesta ST Boost and RPM gauge - Getting Started - Carloop Community</title>
+    <meta name="description" content="I’m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I’m not sure what the OBD&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="677.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="5fK6x69MThgcfYM1avpmdKvwv">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="5fK6x69MThgcfYM1avpmdKvwv"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;2018 Ford Fiesta ST Boost and RPM gauge&#39;" href="677.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677">
+<meta name="twitter:url" content="/t/2018-ford-fiesta-st-boost-and-rpm-gauge/677">
+<meta property="og:title" content="2018 Ford Fiesta ST Boost and RPM gauge">
+<meta name="twitter:title" content="2018 Ford Fiesta ST Boost and RPM gauge">
+<meta property="og:description" content="I’m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I’m not sure what the OBD auto header would be that they use, or what CAN ID to send this data with. I’ve tried sending via CAN ID 0x700 ~ 0x7f7 with no response seen above 0x700.  Torque PID settings PID: 221440 Long Name: Boost (that&#39;s what I use) Short Name: MAP Min Value: 0.0 Max Value: 30.0 Scale Fa...">
+<meta name="twitter:description" content="I’m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I’m not sure what the OBD auto header would be that they use, or what CAN ID to send this data with. I’ve tried sending via CAN ID 0x700 ~ 0x7f7 with no response seen above 0x700.  Torque PID settings PID: 221440 Long Name: Boost (that&#39;s what I use) Short Name: MAP Min Value: 0.0 Max Value: 30.0 Scale Fa...">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta property="article:published_time" content="2018-07-08T03:15:35+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="677.html">2018 Ford Fiesta ST Boost and RPM gauge</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='2018 Ford Fiesta ST Boost and RPM gauge'>
+      <link itemprop='url' href='677.html'>
+      <meta itemprop='datePublished' content='2018-07-08T03:15:35Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/BDub.html'><span itemprop='name'>BDub</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="677.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2018-07-08T03:15:35Z' class='post-time'>
+                    July 8, 2018,  3:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-08T22:24:16Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m working on getting a boost gauge on my 2018 Ford Fiesta ST, and I have some progress but mainly still stuck.  I found that some users are reporting these values work with the Torque app, but I’m not sure what the <code>OBD auto</code> header would be that they use, or what CAN ID to send this data with. I’ve tried sending via CAN ID 0x700 ~ 0x7f7 with no response seen above 0x700.</p>
+<h3><a name="torque-pid-settings-1" class="anchor" href="#torque-pid-settings-1"></a>Torque PID settings</h3>
+<pre><code class="lang-auto">PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+</code></pre>
+<h3><a name="my-current-wip-app-2" class="anchor" href="#my-current-wip-app-2"></a>My current WIP app</h3>
+<p>which just send data to the USB Serial output</p>
+<pre><code class="lang-auto">#include "Particle.h"
+#include &lt;carloop.h&gt;
+
+/*
+PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+*/
+
+// Don't block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+unsigned int MSG_ID = 0x7df;
+int rpm = 0;
+float mph = 0.0f;
+
+// Send a message at a regular time interval
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 1000; /* ms */
+    uint32_t now = millis();
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        CANMessage message;
+
+        // A CAN message has an ID that identifies the content inside
+        message.id = MSG_ID;
+
+        // It can have from 0 to 8 data bytes
+        message.len = 8;
+
+        // Pass the data to be transmitted in the data array
+        message.data[0] = 0x03;
+        message.data[1] = 0x22;
+        message.data[2] = 0x14; //boost
+        message.data[3] = 0x40;
+        // message.data[2] = 0x04; // transmission oil temp
+        // message.data[3] = 0x61;
+        
+        // message.data[4] = 0x55;
+        // message.data[5] = 0x55;
+        // message.data[6] = 0x55;
+        // message.data[7] = 0x55;
+
+        // Send the message on the bus!
+        carloop.can().transmit(message);
+
+        lastTransmitTime = now;
+        
+        if (MSG_ID &lt; 0x7e7) {
+            MSG_ID++;
+        } else {
+            MSG_ID = 0x7df;
+        }
+        
+        // Serial.printlnf("sent for message id: %03x", MSG_ID);
+    }
+}
+
+void recvMessage() {
+    CANMessage message;
+    if (carloop.can().receive(message)) {
+        if (message.id &gt;= 0x700) {
+            Serial.printf("time:%f,id:0x%03x,data:", millis() / 1000.0, message.id);
+            for (int i = 0; i &lt; message.len; i++) {
+                if (i == 0) {
+                    Serial.print("0x");
+                }
+                Serial.printf("%02x", message.data[i]);
+            }
+            Serial.println();
+        } else if (message.id == 0x201) {
+            rpm = (message.data[0] &lt;&lt; 8) + message.data[1];
+        } else if (message.id == 0x20f) {
+            mph = ((((message.data[2] &lt;&lt; 8) + message.data[3]) - 10000) / 100) * 0.621371f;
+        }
+        Serial.printlnf("RPM: %5d  MPH: %5.1f", rpm, mph);
+        // delay(50);
+    }
+}
+
+void setup() {
+    carloop.begin();
+}
+
+void loop() {
+    
+    // Send every 1 second
+    sendMessage();
+    
+    // Receive as fast as possible
+    recvMessage();
+}
+</code></pre>
+<p>I can read the RPM and MPH, but they update too slowly to be useful.  I’m sure it’s possible to query them directly, but my crash course today hasn’t yielded the answer.  My brain is telling me I can’t just send a message to CAN ID 0x201 to query the RPM, that would be like writing a new RPM value.</p>
+<h3><a name="resources-3" class="anchor" href="#resources-3"></a>Resources</h3>
+<p><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" rel="noopener nofollow ugc">Wiki OBD-II PIDs</a><br>
+<a href="https://groups.google.com/d/msg/openxc/FrZA8-pDs6A/G_iAsVucN_EJ" rel="noopener nofollow ugc">Ford Fiesta PIDs</a><br>
+<a href="../../documents/200304PIDs.pdf" rel="noopener nofollow ugc">Ford PIDs 2003-2004</a><br>
+<a href="https://itunes.apple.com/us/book/elm327-v2.2/id1195663285?ls=1&mt=11" rel="noopener nofollow ugc">ELM327 v2.2 Datasheet</a> (This is a pretty informative datasheet that explains a lot about how CAN / OBD / PID works in cars)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/BDub.html'><span itemprop='name'>BDub</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-08T21:48:50Z' class='post-time'>
+                    July 8, 2018,  9:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-08T21:48:50Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did some more reading today and learned about Mode 1 PID’s.  My car supports RPM and SPEED mode 1 PID’s, so it’s pretty easy to make that request and send the info to a Gauge on the Blynk app.</p>
+<h3><a name="heres-the-app-i-started-with-1" class="anchor" href="#heres-the-app-i-started-with-1"></a>Here’s the app I started with:</h3>
+<p><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino" class="inline-onebox" rel="noopener nofollow ugc">carloop/MODE_1_to_Blynk.ino at master · egarl004/carloop · GitHub</a></p>
+<h3><a name="reduce-the-number-of-pids-to-polls-here-to-2-2" class="anchor" href="#reduce-the-number-of-pids-to-polls-here-to-2-2"></a>Reduce the number of PIDs to polls here to 2:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L316-L317</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="316" style="counter-reset: li-counter 315 ;">
+          <li>const size_t NUM_PIDS_TO_REQUEST = 102;</li>
+          <li></li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="comment-out-the-pids-in-the-array-to-just-the-rpm-and-speed-3" class="anchor" href="#comment-out-the-pids-in-the-array-to-just-the-rpm-and-speed-3"></a>Comment out the PIDs in the array to just the RPM and SPEED:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L335-L336</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="335" style="counter-reset: li-counter 334 ;">
+          <li>OBD_PID_ENGINE_RPM,</li>
+          <li>OBD_PID_VEHICLE_SPEED,</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="comment-out-everything-except-for-rpm-and-speed-4" class="anchor" href="#comment-out-everything-except-for-rpm-and-speed-4"></a>Comment out everything except for RPM and SPEED:</h3>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L583-L584</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="583" style="counter-reset: li-counter 582 ;">
+          <li>	    String StringENGINE_RPM                             = String(ENGINE_RPM);</li>
+          <li>	    String StringVEHICLE_SPEED                          = String(VEHICLE_SPEED);</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I found that a decimal place on these values was annoying, so you can format that away like this:</p>
+<pre><code class="lang-auto">String StringENGINE_RPM    = String::format("%.0f", ENGINE_RPM);
+String StringVEHICLE_SPEED = String::format("%.0f", VEHICLE_SPEED);
+</code></pre>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L621-L622</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="621" style="counter-reset: li-counter 620 ;">
+          <li>	    Blynk.virtualWrite(V7, StringENGINE_RPM);</li>
+          <li>	    Blynk.virtualWrite(V8, StringVEHICLE_SPEED);</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="change-the-update-rate-to-100-ms-per-value-or-in-this-case-200ms-5" class="anchor" href="#change-the-update-rate-to-100-ms-per-value-or-in-this-case-200ms-5"></a>Change the update rate to 100 ms per value, or in this case 200ms</h3>
+<p>I found it will update at 100 ms for just one value (which might be nice for a dedicated RPM display).</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L557-L558</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="557" style="counter-reset: li-counter 556 ;">
+          <li>void publishValuesAtInterval() {</li>
+          <li>    static const unsigned long interval2 = 10000;</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="other-edits-to-make-the-app-compile-and-function-properly-6" class="anchor" href="#other-edits-to-make-the-app-compile-and-function-properly-6"></a>Other edits to make the app compile and function properly:</h3>
+<p>There were some other edits I made as well, like commenting out</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L564-L564</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="564" style="counter-reset: li-counter 563 ;">
+          <li>publishValues();</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>And moving Blynk.begin() after Particle.connect() … necessary when using SEMI_AUTOMATIC mode, otherwise the system hangs in a disconnected from WiFi state trying to connect to Blynk.</p><aside class="onebox githubblob" data-onebox-src="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442">
+  <header class="source">
+
+      <a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442" target="_blank" rel="noopener nofollow ugc">egarl004/carloop/blob/master/MODE_1_to_Blynk.ino#L439-L442</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-ino">
+      <ol class="start lines" start="439" style="counter-reset: li-counter 438 ;">
+          <li>    Blynk.begin(auth);</li>
+          <li>	Serial.begin(115200);</li>
+          <li>	carloop.begin();</li>
+          <li>	Particle.connect();</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<hr>
+<p>Still looking to figure out how to get that boost gauge though …</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/BDub.html'><span itemprop='name'>BDub</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-09T00:46:12Z' class='post-time'>
+                    July 9, 2018, 12:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-09T00:46:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So earlier I did cycle through CAN ID <strong>0x7df to 0x7e7</strong> and also <strong>0x700 to 0x7e7</strong>, but was thinking maybe I should have tried one of them for a longer period of time.</p>
+<p>After reading up more about how to talk to the ECU directly, I decided to change the code to just use 0x7e0 as the CAN ID for this boost request that uses the extended format.</p>
+<p>I also made sure I’m receiving right after transmitting so as not to miss any response from the ECU.</p>
+<p>I started getting a response right away from 0x7e8</p>
+<h3><a name="id0x7e8data0x037f223100000000-1" class="anchor" href="#id0x7e8data0x037f223100000000-1"></a>id:0x7e8,data:0x037f223100000000</h3>
+<p>This is great! Now I need to know what this means because this doesn’t seem to be the Boost data since it never changes from this value.  I’m guessing this is some kind of prompt or maybe a flow control message?  Not sure why it would need to be though since boost is contained in two bytes.</p>
+<p>So 0x03 bytes?, 0x7f, 0x22, 0x31.  I’ll have to dig into this a bit later after a movie.  If anyone is following along and can point me to the decoding reference for this, please feel free to drop in a link.</p>
+<h3><a name="updated-boost-code-2" class="anchor" href="#updated-boost-code-2"></a>Updated Boost Code:</h3>
+<pre><code class="lang-auto">#include "Particle.h"
+#include &lt;carloop.h&gt;
+
+/*
+PID: 221440
+Long Name: Boost (that's what I use)
+Short Name: MAP
+Min Value: 0.0
+Max Value: 30.0
+Scale Factor: x1
+Unit Type: psi
+Equation: (((A*256)+B*0.03625)-BARO()
+OBD Header: Auto
+*/
+
+// Getting response now!
+// id:0x7e8,data:0x037f223100000000
+
+// Don't block the main program while connecting to WiFi/cellular.
+// This way the main program runs on the Carloop even outside of WiFi range.
+SYSTEM_THREAD(ENABLED);
+
+// Tell the program which revision of Carloop you are using.
+Carloop&lt;CarloopRevision2&gt; carloop;
+
+unsigned int MSG_ID = 0x7e0;
+int rpm = 0;
+float mph = 0.0f;
+
+// Send a message at a regular time interval
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 200; /* ms */
+    uint32_t now = millis();
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        digitalWrite(D7, !digitalRead(D7));
+        CANMessage message;
+
+        // A CAN message has an ID that identifies the content inside
+        message.id = MSG_ID;
+
+        // It can have from 0 to 8 data bytes
+        message.len = 8;
+
+        // Pass the data to be transmitted in the data array
+        message.data[0] = 0x03;
+        message.data[1] = 0x22;
+        message.data[2] = 0x14; //boost
+        message.data[3] = 0x40;
+        // message.data[2] = 0x04; // transmission oil temp
+        // message.data[3] = 0x61;
+
+        // Send the message on the bus!
+        carloop.can().transmit(message);
+
+        lastTransmitTime = now;
+        
+        // Serial.printlnf("sent for message id: %03x", MSG_ID);
+    }
+}
+
+void recvMessage() {
+    uint32_t startRecv = millis();
+    const uint32_t RECV_TIMEOUT = 100UL;
+    CANMessage message;
+    while (millis() - startRecv &lt;= RECV_TIMEOUT) {
+        if (carloop.can().receive(message)) {
+            if (message.id &gt;= 0x700) {
+                Serial.printf("time:%f,id:0x%03x,data:", millis() / 1000.0, message.id);
+                for (int i = 0; i &lt; message.len; i++) {
+                    if (i == 0) {
+                        Serial.print("0x");
+                    }
+                    Serial.printf("%02x", message.data[i]);
+                }
+                Serial.println();
+            }
+        }
+    }
+}
+
+void setup() {
+    pinMode(D7, OUTPUT);
+    carloop.begin();
+}
+
+void loop() {
+    
+    // Send every 1 second
+    sendMessage();
+    
+    // Receive as fast as possible
+    recvMessage();
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/BDub.html'><span itemprop='name'>BDub</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-09T03:32:10Z' class='post-time'>
+                    July 9, 2018,  3:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-09T05:51:16Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs#Response" class="inline-onebox" rel="noopener nofollow ugc">OBD-II PIDs - Wikipedia</a></p>
+<blockquote>
+<p>7Fh this a general response usually indicating the module doesn’t recognize the request.</p>
+</blockquote>
+<p>Hmm, I might be back at square one.  I think I’ll try the other CAN ID’s 0x7e1 - 0x7e7 next.</p>
+<hr>
+<p>EDIT: So it seems like maybe my car doesn’t support that extended Boost PID, because with 0x7e0 and a different PID I’m getting a valid response.  Others are saying it works though, so I’m going to see if it works in the native Torque Pro app with a Vgate WiFi OBDII Elm327 dongle.  I can sniff the traffic hopefully then with the Carloop on a Y-cable <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<pre><code class="lang-auto">CAN ID: 0x7e0 PID: 220461
+Response: id:0x7e8,data:0x0562046107aa0000
+</code></pre>
+<p>This is supposedly a Transmission Temperature, and when I run 0x07 and 0xAA through the equation and convert to Fahrenheit it comes out to 87.18F which seems pretty reasonable considering the outside temp was rising recently and at 92F.  My car had been off for quite a while.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/BDub.html'><span itemprop='name'>BDub</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-23T15:51:36Z' class='post-time'>
+                    July 23, 2018,  3:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-23T15:51:36Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="BDub" data-post="4" data-topic="677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/bdub/48/302_2.png" class="avatar"> BDub:</div>
+<blockquote>
+<p>Torque Pro app with a Vgate WiFi OBDII Elm327 dongle</p>
+</blockquote>
+</aside>
+<p>BTW just an update.  It also doesn’t work with the dongle and Torque Pro, but Torque Pro does have a boost gauge that does seem to work.  I don’t know how accurate it is though.  I’ll have to reverse engineer how they do that.  I’m almost thinking a mechanical boost gauge is going to be better though, and I’m now more interested in making a dedicated Neopixel RPM heads up display.  I’ll update on that when I receive my pixel strips and start working on it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

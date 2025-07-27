@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How do I setup Masks and Filters for the ID</title>
+    <link>https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201</link>
+    <description>How do I setup Masks and Filters for the CAN ID ? The sequence I would like to implement would look like this using the ELM AT format.
+
+ATCFxxx
+ATCMyyy
+ATMA
+
+Setup filter and mask xxx &amp; yyy on the 11 bit Message ID then enable the CAN hardware to pass only those frames that match that pattern to my app. Also how do I stop this monitor mode?
+
+How many filter/mask pairs does the STM32F205 support?
+
+Update:I have found the Particle documentation for CAN so I think that is what I need to read.</description>
+    
+    <lastBuildDate>Sat, 14 Jan 2017 00:31:51 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How do I setup Masks and Filters for the ID</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/turbo3">@Turbo3</a>,<br>
+Welcome to the Carloop community! There are many ways to filter CAN messages.  Here is some sample code that might help although it is not in the ELM AT format: <a href="https://github.com/carloop/app-simple-transmit/blob/master/src/app-simple-transmit.cpp" class="inline-onebox">app-simple-transmit/src/app-simple-transmit.cpp at master · carloop/app-simple-transmit · GitHub</a></p>
+<p>Is this helpful or did I miss your question completely?</p>
+<p>Alan</p>
+          <p><a href="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201/2</link>
+        <pubDate>Sat, 14 Jan 2017 00:31:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-201-2</guid>
+        <source url="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201.rss">How do I setup Masks and Filters for the ID</source>
+      </item>
+      <item>
+        <title>How do I setup Masks and Filters for the ID</title>
+        <dc:creator><![CDATA[Turbo3]]></dc:creator>
+        <description><![CDATA[
+            <p>How do I setup Masks and Filters for the CAN ID ? The sequence I would like to implement would look like this using the ELM AT format.</p>
+<p>ATCFxxx<br>
+ATCMyyy<br>
+ATMA</p>
+<p>Setup filter and mask xxx &amp; yyy on the 11 bit Message ID then enable the CAN hardware to pass only those frames that match that pattern to my app. Also how do I stop this monitor mode?</p>
+<p>How many filter/mask pairs does the STM32F205 support?</p>
+<p>Update:I have found the Particle documentation for CAN so I think that is what I need to read.</p>
+          <p><a href="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201/1</link>
+        <pubDate>Thu, 12 Jan 2017 02:30:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-201-1</guid>
+        <source url="https://community.carloop.io/t/how-do-i-setup-masks-and-filters-for-the-id/201.rss">How do I setup Masks and Filters for the ID</source>
+      </item>
+  </channel>
+</rss>

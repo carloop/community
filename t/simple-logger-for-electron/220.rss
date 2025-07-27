@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Simple Logger For Electron?</title>
+    <link>https://community.carloop.io/t/simple-logger-for-electron/220</link>
+    <description>Has anyone been able to modify the simple CAN logger to to use the IP address from the Electron since it doesn&#39;t have wifi? 
+
+https://github.com/carloop/simple_logger
+
+Or better yet make it a web app like those at carloop.io? 
+
+This is a fairly awkward setup:
+&lt;img src=&quot;/uploads/default/original/1X/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469.JPG&quot; width=&quot;375&quot; height=&quot;500&quot;&gt;</description>
+    
+    <lastBuildDate>Wed, 22 Feb 2017 17:20:12 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/simple-logger-for-electron/220.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>By the way, here is the link to the Photon <a href="https://store.carloop.io/products/particle-photon">https://store.carloop.io/products/particle-photon</a> to make your life easier <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"> . Should arrive before the weekend if ordered Priority.</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/8</link>
+        <pubDate>Wed, 22 Feb 2017 17:20:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-8</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Good point!  We are thinking on ways to improve the kits we sell, for sure!</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/7</link>
+        <pubDate>Wed, 22 Feb 2017 17:19:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-7</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[jgamblin]]></dc:creator>
+        <description><![CDATA[
+            <p>I think I am going to pick up a photon then once it gets in get back to hacking.   (Wouldnt be a bad combo kit though to sell!)</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/6</link>
+        <pubDate>Wed, 22 Feb 2017 17:17:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-6</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Yeah, you’re probably right.  With a a photon you could access the data via a TCP server.  The nice thing is you could unplug the Electron and plug a Photon in.  You would be able to re-use the code once you have something that works on the Photon.</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/5</link>
+        <pubDate>Wed, 22 Feb 2017 16:52:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-5</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[jgamblin]]></dc:creator>
+        <description><![CDATA[
+            <p>I have plenty of USB cables… I guess at this early stage having the wifi version would have been easier! : )</p>
+<p>I will look at the socketCAN tonight.  I am just getting started and am looking to pull data at this point! <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/4</link>
+        <pubDate>Wed, 22 Feb 2017 16:47:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-4</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/jgamblin">@jgamblin</a><br>
+Welcome to our community! What’s the end goal for your project?  Have you tried our <a href="https://carloop.dyndns.org/t/use-carloop-with-socketcan-and-can-utils/117">socketCAN sample app install instructions</a>?</p>
+<p>I haven’t tried sending data over the air with the Electron.  A simple solution to reduce awkward position in the driver seat is using <a href="https://www.amazon.com/iXCC-Charge-Android-Samsung-Windows/dp/B00DYWC26G/ref=sr_1_1">this 10 ft USB cable</a>.  Would that help for now?</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/3</link>
+        <pubDate>Wed, 22 Feb 2017 16:44:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-3</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[jgamblin]]></dc:creator>
+        <description><![CDATA[
+            <p>as a follow up… simple logger doesnt seem to want to work on the electron module.  Spent a few hours this morning and cant get any data out of it.</p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/2</link>
+        <pubDate>Wed, 22 Feb 2017 16:44:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-2</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+      <item>
+        <title>Simple Logger For Electron?</title>
+        <dc:creator><![CDATA[jgamblin]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone been able to modify the simple CAN logger to to use the IP address from the Electron since it doesn’t have wifi?</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/simple_logger">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/simple_logger" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/4ad8f366c1e969912cea8d136419dd8bb93b2feb_2_690x345.png" class="thumbnail" data-dominant-color="F0EFF1" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/simple_logger" target="_blank" rel="noopener nofollow ugc">GitHub - carloop/simple_logger: Serial and TCP CAN bus logger for Carloop</a></h3>
+
+  <p>Serial and TCP CAN bus logger for Carloop. Contribute to carloop/simple_logger development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Or better yet make it a web app like those at <a href="http://carloop.io">carloop.io</a>?</p>
+<p>This is a fairly awkward setup:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469" title="IMG_9868.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/6d0bbbf536ccb08a5174a8c6aacaea3f6e7d8469_2_562x750.JPG 1.5x" data-dominant-color="4D4848"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/simple-logger-for-electron/220/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/simple-logger-for-electron/220/1</link>
+        <pubDate>Wed, 22 Feb 2017 13:33:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-220-1</guid>
+        <source url="https://community.carloop.io/t/simple-logger-for-electron/220.rss">Simple Logger For Electron?</source>
+      </item>
+  </channel>
+</rss>

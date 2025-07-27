@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</title>
+    <link>https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459</link>
+    <description>Hi everyone, I&#39;m new here trying to flash my device (Carloop with Electron) with carloop_minimal.cpp example.
+
+I included the carloop library on the project (carloop.cpp, carloop.h, TinyGPS++.cpp and TinyGPS++.h) but no matter what I do it keeps bringing this error message:
+
+    lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory
+
+Any change that I made to the .ino file doesn&#39;t do anything... it&#39;s always about &quot;carloop_minimal.cpp line 12&quot; and the project is not even called like that, it&#39;s &quot;firstblood.ino&quot;.
+
+Thanks in advance.</description>
+    
+    <lastBuildDate>Sun, 22 Oct 2017 04:56:35 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Good to hear you are up and running!</p>
+          <p><a href="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/4</link>
+        <pubDate>Sun, 22 Oct 2017 04:56:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-459-4</guid>
+        <source url="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459.rss">Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</source>
+      </item>
+      <item>
+        <title>Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks <a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a>, updating the firmware was the answer. I was using an outdated tutorial.</p>
+          <p><a href="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/3</link>
+        <pubDate>Fri, 20 Oct 2017 00:41:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-459-3</guid>
+        <source url="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459.rss">Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</source>
+      </item>
+      <item>
+        <title>Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks to <a class="mention" href="https://community.carloop.io/u/scruffr">@Scruffr</a> for addressing the issue here:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/36756">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/36756" target="_blank" rel="noopener" title="01:56PM - 16 October 2017">Particle – 16 Oct 17</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/36756" target="_blank" rel="noopener">Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No...</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hi everyone, I’m new here trying to flash my device (Carloop with Electron) with carloop_minimal.cpp example.  I included the carloop library on the project (carloop.cpp, carloop.h, TinyGPS++.cpp and TinyGPS++.h) but no matter what I do it keeps...</p>
+
+  <p>
+    <span class="label1">Reading time: 1 mins 🕑</span>
+      <span class="label2">Likes: 2 ❤</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Most likely updating the Electron firmware to the latest version and making sure you choose the Electron as the target when you build the firmware will take care of the issue.</p>
+<p>The Carloop instructions should be fine, but make sure you follow the latest Electron instructions.</p>
+          <p><a href="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/2</link>
+        <pubDate>Tue, 17 Oct 2017 01:43:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-459-2</guid>
+        <source url="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459.rss">Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</source>
+      </item>
+      <item>
+        <title>Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi everyone, I’m new here trying to flash my device (Carloop with Electron) with carloop_minimal.cpp example.</p>
+<p>I included the carloop library on the project (carloop.cpp, carloop.h, TinyGPS++.cpp and TinyGPS++.h) but no matter what I do it keeps bringing this error message:</p>
+<pre><code>lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory
+</code></pre>
+<p>Any change that I made to the .ino file doesn’t do anything… it’s always about “carloop_minimal.cpp line 12” and the project is not even called like that, it’s “firstblood.ino”.</p>
+<p>Thanks in advance.</p>
+          <p><a href="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459/1</link>
+        <pubDate>Mon, 16 Oct 2017 03:13:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-459-1</guid>
+        <source url="https://community.carloop.io/t/lib-carloop-examples-carloop-minimal-carloop-minimal-cpp-12-21-carloop-h-no-such-file-or-directory/459.rss">Lib/carloop/examples/carloop_minimal/carloop_minimal.cpp:12:21: carloop.h: No such file or directory</source>
+      </item>
+  </channel>
+</rss>

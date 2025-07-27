@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Is Carloop right for me?</title>
+    <link>https://community.carloop.io/t/is-carloop-right-for-me/296</link>
+    <description>Hello, I&#39;m completely new to the car hacking thing and I&#39;m trying to quickly come up to speed.  I&#39;ve had a look around the Carloop site and it seems like a good fit for what I&#39;m trying to do, but I thought I&#39;d post this question before I place an order.
+
+I want to build a programmable CAN-Bus node that can be permanently installed in my car.  The first program I want to write has a simple use case: If the key is in the ON or Accessory position, turn on a water pump (that is already on the CAN-Bus). When the key is turned off, turn off the pump.
+
+Is the Carloop Basic the right setup for this?  Is that the only piece of hardware needed?
+
+Thanks in advance,
+
+Joe</description>
+    
+    <lastBuildDate>Thu, 11 May 2017 17:47:06 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/is-carloop-right-for-me/296.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Is Carloop right for me?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <ol>
+<li>Only 1 CAN bus on pins 6 and 14 since Photon only has 1 CAN bus on the STM32 chip.</li>
+<li>To flash, you can use the Particle CLI or Over The Air with Particle Build IDE</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/is-carloop-right-for-me/296/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/is-carloop-right-for-me/296/4</link>
+        <pubDate>Thu, 11 May 2017 17:47:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-296-4</guid>
+        <source url="https://community.carloop.io/t/is-carloop-right-for-me/296.rss">Is Carloop right for me?</source>
+      </item>
+      <item>
+        <title>Is Carloop right for me?</title>
+        <dc:creator><![CDATA[JoeJErnst]]></dc:creator>
+        <description><![CDATA[
+            <p>OK, this is looking promising.  Just a couple more questions…</p>
+<ol>
+<li>Can any of the Carloop products handle multiple simultaneous CANBus connections?</li>
+<li>Do you upload the programs to the module using a cable or WiFi (for the Carloop Basic)?</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/is-carloop-right-for-me/296/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/is-carloop-right-for-me/296/3</link>
+        <pubDate>Thu, 11 May 2017 17:23:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-296-3</guid>
+        <source url="https://community.carloop.io/t/is-carloop-right-for-me/296.rss">Is Carloop right for me?</source>
+      </item>
+      <item>
+        <title>Is Carloop right for me?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="JoeJErnst" data-post="1" data-topic="296">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/joejernst/48/437_2.png" class="avatar"> JoeJErnst:</div>
+<blockquote>
+<p>Is the Carloop Basic the right setup for this?  Is that the only piece of hardware needed?</p>
+</blockquote>
+</aside>
+<p>Yes, definitely! Here is an example app that keeps sending a CAN message in a loop: <a href="https://github.com/carloop/app-simple-transmit/blob/master/src/app-simple-transmit.cpp" class="inline-onebox">app-simple-transmit/src/app-simple-transmit.cpp at master · carloop/app-simple-transmit · GitHub</a></p>
+          <p><a href="https://community.carloop.io/t/is-carloop-right-for-me/296/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/is-carloop-right-for-me/296/2</link>
+        <pubDate>Thu, 11 May 2017 14:36:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-296-2</guid>
+        <source url="https://community.carloop.io/t/is-carloop-right-for-me/296.rss">Is Carloop right for me?</source>
+      </item>
+      <item>
+        <title>Is Carloop right for me?</title>
+        <dc:creator><![CDATA[JoeJErnst]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, I’m completely new to the car hacking thing and I’m trying to quickly come up to speed.  I’ve had a look around the Carloop site and it seems like a good fit for what I’m trying to do, but I thought I’d post this question before I place an order.</p>
+<p>I want to build a programmable CAN-Bus node that can be permanently installed in my car.  The first program I want to write has a simple use case: If the key is in the ON or Accessory position, turn on a water pump (that is already on the CAN-Bus). When the key is turned off, turn off the pump.</p>
+<p>Is the Carloop Basic the right setup for this?  Is that the only piece of hardware needed?</p>
+<p>Thanks in advance,</p>
+<p>Joe</p>
+          <p><a href="https://community.carloop.io/t/is-carloop-right-for-me/296/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/is-carloop-right-for-me/296/1</link>
+        <pubDate>Thu, 11 May 2017 05:30:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-296-1</guid>
+        <source url="https://community.carloop.io/t/is-carloop-right-for-me/296.rss">Is Carloop right for me?</source>
+      </item>
+  </channel>
+</rss>

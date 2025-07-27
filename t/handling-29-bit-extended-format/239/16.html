@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Handling 29-Bit (Extended) Format - #16 by alanm - Getting Started - Carloop Community</title>
+    <meta name="description" content="Based on some research online, I suspect my car is using 29-bit IDs (as opposed to 11-bit).  A few questions: 
+
+
+Is there any easy way to confirm this? 
+
+
+How do I go about handling message requests and responses differe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="../239.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="byU1OSRJHnbZHNuPx9hJbHT3o">
+<script defer="" src="../../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="byU1OSRJHnbZHNuPx9hJbHT3o"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Handling 29-Bit (Extended) Format&#39;" href="../239.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/3b22ccb33ad88d8b159a23411d5fef5446178737.png">
+<meta property="og:image" content="/uploads/default/original/1X/3b22ccb33ad88d8b159a23411d5fef5446178737.png">
+<meta property="og:url" content="/t/handling-29-bit-extended-format/239/16">
+<meta name="twitter:url" content="/t/handling-29-bit-extended-format/239/16">
+<meta property="og:title" content="Handling 29-Bit (Extended) Format">
+<meta name="twitter:title" content="Handling 29-Bit (Extended) Format">
+<meta property="og:description" content="Yes, that is correct.  @cyclin_al1, in response to your question, based on the ISO 15765-4 Standard for CAN messages, that request ID is required for CAN buses with extended (29-bit) format.  See table from ISO standard:    For 11 bit identifiers, the correct CAN IDs are:     For those of you trying to learn more about Diagnostics on  Controller Area Networks (CAN), this standard goes into quite a bit of detail: https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/i...">
+<meta name="twitter:description" content="Yes, that is correct.  @cyclin_al1, in response to your question, based on the ISO 15765-4 Standard for CAN messages, that request ID is required for CAN buses with extended (29-bit) format.  See table from ISO standard:    For 11 bit identifiers, the correct CAN IDs are:     For those of you trying to learn more about Diagnostics on  Controller Area Networks (CAN), this standard goes into quite a bit of detail: https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/i...">
+<meta property="og:article:section" content="Getting Started">
+<meta property="og:article:section:color" content="3AB54A">
+<meta property="article:published_time" content="2017-04-14T05:15:17+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="../239.html">Handling 29-Bit (Extended) Format</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../../c/getting-started/5.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Getting Started</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Handling 29-Bit (Extended) Format'>
+      <link itemprop='url' href='../239.html'>
+      <meta itemprop='datePublished' content='2017-03-24T19:24:08Z'>
+        <meta itemprop='articleSection' content='Getting Started'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+        <span itemprop='author' itemscope="" itemtype="http://schema.org/Person">
+          <meta itemprop='name' content='mike_b'>
+          <link itemprop='url' href='../../../u/mike_b.html'>
+        </span>
+        <meta itemprop='text' content='Based on some research online, I suspect my car is using 29-bit IDs (as opposed to 11-bit).  A few questions: 
+
+
+Is there any easy way to confirm this? 
+
+
+How do I go about handling message requests and responses differe&amp;hellip;'>
+
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-03T20:03:27Z' class='post-time'>
+                    April 3, 2017,  8:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-03T20:03:27Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/jvanier.html">@jvanier</a>,</p>
+<p>I know for sure the car is on 500 kbits because it says so in the manual (and the other bitrates don’t return any messages).</p>
+<p>Using an OBD scan tool I found out today that the ECM on the vehicle actually has an ID of 0x18DAF111, which would indicate that I should expect replies using this 29-bit message ID.  I googled this ID and found some other hits where this ID was used as the reply ID for Honda vehicles.</p>
+<p>So with that in mind, how would I figure out the broadcast ID where I need to send the request?  Am I still supposed to send the request to 0x7DF and then expect a reply from 0x18DAF111?  Or do I send the request to 0x18DAF111?</p>
+<p>Thanks,<br>
+MIke</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-03T20:23:55Z' class='post-time'>
+                    April 3, 2017,  8:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-03T20:29:55Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="mike_b" data-post="7" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/977dab/48.png" class="avatar"> mike_b:</div>
+<blockquote>
+<p>n mind, how would I figure out the broadcast ID where I need to send the request?  Am I still supposed to send the request to 0x7DF and then expect a reply from 0x18DAF111?  Or do I send the request to 0x18DAF111?</p>
+</blockquote>
+</aside>
+<p>Hi <a class="mention" href="../../../u/mike_b.html">@mike_b</a>, I want to clarify something regarding CAN Message IDs. When sending CAN messages on the bus, all modules that are connected to that bus will be able to receive the CAN message you are sending.  Similarly, when you connect Carloop to the OBD-II port you can see CAN messages being broadcasted by other modules on the bus.</p>
+<p>People sometimes confuse the Arbitration ID (0x7DF in this case) being tied to module or node. That is simply not the case, since many modules can send and receive CAN messages with same IDs.  The confusion stems from the practice in the 90s to assign CAN IDs to the modules but as the CAN bus wikipedia article explains that practice is no longer valid:</p>
+<blockquote>
+<p>In the early 1990s, the choice of IDs for messages was done simply on the basis of identifying the type of data and the sending node; however, as the ID is also used as the message priority, this led to poor real-time performance. In those scenarios, a low CAN bus utilization of circa 30% was commonly required to ensure that all messages would meet their deadlines. However, if IDs are instead determined based on the deadline of the message, the lower the numerical ID and hence the higher the message priority, then bus utilizations of 70 to 80% can typically be achieved before any message deadlines are missed.</p>
+</blockquote>
+<p>In other words, you should send request 0x7DF (with the appropriate data e.g. 01100011) and see a response from the ECM as a new message with Arbitration ID 0x18DAF111 and its corresponding data. It has nothing to do with the sending / receiving node.  Hope this clarifies some of the confusion surrounding CAN.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-04T13:51:11Z' class='post-time'>
+                    April 4, 2017,  1:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-04T13:51:11Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/alanm">@alanm</a>,</p>
+<p>Thanks for the clarification!  Let me paste a bit of code in here and I would like you to let me know if this code should work, given the discussion above.</p>
+<p><strong>Filtering (for now, just include anything with an extended message format); this runs before calling canDriver.begin()</strong></p>
+<p>canDriver.addFilter(0, 0, CAN_FILTER_EXTENDED);</p>
+<p><strong>Request message construction:</strong></p>
+<p>CANMessage message;<br>
+message.id = 0x7DF;<br>
+message.len = 8;         // message will always be 8 bytes<br>
+message.data[0] = 0x02;  // 2 bytes of data in message<br>
+message.data[1] = 0x01;  // Get current data<br>
+message.data[2] = 0x0C;  // The PID to retrieve (Engine RPM)<br>
+message.data[3] = 0x00;<br>
+message.data[4] = 0x00;<br>
+message.data[5] = 0x00;<br>
+message.data[6] = 0x00;<br>
+message.data[7] = 0x00;</p>
+<pre><code>if (!canDriver.transmit(message))
+{
+  Serial.println("Unable to transmit message!");
+}
+</code></pre>
+<p><strong>The below code runs in a loop that sleeps for just 10ms between loops:</strong></p>
+<p>CANMessage replyMessage;<br>
+int messageCount = canDriver.available();</p>
+<pre><code>if (messageCount &gt; 0)
+{
+  while (canDriver.receive(replyMessage))
+  {
+    // Got an extended message; light up the LED
+    digitalWrite(ledPin, HIGH);
+  }
+}
+</code></pre>
+<p>So you can see that the above code is pretty forgiving and doesn’t even look for a reply specifically with the ID of 0x18DAF111 (just looks for any extended message).  I still can’t get a reply though (i.e. blue LED doesn’t light up).  What am I not doing correctly?</p>
+<p>Thanks,<br>
+Mike</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-05T03:54:35Z' class='post-time'>
+                    April 5, 2017,  3:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-05T03:54:35Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/mike_b.html">@mike_b</a>, I wonder if you need a strategic check for start of receiving in your code?  It is difficult to tell from posting just a snippet, but there is one thing I wonder about.[quote=“mike_b, post:9, topic:239”]<br>
+while (canDriver.receive(replyMessage))<br>
+[/quote]<br>
+I wonder if your code checks to see if it receiving before the receiving actually starts.  If that is the case, your code will exit the loop before receiving (which is unintended), instead of exiting the loop after receiving is complete (which is what I think you want).<br>
+What I would suggest is putting in a delay or some sort of if/while to see that receiving actually gets started.  Once you know it is started, then you can check to see when it completes receiving.</p>
+<p>One other thing to note, which is a Particle thing, not a carloop thing.<br>
+If for some reason, the receiving is not completed within a reasonable time, you will be stuck in that loop for too long.  This is called blocking code.  Particle devices need time once in a while to keep the connection alive (WiFi, Cellular or BLE) and to do some general housekeeping.  If you block for too long, you will lose your connection and then your code will behave strangely.  I recommend using a timeout to exit from loops, and then you can handle the timeout error OR you can use a SYSTEM_MODE (if I remember correctly) that puts your code and the Particle code in separate threads.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-05T13:30:48Z' class='post-time'>
+                    April 5, 2017,  1:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-05T13:30:48Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/cyclin_al1.html">@cyclin_al1</a>,</p>
+<p>Thanks for the suggestions--  regarding the Particle system mode stuff, I already have that covered (system mode MANUAL with system thread enabled).</p>
+<p>This comment is very interesting though:</p>
+<aside class="quote no-group" data-username="cyclin_al1" data-post="10" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d6d6ee/48.png" class="avatar"> cyclin_al1:</div>
+<blockquote>
+<p>I wonder if your code checks to see if it receiving before the receiving actually starts.  If that is the case, your code will exit the loop before receiving (which is unintended), instead of exiting the loop after receiving is complete (which is what I think you want).</p>
+</blockquote>
+</aside>
+<p>I’m not totally sure what you mean here and I don’t recall seeing any sample code anywhere that does anything special with the receive() call beyond what I’m already doing.  Can you please provide a simple example with code/pseudocode to clarify this point?  You mentioned to put something like an if/while “to see that receiving actually gets started” but I don’t understand how that translates to code.</p>
+<p>Thanks,<br>
+Mike</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-08T02:38:27Z' class='post-time'>
+                    April 8, 2017,  2:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-08T02:38:27Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/mike_b.html">@mike_b</a>, sorry for the delay.  I can see the forums but not post when I am at the office.</p>
+<p>Pseudo-code for what I am thinking is this:</p>
+<pre data-code-wrap="cpp"><code class="lang-cpp">serial.print "waiting for receive to start" // debug messages to USB serial
+ while ( NOT canDriver.receive(replyMessage) OR timeout &lt; 5 sec)
+{ } // wait for receive to start
+if (timeout reached 5 sec)
+{
+serial.print ("receive did not start within 5 sec")
+} else {
+serial.print ("receive started")
+ while ( canDriver.receive(replyMessage) OR timeout &lt; 5 sec)
+{ } // receiving
+if (timeout reached 5 sec)
+{
+serial.print ("receive did not complete within 5 sec")
+} else {
+serial.print ("receive successful")
+}
+</code></pre>
+<p>You may not need this in the final code, but this could help out with experimenting and debugging.  If you monitor serial over USB, you will be able to see how far the receiving gets before you run into problems.  You can also take this pseudo-code and add in some additional functionality to do re-tries.</p>
+<p>Also, do you have an oscilloscope or logic analyzer to monitor the message receiving?  You could probe D2 (CAN_RX) on the Particle device (not sure if it is Photon or Electron or a compound) to see if there is signal activity on receiving.  Also, you could probe pin 6 of the OBDII connector, but you would need a logic analyzer to tell the difference to sending out the request versus receiving a response.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-10T20:50:55Z' class='post-time'>
+                    April 10, 2017,  8:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-10T20:50:55Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/cyclin_al1.html">@cyclin_al1</a>,</p>
+<p>Thank you for the clarification and additional ideas!  I figured out the problem and I have a very interesting explanation.</p>
+<p>I have one of those generic scan tools that you can plug into the OBD port and check/reset trouble codes, see live data, etc.  The scan tool works perfectly fine when I plug it in to my car.  It reads live data like Vehicle Speed which the Carloop was unable to do.  So I wanted to figure out why the scan tool worked and the Carloop didn’t.</p>
+<p>I bought a simple OBD Y-splitter and connected the scan tool to one end and the Carloop to the other, so I could use the Carloop to monitor messages being sent to and from the scan tool.  I discovered a few interesting things from this:</p>
+<ul>
+<li>I need to use message ID 18db33f1 to send the request; 7DF does <em>not</em> work</li>
+<li>The response has a message ID of 18daf111 or 18daf11d (probably depends on the responding ECU)</li>
+<li>The last 5 bytes in the message data <em>must</em> be populated with a specific set of values; if these are set to 00 or 55, you will <em>not</em> get a reply; I won’t paste the values in here in case this is some kind of proprietary key not meant to be released to the public</li>
+</ul>
+<p>After I made those adjustments, the Carloop worked perfectly to retrieve Vehicle Speed and RPM (didn’t try anything else).  Hopefully this post has a few tips that help others.  Thanks to everyone for your help!</p>
+<p>Mike</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-11T03:28:54Z' class='post-time'>
+                    April 11, 2017,  3:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-11T03:28:54Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/mike_b.html">@mike_b</a>, Great sleuthing to figure out what is going on in your car!</p>
+<p><a class="mention" href="/u/alanm">@alanm</a>, Any ideas what is going on with this solution?</p>
+<p>It appears to violate the legislated OBDII requirements (at least in North America).  On the other hand, could you be plugged into a CANbus other than the one used for OBDII.  My only <em>wild</em> guess is that some module is sending on a secondary bus to another module, and then that second module forwards to the OBDII CANbus.<br>
+Then again, I am focusing on the older K-Line, so I could have missed some new development…?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T04:59:14Z' class='post-time'>
+                    April 14, 2017,  4:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T04:59:14Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>[quote=“mike_b, post:13, topic:239”]<br>
+I won’t paste the values in here in case this is some kind of proprietary key not meant to be released to the public<br>
+[/quote]no need to worry, <a class="mention" href="../../../u/mike_b.html">@mike_b</a>! Luckily we are allowed to peek under the CAN bus hood all we want <img src="//carloop-community.dyndns.org/images/emoji/twitter/thumbsup.png?v=12" title=":thumbsup:" class="emoji" alt=":thumbsup:" loading="lazy" width="20" height="20"> <a href="https://www.wired.com/2016/10/hacking-car-pacemaker-toaster-just-became-legal/" class="inline-onebox">You Can Legally Hack Your Own Car, Pacemaker, or Smartphone Now | WIRED</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/3b22ccb33ad88d8b159a23411d5fef5446178737.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T05:15:17Z' class='post-time'>
+                    April 14, 2017,  5:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T05:15:17Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="mike_b" data-post="13" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/m/977dab/48.png" class="avatar"> mike_b:</div>
+<blockquote>
+<p>I need to use message ID 18db33f1 to send the request; 7DF does not work</p>
+</blockquote>
+</aside>
+<p>Yes, that is correct.  <a class="mention" href="../../../u/cyclin_al1.html">@cyclin_al1</a>, in response to your question, based on the ISO 15765-4 Standard for CAN messages, that request ID is required for CAN buses with extended (29-bit) format.  See table from ISO standard:</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/3b22ccb33ad88d8b159a23411d5fef5446178737.png" width="576" height="247"></p>
+<p>For 11 bit identifiers, the correct CAN IDs are:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png" data-download-href="//carloop-community.dyndns.org/uploads/default/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8" title="image.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8_2_620x500.png" width="620" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8_2_620x500.png,//carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png,//carloop-community.dyndns.org/uploads/default/original/1X/0dde0e0813c32e30115e8d814eb9dd2ad967e3e8.png" data-dominant-color="DFDFDF"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image.png</span><span class="informations">681×549 114 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>For those of you trying to learn more about <em>Diagnostics on</em><br>
+<em>Controller Area Networks (CAN)</em>, this standard goes into quite a bit of detail: <a href="https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/iso_15765-4.pdf">https://sourceforge.net/p/rusefi/tickets/_discuss/thread/65c5390c/5610/attachment/iso_15765-4.pdf</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T13:26:07Z' class='post-time'>
+                    April 14, 2017,  1:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T13:26:07Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/alanm">@alanm</a>!  Very helpful document.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T20:45:28Z' class='post-time'>
+                    April 14, 2017,  8:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T20:45:28Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/alanm">@alanm</a>, lots of great detail!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-13T23:31:30Z' class='post-time'>
+                    July 13, 2017, 11:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-13T23:31:30Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Running into similar issues here with a Honda Pilot. Anyone have some example code? I’ve changed my message ID but could use some pointers with the rest.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-14T03:24:24Z' class='post-time'>
+                    July 14, 2017,  3:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-14T03:24:24Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/mike_b.html">@mike_b</a>,  did you get your code to a point where it could be used as a complete example, or have some good pointers for <a class="mention" href="../../../u/egarl004.html">@egarl004</a> ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/mike_b.html'><span itemprop='name'>mike_b</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-24T18:43:18Z' class='post-time'>
+                    July 24, 2017,  6:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-24T18:43:18Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../../u/egarl004.html">@egarl004</a> and <a class="mention" href="../../../u/cyclin_al1.html">@cyclin_al1</a>,</p>
+<p>Sorry for the late reply, just saw your messages now.  This is what I needed to use to construct the request message:</p>
+<p>CANMessage message;<br>
+message.id = 0x18DB33F1;<br>
+message.len = 8;         // message will always be 8 bytes<br>
+message.extended = true;<br>
+message.data[0] = 0x02;  // 2 bytes of data in message<br>
+message.data[1] = 0x01;  // Get current data<br>
+message.data[2] = pid;   // The PID to retrieve (replace with appropriate hex value for the PID)<br>
+message.data[3] = 0x09;  // Not sure why, but the last 5 bytes need to be set this way<br>
+message.data[4] = 0x13;<br>
+message.data[5] = 0x00;<br>
+message.data[6] = 0x20;<br>
+message.data[7] = 0xE0;</p>
+<p>When waiting for the response, a quick way to filter out most/all of the garbage is to just look for anything with an ID above 7DF:</p>
+<p>const auto REPLY_ID_MIN = 0x7DF;<br>
+if (replyMessage.id &gt;= REPLY_ID_MIN)<br>
+{<br>
+// Probably the response; log details…<br>
+}</p>
+<p>My vehicle never seems to send messages above 7DF unless it’s a diagnostic response.  You can probably also use the canFilter() method to limit the received messages but I couldn’t tell you offhand how to populate it in this case.</p>
+<p>Hope this helps.</p>
+<p>Mike</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/nlwelch.html'><span itemprop='name'>nlwelch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-08T17:37:30Z' class='post-time'>
+                    August 8, 2018,  5:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-08T17:37:30Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m having a similar issue.  I’ve coded now for both 11 bit and 29 bit messages - thanks for the heads-up and the information.  That said, I’m a bit concerned/puzzled by the need for 5 bytes with specific data.  Is this detail documented somewhere?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/ashoksam.html'><span itemprop='name'>ashoksam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-06T12:01:08Z' class='post-time'>
+                    August 6, 2019, 12:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-06T12:01:08Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/alanm">@alanm</a> I have gone through this post. Based on your post i understand what are the CAN request and CAN response identifer for 11 bit. Similiar  to the 11 bit is there any standard CAN request and CAN response identifier for 29-bit which will supports  all kind of heavy duty vehicles like trucks,buses etc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-07T18:57:44Z' class='post-time'>
+                    August 7, 2019,  6:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-07T18:57:44Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Cool - glad to hear it is helpful!  For Heavy Duty vehicles you should look into the SAE J1939 standards to determine how to request diagnostic data.  It is a completely different standard than OBD-II</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/ashoksam.html'><span itemprop='name'>ashoksam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-08T06:51:58Z' class='post-time'>
+                    August 8, 2019,  6:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-08T06:51:58Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/alanm">@alanm</a> thanks for your reply.I have gone through the SAE J1939 standard document,but i am not getting any document which will helps me . If you have any sample document for 29 -bit identifiers with Request and response and what is the range of identifier which will use most of the OEM’s,Please provide it gonna help a lot for me.<br>
+Thanks in advance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/dubb45.html'><span itemprop='name'>dubb45</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-16T01:46:26Z' class='post-time'>
+                    August 16, 2019,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-16T01:46:26Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="alanm" data-post="24" data-topic="239">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>SAE J1939 standards</p>
+</blockquote>
+</aside>
+<p><a href="http://www.simmasoftware.com/j1939-presentation.pdf" rel="noopener nofollow ugc">Understanding SAE J1939</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Obdii mode 9 request</title>
+    <link>https://community.carloop.io/t/obdii-mode-9-request/543</link>
+    <description>can anyone help me out with a OBDII request Mode 09 04 Calibration ID
+	[code]Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)[/code]
+im requesting the data but am trying to figure out why its not the same as the scan tool (efi live)  im using to verify if its correct. 
+
+i was trying this sample from the apps section i just changed the message to my request. 
+[code]
+void readVIN() {
+  Serial.println(&quot;Reading VIN&quot;);
+
+  // Send request to read VIN
+  CANMessage message;
+  message.id = OBD_CAN_BROADCAST_ID;
+  message.len = 8; // just always use 8
+  message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+  message.data[1] = 0x09;
+  message.data[2] = 0x04;
+  carloop.can().transmit(message);
+
+  OBDMessage obd;
+  unsigned long start = millis();
+  unsigned long timeout = 200; // ms
+  while(millis() - start &lt; timeout) {
+    if (carloop.can().receive(message)) {
+      if (message.id == 0x7E8) {
+        Serial.println(&quot;Got reply from ECU&quot;);
+
+        // Add the data to our OBD message
+        bool needsFlowControl = obd.addMessageData(message);
+
+        if (needsFlowControl) {
+          // Sending flow control
+          CANMessage flowControl = obd.flowControlMessage();
+          carloop.can().transmit(flowControl);
+          Serial.println(&quot;Sent flow control&quot;);
+        }
+
+        // Use the data when the message is complete
+        if (obd.complete()) {
+          String vin = &quot;&quot;;
+          // VIN is 17 character and can be left-padded with zeros
+          for (int i = obd.size() - 17; i &lt; obd.size(); i++) {
+            vin += String((char)obd.data()[i]);
+          }
+          Serial.println(&quot;VIN: &quot; + vin);
+          if (Particle.connected()) {
+            Particle.publish(&quot;vin/result&quot;, vin, PRIVATE);
+          }
+
+          obd.clear();
+          Serial.println(&quot;Done&quot;);
+          return;
+        }
+      }
+    }
+  }
+[/code]
+the problem im having is the data im gettig back with this code is not the same as in efi live. i can see the request if i sniff the tool and the response im just figureing out why the code snippet is messing up the response. it just comes back as squares and random stuff lol</description>
+    
+    <lastBuildDate>Tue, 20 Feb 2018 21:45:36 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/obdii-mode-9-request/543.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>heres a request from my elm327 an raspberry pi</p>
+<pre><code class="lang-auto">&gt;0906
+7E8 10 23 49 06 08 00 00 50 
+7E8 21 B2 00 00 E1 38 00 00 
+7E8 22 28 6B 00 00 2C 12 00 
+7E8 23 00 22 11 00 00 E0 8F 
+7E8 24 00 00 11 03 00 00 9A 
+7E8 25 E6 AA AA AA AA AA AA</code></pre>
+<pre><code class="lang-auto">&gt;0904
+7E8 10 83 49 04 08 31 32 36 
+7E8 21 34 32 34 30 35 00 00 
+7E8 22 00 00 00 00 00 00 31 
+7E8 23 32 36 35 37 31 35 30 
+7E8 24 00 00 00 00 00 00 00 
+7E8 25 00 31 32 36 35 37 31 
+7E8 26 34 38 00 00 00 00 00 
+7E8 27 00 00 00 31 32 36 33 
+7E8 28 33 35 31 38 00 00 00 
+7E8 29 00 00 00 00 00 31 32 
+7E8 2A 36 32 39 38 37 32 00 
+7E8 2B 00 00 00 00 00 00 00 
+7E8 2C 31 32 36 34 32 35 37 
+7E8 2D 34 00 00 00 00 00 00 
+7E8 2E 00 00 31 32 36 34 32 
+7E8 2F 35 37 38 00 00 00 00 
+7E8 20 00 00 00 00 31 32 36 
+7E8 21 34 32 35 37 36 00 00 
+7E8 22 00 00 00 00 00 00 AA </code></pre>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/8</link>
+        <pubDate>Tue, 20 Feb 2018 21:45:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-8</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>funny part is i can read/write a new vin no problem on GM and Chrysler, but requesting this calibration iD is something i cant do yet lol</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/7</link>
+        <pubDate>Tue, 20 Feb 2018 17:26:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-7</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="dubb45" data-post="4" data-topic="543">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/dubb45/48/429_2.png" class="avatar"> dubb45:</div>
+<blockquote>
+<p>25 00 31 32 36 34 36 34</p>
+</blockquote>
+</aside>
+<p>yea that number is similar im able to refence EFI live to determine what it is, and none of numbers are the actual “calibration ID” ive gotten “Slave Calibration” and a few others listed from requesting 02 09 04<br>
+which got me to belive 02 09 06 should be the Calibration ID. but still cant get the correct data. even my elm327 can get the info lol im overlooking something i know it.</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/6</link>
+        <pubDate>Tue, 20 Feb 2018 17:24:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-6</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I took the calibration ID “12646438” and converted it to hex using this ASCII table</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.rapidtables.com/code/text/ascii-table.html">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/d603ea8ad4ed12a31d1edd23a497e2592483a2dc.png" class="site-icon" data-dominant-color="BC7126" width="32" height="32">
+
+      <a href="https://www.rapidtables.com/code/text/ascii-table.html" target="_blank" rel="noopener">rapidtables.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.rapidtables.com/code/text/ascii-table.html" target="_blank" rel="noopener">ASCII Table - ASCII codes, hex, decimal, binary, html</a></h3>
+
+  <p>ASCII table, ASCII chart, ASCII character codes chart, hex/decimal/binary/HTML.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I got:<br>
+<strong>31 32 36 34 36 34</strong> 33 38</p>
+<p>This row of data matches the first part:</p>
+<aside class="quote no-group" data-username="dubb45" data-post="4" data-topic="543">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/dubb45/48/429_2.png" class="avatar"> dubb45:</div>
+<blockquote>
+<p>can0  7E8   [8]  25 00 <strong>31 32 36 34 36 34</strong></p>
+</blockquote>
+</aside>
+<p>Look into it more and see if there is a certain way that the Calibration ID data should be interpreted…<br>
+I think things are getting closer to solving it.</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/5</link>
+        <pubDate>Tue, 20 Feb 2018 17:03:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-5</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>according to wiki mode 09 04 is Calibration ID comes Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)<br>
+<strong>Mode 09 04</strong><br>
+7E0   [8]  02 09 04 00 00 00 00 00_</p>
+<pre><code class="lang-auto">  can0  7E8   [8]  10 83 49 04 08 31 32 36
+  can0  7E0   [8]  30 00 00 00 00 00 00 00
+  can0  7E8   [8]  21 34 36 31 32 38 00 00
+  can0  7E8   [8]  22 00 00 00 00 00 00 31
+  can0  7E8   [8]  23 32 36 34 32 36 37 36
+  can0  7E8   [8]  24 00 00 00 00 00 00 00
+  can0  7E8   [8]  25 00 31 32 36 34 36 34
+  can0  7E8   [8]  26 34 30 00 00 00 00 00
+  can0  7E8   [8]  27 00 00 00 31 32 36 33
+  can0  7E8   [8]  28 33 35 31 38 00 00 00
+  can0  7E8   [8]  29 00 00 00 00 00 31 32
+  can0  7E8   [8]  2A 36 33 37 30 32 39 00
+  can0  7E8   [8]  2B 00 00 00 00 00 00 00
+  can0  7E8   [8]  2C 31 32 36 33 37 30 33
+  can0  7E8   [8]  2D 33 00 00 00 00 00 00
+  can0  7E8   [8]  2E 00 00 31 32 36 33 37
+  can0  7E8   [8]  2F 30 33 38 00 00 00 00
+  can0  7E8   [8]  20 00 00 00 00 31 32 36
+  can0  7E8   [8]  21 33 37 30 33 35 00 00
+  can0  7E8   [8]  22 00 00 00 00 00 00 AA</code></pre>
+<p>can0  7DF   [8]  02 09 04 00 00 00 00 00</p>
+<pre><code class="lang-auto">  can0  7E8   [8]  10 83 49 04 08 31 32 36
+  can0  7E0   [8]  30 00 00 00 00 00 00 00
+  can0  7E8   [8]  21 34 36 31 32 38 00 00
+  can0  7E8   [8]  22 00 00 00 00 00 00 31
+  can0  7E8   [8]  23 32 36 34 32 36 37 36
+  can0  7E8   [8]  24 00 00 00 00 00 00 00
+  can0  7E8   [8]  25 00 31 32 36 34 36 34
+  can0  7E8   [8]  26 34 30 00 00 00 00 00
+  can0  7E8   [8]  27 00 00 00 31 32 36 33
+  can0  7E8   [8]  28 33 35 31 38 00 00 00
+  can0  7E8   [8]  29 00 00 00 00 00 31 32
+  can0  7E8   [8]  2A 36 33 37 30 32 39 00
+  can0  7E8   [8]  2B 00 00 00 00 00 00 00
+  can0  7E8   [8]  2C 31 32 36 33 37 30 33
+  can0  7E8   [8]  2D 33 00 00 00 00 00 00
+  can0  7E8   [8]  2E 00 00 31 32 36 33 37
+  can0  7E8   [8]  2F 30 33 38 00 00 00 00
+  can0  7E8   [8]  20 00 00 00 00 31 32 36
+  can0  7E8   [8]  21 33 37 30 33 35 00 00
+  can0  7E8   [8]  22 00 00 00 00 00 00 AA</code></pre>
+<p><strong>Mode 09 06</strong><br>
+can0  7E0#  02 09 06 00 00 00 00 00</p>
+<pre><code class="lang-auto">  can0  7E8   [8]  10 23 49 06 08 00 00 86
+  can0  7E0   [8]  30 00 00 00 00 00 00 00
+  can0  7E8   [8]  21 42 00 00 0B 9F 00 00
+  can0  7E8   [8]  22 01 B4 00 00 2C 12 00
+  can0  7E8   [8]  23 00 94 27 00 00 E5 42
+  can0  7E8   [8]  24 00 00 E4 2F 00 00 51
+  can0  7E8   [8]  25 CF AA AA AA AA AA AA</code></pre>
+<p>7DF   [8]  02 09 06 00 00 00 00 00</p>
+<pre><code class="lang-auto">  can0  7E8   [8]  10 23 49 06 08 00 00 86
+  can0  7E0   [8]  30 00 00 00 00 00 00 00
+  can0  7E8   [8]  21 42 00 00 0B 9F 00 00
+  can0  7E8   [8]  22 01 B4 00 00 2C 12 00
+  can0  7E8   [8]  23 00 94 27 00 00 E5 42
+  can0  7E8   [8]  24 00 00 E4 2F 00 00 51
+  can0  7E8   [8]  25 CF AA AA AA AA AA AA
+</code></pre>
+<p>but when i use the carloop and the OBDII vin request sample app 09 04 im getting this data back</p>
+<pre><code class="lang-auto">313236333730333500000000</code></pre>
+<p>on another tool EFI live im able to verify the <strong>calibration ID “12646438”</strong><br>
+ive tried a few things but lost a bit, going to try and make own “request” handler and see if that is whats messing me up. anyone with some info welcome to comment.</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/4</link>
+        <pubDate>Mon, 19 Feb 2018 21:50:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-4</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>thanks for the clarification!!!<br>
+going to add this and try it out.</p>
+<pre><code class="lang-auto">vin += String((char)obd.data()[i], HEX);</code></pre>
+<p>i added HEX on the end of it</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/3</link>
+        <pubDate>Sun, 18 Feb 2018 15:49:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-3</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>,</p>
+<p>It looks like in your code that you are taking the raw data coming back and adding it to your string as if it was ASCII data.<br>
+When it comes back as squares and random stuff, it convinces me that the raw data is not ASCII, but something else that will need to be converted.</p>
+<p>One way to get started is to convert the raw data to HEX characters and send that to your string.  That way we can see the data in bytes.  If you provide an example of that, along with an example of what your scan tool is providing, then we should be able to sort it out by comparing them.</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/2</link>
+        <pubDate>Sun, 18 Feb 2018 07:15:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-2</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+      <item>
+        <title>Obdii mode 9 request</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>can anyone help me out with a OBDII request Mode 09 04 Calibration ID<br>
+<code>Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)</code><br>
+im requesting the data but am trying to figure out why its not the same as the scan tool (efi live)  im using to verify if its correct.</p>
+<p>i was trying this sample from the apps section i just changed the message to my request.</p>
+<pre><code class="lang-auto">void readVIN() {
+  Serial.println("Reading VIN");
+
+  // Send request to read VIN
+  CANMessage message;
+  message.id = OBD_CAN_BROADCAST_ID;
+  message.len = 8; // just always use 8
+  message.data[0] = 0x02; // 0 = single-frame format, 2  = num data bytes
+  message.data[1] = 0x09;
+  message.data[2] = 0x04;
+  carloop.can().transmit(message);
+
+  OBDMessage obd;
+  unsigned long start = millis();
+  unsigned long timeout = 200; // ms
+  while(millis() - start &lt; timeout) {
+    if (carloop.can().receive(message)) {
+      if (message.id == 0x7E8) {
+        Serial.println("Got reply from ECU");
+
+        // Add the data to our OBD message
+        bool needsFlowControl = obd.addMessageData(message);
+
+        if (needsFlowControl) {
+          // Sending flow control
+          CANMessage flowControl = obd.flowControlMessage();
+          carloop.can().transmit(flowControl);
+          Serial.println("Sent flow control");
+        }
+
+        // Use the data when the message is complete
+        if (obd.complete()) {
+          String vin = "";
+          // VIN is 17 character and can be left-padded with zeros
+          for (int i = obd.size() - 17; i &lt; obd.size(); i++) {
+            vin += String((char)obd.data()[i]);
+          }
+          Serial.println("VIN: " + vin);
+          if (Particle.connected()) {
+            Particle.publish("vin/result", vin, PRIVATE);
+          }
+
+          obd.clear();
+          Serial.println("Done");
+          return;
+        }
+      }
+    }
+  }</code></pre>
+<p>the problem im having is the data im gettig back with this code is not the same as in efi live. i can see the request if i sniff the tool and the response im just figureing out why the code snippet is messing up the response. it just comes back as squares and random stuff lol</p>
+          <p><a href="https://community.carloop.io/t/obdii-mode-9-request/543/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/obdii-mode-9-request/543/1</link>
+        <pubDate>Sun, 18 Feb 2018 04:17:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-543-1</guid>
+        <source url="https://community.carloop.io/t/obdii-mode-9-request/543.rss">Obdii mode 9 request</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How to Configure AWS Big Data with My Volkswagen Atlas?</title>
+    <link>https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411</link>
+    <description>Hey everyone,
+
+I am diving into a new project where I am trying to set up my Volkswagen Atlas (2019 model) to send data directly to AWS for storage and analysis. As I have seen many people using this in my surrounding. I’ve got Carloop up and running, and now I am looking to leverage AWS Big Data tools to collect and analyze all the information from my car.
+
+I was doing research about the same I came across these resources/articles https://aws.amazon.com/solutions/case-studies/volkswagen-group-case-study/ [what is AWS big data?](https://www.igmguru.com/blog/what-is-aws-big-data), however, they are information but I wanted to learn from community members.
+
+Has anyone here done something similar? I’m particularly interested in any tips on configuring the data pipeline from Carloop to AWS, and what services you’d recommend for real-time processing and long-term storage. Any pitfalls to avoid or best practices to follow would be awesome to know.
+
+Thanks in advance for the help!
+
+Best Regards,</description>
+    
+    <lastBuildDate>Fri, 30 Aug 2024 04:56:15 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How to Configure AWS Big Data with My Volkswagen Atlas?</title>
+        <dc:creator><![CDATA[halcyoncv]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey everyone,</p>
+<p>I am diving into a new project where I am trying to set up my Volkswagen Atlas (2019 model) to send data directly to AWS for storage and analysis. As I have seen many people using this in my surrounding. I’ve got Carloop up and running, and now I am looking to leverage AWS Big Data tools to collect and analyze all the information from my car.</p>
+<p>I was doing research about the same I came across these resources/articles <a href="https://aws.amazon.com/solutions/case-studies/volkswagen-group-case-study/" class="inline-onebox" rel="noopener nofollow ugc">Volkswagen Group iSI Case Study | IoT | AWS</a> <a href="https://www.igmguru.com/blog/what-is-aws-big-data" rel="noopener nofollow ugc">what is AWS big data?</a>, however, they are information but I wanted to learn from community members.</p>
+<p>Has anyone here done something similar? I’m particularly interested in any tips on configuring the data pipeline from Carloop to AWS, and what services you’d recommend for real-time processing and long-term storage. Any pitfalls to avoid or best practices to follow would be awesome to know.</p>
+<p>Thanks in advance for the help!</p>
+<p>Best Regards,</p>
+          <p><a href="https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411/1</link>
+        <pubDate>Fri, 30 Aug 2024 04:56:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1411-1</guid>
+        <source url="https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411.rss">How to Configure AWS Big Data with My Volkswagen Atlas?</source>
+      </item>
+  </channel>
+</rss>

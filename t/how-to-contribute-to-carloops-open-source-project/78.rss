@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How to contribute to Carloop&#39;s open source project</title>
+    <link>https://community.carloop.io/t/how-to-contribute-to-carloops-open-source-project/78</link>
+    <description>If you are just getting started and want to contribute to a data dictionary, or even correct a typo, it can be a bit overwhelming. Here is a nice step by step guide that shows you how to do that: https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/</description>
+    
+    <lastBuildDate>Sat, 11 Jun 2016 16:03:43 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/how-to-contribute-to-carloops-open-source-project/78.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How to contribute to Carloop&#39;s open source project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>If you are just getting started and want to contribute to a data dictionary, or even correct a typo, it can be a bit overwhelming. Here is a nice step by step guide that shows you how to do that: <a href="https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/" class="inline-onebox">The beginner’s guide to contributing to a GitHub project – Rob Allen</a></p>
+          <p><a href="https://community.carloop.io/t/how-to-contribute-to-carloops-open-source-project/78/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-contribute-to-carloops-open-source-project/78/1</link>
+        <pubDate>Sat, 11 Jun 2016 16:03:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-78-1</guid>
+        <source url="https://community.carloop.io/t/how-to-contribute-to-carloops-open-source-project/78.rss">How to contribute to Carloop&#39;s open source project</source>
+      </item>
+  </channel>
+</rss>

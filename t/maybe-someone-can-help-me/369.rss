@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Maybe someone can help me</title>
+    <link>https://community.carloop.io/t/maybe-someone-can-help-me/369</link>
+    <description>I&#39;m using this code as an example but I&#39;m trying to wait for a certain id to pop up then send my own right after it. 
+heres the code I&#39;m using but I&#39;m not getting any output when I send the can frames to test it. 
+    candump can0 | grep &quot; 123 &quot; | while read line; do cansend can0 456#12345678; done
+
+I got the code from a an article [here](https://medium.freecodecamp.com/hacking-cars-a-guide-tutorial-on-how-to-hack-a-car-5eafcfbbb7ec)</description>
+    
+    <lastBuildDate>Tue, 27 Jun 2017 03:21:14 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>appreciate it ill keep at it, I just got the 8.4" uconnect screen upgrading from, the 4.3" screen in my Dodge Charger. now looking into a way for video input but a DIY way lol id rather not pay a ton just to get my raspberry pi to display on the screen lol I have it setup as a hotspot now and can connect to it via phone, laptop, iPad etc. to candump and it works great too. eventually I want to make my own interface once I get all the commands down packed.</p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/6</link>
+        <pubDate>Tue, 27 Jun 2017 03:21:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-6</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>,</p>
+<p>I am guessing at this point, but my only 2 guesses are:</p>
+<ul>
+<li>is there some sort of exception occurring when/after sending the custom ID that causes an error condition that causes the command to close?</li>
+<li>is there something in the logic that causes an exit after sending the custom ID, instead of going back to watching for the next id to pop up?</li>
+</ul>
+<p>Keep working at it; often it is a tiny detail that causes behaviour like this.</p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/5</link>
+        <pubDate>Tue, 27 Jun 2017 03:00:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-5</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I got it to work with this line but got a few errors<br>
+<code>candump can0 | grep "123" while read line;  cansend can0 123#1234 grep: while: No such file or directory grep: read: No such file or directory grep: line: No such file or directory</code></p>
+<p>but once the command reads the ID once it quits. if I pull up one terminal with “candump” and another one to run the code, I can see it see the original ID then send the custom ID, after that it closes the command, almost there to figuring it out.</p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/4</link>
+        <pubDate>Mon, 26 Jun 2017 17:04:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-4</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I have proper communication between my raspberry pi and the carloop working fine, I’m able to send commands no problem and it works. what I’m trying to do is wait for a certain ID to pop up then send my own ID right after.<br>
+I assumed from using the command (not code sorry) below it would read the ID then send my command. I haven’t got to make it into full blown code just yet still trying to get it working. I have made it work once but now can’t get it working again I’m assuming I did something by mistake I’m looking over.<br>
+<code>candump can0 | grep " 123 " | while read line; do cansend can0 456#8021C0071B101000; done</code></p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/3</link>
+        <pubDate>Mon, 26 Jun 2017 12:01:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-3</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>, I don’t see your code … can you add it in so we can take a look?</p>
+<p>In the meantime, I assume you are running candump / cansend on some form of unix machine.  I also assume you are using a Carloop to do the USB/CANbus interface between your unix machine and the car.</p>
+<p>Can you do some checks to ensure your unix machine and Carloop are communicating properly with each other?  I would suggest having the Carloop echo back messages to the unix machine so you can check if Carloop is seeing the cansend correctly?</p>
+<p>Give that a try and let us know how it goes!</p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/2</link>
+        <pubDate>Mon, 26 Jun 2017 03:20:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-2</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+      <item>
+        <title>Maybe someone can help me</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m using this code as an example but I’m trying to wait for a certain id to pop up then send my own right after it.<br>
+heres the code I’m using but I’m not getting any output when I send the can frames to test it.<br>
+candump can0 | grep " 123 " | while read line; do cansend can0 456#12345678; done</p>
+<p>I got the code from a an article <a href="https://medium.freecodecamp.com/hacking-cars-a-guide-tutorial-on-how-to-hack-a-car-5eafcfbbb7ec" rel="noopener nofollow ugc">here</a></p>
+          <p><a href="https://community.carloop.io/t/maybe-someone-can-help-me/369/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/maybe-someone-can-help-me/369/1</link>
+        <pubDate>Sun, 25 Jun 2017 06:00:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-369-1</guid>
+        <source url="https://community.carloop.io/t/maybe-someone-can-help-me/369.rss">Maybe someone can help me</source>
+      </item>
+  </channel>
+</rss>

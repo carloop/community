@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+    <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128</link>
+    <description>Hi from Germany,
+
+I&#39;m working on OBD2 and UDS Apps for iOS. To facilitate reprogramming, I have looked out for a 
+proper device that allows me to connect via WiFi or BLE and send and receive CAN frames.
+
+I don&#39;t want or need any ELM327 or STN compatibility, I&#39;m rather leaning towards a simple WiFi-interface
+that allows me to send and receive unprocessed frames in the fastest and simplest way.
+
+For this I would need the Carloop to act as a WiFi access point, offering a simple TCP-interface
+that translates my commands and sends them to CAN, receiving the answers and piping them back via WiFi.
+
+The icing on the cake would be automatic CAN frame segmentation and perhaps ISO-TP encoding/decoding.
+
+Is this possible with the CarLoop Photon or did I buy something wrong? :slight_smile:
+Moreover, did any one do something like this where I could join forces?
+
+Best regards,
+
+Mickey.</description>
+    
+    <lastBuildDate>Tue, 02 May 2023 09:44:56 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+        <dc:creator><![CDATA[DrMickeyLauer]]></dc:creator>
+        <description><![CDATA[
+            <p>For the records and anyone who is still reading this… I have since moved to the ESP32 platform and am working on my own custom hardware. My OBD2 adapter prototype already takes less than 40% of the time to reflash an ECU it takes with the best ELM327-compatible adapters. It uses a BLE L2CAP channel with a custom protocol to transfer the CAN data. Integration of an ethernet connectivity to serve BMW and some other vendors is also planned. If you’re interested, give me a call and I’ll keep you in the loop with regards to further development.</p>
+          <p><a href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/4</link>
+        <pubDate>Tue, 02 May 2023 09:44:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1128-4</guid>
+        <source url="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss">Carloop as Poor man&#39;s Passthrough-Device</source>
+      </item>
+      <item>
+        <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+        <dc:creator><![CDATA[Odb7]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Dr. Mickey<br>
+I do not believe the Carpool basic is design to work as access point. The simplest way to do this in my opinion is have Raspberry Pi work as access point and have the Carpool communicate with it. <a href="https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md" rel="noopener nofollow ugc">https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md</a> via bluetooth to get all the data you need. Raw or unprocessed. Here is the github code for TCP CAN Bus logger in python <a href="https://github.com/carloop/simple_logger" class="inline-onebox" rel="noopener nofollow ugc">GitHub - carloop/simple_logger: Serial and TCP CAN bus logger for Carloop</a><br>
+If you get it working I buy the carloop basic and get started. <img src="//carloop-community.dyndns.org/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/3</link>
+        <pubDate>Sun, 14 Mar 2021 19:16:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1128-3</guid>
+        <source url="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss">Carloop as Poor man&#39;s Passthrough-Device</source>
+      </item>
+      <item>
+        <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+        <dc:creator><![CDATA[dariush_abbasi868]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="DrMickeyLauer" data-post="1" data-topic="1128">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/drmickeylauer/48/466_2.png" class="avatar"> DrMickeyLauer:</div>
+<blockquote>
+<p>have looked out for a proper device that allows me to connect via WiFi or BLE and send and receive CAN fra</p>
+</blockquote>
+</aside>
+<p>Hi<br>
+about hardware you have to detect CAN frame by its chip and also a CPU then send it via a BLE or something else.<br>
+about frimware as you know we have several kinds of CAN buses such as 29 bit or 11 bit by verity kinds of baudrates.<br>
+Are you familiar with these contents?</p>
+          <p><a href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/2</link>
+        <pubDate>Sun, 14 Mar 2021 11:04:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1128-2</guid>
+        <source url="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss">Carloop as Poor man&#39;s Passthrough-Device</source>
+      </item>
+      <item>
+        <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+        <dc:creator><![CDATA[DrMickeyLauer]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi from Germany,</p>
+<p>I’m working on OBD2 and UDS Apps for iOS. To facilitate reprogramming, I have looked out for a<br>
+proper device that allows me to connect via WiFi or BLE and send and receive CAN frames.</p>
+<p>I don’t want or need any ELM327 or STN compatibility, I’m rather leaning towards a simple WiFi-interface<br>
+that allows me to send and receive unprocessed frames in the fastest and simplest way.</p>
+<p>For this I would need the Carloop to act as a WiFi access point, offering a simple TCP-interface<br>
+that translates my commands and sends them to CAN, receiving the answers and piping them back via WiFi.</p>
+<p>The icing on the cake would be automatic CAN frame segmentation and perhaps ISO-TP encoding/decoding.</p>
+<p>Is this possible with the CarLoop Photon or did I buy something wrong? <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+Moreover, did any one do something like this where I could join forces?</p>
+<p>Best regards,</p>
+<p>Mickey.</p>
+          <p><a href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128/1</link>
+        <pubDate>Sat, 13 Mar 2021 10:32:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1128-1</guid>
+        <source url="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss">Carloop as Poor man&#39;s Passthrough-Device</source>
+      </item>
+  </channel>
+</rss>

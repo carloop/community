@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Site Feedback - Carloop Community</title>
+    <link>https://community.carloop.io/c/site-feedback/3</link>
+    <description>Topics in the &#39;Site Feedback&#39; category Discussion about this site, its organization, how it works, and how we can improve it.</description>
+    
+      <lastBuildDate>Thu, 03 Jan 2019 10:55:03 +0000</lastBuildDate>
+      <atom:link href="https://community.carloop.io/c/site-feedback/3.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Having trouble finding information on hardware availability</title>
+          <dc:creator><![CDATA[jpvonoy]]></dc:creator>
+          <category>Site Feedback</category>
+          <description><![CDATA[
+            <p>Many of the items in the store are not available. Is there an anticipated date when they’ll be back in stock?  Are they no longer being sold?  New versions under development? I’m personally interested in the Carloop and the CAN hitch.</p>
+<p>I suggest adding info to the store to answer these types of questions, or adding a News/Updates page.  The next place I would look for this type of info would be in the community forum. Perhaps a sticky topic with hardware availability / plans / technology roadmap.</p>
+<p>Maybe the info is there and I just missed it?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801</link>
+          <pubDate>Thu, 03 Jan 2019 10:55:03 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-801</guid>
+          <source url="https://community.carloop.io/t/having-trouble-finding-information-on-hardware-availability/801.rss">Having trouble finding information on hardware availability</source>
+        </item>
+        <item>
+          <title>What do you think of our new website?</title>
+          <dc:creator><![CDATA[alanm]]></dc:creator>
+          <category>Site Feedback</category>
+          <description><![CDATA[
+            <p>We are trying out a new website to test whether people like it or not.  What could be improved? <a href="https://www.carloop.io/">https://www.carloop.io/</a></p>
+            <p><small>6 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/what-do-you-think-of-our-new-website/65">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/what-do-you-think-of-our-new-website/65</link>
+          <pubDate>Thu, 02 Jun 2016 17:27:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-65</guid>
+          <source url="https://community.carloop.io/t/what-do-you-think-of-our-new-website/65.rss">What do you think of our new website?</source>
+        </item>
+        <item>
+          <title>Website cert fail</title>
+          <dc:creator><![CDATA[MRubenzahl]]></dc:creator>
+          <category>Site Feedback</category>
+          <description><![CDATA[
+            <p>I am a Carloop fan but guys, your website puts up an immediate roadblock because your certificate is invalid. You’re losing visitors before the welcome mat!</p>
+<p>Also, the home page has no About Us, no Contact Us. As a small company, you want to be approachable and this is the opposite of that.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png" data-download-href="//carloop-community.dyndns.org/uploads/default/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11_2_690x439.png" width="690" height="439" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11_2_690x439.png, //carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png 2x" data-dominant-color="F0F0F1"></a></div><p></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/website-cert-fail/62">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/website-cert-fail/62</link>
+          <pubDate>Tue, 31 May 2016 03:23:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-62</guid>
+          <source url="https://community.carloop.io/t/website-cert-fail/62.rss">Website cert fail</source>
+        </item>
+        <item>
+          <title>About the Site Feedback category</title>
+          <dc:creator><![CDATA[system]]></dc:creator>
+          <category>Site Feedback</category>
+          <description><![CDATA[
+            <p>Discussion about this site, its organization, how it works, and how we can improve it.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/about-the-site-feedback-category/2">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/about-the-site-feedback-category/2</link>
+          <pubDate>Sun, 07 Feb 2016 07:23:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-2</guid>
+          <source url="https://community.carloop.io/t/about-the-site-feedback-category/2.rss">About the Site Feedback category</source>
+        </item>
+  </channel>
+</rss>

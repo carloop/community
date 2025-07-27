@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Chevy Volt CAN messages data dictionary</title>
+    <link>https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76</link>
+    <description>I&#39;ve been playing around with a Chevy Volt and thanks to the [Simple CAN Logger] (https://github.com/carloop/simple_logger) by @jvanier was able to access all CAN messages and logged them on a text file.
+
+Getting all CAN messages can be overwhelming not only for you but for the TCP server and the serial port.  For this reason, it&#39;s best to limit the range of messages you are looking for.   For e.g. from 0x100 to 0x200. 
+
+In the case of the Chevy Volt, I believe @fonix would be very happy to know that there is list started with some interesting available variables on the CAN bus.  The list can be found here: http://evtools.info/ChevyVoltOBD2CAN.html
+
+I&#39;ll post an example on this topic, since I will try to map as many CAN messages to physical values as I can find on the Chevy Volt.</description>
+    
+    <lastBuildDate>Thu, 09 Jun 2016 15:51:07 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Chevy Volt CAN messages data dictionary</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Extract from data logger file for Chevy Volt accelerator pedal CAN message ID:</p>
+<p><code>{"timestamp":151.807000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.831000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.856000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.881000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.907000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.931000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.957000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":151.981000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.007000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.031000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.056000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.081000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.106000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.131000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.156000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.181000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.206000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.231000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.256000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":152.281000,"bus":1,"id":"0x1a1","data":"0x00004100000005"} {"timestamp":152.306000,"bus":1,"id":"0x1a1","data":"0x0000410000000e"} {"timestamp":152.331000,"bus":1,"id":"0x1a1","data":"0x0000410000001a"} {"timestamp":152.356000,"bus":1,"id":"0x1a1","data":"0x00004100000027"} {"timestamp":152.381000,"bus":1,"id":"0x1a1","data":"0x00004100000032"} {"timestamp":152.406000,"bus":1,"id":"0x1a1","data":"0x0000410000003a"} {"timestamp":152.431000,"bus":1,"id":"0x1a1","data":"0x00004100000044"} {"timestamp":152.456000,"bus":1,"id":"0x1a1","data":"0x00004100000051"} {"timestamp":152.481000,"bus":1,"id":"0x1a1","data":"0x0000410000005b"} {"timestamp":152.506000,"bus":1,"id":"0x1a1","data":"0x00004100000067"} {"timestamp":152.531000,"bus":1,"id":"0x1a1","data":"0x00004100000073"} {"timestamp":152.556000,"bus":1,"id":"0x1a1","data":"0x0000410000007b"} {"timestamp":152.581000,"bus":1,"id":"0x1a1","data":"0x00004100000081"} {"timestamp":152.606000,"bus":1,"id":"0x1a1","data":"0x00004100000085"} {"timestamp":152.631000,"bus":1,"id":"0x1a1","data":"0x0000410000008e"} {"timestamp":152.656000,"bus":1,"id":"0x1a1","data":"0x0000410000009a"} {"timestamp":152.681000,"bus":1,"id":"0x1a1","data":"0x000041000000a5"} {"timestamp":152.706000,"bus":1,"id":"0x1a1","data":"0x000041000000ad"} {"timestamp":152.731000,"bus":1,"id":"0x1a1","data":"0x000041000000b3"} {"timestamp":152.756000,"bus":1,"id":"0x1a1","data":"0x000041000000b9"} {"timestamp":152.781000,"bus":1,"id":"0x1a1","data":"0x000041000000bf"} {"timestamp":152.806000,"bus":1,"id":"0x1a1","data":"0x000041000000ca"} {"timestamp":152.831000,"bus":1,"id":"0x1a1","data":"0x000041000000d2"} {"timestamp":152.856000,"bus":1,"id":"0x1a1","data":"0x000041000000d5"} {"timestamp":152.881000,"bus":1,"id":"0x1a1","data":"0x000041000000d6"} {"timestamp":152.906000,"bus":1,"id":"0x1a1","data":"0x000041000000d6"} {"timestamp":152.931000,"bus":1,"id":"0x1a1","data":"0x000041000000d6"} {"timestamp":152.956000,"bus":1,"id":"0x1a1","data":"0x000041000000d6"} {"timestamp":152.981000,"bus":1,"id":"0x1a1","data":"0x000041000000d7"} {"timestamp":153.006000,"bus":1,"id":"0x1a1","data":"0x000041000000d7"} {"timestamp":153.031000,"bus":1,"id":"0x1a1","data":"0x000041000000d7"} {"timestamp":153.056000,"bus":1,"id":"0x1a1","data":"0x000041000000d7"} {"timestamp":153.081000,"bus":1,"id":"0x1a1","data":"0x000041000000d3"} {"timestamp":153.106000,"bus":1,"id":"0x1a1","data":"0x000041000000c4"} {"timestamp":153.131000,"bus":1,"id":"0x1a1","data":"0x000041000000ae"} {"timestamp":153.156000,"bus":1,"id":"0x1a1","data":"0x00004100000095"} {"timestamp":153.181000,"bus":1,"id":"0x1a1","data":"0x00004100000078"} {"timestamp":153.206000,"bus":1,"id":"0x1a1","data":"0x0000410000005c"} {"timestamp":153.231000,"bus":1,"id":"0x1a1","data":"0x00004100000042"} {"timestamp":153.256000,"bus":1,"id":"0x1a1","data":"0x0000410000002b"} {"timestamp":153.281000,"bus":1,"id":"0x1a1","data":"0x0000410000001c"} {"timestamp":153.306000,"bus":1,"id":"0x1a1","data":"0x0000410000000d"} {"timestamp":153.331000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.356000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.381000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.406000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.431000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.456000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.481000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.506000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.531000,"bus":1,"id":"0x1a1","data":"0x00004100000000"} {"timestamp":153.556000,"bus":1,"id":"0x1a1","data":"0</code></p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76/2</link>
+        <pubDate>Thu, 09 Jun 2016 15:51:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-76-2</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76.rss">Chevy Volt CAN messages data dictionary</source>
+      </item>
+      <item>
+        <title>Chevy Volt CAN messages data dictionary</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve been playing around with a Chevy Volt and thanks to the [Simple CAN Logger] (<a href="https://github.com/carloop/simple_logger" class="inline-onebox">GitHub - carloop/simple_logger: Serial and TCP CAN bus logger for Carloop</a>) by <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> was able to access all CAN messages and logged them on a text file.</p>
+<p>Getting all CAN messages can be overwhelming not only for you but for the TCP server and the serial port.  For this reason, it’s best to limit the range of messages you are looking for.   For e.g. from 0x100 to 0x200.</p>
+<p>In the case of the Chevy Volt, I believe <a class="mention" href="https://community.carloop.io/u/fonix">@fonix</a> would be very happy to know that there is list started with some interesting available variables on the CAN bus.  The list can be found here: <a href="http://evtools.info/ChevyVoltOBD2CAN.html" class="inline-onebox">evtools.info</a></p>
+<p>I’ll post an example on this topic, since I will try to map as many CAN messages to physical values as I can find on the Chevy Volt.</p>
+          <p><a href="https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76/1</link>
+        <pubDate>Thu, 09 Jun 2016 06:03:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-76-1</guid>
+        <source url="https://community.carloop.io/t/chevy-volt-can-messages-data-dictionary/76.rss">Chevy Volt CAN messages data dictionary</source>
+      </item>
+  </channel>
+</rss>

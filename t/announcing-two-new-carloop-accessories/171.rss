@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Announcing Two New Carloop Accessories</title>
+    <link>https://community.carloop.io/t/announcing-two-new-carloop-accessories/171</link>
+    <description>We are very excited to announce our latest addition to the Carloop Store!  Please give your warmest welcome to:
+
+* Female OBD-II Port: https://store.carloop.io/products/female-obd-ii-port
+* OBD-I Splitter Y-Cable: https://store.carloop.io/products/obd-ii-splitter-y-cable
+
+We&#39;ve searched high and low for a quality supplier of these two items and we&#39;ve found one that meets our standards.  I&#39;ve already used the Y-Cable to quickly figure out how to send the right CAN Messages to select specific OBD-II modes or reverse engineer proprietary scan tools.
+
+And of course, the Female OBD-II Port was thoroughly tested on our Carloop Dashboard.  (See pic below)
+&lt;img src=&quot;/uploads/default/original/1X/94c2e1ccef77c46de08414eeaced431292dbd286.JPG&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;
+
+Here&#39;s a close-up:
+&lt;img src=&quot;/uploads/default/original/1X/9563028618a665f71cd46e1cf011afff825afedd.JPG&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;</description>
+    
+    <lastBuildDate>Fri, 11 Nov 2016 20:48:03 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/announcing-two-new-carloop-accessories/171.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Announcing Two New Carloop Accessories</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>We are very excited to announce our latest addition to the Carloop Store!  Please give your warmest welcome to:</p>
+<ul>
+<li>Female OBD-II Port: <a href="https://store.carloop.io/products/female-obd-ii-port">https://store.carloop.io/products/female-obd-ii-port</a></li>
+<li>OBD-I Splitter Y-Cable: <a href="https://store.carloop.io/products/obd-ii-splitter-y-cable">https://store.carloop.io/products/obd-ii-splitter-y-cable</a></li>
+</ul>
+<p>We’ve searched high and low for a quality supplier of these two items and we’ve found one that meets our standards.  I’ve already used the Y-Cable to quickly figure out how to send the right CAN Messages to select specific OBD-II modes or reverse engineer proprietary scan tools.</p>
+<p>And of course, the Female OBD-II Port was thoroughly tested on our Carloop Dashboard.  (See pic below)<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/94c2e1ccef77c46de08414eeaced431292dbd286.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/94c2e1ccef77c46de08414eeaced431292dbd286" title="IMG_0720.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_500x500.JPG" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_500x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_750x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/94c2e1ccef77c46de08414eeaced431292dbd286_2_1000x1000.jpeg 2x" data-dominant-color="493930"></a></div><p></p>
+<p>Here’s a close-up:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/9563028618a665f71cd46e1cf011afff825afedd.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/9563028618a665f71cd46e1cf011afff825afedd" title="IMG_0901.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_500x500.JPG" width="500" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_500x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_750x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/9563028618a665f71cd46e1cf011afff825afedd_2_1000x1000.JPG 2x" data-dominant-color="7B756E"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/announcing-two-new-carloop-accessories/171/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/announcing-two-new-carloop-accessories/171/1</link>
+        <pubDate>Fri, 11 Nov 2016 20:48:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-171-1</guid>
+        <source url="https://community.carloop.io/t/announcing-two-new-carloop-accessories/171.rss">Announcing Two New Carloop Accessories</source>
+      </item>
+  </channel>
+</rss>

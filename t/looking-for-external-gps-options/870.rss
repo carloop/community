@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Looking for external GPS options</title>
+    <link>https://community.carloop.io/t/looking-for-external-gps-options/870</link>
+    <description>Hello,
+
+I&#39;m a software engineer, new to the hardware world but attempting to learn fast for a specific car tracking application. I have a Carloop Pro stack, and a Carloop + Electron with a separate Carloop GPS (without the headers to allow stacking). I have two GPS questions - 1) Has anyone had luck with an external GPS antenna and how did you build it, and 2) how do you get the Carloop GPS card to work over wires rather than stacked?
+
+More details:
+
+After quite a few field tests I&#39;ve determined my project needs a stronger GPS signal. We&#39;re already having trouble getting GPS data in any circumstances other than clear skies and no surrounding obstacles. I would like to test an external antenna as described [on the Particle forums](https://community.particle.io/t/how-to-get-external-antenna-for-asset-tracker-gps-resolved/25732), and it seems like using their Asset Tracker is one of the only ways to do that. However, the Electron board is already stacking on top of the Carloop, so it can&#39;t stack on top of the asset tracker also. I&#39;d rather not roll around with a breadboard and jumper wires. Is there some common hardware update I can do that I&#39;m missing? Or, is there some other board I could use instead?
+
+I have two Carloop GPS cards now and I&#39;ve tested that they both work when stacked, using headers. However, they never find GPS data when using a wired connection, and I&#39;ve tested two different wire connections. What am I missing here? 
+
+Thanks in advance!
+
+- Tami Mitchell</description>
+    
+    <lastBuildDate>Tue, 07 May 2019 19:33:07 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/looking-for-external-gps-options/870.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Looking for external GPS options</title>
+        <dc:creator><![CDATA[tmitchell]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Alan,</p>
+<p>That makes sends, though we’ve found that even with an OBDII extension cord so that the Carloop Pro stack can point at the sky, we have a hard time picking up GPS with partly cloudy or worse weather.</p>
+<p>That’s the wired connection I’m already using, and I’ve tried <a href="https://www.sparkfun.com/products/574" rel="noopener nofollow ugc">this one</a> as well. The long one has a wire crossover but the short one doesn’t - that seems odd? I’m using the <a href="https://github.com/carloop/carloop-library/blob/master/examples/carloop_minimal/carloop_minimal.cpp" rel="noopener nofollow ugc">Carloop Minimal</a> code at the moment for testing, but am getting no data outside, with a mostly clear sky. Specifically I get 0 chars with the wired connection, unless I unplug and plug it back in, and then it might show 3-4 chars but never any more than that. From what I understand and from testing the Pro stack, chars should add up quickly just to show the chip is attempting to make a GPS connection.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6.png" data-download-href="//carloop-community.dyndns.org/uploads/default/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6" title="Screen Shot 2019-05-07 at 12.24.29 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6_2_690x139.png" width="690" height="139" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6_2_690x139.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6_2_1035x208.png 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/7ef7d54c6d0bb6949dd6c0c68a2f67f49b695fe6_2_1380x278.png 2x" data-dominant-color="EAEAE6"></a></div><p></p>
+<p>This is with the Carloop/Electron plugged into my laptop via usb, the Carloop GPS plugged into the Carloop card, and with the Electron battery plugged in also, but no OBDII connection.</p>
+          <p><a href="https://community.carloop.io/t/looking-for-external-gps-options/870/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/looking-for-external-gps-options/870/3</link>
+        <pubDate>Tue, 07 May 2019 19:33:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-870-3</guid>
+        <source url="https://community.carloop.io/t/looking-for-external-gps-options/870.rss">Looking for external GPS options</source>
+      </item>
+      <item>
+        <title>Looking for external GPS options</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Tami,<br>
+Thanks for your post.  One option you have using the existing setup is to detach the Carloop GPS from the Carloop + Electron assembly.  You can use a jumper wire to remotely place the GPS somewhere else by connecting it via the white JST SH connector.  Here is <a href="https://www.sparkfun.com/products/9123">an example</a> of a 12" wire, but you could make a much longer jumper wire and place the Carloop GPS remotely where it has better access to the sky.  Does this make sense?</p>
+          <p><a href="https://community.carloop.io/t/looking-for-external-gps-options/870/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/looking-for-external-gps-options/870/2</link>
+        <pubDate>Tue, 07 May 2019 18:43:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-870-2</guid>
+        <source url="https://community.carloop.io/t/looking-for-external-gps-options/870.rss">Looking for external GPS options</source>
+      </item>
+      <item>
+        <title>Looking for external GPS options</title>
+        <dc:creator><![CDATA[tmitchell]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I’m a software engineer, new to the hardware world but attempting to learn fast for a specific car tracking application. I have a Carloop Pro stack, and a Carloop + Electron with a separate Carloop GPS (without the headers to allow stacking). I have two GPS questions - 1) Has anyone had luck with an external GPS antenna and how did you build it, and 2) how do you get the Carloop GPS card to work over wires rather than stacked?</p>
+<p>More details:</p>
+<p>After quite a few field tests I’ve determined my project needs a stronger GPS signal. We’re already having trouble getting GPS data in any circumstances other than clear skies and no surrounding obstacles. I would like to test an external antenna as described <a href="https://community.particle.io/t/how-to-get-external-antenna-for-asset-tracker-gps-resolved/25732" rel="noopener nofollow ugc">on the Particle forums</a>, and it seems like using their Asset Tracker is one of the only ways to do that. However, the Electron board is already stacking on top of the Carloop, so it can’t stack on top of the asset tracker also. I’d rather not roll around with a breadboard and jumper wires. Is there some common hardware update I can do that I’m missing? Or, is there some other board I could use instead?</p>
+<p>I have two Carloop GPS cards now and I’ve tested that they both work when stacked, using headers. However, they never find GPS data when using a wired connection, and I’ve tested two different wire connections. What am I missing here?</p>
+<p>Thanks in advance!</p>
+<ul>
+<li>Tami Mitchell</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/looking-for-external-gps-options/870/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/looking-for-external-gps-options/870/1</link>
+        <pubDate>Tue, 07 May 2019 18:09:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-870-1</guid>
+        <source url="https://community.carloop.io/t/looking-for-external-gps-options/870.rss">Looking for external GPS options</source>
+      </item>
+  </channel>
+</rss>

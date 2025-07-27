@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Read current mileage</title>
+    <link>https://community.carloop.io/t/read-current-mileage/375</link>
+    <description>I am looking for a possibility to get a trigger the current colometer stand. Unfortunately, I have not found a PID which can be used. How can I do this with a Carloop and Particle Electron, does anyone have an idea?</description>
+    
+    <lastBuildDate>Tue, 04 Jul 2017 00:04:45 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/read-current-mileage/375.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Read current mileage</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dave">@Dave</a>,</p>
+<p>There is no PID for the odometer in the OBD or OBD-II standard specification.<br>
+It might be there as a custom PID for your car, or done using another message format, or maybe done on a whole other bus (or not at all, but I doubt that).</p>
+<p>I would suggest searching for a forum that specializes in your type of car.<br>
+Let us know what type of car you have; maybe someone here can point you where to go.<br>
+Once you find a group that knows your car, you can ask or search there.</p>
+<p>Then, once you know how it is done on your car, then we can help you out programming your Carloop to do it.</p>
+<p>Good luck searching!</p>
+          <p><a href="https://community.carloop.io/t/read-current-mileage/375/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/read-current-mileage/375/2</link>
+        <pubDate>Tue, 04 Jul 2017 00:04:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-375-2</guid>
+        <source url="https://community.carloop.io/t/read-current-mileage/375.rss">Read current mileage</source>
+      </item>
+      <item>
+        <title>Read current mileage</title>
+        <dc:creator><![CDATA[Dave]]></dc:creator>
+        <description><![CDATA[
+            <p>I am looking for a possibility to get a trigger the current colometer stand. Unfortunately, I have not found a PID which can be used. How can I do this with a Carloop and Particle Electron, does anyone have an idea?</p>
+          <p><a href="https://community.carloop.io/t/read-current-mileage/375/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/read-current-mileage/375/1</link>
+        <pubDate>Mon, 03 Jul 2017 23:56:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-375-1</guid>
+        <source url="https://community.carloop.io/t/read-current-mileage/375.rss">Read current mileage</source>
+      </item>
+  </channel>
+</rss>

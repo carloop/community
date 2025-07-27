@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop plus Car Loop GPS</title>
+    <link>https://community.carloop.io/t/carloop-plus-car-loop-gps/684</link>
+    <description>I&#39;ve purchased an Electron, a Carloop, and a Carloop GPS.  I am able to find lots of examples of how to configure and use everything but the Accelerometer.  Is there an example for the accell?  Is it pinned the same way as the AssetTracker?  Can I use the Adafruit_LIS3DH library?</description>
+    
+    <lastBuildDate>Mon, 16 Jul 2018 18:03:11 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-plus-car-loop-gps/684.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop plus Car Loop GPS</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Here is an example but for the Gyro, maybe it will give you some lights for the accell <a href="https://carloop.dyndns.org/t/gyro-in-gps-module/666/8?u=itsmedavid" class="inline-onebox">Gyro in gps module? - Hardware - Carloop Community</a></p>
+<p>Can you share the examples that you got?</p>
+<p>Thanks.</p>
+          <p><a href="https://community.carloop.io/t/carloop-plus-car-loop-gps/684/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-plus-car-loop-gps/684/2</link>
+        <pubDate>Mon, 16 Jul 2018 18:03:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-684-2</guid>
+        <source url="https://community.carloop.io/t/carloop-plus-car-loop-gps/684.rss">Carloop plus Car Loop GPS</source>
+      </item>
+      <item>
+        <title>Carloop plus Car Loop GPS</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve purchased an Electron, a Carloop, and a Carloop GPS.  I am able to find lots of examples of how to configure and use everything but the Accelerometer.  Is there an example for the accell?  Is it pinned the same way as the AssetTracker?  Can I use the Adafruit_LIS3DH library?</p>
+          <p><a href="https://community.carloop.io/t/carloop-plus-car-loop-gps/684/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-plus-car-loop-gps/684/1</link>
+        <pubDate>Mon, 16 Jul 2018 04:47:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-684-1</guid>
+        <source url="https://community.carloop.io/t/carloop-plus-car-loop-gps/684.rss">Carloop plus Car Loop GPS</source>
+      </item>
+  </channel>
+</rss>

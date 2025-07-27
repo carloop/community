@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Visualization of Carloop Telemetry</title>
+    <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828</link>
+    <description>Hello, 
+
+We have been using Carloop for the last several months and its been an excellent framework to jumpstart car projects. Thanks to the Carloop team!  Since then, we have been developing a platform which leverages the Carloop 3G device to visualize its telemetry data in a mobile app.
+
+Features include trip detection, dtc code notifications and acknowledgement, anomaly detection and service / maintenance history to start. Below are some screenshots from the mobile app. We are in the early stages of development and would like to hear from interested enthusiasts. Thanks in advance looking to share more as we progress.
+
+https://www.dropbox.com/s/dz7krt770ziolqz/Screenshot_20190224-151204.png?dl=0
+https://www.dropbox.com/s/hrzvqxatkwp0nyx/Screenshot_20190224-151222.png?dl=0
+https://www.dropbox.com/s/zvnf7lwrpppo3jw/Screenshot_20190224-151231.png?dl=0
+https://www.dropbox.com/s/b1r6cyipmns61rk/Screenshot_20190224-151336.png?dl=0</description>
+    
+    <lastBuildDate>Wed, 09 Oct 2019 03:03:26 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[Louisianimal]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jnbankston">@jnbankston</a> PM’d you; my inbox was filtering email from these forums.   Better late than never I suppose though.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/11</link>
+        <pubDate>Wed, 09 Oct 2019 03:03:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-11</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[jnbankston]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/louisianimal">@Louisianimal</a> yes it is. Send me a pm and we can discuss. There would need to be some clean up before it could be release. Thanks.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/10</link>
+        <pubDate>Sun, 15 Sep 2019 15:46:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-10</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[Louisianimal]]></dc:creator>
+        <description><![CDATA[
+            <p>Is the project still in development? Really curious to see if you decided on open source and what parts need contribution/work.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/9</link>
+        <pubDate>Sun, 08 Sep 2019 02:13:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-9</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Let me elaborate on the navigation rally first.</p>
+<p>At its heart, navigation rally is not a race, but precision driving.  The goal is to be on time, all the time.<br>
+Instructions are in the form of average speeds or leaving a waypoint at a specific time.  For example, drive section 1 at 54.3 km/h.  Take 3 minutes to drive section 2 (used for sections going through towns or at railway crossings), so you wait at the end of section 2 until the 3 minutes has passed.</p>
+<p>The navigation part is by distance.  For example, turn left at 0.54 km, then calibrate your odometer with the bridge at 5.1 km (except you will have to calibrate as it may scaled differently than a real odometer).  You would want to keep a history of how the car entered and exited a waypoint (ie. direction and location on the way into an intersection, and the same information on the way out).  This history would allow to return and make corrections in case of navigation error.  The difference between bear (slight) left, turn (90 deg) left and acute (sharper) left may be important.  Also, instructions may be in the form of a puzzle (ie. 6:00 on a clock face means straight ahead.).</p>
+<p>This is very basic.  As you can tell, it gets very interesting (complicated) quickly, but there are teams that can be off by only 0.1 minutes (6 seconds) after 7 or 8 hours of rallying…</p>
+<p>If you are interested, I can search up some links about more detail on the navigation.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/8</link>
+        <pubDate>Tue, 09 Apr 2019 01:23:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-8</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[jnbankston]]></dc:creator>
+        <description><![CDATA[
+            <p>I really like the last two use cases and could easily integrate them into the application. Are these challenges you are facing? It would be helpful to do a deeper dive to with someone to flesh out the idea. Thanks!</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/7</link>
+        <pubDate>Tue, 26 Mar 2019 19:01:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-7</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>In a race car, once the safety cage is installed and other changes are made, the stock dashboard no longer works.<br>
+How about a custom dashboard, where the mobile app is used to configure what parameters are shown on the dash.</p>
+<p>Another application would be getting data over to the mobile app so the team chief could what makes for the best lap times on a track.</p>
+<p>Yet another is for a navigation rally (not really racing) to keep track of the co-drivers instructions, along with speeds, averages and timing for the driver.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/6</link>
+        <pubDate>Sun, 17 Mar 2019 03:13:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-6</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[jnbankston]]></dc:creator>
+        <description><![CDATA[
+            <p>Yeah. Any use cases on how you could use it for race car telemetry? Thanks.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/5</link>
+        <pubDate>Wed, 13 Mar 2019 05:42:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-5</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Cool!</p>
+<p>I could see some of the functionality reused for race car telemetry…</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/4</link>
+        <pubDate>Tue, 12 Mar 2019 06:04:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-4</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[jnbankston]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks! We are actually building a Fleet Management platform on top of the Carloop device. There are i some functionality we would be interested in open sourcing.</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/3</link>
+        <pubDate>Thu, 07 Mar 2019 03:19:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-3</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Very interesting work!  Is this a project that you will be sharing?  It would be a great example of how to do a mobile app linked with Carloop!</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/2</link>
+        <pubDate>Mon, 04 Mar 2019 03:52:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-2</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+      <item>
+        <title>Visualization of Carloop Telemetry</title>
+        <dc:creator><![CDATA[jnbankston]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>We have been using Carloop for the last several months and its been an excellent framework to jumpstart car projects. Thanks to the Carloop team!  Since then, we have been developing a platform which leverages the Carloop 3G device to visualize its telemetry data in a mobile app.</p>
+<p>Features include trip detection, dtc code notifications and acknowledgement, anomaly detection and service / maintenance history to start. Below are some screenshots from the mobile app. We are in the early stages of development and would like to hear from interested enthusiasts. Thanks in advance looking to share more as we progress.</p>
+<p>          <a href="https://dl.dropboxusercontent.com/s/dz7krt770ziolqz/Screenshot_20190224-151204.png?dl=0" target="_blank" rel="noopener nofollow ugc" class="onebox">
+            <span class="broken-image" title="This image is broken"><svg class="fa d-icon d-icon-unlink svg-icon" aria-hidden="true"><use href="#unlink"></use></svg></span>
+          </a>
+<br>
+          <a href="https://dl.dropboxusercontent.com/s/hrzvqxatkwp0nyx/Screenshot_20190224-151222.png?dl=0" target="_blank" rel="noopener nofollow ugc" class="onebox">
+            <span class="broken-image" title="This image is broken"><svg class="fa d-icon d-icon-unlink svg-icon" aria-hidden="true"><use href="#unlink"></use></svg></span>
+          </a>
+<br>
+          <a href="https://dl.dropboxusercontent.com/s/zvnf7lwrpppo3jw/Screenshot_20190224-151231.png?dl=0" target="_blank" rel="noopener nofollow ugc" class="onebox">
+            <span class="broken-image" title="This image is broken"><svg class="fa d-icon d-icon-unlink svg-icon" aria-hidden="true"><use href="#unlink"></use></svg></span>
+          </a>
+<br>
+          <a href="https://dl.dropboxusercontent.com/s/b1r6cyipmns61rk/Screenshot_20190224-151336.png?dl=0" target="_blank" rel="noopener nofollow ugc" class="onebox">
+            <span class="broken-image" title="This image is broken"><svg class="fa d-icon d-icon-unlink svg-icon" aria-hidden="true"><use href="#unlink"></use></svg></span>
+          </a>
+</p>
+          <p><a href="https://community.carloop.io/t/visualization-of-carloop-telemetry/828/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/visualization-of-carloop-telemetry/828/1</link>
+        <pubDate>Sun, 24 Feb 2019 21:24:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-828-1</guid>
+        <source url="https://community.carloop.io/t/visualization-of-carloop-telemetry/828.rss">Visualization of Carloop Telemetry</source>
+      </item>
+  </channel>
+</rss>

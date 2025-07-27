@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>3.3V CAN transceiver instead of 5v?</title>
+    <link>https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103</link>
+    <description>I was wondering if anyone has  researched using 3.3V CAN transceiver instead of 5v? I saves the 5V regulator (around $1.5 in BOM).
+
+I ended up using sn65hvd233 from TI. any experience with sn65hvd233?
+
+Thanks,
+Mehrdad</description>
+    
+    <lastBuildDate>Wed, 17 Aug 2016 02:50:12 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>3.3V CAN transceiver instead of 5v?</title>
+        <dc:creator><![CDATA[mehrdad]]></dc:creator>
+        <description><![CDATA[
+            <p>I just used the 3.3V power supply since this chip does not require a 5V supply. I don’t think Particle outputs a 5V line. I wanted to avoid an extra power regulator. The schematic is fairly straightforward from the datasheet:</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/32cdec462a0800ed65fd6daf926e596b834a2ca3.png" width="677" height="242"></p>
+<p>I used split termination with two 60 ohm resistors.</p>
+<p>I have not tested the board yet, as I am having a prototype built. Will keep you posted on the end result.</p>
+          <p><a href="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/4</link>
+        <pubDate>Wed, 17 Aug 2016 02:50:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-103-4</guid>
+        <source url="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103.rss">3.3V CAN transceiver instead of 5v?</source>
+      </item>
+      <item>
+        <title>3.3V CAN transceiver instead of 5v?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/mehrdad">@mehrdad</a> would be cool to see how you did that with a schematic.  I recall you need the 5V regulator to power the Particle boards.  Is that the 5V regulator you are referring to?</p>
+          <p><a href="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/3</link>
+        <pubDate>Tue, 16 Aug 2016 20:04:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-103-3</guid>
+        <source url="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103.rss">3.3V CAN transceiver instead of 5v?</source>
+      </item>
+      <item>
+        <title>3.3V CAN transceiver instead of 5v?</title>
+        <dc:creator><![CDATA[mehrdad]]></dc:creator>
+        <description><![CDATA[
+            <p>I was wondering if anyone has  researched using 3.3V CAN transceiver instead of 5v? I saves the 5V regulator (around $1.5 in BOM).</p>
+<p>I ended up using sn65hvd233 from TI. any experience with sn65hvd233?</p>
+<p>Thanks,<br>
+Mehrdad</p>
+          <p><a href="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103/1</link>
+        <pubDate>Sat, 13 Aug 2016 08:32:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-103-1</guid>
+        <source url="https://community.carloop.io/t/3-3v-can-transceiver-instead-of-5v/103.rss">3.3V CAN transceiver instead of 5v?</source>
+      </item>
+  </channel>
+</rss>

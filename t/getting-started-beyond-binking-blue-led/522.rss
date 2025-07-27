@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Getting Started beyond Binking Blue LED</title>
+    <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522</link>
+    <description>I have been playing around with my shiny new carloop device with the RedBear Duo attachment.  I think I’ve succeeded in getting the device onto my network and loading the three demo programs for Carloop.  The obd_blink.cpp program appears to be blinking the blue led when connected to my car’s obdii port.  My attempts to do anything meaningful with the other two programs has so far eluded me.  I am using Ubuntu 16.04 on my notebook.  I would be grateful if you could help me get to the point where I can get data out of the obdii port and onto my screen.  As you may have guessed so far I am totally new to the can protocol.  Thank you.</description>
+    
+    <lastBuildDate>Wed, 31 Jan 2018 02:02:24 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/timbergetter">@Timbergetter</a>,</p>
+<p>Good to hear that you are making some small progress.  Baby steps to start will lead to much greater things.</p>
+<p>I mentioned in another thread that I think Carloop is very powerful.  However, it takes care and knowledge to harness all that power and design what it can do for you.  It sounds like you are on your way now.  Let us know when you need help along the way.</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/6</link>
+        <pubDate>Wed, 31 Jan 2018 02:02:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-6</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[Timbergetter]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you very much for your words of encouragement cyclin_al1.  I have just got the carloop-minimal.ino successfully reporting “battery voltage” to a serial terminal screen on my linux notebook.  I will work through the suggestions you have made and hopefully I will make some progress now.</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/5</link>
+        <pubDate>Tue, 30 Jan 2018 09:18:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-5</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/timbergetter">@Timbergetter</a>,</p>
+<p>I am pretty sure your 2007 Subaru uses standard CANbus.  In fact, when I saw 2007, I checked this resource to see if your car even uses CANbus.  It does, thankfully!<br>
+<a href="http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf" class="onebox" target="_blank" rel="noopener">http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf</a></p>
+<p>I have a 2010 Forester that uses standard CANbus with no problem.  My 2004 Impreza uses ISO-9141, so definitely CANbus does not work for that one.</p>
+<p>Let’s get started then.</p>
+<p>I would suggest checking out the sample apps at <a href="http://carloop.io">carloop.io</a>:<br>
+<a href="https://www.carloop.io/apps/">https://www.carloop.io/apps/</a></p>
+<p>As I mentioned earlier, I recommend trying the VIN Reader app.<br>
+Flash the app to your Carloop, then read the VIN on your browser screen.<br>
+(I had forgotten that you don’t even need USBserial for this.)</p>
+<p>After that, try getting the source from GitHub and then build and flash the app yourself.<br>
+That will get you familiar with the aspects of how to program your carloop.</p>
+<p>After that, then it becomes all about programming your carloop to do what you want it to do.</p>
+<p>Let us know how it goes, and also let us know step-by-step if you run into any issues and we will try and help you out.</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/4</link>
+        <pubDate>Tue, 30 Jan 2018 05:26:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-4</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[Timbergetter]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks cyclin.  The other 2 progs are socketcan-serial.ino and carloop-minimal.ino which come along with the carloop library.  I would be happy if I could get the vin number as a starter, but I have no idea if my 2007 Subaru Forester uses extended messages.  So any terminal emulator would be all I’d need in addition to USBSerial?  If my Suby is not using extended messages can you suggest another feature I could target for testing?</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/3</link>
+        <pubDate>Mon, 29 Jan 2018 07:05:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-3</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/timbergetter">@Timbergetter</a>,</p>
+<p>Which other two programs are you referring to?  It is important to choose a program that will get the car data that you are interested in.  Sometimes, it is best to start with the simple example to get the VIN number; that one helps sort out if your car uses regular or extended 29-bit CAN messages.</p>
+<p>For communication with your notebook, how do you want it to talk to the RedBearDuo?  One of the easiest ways is USBserial and then all you have to do is run a terminal program on your laptop.</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/2</link>
+        <pubDate>Mon, 29 Jan 2018 04:48:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-2</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+      <item>
+        <title>Getting Started beyond Binking Blue LED</title>
+        <dc:creator><![CDATA[Timbergetter]]></dc:creator>
+        <description><![CDATA[
+            <p>I have been playing around with my shiny new carloop device with the RedBear Duo attachment.  I think I’ve succeeded in getting the device onto my network and loading the three demo programs for Carloop.  The obd_blink.cpp program appears to be blinking the blue led when connected to my car’s obdii port.  My attempts to do anything meaningful with the other two programs has so far eluded me.  I am using Ubuntu 16.04 on my notebook.  I would be grateful if you could help me get to the point where I can get data out of the obdii port and onto my screen.  As you may have guessed so far I am totally new to the can protocol.  Thank you.</p>
+          <p><a href="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522/1</link>
+        <pubDate>Mon, 29 Jan 2018 04:16:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-522-1</guid>
+        <source url="https://community.carloop.io/t/getting-started-beyond-binking-blue-led/522.rss">Getting Started beyond Binking Blue LED</source>
+      </item>
+  </channel>
+</rss>

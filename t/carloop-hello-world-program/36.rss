@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop &quot;Hello World&quot; program</title>
+    <link>https://community.carloop.io/t/carloop-hello-world-program/36</link>
+    <description>In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  @jvanier put together this very elegant and simple &quot;Hello World&quot; app for Carloop that works great as a sanity check and a good place to start playing with Carloop.
+
+**What does it do?** 
+Blinks the Photon or Electron&#39;s LED if Carloop successfully reads OBD signals on the CAN Bus
+
+**Requirements**
+* Photon firmware version has to be at least 0.4.9 (see [this post](https://carloop.dyndns.org/t/carloop-demo-program/18/4?u=alanm) for more info).
+* Electron firmware version at least 0.5.0
+
+**Life Pro Tip:**
+Type `SYSTEM_MODE(MANUAL);` at the top of your .ino file to avoid connecting to WiFi/Cellular and test everything is working as expected.
+
+**Carloop &quot;Hello World&quot; source code**
+https://github.com/carloop/carloop-library/blob/master/firmware/examples/obd_blink.cpp</description>
+    
+    <lastBuildDate>Wed, 06 Mar 2019 02:23:52 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/carloop-hello-world-program/36.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group quote-modified" data-username="Skip" data-post="9" data-topic="36">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/s/ebca7d/48.png" class="avatar"> Skip:</div>
+<blockquote>
+<p>ggestion to switching to a different or more complicated app I don’t see how this will help me when I can’t get the most basic app to work.</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a> sorry for the delay.  If you try flashing the SocketCAN firmware to your Particle device, do you see CAN messages? Here is the “how-to” article: <a href="https://carloop.dyndns.org/t/use-carloop-with-socketcan-and-can-utils/117" class="inline-onebox">Use Carloop with SocketCAN and can-utils - Software - Carloop Community</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/10</link>
+        <pubDate>Wed, 06 Mar 2019 02:23:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-10</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>Alan,</p>
+<p>As you indicated in your introduction to this thread, “Hello World” is a simple program that lets you know if Carloop successfully reads ODB signals on the CAN Bus.  At this point this is exactly what I’m looking for - to see something happen and confirm that I can read an ODB signal.  Unfortunately, it is NOT WORKING!</p>
+<p>Since this is the same program that you use to test every Carloop you ship I was hoping that you could provide me with some guidance as to what I might be doing wrong, what the problem might be, or suggest some diagnostic steps…</p>
+<p>Could the issue somehow be related to the make of car I’m testing with?  Even though my Actron scanner doesn’t have any issue with the Honda I did see some notes under other topics about Hondas having different CAN speeds and ID lengths - any thoughts?</p>
+<p>As to your suggestion to switching to a different or more complicated app I don’t see how this will help me when I can’t get the most basic app to work.</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/9</link>
+        <pubDate>Thu, 10 Jan 2019 01:08:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-9</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/skip">@Skip</a>,<br>
+The Hello World program is intended to get familiar with Carloop and see something happen. It is the equivalent of creating a website that just says “Hello World” in plain text, just HTML with no css.</p>
+<p>Take a look at this more advanced project: <a href="https://carloop.dyndns.org/t/turn-your-carloop-into-a-remote-obd-ii-reader/93" class="inline-onebox">Turn your Carloop into a remote OBD-II reader - Project Share - Carloop Community</a></p>
+<p>Or this sample app (2nd from the top): <a href="https://www.carloop.io/apps/">https://www.carloop.io/apps/</a></p>
+<p>Hope this helps!</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/8</link>
+        <pubDate>Wed, 09 Jan 2019 15:12:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-8</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>I am struggling to get my Carloop to read any ODB-II messages from my 2018 Honda Ridgeline.</p>
+<p>I am using:<br>
+Photon - Device OS/firmware version 0.7.0<br>
+Carloop - R2.3</p>
+<p>Using the particle IDE I compiled the “Hello World” app (copied from <a href="https://carloop.readme.io/docs/usage" class="inline-onebox" rel="noopener nofollow ugc">Hello World</a>) and included carloop.h from the particle library.  I flashed this to my photon which puts it into the breathing white - WiFi module off - mode expected with SYSTEM_MODE MANUAL.</p>
+<p>When I connect the Carloop to the ODB connector it powers up and resumes the breathing white - with the truck running or not the blue LED (D7) never blinks.</p>
+<p>If I put the Photon into safe mode it enables WiFi and reconnects to the Particle cloud/</p>
+<p>Using an Actron CP9180 ODB scanner I verified that the ODB connection in my truck is working.</p>
+<p>Obviously I’m missing something or doing something wrong.  Can anyone suggest what steps I should take next in diagnosing this?</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/7</link>
+        <pubDate>Tue, 08 Jan 2019 23:13:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-7</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cannibalbus">@cannibalbus</a>,</p>
+<p>You are correct that carloop is very small.  It was designed to be very small.<br>
+However, I do not agree that carloop is unstable.  Rather, carloop is a very powerful tool and needs to be treated as a powerful tool.  It is capable of much greater functionality than an OBD-II diagnosis tool.  With that greater functionality comes greater complexity and the user must take care to use it appropriately.</p>
+<p>As far as I am aware, every carloop problem has been a user problem, or a case where the car uses a protocol other than CANbus and only one case where the carloop itself had an issue; that case was resolved by replacing the power regulator chip on the carloop.  There could be something else that I am not aware of; I do not work for Carloop.</p>
+<p>I have to make an assumption given the little information you have provided.  Issues with white lights and red lights showing on the Photon leads me to assume that you have an issue with the setup of the Photon.  Also, when you describe the lights, you MUST provide the color of the light AND the light pattern, in accordance with the link I provided you earlier.  For example, for red lights it is critical to count the number of flashes in the pattern.  Also, it is important to described exactly what you did to cause the red lights.  If describing it is difficult, then maybe posting a video might be another way to communicate.</p>
+<p>Please remove the Photon from the Carloop, and then attach the Photon to your computer using a USB cable.<br>
+Follow the instructions starting at the top of this page to put your Photon into listening mode and display the system firmware version.<br>
+<a href="https://docs.particle.io/support/troubleshooting/troubleshooting-tools/photon/#display-system-firmware-version" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/support/troubleshooting/troubleshooting-tools/photon/#display-system-firmware-version</a></p>
+<p>When you do this, please provide the actions and responses step-by-step so that we can help you out.</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/6</link>
+        <pubDate>Tue, 30 Jan 2018 05:03:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-6</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[cannibalbus]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, the version and IDE is correct… But my carloop can does not respond, no blue led blinking.</p>
+<p>And I think that carloop is a very small and undstable… You need a new design like a obdII diagnosis:</p>
+<aside class="onebox amazon" data-onebox-src="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK">
+  <header class="source">
+
+      <a href="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK" target="_blank" rel="noopener nofollow ugc">amazon.de</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:424/500;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fe969dbad2432353c45af0a40913b91ed087580c_2_424x500.jpeg" class="thumbnail" data-dominant-color="4D4B4B" width="424" height="500"></div>
+
+<h3><a href="https://www.amazon.de/EXZA-Diagnosetool-HHOBD-10599-uneingeschraenkt/dp/B015V8YCYK" target="_blank" rel="noopener nofollow ugc">EXZA OBD II Diagnosetool HHOBD Wifi 10599 uneingeschraenkt 1St. : Amazon.de:...</a></h3>
+
+
+
+<p>EXZA OBD II Diagnosetool HHOBD Wifi 10599 uneingeschraenkt 1St. Verpackungsgröße: Inhalt: 1 Stück Originalqualität von EXZA</p>
+
+<p>
+  
+  
+  
+  
+  <strong></strong>
+</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/95265d517d34b1e9929e8db9f9e79ba36fd78069" title="obdII.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069_2_336x500.jpg" width="336" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069_2_336x500.jpg, //carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/95265d517d34b1e9929e8db9f9e79ba36fd78069.jpg 2x" data-dominant-color="414040"></a></div><p></p>
+<p>But that’s another problem!</p>
+<p>I have tried everything, also with metasploit and socketcan… and my device show a red light… dont work!!!</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/5</link>
+        <pubDate>Mon, 29 Jan 2018 06:27:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-5</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cannibalbus">@cannibalbus</a>,</p>
+<p>A white light is very strange for a Photon, especially for a recent system firmware.<br>
+Just to be sure, is 0.6.3 the version you are choosing in the IDE or is this the version confirmed to be on the Photon?<br>
+Also just to be sure, the carloop is new to you, but are you also new or experienced using a Particle Photon?</p>
+<p>Here are the Particle Photon documents to confirm the color codes of the RGB LED:<br>
+<a href="https://docs.particle.io/support/troubleshooting/troubleshooting-support/photon/" class="onebox" target="_blank" rel="noopener">https://docs.particle.io/support/troubleshooting/troubleshooting-support/photon/</a></p>
+<p>If you are getting the High-speed flashing white (since I forgot to ask about the pattern of the light), then you might want to leave it running 10 minutes to give it a chance to update the system firmware…</p>
+<p>Let’s focus on getting your Photon up and running; then we can move on to getting the Carloop going!</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/4</link>
+        <pubDate>Mon, 29 Jan 2018 05:03:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-4</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cannibalbus">@cannibalbus</a>,</p>
+<p>The blue LED that Alan Mond referred to is the LED associated with pin D7.  This is not the same as the RGB status LED in the centre of the Photon.</p>
+<p>What do you mean SYSTEM_MODE(MANUAL); typed?<br>
+You do have to build the whole program and then flash it to the Photon for it to work…<br>
+Can you let us know exactly how you did this.  Also, are you using Particle IDE, Particle Build or the CLI?</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/3</link>
+        <pubDate>Fri, 26 Jan 2018 03:33:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-3</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[cannibalbus]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello Alan,</p>
+<p>I have connected today my new carloop photon to the obd2 connector of my vw lupo 2005 and I do not see any blue light blinking, I only see a white light… 0.6.3 Photon firmware version and  SYSTEM_MODE(MANUAL); typed… What is the problem???</p>
+<p>My best regards!!!</p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/2</link>
+        <pubDate>Fri, 19 Jan 2018 16:43:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-2</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+      <item>
+        <title>Carloop &quot;Hello World&quot; program</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>In order to successfully test every Carloop we ship, I was looking for a simple program that would let me know that the hardware was properly soldered.  <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> put together this very elegant and simple “Hello World” app for Carloop that works great as a sanity check and a good place to start playing with Carloop.</p>
+<p><strong>What does it do?</strong><br>
+Blinks the Photon or Electron’s LED if Carloop successfully reads OBD signals on the CAN Bus</p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Photon firmware version has to be at least 0.4.9 (see <a href="https://carloop.dyndns.org/t/carloop-demo-program/18/4?u=alanm">this post</a> for more info).</li>
+<li>Electron firmware version at least 0.5.0</li>
+</ul>
+<p><strong>Life Pro Tip:</strong><br>
+Type <code>SYSTEM_MODE(MANUAL);</code> at the top of your .ino file to avoid connecting to WiFi/Cellular and test everything is working as expected.</p>
+<p><strong>Carloop “Hello World” source code</strong><br>
+<a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/obd_blink.cpp" class="onebox" target="_blank" rel="noopener">https://github.com/carloop/carloop-library/blob/master/firmware/examples/obd_blink.cpp</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-hello-world-program/36/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-hello-world-program/36/1</link>
+        <pubDate>Tue, 19 Apr 2016 23:17:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-36-1</guid>
+        <source url="https://community.carloop.io/t/carloop-hello-world-program/36.rss">Carloop &quot;Hello World&quot; program</source>
+      </item>
+  </channel>
+</rss>

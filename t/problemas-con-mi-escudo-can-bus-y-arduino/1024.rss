@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Problemas con mi Escudo CAN-BUS y arduino</title>
+    <link>https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024</link>
+    <description>estimados amigos espero puedan ayudarme, estoy iniciando me en esto.
+
+estoy usando arduino mega2560 + shield canbus ( https://www.sparkfun.com/products/13262 ) con el siguiente skecht https://github.com/kahiroka/slcanuino, este se carga sin problema en el arduino. luego desde la maquina linux debian 9 lanzo los siguientes comando.
+
+ sudo slcan_attach -f -s6 -o /dev/ttyACM0 
+ sudo slcand -S 1000000 ttyACM0 can0  
+ sudo ifconfig can0 up  
+despues..
+
+candump can0 y en otra terminal cansniffer can0 
+
+pero no obtengo respuestas de parte de mi vehiculo .
+espero su amable ayuda 
+saludos.</description>
+    
+    <lastBuildDate>Mon, 27 Apr 2020 02:47:07 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Problemas con mi Escudo CAN-BUS y arduino</title>
+        <dc:creator><![CDATA[wladimirC]]></dc:creator>
+        <description><![CDATA[
+            <p>estimados amigos espero puedan ayudarme, estoy iniciando me en esto.</p>
+<p>estoy usando arduino mega2560 + shield canbus ( <a href="https://www.sparkfun.com/products/13262" rel="noopener nofollow ugc">https://www.sparkfun.com/products/13262</a> ) con el siguiente skecht <a href="https://github.com/kahiroka/slcanuino" class="inline-onebox" rel="noopener nofollow ugc">GitHub - kahiroka/slcanuino: USB-CAN(SocketCAN) sketch for Arduino CAN-BUS shield</a>, este se carga sin problema en el arduino. luego desde la maquina linux debian 9 lanzo los siguientes comando.</p>
+<p>sudo slcan_attach -f -s6 -o /dev/ttyACM0<br>
+sudo slcand -S 1000000 ttyACM0 can0<br>
+sudo ifconfig can0 up<br>
+despues…</p>
+<p>candump can0 y en otra terminal cansniffer can0</p>
+<p>pero no obtengo respuestas de parte de mi vehiculo .<br>
+espero su amable ayuda<br>
+saludos.</p>
+          <p><a href="https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024/1</link>
+        <pubDate>Mon, 27 Apr 2020 02:47:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1024-1</guid>
+        <source url="https://community.carloop.io/t/problemas-con-mi-escudo-can-bus-y-arduino/1024.rss">Problemas con mi Escudo CAN-BUS y arduino</source>
+      </item>
+  </channel>
+</rss>

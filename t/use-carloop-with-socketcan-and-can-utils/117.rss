@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Use Carloop with SocketCAN and can-utils</title>
+    <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117</link>
+    <description>SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking.
+
+You can now use your Carloop as a SocketCAN interface!
+
+### Carloop firmware
+
+You&#39;ll need special firmware on your Carloop to print received CAN messages to the USB serial port and allow transmitting CAN messages sent to the USB serial port.
+
+Flash the SocketCAN serial firmware application to your Carloop. The easiest way is to go to https://build.particle.io, select Libraries on the left, search and select Carloop, then open the `socketcan_serial.cpp` example, click the `Use this example` button then flash to your device.
+
+&lt;img src=&quot;/uploads/default/original/1X/f06b31a9cdc9c63ba172655402602c16aa424d61.png&quot; width=&quot;690&quot; height=&quot;369&quot;&gt;
+
+### Linux computer setup
+
+To use SocketCAN you&#39;ll need a laptop running Linux. You could even do it from a Raspberry Pi.
+
+Install the `can-utils` package: `sudo apt install can-utils`
+
+SocketCAN has drivers to talk to many different devices. Since the Photon/Electron creates a serial port when you connect it to your laptop we&#39;ll use the serial line CAN driver (SLCAN).
+
+Connect your Carloop to your computer through the USB connector. A serial port named `/dev/ttyACM0` should now be available. Check with `ls /dev/ttyACM*`
+
+Link the serial port with a CAN network interface with `sudo slcand -o -c -s6 /dev/ttyACM0 can0`
+(`slcand` comes from can-utils, `s6` is the speed `ttyACM0` is the serial port, `can0` is the CAN network interface)
+
+At this point you should see a CAN network when you do `ip addr`
+```
+3: can0: &lt;NOARP&gt; mtu 16 qdisc pfifo_fast state DOWN group default qlen 10
+    link/can 
+```
+
+When you are ready to start analyzing traffic, you bring up the CAN network with `sudo ip link can0 up`
+
+You can then use other canutils like candump, cansniffer and cansend.
+
+Here&#39;s for example what happens when I use `candump can0` on my Ford Fiesta:
+
+https://www.youtube.com/embed/igTsTbvPPP0?rel=0
+
+Here&#39;s how I found out which message contains the accelerator pedal using `cansniffer -cae can0` which progressively hides messages that don&#39;t change. The pedal was in message 0xFD byte 3.
+
+&lt;img src=&quot;/uploads/default/original/1X/c5d66f5e81897722d43d501d332811ded2647f22.png&quot; width=&quot;690&quot; height=&quot;345&quot;&gt;
+
+To stop the CAN interface, do `sudo ip link can0 down`.
+
+`slcand` tends to keep running even after you stop the CAN interface. You can close it with `sudo pkill slcand`
+
+### References
+
+For details about the SLCAN serial protocol used between SocketCAN and the Carloop firmware, see [the source of the Carloop firmware on GitHub](https://github.com/carloop/carloop-library/blob/master/firmware/examples/socketcan_serial.cpp).
+
+For more details about the can-utils programs, [see the can-utils repository on GitHub](https://github.com/linux-can/can-utils). You can also search online for more info about a particular can-util program.
+
+[Some info about CAN on Linux](http://elinux.org/CAN_Bus) and [how to use different types of CAN interfaces](http://elinux.org/Bringing_CAN_interface_up).
+
+[The low-level documentation about SocketCAN](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/networking/can.txt) (this was too detailed for my needs).
+
+Here&#39;s a lit of the CAN bus speed parameters that can be passed to `slcand`:
+
+ *      -s0 10 kbit/s
+ *      -s1 20 kbit/s
+ *      -s2 50 kbit/s
+ *      -s3 100 kbit/s
+ *      -s4 125 kbit/s
+ *      -s5 250 kbit/s
+ *      -s6 500 kbit/s
+ *      -s7 800 kbit/s
+ *      -s8 1 Mbit/s
+
+
+Next steps would be to implement a UDP server in the Particle Photon to send the data wirelessly. [The socketcand would be a good place to start for the protocol](https://github.com/dschanoeh/socketcand).
+
+_Now get out there and do amazing things!_</description>
+    
+    <lastBuildDate>Thu, 26 Apr 2018 04:44:57 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/porgraming">@porgraming</a>,</p>
+<p>Thanks, I will have to check that out some time soon!</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/10</link>
+        <pubDate>Thu, 26 Apr 2018 04:44:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-10</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[porgraming]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve found out that there is a Windows and Mac program that allowed to communicate directly from Windows or Mac’s to SLCAN devices.<br>
+The program is CANtact (Can be found in <a href="https://github.com/linklayer/cantact-app/releases" class="inline-onebox" rel="noopener nofollow ugc">Releases · linklayer/cantact-app · GitHub</a>).<br>
+I’m still checking it out but it seems like a better solution than running VM every time.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/9</link>
+        <pubDate>Wed, 25 Apr 2018 14:10:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-9</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I might try Parallels instead of VMware.  Thanks for the tip.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/8</link>
+        <pubDate>Mon, 12 Mar 2018 23:33:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-8</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>ive ran into that same problem before! using my mac and a VM make sure to install the VM tools with it too. i was using parallels desktop and that did the trick for me.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/7</link>
+        <pubDate>Fri, 09 Mar 2018 16:24:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-7</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>I may certainly be diving in too deep to start.  Yesterday I build an CanBus Simulator based on an article I found online.  It works great with an Arduino and CanBus Shield.  I was able to connect it to an ELM327 Bluetooth Dongle and use an OBD Scanner on my iPhone to read the simulated values.  So this I know works.  I then plugged the CarLoop into this same test unit and did not get anything back.  I’ll try and start more simply.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/6</link>
+        <pubDate>Fri, 09 Mar 2018 14:08:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-6</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/jerseytechguy">@JerseyTechGuy</a>,</p>
+<p>I have not tried this myself, so I might be limited in how much I can help.<br>
+<a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> has done some of this; any ideas?</p>
+<p>One thing I might suggest is to start with a simpler example, such as getting the VIN number and make sure the Carloop is working okay.  That would let you know if Carloop is working and might give clues if your car is using extended 29-bit CAN messages.  Maybe you have already done this.</p>
+<p>Once we know the basics are working, then it would give us a baseline to help diagnose what is happening in this case.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/5</link>
+        <pubDate>Fri, 09 Mar 2018 04:14:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-5</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[JerseyTechGuy]]></dc:creator>
+        <description><![CDATA[
+            <p>Hoping someone can give me some guidance.  I was able to flash my Photon with the sketch no problem.  Because I don’t have a linux machine I installed a Debian Virtual Machine on my laptop.  I was able to connect to the USB port on the Photon, and install the carloop in my OBD port.  I found the device at tty/ACM1.  Everything else seemed to work correctly with the setup.  When I ran ip addr command, it showed the can network and the status was DOWN.</p>
+<p>Next I tried to bring it up.  The command to bring it up seemed to execute however after checking ip addr again the Status shows UNKNOWN.</p>
+<p>None of the utilities I ran seem to show any traffic on the network.</p>
+<p>Not sure how to proceed to diagnose the issue.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/4</link>
+        <pubDate>Thu, 08 Mar 2018 18:47:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-4</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/max">@max</a>,<br>
+Check out this thread which deals with extended CAN and a couple of related issues:<br>
+<a href="https://carloop.dyndns.org/t/handling-29-bit-extended-format/239/8" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/handling-29-bit-extended-format/239/8</a></p>
+<p>If that does not work, let us know where you are encountering the roadblock, with details.</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/3</link>
+        <pubDate>Tue, 26 Sep 2017 19:38:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-3</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[max]]></dc:creator>
+        <description><![CDATA[
+            <p>hi,</p>
+<p>your great app works very well on my wifes’s but not at all with mine which is CAN 29bit, 500kb . does anybody manage to use it with an extended CAN ?</p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/2</link>
+        <pubDate>Thu, 21 Sep 2017 17:11:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-2</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+      <item>
+        <title>Use Carloop with SocketCAN and can-utils</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>SocketCAN is the Linux CAN networking stack and can-utils are a rich set of utilities to analyze CAN traffic. They are great all-purpose tools for car research and hacking.</p>
+<p>You can now use your Carloop as a SocketCAN interface!</p>
+<h3><a name="carloop-firmware-1" class="anchor" href="https://community.carloop.io#carloop-firmware-1"></a>Carloop firmware</h3>
+<p>You’ll need special firmware on your Carloop to print received CAN messages to the USB serial port and allow transmitting CAN messages sent to the USB serial port.</p>
+<p>Flash the SocketCAN serial firmware application to your Carloop. The easiest way is to go to <a href="https://build.particle.io">https://build.particle.io</a>, select Libraries on the left, search and select Carloop, then open the <code>socketcan_serial.cpp</code> example, click the <code>Use this example</code> button then flash to your device.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f06b31a9cdc9c63ba172655402602c16aa424d61.png" data-download-href="//carloop-community.dyndns.org/uploads/default/f06b31a9cdc9c63ba172655402602c16aa424d61" title="socketcan example.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_690x369.png" width="690" height="369" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_690x369.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1035x553.png 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/f06b31a9cdc9c63ba172655402602c16aa424d61_2_1380x738.png 2x" data-dominant-color="4C5351"></a></div><p></p>
+<h3><a name="linux-computer-setup-2" class="anchor" href="https://community.carloop.io#linux-computer-setup-2"></a>Linux computer setup</h3>
+<p>To use SocketCAN you’ll need a laptop running Linux. You could even do it from a Raspberry Pi.</p>
+<p>Install the <code>can-utils</code> package: <code>sudo apt install can-utils</code></p>
+<p>SocketCAN has drivers to talk to many different devices. Since the Photon/Electron creates a serial port when you connect it to your laptop we’ll use the serial line CAN driver (SLCAN).</p>
+<p>Connect your Carloop to your computer through the USB connector. A serial port named <code>/dev/ttyACM0</code> should now be available. Check with <code>ls /dev/ttyACM*</code></p>
+<p>Link the serial port with a CAN network interface with <code>sudo slcand -o -c -s6 /dev/ttyACM0 can0</code><br>
+(<code>slcand</code> comes from can-utils, <code>s6</code> is the speed <code>ttyACM0</code> is the serial port, <code>can0</code> is the CAN network interface)</p>
+<p>At this point you should see a CAN network when you do <code>ip addr</code></p>
+<pre><code class="lang-auto">3: can0: &lt;NOARP&gt; mtu 16 qdisc pfifo_fast state DOWN group default qlen 10
+    link/can 
+</code></pre>
+<p>When you are ready to start analyzing traffic, you bring up the CAN network with <code>sudo ip link can0 up</code></p>
+<p>You can then use other canutils like candump, cansniffer and cansend.</p>
+<p>Here’s for example what happens when I use <code>candump can0</code> on my Ford Fiesta:</p>
+<p><a href="https://www.youtube.com/watch?v=igTsTbvPPP0">Fiesta CAN dump</a></p>
+
+<p>Here’s how I found out which message contains the accelerator pedal using <code>cansniffer -cae can0</code> which progressively hides messages that don’t change. The pedal was in message 0xFD byte 3.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/c5d66f5e81897722d43d501d332811ded2647f22.png" data-download-href="//carloop-community.dyndns.org/uploads/default/c5d66f5e81897722d43d501d332811ded2647f22" title="cansniffer.png"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/c5d66f5e81897722d43d501d332811ded2647f22.png" width="690" height="345" data-dominant-color="46243B"></a></div><p></p>
+<p>To stop the CAN interface, do <code>sudo ip link can0 down</code>.</p>
+<p><code>slcand</code> tends to keep running even after you stop the CAN interface. You can close it with <code>sudo pkill slcand</code></p>
+<h3><a name="references-3" class="anchor" href="https://community.carloop.io#references-3"></a>References</h3>
+<p>For details about the SLCAN serial protocol used between SocketCAN and the Carloop firmware, see <a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/socketcan_serial.cpp">the source of the Carloop firmware on GitHub</a>.</p>
+<p>For more details about the can-utils programs, <a href="https://github.com/linux-can/can-utils">see the can-utils repository on GitHub</a>. You can also search online for more info about a particular can-util program.</p>
+<p><a href="http://elinux.org/CAN_Bus">Some info about CAN on Linux</a> and <a href="http://elinux.org/Bringing_CAN_interface_up">how to use different types of CAN interfaces</a>.</p>
+<p><a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/networking/can.txt">The low-level documentation about SocketCAN</a> (this was too detailed for my needs).</p>
+<p>Here’s a lit of the CAN bus speed parameters that can be passed to <code>slcand</code>:</p>
+<ul>
+<li>
+<pre><code> -s0 10 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s1 20 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s2 50 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s3 100 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s4 125 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s5 250 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s6 500 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s7 800 kbit/s
+</code></pre>
+</li>
+<li>
+<pre><code> -s8 1 Mbit/s
+</code></pre>
+</li>
+</ul>
+<p>Next steps would be to implement a UDP server in the Particle Photon to send the data wirelessly. <a href="https://github.com/dschanoeh/socketcand">The socketcand would be a good place to start for the protocol</a>.</p>
+<p><em>Now get out there and do amazing things!</em></p>
+          <p><a href="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117/1</link>
+        <pubDate>Tue, 30 Aug 2016 06:16:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-117-1</guid>
+        <source url="https://community.carloop.io/t/use-carloop-with-socketcan-and-can-utils/117.rss">Use Carloop with SocketCAN and can-utils</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop for Particle Gen3 devices</title>
+    <link>https://community.carloop.io/t/carloop-for-particle-gen3-devices/825</link>
+    <description>What GEN3 hardware changes are you seeing here in Q1 of 2019 that are causing it to be not stable enough to develop a new Carloop module for?   
+
+I ran across a [featherwing CAN adapter](https://easyeda.com/armin.von_collrepp/Adafruit_CAN_FeatherWing-0YRL3lfxP) the other day that looks pretty compelling.</description>
+    
+    <lastBuildDate>Thu, 21 Feb 2019 16:36:23 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop for Particle Gen3 devices</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m aware of the microcontroller change from Photon to Gen3 devices that lack a CAN interface. I guess I was more wondering why it was stated the GEN3 hardware was still in flux. From all I can tell, it’s pretty frozen, it’s just firmware tweaking at this point (mid Feb 2019).</p>
+<p>I agree the major development effort for carloop would be the new firmware required since the GEN3 solution requires an external CAN controller.</p>
+          <p><a href="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/3</link>
+        <pubDate>Thu, 21 Feb 2019 16:36:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-825-3</guid>
+        <source url="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825.rss">Carloop for Particle Gen3 devices</source>
+      </item>
+      <item>
+        <title>Carloop for Particle Gen3 devices</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/hartmms">@hartmms</a>,</p>
+<p>I moved your question to a new topic, since it did not really fit in with the other thread where it was originally posted.</p>
+<p>Now for the answer:<br>
+The most significant change affecting Carloop with the Gen3 is the microprocessor hardware.<br>
+Gen3 hardware use a Nordic nRF52840 microprocessor which has <strong>no</strong> built-in support for CANbus.<br>
+The existing Electron, Photon and RedbearDuo all use the ST micro STM32F205 microprocessor which does have built-in support for CANbus.</p>
+<p>So, it is not at all a matter of stability, but a matter of using different hardware for the CAN interface and developing the lower-level firmware to support CANbus.  I do not have any word from Carloop to indicate if they are or are not planning a Gen3 version of Carloop.</p>
+<p>By the way, that CAN featherwing looks like it would do the hardware side okay.  It is missing the OBD2 connector and I am not sure if it includes an automotive power regulator.  It uses a MCP2515 CAN driver, which I think is an older version which may not support CAN-FD.  Depending on your needs, it might be okay or you might want to look for something a bit more modern.  It does not solve the lack of low-level firmware, so it is only a partial solution.</p>
+          <p><a href="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/2</link>
+        <pubDate>Thu, 21 Feb 2019 02:27:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-825-2</guid>
+        <source url="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825.rss">Carloop for Particle Gen3 devices</source>
+      </item>
+      <item>
+        <title>Carloop for Particle Gen3 devices</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>What GEN3 hardware changes are you seeing here in Q1 of 2019 that are causing it to be not stable enough to develop a new Carloop module for?</p>
+<p>I ran across a <a href="https://easyeda.com/armin.von_collrepp/Adafruit_CAN_FeatherWing-0YRL3lfxP" rel="noopener nofollow ugc">featherwing CAN adapter</a> the other day that looks pretty compelling.</p>
+          <p><a href="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-for-particle-gen3-devices/825/1</link>
+        <pubDate>Wed, 20 Feb 2019 19:57:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-825-1</guid>
+        <source url="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825.rss">Carloop for Particle Gen3 devices</source>
+      </item>
+  </channel>
+</rss>

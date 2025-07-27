@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Does Carloop V2.3 have GPS?</title>
+    <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676</link>
+    <description>Does the basic Carloop product (V2.3) have GPS?  If not, why does the library default as though it does?</description>
+    
+    <lastBuildDate>Thu, 25 Apr 2019 21:08:57 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Has the issue with CAN and GPS been corrected in any firmware after 0.7.0?  I’m experiencing inconsistent behavior with multiple Carloop/Carloop GPS units since upgrading to firmware 1.0.1 and I’m wondering if it’s a firmware issue.  Also, could you provide more details on what the known issue is with CAN and GPS?</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/7</link>
+        <pubDate>Thu, 25 Apr 2019 21:08:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-7</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank for you suggestions.  I took your advice from a previous post and flashed particle firmware version 0.8.0-rc.9 with the corresponding Carloop-Minimal code.  After waiting for about 5 to 10 minutes, I started receiving GPS information.  Particle firmware version 0.7.0 is a no-go.  I did try firmware version 0.6.4, but either I didn’t wait long enough to get a fix or it just didn’t work for me.  In either case, thanks for the help.  Using version 0.8.0-rc, the battery, and the latest Carloop library seems to work well.</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/6</link>
+        <pubDate>Sun, 12 Aug 2018 22:03:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-6</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/ruhandsomeiii">@ruhandsomeiii</a>,</p>
+<p>Just make sure to use the latest version of the Carloop library firmware.</p>
+<p>There was an earlier problem, but the latest version of the library takes care of it.</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/5</link>
+        <pubDate>Sun, 12 Aug 2018 18:25:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-5</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[ruhandsomeiii]]></dc:creator>
+        <description><![CDATA[
+            <p>I just recently received the Carloop, the Carloop GPS and a new Electron.  I’ve tried the carloop-minimal example and I’m able to get battery voltage, but not GPS data.  The firmware version of my Electron is 0.7.0, is it my understanding that the Carloop GPS will not work at all with what I’ve bought.  I’ve only had the GPS board for a day, and the Carloop and Electron for less than a week.  What I’m looking for is a working example of how to use all 3 components together.</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/4</link>
+        <pubDate>Sat, 11 Aug 2018 20:52:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-4</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Just to clarify: the carloop library <strong>supports</strong> GPS.  There are a number of different GPS units that will work with this library, including the Carloop GPS.  This support built-in makes it a lot easier to program your Carloop and GPS together.</p>
+<p>One caution:  there is an issue using CANbus and Serial (to GPS) with Particle system firmware 0.7.0.  It is recommended to use firmware 0.6.4 if you need to use GPS, or you can experiment with one of the 0.8.x release candidates.</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/3</link>
+        <pubDate>Mon, 09 Jul 2018 04:28:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-3</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>No, it doesn’t. You can find the GPS board in the Carloop store.</p>
+<p>The Carloop library does have a GPS part, but it is a facade for the TinyGPSPlus library I think. It does not imply that the Carloop v2.3 does have an integrated GPS.</p>
+<p><a href="https://store.carloop.io/products/carloop-gps" class="onebox" target="_blank" rel="noopener">https://store.carloop.io/products/carloop-gps</a></p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/2</link>
+        <pubDate>Sun, 08 Jul 2018 04:58:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-2</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+      <item>
+        <title>Does Carloop V2.3 have GPS?</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Does the basic Carloop product (V2.3) have GPS?  If not, why does the library default as though it does?</p>
+          <p><a href="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/does-carloop-v2-3-have-gps/676/1</link>
+        <pubDate>Sat, 07 Jul 2018 22:19:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-676-1</guid>
+        <source url="https://community.carloop.io/t/does-carloop-v2-3-have-gps/676.rss">Does Carloop V2.3 have GPS?</source>
+      </item>
+  </channel>
+</rss>

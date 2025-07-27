@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Getting Started - Carloop Community</title>
+    <meta name="description" content="Getting started with Carloop.  All topics related to getting started with the dev board, CAN, OBD-II, vehicle manufacturers.  This is a safe place to ask any question.">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="5.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="eK8wWTmdxXkXsm2hna9Gd1sG3">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="eK8wWTmdxXkXsm2hna9Gd1sG3"></script>
+
+
+          <link rel="prev" href="5-1.html?page=1">
+    <link rel="next" href="5-3.html?page=3">
+    <link rel="alternate" type="application/rss+xml" title="Latest posts" href="../../posts.rss">
+    <link rel="alternate" type="application/rss+xml" title="Latest topics" href="../../latest.rss">
+    <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of topics in the &#39;Getting Started&#39; category" href="5.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/c/getting-started/5?page=2">
+<meta name="twitter:url" content="/c/getting-started/5?page=2">
+<meta property="og:title" content="Getting Started">
+<meta name="twitter:title" content="Getting Started">
+<meta property="og:description" content="Getting started with Carloop.  All topics related to getting started with the dev board, CAN, OBD-II, vehicle manufacturers.  This is a safe place to ask any question.">
+<meta name="twitter:description" content="Getting started with Carloop.  All topics related to getting started with the dev board, CAN, OBD-II, vehicle manufacturers.  This is a safe place to ask any question.">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+      
+
+
+
+  <h1>
+
+    <a itemprop="item" href="5.html">
+      <span itemprop='name'>Getting Started</span>
+</a>  </h1>
+  <br>
+
+
+<div class="topic-list-container" itemscope="" itemtype='http://schema.org/ItemList'>
+  <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+
+  <table class='topic-list'>
+
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th></th>
+        <th class="replies">Replies</th>
+        <th class="views">Views</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='1'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/whats-best-option-carloop-pro-or-buy-items-separately/204.html' class='title raw-link raw-topic-link'>What&#39;s best Option Carloop pro or buy items separately</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/nabilblk" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/n/cc9497/25.png" class="avatar" title='nabilblk - Original Poster' aria-label='nabilblk - Original Poster'>
+              </a>
+              <a href="../../u/dreww.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/dreww/25/128_2.png" class="avatar" title='dreww - Frequent Poster' aria-label='dreww - Frequent Poster'>
+              </a>
+              <a href="../../u/cyclin_al1.html" class="latest">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/c/d6d6ee/25.png" class="avatar" title='cyclin_al1 - Most Recent Poster' aria-label='cyclin_al1 - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1912</span>
+          </td>
+          <td>
+            April 5, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='2'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/how-to-decode-obd-ii-data-using-raw-can-messages/66.html' class='title raw-link raw-topic-link'>How to decode OBD-II data using raw CAN messages</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster' aria-label='alanm - Original Poster'>
+              </a>
+              <a href="../../u/dreww.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/dreww/25/128_2.png" class="avatar" title='dreww - Most Recent Poster' aria-label='dreww - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>11646</span>
+          </td>
+          <td>
+            April 4, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='3'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/newby-questions-power-from-obd-ii/242.html' class='title raw-link raw-topic-link'>Newby questions - power from OBD II?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/HuskerJeff.html" class="latest">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/h/57b2e6/25.png" class="avatar" title='HuskerJeff - Original Poster, Most Recent Poster' aria-label='HuskerJeff - Original Poster, Most Recent Poster'>
+              </a>
+              <a href="../../u/cyclin_al1.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/c/d6d6ee/25.png" class="avatar" title='cyclin_al1 - Frequent Poster' aria-label='cyclin_al1 - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>3180</span>
+          </td>
+          <td>
+            March 30, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='4'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/modifying-carloop-for-iso-9141-2/160.html' class='title raw-link raw-topic-link'>Modifying Carloop for ISO 9141-2</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/cyclin_al1.html" class="latest">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/c/d6d6ee/25.png" class="avatar" title='cyclin_al1 - Original Poster, Most Recent Poster' aria-label='cyclin_al1 - Original Poster, Most Recent Poster'>
+              </a>
+              <a href="../../u/clemoyne.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/c/ecb155/25.png" class="avatar" title='clemoyne - Frequent Poster' aria-label='clemoyne - Frequent Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Frequent Poster' aria-label='jvanier - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>16</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>6775</span>
+          </td>
+          <td>
+            March 29, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='5'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/simple-logger-for-electron/220.html' class='title raw-link raw-topic-link'>Simple Logger For Electron?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/jgamblin.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jgamblin/25/443_2.png" class="avatar" title='jgamblin - Original Poster' aria-label='jgamblin - Original Poster'>
+              </a>
+              <a href="https://carloop.dyndns.org/u/alanm" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Most Recent Poster' aria-label='alanm - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>3011</span>
+          </td>
+          <td>
+            February 22, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='6'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/any-carloop-users-with-a-volvo-xc90-2nd-gen/206.html' class='title raw-link raw-topic-link'>Any Carloop Users with a Volvo XC90 (2nd gen)?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/bonesteel.html" class="latest single">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/bonesteel/25/446_2.png" class="avatar" title='bonesteel - Original Poster, Most Recent Poster' aria-label='bonesteel - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1404</span>
+          </td>
+          <td>
+            January 25, 2017
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='7'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/pre-made-apps-for-carloop/155.html' class='title raw-link raw-topic-link'>Pre-made apps for Carloop</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/jvanier.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Original Poster' aria-label='jvanier - Original Poster'>
+              </a>
+              <a href="../../u/egarl004.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/egarl004/25/91_2.png" class="avatar" title='egarl004 - Frequent Poster' aria-label='egarl004 - Frequent Poster'>
+              </a>
+              <a href="https://carloop.dyndns.org/u/alanm" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Frequent Poster' aria-label='alanm - Frequent Poster'>
+              </a>
+              <a href="../../u/cyclin_al1.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/c/d6d6ee/25.png" class="avatar" title='cyclin_al1 - Frequent Poster' aria-label='cyclin_al1 - Frequent Poster'>
+              </a>
+              <a href="../../u/InfinitelyManic.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/infinitelymanic/25/78_2.png" class="avatar" title='InfinitelyManic - Most Recent Poster' aria-label='InfinitelyManic - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>4156</span>
+          </td>
+          <td>
+            November 21, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='8'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/j1939-for-heavy-duty-machine/166.html' class='title raw-link raw-topic-link'>J1939 for heavy duty machine</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/juan777F.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/j/a183cd/25.png" class="avatar" title='juan777F - Original Poster' aria-label='juan777F - Original Poster'>
+              </a>
+              <a href="../../u/harrisonhjones.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/harrisonhjones/25/448_2.png" class="avatar" title='harrisonhjones - Most Recent Poster' aria-label='harrisonhjones - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1746</span>
+          </td>
+          <td>
+            November 9, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='9'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/request-all-available-sensors-obdii-compliant/156.html' class='title raw-link raw-topic-link'>Request All Available Sensors (OBDII Compliant)</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/egarl004.html" class="latest single">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/egarl004/25/91_2.png" class="avatar" title='egarl004 - Original Poster, Most Recent Poster' aria-label='egarl004 - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2438</span>
+          </td>
+          <td>
+            November 1, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='10'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/conversion-of-canbus-code/138.html' class='title raw-link raw-topic-link'>Conversion of CANBus code</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/Kronos.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/k/aca169/25.png" class="avatar" title='Kronos - Original Poster' aria-label='Kronos - Original Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Most Recent Poster' aria-label='jvanier - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>6984</span>
+          </td>
+          <td>
+            October 5, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='11'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/minimal-transmitting-code/132.html' class='title raw-link raw-topic-link'>Minimal transmitting code</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/Kronos.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/k/aca169/25.png" class="avatar" title='Kronos - Original Poster' aria-label='Kronos - Original Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Most Recent Poster' aria-label='jvanier - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2497</span>
+          </td>
+          <td>
+            October 4, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='12'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/order-your-carloop/33.html' class='title raw-link raw-topic-link'>Order your Carloop</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster' aria-label='alanm - Original Poster'>
+              </a>
+              <a href="../../u/Daley.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/d/0ea827/25.png" class="avatar" title='Daley - Frequent Poster' aria-label='Daley - Frequent Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Most Recent Poster' aria-label='jvanier - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>3022</span>
+          </td>
+          <td>
+            February 6, 2024
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='13'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/connecting-core-to-carloop/113.html' class='title raw-link raw-topic-link'>Connecting Core to Carloop</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="../../u/AStorm.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/a/5daacb/25.png" class="avatar" title='AStorm - Original Poster' aria-label='AStorm - Original Poster'>
+              </a>
+              <a href="https://carloop.dyndns.org/u/alanm" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Frequent Poster' aria-label='alanm - Frequent Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Most Recent Poster' aria-label='jvanier - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1802</span>
+          </td>
+          <td>
+            August 23, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='14'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/car-hackers-handbook/19.html' class='title raw-link raw-topic-link'>Car Hackers Handbook</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster, Most Recent Poster' aria-label='alanm - Original Poster, Most Recent Poster'>
+              </a>
+              <a href="../../u/Phil.html" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/phil/25/440_2.png" class="avatar" title='Phil - Frequent Poster' aria-label='Phil - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2362</span>
+          </td>
+          <td>
+            July 11, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='15'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/how-to-contribute-to-carloops-open-source-project/78.html' class='title raw-link raw-topic-link'>How to contribute to Carloop&#39;s open source project</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="latest single">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster, Most Recent Poster' aria-label='alanm - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1310</span>
+          </td>
+          <td>
+            June 11, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='16'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/unlock-your-car-remotely/56.html' class='title raw-link raw-topic-link'>Unlock your car remotely</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster, Most Recent Poster' aria-label='alanm - Original Poster, Most Recent Poster'>
+              </a>
+              <a href="../../u/protechcaraudio.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/p/45deac/25.png" class="avatar" title='protechcaraudio - Frequent Poster' aria-label='protechcaraudio - Frequent Poster'>
+              </a>
+              <a href="../../u/Myztiq.html" class="">
+                <img width="25" height="25" src="../../letter_avatar_proxy/v4/letter/m/f9ae1b/25.png" class="avatar" title='Myztiq - Frequent Poster' aria-label='Myztiq - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>3</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2779</span>
+          </td>
+          <td>
+            May 31, 2016
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope="" itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='17'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../t/getting-started-with-obd-ii/15.html' class='title raw-link raw-topic-link'>Getting Started with OBD-II</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a href="https://carloop.dyndns.org/u/alanm" class="">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/alanm/25/428_2.png" class="avatar" title='alanm - Original Poster' aria-label='alanm - Original Poster'>
+              </a>
+              <a href="../../u/jvanier.html" class="latest">
+                <img width="25" height="25" src="../../user_avatar/community.carloop.io/jvanier/25/426_2.png" class="avatar" title='jvanier - Most Recent Poster' aria-label='jvanier - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2190</span>
+          </td>
+          <td>
+            March 28, 2016
+          </td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+
+  <div class="navigation" role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+      <span itemprop='name'><a href='5-1.html?page=1' rel='prev' itemprop='url'>? previous page</a> &nbsp;</span>
+  </div>
+
+
+ <!-- include_crawler_content? -->
+
+
+
+  
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

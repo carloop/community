@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carloop retransmits forever when no Ack received - Troubleshooting - Carloop Community</title>
+    <meta name="description" content="Quick summary: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged. 
+Detail … 
+My Carloop receives and filters messages as expected, so I’m doing some testing with transmitting m&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="194.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="SpBmSYWb6QO8Eo7R9mrGSiex4">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="SpBmSYWb6QO8Eo7R9mrGSiex4"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Carloop retransmits forever when no Ack received&#39;" href="194.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/carloop-retransmits-forever-when-no-ack-received/194">
+<meta name="twitter:url" content="/t/carloop-retransmits-forever-when-no-ack-received/194">
+<meta property="og:title" content="Carloop retransmits forever when no Ack received">
+<meta name="twitter:title" content="Carloop retransmits forever when no Ack received">
+<meta property="og:description" content="Quick summary: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged.  Detail …  My Carloop receives and filters messages as expected, so I’m doing some testing with transmitting messages from Carloop to the OBDII bus.  If a CAN-bus transmitter doesn’t see its Ack bit set (by a receiver), the message is automatically retransmitted by the Photon’s CAN transmitter hardware (this is part of the CAN standard). I’m doing testing in advance of putting this into ...">
+<meta name="twitter:description" content="Quick summary: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged.  Detail …  My Carloop receives and filters messages as expected, so I’m doing some testing with transmitting messages from Carloop to the OBDII bus.  If a CAN-bus transmitter doesn’t see its Ack bit set (by a receiver), the message is automatically retransmitted by the Photon’s CAN transmitter hardware (this is part of the CAN standard). I’m doing testing in advance of putting this into ...">
+<meta property="og:article:section" content="Troubleshooting">
+<meta property="og:article:section:color" content="BF1E2E">
+<meta property="article:published_time" content="2016-12-22T17:51:50+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="194.html">Carloop retransmits forever when no Ack received</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="../../c/troubleshooting/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Troubleshooting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Carloop retransmits forever when no Ack received'>
+      <link itemprop='url' href='194.html'>
+      <meta itemprop='datePublished' content='2016-12-22T17:51:50Z'>
+        <meta itemprop='articleSection' content='Troubleshooting'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Mitchell.html'><span itemprop='name'>Mitchell</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="194.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-12-22T17:51:50Z' class='post-time'>
+                    December 22, 2016,  5:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-22T17:51:50Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Quick summary</strong>: Does anyone else see that the Carloop retransmits messages forever if they are unacknowledged.</p>
+<p><strong>Detail …</strong><br>
+My Carloop receives and filters messages as expected, so I’m doing some testing with transmitting messages from Carloop to the OBDII bus.</p>
+<p>If a CAN-bus transmitter doesn’t see its Ack bit set (by a receiver), the message is automatically retransmitted by the Photon’s CAN transmitter hardware (this is part of the CAN standard). I’m doing testing in advance of putting this into my car, so I realize the message won’t receive an Ack. My test set-up is Carloop transmitting into a 60 O resistor (the equivalent of the two 120 O CAN bus termination resistors in parallel). Also “on the bus” is a standard OBDII Bluetooth interface.</p>
+<p>I see that when the OBDII Bluetooth interface transmits, it sends the same message a total of 12 times (since it too is not receiving an Ack), so this is expected behaviour.</p>
+<p>But transmitting just one message from the Carloop results in it sending forever. Reading the documentation for the Particle Photon’s CAN interface (which seems to be the 1,361-page Reference Manual RM0033, <a href="http://www.st.com/content/ccc/resource/technical/document/reference_manual/51/f7/f3/06/cd/b6/46/ec/CD00225773.pdf/files/CD00225773.pdf/jcr:content/translations/en.CD00225773.pdf" rel="noopener nofollow ugc">here</a> ) shows on page 796 that the maximum number of retransmissions should be 255, followed by a long pause. Perhaps the Photon’s CAN bus driver is doing this retransmission after the 255 done by the hardware, but I couldn’t find that code (it must be buried in the interrupt handler).</p>
+<p>While I’m sure the CAN interface is very mature and well tested hardware, something is unexpected here (which certainly could include me doing something wrong), so I’m wondering if others have seen retransmissions forever when using the Carloop stand-alone, not in a car.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-22T20:34:35Z' class='post-time'>
+                    December 22, 2016,  8:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-22T20:34:35Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Your test setup looks good. I’m curious why the Carloop doesn’t ACK the message from the OBD dongle.</p>
+<p>The retransmission limit you describe is the bus off state. I know I’ve seen the Photon enter bus off but I’m not sure what is the current behavior to exit bus off and retransmit after that. I would assume that the TX message remains in the CAN hardware peripheral on the Photon until it is transmitted successfully.</p>
+<p>The place to look for the implementation is here:<br>
+<a href="https://github.com/spark/firmware/blob/develop/hal/src/stm32f2xx/can_hal.cpp" class="onebox" target="_blank" rel="noopener">https://github.com/spark/firmware/blob/develop/hal/src/stm32f2xx/can_hal.cpp</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Mitchell.html'><span itemprop='name'>Mitchell</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-23T00:15:22Z' class='post-time'>
+                    December 23, 2016, 12:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-23T00:15:22Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You’re right, thank you. I did not have the Carloop on the bus when I saw the 12 transmissions from the OBD dongle as I didn’t realize the Carloop would Ack, figuring only intended receivers would Ack. I’ve looked more carefully now, and the behavior is:</p>
+<ol>
+<li>
+<p>If the Carloop is not on the bus, the OBD dongle transmits 12 times consecutively, at five-second intervals, and the Ack bit is not set.</p>
+</li>
+<li>
+<p>If the Carloop is on the bus, the OBD dongle transmits once, at five second intervals, and the Ack bit is set. So you’re right, Carloop does the Ack for the dongle’s transmission.</p>
+</li>
+<li>
+<p>When the Carloop transmits with either nothing else, or only the OBD dongle on the bus, the Carloop transmits constantly (only about 20 idle bit times between messages) for between about 1 to 5 seconds. If I initiate another transmission from Carloop after this, it is sent, so the Bus Off condition clears itself. The RM0033 says Bus Off is cleared when the OBD bus is idle for 128 11-bit times (less than 3 ms).</p>
+</li>
+</ol>
+<p>I had looked at can_hal.c before and it only seems to queue messages or call other functions, the actual logic of what happens when no Ack is received isn’t in that file. I spent much time looking through all the other files in that directory tree that seemed to be related to CAN, and all they do is populate structures, or call other functions, I couldn’t see where the Ack or retransmit logic is, so I don’t know if this is caused by the CAN interface hardware or some software somewhere (or if this is just something I’m doing wrong).</p>
+<p>It is a bit scary that the Carloop would transmit constantly for several seconds, but if any device on the OBD bus will Ack, I suppose this would never happen, and in any case, the low priority of the IDs I’m sending should ensure the car’s OBD bus would not be disrupted.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-23T14:06:08Z' class='post-time'>
+                    December 23, 2016,  2:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-23T14:06:08Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ah, so the dongle doesn’t ACK. This is interesting.</p>
+<p>The logic for retransmitting is in the silicon, so the reference manual is the best place to look. Where can_hal.cpp would get involved is reading status register and perhaps clearing some transmit bits.</p>
+<p>I’m not worried about the retransmissions because you’re correct that if the message is acknowledged then no retransmission will happen.</p>
+<p>I’d like to share two ideas for testing with you:</p>
+<ul>
+<li>
+<p>For desktop testing with a real Carloop, you can put the CAN in loopback test mode which will act as if all messages were acknowledged and will make it so any transmitted message is added to the receive queue.<br>
+<code>carloop.can().begin(500000, CAN_TEST_MODE); // instead of carloop.begin();</code></p>
+</li>
+<li>
+<p>You can also check how I did tests on a laptop using the Catch test helper for the code reader app and the mileage tracker app.<br>
+<a href="https://github.com/carloop/app-code-reader/tree/master/tests" class="inline-onebox">app-code-reader/tests at master · carloop/app-code-reader · GitHub</a><br>
+<a href="https://github.com/carloop/app-reminder/tree/master/tests" class="inline-onebox">app-reminder/tests at master · carloop/app-reminder · GitHub</a><br>
+I created test stubs for the firmware APIs I used in the application and I was able to run through the main logic in my code this way.</p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

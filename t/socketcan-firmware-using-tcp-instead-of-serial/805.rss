@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>socketCAN firmware using TCP instead of serial</title>
+    <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805</link>
+    <description>Has anyone forked the socketCan particle firmware to use TCP server/client instead of just serial? 
+
+I&#39;m trying to use the can utils with my photon, but I don&#39;t want to do it via serial port.  I would prefer to do it via TCP socket.  I say this because I only have a Mac and it seems the can-utils is not supported.  Instead I&#39;m doing my work on a linux server I have inside my house. I&#39;ve got the socketCAN firmware updated to support TCP server client that I believe is working. Specifically, I have a 2nd firmware version that does not do socketCAN, but just a pure CAN implementation that is a one way device: it sends all CAN messages seen over the TCP connection to a listening client.  
+
+I believe my blocking issue is somewhere on the client side. socketCAN uses UNIX sockets, not TCP sockets.  To fix this, I&#39;m using &quot;socat UNIX_LISTEN:/tmp/socket-can,fork TCP:&lt;photon ip&gt;:&lt;port&gt;&quot;  to create a local machine socket that is hooked to the TCP socket of the photon server.  Running &quot;nc -U /tmp/socket-can&quot; shows me all the CAN traffic, so that works. 
+
+However, when I do &quot;candump /tmp/socket-can&quot; I get the message &quot;SIOCGIFINDEX: No such device&quot;.  Hmm. Carloop socketCAN docs say for the serial method, one must run slcand to create the proper unix device, so I run &quot;slcand -o -c -s 4 /tmp/socket-can can0&quot; but I don&#39;t think that worked because &quot;ip addr&quot; shows no can0 device.  I&#39;m not sure what&#39;s wrong here. 
+
+My top level goal is to be able to run cansniffer to help me filter out a lot of noise on the CAN IHS bus so I can figure out what the unlock and lock codes are for my 2018 ram 2500.  I&#39;m also hoping the remote start/stop can be triggered over this bus with the right message. 
+
+I thought about forking the cansniffer code to add support for a TCP socket, but my C coding skills are quite old (damn you pointers) and I&#39;m not sure I can hack it without getting lost in the code.</description>
+    
+    <lastBuildDate>Sun, 20 Jan 2019 23:07:15 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>socketCAN firmware using TCP instead of serial</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> do you have a full list of Dodge challenger codes you know about? I only saw one post by you where you document the steering wheel buttons and shifter data. I was curious if you found the lock/unlock codes.</p>
+<p>I finally got my sniffer code working and I have found these out for my 2018 Ram 2500:</p>
+<p>VIN:  3e0.<br>
+1st byte of data = index of VIN. Cycles through values of 02, 01, 00, with 00 being the start of the string of the VIN string.</p>
+<p>clock: 38c.<br>
+bytes 4, 5 and 6 seems to be the 24 hour format of UTC hh:mm:ss, respectively.</p>
+<p>I’m not sure, but I think 2fa is the door lock and unlock:<br>
+unlock: 2fa  00 01 00 1a 00 00 00 00   …<br>
+lock: 2fa  40 01 00 02 00 00 00 00   @…</p>
+<p>radio volume: 30f.<br>
+1st byte is same integer as displayed on screen for volume level</p>
+<p>radio mute:  2f3.  1st byte only.<br>
+08 = mute<br>
+00 = unmute.<br>
+also serves as bluetooth and android auto pause/play toggle.</p>
+          <p><a href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/5</link>
+        <pubDate>Sun, 20 Jan 2019 23:07:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-805-5</guid>
+        <source url="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss">socketCAN firmware using TCP instead of serial</source>
+      </item>
+      <item>
+        <title>socketCAN firmware using TCP instead of serial</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>The ultimate goal is to have remote access to control the door locks and remote start.  Sirius/UConnect is gonna charge me at least $260/year for this, but I figured paying only $3/month (for cell access on an electron) + my custom code would be better.  Eventually I’d like to add a GPS so I can track where my truck is. Perhaps even some sort of location based code that detects when I’m about to pull up in my driveway and open my garage door for me (since I use home-assistant with my house).</p>
+<p>Great idea about the raspberry pi and VNC!  Not sure why I didn’t think about that. Sometimes I get stuck on a solution and try to brute force my way through without thinking of a better solution.   I guess CAN over ethernet seemed more elegant to me at the time.  I’m currently spending way too many hours trying to replicate the canutils “cansniffer” code with a pure Python implementation.</p>
+<p>An even better solution would be raspberry pi + tmux + mosh. A pure text/terminal solution without all the X junk.  Now I just have to find that raspberry pi 2 I have laying around somewhere.</p>
+          <p><a href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/4</link>
+        <pubDate>Sun, 20 Jan 2019 21:33:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-805-4</guid>
+        <source url="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss">socketCAN firmware using TCP instead of serial</source>
+      </item>
+      <item>
+        <title>socketCAN firmware using TCP instead of serial</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>He can also use a raspberry pi, then install canutils and on the carloop flash the socketcan sketch. Once you have that working you can then install a vnc viewer like “real vnc” and access your pi via the net. I use it like that on my bench setup with a 2016 Dodge Challenger body control module, PCM, shifter, instrument cluster all connected together. I can remotely login and develop code using a custom board I’ve developed and the Arduino IDE. Once I got what I’m looking for I then port over the code to the carloop and try it out. If you have a redbear duo you can install the Arduino IDE and also add support for the redbear duo and can flash locally, just have to add the carloop library and your good to go I’ve used it like that as well no problems. Even developed code remotly logining in using my iPad while on the road not too bad.<br>
+You can even take it a step further like I did and have the pi as a mobile car hacking station. If no known internet is available to connect the pi then broadcasts its own hotspot to connect either vnc or ssh (no internet while using the hotspot)</p>
+          <p><a href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/3</link>
+        <pubDate>Sun, 20 Jan 2019 04:18:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-805-3</guid>
+        <source url="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss">socketCAN firmware using TCP instead of serial</source>
+      </item>
+      <item>
+        <title>socketCAN firmware using TCP instead of serial</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/hartmms">@hartmms</a>,</p>
+<p>It takes me a while to read messages since I have a new assignment at work, hopefully you are still working on this.</p>
+<p>I know there are lots of examples of using TCP or even UDP for particle devices, see <a href="https://community.particle.io">https://community.particle.io</a> to read up on it.</p>
+<p>On the computer side, this is not something I have ever tried.  Can you run a virtual machine on your Mac so you could run the canutils on the virtual machine?</p>
+<p>If you are looking for CANbus messages for Dodge vehicles, check out the postings here by <a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>.  He even posted a partial list for his 2015 car.   The same codes seem to work for a bunch of different 2015 and 2016 Dodge products, so I would try them out on yours.  His list worked for my 2015 RAM 1500.  I doubt Dodge would change the codes as that would mean a lot of re-engineering.</p>
+          <p><a href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/2</link>
+        <pubDate>Sun, 20 Jan 2019 02:58:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-805-2</guid>
+        <source url="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss">socketCAN firmware using TCP instead of serial</source>
+      </item>
+      <item>
+        <title>socketCAN firmware using TCP instead of serial</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone forked the socketCan particle firmware to use TCP server/client instead of just serial?</p>
+<p>I’m trying to use the can utils with my photon, but I don’t want to do it via serial port.  I would prefer to do it via TCP socket.  I say this because I only have a Mac and it seems the can-utils is not supported.  Instead I’m doing my work on a linux server I have inside my house. I’ve got the socketCAN firmware updated to support TCP server client that I believe is working. Specifically, I have a 2nd firmware version that does not do socketCAN, but just a pure CAN implementation that is a one way device: it sends all CAN messages seen over the TCP connection to a listening client.</p>
+<p>I believe my blocking issue is somewhere on the client side. socketCAN uses UNIX sockets, not TCP sockets.  To fix this, I’m using “socat UNIX_LISTEN:/tmp/socket-can,fork TCP::”  to create a local machine socket that is hooked to the TCP socket of the photon server.  Running “nc -U /tmp/socket-can” shows me all the CAN traffic, so that works.</p>
+<p>However, when I do “candump /tmp/socket-can” I get the message “SIOCGIFINDEX: No such device”.  Hmm. Carloop socketCAN docs say for the serial method, one must run slcand to create the proper unix device, so I run “slcand -o -c -s 4 /tmp/socket-can can0” but I don’t think that worked because “ip addr” shows no can0 device.  I’m not sure what’s wrong here.</p>
+<p>My top level goal is to be able to run cansniffer to help me filter out a lot of noise on the CAN IHS bus so I can figure out what the unlock and lock codes are for my 2018 ram 2500.  I’m also hoping the remote start/stop can be triggered over this bus with the right message.</p>
+<p>I thought about forking the cansniffer code to add support for a TCP socket, but my C coding skills are quite old (damn you pointers) and I’m not sure I can hack it without getting lost in the code.</p>
+          <p><a href="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805/1</link>
+        <pubDate>Sat, 12 Jan 2019 22:19:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-805-1</guid>
+        <source url="https://community.carloop.io/t/socketcan-firmware-using-tcp-instead-of-serial/805.rss">socketCAN firmware using TCP instead of serial</source>
+      </item>
+  </channel>
+</rss>

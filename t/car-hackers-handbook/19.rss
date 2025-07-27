@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Car Hackers Handbook</title>
+    <link>https://community.carloop.io/t/car-hackers-handbook/19</link>
+    <description>Ever wanted to get some background on how to hack your car.  This handy guide has good tips and tricks on how to get into your car&#39;s CAN bus and start streaming data.
+
+http://opengarages.org/handbook/</description>
+    
+    <lastBuildDate>Mon, 11 Jul 2016 15:48:22 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/car-hackers-handbook/19.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Car Hackers Handbook</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>should be very interesting!</p>
+          <p><a href="https://community.carloop.io/t/car-hackers-handbook/19/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hackers-handbook/19/3</link>
+        <pubDate>Mon, 11 Jul 2016 15:48:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-19-3</guid>
+        <source url="https://community.carloop.io/t/car-hackers-handbook/19.rss">Car Hackers Handbook</source>
+      </item>
+      <item>
+        <title>Car Hackers Handbook</title>
+        <dc:creator><![CDATA[Phil]]></dc:creator>
+        <description><![CDATA[
+            <p>Craig’s going to be presenting at an SAE webcast this Thursday.</p>
+<p><a href="https://event.webcasts.com/starthere.jsp?ei=1106799&amp;sti=SAEemail" class="onebox" target="_blank" rel="noopener nofollow ugc">https://event.webcasts.com/starthere.jsp?ei=1106799&amp;sti=SAEemail</a></p>
+<p>Synopses:</p>
+<p>Connectivity is making cybersecurity a must-have obligation from initial designs through end of life.</p>
+<p>During this one-hour webinar, industry experts will address:</p>
+<ul>
+<li>Design, development, and implementation of security-critical cyber-physical vehicle systems</li>
+<li>Implementation strategies, process, and lifecycle management</li>
+<li>Cybersecurity assurance verification and validation practices</li>
+</ul>
+<p>A number of tools will be employed, many using over the<br>
+air (OTA) updating to fix vulnerabilities and adapt to changing threats.</p>
+          <p><a href="https://community.carloop.io/t/car-hackers-handbook/19/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hackers-handbook/19/2</link>
+        <pubDate>Mon, 11 Jul 2016 14:30:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-19-2</guid>
+        <source url="https://community.carloop.io/t/car-hackers-handbook/19.rss">Car Hackers Handbook</source>
+      </item>
+      <item>
+        <title>Car Hackers Handbook</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Ever wanted to get some background on how to hack your car.  This handy guide has good tips and tricks on how to get into your car’s CAN bus and start streaming data.</p>
+<p><a href="http://opengarages.org/handbook/" class="onebox" target="_blank" rel="noopener">http://opengarages.org/handbook/</a></p>
+          <p><a href="https://community.carloop.io/t/car-hackers-handbook/19/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hackers-handbook/19/1</link>
+        <pubDate>Mon, 28 Mar 2016 21:53:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-19-1</guid>
+        <source url="https://community.carloop.io/t/car-hackers-handbook/19.rss">Car Hackers Handbook</source>
+      </item>
+  </channel>
+</rss>

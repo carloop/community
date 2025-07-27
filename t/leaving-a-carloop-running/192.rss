@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Leaving a Carloop running</title>
+    <link>https://community.carloop.io/t/leaving-a-carloop-running/192</link>
+    <description>Has anyone any experience leaving a Carloop running in a parked vehicle?  
+
+I want to deploy my TPMS eliminator app and leave it plugged in but am concerned about killing my car&#39;s battery. 
+
+My next question would be, any recommendations on how to sense if the vehicle is running?</description>
+    
+    <lastBuildDate>Thu, 16 Mar 2017 15:07:19 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/leaving-a-carloop-running/192.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[HuskerJeff]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/ceer123">@Ceer123</a> - I found carloop while looking for a solution for exactly what you seem to be doing - remote monitoring SoC on my Nissan Leaf.  Can you comment on what you’ve done so far and how its working for you?  If you have a blog or other page that documents your project, could you include that too please?</p>
+<p>Depending on the level of success you’re having, I’d definitely like to make use of and contribute to your project.</p>
+<p>Thanks!<br>
+Jeff</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/15</link>
+        <pubDate>Thu, 16 Mar 2017 15:07:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-15</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[Ceer123]]></dc:creator>
+        <description><![CDATA[
+            <p>I ran this weekend with the carloop connected and not starting the car for two days and the battery was fine.  I think the code I commented out where I was waiting for a CAN message before going to sleep fixed it.  However it is apparent that if the photon is connected without sleeping it will drain the battery about 12 hours.  I believe the battery is original on the car and is four years old now so it is possible the battery capacity is not as good as it should be.</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/14</link>
+        <pubDate>Mon, 06 Feb 2017 18:56:09 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-14</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/ceer123">@Ceer123</a>,<br>
+Did you figure out what was draining your battery?  Would love to know how it went!</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/13</link>
+        <pubDate>Mon, 06 Feb 2017 18:38:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-13</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[Ceer123]]></dc:creator>
+        <description><![CDATA[
+            <p>Right, I was just showing that to keep the post simple.  That Program Code section is where the 200+ lines of parsing the can messages is in the main loop.</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/12</link>
+        <pubDate>Wed, 01 Feb 2017 23:19:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-12</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="Ceer123" data-post="10" data-topic="192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d07c76/48.png" class="avatar"> Ceer123:</div>
+<blockquote>
+<p>The carloop.update() is at the beginning of the loop after I check if the wifi is still connected.</p>
+</blockquote>
+</aside>
+<p>Not in the code you have shown above.</p>
+<aside class="quote no-group quote-modified" data-username="Ceer123" data-post="6" data-topic="192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d07c76/48.png" class="avatar"> Ceer123:</div>
+<blockquote>
+<pre data-code-wrap="cpp"><code class="lang-cpp">void loop() {
+/*
+Program Code (carloop.update() and parsing messages)
+*/
+    trans[6] = (byte)int((carloop.battery()*100)/8);
+    ...
+</code></pre>
+</blockquote>
+</aside>
+<p>The line is commented and never executing that way.</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/11</link>
+        <pubDate>Wed, 01 Feb 2017 15:24:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-11</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[Ceer123]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the replies.</p>
+<p>I believe the Leaf battery is smaller than normal cars at about 40Ah.  That still should be enough to power through a day at least.</p>
+<p>I did some current measurements on the carloop.  With the carloop only (photon removed) it pulls 2mA.  When adding the photon that is connected to wifi it was about 37mA.  I assume those are within normal expectations.</p>
+<p>I did find a possible issue with my code that would prevent the photon from going to sleep.  In the normal loop I was checking the battery and going to sleep if I had a value (GID) from the car.  However it looks like the car, seemingly at will, will shut down the canbus which would prevent my program from getting that value so the power save would never trigger.  I have commented out that check and will now do a powersave based only on the battery voltage.</p>
+<p>The carloop.update() is at the beginning of the loop after I check if the wifi is still connected.  I do see it going to sleep like it should during my testing.</p>
+<p>One other thought - Is it possible the carloop is keeping the car computer alive when it would normal not be?  I am not writing anything to the bus, the car spits out everything I need without asking.  I haven’t figured out why the can messages start and stop on the bus yet.</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/10</link>
+        <pubDate>Wed, 01 Feb 2017 13:46:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-10</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>What capacity has your 12V battery?</p>
+<p>In addition to this</p>
+<aside class="quote no-group" data-username="alanm" data-post="7" data-topic="192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>Do you have the battery-drain problem when Carloop is not connected to the OBD-II port?</p>
+</blockquote>
+</aside>
+<p>Does it make a difference whether the Photon is plugged into the CarLoop or not?<br>
+I would doubt that the Photon would drain a few Ah capacity battery that quickly, especially when being asleep for most of the time.<br>
+Do you see the device going to sleep properly?</p>
+<p>BTW, where is the <code>carloop.update()</code> call in <code>loop()</code>?</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/9</link>
+        <pubDate>Tue, 31 Jan 2017 11:28:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-9</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Here’s an interesting <a href="https://docs.particle.io/datasheets/photon-datasheet/#recommended-operating-conditions">operating current table</a> based on different modes:</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/2239defa56ff24100005094f7fc1d55ecde9f180.png" width="655" height="499"></p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/8</link>
+        <pubDate>Tue, 31 Jan 2017 10:46:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-8</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/ceer123">@Ceer123</a>!<br>
+If I am reading your code correctly, it looks like you are putting the Photon into <a href="https://docs.particle.io/reference/firmware/photon/#sleep-sleep-">Deep Sleep Mode</a> for about 90 seconds if battery is below 12.32V.  Based on <a href="https://docs.particle.io/datasheets/photon-datasheet/#power">Particle Photon’s Power Consumption Documentation</a>, that should not kill your battery:</p>
+<blockquote>
+<p>Typical average current consumption is 80mA with 5V @ VIN with Wi-Fi on. Deep sleep quiescent current is typically 80uA (Please refer to Recommended Operating Conditions for more info).</p>
+</blockquote>
+<p>On a <em><strong>healthy</strong></em> 60Ah 12V battery with no other current drains, a Photon would discharge the battery in approximately 750 hours (31.25 days) with WiFi on.  Do you have the battery-drain problem when Carloop is not connected to the OBD-II port?</p>
+<p><a class="mention" href="https://community.carloop.io/u/scruffr">@ScruffR</a> <a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a> any other ideas?</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/7</link>
+        <pubDate>Tue, 31 Jan 2017 10:41:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-7</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[Ceer123]]></dc:creator>
+        <description><![CDATA[
+            <p>I am working on a project to monitor my Leaf battery and am having trouble keeping the carloop and photon from killing the 12v accessory battery.  With the car parked and off the 12v battery lasts about 12 hours before I can’t start the car.  I put the following check in the code but it is still taking the battery down.  Is there a constant current draw from the carloop when the photon is in deep sleep mode?  Any other suggestions to code around this?</p>
+<pre><code class="lang-auto">SYSTEM_MODE(SEMI_AUTOMATIC);
+
+void setup() {
+  carloop.begin();
+  carloop.update();
+  volt = (byte)int((carloop.battery()*100)/8);
+  if (volt &lt; 154) { //not enough volts to run 154=12.32v
+            System.sleep(SLEEP_MODE_DEEP,90);
+  }
+  Particle.connect();
+}
+
+void loop() {
+/*
+Program Code (carloop.update() and parsing messages)
+*/
+    trans[6] = (byte)int((carloop.battery()*100)/8);
+    if (trans[6] &lt; 156) { //Go into power save mode 156=12.48v
+        if (trans[15] &gt; 0) { //Sleep only if we got a GID value
+            logthis("Battery Low, sleeping");
+            delay(1000);
+            System.sleep(SLEEP_MODE_DEEP,90);
+        }
+    }
+    
+    if (trans[15] &gt; 232) {
+        logthis("Full Charge going to sleep");
+        delay(1000);
+        System.sleep(SLEEP_MODE_DEEP,90);
+ 
+    }
+}</code></pre>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/6</link>
+        <pubDate>Mon, 30 Jan 2017 15:07:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-6</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Cool I’m going to try this and see how it works:</p>
+<p>void loop() {<br>
+// Send a message at a regular time interval<br>
+unsigned long now = millis();<br>
+unsigned long voltage = carloop.battery();<br>
+if ((voltage &gt; 14) &amp;&amp; (now - lastTransmitTime &gt; transmitInterval)) {<br>
+WiFi.on();<br>
+CANMessage message;</p>
+<pre><code>// A CAN message has an ID that identifies the content inside
+message.id = 0x333;
+// It can have from 0 to 8 data bytes
+message.len = 7;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x00;
+message.data[1] = 0x00;
+message.data[2] = 0x00;
+message.data[3] = 0x00;
+message.data[4] = 0x00;
+message.data[5] = 0x00;
+message.data[6] = 0x0F;
+
+// Send the message on the bus!
+carloop.can().transmit(message);
+message.data[6] = 0x1E;
+carloop.can().transmit(message);
+message.data[6] = 0x2D;
+carloop.can().transmit(message);
+message.data[6] = 0x3C;
+carloop.can().transmit(message);
+
+
+
+lastTransmitTime = now;
+</code></pre>
+<p>}<br>
+else{<br>
+WiFi.off();<br>
+}</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/5</link>
+        <pubDate>Wed, 21 Dec 2016 02:44:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-5</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey folks!<br>
+Battery voltage comes included in Carloop library.  This sketch shows how to get battery voltage with Carloop library. <a href="https://github.com/carloop/carloop-library/blob/master/firmware/examples/carloop_minimal.cpp">https://github.com/carloop/carloop-library/blob/master/firmware/examples/carloop_minimal.cpp</a></p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/4</link>
+        <pubDate>Wed, 21 Dec 2016 01:24:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-4</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the suggestion, will try it out as soon as I can!  For now I’m just keeping the Carloop handy in case my wife manages to get the car stuck, as Honda brilliantly does not allow you to disable Traction Control if TPMS is not functioning…</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/3</link>
+        <pubDate>Wed, 21 Dec 2016 00:51:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-3</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[gschmitt]]></dc:creator>
+        <description><![CDATA[
+            <p>I suspect you would be drawing less than 100mA of current on average even if you are transmitting regularly.  With that level of current draw you should be able to go several day of not running the vehicle to recharge the battery.</p>
+<p>As for sensing if the vehicle is running, you should be able to leverage the voltage of the vehicle with the engine off (~12.5 Volts) is less than when the vehicle is running (~14.2 Volts).  These voltages are way too high to input into a Particle Photon or Electron so you would need to use a voltage divider circuit.  Something like a 4000 ohm resistor in series with a 1000 ohm resistor would work.  The combination of the resistors would be put across the vehicles “12 volt” power with the 4000 ohm resistor connected to positive and the 1000 ohm resistor connected to ground.  Take a lead off of the connection between the two resistors and connect them to one of the analog inputs of the Particle.  You’ll need to test what the analog port reading constitutes the transition from the vehicle being off and on.</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/2</link>
+        <pubDate>Tue, 20 Dec 2016 23:09:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-2</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+      <item>
+        <title>Leaving a Carloop running</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone any experience leaving a Carloop running in a parked vehicle?</p>
+<p>I want to deploy my TPMS eliminator app and leave it plugged in but am concerned about killing my car’s battery.</p>
+<p>My next question would be, any recommendations on how to sense if the vehicle is running?</p>
+          <p><a href="https://community.carloop.io/t/leaving-a-carloop-running/192/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/leaving-a-carloop-running/192/1</link>
+        <pubDate>Tue, 20 Dec 2016 22:03:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-192-1</guid>
+        <source url="https://community.carloop.io/t/leaving-a-carloop-running/192.rss">Leaving a Carloop running</source>
+      </item>
+  </channel>
+</rss>

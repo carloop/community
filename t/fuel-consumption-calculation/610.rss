@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Fuel consumption calculation</title>
+    <link>https://community.carloop.io/t/fuel-consumption-calculation/610</link>
+    <description>Hi All,
+
+As far as I see, there is a formula to calculate the fuel consumption from Manifold Air Pressure reading, but some of the cars has no MAP sensor. Is there a formula to calculate the fuel consumption from Intake manifold air pressure for example ?
+
+Thanks</description>
+    
+    <lastBuildDate>Sat, 21 Apr 2018 15:20:46 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/fuel-consumption-calculation/610.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Fuel consumption calculation</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I found this link which seems to have a decent explanation with the formula:<br>
+<a href="http://www.lightner.net/obd2guru/IMAP_AFcalc.html" class="onebox" target="_blank" rel="noopener">http://www.lightner.net/obd2guru/IMAP_AFcalc.html</a></p>
+<p>Note that you do need to have some engine-specific parameters for this calculation.</p>
+<p>Another link I found here has some description of what it means to the car (which could be helpful in understanding the formula), but with no formula:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.hpacademy.com/technical-articles/mass-air-flow-sensors-vs-manifold-air-pressure-sensors/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/01c4eab7f438d9b2f20551e61fe84cf876a22aec.png" class="site-icon" data-dominant-color="9F8F71" width="32" height="32">
+
+      <a href="https://www.hpacademy.com/technical-articles/mass-air-flow-sensors-vs-manifold-air-pressure-sensors/" target="_blank" rel="noopener">High Performance Academy</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:600/400;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/ff55019c0cb8777edf1237dcb4486cb48470344e.jpeg" class="thumbnail" data-dominant-color="5C514A" width="600" height="400"></div>
+
+<h3><a href="https://www.hpacademy.com/technical-articles/mass-air-flow-sensors-vs-manifold-air-pressure-sensors/" target="_blank" rel="noopener">Mass Air Flow Sensors vs Manifold Air Pressure Sensors</a></h3>
+
+  <p>In a previous article, we have already looked at intake 
+ 
+restrictions and how they can affect the power your engine 
+ 
+makes. In this article we are going to delve a little deeper 
+ 
+into the intake system and look at the mass airflow meter, 
+...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/fuel-consumption-calculation/610/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/fuel-consumption-calculation/610/4</link>
+        <pubDate>Sat, 21 Apr 2018 15:20:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-610-4</guid>
+        <source url="https://community.carloop.io/t/fuel-consumption-calculation/610.rss">Fuel consumption calculation</source>
+      </item>
+      <item>
+        <title>Fuel consumption calculation</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="cyclin_al1" data-post="2" data-topic="610">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/d6d6ee/48.png" class="avatar"> cyclin_al1:</div>
+<blockquote>
+<p>manifold air pressure</p>
+</blockquote>
+</aside>
+<p>The cars I’m testing on can give the Intake manifold air pressure, but not the mass air flow; As I can see, there is a way to calculate the MAF, but I can’t find a formula that it’s clear enough.</p>
+<p>Is there a well known formula ?</p>
+<p>Thanks for the help.</p>
+          <p><a href="https://community.carloop.io/t/fuel-consumption-calculation/610/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/fuel-consumption-calculation/610/3</link>
+        <pubDate>Sat, 21 Apr 2018 04:26:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-610-3</guid>
+        <source url="https://community.carloop.io/t/fuel-consumption-calculation/610.rss">Fuel consumption calculation</source>
+      </item>
+      <item>
+        <title>Fuel consumption calculation</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/maleficarum">@maleficarum</a>,</p>
+<p>I think you might be getting mixed up between manifold air pressure and mass air flow.<br>
+Mass air flow gives you the amount of air going into the engine.  Manifold pressure is just how hard that air is being pushed.  The amount of air has to be mixed with an amount of fuel to get a good ratio for combustion and the right amount to drive the piston.</p>
+<p>Mass airflow sensor is one of the PIDs that is part of OBD2.  In Canada and the USA, these are legally required.  Mass airflow sensor is Mode 01 PID 66 (hex).  This value needs to be calibrated; the maximum value is Mode 01 PID 50 (hex).</p>
+<p>Here is a listing of the OBD2 PIDs:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/OBD-II_PIDs">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" target="_blank" rel="noopener">OBD-II PIDs</a></h3>
+
+<p>OBD-II PIDs (On-board diagnostics Parameter IDs) are codes used to request data from a vehicle, used as a diagnostic tool.
+ SAE standard J1979 defines many OBD-II PIDs. All on-road vehicles and trucks sold in North America are required to support a subset of these codes, primarily for state mandated emissions inspections. Manufacturers also define additional PIDs specific to their vehicles. Though not mandated, many motorcycles also support OBD-II PIDs.
+ In 1996, light duty vehicles (less than 8,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/fuel-consumption-calculation/610/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/fuel-consumption-calculation/610/2</link>
+        <pubDate>Sat, 21 Apr 2018 03:21:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-610-2</guid>
+        <source url="https://community.carloop.io/t/fuel-consumption-calculation/610.rss">Fuel consumption calculation</source>
+      </item>
+      <item>
+        <title>Fuel consumption calculation</title>
+        <dc:creator><![CDATA[maleficarum]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi All,</p>
+<p>As far as I see, there is a formula to calculate the fuel consumption from Manifold Air Pressure reading, but some of the cars has no MAP sensor. Is there a formula to calculate the fuel consumption from Intake manifold air pressure for example ?</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/fuel-consumption-calculation/610/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/fuel-consumption-calculation/610/1</link>
+        <pubDate>Fri, 20 Apr 2018 22:09:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-610-1</guid>
+        <source url="https://community.carloop.io/t/fuel-consumption-calculation/610.rss">Fuel consumption calculation</source>
+      </item>
+  </channel>
+</rss>

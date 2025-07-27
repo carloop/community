@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop is Retired</title>
+    <link>https://community.carloop.io/t/carloop-is-retired/1393</link>
+    <description>Back in 2016, we introduced Carloop, a 100% open-source development kit designed to connect cars to the cloud, supporting applications like GPS tracking, mileage logging, and diagnostic trouble code decoding. Since then, a vibrant community of passionate developers and enthusiasts came on a journey with us to open the secrets of modern cars.
+
+This journey is coming to an end. We are retiring the Carloop hardware. Rest assured that your existing hardware will continue working.
+
+&gt; **The last Carloop units are available for a fire sale at https://store.carloop.io while supplies last.**
+
+We will also keep this forum and our GitHub repository at https://github.com/carloop active as a sign of our commitment to the community. As passionate hackers, we encourage you to connect with us on LinkedIn or X (Formerly Twitter).
+
+— Alan Mond &amp; Julien Vanier, the Carloop team
+LinkedIn: [Alan](https://www.linkedin.com/in/mondalan), [Julien](https://www.linkedin.com/in/jvanier). X (formerly Twitter): [Alan](https://twitter.com/mondalan), [Julien](https://twitter.com/monkbroc).</description>
+    
+    <lastBuildDate>Tue, 06 Feb 2024 03:38:03 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-is-retired/1393.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop is Retired</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            
+          <p><a href="https://community.carloop.io/t/carloop-is-retired/1393/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-retired/1393/2</link>
+        <pubDate>Tue, 06 Feb 2024 03:38:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1393-2</guid>
+        <source url="https://community.carloop.io/t/carloop-is-retired/1393.rss">Carloop is Retired</source>
+      </item>
+      <item>
+        <title>Carloop is Retired</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Back in 2016, we introduced Carloop, a 100% open-source development kit designed to connect cars to the cloud, supporting applications like GPS tracking, mileage logging, and diagnostic trouble code decoding. Since then, a vibrant community of passionate developers and enthusiasts came on a journey with us to open the secrets of modern cars.</p>
+<p>This journey is coming to an end. We are retiring the Carloop hardware. Rest assured that your existing hardware will continue working.</p>
+<blockquote>
+<p><strong>The last Carloop units are available for a fire sale at <a href="https://store.carloop.io">https://store.carloop.io</a> while supplies last.</strong></p>
+</blockquote>
+<p>We will also keep this forum and our GitHub repository at <a href="https://github.com/carloop" class="inline-onebox">Carloop · GitHub</a> active as a sign of our commitment to the community. As passionate hackers, we encourage you to connect with us on LinkedIn or X (Formerly Twitter).</p>
+<p>— Alan Mond &amp; Julien Vanier, the Carloop team<br>
+LinkedIn: <a href="https://www.linkedin.com/in/mondalan">Alan</a>, <a href="https://www.linkedin.com/in/jvanier">Julien</a>. X (formerly Twitter): <a href="https://twitter.com/mondalan">Alan</a>, <a href="https://twitter.com/monkbroc">Julien</a>.</p>
+          <p><a href="https://community.carloop.io/t/carloop-is-retired/1393/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-is-retired/1393/1</link>
+        <pubDate>Tue, 06 Feb 2024 03:38:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1393-1</guid>
+        <source url="https://community.carloop.io/t/carloop-is-retired/1393.rss">Carloop is Retired</source>
+      </item>
+  </channel>
+</rss>

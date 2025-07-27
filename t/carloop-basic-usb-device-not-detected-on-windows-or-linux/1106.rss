@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Basic USB device not detected on Windows or Linux</title>
+    <link>https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106</link>
+    <description>I&#39;m having some trouble accessing the USB interface on my Carloop Basic. I&#39;ve initialized and registered the Photon and upgraded its firmware, all over wifi. But when I attach it to a USB 2 or 3 port, I don&#39;t see the Carloop as a USB device. I&#39;ve tried it natively on three Windows 10 devices with both USB 3 and 2, one Windows 7 computer with USB 2 and a Ubuntil 20.0.04L laptop with USB 2. In all cases, the Photon USB connection is not detected in or out of DFU mode. &quot;dfu-util -l&quot; sees nothing, nor does &quot;particle usb list&quot;. USB drivers are installed. I have no trouble accessing the Photon using wifi (&quot;particle list&quot; works fine). Anybody out there run into this and found a solution? Hard to believe I have a defective USB interface on the Photon but suppose it&#39;s possible.</description>
+    
+    <lastBuildDate>Fri, 01 Jan 2021 16:50:38 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Basic USB device not detected on Windows or Linux</title>
+        <dc:creator><![CDATA[dreolf]]></dc:creator>
+        <description><![CDATA[
+            <p>Unbelievable. I had tried three different mini-USB cables and couldn’t get it working on five different systems. Found a fourth cable and boom, it’s working. That’s crazy but thanks for making me take one more look at the cable. The first three are going in the garbage.</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/3</link>
+        <pubDate>Fri, 01 Jan 2021 16:50:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1106-3</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106.rss">Carloop Basic USB device not detected on Windows or Linux</source>
+      </item>
+      <item>
+        <title>Carloop Basic USB device not detected on Windows or Linux</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi and welcome! Have you tried using a different micro-usb cable that has known good data pins?  Some micro-usb cables have power working but not the data pins.</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/2</link>
+        <pubDate>Thu, 31 Dec 2020 23:13:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1106-2</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106.rss">Carloop Basic USB device not detected on Windows or Linux</source>
+      </item>
+      <item>
+        <title>Carloop Basic USB device not detected on Windows or Linux</title>
+        <dc:creator><![CDATA[dreolf]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m having some trouble accessing the USB interface on my Carloop Basic. I’ve initialized and registered the Photon and upgraded its firmware, all over wifi. But when I attach it to a USB 2 or 3 port, I don’t see the Carloop as a USB device. I’ve tried it natively on three Windows 10 devices with both USB 3 and 2, one Windows 7 computer with USB 2 and a Ubuntil 20.0.04L laptop with USB 2. In all cases, the Photon USB connection is not detected in or out of DFU mode. “dfu-util -l” sees nothing, nor does “particle usb list”. USB drivers are installed. I have no trouble accessing the Photon using wifi (“particle list” works fine). Anybody out there run into this and found a solution? Hard to believe I have a defective USB interface on the Photon but suppose it’s possible.</p>
+          <p><a href="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106/1</link>
+        <pubDate>Thu, 31 Dec 2020 22:48:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1106-1</guid>
+        <source url="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106.rss">Carloop Basic USB device not detected on Windows or Linux</source>
+      </item>
+  </channel>
+</rss>

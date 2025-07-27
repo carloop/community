@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>2015 chrysler 200</title>
+    <link>https://community.carloop.io/t/2015-chrysler-200/474</link>
+    <description>2015 chrysler 200 CANbus ID’s 
+CAN-IHS 
+
+Steering wheel buttons 
+4a3#
+
+Left button 
+4A3#07F8008000040000
+
+Right button
+4A3#07F8080000040000
+
+Down button
+ 4A3#07F8020000040000
+
+Up button
+4A3#07F8200000040000
+
+Ok button
+4A3#07F8800000040000
+
+Behind steering wheel up  left side 
+4A3#07F8000002040000
+
+Behind steering wheel down left side 
+4A3#07F8000008040000
+
+Behind steering wheel center button left side 
+4A3#07F8000800040000
+
+Behind steering wheel up  right side  &amp;&amp; volume up 
+4A3#07F80000000C0000
+
+Behind steering wheel down right side &amp;&amp; volume down 
+4A3#07F8000000240000
+
+Behind steering wheel center button right side
+4A3#07F8000000840000
+
+
+
+Rpm’s 
+09A 
+
+Speed 
+098
+
+Vin number 
+3d3#
+
+Shifter 
+190# [5] 
+
+Park
+190#0422000000
+
+Reverse 
+190#0442000000
+
+Neutral 
+190#0462000000
+
+Drive 
+190#0482000000
+
+L 
+190#04A2000000</description>
+    
+    <lastBuildDate>Sun, 08 Apr 2018 04:02:32 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/2015-chrysler-200/474.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/hartmms">@hartmms</a>,</p>
+<p>You suggestion of a mux could be done, but there are a lot of trade-offs.  I do not work for Carloop, so the actual rationale may be a bit different than my thoughts.</p>
+<p>To start, here in North America, the only legally required CANbus is the one that Carloop interfaces with.  To implement only that bus means a simple device that is easy to build, small enough to fit in the package it does, and would meet the majority of use cases.</p>
+<p>To add a second CANbus for the Photon, it means adding a mux, an additional CAN transceiver and all the circuitry to support that.  That could likely double the physical size of the Carloop and it would no longer fit directly on the OBD2 port.  That would also make it a lot more expensive.  Then, there is the question of how many vehicle models have a second CANbus on that port; it would not be that many.  For some models of cars, it would then be necessary to be able to disable the second CANbus at high impedance since the pins are used for other purposes that are not compatible, making things further complicated.</p>
+<p>Once that hardware layer is in place, you could still only communicate with single CANbus at a time.  That means that you have to miss out completely on what is happening on the CANbus that you are not connected to at that time.  That might be seen as a big limitation.</p>
+<p>Here is what is usually, but not always, available on the OBD2 port at this Wikipedia page:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/On-board_diagnostics#OBD-II_diagnostic_connector" target="_blank" rel="noopener">On-board diagnostics | OBD-II diagnostic connector</a></h3>
+
+<p>The OBD-II specification provides for a standardized hardware interface — the female 16-pin (2x8) J1962 connector, where type A is used for 12-volt vehicles and type B for 24-volt vehicles. Unlike the OBD-I connector, which was sometimes found under the hood of the vehicle, the OBD-II connector is required to be within 2 feet (0.61&nbsp;m) of the steering wheel (unless an exemption is applied for by the manufacturer, in which case it is still somewhere within reach of the driver).
+ SAE J1962 defines t...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+As you can see, it gets hard to do a design that covers all the possibilities.  You quickly getting into customizing things for a particular vehicle.</p>
+<p>My opinion is that Carloop did a very good job of providing the right functionality for an almost-consumer level product.</p>
+<p>Don’t forget that the design is completely open-source, so it is possible to customize both the hardware and firmware to fit your particular use case.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/13</link>
+        <pubDate>Sun, 08 Apr 2018 04:02:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-13</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>I know “anything is possible” but was any thought given to a hardware mux on the carloop that would allow a photon to switch between the different CANbus signal pins on different OBDII pins?  If so, I’m curious what the tradeoffs were to not enable it.</p>
+<p>BTW - I’m not complaining.  I got my carloop coming Saturday and am excited to test it out.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/12</link>
+        <pubDate>Thu, 05 Apr 2018 16:37:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-12</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> &amp; <a class="mention" href="https://community.carloop.io/u/hartmms">@hartmms</a>,</p>
+<p>Good finds for discovering all that.  It is going to be useful when I get around to working on my 2015 RAM 1500.<br>
+I found the same type of information easily for my previous F250 diesel exactly because of the upfitter market.<br>
+However, before getting to the RAM, I need to finish CarloopRetro to do K-Line (instead of CANbus) for a 2004 Impreza.</p>
+<p>Important Note:  The Photon is not able to do “dual CANbus”.  If I remember, the STM processor pins for the other CAN interfaces were used for some other purpose.  However, the Electron should be capable of “dual CANbus” in theory since another CAN interface is available on the C4 &amp; C5 pins.  I am not aware of anyone actually using the C4/C5 CAN interface, so someone needs to confirm that it does work.</p>
+<p>Another way to go about it is with a Photon &amp; Carloop on the OBD2 port and another Photon &amp; CanHitch on the CAN-IHS bus.  You would not need a second Carloop to do this.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/11</link>
+        <pubDate>Thu, 05 Apr 2018 04:08:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-11</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>I was slightly surprised to find that. However it makes sense as those 3/4, 1 ton trucks are often heavily modified after the factory to make construction trucks, EMS vehicles, etc. Making this data semi public helps those 3rd party “upfitter” companies out.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/10</link>
+        <pubDate>Wed, 04 Apr 2018 22:12:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-10</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s a good find right there. Has a bunch of info.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/9</link>
+        <pubDate>Wed, 04 Apr 2018 19:10:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-9</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for that. I just ran across some data for <a href="https://www.ramtrucks.com/BodyBuilder/service/ViewSpecification?specificationId=671" rel="noopener nofollow ugc">RAM trucks and CAN bus codes</a>.  Last page is the one.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/8</link>
+        <pubDate>Wed, 04 Apr 2018 04:57:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-8</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>On my charger and maybe your ram the canIHS is on the obdii port, it’s pins 3&amp;11  125k<br>
+The reason the carloop isn’t going work on it cause it’s wires for pins 6&amp;14 500k<br>
+You can technically solder a canhitch to those pins, on the carloop they are not used and use a few jumper wires to attach it to the photon/electron.<br>
+I havnt tried it but that was my initial thought on trying to get “dual canbus” working.<br>
+I’ve been side tracked lately and have been doing a lot of ECU hacking and man the carloop is capable!!<br>
+On GM and Chrysler.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/7</link>
+        <pubDate>Wed, 04 Apr 2018 03:57:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-7</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>I take it that I can’t get to the CAN-IHS bus via the OBDII connector?   Seems like I need a can-hitch with a splice/y-cable to the internal radio/info CAN bus. Oh well. I needed a new OBDII reader since some s***head jacked it from my truck when I forgot to lock it overnight.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/6</link>
+        <pubDate>Wed, 04 Apr 2018 03:37:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-6</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Carloop has been the best tool I’ve found. It can do what the $3k plus big boy toys can do. Not affiliated with them in any way just a huge fan of the product! All though a sponsorship would be nice <img src="//carloop-community.dyndns.org/images/emoji/twitter/blush.png?v=12" title=":blush:" class="emoji" alt=":blush:" loading="lazy" width="20" height="20"><img src="//carloop-community.dyndns.org/images/emoji/twitter/raised_hands/4.png?v=12" title=":raised_hands:t4:" class="emoji" alt=":raised_hands:t4:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/5</link>
+        <pubDate>Wed, 04 Apr 2018 03:27:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-5</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[hartmms]]></dc:creator>
+        <description><![CDATA[
+            <p>I just ordered a carloop + photon to probe my 2018 Ram 2500 CAN bus.  I’m hoping to control it over MQTT from home home automation system when it’s parked in the driveway.  I always forget to lock my doors and having it auto lock at whatever trigger I need (night time, idle time, etc) is the next improvement in my overall security system.</p>
+<p>I’ll keep reading posts here. Hopefully I can glean all the little bits together to learn how to properly sniff the CAN bus and transmit the codes back to the truck. I’ll report back if the codes are similar for my 2500.</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/4</link>
+        <pubDate>Wed, 04 Apr 2018 02:51:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-4</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>these are CAN IHS<br>
+I manged to setup a bench test and have got a lot of info from just an instrument cluster and shifter from a 2015 charger.<br>
+If you look inside my code you will see some”steering wheel buttons” from a 2016 challenger</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/3</link>
+        <pubDate>Tue, 21 Nov 2017 22:29:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-3</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Nice work!</p>
+<p>By the way, are these codes the same as for the 2014 Charger (from your earlier post)?<br>
+I have not tried yet to find the codes on my 2015 RAM.</p>
+<p>It would be nice to know if Chrysler FCA is using the same codes in all their vehicles…</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/2</link>
+        <pubDate>Tue, 21 Nov 2017 22:16:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-2</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+      <item>
+        <title>2015 chrysler 200</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>2015 chrysler 200 CANbus ID’s<br>
+CAN-IHS</p>
+<p>Steering wheel buttons<br>
+4a3#</p>
+<p>Left button<br>
+4A3#07F8008000040000</p>
+<p>Right button<br>
+4A3#07F8080000040000</p>
+<p>Down button<br>
+4A3#07F8020000040000</p>
+<p>Up button<br>
+4A3#07F8200000040000</p>
+<p>Ok button<br>
+4A3#07F8800000040000</p>
+<p>Behind steering wheel up  left side<br>
+4A3#07F8000002040000</p>
+<p>Behind steering wheel down left side<br>
+4A3#07F8000008040000</p>
+<p>Behind steering wheel center button left side<br>
+4A3#07F8000800040000</p>
+<p>Behind steering wheel up  right side  &amp;&amp; volume up<br>
+4A3#07F80000000C0000</p>
+<p>Behind steering wheel down right side &amp;&amp; volume down<br>
+4A3#07F8000000240000</p>
+<p>Behind steering wheel center button right side<br>
+4A3#07F8000000840000</p>
+<p>Rpm’s<br>
+09A</p>
+<p>Speed<br>
+098</p>
+<p>Vin number<br>
+3d3#</p>
+<p>Shifter<br>
+190# [5]</p>
+<p>Park<br>
+190#0422000000</p>
+<p>Reverse<br>
+190#0442000000</p>
+<p>Neutral<br>
+190#0462000000</p>
+<p>Drive<br>
+190#0482000000</p>
+<p>L<br>
+190#04A2000000</p>
+          <p><a href="https://community.carloop.io/t/2015-chrysler-200/474/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2015-chrysler-200/474/1</link>
+        <pubDate>Tue, 07 Nov 2017 20:06:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-474-1</guid>
+        <source url="https://community.carloop.io/t/2015-chrysler-200/474.rss">2015 chrysler 200</source>
+      </item>
+  </channel>
+</rss>

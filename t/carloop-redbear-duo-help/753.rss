@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop RedBear Duo Help</title>
+    <link>https://community.carloop.io/t/carloop-redbear-duo-help/753</link>
+    <description>I&#39;ve recently purchased the Carloop RedBear Duo and I&#39;m having trouble finding support for this setup.  I see many posts on the photon and electron, but not the redbear.  I guess the first issue I need to get past is that fact that I&#39;m not able to flash my device via the Particle Web UI.  I also can&#39;t find out what internal IP the device has.  The Particle Web UI shows that my device has my external IP, but not my internal one.  I&#39;m really struggling to find out what&#39;s going on with this device.  I&#39;m close, but need a little guidance from a generous person who is working with the redbear.</description>
+    
+    <lastBuildDate>Mon, 05 Nov 2018 05:24:47 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/reporter500">@reporter500</a>,</p>
+<p>Ah, now I understand your question from the other thread …</p>
+<p>The RedbearDuo works just fine in the Particle environment.  I have one myself and it works fine.<br>
+The one thing you cannot do in the Particle environment is to update the system firmware on the Duo; you have to do that through the files in the Duo github repository.</p>
+<p>The part you are probably missing are the instructions to setup and claim the RedbearDuo to your Particle account.  I found this step was tricky and the Redbear app does not match its documentation.  I had to try it a few times before it worked.</p>
+<p>The instructions are here:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/redbear/Duo/blob/master/README.md">
+  <header class="source">
+
+      <a href="https://github.com/redbear/Duo/blob/master/README.md" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/redbear/Duo/blob/master/README.md" target="_blank" rel="noopener">redbear/Duo/blob/master/README.md</a></h4>
+
+
+      <pre><code class="lang-md">
+# RedBear Duo
+---
+
+![image](docs/images/RB_Duo.png)
+
+The&nbsp;[RedBear Duo](http://www.redbear.cc/duo)&nbsp;is a thumb-size development board designed to simplify the process of building Internet of Things (IoT) products. It provides everything you need -- Wi-Fi, BLE and a powerful Cloud backend, all in a compact form factor that makes it ideal for your first prototype, a finished product, and everything in between.&nbsp;[More &gt;&gt;](docs/duo_introduction.md) 
+
+Purchase your RedBear Duo now: 
+
+* [RedBear Store](https://store.redbear.cc/product.html)
+* [Worldwide Resellers](http://redbearlab.com/buy/)
+
+
+## Directories and Files
+
+* `certs/`: FCC &amp; CE certifications
+* `docs/`: Documentation for improving your experience on the Duo
+* `driver/`: Duo Windows USB driver
+* `firmware/bootloader/`: Released bootloader images for Duo
+</code></pre>
+
+
+
+  This file has been truncated. <a href="https://github.com/redbear/Duo/blob/master/README.md" target="_blank" rel="noopener">show original</a>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+The most important one is the tutorial named “Out of box experience”.</p>
+<p>The more detailed answer is that RedbearLabs used the P1 module from Particle when they developed the Duo.  Recently, Particle bought the RedbearDuo from Redbear Labs.<br>
+For the latest news, take a look here:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10" target="_blank" rel="noopener" title="07:51PM - 01 November 2018">Particle – 1 Nov 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10" target="_blank" rel="noopener">Redbear Duo v0.3.2 not in Particle IDE</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hey there folks – following back up here. The work was prepped earlier this year but didn’t make it up to the Web IDE as a result of the development activity around Mesh.  We now have a plan to get the work pushed to our production environment...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>It looks hopeful that Particle is going to provide better support for the Duo than Redbear labs was doing.  I have my fingers crossed now that Particle Mesh is done and they should have more time now to look at the Duo.</p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/6</link>
+        <pubDate>Mon, 05 Nov 2018 05:24:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-6</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Download the library from GitHub, then add it to the same location as the file your working on and reference it in the header like in the cloud ide</p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/5</link>
+        <pubDate>Sat, 03 Nov 2018 16:54:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-5</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[reporter500]]></dc:creator>
+        <description><![CDATA[
+            <p>How do you add the CarLoop library to the Arduino IDE?</p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/4</link>
+        <pubDate>Fri, 02 Nov 2018 15:06:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-4</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>You can use the Arduino IDE for the redbear duo and can add the carloop library as well.</p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/3</link>
+        <pubDate>Thu, 01 Nov 2018 13:36:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-3</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[Dustin]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there, I had similar problem and had to use the particle beta. Here is a thread to help.</p>
+<p><a href="https://carloop.dyndns.org/t/help-getting-connect-redbear-duo-carloop/349" class="onebox" target="_blank" rel="noopener">https://carloop.dyndns.org/t/help-getting-connect-redbear-duo-carloop/349</a></p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/2</link>
+        <pubDate>Thu, 01 Nov 2018 13:09:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-2</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+      <item>
+        <title>Carloop RedBear Duo Help</title>
+        <dc:creator><![CDATA[reporter500]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve recently purchased the Carloop RedBear Duo and I’m having trouble finding support for this setup.  I see many posts on the photon and electron, but not the redbear.  I guess the first issue I need to get past is that fact that I’m not able to flash my device via the Particle Web UI.  I also can’t find out what internal IP the device has.  The Particle Web UI shows that my device has my external IP, but not my internal one.  I’m really struggling to find out what’s going on with this device.  I’m close, but need a little guidance from a generous person who is working with the redbear.</p>
+          <p><a href="https://community.carloop.io/t/carloop-redbear-duo-help/753/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-redbear-duo-help/753/1</link>
+        <pubDate>Thu, 01 Nov 2018 12:12:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-753-1</guid>
+        <source url="https://community.carloop.io/t/carloop-redbear-duo-help/753.rss">Carloop RedBear Duo Help</source>
+      </item>
+  </channel>
+</rss>

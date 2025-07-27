@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Newbie Questions</title>
+    <link>https://community.carloop.io/t/newbie-questions/260</link>
+    <description>hello all,
+
+I&#39;m picking up Carloop basic today and I have a couple of questions.
+
+1) Has anyone made a case for carloop so the electronics are not bare when it&#39;s in the car?
+2) I want Carloop to join my existing network and get an IP via DHCP is this possible or do i have to connect to its wifi ?
+3) can I setup carhop as a web server using websockets? I&#39;d like to write a web-app I can distribute</description>
+    
+    <lastBuildDate>Tue, 09 May 2017 19:44:41 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/newbie-questions/260.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Newbie Questions</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group quote-modified" data-username="alanm" data-post="2" data-topic="260" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<aside class="quote no-group quote-modified" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol>
+<li>Has anyone made a case for carloop so the electronics are not bare when it’s in the car?</li>
+</ol>
+</blockquote>
+</aside>
+<p>We’ve played around with some designs but most people seem to want the bare PCB - what is the specific use case?  If you can get some people interested on the forum, we can spin something pretty quickly for people to try out.</p>
+<p>—I’m looking for a very simple shell.  with access to the USB port to connect the particle to the network</p>
+<aside class="quote no-group" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol start="2">
+<li>I want Carloop to join my existing network and get an IP via DHCP is this possible or do i have to connect to its wifi ?</li>
+</ol>
+</blockquote>
+</aside>
+<p>The easiest way is to connect the Particle Photon to the Particle Cloud via your existing WiFi network - yes this is the easiest way <a href="https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon" rel="noopener nofollow ugc">to get started</a>.  Which Carloop did you order? Did it come with a Particle Photon?  If not, you will need to <a href="https://store.carloop.io/products/particle-photon">order one</a>.</p>
+<p>–I picked up the version with the particle photon.  I have it all connected to my network and have started writing the app.</p>
+<aside class="quote no-group quote-modified" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol start="3">
+<li>can I setup carhop as a web server using websockets? I’d like to write a web-app I can distribute</li>
+</ol>
+</blockquote>
+</aside>
+<p>Yes!  You can use Carloop as a webserver and create a tiny HTML page inside the Photon.  See Particle’s Docs on <a href="https://docs.particle.io/reference/firmware/photon/#softap-http-pages" rel="noopener nofollow ugc">how to create a SoftAP</a></p>
+</blockquote>
+</aside>
+<p>–question for you: is there any documentation on the message that comes back?  I’d like to figure what values are in what array slot.</p>
+          <p><a href="https://community.carloop.io/t/newbie-questions/260/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/newbie-questions/260/4</link>
+        <pubDate>Tue, 09 May 2017 19:44:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-260-4</guid>
+        <source url="https://community.carloop.io/t/newbie-questions/260.rss">Newbie Questions</source>
+      </item>
+      <item>
+        <title>Newbie Questions</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol start="2">
+<li>I want Carloop to join my existing network and get an IP via DHCP is this possible or do i have to connect to its wifi ?</li>
+</ol>
+</blockquote>
+</aside>
+<p>Assuming you have a Photon (RedbearDuo should be very similar), the normal set up procedure includes connecting to WiFi and then connecting to the Particle cloud.  The Photon setup expects your WiFi router to assign the local IP via DHCP.</p>
+<p>In the case of the Electron, the connection to the Particle cloud is done over the cellular network, and does not use WiFi.</p>
+          <p><a href="https://community.carloop.io/t/newbie-questions/260/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/newbie-questions/260/3</link>
+        <pubDate>Fri, 14 Apr 2017 21:02:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-260-3</guid>
+        <source url="https://community.carloop.io/t/newbie-questions/260.rss">Newbie Questions</source>
+      </item>
+      <item>
+        <title>Newbie Questions</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol>
+<li>Has anyone made a case for carloop so the electronics are not bare when it’s in the car?</li>
+</ol>
+</blockquote>
+</aside>
+<p>We’ve played around with some designs but most people seem to want the bare PCB - what is the specific use case?  If you can get some people interested on the forum, we can spin something pretty quickly for people to try out.</p>
+<aside class="quote no-group" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol start="2">
+<li>I want Carloop to join my existing network and get an IP via DHCP is this possible or do i have to connect to its wifi ?</li>
+</ol>
+</blockquote>
+</aside>
+<p>The easiest way is to connect the Particle Photon to the Particle Cloud via your existing WiFi network - yes this is the easiest way <a href="https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon">to get started</a>.  Which Carloop did you order? Did it come with a Particle Photon?  If not, you will need to <a href="https://store.carloop.io/products/particle-photon">order one</a>.</p>
+<aside class="quote no-group" data-username="elhajj33" data-post="1" data-topic="260">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/elhajj33/48/435_2.png" class="avatar"> elhajj33:</div>
+<blockquote>
+<ol start="3">
+<li>can I setup carhop as a web server using websockets? I’d like to write a web-app I can distribute</li>
+</ol>
+</blockquote>
+</aside>
+<p>Yes!  You can use Carloop as a webserver and create a tiny HTML page inside the Photon.  See Particle’s Docs on <a href="https://docs.particle.io/reference/firmware/photon/#softap-http-pages">how to create a SoftAP</a></p>
+          <p><a href="https://community.carloop.io/t/newbie-questions/260/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/newbie-questions/260/2</link>
+        <pubDate>Fri, 14 Apr 2017 04:52:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-260-2</guid>
+        <source url="https://community.carloop.io/t/newbie-questions/260.rss">Newbie Questions</source>
+      </item>
+      <item>
+        <title>Newbie Questions</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>hello all,</p>
+<p>I’m picking up Carloop basic today and I have a couple of questions.</p>
+<ol>
+<li>Has anyone made a case for carloop so the electronics are not bare when it’s in the car?</li>
+<li>I want Carloop to join my existing network and get an IP via DHCP is this possible or do i have to connect to its wifi ?</li>
+<li>can I setup carhop as a web server using websockets? I’d like to write a web-app I can distribute</li>
+</ol>
+          <p><a href="https://community.carloop.io/t/newbie-questions/260/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/newbie-questions/260/1</link>
+        <pubDate>Thu, 13 Apr 2017 14:39:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-260-1</guid>
+        <source url="https://community.carloop.io/t/newbie-questions/260.rss">Newbie Questions</source>
+      </item>
+  </channel>
+</rss>

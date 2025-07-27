@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Device won&#39;t work unless there is wifi connection</title>
+    <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618</link>
+    <description>Hi there, I got myself the bluetooth version (RedBear Duo), it is upgraded to latest firmware (0.3.1). connected it to wifi, claimed it and pushed a sketch into it via the particle website. my problem is after you turn it on (in the car, connected to OBD port), the green LED keeps blinking trying to establish wifi connection. the sketch will not start working unless there is internet. the first line in setup function is WiFi.off(); but this I assume only runs after the wifi connection is established.
+
+how can I get it working when there is no internet? my code doesn&#39;t need connection.
+
+Cheers,
+Ali</description>
+    
+    <lastBuildDate>Wed, 02 May 2018 01:15:18 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/itsmedavid">@itsmedavid</a>,  Thanks for answering that; you beat me to it.  I can view the community but I cannot post anything when I am at the office.  My responses have to wait until I am home.</p>
+<p>System Mode MANUAL means that you control the Particle cloud connection and the WiFi connection manually.   The default is no connection on startup.</p>
+<p>[edit] SEMIAUTOMATIC means that processing is automatic once connected to the Cloud (and WiFi is connected).  The default is not to connect until your application commands it.</p>
+<p>AUTOMATIC means that the default behaviour is to automatically attempt to connect, which means it will not get around to running the application when there is no connection established.</p>
+<p>[edit] Along with this, there is some functionality during the connection process that is blocking (it blocks the rest of the application thread).  There is a good discussion on it here:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/particle-connect-blocking-main-loop-permanently-even-with-system-thread-enabled/40690/11">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/particle-connect-blocking-main-loop-permanently-even-with-system-thread-enabled/40690/11" target="_blank" rel="noopener" title="10:09PM - 29 March 2018">Particle – 29 Mar 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/particle-connect-blocking-main-loop-permanently-even-with-system-thread-enabled/40690/11" target="_blank" rel="noopener">Particle.connect() blocking main loop permanently, even with...</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>@BDub  Please add this to the list of things that need to be clearly and unambiguously documented.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/7</link>
+        <pubDate>Tue, 01 May 2018 02:11:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-7</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[Shafa]]></dc:creator>
+        <description><![CDATA[
+            <p>thanks!<br>
+that did the trick</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/6</link>
+        <pubDate>Mon, 30 Apr 2018 23:09:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-6</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>Then SYSTEM_MODE(MANUAL) <a href="https://docs.particle.io/reference/firmware/photon/#system-modes" rel="noopener nofollow ugc">(modes)</a> should be what you are looking for.</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/5</link>
+        <pubDate>Mon, 30 Apr 2018 22:13:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-5</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[Shafa]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="alanm" data-post="2" data-topic="618" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>In addition to adding SYSTEM_MODE(AUTOMATIC), I would recommend adding SYSTEM_THREAD(ENABLED) at the top of your .ino file to enable automatic connection to wifi and multi-threading on your device as well.</p>
+</blockquote>
+</aside>
+<p>Hi Alan, the problem is the other way around. I don’t want to automatically connect the wifi. I want it to be off and disabled. I don’t want to have a dependancy on a wifi hotspot for my sketch to work.</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/4</link>
+        <pubDate>Mon, 30 Apr 2018 21:54:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-4</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[itsmedavid]]></dc:creator>
+        <description><![CDATA[
+            <p>I am having the same behavior even though I activated SYSTEM_THREAD(ENABLED). It doesn’t read anything from the CANbus unless it is connected to the internet. I’m using an Electron.</p>
+<p>Is there a guide for this solution?</p>
+<p>Thanks.</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/3</link>
+        <pubDate>Mon, 30 Apr 2018 19:54:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-3</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>In addition to adding <code>SYSTEM_MODE(AUTOMATIC)</code>, I would recommend adding <code>SYSTEM_THREAD(ENABLED)</code> at the top of your <code>.ino</code> file to enable automatic connection to wifi and multi-threading on your device as well.</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/2</link>
+        <pubDate>Mon, 30 Apr 2018 16:07:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-2</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+      <item>
+        <title>Device won&#39;t work unless there is wifi connection</title>
+        <dc:creator><![CDATA[Shafa]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi there, I got myself the bluetooth version (RedBear Duo), it is upgraded to latest firmware (0.3.1). connected it to wifi, claimed it and pushed a sketch into it via the particle website. my problem is after you turn it on (in the car, connected to OBD port), the green LED keeps blinking trying to establish wifi connection. the sketch will not start working unless there is internet. the first line in setup function is WiFi.off(); but this I assume only runs after the wifi connection is established.</p>
+<p>how can I get it working when there is no internet? my code doesn’t need connection.</p>
+<p>Cheers,<br>
+Ali</p>
+          <p><a href="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618/1</link>
+        <pubDate>Mon, 30 Apr 2018 15:46:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-618-1</guid>
+        <source url="https://community.carloop.io/t/device-wont-work-unless-there-is-wifi-connection/618.rss">Device won&#39;t work unless there is wifi connection</source>
+      </item>
+  </channel>
+</rss>

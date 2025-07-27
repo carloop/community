@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+    <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262</link>
+    <description>Thanks to @elhajj33 I started doing some research on available solutions to create an Access Point on the Particle Photon.  I came across this repo with all the tools necessary to setup a webpage hosted by the Photon! https://github.com/mebrunet/softap-setup-page</description>
+    
+    <lastBuildDate>Wed, 14 Jun 2017 18:33:33 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[cyberchucktx]]></dc:creator>
+        <description><![CDATA[
+            <p>Check out this article on setting up a wifi access point for Raspberry PI – <a href="https://www.pi-point.co.uk/" rel="noopener nofollow ugc">https://www.pi-point.co.uk/</a></p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/9</link>
+        <pubDate>Wed, 14 Jun 2017 18:33:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-9</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a>, It sounds like this is possible, but I do not have my own RedBearDuo or have enough experience with it.  I would suggest using the RedBear forums and ask the same question there … I assume you would get a better answer there.  Whatever solution works is something that should work whether or not the Carloop is in use (for the purpose of finding your solution, but of course it is most useful with Carloop in your use case.)</p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/8</link>
+        <pubDate>Sat, 10 Jun 2017 15:37:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-8</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m trying to set this up was wondering if it were possible to send data through Bluetooth via the redbear duo.</p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/7</link>
+        <pubDate>Sat, 10 Jun 2017 05:48:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-7</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>awesome, let me me know how it goes <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/6</link>
+        <pubDate>Thu, 18 May 2017 14:11:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-6</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[Brinsby]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for this I am going to give this a try this weekend!</p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/5</link>
+        <pubDate>Thu, 18 May 2017 03:54:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-5</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>Great news! I created a web sockets server running in particle by porting over some Arduino code.</p>
+<p>The repo can be found here: <a href="https://github.com/elhajj33/ParticleWebSockets" class="inline-onebox" rel="noopener nofollow ugc">GitHub - elhajj33/ParticleWebSockets</a></p>
+<p>All it does at this point is allow you to open a socket to carloop and send/receive some data.  The example HTML file should help.  That said, it definitely opens a socket</p>
+<p>You’re probably asking this is fine as a particle example but is there any obd data?  The answer to that question is there isn’t any yet.  I’m working on integrating the remote obdII data code written by Zachary Crockett (t<a href="https://github.com/towynlin/carloop-obd-publisher" rel="noopener nofollow ugc">found here</a> as we speak.</p>
+<p>I made some changes to Zach’s code and while I have it all written, it’s a bit late right now to go out and see what data I get back from the car.  That and I don’t want to start debugging at this point of the night.</p>
+<p>I’ll see if it works tomorrow and will try and get the code up by the weekend</p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/4</link>
+        <pubDate>Sat, 13 May 2017 05:15:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-4</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>good news!  I used webduino and was able to create a running “hello world” web server on carloop.</p>
+<p>I’m going save that project and see if I can get websockets working.  That would be perfect because then I would be able to get odbii data in near real time.  I’ll keep you posted.  Let me know if you make any progress before me <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/3</link>
+        <pubDate>Thu, 11 May 2017 02:54:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-3</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group quote-modified" data-username="alanm" data-post="1" data-topic="262" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/alanm/48/428_2.png" class="avatar"> alanm:</div>
+<blockquote>
+<p>Thanks to <a class="mention" href="https://community.carloop.io/u/elhajj33">@elhajj33</a> I started doing some research on available solutions to create an Access Point on the Particle Photon.  I came across this repo with all the tools necessary to setup a webpage hosted by the Photon! <a href="https://github.com/mebrunet/softap-setup-page" class="inline-onebox" rel="noopener nofollow ugc">GitHub - mebrunet/softap-setup-page: Builds a softap setup page for the Particle Photon</a></p>
+</blockquote>
+</aside>
+<p>i’ll take a look at that!  I’ve download the code from this repo <a href="https://github.com/paradoxewan/NodeOBD" rel="noopener nofollow ugc">https://github.com/paradoxewan/NodeOBD</a></p>
+<p>So far though, the server doesn’t get an address or a port. I’m trying to sort it out <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/2</link>
+        <pubDate>Wed, 10 May 2017 18:51:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-2</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+      <item>
+        <title>How to create a WiFi Access Point with a webpage on Carloop</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks to <a class="mention" href="https://community.carloop.io/u/elhajj33">@elhajj33</a> I started doing some research on available solutions to create an Access Point on the Particle Photon.  I came across this repo with all the tools necessary to setup a webpage hosted by the Photon! <a href="https://github.com/mebrunet/softap-setup-page" class="inline-onebox">GitHub - mebrunet/softap-setup-page: Builds a softap setup page for the Particle Photon</a></p>
+          <p><a href="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262/1</link>
+        <pubDate>Fri, 14 Apr 2017 06:14:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-262-1</guid>
+        <source url="https://community.carloop.io/t/how-to-create-a-wifi-access-point-with-a-webpage-on-carloop/262.rss">How to create a WiFi Access Point with a webpage on Carloop</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>J1939 Protocol on Carloop</title>
+    <link>https://community.carloop.io/t/j1939-protocol-on-carloop/448</link>
+    <description>How to request VIN # via J1939
+
+Thanks 
+David</description>
+    
+    <lastBuildDate>Fri, 29 Sep 2017 03:17:12 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/j1939-protocol-on-carloop/448.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>J1939 Protocol on Carloop</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/davidsi">@davidsi</a>, I moved this to a new topic as the other thread was about CAN-Extended format, (VIN # was just an example used in that thread).</p>
+<p>Requesting the VIN # is done according to the OBDII messaging specification.<br>
+How you send &amp; receive the message can be different according to the low-level communications protocol and the hardware protocol.</p>
+<p>For that, we have to work through J1939.  J1939 is based on CAN, but is different and has some restrictions.<br>
+Let’s start with the hardware questions.</p>
+<p>Does your heavy equipment actually store its VIN # in its electronic control unit?<br>
+It is required for road vehicles, but you do not indicate if you are dealing with a road vehicle or some other heavy equipment.</p>
+<p>Does your equipment have an OBDII connector?  Does your machine operate off of 12 volts or 24 volts or something else?  If you have an OBDII connector on 12 V, then you can use the Carloop hardware.  If you have an OBDII connector on 24V, you will need to change the Carloop hardware design to use a 24 V OBDII connector and change the power supply circuitry ( an IC and a couple of resistors &amp; capacitors).  Something else might require a bit more extensive hardware design.  Let us know what your situation is.</p>
+<p>Now, on to the code.</p>
+<p>As for your firmware to program the Carloop (or your modified version of Carloop), you should start with the VIN Example here:<br>
+<a href="https://www.carloop.io/apps/app-vin-reader" class="onebox" target="_blank" rel="noopener">https://www.carloop.io/apps/app-vin-reader</a><br>
+This app reads the VIN # for a normal car using the regular CAN bus.  This might work as-is, but I doubt it.  Most likely, you will have to adjust the code so that the CAN messages follow the format for J1939.  It should not be a difficult change, to make sure the right information goes in the right place within the messages.</p>
+<p>You can read this (and the links there) for more information on J1939 to help you get started:</p><aside class="onebox wikipedia" data-onebox-src="https://en.wikipedia.org/wiki/SAE_J1939">
+  <header class="source">
+
+      <a href="https://en.wikipedia.org/wiki/SAE_J1939" target="_blank" rel="noopener">en.wikipedia.org</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://en.wikipedia.org/wiki/SAE_J1939" target="_blank" rel="noopener">SAE J1939</a></h3>
+
+<p>Society of Automotive Engineers standard SAE J1939 is the vehicle bus recommended practice used for communication and diagnostics among vehicle components. Originating in the car and heavy-duty truck industry in the United States, it is now widely used in other parts of the world.
+ SAE J1939 is used in the commercial vehicle area for connection and communication throughout the vehicle, with the physical layer defined in ISO 11898. A different physical layer is used between the tractor and trailer...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>All of the Carloop design is open-source and is available on GitHub.<br>
+There are repositories for the Hardware, the Carloop library and all the example apps.</p>
+<p>This sounds like an interesting project … let us know how you are doing and if we can answer anything more!</p>
+          <p><a href="https://community.carloop.io/t/j1939-protocol-on-carloop/448/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-protocol-on-carloop/448/2</link>
+        <pubDate>Fri, 29 Sep 2017 03:17:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-448-2</guid>
+        <source url="https://community.carloop.io/t/j1939-protocol-on-carloop/448.rss">J1939 Protocol on Carloop</source>
+      </item>
+      <item>
+        <title>J1939 Protocol on Carloop</title>
+        <dc:creator><![CDATA[davidsi]]></dc:creator>
+        <description><![CDATA[
+            <p>How to request VIN # via J1939</p>
+<p>Thanks<br>
+David</p>
+          <p><a href="https://community.carloop.io/t/j1939-protocol-on-carloop/448/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/j1939-protocol-on-carloop/448/1</link>
+        <pubDate>Wed, 27 Sep 2017 11:39:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-448-1</guid>
+        <source url="https://community.carloop.io/t/j1939-protocol-on-carloop/448.rss">J1939 Protocol on Carloop</source>
+      </item>
+  </channel>
+</rss>

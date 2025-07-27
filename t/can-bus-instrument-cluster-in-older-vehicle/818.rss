@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CAN bus instrument cluster in older vehicle</title>
+    <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818</link>
+    <description>Hello all,
+New to the Carloop community but not to mobile electronics and software development.
+
+I&#39;m working on a project where I&#39;m upgrading the interior of my 2003 Ford Excursion with the dash and other interior panels from a 2008-2010 F250. A large majority of the components are just simple wiring diagrams and splicing into the newer harnesses.
+
+The gauge cluster and A/C controls are a different animal though. They are CAN bus devices and as of right now have been widely accepted as incompatible for people doing these swaps.
+
+My plan/goal is to emulate a CAN signal for the gauge cluster and send the proper commands to move the needles. I can retrieve the values I need over the ODB2 port in the vehicle right now.
+
+I know this isn&#39;t a small undertaking but I&#39;m pretty determined to figure out how to make it happen. Any tips or suggestions would be greatly appreciated.</description>
+    
+    <lastBuildDate>Mon, 28 Oct 2019 18:28:35 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[Killerb18car]]></dc:creator>
+        <description><![CDATA[
+            <p>Chris it has been done by zach he has converted a 6.7 cluster to work on a 7.3 truck and he will not share it he will do it for 1000 and your cluster</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/11</link>
+        <pubDate>Mon, 28 Oct 2019 18:28:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-11</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[Killerb18car]]></dc:creator>
+        <description><![CDATA[
+            <p>Chris have you changed your cluster yet ?</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/10</link>
+        <pubDate>Sun, 27 Oct 2019 23:34:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-10</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[skilescm]]></dc:creator>
+        <description><![CDATA[
+            <p>definitely been reading up on open garages!</p>
+<p>I have ordered a carloop and can2usb tool to try and sniff all the traffic.</p>
+<p>I also found some youtube videos of people doing something close to what I’m trying to do.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/9</link>
+        <pubDate>Sat, 09 Feb 2019 02:25:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-9</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>One more suggestion.  Take a look at the Car Hackers Handbook:<br>
+<a href="http://opengarages.org/handbook/" class="onebox" target="_blank" rel="noopener">http://opengarages.org/handbook/</a></p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/8</link>
+        <pubDate>Fri, 08 Feb 2019 04:27:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-8</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>The presence of pins 2 &amp; 10 would probably take priority and imply J1850 is the OBD2 interface.<br>
+The presence of pins 6 &amp; 14 would imply there is a second or third interface specific to the vehicle, which could be CANBUS (ISO 15765) or something proprietary.</p>
+<p>Some OBD2 scan tools will indicate on the screen which protocol is being attempted in the connection phase.<br>
+There is a specific order these tools follow in attempting the different protocols.<br>
+Once a connection is made, the tools generally do not look for any further standard protocols.<br>
+The last protocol attempted when a connection is established will be the main OBD2 protocol.<br>
+Generally these tools will not recognize proprietary protocols, unless the tool is specific to the vehicle manufacturer or model.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/7</link>
+        <pubDate>Fri, 08 Feb 2019 04:26:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-7</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[skilescm]]></dc:creator>
+        <description><![CDATA[
+            <p>So my OBD port has the following pins.</p>
+<p>X - 2 - 3 - 4 - 5 - 6 - 7 - X<br>
+X - 10 - X - X - 13 - 14 - X - 16</p>
+<p>Does the presence of 6 and 14 automatically imply ISO 15765-4?</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/6</link>
+        <pubDate>Thu, 07 Feb 2019 06:44:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-6</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>I did some google searches and came up with this:</p>
+<p>Most likely your 2003 Excursion uses the J1850 protocol on the OBD2 connector.<br>
+Look on the connector for connections on pins 2 &amp; 10.<br>
+The high voltage on those pins would be 5V.<br>
+Also, you should see signals at 41.6 kbd.</p>
+<p>I am sure you are going to want to do a custom PCB, since you will be dealing with 2 different protocols at the same time. I doubt you are going to find the hardware or firmware available to purchase.<br>
+For the CANBUS side of things, you can find the Carloop design on Github.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/5</link>
+        <pubDate>Thu, 07 Feb 2019 05:33:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-5</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[skilescm]]></dc:creator>
+        <description><![CDATA[
+            <p>I have all of the donor components as well as the vehicle they will be going into. I also have a an ECU, BCM, and cluster from the donor vehicle. A friend of mine has a 08-10 F250 and is willing to let me do data captures on it if needed.</p>
+<p>My project is lucky enough to not have resource restrictions, just trying to get the strategy together so I can determine if this is possible or if it more ideal to make a PCB that is compatible with my 2003 that connects to the newer cluster.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/4</link>
+        <pubDate>Thu, 07 Feb 2019 03:55:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-4</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Just to follow-up, You probably need to design a microcontroller control unit to translate messages between the two protocols in both directions.  At a high level, it sounds doable.</p>
+<p>The details is where it gets complicated.  For example, I have been working on K-line for Particle/Carloop for about a year.  Hardware design was about a month.  The rest was family time, saving up and buying an oscilloscope, finding a parts car to take the ECU for testing and reverse engineering along with lots of google-foo searching for info.  Still going…</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/3</link>
+        <pubDate>Wed, 06 Feb 2019 23:12:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-3</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Chris,</p>
+<p>That sounds like a major project.</p>
+<p>First, I am surprised that parts from the F250 would fit.  My assumption would be to use a F150 instead.<br>
+I used to have a 2008 F250 diesel.  I think the OBD2 port used CANBUS.  However, as far as I remember the instrument panel is hooked directly to the control unit under the dash.  Can you confirm that the instruments are in fact CANBUS and not some proprietary protocol?   Making absolutely sure will help scope out your project.</p>
+<p>I have the same question for the 2003 Excusion.  Can you confirm both the instrument panel AND the OBD2 protocol?  You might have a couple of choices here.</p>
+<p>For example, I have a 2004 Subaru Impreza that uses ISO9141 (K-line at the hardware level) on the OBD2 port but a proprietary protocol for the instrument panel.  I also have a 2010 Forester with CANBUS on the OBD2 port and again proprietary for the instrument panel.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/2</link>
+        <pubDate>Wed, 06 Feb 2019 23:02:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-2</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+      <item>
+        <title>CAN bus instrument cluster in older vehicle</title>
+        <dc:creator><![CDATA[skilescm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello all,<br>
+New to the Carloop community but not to mobile electronics and software development.</p>
+<p>I’m working on a project where I’m upgrading the interior of my 2003 Ford Excursion with the dash and other interior panels from a 2008-2010 F250. A large majority of the components are just simple wiring diagrams and splicing into the newer harnesses.</p>
+<p>The gauge cluster and A/C controls are a different animal though. They are CAN bus devices and as of right now have been widely accepted as incompatible for people doing these swaps.</p>
+<p>My plan/goal is to emulate a CAN signal for the gauge cluster and send the proper commands to move the needles. I can retrieve the values I need over the ODB2 port in the vehicle right now.</p>
+<p>I know this isn’t a small undertaking but I’m pretty determined to figure out how to make it happen. Any tips or suggestions would be greatly appreciated.</p>
+          <p><a href="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818/1</link>
+        <pubDate>Wed, 06 Feb 2019 19:18:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-818-1</guid>
+        <source url="https://community.carloop.io/t/can-bus-instrument-cluster-in-older-vehicle/818.rss">CAN bus instrument cluster in older vehicle</source>
+      </item>
+  </channel>
+</rss>

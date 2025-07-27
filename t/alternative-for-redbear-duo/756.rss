@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Alternative for Redbear Duo</title>
+    <link>https://community.carloop.io/t/alternative-for-redbear-duo/756</link>
+    <description>Now that Particle has acquired Redbear and has announced EOL for the Redbear products with the Duo to be available through Q1-19 (although it is current out of stock with no anticipated ship date).  I am wondering what you would suggest as an alternative to the Duo that provides BLE capability.</description>
+    
+    <lastBuildDate>Thu, 28 Feb 2019 19:15:35 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>If anyone is interested the default baud rate for the HM-10 module is 9600 (not 115200).  Using “Serial1.begin(9600);” wprks a lot better with a new out of the box HM-10.  Once you’ve established communications you can use the command “AT+BAUD4” to set the HM to 115200.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/20</link>
+        <pubDate>Thu, 28 Feb 2019 19:15:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-20</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>A post was split to a new topic: <a href="https://community.carloop.io/t/carloop-for-particle-gen3-devices/825">Carloop for Particle Gen3 devices</a></p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/19</link>
+        <pubDate>Thu, 21 Feb 2019 02:13:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-19</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>gubb45, Many thanks, this will help a lot…</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/18</link>
+        <pubDate>Tue, 19 Feb 2019 01:31:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-18</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <pre><code class="lang-auto">void setup()
+{
+  Serial.begin(115200);
+  Serial1.begin(115200);
+
+}
+
+void loop()
+{
+  // read from port 0, send to port 1:
+  if (Serial.available())
+  {
+    int inByte = Serial.read();
+    Serial1.write(inByte);
+   
+    if (inByte == 10){
+        testPrinter();
+    }
+ Serial1.write("\n");
+  }
+  // read from port 1, send to port 0:
+  if (Serial1.available())
+  {
+    int inByte = Serial1.read();
+    Serial.write(inByte);
+    Serial.write("\n");
+    if (inByte == 10){
+        testPrinter2();
+    }
+  }
+}
+
+void testPrinter(){
+    Serial.println("Worknig Test");
+}
+
+void testPrinter2(){
+    Serial1.println("2nd Worknig Test");
+}</code></pre>
+<p>use this as a basic test, but just wire up the bluetooth to serial1 on the photon and that’s about it really. theres an app on GitHub and the App Store that connects to it fine they even give you a sample app to use.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/17</link>
+        <pubDate>Mon, 18 Feb 2019 19:47:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-17</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <code>
+void setup()
+{
+  Serial.begin(115200);
+  Serial1.begin(9600);
+<p>}</p>
+</code><p><code>void loop()<br>
+{<br>
+// read from port 0, send to port 1:<br>
+if (Serial.available())<br>
+{<br>
+int inByte = Serial.read();<br>
+Serial1.write(inByte);<br>
+Serial1.write(“\n”);<br>
+}<br>
+// read from port 1, send to port 0:<br>
+if (Serial1.available())<br>
+{<br>
+int inByte = Serial1.read();<br>
+Serial.write(inByte);<br>
+Serial.write(“\n”);<br>
+}<br>
+}<br>
+</code></p>
+<p>use this as a basic test, but just wire up the bluetooth to serial1 on the photon and that about it really.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/16</link>
+        <pubDate>Mon, 18 Feb 2019 19:46:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-16</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>dubb45,</p>
+<p>Any chance you’d be willing to post an example of your Photon code for the HM-10?  Did you happen to find an iOS APP that will communicates well with the HM-10?</p>
+<p>Thanks in advance for any help you can provide.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/15</link>
+        <pubDate>Mon, 18 Feb 2019 02:00:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-15</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a> in addition we have a new version of Carloop that will support Particle’s GEN3 hardware (Argon, Boron, Xenon).  However Particle’s new hardware is still very much under development so we are waiting for that hardware platform to be more stable.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/14</link>
+        <pubDate>Thu, 03 Jan 2019 18:19:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-14</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a> we are making more Carloop Bluetooth kits this year with Redbear Duo.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/13</link>
+        <pubDate>Thu, 03 Jan 2019 18:18:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-13</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a>,</p>
+<p>The RedbearDuo is partially supported by the Particle toolset.  However, the full toolset for the Duo is available on the Github for Redbear.  The RedbearDuo toolset and the system firmware (aka DeviceOS) will not be updated, but any existing Duos will continue to function.  I expect the toolset will continue to function as it is.  They will just be stuck running an older version.</p>
+<p>The heart of the RedbearDuo is a Particle P1 module, the same module that is the heart of the Photon.  The STM32F microprocessor mentioned earlier is in the P1 module.  As a result, some of the Particle toolset will function for the RedbearDuo.</p>
+<p>I am using the RedbearDuo for my personal projects, and I have continued to purchase them after the official notice that they will no longer be supported.  I would not continue for a commercial product, however.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/12</link>
+        <pubDate>Mon, 24 Dec 2018 05:27:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-12</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>No actually they both work fine I’ve just been using the hc05 on my android tablet lately and the hm10 has support for iOS. I’ll eventually move twoards that when I start developing my app for iOS.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/11</link>
+        <pubDate>Mon, 24 Dec 2018 03:05:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-11</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>dubb45</p>
+<p>Thanks for your post.  I notice that initially you suggested the HM-10 instead of the HC-05.  I’m leaning toward the 10 since it is BLE compatible and the 05 isn’t.  Did you encounter any issue with the 10 that caused you to switch to the 05?</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/10</link>
+        <pubDate>Mon, 24 Dec 2018 02:35:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-10</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>I realize from a post under a different topic that the Nordic processors don’t support CANbus.  My original question to Particle Support was if they planned to integrate the Duo into the Particle tools (e.g. Particle CLI) or their documentation not what they would suggest as alternatives.  It is obvious from Dave’s response that they are not going to integrate the Duo but rather they clearly plan to kill it off.  Just thought I post the information for everyone to see.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/9</link>
+        <pubDate>Mon, 24 Dec 2018 02:24:11 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-9</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Alternatively you can add an “hc05” to the carloop using some jumper wires. Tired it and it works, just need to come up with a solution to make it more compact or maybe develop a “hat” type thing that will sit ontop of the carloop.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/8</link>
+        <pubDate>Sun, 23 Dec 2018 23:09:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-8</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a>,</p>
+<p>There is no use in trying the Argon with the existing Carloop.<br>
+The Photon, Electron and Redbear Duo all use the STM32F series microprocessors which include hardware support for CANbus.  The Nordic nRF52 microprocessors used in the new 3rd generation from Particle do not have hardware support for CANbus.</p>
+<p>For the Argon, Boron or Xenon, different external hardware would be needed along with a much more complex firmware library.  There are no announcements from either Particle or Carloop regarding plans for CANbus on the new Particle Mesh hardware.</p>
+<p>Without CANbus support, the BLE is kind of a secondary issue…</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/7</link>
+        <pubDate>Sun, 23 Dec 2018 05:45:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-7</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>Since Tech Support Engineers often know and admit more about product directions I pinged Particle support and I received the following response:</p>
+<p>Dave - Tech Support (Particle )<br>
+Dec 21, 14:40 PST<br>
+The Redbear products are all being retired as per the details on the RedBear home page. W.r.t. the Duo, the closest equivalent is the new Argon. However, at the moment there is no BLE API; the Bluetooth radio is used only for device configuration and activation. Developing that API is a very high priority for our engineering team, but all I can say at this point is that it’s a Q1 deliverable. I’m hoping it will be nearer the beginning of Q1 than the end ;^) , but I cannot predict exactly when it will be made available.<br>
+Happy holidays,<br>
+Dave @ Particle</p>
+<p>This certainly doesn’t bode well for the Duo.  Has anyone tried the Argon with Carloop?</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/6</link>
+        <pubDate>Sat, 22 Dec 2018 00:50:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-6</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/skip">@Skip</a>,</p>
+<p>Thanks for providing that link; I had read the original message announcing that Redbear would be working with Particle; I do not remember the second part.  My google-foo included Particle when I searched, so it did not pick up on that.</p>
+<p>How to interpret it?  That announcement on support came from Redbear Labs.  However, Particle is the current ‘owner’ of the Duo.  I would be looking to Particle for the future of the Duo.  Given that Particle is still working on new tools to support the Duo, I would be <strong>hopeful</strong> that means Particle will be continuing to support the Duo as a product.  However, we are waiting for a clear indication from Particle…</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/5</link>
+        <pubDate>Wed, 07 Nov 2018 06:10:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-5</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>I was playing with a HM-10 Bluetooth chip and got it to work with the carloop and photon easily just made sure my connections were correct. Then had to change my “Serial.print” to “Serial1.print” and it’s been working for me. I’ve made a windows desktop app with VB, and working on an iOS version with Xcode and swift.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/4</link>
+        <pubDate>Wed, 07 Nov 2018 02:25:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-4</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>My information came directly from the Redbear home page (<a href="https://redbear.cc/" rel="noopener nofollow ugc">https://redbear.cc/</a>).</p>
+<blockquote>
+<p>Products availability and support<br>
+RedBear Team will continue to provide technical support through our support forum on <a href="http://discuss.redbear.cc" rel="noopener nofollow ugc">http://discuss.redbear.cc</a>.</p>
+</blockquote>
+<blockquote>
+<pre><code>RedBear Duo will continue to be available through Q1 2019.
+    All development of additional features/libraries are stopped with the exception of using Particle WebIDE.
+    Developing with Particle WebIDE will be supported through Q3 2019.
+    Technical support for other development methods will be provided till end of September 2018.
+</code></pre>
+</blockquote>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/3</link>
+        <pubDate>Tue, 06 Nov 2018 23:52:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-3</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>You have me confused !!!  So I went and searched for an end of life announcement and could not find it…</p>
+<p>The RedbearDuo is out of stock at Particle.  That is because Particle is at full capacity shipping out the new ParticleMesh product line.  The announcement on the Particle store indicates that RedbearDuo should be back in stock by the end of October.  Mesh was a little bit late, so it would not surprise me that the Duo is also late.  I am a bit disappointed that the re-stocking is late.</p>
+<p>However, various Particle distributors still have stock.  I am still finding them available somewhat locally to where I am.</p>
+<p>The latest news on the RedbearDuo from the Particle General Manager is here:</p><aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10" target="_blank" rel="noopener" title="07:51PM - 01 November 2018">Particle – 1 Nov 18</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/redbear-duo-v0-3-2-not-in-particle-ide/41339/10" target="_blank" rel="noopener">Redbear Duo v0.3.2 not in Particle IDE</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hey there folks – following back up here. The work was prepped earlier this year but didn’t make it up to the Web IDE as a result of the development activity around Mesh.  We now have a plan to get the work pushed to our production environment...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/2</link>
+        <pubDate>Tue, 06 Nov 2018 19:46:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-2</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+      <item>
+        <title>Alternative for Redbear Duo</title>
+        <dc:creator><![CDATA[Skip]]></dc:creator>
+        <description><![CDATA[
+            <p>Now that Particle has acquired Redbear and has announced EOL for the Redbear products with the Duo to be available through Q1-19 (although it is current out of stock with no anticipated ship date).  I am wondering what you would suggest as an alternative to the Duo that provides BLE capability.</p>
+          <p><a href="https://community.carloop.io/t/alternative-for-redbear-duo/756/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/alternative-for-redbear-duo/756/1</link>
+        <pubDate>Tue, 06 Nov 2018 19:21:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-756-1</guid>
+        <source url="https://community.carloop.io/t/alternative-for-redbear-duo/756.rss">Alternative for Redbear Duo</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can you run a node server on particle?</title>
+    <link>https://community.carloop.io/t/can-you-run-a-node-server-on-particle/289</link>
+    <description>hey all,
+
+i&#39;m trying to use carloop as an ODBII reader to monitor a vehicle being towed with its engine running.  I&#39;ll skip the details on this, but trust me when I say there are very good reasons for this.
+
+Some of the areas I tow the vehicle do not have cell service so none of the data coming from carhop can go through the cloud.
+
+I&#39;m trying to setup a local web server i can stream data from particle over my own local network. 
+
+Would love a pointer in the right direction.  I saw this thread: https://carloop.dyndns.org/t/turn-your-carloop-into-a-remote-obd-ii-reader/93
+
+But i&#39;m not sure how to upload .html and .js files using the particle IDE</description>
+    
+    <lastBuildDate>Tue, 09 May 2017 21:58:36 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/can-you-run-a-node-server-on-particle/289.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can you run a node server on particle?</title>
+        <dc:creator><![CDATA[elhajj33]]></dc:creator>
+        <description><![CDATA[
+            <p>hey all,</p>
+<p>i’m trying to use carloop as an ODBII reader to monitor a vehicle being towed with its engine running.  I’ll skip the details on this, but trust me when I say there are very good reasons for this.</p>
+<p>Some of the areas I tow the vehicle do not have cell service so none of the data coming from carhop can go through the cloud.</p>
+<p>I’m trying to setup a local web server i can stream data from particle over my own local network.</p>
+<p>Would love a pointer in the right direction.  I saw this thread: <a href="https://carloop.dyndns.org/t/turn-your-carloop-into-a-remote-obd-ii-reader/93" class="inline-onebox">Turn your Carloop into a remote OBD-II reader - Project Share - Carloop Community</a></p>
+<p>But i’m not sure how to upload .html and .js files using the particle IDE</p>
+          <p><a href="https://community.carloop.io/t/can-you-run-a-node-server-on-particle/289/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-you-run-a-node-server-on-particle/289/1</link>
+        <pubDate>Tue, 09 May 2017 21:58:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-289-1</guid>
+        <source url="https://community.carloop.io/t/can-you-run-a-node-server-on-particle/289.rss">Can you run a node server on particle?</source>
+      </item>
+  </channel>
+</rss>

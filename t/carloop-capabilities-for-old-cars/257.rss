@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CarLoop Capabilities for old cars?</title>
+    <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257</link>
+    <description>I was looking into getting the carloop basic but was wondering what some cool and general capabilities it has for old cars and by old I mean around 2003, I have a Acura TL-S 2003 so I want to know what I can do with it? I liked the custom gauge cluster a lot is that possible if I were to buy a different gauge cluster? And the general capabilities</description>
+    
+    <lastBuildDate>Thu, 04 May 2017 03:12:53 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[klgann]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you all for the help! Now I can’t wait for Massdrop to deliver!<br>
+-Kelly</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/11</link>
+        <pubDate>Thu, 04 May 2017 03:12:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-11</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>There are some ISO-9141 interfaces available but none I’m aware have the connectivity features of carloop.</p>
+<p>Hondata is a popular aftermarket reflashing/datalogging tool for Acuras and Hondas but is used for engine tuning, not interior electronics. For the older OBD1 Hondas there is an ECU mod called Chrome. Both interface through a USB/serial connection.</p>
+<p>Openport 2.0 is a popular, open source tool for flashing/datalogging in the Subaru community and a few others. Again, it’s main use is for engine tuning and remapping. It’s a very powerful interface capable of several protocols such as 9141(K-Line) and CAN. It communicates to a PC through USB and would require custom coding for unique applications.</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/10</link>
+        <pubDate>Thu, 04 May 2017 01:27:56 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-10</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>From a quick google search it looks like the the S1/S2 Rx-8 instrument cluster and interior are CAN bus. There are a few threads on the rx8club forums. There’s also a community project called rxduino. Perhaps you could find some of the specific identifiers there. Hopefully that helps!</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/9</link>
+        <pubDate>Thu, 04 May 2017 01:07:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-9</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>If you look up a 2004 Mazda RX-8 in various guides, the answer is maybe…<br>
+See<br>
+<a href="http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf" class="onebox" target="_blank" rel="noopener">http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf</a></p>
+<p>60% of Mazdas in that year were CAN.<br>
+40% were still ISO 9141-2.</p>
+<p>So, the only way to know for sure is to try it, such as asking someone with a scan tool to scan your car and see what protocol it connects with …</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/8</link>
+        <pubDate>Mon, 01 May 2017 02:44:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-8</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[klgann]]></dc:creator>
+        <description><![CDATA[
+            <p>Can CarLoop communicate with a 2004 Mazda RX-8 please?</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/7</link>
+        <pubDate>Tue, 25 Apr 2017 23:30:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-7</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alexanderbowen">@alexanderbowen</a> Carloop <em>only</em>  communicates via the CAN bus on pins 6 and 14 of the OBD-II port.  Your car has a different physical layer on the OBD-II port and it won’t be able to communicate.  Hope this clarifies things.</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/6</link>
+        <pubDate>Thu, 20 Apr 2017 21:43:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-6</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[alexanderbowen]]></dc:creator>
+        <description><![CDATA[
+            <p>Oh I see so does that make the carloop unusable since it can’t communicate with the CAN bus or what other options do I have?</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/5</link>
+        <pubDate>Thu, 20 Apr 2017 20:23:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-5</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p>Stay tuned, but be patient.  I am working on a design for carloopRetro, which I hope will successfully implement K-Line…  see the other threads on here.</p>
+<p><a class="mention" href="https://community.carloop.io/u/alexanderbowen">@alexanderbowen</a>, I think SinusoidDelta was referring to model of car (your Acura) that uses ISO9141-2.  (Just like my 2003 Impreza uses ISO9141-2)</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/4</link>
+        <pubDate>Thu, 13 Apr 2017 05:22:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-4</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[alexanderbowen]]></dc:creator>
+        <description><![CDATA[
+            <p>Oh okay. So what are this models capabilities versus the capabilities of the one that can communicate through CAN?</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/3</link>
+        <pubDate>Mon, 10 Apr 2017 23:48:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-3</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[SinusoidDelta]]></dc:creator>
+        <description><![CDATA[
+            <p>That model uses K-line ISO9141-2, it lacks the ability for CAN communication.</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/2</link>
+        <pubDate>Mon, 10 Apr 2017 22:54:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-2</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+      <item>
+        <title>CarLoop Capabilities for old cars?</title>
+        <dc:creator><![CDATA[alexanderbowen]]></dc:creator>
+        <description><![CDATA[
+            <p>I was looking into getting the carloop basic but was wondering what some cool and general capabilities it has for old cars and by old I mean around 2003, I have a Acura TL-S 2003 so I want to know what I can do with it? I liked the custom gauge cluster a lot is that possible if I were to buy a different gauge cluster? And the general capabilities</p>
+          <p><a href="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-capabilities-for-old-cars/257/1</link>
+        <pubDate>Mon, 10 Apr 2017 17:08:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-257-1</guid>
+        <source url="https://community.carloop.io/t/carloop-capabilities-for-old-cars/257.rss">CarLoop Capabilities for old cars?</source>
+      </item>
+  </channel>
+</rss>

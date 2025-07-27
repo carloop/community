@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Getting Started with OBD-II</title>
+    <link>https://community.carloop.io/t/getting-started-with-obd-ii/15</link>
+    <description>This is a great guide by SparkFun on how to get started with OBD-II: https://learn.sparkfun.com/tutorials/getting-started-with-obd-ii</description>
+    
+    <lastBuildDate>Mon, 28 Mar 2016 22:05:08 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/getting-started-with-obd-ii/15.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Getting Started with OBD-II</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>The most important aspect of OBD for making apps for your car is being able to read PIDs (Parameter IDs, or variables) from your car. Here’s a list of these PID signals <a href="https://carloop.dyndns.org/t/list-of-performance-information-data-pids-indicators/20" class="inline-onebox">List of Performance Information Data (PIDs) indicators - Carloop Community</a></p>
+          <p><a href="https://community.carloop.io/t/getting-started-with-obd-ii/15/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-obd-ii/15/2</link>
+        <pubDate>Mon, 28 Mar 2016 22:05:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-15-2</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-obd-ii/15.rss">Getting Started with OBD-II</source>
+      </item>
+      <item>
+        <title>Getting Started with OBD-II</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>This is a great guide by SparkFun on how to get started with OBD-II: <a href="https://learn.sparkfun.com/tutorials/getting-started-with-obd-ii">https://learn.sparkfun.com/tutorials/getting-started-with-obd-ii</a></p>
+          <p><a href="https://community.carloop.io/t/getting-started-with-obd-ii/15/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/getting-started-with-obd-ii/15/1</link>
+        <pubDate>Thu, 18 Feb 2016 03:37:54 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-15-1</guid>
+        <source url="https://community.carloop.io/t/getting-started-with-obd-ii/15.rss">Getting Started with OBD-II</source>
+      </item>
+  </channel>
+</rss>

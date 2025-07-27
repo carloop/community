@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Conversion of CANBus code</title>
+    <link>https://community.carloop.io/t/conversion-of-canbus-code/138</link>
+    <description>How would one convert CAN BUS messages such as this:
+IDH: 07, IDL: 50, Len: 08, Data: 40 05 30 11 00 80 00 00
+into hex digits such as those used in the simple transmit code?
+
+message.id = 0x123;
+message.len = 8;
+
+    message.data[0] = 10;
+    message.data[1] = 20;
+    message.data[2] = 30;
+    message.data[3] = 40;
+
+    message.data[4] = (uint8_t)(now &gt;&gt; 24);
+    message.data[5] = (uint8_t)(now &gt;&gt; 16);
+    message.data[6] = (uint8_t)(now &gt;&gt; 8);
+    message.data[7] = (uint8_t)(now);</description>
+    
+    <lastBuildDate>Wed, 05 Oct 2016 01:20:55 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/conversion-of-canbus-code/138.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Conversion of CANBus code</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>It would be:</p>
+<pre><code class="lang-auto">message.id = 0x750;
+message.len = 8;
+
+message.data[0] = 0x40;
+message.data[1] = 0x05;
+message.data[2] = 0x30;
+message.data[3] = 0x11;
+message.data[4] = 0x00;
+message.data[5] = 0x80;
+message.data[6] = 0x00;
+message.data[7] = 0x00;
+</code></pre>
+<p>In C, <code>0x</code> means a hexadecimal number. CAN message IDs and data is most often displayed in hex.</p>
+          <p><a href="https://community.carloop.io/t/conversion-of-canbus-code/138/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/conversion-of-canbus-code/138/2</link>
+        <pubDate>Wed, 05 Oct 2016 01:20:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-138-2</guid>
+        <source url="https://community.carloop.io/t/conversion-of-canbus-code/138.rss">Conversion of CANBus code</source>
+      </item>
+      <item>
+        <title>Conversion of CANBus code</title>
+        <dc:creator><![CDATA[Kronos]]></dc:creator>
+        <description><![CDATA[
+            <p>How would one convert CAN BUS messages such as this:<br>
+IDH: 07, IDL: 50, Len: 08, Data: 40 05 30 11 00 80 00 00<br>
+into hex digits such as those used in the simple transmit code?</p>
+<p>message.id = 0x123;<br>
+message.len = 8;</p>
+<pre><code>message.data[0] = 10;
+message.data[1] = 20;
+message.data[2] = 30;
+message.data[3] = 40;
+
+message.data[4] = (uint8_t)(now &gt;&gt; 24);
+message.data[5] = (uint8_t)(now &gt;&gt; 16);
+message.data[6] = (uint8_t)(now &gt;&gt; 8);
+message.data[7] = (uint8_t)(now);
+</code></pre>
+          <p><a href="https://community.carloop.io/t/conversion-of-canbus-code/138/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/conversion-of-canbus-code/138/1</link>
+        <pubDate>Tue, 04 Oct 2016 14:50:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-138-1</guid>
+        <source url="https://community.carloop.io/t/conversion-of-canbus-code/138.rss">Conversion of CANBus code</source>
+      </item>
+  </channel>
+</rss>

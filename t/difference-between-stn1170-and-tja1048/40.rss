@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Difference between STN1170 and TJA1048</title>
+    <link>https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40</link>
+    <description>Hi,
+
+Is it possible to use STN1170 instead of TJA? STN will offer support for SW and MS CAN as well not just for High Speed...
+
+Thanks,
+Vali</description>
+    
+    <lastBuildDate>Mon, 09 May 2016 14:51:18 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Difference between STN1170 and TJA1048</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Bluz doesn’t support CAN so you would need an STN1170.</p>
+          <p><a href="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/4</link>
+        <pubDate>Mon, 09 May 2016 14:51:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-40-4</guid>
+        <source url="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40.rss">Difference between STN1170 and TJA1048</source>
+      </item>
+      <item>
+        <title>Difference between STN1170 and TJA1048</title>
+        <dc:creator><![CDATA[ValiVirdol]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>Thanks, it does make sense :).</p>
+<p>I’ve already built a prototype on STN1170 and was thinking if i can use the Photon for OTA upgrades mainly.</p>
+<p>By the way if i switch the microcontroller with bluz.dk (<a href="http://bluz.io/" rel="noopener nofollow ugc">http://bluz.io/</a>) what other changes should i do to candlestick?</p>
+<p>Thanks,<br>
+Vali</p>
+          <p><a href="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/3</link>
+        <pubDate>Mon, 09 May 2016 14:39:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-40-3</guid>
+        <source url="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40.rss">Difference between STN1170 and TJA1048</source>
+      </item>
+      <item>
+        <title>Difference between STN1170 and TJA1048</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Those 2 chips play a different role.</p>
+<p>The STN1170 is a CAN protocol decoder that takes logic level voltages and decodes CAN messages.</p>
+<p>The TJA1048 is a CAN transceiver to convert voltages on the wire to logic level voltages.</p>
+<p>In the Carloop, the microcontroller is the CAN protocol decoder. There’s no need for the STN1170.</p>
+<p>If you wanted to support SW and MS CAN, you would need to make a new board with additional transceivers to convert to the voltage levels expected by these pins.</p>
+<p>Let me know if that makes sense.</p>
+          <p><a href="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/2</link>
+        <pubDate>Mon, 09 May 2016 14:01:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-40-2</guid>
+        <source url="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40.rss">Difference between STN1170 and TJA1048</source>
+      </item>
+      <item>
+        <title>Difference between STN1170 and TJA1048</title>
+        <dc:creator><![CDATA[ValiVirdol]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>Is it possible to use STN1170 instead of TJA? STN will offer support for SW and MS CAN as well not just for High Speed…</p>
+<p>Thanks,<br>
+Vali</p>
+          <p><a href="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40/1</link>
+        <pubDate>Mon, 09 May 2016 10:34:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-40-1</guid>
+        <source url="https://community.carloop.io/t/difference-between-stn1170-and-tja1048/40.rss">Difference between STN1170 and TJA1048</source>
+      </item>
+  </channel>
+</rss>

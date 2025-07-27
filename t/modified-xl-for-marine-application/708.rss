@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Modified XL for marine application</title>
+    <link>https://community.carloop.io/t/modified-xl-for-marine-application/708</link>
+    <description>Greetings Carloop-ers
+
+First a round of hearty applause for your efforts.  Well done.
+
+Hoping to have your guidance re: a Carloop evolution for a marine application.
+
+The XL would be the base platform. Power supply, Electron, CANBus transceiver are needed.  The ODB connector is not needed (replaced with a direct wired connection or NMEA 2000 connector).  The GPS and SD card are interesting options. 
+
+Desired XL extensions.  A breakout area to which battery monitoring (12 v system) etc circuitry could be added.  Maybe considering swap to the Boron when it is available for usage over NB-IoT networks.  
+
+Wondering if anyone here might be interested to collaborate on what I just described?
+
+Cheers</description>
+    
+    <lastBuildDate>Wed, 17 Oct 2018 04:50:31 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Modified XL for marine application</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/woobagooba">@WoobaGooba</a>,</p>
+<p>The XL kit has not been manufactured and sold on the Carloop website.</p>
+<p>I do not know of anyone who has built up the XL.</p>
+<p>Looking at GitHub, the main differences are in the power regulation, circuit protection and GPS connection.  The CANbus circuitry is the same as the v2.3.</p>
+<p>We are probably not going to get a response from the original developers at the moment.  At least one has a day job at Particle, and we all know Particle is introducing the new Particle Mesh generation this month…</p>
+          <p><a href="https://community.carloop.io/t/modified-xl-for-marine-application/708/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modified-xl-for-marine-application/708/5</link>
+        <pubDate>Wed, 17 Oct 2018 04:50:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-708-5</guid>
+        <source url="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss">Modified XL for marine application</source>
+      </item>
+      <item>
+        <title>Modified XL for marine application</title>
+        <dc:creator><![CDATA[WoobaGooba]]></dc:creator>
+        <description><![CDATA[
+            <p>It would be helpful to hear from anyone experienced with a build of the XL (directly from the information posted to Github).   Who was used for PCB fabrication, build issues, errors corrected, etc.  Availability of the XL kit partially or fully assembled?  Hope to same some time … thanks.</p>
+          <p><a href="https://community.carloop.io/t/modified-xl-for-marine-application/708/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modified-xl-for-marine-application/708/4</link>
+        <pubDate>Tue, 21 Aug 2018 17:41:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-708-4</guid>
+        <source url="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss">Modified XL for marine application</source>
+      </item>
+      <item>
+        <title>Modified XL for marine application</title>
+        <dc:creator><![CDATA[WoobaGooba]]></dc:creator>
+        <description><![CDATA[
+            <p>Vast majority of NMEA 2000 is installed on 12v systems.  GPS can of course be delivered via N2K bus, along with whatever other N2K kit is installed on the vessel.</p>
+<p>You assume much of my electonic fabrication chops ;). Rather purchase a Carloop w/o OBD2 connector than risk damaging it while removing the connector.  And fabricating an XL variant is a stretch for me.</p>
+<p>Electron prototype exists for multi battery monitoring, pump status, etc.  Just looking for a cleaner prototyping platform powered from a 12v system.</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/modified-xl-for-marine-application/708/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modified-xl-for-marine-application/708/3</link>
+        <pubDate>Sun, 19 Aug 2018 21:38:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-708-3</guid>
+        <source url="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss">Modified XL for marine application</source>
+      </item>
+      <item>
+        <title>Modified XL for marine application</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/woobagooba">@WoobaGooba</a>,</p>
+<p>In general, the project you are outlining is quite simple.  You can probably do it all yourself, with no collaboration needed.</p>
+<p>One question though:  I thought NMEA2000 was for industrial equipment designed for 24V equipment?  I would double-check on that, since 24V would be enough to damage a Carloop, which is protected up to only 17V (ie. meant for 12V cars).  If there is an issue, all you have to do is re-design the power regulator and the protection circuitry; not overly difficult to do.</p>
+<p>You have a few options to achieve what you want.  The simplest option is to buy a Carloop, de-solder the OBD2 connector and add your own connection.  A slightly more complicated option is to use the hardware design available on GitHub and build your own, minus the connector.  A third option is to modify the hardware design (again, available on GitHub) to include your options (such as a battery charge controller) and build it yourself.</p>
+<p>For GPS, I would suggest NOT using an option from Carloop.  Instead, use a proper marine GPS that has a serial interface.  (The Carloop GPS also uses a serial interface.) You will get a much better GPS signal this way.  The Carloop can get the GPS data over a serial connection, and you can use the information as you wish.</p>
+<p>What do you want for battery monitoring?  If you want only a simple voltage display, the Carloop hardware already has that.  If you want battery charge status or to interface with a charge controller, then you would need to design this part yourself.</p>
+          <p><a href="https://community.carloop.io/t/modified-xl-for-marine-application/708/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modified-xl-for-marine-application/708/2</link>
+        <pubDate>Sun, 19 Aug 2018 18:47:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-708-2</guid>
+        <source url="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss">Modified XL for marine application</source>
+      </item>
+      <item>
+        <title>Modified XL for marine application</title>
+        <dc:creator><![CDATA[WoobaGooba]]></dc:creator>
+        <description><![CDATA[
+            <p>Greetings Carloop-ers</p>
+<p>First a round of hearty applause for your efforts.  Well done.</p>
+<p>Hoping to have your guidance re: a Carloop evolution for a marine application.</p>
+<p>The XL would be the base platform. Power supply, Electron, CANBus transceiver are needed.  The ODB connector is not needed (replaced with a direct wired connection or NMEA 2000 connector).  The GPS and SD card are interesting options.</p>
+<p>Desired XL extensions.  A breakout area to which battery monitoring (12 v system) etc circuitry could be added.  Maybe considering swap to the Boron when it is available for usage over NB-IoT networks.</p>
+<p>Wondering if anyone here might be interested to collaborate on what I just described?</p>
+<p>Cheers</p>
+          <p><a href="https://community.carloop.io/t/modified-xl-for-marine-application/708/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/modified-xl-for-marine-application/708/1</link>
+        <pubDate>Fri, 17 Aug 2018 16:55:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-708-1</guid>
+        <source url="https://community.carloop.io/t/modified-xl-for-marine-application/708.rss">Modified XL for marine application</source>
+      </item>
+  </channel>
+</rss>

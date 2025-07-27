@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop availability</title>
+    <link>https://community.carloop.io/t/carloop-availability/1315</link>
+    <description>Hey everyone my name is Adi and I am just getting into the CAN hacking space, it’s a really awesome thing going on here. I see that the particle photon series of boards is now discontinued and argon is set to be discontinued on their site. Are carloop units still being produced or am I too late to the party? Again much love to this community and any help/advice is appreciated!</description>
+    
+    <lastBuildDate>Sun, 29 Jan 2023 15:05:48 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-availability/1315.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop availability</title>
+        <dc:creator><![CDATA[Maxima]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey everyone my name is Adi and I am just getting into the CAN hacking space, it’s a really awesome thing going on here. I see that the particle photon series of boards is now discontinued and argon is set to be discontinued on their site. Are carloop units still being produced or am I too late to the party? Again much love to this community and any help/advice is appreciated!</p>
+          <p><a href="https://community.carloop.io/t/carloop-availability/1315/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-availability/1315/1</link>
+        <pubDate>Sun, 29 Jan 2023 15:05:48 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1315-1</guid>
+        <source url="https://community.carloop.io/t/carloop-availability/1315.rss">Carloop availability</source>
+      </item>
+  </channel>
+</rss>

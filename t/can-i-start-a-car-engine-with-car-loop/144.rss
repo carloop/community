@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can i start a car engine with car loop?</title>
+    <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144</link>
+    <description>Hello everyone
+can you please tell me if i can start a car engine with a carloop?
+also what are the features that i can get from the carloop?
+
+Regards</description>
+    
+    <lastBuildDate>Tue, 18 Oct 2016 18:40:57 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Here is an example of an aftermarket remote car starter module that you will need to install if your car didn’t come with a similar module from the factory: <a href="https://www.compustar.com/about-compustar-remote-starters/">https://www.compustar.com/about-compustar-remote-starters/</a></p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/6</link>
+        <pubDate>Tue, 18 Oct 2016 18:40:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-6</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/mld">@mld</a> and <a class="mention" href="https://community.carloop.io/u/frr">@FRR</a>, we’ve never tried this before, but it really depends on what is available on the CAN bus network of your car.  In other words, if the command to crank and start the engine is present in the bus, then you will be able to send that message without cutting any wires.</p>
+<p>I have experience with a Hyundai Sonata 2006 and that does not have that CAN message present from what I could tell.</p>
+<p>Re: BMW 535 2016 - I’m surprised remote start doesn’t come stock!  It is far more likely that the CAN message is there to send a remote vehicle start is there.  The question now is, can you see that message being broadcast on pins 6 and 14 on the OBD-II port.   Most likely it is on a different CAN bus.  Maybe you get luck and it is connected to those 2 pins, but you should certainly check.</p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/5</link>
+        <pubDate>Tue, 18 Oct 2016 18:31:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-5</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[FRR]]></dc:creator>
+        <description><![CDATA[
+            <p>I am interested in doing the same.  Car; BMW 535 2016. Advice appreciated.</p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/4</link>
+        <pubDate>Tue, 18 Oct 2016 02:38:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-4</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[mld]]></dc:creator>
+        <description><![CDATA[
+            <p>i have a Hyundai accent 2001, manual gear</p>
+<p>i ask this to know if it is applicable to do… because i’m thinking in building a project to start a car engine remotely using plug and play devices… without needing to cut wires etc etc etc</p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/3</link>
+        <pubDate>Thu, 13 Oct 2016 05:55:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-3</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>What car do you have?</p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/2</link>
+        <pubDate>Wed, 12 Oct 2016 19:16:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-2</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+      <item>
+        <title>Can i start a car engine with car loop?</title>
+        <dc:creator><![CDATA[mld]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello everyone<br>
+can you please tell me if i can start a car engine with a carloop?<br>
+also what are the features that i can get from the carloop?</p>
+<p>Regards</p>
+          <p><a href="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144/1</link>
+        <pubDate>Wed, 12 Oct 2016 07:27:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-144-1</guid>
+        <source url="https://community.carloop.io/t/can-i-start-a-car-engine-with-car-loop/144.rss">Can i start a car engine with car loop?</source>
+      </item>
+  </channel>
+</rss>

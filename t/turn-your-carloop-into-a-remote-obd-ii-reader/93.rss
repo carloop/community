@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Turn your Carloop into a remote OBD-II reader</title>
+    <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93</link>
+    <description>Check out this fantastic application created by @zachary (Particle CTO) that makes it easy to get OBD-II PID data directly into your laptop from your Particle device.  If you ever wanted to send OBD requests and get OBD-II data with the Electron or Photon here&#39;s the sample code: https://github.com/towynlin/carloop-obd-publisher/blob/master/application.cpp
+
+Thanks so much, Zachary.  Awesome work moving the ball forward on this!</description>
+    
+    <lastBuildDate>Mon, 05 Nov 2018 05:15:10 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/reporter500">@reporter500</a>,</p>
+<p>I have not tried the Carloop with the Arduino IDE.  The Arduino IDE should work if you are using a RedbearDuo.  The Arduino IDE in theory is not going to work for a Photon or Electron; I did not test this but it is my understanding.</p>
+<p>I recommend using one of the Particle tools, either ParticleBuild (on the cloud) or ParticleDev (installed on your computer).  There is a Carloop library written for the Particle environment and it makes your development work so much easier; that is what sets Carloop apart from other similar automotive tools.</p>
+<p>You could port the particle Carloop library over to Arduino, and that will be a big project in itself.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/15</link>
+        <pubDate>Mon, 05 Nov 2018 05:15:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-15</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[reporter500]]></dc:creator>
+        <description><![CDATA[
+            <p>I am also trying to use the Arduino IDE.  Is there a carloop library that needs to be added in order to develop for it?</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/14</link>
+        <pubDate>Fri, 02 Nov 2018 15:06:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-14</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>were you able to setup a carloop bluetooth example. I have a redbear duo and would like to use it over bluetooth instead of usb.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/13</link>
+        <pubDate>Fri, 12 May 2017 14:14:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-13</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>A post was split to a new topic: <a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137">Honda tire pressure monitor light project</a></p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/12</link>
+        <pubDate>Tue, 04 Oct 2016 13:49:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-12</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/scruffr">@ScruffR</a>, I dug into it and realized I had used sample code from Redbear Github repo to test functionality. This was 4 months ago, so I’m piecing it together in my brain ;).  I did use the Arduino IDE and was recommended to try this example by Redbar Duo support: <a href="https://github.com/redbear/STM32-Arduino/blob/master/arduino/libraries/RedBear_Duo/examples/03.BLE/SimpleChat/SimpleChat.ino" class="inline-onebox">STM32-Arduino/arduino/libraries/RedBear_Duo/examples/03.BLE/SimpleChat/SimpleChat.ino at master · redbear/STM32-Arduino · GitHub</a></p>
+<p>The ‘SimpleChat’ is able to send serial messages from the Redbear Duo (connected to Carloop reading CAN messages)  to your phone via bluetooth.  Theoretically it should send CAN messages to your phone.  Let me know what you find!</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/10</link>
+        <pubDate>Sun, 18 Sep 2016 06:50:01 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-10</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I think I used Arduino IDE for that, but will need to find time to dig into that (answering from mobile)</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/9</link>
+        <pubDate>Sun, 18 Sep 2016 05:41:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-9</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>That would be nice!<br>
+Would this code be compatible wite Particle IDEs or would I need the Arduino IDE for that?</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/8</link>
+        <pubDate>Sun, 18 Sep 2016 05:30:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-8</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t have anything I can post yet, but basically I was using the BT “chat” functionality to send serial<br>
+messages from its CAN bus. I can dig that up if your interested.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/7</link>
+        <pubDate>Sun, 18 Sep 2016 02:04:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-7</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="jvanier" data-post="4" data-topic="93">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/user_avatar/carloop-community.dyndns.org/jvanier/48/426_2.png" class="avatar"> jvanier:</div>
+<blockquote>
+<p>Alan has been using the RedBear Duo (combo Wi-Fi and Bluetooth) for some projects.</p>
+</blockquote>
+</aside>
+<p>Are there any codes to look at?<br>
+I’d also like to use WiFi plus Bluetooth with my newly acquired Carloop (once I get my Renault Espace to start with it inserted).</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/6</link>
+        <pubDate>Sat, 17 Sep 2016 10:11:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-6</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Work in process, but i have added a Node JS server to this.<br>
+Will update the documentation shortly,</p>
+<p><a href="https://github.com/paradoxewan/NodeOBD" class="onebox" target="_blank" rel="noopener nofollow ugc">https://github.com/paradoxewan/NodeOBD</a></p>
+<p>I have taken <a class="mention" href="https://community.carloop.io/u/zachary">@zachary</a>’s code and added in <a href="https://github.com/rickkas7/localserver" class="inline-onebox" rel="noopener nofollow ugc">GitHub - rickkas7/localserver: Sample node.js server for communicating with a Particle photon</a></p>
+<p>Im working on decoding the PIDS at the moment and can hopefully get a simple nodeJS dashboard app running shortly.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/5</link>
+        <pubDate>Mon, 22 Aug 2016 16:04:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-5</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Alan has been using the RedBear Duo (combo Wi-Fi and Bluetooth) for some projects. I haven’t tried the Bluz for Carloop yet. Let us know how that works out.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/4</link>
+        <pubDate>Sat, 20 Aug 2016 16:04:21 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-4</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[zachary]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks much folks! <img src="//carloop-community.dyndns.org/images/emoji/twitter/bow.png?v=12" title=":bow:" class="emoji" alt=":bow:" loading="lazy" width="20" height="20"> Sorry I haven’t had time to contribute more in the last few weeks — I look forward to getting back to it some weekend soon! Also I’ve got a <a href="http://bluz.io/" rel="noopener nofollow ugc">bluz</a> board that I’m going to try with it as well. Anybody tried that yet?</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/3</link>
+        <pubDate>Fri, 19 Aug 2016 21:28:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-3</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Nicely done! I’ll add that code to the Carloop library.</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/2</link>
+        <pubDate>Mon, 18 Jul 2016 10:08:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-2</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+      <item>
+        <title>Turn your Carloop into a remote OBD-II reader</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Check out this fantastic application created by <a class="mention" href="https://community.carloop.io/u/zachary">@zachary</a> (Particle CTO) that makes it easy to get OBD-II PID data directly into your laptop from your Particle device.  If you ever wanted to send OBD requests and get OBD-II data with the Electron or Photon here’s the sample code: <a href="https://github.com/towynlin/carloop-obd-publisher/blob/master/application.cpp" class="inline-onebox">carloop-obd-publisher/application.cpp at master · towynlin/carloop-obd-publisher · GitHub</a></p>
+<p>Thanks so much, Zachary.  Awesome work moving the ball forward on this!</p>
+          <p><a href="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/1</link>
+        <pubDate>Mon, 18 Jul 2016 04:07:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-93-1</guid>
+        <source url="https://community.carloop.io/t/turn-your-carloop-into-a-remote-obd-ii-reader/93.rss">Turn your Carloop into a remote OBD-II reader</source>
+      </item>
+  </channel>
+</rss>

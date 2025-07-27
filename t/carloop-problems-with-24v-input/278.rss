@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop - Problems with 24v input</title>
+    <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278</link>
+    <description>I purchased a J1939 Simulator with the hopes of using Carloop to parse J1939 messages.  Specifically, this one:
+
+https://www.scantool.net/j1939-bus-obd-simulator/
+
+Datasheet here:
+
+https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf
+
+However, when I plug in my Carloop (with Electron connected), it doesn&#39;t appear to be getting any power (the Electron LEDs don&#39;t light up).
+
+The OBD port on this simulator is supposed to output 24v.  I tested it with a multimeter and it reports 23.2v on pin 16 and between 2-3v on pins 6 and 14 (the CAN pins).  Pins 4 and 5 go to ground.
+
+I&#39;m using Carloop 2.3 which I believe is using a stepdown converter capable of handling 24v:
+
+http://www.richtek.com/Products/Switching%20Regulators/DC_DC%20StepDown%20Convertor/RT8258?specid=RT8258
+
+However, something is going wrong somewhere because my Electron never gets power.
+
+When I try the Carloop/Electron with another simulator that outputs the usual 12v it works fine.
+
+Any thoughts on what is going on here?
+
+Thanks,
+Mike</description>
+    
+    <lastBuildDate>Thu, 02 Aug 2018 18:04:23 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Perfect - thanks for the response and this is what I’m observing.</p>
+<p>For others interested, I’ve purchased a 24V to 12V converter and am going to insert it in between the J1939 simulator and the OBD port.  I’ll then have 12V to the Carloop/Electron and I won’t toast any more devices <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/9</link>
+        <pubDate>Thu, 02 Aug 2018 18:04:23 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-9</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>You need to power carloop since the CAN transceiver chip needs to be powered. If you just power the electron with the battery it will not be able to read CAN messages</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/8</link>
+        <pubDate>Thu, 02 Aug 2018 05:53:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-8</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Did you ever get an answer on this one?  I’m having the same problem.</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/7</link>
+        <pubDate>Wed, 01 Aug 2018 17:41:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-7</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m having the same problem - has anyone found a solution?</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/6</link>
+        <pubDate>Tue, 31 Jul 2018 22:59:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-6</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>,</p>
+<p>Is the only way to power the Carloop through pin 16 on the OBD connector?  Or can I plug the LIPO Battery into my Electron and get power to the Carloop that way?  I’m trying to figure out a way to use the 24v simulator but get power from elsewhere (if the 24v is causing the problem).</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/5</link>
+        <pubDate>Wed, 03 May 2017 21:52:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-5</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Carloop is rated for 12V, we didn’t test 24V.  The fluctuation is not good, if you can get 5V consistently on the pins I showed above, you should be able to power the Electron.</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/4</link>
+        <pubDate>Wed, 03 May 2017 20:30:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-4</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>,</p>
+<p>Thanks for the suggestion-- I tried this and the voltage actually seems to fluctuate between 3.5v and 5v (and the carloop gets very hot).  My test method might not be ideal since I’m using very thin probes and plugging them directly into the power and ground pins you have pictured above.  I’m not sure what gauge wire you’re using there and how you have the probes connected to the other end (clamps?).  Were you able to test 24v with your setup?</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/3</link>
+        <pubDate>Wed, 03 May 2017 20:22:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-3</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/mike_b">@mike_b</a>,<br>
+If you take out the Electron from Carloop’s socket.  How much voltage are you reading across the pins that should be providing 5V to the Electron?<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fd72e16910d47b8933fe515daf9d1bfbbbed72f1.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/fd72e16910d47b8933fe515daf9d1bfbbbed72f1" title="IMG_2552.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fd72e16910d47b8933fe515daf9d1bfbbbed72f1_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/fd72e16910d47b8933fe515daf9d1bfbbbed72f1_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/fd72e16910d47b8933fe515daf9d1bfbbbed72f1_2_562x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/fd72e16910d47b8933fe515daf9d1bfbbbed72f1_2_750x1000.JPG 2x" data-dominant-color="5D5853"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/2</link>
+        <pubDate>Wed, 03 May 2017 19:48:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-2</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+      <item>
+        <title>Carloop - Problems with 24v input</title>
+        <dc:creator><![CDATA[mike_b]]></dc:creator>
+        <description><![CDATA[
+            <p>I purchased a J1939 Simulator with the hopes of using Carloop to parse J1939 messages.  Specifically, this one:</p>
+<p><a href="https://www.scantool.net/j1939-bus-obd-simulator/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://www.scantool.net/j1939-bus-obd-simulator/</a></p>
+<p>Datasheet here:</p>
+<aside class="onebox pdf" data-onebox-src="https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf">
+  <header class="source">
+
+      <a href="https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf" target="_blank" rel="noopener nofollow ugc">ozenelektronik.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf" target="_blank" rel="noopener nofollow ugc"><span class="pdf-onebox-logo"></span></a>
+
+<h3><a href="https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf" target="_blank" rel="noopener nofollow ugc">oe91c1700.pdf</a></h3>
+
+  <p class="filesize">147.69 KB</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>However, when I plug in my Carloop (with Electron connected), it doesn’t appear to be getting any power (the Electron LEDs don’t light up).</p>
+<p>The OBD port on this simulator is supposed to output 24v.  I tested it with a multimeter and it reports 23.2v on pin 16 and between 2-3v on pins 6 and 14 (the CAN pins).  Pins 4 and 5 go to ground.</p>
+<p>I’m using Carloop 2.3 which I believe is using a stepdown converter capable of handling 24v:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.richtek.com/Products/Switching%20Regulators/DC_DC%20StepDown%20Convertor/RT8258?specid=RT8258">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/8dc29e3b74a2c2e8e9aa5e448997f6ecd3cc570e.png" class="site-icon" data-dominant-color="CADDED" width="32" height="32">
+
+      <a href="https://www.richtek.com/Products/Switching%20Regulators/DC_DC%20StepDown%20Convertor/RT8258?specid=RT8258" target="_blank" rel="noopener nofollow ugc">richtek.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.richtek.com/Products/Switching%20Regulators/DC_DC%20StepDown%20Convertor/RT8258?specid=RT8258" target="_blank" rel="noopener nofollow ugc">RT8258 - 1.2A, 24V, 700kHz Step-Down Converter | Richtek Technology</a></h3>
+
+  <p>,1.2A,&nbsp;24V,&nbsp;700kHz&nbsp;Step-Down&nbsp;Converter, Wide Operating Input Voltage Range :  4.5V to 24V, Adjustable Output Voltage Range : 0.8V to 15V, 1.2A Output  Current, 0.3Ω Internal Power MOSFET Switch, High Efficiency up to 92%, 700kHz  Fixed Switching...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>However, something is going wrong somewhere because my Electron never gets power.</p>
+<p>When I try the Carloop/Electron with another simulator that outputs the usual 12v it works fine.</p>
+<p>Any thoughts on what is going on here?</p>
+<p>Thanks,<br>
+Mike</p>
+          <p><a href="https://community.carloop.io/t/carloop-problems-with-24v-input/278/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-problems-with-24v-input/278/1</link>
+        <pubDate>Wed, 03 May 2017 18:35:35 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-278-1</guid>
+        <source url="https://community.carloop.io/t/carloop-problems-with-24v-input/278.rss">Carloop - Problems with 24v input</source>
+      </item>
+  </channel>
+</rss>

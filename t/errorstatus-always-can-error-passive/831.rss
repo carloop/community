@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+    <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831</link>
+    <description>We&#39;ve noticed an odd condition when our application starts and enables CAN and there is another device on the bus whose baud rate is different.  We log the error passive condition and our app then attempts to transmit data (every second).  We do this as the Particle documentation states that the error state will only be corrected after an attempt to transmit.  If we correct the baud rate (in this case it&#39;s just Kvaser and we set the baud rate to match), the error status continues to report CAN_ERROR_PASSIVE, even though the application successfully transmits CAN messages.
+
+
+We are currently coding for this condition and resetting our CAN channel.  Resetting simply consists of:
+1. disableCAN() { executing a can.end(), then turn off the CAN enable pin }
+
+2. enableCAN() { turn on the CAN enable pin, execute can.begin(baudRate) }
+
+Any ideas on why this is happening?</description>
+    
+    <lastBuildDate>Tue, 12 Mar 2019 06:09:28 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a>,</p>
+<p>I would suggest going ahead and try some testing with 1.0.1.<br>
+As far as I know, the CAN functionality in DeviceOS has not changed since it was developed by a Particle Community member a few years ago.  Of course, something else could have had an indirect effect on the CAN functionality.<br>
+I am not aware of any issues.</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/9</link>
+        <pubDate>Tue, 12 Mar 2019 06:09:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-9</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>I will try 1.0.1 today.  Are there any issues using Carloop and Carloop GPS with 1.0.1?</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/8</link>
+        <pubDate>Wed, 06 Mar 2019 17:06:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-8</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Maybe I wasn’t clear.  As long as the application starts without a mismatched baud rate everything works as expected.  Now, if the application starts and there is a mismatched baud rate, the CAN bus always reports CAN_ERROR_PASSIVE, even after the baud rate is corrected on the other device.  Just as interesting is that while in this state the application successfully transmits even though it’s reporting a status of CAN_ERROR_PASSIVE.</p>
+<p>We’re building an application and reading it for production.  We’re putting it through the real world conditions we expect it to experience.  Our test fixtures consist of an Electron with Carloop, a Kvaser cable connected to a PC (allows for simulating various conditions), and CAN termination.</p>
+<p>Hope this clears up the confusion.</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/7</link>
+        <pubDate>Wed, 06 Mar 2019 17:05:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-7</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>What is unexpected in the behavior you describe? Error passive sounds ok in case of a baud rate mismatch.</p>
+<p>For details about the state machine of the CAN error handling, you need to dig in the STM manual. <a href="https://www.st.com/resource/en/reference_manual/cd00225773.pdf">https://www.st.com/resource/en/reference_manual/cd00225773.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/6</link>
+        <pubDate>Wed, 06 Mar 2019 02:34:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-6</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="nlwelch" data-post="2" data-topic="831">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/n/82dd89/48.png" class="avatar"> nlwelch:</div>
+<blockquote>
+<p>then change the baud rates, everything works as expected.  We observe the error passive condition.  After a short period of time we set the baud rate back to be compatible and the device transitions from error passive to can no error.</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a> does this happen with Firmware Version <code>1.0.1</code>?</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/5</link>
+        <pubDate>Wed, 06 Mar 2019 02:17:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-5</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>We’re using an Electron and Device OS 0.6.4</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/4</link>
+        <pubDate>Tue, 05 Mar 2019 15:38:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-4</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/nlwelch">@nlwelch</a>,</p>
+<p>I am not sure what is going on at the moment.  It sounds like something in the underlying STM3F CAN support or in the Particle DeviceOS.  For starters, can you indicate which Particle device you are using and what version of DeviceOS you are running?</p>
+<p><a class="mention" href="https://community.carloop.io/u/jvanier">@jvanier</a>, any thoughts on this?</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/3</link>
+        <pubDate>Tue, 05 Mar 2019 12:24:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-3</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>Worth noting: This only happens when the application starts and there is an incompatible baud rate.  Meaning, if we start and the devices are compatible (both at 500 kbits/s), and we then change the baud rates, everything works as expected.  We observe the error passive condition.  After a short period of time we set the baud rate back to be compatible and the device transitions from error passive to can no error.</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/2</link>
+        <pubDate>Mon, 04 Mar 2019 20:51:19 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-2</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+      <item>
+        <title>ErrorStatus() always CAN_ERROR_PASSIVE</title>
+        <dc:creator><![CDATA[nlwelch]]></dc:creator>
+        <description><![CDATA[
+            <p>We’ve noticed an odd condition when our application starts and enables CAN and there is another device on the bus whose baud rate is different.  We log the error passive condition and our app then attempts to transmit data (every second).  We do this as the Particle documentation states that the error state will only be corrected after an attempt to transmit.  If we correct the baud rate (in this case it’s just Kvaser and we set the baud rate to match), the error status continues to report CAN_ERROR_PASSIVE, even though the application successfully transmits CAN messages.</p>
+<p>We are currently coding for this condition and resetting our CAN channel.  Resetting simply consists of:</p>
+<ol>
+<li>
+<p>disableCAN() { executing a can.end(), then turn off the CAN enable pin }</p>
+</li>
+<li>
+<p>enableCAN() { turn on the CAN enable pin, execute can.begin(baudRate) }</p>
+</li>
+</ol>
+<p>Any ideas on why this is happening?</p>
+          <p><a href="https://community.carloop.io/t/errorstatus-always-can-error-passive/831/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/errorstatus-always-can-error-passive/831/1</link>
+        <pubDate>Mon, 04 Mar 2019 20:45:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-831-1</guid>
+        <source url="https://community.carloop.io/t/errorstatus-always-can-error-passive/831.rss">ErrorStatus() always CAN_ERROR_PASSIVE</source>
+      </item>
+  </channel>
+</rss>

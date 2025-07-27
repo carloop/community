@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>UPDATE: Brand new Carloop Docs page!</title>
+    <link>https://community.carloop.io/t/update-brand-new-carloop-docs-page/400</link>
+    <description>Hello Everyone!
+We have a new Carloop Docs page!  We are really excited about it because it&#39;s waaaay easier to edit than our previous one.   It is very much under construction, so it is a great opportunity to make a big impact in shaping how Carloop Docs look and feel!  Add your own tips and tricks that you think would be valuable to others!
+
+The URL is here :smile:: http://docs.carloop.io/ 
+
+But this is what you really wanted :wink:: https://github.com/carloop/docs
+
+Documentation is one of the reasons open source projects succeed; everyone can add their input!  Think about how many people you can save from falling down the same rabbit hole we&#39;ve all been in many times! :rabbit:
+
+The Carloop Docs page content is all in Markdown files so it is super easy to add new files or improve on the existing `index.md` file on there.
+
+Looking forward to some great pull requests!  
+Thanks!!</description>
+    
+    <lastBuildDate>Mon, 14 Aug 2017 16:23:03 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>UPDATE: Brand new Carloop Docs page!</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks!  Let me know if you have any questions/updates!</p>
+          <p><a href="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/3</link>
+        <pubDate>Mon, 14 Aug 2017 16:23:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-400-3</guid>
+        <source url="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400.rss">UPDATE: Brand new Carloop Docs page!</source>
+      </item>
+      <item>
+        <title>UPDATE: Brand new Carloop Docs page!</title>
+        <dc:creator><![CDATA[jordanskole]]></dc:creator>
+        <description><![CDATA[
+            <p>This is awesome, thanks!</p>
+          <p><a href="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/2</link>
+        <pubDate>Sun, 06 Aug 2017 03:25:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-400-2</guid>
+        <source url="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400.rss">UPDATE: Brand new Carloop Docs page!</source>
+      </item>
+      <item>
+        <title>UPDATE: Brand new Carloop Docs page!</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello Everyone!<br>
+We have a new Carloop Docs page!  We are really excited about it because it’s waaaay easier to edit than our previous one.   It is very much under construction, so it is a great opportunity to make a big impact in shaping how Carloop Docs look and feel!  Add your own tips and tricks that you think would be valuable to others!</p>
+<p>The URL is here <img src="//carloop-community.dyndns.org/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20">: <a href="http://docs.carloop.io/">http://docs.carloop.io/</a></p>
+<p>But this is what you really wanted <img src="//carloop-community.dyndns.org/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20">: <a href="https://github.com/carloop/docs" class="inline-onebox">GitHub - carloop/docs: This is the repository of all documentation for Carloop Hardware and Software</a></p>
+<p>Documentation is one of the reasons open source projects succeed; everyone can add their input!  Think about how many people you can save from falling down the same rabbit hole we’ve all been in many times! <img src="//carloop-community.dyndns.org/images/emoji/twitter/rabbit.png?v=12" title=":rabbit:" class="emoji" alt=":rabbit:" loading="lazy" width="20" height="20"></p>
+<p>The Carloop Docs page content is all in Markdown files so it is super easy to add new files or improve on the existing <code>index.md</code> file on there.</p>
+<p>Looking forward to some great pull requests!<br>
+Thanks!!</p>
+          <p><a href="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/update-brand-new-carloop-docs-page/400/1</link>
+        <pubDate>Sat, 29 Jul 2017 02:47:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-400-1</guid>
+        <source url="https://community.carloop.io/t/update-brand-new-carloop-docs-page/400.rss">UPDATE: Brand new Carloop Docs page!</source>
+      </item>
+  </channel>
+</rss>

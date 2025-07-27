@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>UDS Stack for Carloop</title>
+    <link>https://community.carloop.io/t/uds-stack-for-carloop/857</link>
+    <description>Unless I&#39;m missing it, I haven&#39;t seen anyone implement a proper UDS stack. The examples each manually construct a UDS packet, which works well for doing specific commands - but does not scale if you&#39;re trying to use a diagnostic library. 
+
+I found the openxc UDS stack here (https://github.com/openxc/uds-c) and have integrated it into a local project. However, when I attempt to read a PID such as reading VIN, I&#39;m not getting the proper message on the bus. The UDS stack is returning UDS Tx(0x7DF): 0x0201090000000000, whereas the proper command should be UDS Tx(0x7DF): 0x0209020000000000. Has anyone else tried this and had any success? 
+
+Thanks!</description>
+    
+    <lastBuildDate>Wed, 11 Sep 2019 04:34:31 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/uds-stack-for-carloop/857.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>UDS Stack for Carloop</title>
+        <dc:creator><![CDATA[CANHacker]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/carl1116">@carl1116</a>,</p>
+<p>(0x7DF): 0x0209020000000000 is standard command from SAE J1979 to read VIN number. SAE J1979’s standard PIDs are implemented in Engine management System (ECU) of every vehicle.<br>
+refer following link for information on open parameter identifiers (PIDs) <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs" class="inline-onebox" rel="noopener nofollow ugc">OBD-II PIDs - Wikipedia</a></p>
+<p>Unified diagnostics Services (UDS) is protocol which is implemented over CAN in car by OEM to diagnose ECU.<br>
+In UDS there are services with fix ID and sub-function ID is maintained and implemented by OEMs.</p>
+<p>To read VIN one have to use 0x22 Service  of UDS which is Read by Identifier but one must know address of ECU and the sub-function identifier which gives VIN number.</p>
+<p>So Tx(0x7DF): 0x0209020000000000 command from SAE J1979 is simplest to get VIN Number.</p>
+          <p><a href="https://community.carloop.io/t/uds-stack-for-carloop/857/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/uds-stack-for-carloop/857/2</link>
+        <pubDate>Wed, 11 Sep 2019 04:34:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-857-2</guid>
+        <source url="https://community.carloop.io/t/uds-stack-for-carloop/857.rss">UDS Stack for Carloop</source>
+      </item>
+      <item>
+        <title>UDS Stack for Carloop</title>
+        <dc:creator><![CDATA[carl1116]]></dc:creator>
+        <description><![CDATA[
+            <p>Unless I’m missing it, I haven’t seen anyone implement a proper UDS stack. The examples each manually construct a UDS packet, which works well for doing specific commands - but does not scale if you’re trying to use a diagnostic library.</p>
+<p>I found the openxc UDS stack here (<a href="https://github.com/openxc/uds-c" class="inline-onebox" rel="noopener nofollow ugc">GitHub - openxc/uds-c: Unified Diagnostics Service (UDS) and OBD-II (On Board Diagnostics for Vehicles) C Library</a>) and have integrated it into a local project. However, when I attempt to read a PID such as reading VIN, I’m not getting the proper message on the bus. The UDS stack is returning UDS Tx(0x7DF): 0x0201090000000000, whereas the proper command should be UDS Tx(0x7DF): 0x0209020000000000. Has anyone else tried this and had any success?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/uds-stack-for-carloop/857/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/uds-stack-for-carloop/857/1</link>
+        <pubDate>Sat, 20 Apr 2019 19:38:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-857-1</guid>
+        <source url="https://community.carloop.io/t/uds-stack-for-carloop/857.rss">UDS Stack for Carloop</source>
+      </item>
+  </channel>
+</rss>

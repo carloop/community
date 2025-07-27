@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Is SwiftUI a compatible language with CarLoop OBD-II device</title>
+    <link>https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322</link>
+    <description>I am just curious if I can code using the SwiftUI language and have everything still work as intended with the OBD-II communication device? I&#39;m currently in school and want to do my final project on over the air vehicle diagnostic and communication. Does anyone know if this is something that I&#39;m able to do and if so, do you have any tips for me getting into it?</description>
+    
+    <lastBuildDate>Tue, 21 Feb 2023 22:52:52 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Is SwiftUI a compatible language with CarLoop OBD-II device</title>
+        <dc:creator><![CDATA[Cole.H]]></dc:creator>
+        <description><![CDATA[
+            <p>I am just curious if I can code using the SwiftUI language and have everything still work as intended with the OBD-II communication device? I’m currently in school and want to do my final project on over the air vehicle diagnostic and communication. Does anyone know if this is something that I’m able to do and if so, do you have any tips for me getting into it?</p>
+          <p><a href="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322/1</link>
+        <pubDate>Tue, 21 Feb 2023 22:52:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1322-1</guid>
+        <source url="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322.rss">Is SwiftUI a compatible language with CarLoop OBD-II device</source>
+      </item>
+  </channel>
+</rss>

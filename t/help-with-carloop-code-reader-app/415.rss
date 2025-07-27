@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Help with Carloop Code Reader app</title>
+    <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415</link>
+    <description>Hello;
+
+Just bought my first Carloop. I read all the getting started doc&#39;s and everything seems to be working. I made the blue light flash!
+
+BUT I cannot get the carol Code reader app or the milage app to work. I tried it on both my Subaru and Jetta. 
+
+Any advice?</description>
+    
+    <lastBuildDate>Wed, 30 Aug 2017 15:24:51 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[skamran]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/moreckert">@moreckert</a> - I already have the Car Hacker’s Handbook but will be interested in taking the Carloop off your hands.</p>
+<p>PM me at <a href="mailto:skamran@ieee.org">skamran@ieee.org</a> and we can sort the logistics.</p>
+<p>Kamran</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/10</link>
+        <pubDate>Wed, 30 Aug 2017 15:24:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-10</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks; Don’t suppose anyone is looking for a newish (only plugged in twice) Carloop with the Hacking your car book? I’ll sell both for $20 less than what I paid.</p>
+<p>Mike</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/9</link>
+        <pubDate>Wed, 30 Aug 2017 01:20:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-9</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/moreckert">@moreckert</a>,</p>
+<p>To see what protocol your cars most likely use, check out this list:<br>
+<a href="http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf" class="onebox" target="_blank" rel="noopener">http://www.alpha-bid.com/media/Shared-Pics/OBD2_protocols.pdf</a></p>
+<p>The Subaru most likely uses some form of K-Line (ISO 9141, KWP2000 or KWP fast init).  There is work on the forums here on “Carloop Retro” which will have the hardware and firmware to do K-Line.  I am working on it so I can get all this to work with a 2003 (and now also a 2004) Impreza.  Unfortunately, its not done yet.</p>
+<p>You should be able to do almost anything you want if you have the correct hardware communication protocol and can reverse-engineer the necessary firmware code.</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/8</link>
+        <pubDate>Tue, 29 Aug 2017 03:46:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-8</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>Alan</p>
+<p>Thank you for our transparency. Maybe I should have read through the forum first.</p>
+<p>There must be a way to read the engine data and even manipulate it. If my mechanic buddy can do it with his old VAGCOM, why can’t the rest of us. It puts out data, otherwise there would be nothing there to read. Just need to find a way to read the data I guess. Any thoughts on where I should start? Will Carloop be able to help in anyway?</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/7</link>
+        <pubDate>Wed, 16 Aug 2017 13:28:52 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-7</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Well, there are still a few things you can do.  You still have an internet connected microcontroller with uninterrupted power from the OBD-II port.  You will not be able to read CAN messages, but if you add a GPS you can track your vehicle’s location and measure ambient temperatures since it is fully programmable.</p>
+<p>Sorry for the disappointment, we try to be as transparent as possible about the limitations of Carloop, <a href="http://docs.carloop.io/#getting-started-with-carloop-the-hardware-pieces-explained-your-car">particularly that it is CAN based</a>.  Let me know if there is anything that I can do to make this suck less.  I hate it when it happens to me with other products, so happy to be helpful in any way.</p>
+<p>It could be an opportunity to get around CAN and get creative with it, though…just a thought.</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/6</link>
+        <pubDate>Wed, 16 Aug 2017 03:47:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-6</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>Does this mean that the Carloop I just bought is useless to me? Will it do anything on my cars?</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/5</link>
+        <pubDate>Tue, 15 Aug 2017 20:35:20 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-5</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Your cars most likely don’t support CAN on the OBD-II port since they are older than 2008. See explanation under <em>OBD-II signal protocols</em> here: <a href="https://en.m.wikipedia.org/wiki/On-board_diagnostics" class="inline-onebox">On-board diagnostics - Wikipedia</a></p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/4</link>
+        <pubDate>Tue, 15 Aug 2017 14:55:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-4</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>2005 Subaru Outback and a 2003 VW Jetta TDI.</p>
+<p>The Blink LED app worked and the apps flashed to Carloop. But when I tried to use them (ie Read codes) but an error message came back asking if Carloop was plugged in and the ignition on; which they both were. I tried it several times on both vehicles. Attempted flashing Carloop several times. neither the MIlage app or the code reader work. Is there something I am doing wrong?</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/3</link>
+        <pubDate>Tue, 15 Aug 2017 14:27:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-3</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>What year are your vehicles?</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/2</link>
+        <pubDate>Tue, 15 Aug 2017 14:23:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-2</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+      <item>
+        <title>Help with Carloop Code Reader app</title>
+        <dc:creator><![CDATA[moreckert]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello;</p>
+<p>Just bought my first Carloop. I read all the getting started doc’s and everything seems to be working. I made the blue light flash!</p>
+<p>BUT I cannot get the carol Code reader app or the milage app to work. I tried it on both my Subaru and Jetta.</p>
+<p>Any advice?</p>
+          <p><a href="https://community.carloop.io/t/help-with-carloop-code-reader-app/415/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/help-with-carloop-code-reader-app/415/1</link>
+        <pubDate>Tue, 15 Aug 2017 03:07:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-415-1</guid>
+        <source url="https://community.carloop.io/t/help-with-carloop-code-reader-app/415.rss">Help with Carloop Code Reader app</source>
+      </item>
+  </channel>
+</rss>

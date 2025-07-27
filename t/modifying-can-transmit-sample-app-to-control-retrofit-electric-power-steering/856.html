@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modifying can transmit sample app to control retrofit electric power steering - Carloop Community</title>
+    <meta name="description" content="So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have th&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="856.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="RezAN2kS8IUybYrodzjfBF1N5">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="RezAN2kS8IUybYrodzjfBF1N5"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Modifying can transmit sample app to control retrofit electric power steering&#39;" href="856.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856">
+<meta name="twitter:url" content="/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856">
+<meta property="og:title" content="Modifying can transmit sample app to control retrofit electric power steering">
+<meta name="twitter:title" content="Modifying can transmit sample app to control retrofit electric power steering">
+<meta property="og:description" content="So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have the can bus wiring setup and can use an OBD2 connector to read data and codes from the EPS module.  However the module goes into a limp in mode since it isn’t receiving an RPM or VSS signal from the ECM/ABS over the can bus.  I would like to program the photon/can-hitch to output t...">
+<meta name="twitter:description" content="So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have the can bus wiring setup and can use an OBD2 connector to read data and codes from the EPS module.  However the module goes into a limp in mode since it isn’t receiving an RPM or VSS signal from the ECM/ABS over the can bus.  I would like to program the photon/can-hitch to output t...">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="14 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="1 ?">
+<meta property="article:published_time" content="2019-04-14T04:28:07+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="next" href="856-1.html?page=2">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="856.html">Modifying can transmit sample app to control retrofit electric power steering</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Modifying can transmit sample app to control retrofit electric power steering'>
+      <link itemprop='url' href='856.html'>
+      <meta itemprop='datePublished' content='2019-04-14T04:28:06Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="856.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2019-04-14T04:28:07Z' class='post-time'>
+                    April 14, 2019,  4:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-14T04:28:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have the can bus wiring setup and can use an OBD2 connector to read data and codes from the EPS module.  However the module goes into a limp in mode since it isn’t receiving an RPM or VSS signal from the ECM/ABS over the can bus.  I would like to program the photon/can-hitch to output the two (or possibly more, not sure yet if the EPS is looking for a single vss or individual vss readings) signals.  I’m not real great at coding yet so I’m not sure how to modify the sample code to output two messages. So far I have this:</p>
+<p>// This <span class="hashtag-raw">#include</span> statement was automatically added by the Particle IDE.<br>
+<span class="hashtag-raw">#include</span> &lt;carloop.h&gt;</p>
+<p><span class="hashtag-raw">#include</span> “application.h”<br>
+<span class="hashtag-raw">#include</span> “carloop/carloop.h”</p>
+<p>// Don’t block the main program while connecting to WiFi/cellular.<br>
+// This way the main program runs on the Carloop even outside of WiFi range.<br>
+SYSTEM_THREAD(ENABLED);</p>
+<p>// Tell the program which revision of Carloop you are using.<br>
+Carloop carloop;</p>
+<p>// Send a message at a regular time interval<br>
+void sendMessage() {<br>
+static uint32_t lastTransmitTime = 0;<br>
+uint32_t transmitInterval = 100; /* ms */<br>
+uint32_t now = millis();<br>
+if (now - lastTransmitTime &gt; transmitInterval) {<br>
+CANMessage message;</p>
+<pre><code>// A CAN message has an ID that identifies the content inside
+message.id = 0x2C4;
+
+// It can have from 0 to 8 data bytes
+message.len = 8;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x06;
+message.data[1] = 0x8A;
+message.data[2] = 0x00;
+message.data[3] = 0x19;
+message.data[4] = 0x00;
+message.data[5] = 0x00;
+message.data[6] = 0x92;
+message.data[7] = 0x09;
+
+// Send the message on the bus!
+carloop.can().transmit(message);
+
+lastTransmitTime = now;
+</code></pre>
+<p>}<br>
+}</p>
+<p>void setup() {<br>
+// Configure the CAN bus speed for 500 kbps, the standard speed for the OBD-II port.<br>
+// Other common speeds are 250 kbps and 1 Mbps.<br>
+// If you don’t call setCANSpeed, 500 kbps is used.<br>
+carloop.setCANSpeed(500000);</p>
+<p>// Connect to the CAN bus<br>
+carloop.begin();<br>
+}</p>
+<p>void loop() {<br>
+sendMessage();<br>
+}</p>
+<p>Which should output a set 1674 rpm signal which will “wake up” the EPS module so the steering powers up immediately at key on instead of waiting 15 seconds and going into limp mode.  With no other message the EPS will still see a “loss of communication with ABS module” and will default to the minimal assist strategy.  So I would like to also output the VSS signal.  How would I incorporate that into this code.</p>
+<p>A sample message would be:  0B4= message ID, 8 length, 00 00 00 00 8D 06 66 B5 which should be 10mph</p>
+<p>I can change the mph settings (the 06 66 here, 06 66=1638*.0062=10.15MPH) to make the EPS believe the car is moving at different speeds until I found an assist level that would work for now (minimal isn’t quite enough).  If I can get this basic system working then I plan to eventually figure out how to read a vss signal with the photon and have it output so the system will work as it did on the Prius, but that is a ways off.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T06:26:17Z' class='post-time'>
+                    April 18, 2019,  6:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T06:26:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/TimC.html">@TimC</a>,</p>
+<p>I like your idea of hard-coding RPM and Vss data as you do development.  It is always easier to break down a problem into more manageable chunks.</p>
+<p>Have you been able to find a datasheet or specification for the EPS?<br>
+I would <strong>assume</strong> that the EPS needs to receive the RPM and Vss on a certain frequency.<br>
+It would make sense that if it goes too long without an update, then it switches to limp mode.</p>
+<p>You might want to experiment with timers and see if sending the same message at different frequencies.<br>
+Hopefully you can find a frequency that will work to keep the EPS woken up and in its regular operating mode.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-21T02:51:04Z' class='post-time'>
+                    April 21, 2019,  2:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-21T02:51:04Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well with the sample app like I posted above it didn’t wake up the module.</p>
+<p>First I realized that because I had tested it at work and the photon wasn’t set up for my work wi-fi, only home wi-fi, that it may not have been transmitting since it was flashing green fast.  I added the code for SYSTEM_MODE(MANUAL) so the thing wouldn’t try to connect to wi-fi at all.  Now it breathes white almost immediately on power up.</p>
+<p>I read on another forum where a person said they had to transmit every 20ms to get the module to wake up on a Yaris (which doesn’t use the CAN for wheel speed, so it only needs rpm for wake up) so I changed mine to transmit every 20ms and that still didn’t help.</p>
+<p>So I added this into the code (in bold) figuring the Prius may also need the abs data:</p>
+<p>if (now - lastTransmitTime &gt; transmitInterval) {    CANMessage message;</p>
+<p>// A CAN message has an ID that identifies the content inside<br>
+message.id = 0x2C4;</p>
+<p>// It can have from 0 to 8 data bytes<br>
+message.len = 8;</p>
+<p>// Pass the data to be transmitted in the data array<br>
+message.data[0] = 0x06;<br>
+message.data[1] = 0x8A;<br>
+message.data[2] = 0x00;<br>
+message.data[3] = 0x19;<br>
+message.data[4] = 0x00;<br>
+message.data[5] = 0x00;<br>
+message.data[6] = 0x92;<br>
+message.data[7] = 0x09;</p>
+<p>// Send the message on the bus!<br>
+carloop.can().transmit(message);</p>
+<p><strong><em>// A CAN message has an ID that identifies the content inside</em></strong><br>
+<strong><em>message.id = 0x0B4;</em></strong></p>
+<p><strong><em>// It can have from 0 to 8 data bytes</em></strong><br>
+<strong><em>message.len = 8;</em></strong></p>
+<p><strong><em>// Pass the data to be transmitted in the data array</em></strong><br>
+<strong><em>message.data[0] = 0x00;</em></strong><br>
+<strong><em>message.data[1] = 0x00;</em></strong><br>
+<strong><em>message.data[2] = 0x00;</em></strong><br>
+<strong><em>message.data[3] = 0x00;</em></strong><br>
+<strong><em>message.data[4] = 0x8D;</em></strong><br>
+<strong><em>message.data[5] = 0x06;</em></strong><br>
+<strong><em>message.data[6] = 0x66;</em></strong><br>
+<strong><em>message.data[7] = 0xB5;</em></strong></p>
+<p><strong><em>// Send the message on the bus!</em></strong><br>
+<strong><em>carloop.can().transmit(message);</em></strong></p>
+<p>lastTransmitTime = now;</p>
+<p>}</p>
+<p>Which should be around a 10mph wheel speed signal too, along with the original rpm signal every 20ms.</p>
+<p>That worked!</p>
+<p>Now the EPS powers on nearly immediately on key on.  There is a very slight delay maybe less than 1/2 a second where the photon is booting up or whatever but that is much better than the original delay of 10 to 15 seconds which was so long there were times I was having to drive with no power assist as I pulled away.  Like after cranking and leaving the gas pump for example, or pulling out of the parking spot at work, there were times I was already moving and trying to steer before the fail safe mode would kick in.  You could sit there an extra few seconds and it was fine, but that’s annoying LOL.</p>
+<p>Not sure yet if the thing is giving the extra assist levels, I have only tested it on the glass smooth concrete floor of my garage today. The torque sensor in the column only gives enough assist to steer as needed and the floor is so smooth its not too hard to turn even with plain manual steering. Tomorrow I plan on backing it out onto the rough textured concrete driveway where the assist level was previously not enough to see if its better.  I will play with the wheel speed message some to try different speeds.  I may have given it enough CAN data to immediately turn on, but I’m not sure what this EPS module is looking for exactly, so I have to see if it is still throwing loss of communication (Uxxxx) codes or not.  Plus I’m not sure I’ve given it the correct speed data.  I’ve seen where both IDs 0x0B4 and 0x610 are speed PIDs.  plus 0x0B1 and 0x0B3 are front and rear axle individual wheel speeds (left and right on individual bits) and I have no idea which ones or if there may be others the EPS is looking for.  The plan is to hook it to the scan tool at work to see if it is reporting the speed I want, to try differing speeds to see how it affects the assist level and the “dead band.”  The dead band where assist is reduced is supposed to get wider at faster speeds to keep the steering from feeling “twitchy”  0 dead band at low speeds for parking, +/- 5 degrees from center dead band at medium speed, and 10* above 45mph</p>
+<p>I still plan to try to get this working, but I also just purchased a non abs Yaris EPS module on Ebay, so I may switch over to it.  The non abs Yaris module is hardwired to a speed sensor and only needs a rpm signal over CAN to turn on.  So that may be simpler on my car, I can use this project to turn on the EPS with the original sample transmit app and hook a speed sensor directly to the EPS.  The Yaris and Prius EPS are the same physical size, mounting bracketry and connectors.</p>
+<p>I’d still like to get this working even if its just a set hard coded MPH signal because these swaps are getting to be more common place (Hot Rod Magazine recently did a web article on them, with lots of people commenting about it being interesting) and while the system works pretty good in fail-safe, there are lots of people who may prefer having extra control and there’s not a whole lot of info out there on the CAN-BUS side of it.  Also because the non-abs Yarus (Yarii?) are harder to find in the junk yards as there were less made.  I have been looking nearly a year to find one in a local yard, or online and just found this one yesterday.  The ABS equipped Yarus and Pruis use the exact same part number module, column and operate the same way.  They are much easier to find and thus will probably be the more commonly swapped.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-21T19:07:06Z' class='post-time'>
+                    April 21, 2019,  7:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-21T19:07:06Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I believe it is working.  On the rough concrete at key on within a half second the assist kicks in.  About a half a steering wheel rotation, or within another half second I can feel the assist level increase (easier to turn).  The initial assist seems to feel like the fail-safe mode did only no real delay.  The second bump in power is noticeable, you can steer one handed.  If you don’t touch the wheel at all and wait a second after key on you don’t feel the increase in power as you turn, but it is still easier than before in fail-safe.</p>
+<p>I’ll report back after I drive it to work this week.  I have the carloop stuff on a breadboard on the passenger floor.  I’m going to see if there is a noticeable difference in the way the car drives on the road, and in parking lots as well as scanning it to see if there is any codes stored.  Depending on how that goes I will decide if I will change the speed PID’s around to test or not.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/behodge.html'><span itemprop='name'>behodge</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-16T15:19:22Z' class='post-time'>
+                    October 16, 2022,  3:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-16T15:19:22Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Any update on this project?  Did you decide on a single speed setting as sufficient or did you develop a way to detect speed via a sensor on the driveshaft,etc…?<br>
+I am working on an identical project in a ‘53 studebaker and have yet to find any other threads where someone successfully simulated CAN signals like this.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-16T19:19:19Z' class='post-time'>
+                    October 16, 2022,  7:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-16T19:19:19Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/behodge.html">@behodge</a>:</p>
+<p>I decided after I got it working on single speed that I was happy with it as it was, so I never implemented the variable speed setup.  On my car I have the can simulator broadcasting  a simple message, which is basically "Vehicle speed = 10 MPH, engine speed = 1600 RPM over and over again. That is what is in the last section of code I posted above.  As a result, the system works as if it were in a stock Prius driving through a parking lot, maximum assist, no “dead zone” and instant on with key on.  I like the max assist level on my car as I have a relatively heavy big block v8 on top of the front tires.  The Prius system on max assist is not quite as easy to turn as my stock 60s hydraulic steering was (but it will turn the tires on roughed concrete standing still), but I like that because it was over sensitive with the stock hydro steering as many 60s cars were, however with the minimum assist in failsafe mode it was better than manual steering but on rough concrete you had to be rolling or it didnt really assist.  You can change the code above to get the three different assist levels if max isn’t what you prefer.  All you have to change is the message data lines in the bold section in my last post.</p>
+<p>Best I can tell from factory service manuals and other info on the net, there were three assist levels, roughly 15mph and slower is max assist, with no dead zone.  Roughly 15 to 40 mph is medium assist and roughly a 5 degree left or right of center dead zone with less assist.  Above 40 mph is minimum assist with a roughly 10 degree dead band. The dead band makes the Prius more sporty feeling at speed and less sensitive to twitches on the steering input at speed.</p>
+<p>I noticed once I got the canloop stuff working that besides the instant on thing (which the 5 or 10 second delay in failsafe mode was a huge annoyance to me!) another huge benefit was my return to center got better.  In failsafe mode, my car would not return to center fully after turning into a driveway or intersection for example.  It would get within a 1/4 turn from center, but I would have to manually turn the wheel back the last 90 degrees or so manually to make the car go straight.  After I got the canloop working, that improved I’d say 95%.  Its so close to fully returning to center now that its like a whole different car, and I cant remember for sure if it ever actually returned that last 5%, LOL.</p>
+<p>I have wired the canloop, the Prius EPAS module, and a Prius OBD2 under dash connector together, and I can now use the Snapon scan tool at work to read codes and data.  Before the canloop, it would have a code for missing ABS CAN signal and therefore it would default to failsafe mode, and you could not make any adjustments like centering the torque sensor.  With the canloop broadcasting the above code, the ABS missing data code could be cleared, and I was able to successfully recalibrate and recenter the torque sensor using the scan tool, which I believe is what actually fixed the return to center issue.</p>
+<p>I actually drove the car the other day to work and plugged the scan tool in for the first time in a long time and it still has no codes, and the datastream shows VSS = 9MPH and Engine is ON.</p>
+<p>Long story short, I never got the variable setup working but I’m more than happy with the single assist level and if you need any help with that I’ll be glad to do what I can to help you get yours working if I am able.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-16T19:29:30Z' class='post-time'>
+                    October 16, 2022,  7:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-17T03:20:38Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>// THIS PROGRAM IS LOADED ON MY PHOTON IN THE CAR!!!</p>
+<p>// This <span class="hashtag-raw">#include</span> statement was automatically added by the Particle IDE.<br>
+<span class="hashtag-raw">#include</span> carloop.h&gt;   %%%%%%%%%%%</p>
+<p><span class="hashtag-raw">#include</span> “application.h”<br>
+<span class="hashtag-raw">#include</span> “carloop/carloop.h”</p>
+<p>// Don’t block the main program while connecting to WiFi/cellular.  system_thread(enabled)<br>
+// This way the main program runs on the Carloop even outside of WiFi range.<br>
+// System_mode(manual) turns off wifi, immediately runs code.  Must put in safe mode to reflash!<br>
+// SAFEMODE= press both buttons, release reset when flashing magneta, then flash.<br>
+SYSTEM_MODE(MANUAL);<br>
+SYSTEM_THREAD(ENABLED);</p>
+<p>// Tell the program which revision of Carloop you are using.<br>
+Carloop CarloopRevision2&gt; carloop;%%%%%%%%%%%%%</p>
+<p>// Send a message at a regular time interval<br>
+void sendMessage() {<br>
+static uint32_t lastTransmitTime = 0;<br>
+uint32_t transmitInterval = 20; /* ms */<br>
+uint32_t now = millis();<br>
+if (now - lastTransmitTime &gt; transmitInterval) {<br>
+CANMessage message;</p>
+<pre><code>// This message (2C4) is Engine speed = 1674 RPM
+// A CAN message has an ID that identifies the content inside
+message.id = 0x2C4;
+
+// It can have from 0 to 8 data bytes
+message.len = 8;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x06;
+message.data[1] = 0x8A;
+message.data[2] = 0x00;
+message.data[3] = 0x19;
+message.data[4] = 0x00;
+message.data[5] = 0x00;
+message.data[6] = 0x92;
+message.data[7] = 0x09;
+
+// Send the message on the bus!
+carloop.can().transmit(message);
+
+ // This message(0B4) is Vehicle speed = 10MPH
+ // A CAN message has an ID that identifies the content inside
+message.id = 0x0B4;
+
+// It can have from 0 to 8 data bytes
+message.len = 8;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x00;
+message.data[1] = 0x00;
+message.data[2] = 0x00;
+message.data[3] = 0x00;
+message.data[4] = 0x8D;
+message.data[5] = 0x06;
+message.data[6] = 0x66;
+message.data[7] = 0xB5;
+
+// Send the message on the bus!
+carloop.can().transmit(message);
+
+lastTransmitTime = now;
+</code></pre>
+<p>}<br>
+}</p>
+<p>void setup() {<br>
+// Configure the CAN bus speed for 500 kbps, the standard speed for the OBD-II port.<br>
+// Other common speeds are 250 kbps and 1 Mbps.<br>
+// If you don’t call setCANSpeed, 500 kbps is used.<br>
+carloop.setCANSpeed(500000);</p>
+<p>// Connect to the CAN bus<br>
+carloop.begin();<br>
+}</p>
+<p>void loop() {<br>
+sendMessage();<br>
+}</p>
+<p>This is my current code in full, (where the %%%%%%% is you need to add a &lt; in front of carlooprevision2 and the carloop.h on the first include statement then delete the %%%%%%%%s.  I wasnt sure how to edit the code to show those lines correctly without doing it this way.<br>
+If you add the SYSTEM_MODE(MANUAL); line near the top of the code, your canloop will not connect to WiFi at all and will begin transmitting the data on the can almost immediately.  To get back into the canloop if you need to make changes to the code or programming you have to get the canloop to boot in safe mode by holding the reset button while powering up I believe.  So for testing purposes you can leave that line off (or type a // in front of it turning it from a command to a comment in the code) once your sure the assist level is where you’re happy with it and every thing seems to work you can go back in and change it back where it will turn off the WiFi and lock the canloop down for the long run.  That is how mine has been setup now for 3 years, although I took the EPS off for a year and a half and went back hydraulic due to a bad Prius part.  I eventually put the EPS back on (with a new Prius column motor/sensor) over a year ago and its been working flawlessly ever since</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/behodge.html'><span itemprop='name'>behodge</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-17T00:19:13Z' class='post-time'>
+                    October 17, 2022, 12:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-17T00:19:13Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is awesome thanks so much!  I’ve just got a couple more, probably dumb, questions.  I’m totally new to CAN.</p>
+<p>On the obd diagnostic port you added, is that just wired in to CAN high and low or are there ground/power wires that need to be wired in as well?</p>
+<p>I saw where you were using a can hitch, but I can’t find that available for sale anywhere. Is that something you got from carloop as well?</p>
+<p>Thanks!<br>
+Ben</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-17T02:40:20Z' class='post-time'>
+                    October 17, 2022,  2:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-17T02:40:20Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can help with the CAN part pretty well, I am an auto tech so I mess with these systems regularly, I will be a little slacking as far as the programming or hardware part goes, however LOL.</p>
+<p>For the CAN wiring, I got a Prius OBD2 connector(DLC).  I wired up the Prius EPS module’s three data wires to the OBD2 connector.  CAN H which is pin 1 on the EPS and black goes to pin 6 on the DLC.  CAN L pin 7 EPS white, goes to pin 14 directly below it.  SIL pin 2 EPS also white, goes to DLC pin 7 beside pin 6 it may not be needed but Toyota uses the SIL circuit for some flash programming I believe, so I hooked it up.  You’ll need battery hot to pin 16 on the DLC as well as a ground on pins 4 and 5 on the DLC for a scan tool to be able to power up and function.  You can make these wires as long or short as necessary to put the connector  where you want it but the CAN H &amp; L  wires need to be a twisted pair.  I have my CAN simulator, the EPS module and the DLC all mounted to the same bracket under my dash, so all my CAN wiring is less than 1 foot long.  You want DLC 16 to be battery hot not ignition too because you’ll need to switch the ignition power several times doing a torque sensor relearn and if the DLC is tied to Ignition power the scan tool will disconnect.  You can twist the wires easily if its a longer run by cutting the two wires long and clamping one end in a vise and chucking the other in a drill and spinning it slowly.  The CAN wiring MUST be twisted to prevent EMI or RFI interference.  You’ll need to have two 120 ohm resistors (terminating resistor) on each end  of the twisted wires also for the CAN to operate.  If your CAN simulator has a built in term resist then you only need to add one resistor.  The CAN hitch did not (or I didn’t take advantage of it if it did, I honestly cant remember at this point) so have a 120 resistor on each end of the twisted pair, soldered and heat shrinked in place,  then I came in an inch or so and skinned back the twisted wires and spliced the EPS module wiring in on one end the CAN simulator  an inch from the other end and the DLC can be tied in at one of those spots or anywhere in between (or even DLC on one end and the EPS and simulator on one end, CAN is flexible like that).</p>
+<p>As far as what I’ve been calling the CAN simulator, that is a Particle Photon WIFI development module the CAN Hitch, and a 5v buck convertor power supply all mounted inside a plastic project box that’s roughly 2" x 3" and 2" tall.  The Photon is the computer that you program with the code, it outputs a signal to the CAN Hitch, which converts the signal into a CAN message, and the 5v power supply is simply the guts from an old cigarette lighter cell phone charger, but you can buy a 12v to 5v buck convertor all over the place, including Amazon.   It takes the 12 to 15v from the car and converts it to 5v for the Photon to use as power, the Photon has a 3.3v output pin that sends the CAN Hitch its needed 3.3v input power.</p>
+<p>I did use the CAN Hitch with my setup, and I see it isn’t available anymore from Carloop.  I’m not sure the Particle Photon is available anymore either.  The Carloop CANHitch was really similar to this on Amazon: Waveshare Can module, AISN B00KM6XMXO.  I’m not sure if the mods will allow this since its not their product, If so I’m sorry, they can edit or delete this.  The Particle Photon may have a  replacement or substitute, or you could possibly use something like an Arduino instead.  That is about the limit of my electronics hardware knowledge unfortunately, and I’m not sure if the Waveshare module could use the Carlooop programming or if something there would need to be changed in the code.  Of course if you used something other that the Photon, some of the code would need to be changed as well since they would most likely use different library registers.  Which is the INCLUDE application and carloop lines in the code.</p>
+<p>This forum is pretty dead anymore, so I’m not sure anyone from carloop is still active, but they may have some more info about hardware or something that will work.</p>
+<p>The important part though is the message data and the time interval it is transmitted at in the code, so even if you use different hardware, you may be able to find someone to help you convert this code to work, unfortunately, that is also getting beyond my abilities, it has been over 25 years since I did any programming in high school:)</p>
+<p>If you need any other help or have any more questions, contact me here or in a PM.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-10-17T02:46:37Z' class='post-time'>
+                    October 17, 2022,  2:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-10-17T02:46:37Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Carloop Pro may be able to do everything the separate Photon and CANHitch did but I am not sure about that or the programming portions so maybe someone will answer that for us.</p>
+<p>If so you’ll either need to get two DLC connectors, one for the Carloop Pro and one for a scan tool, or figure out a way to bypass the Carloop DLC connector and hard wire your can wiring to it to just have one DLC.  But the CAN simulator will need to be attached and working to keep the EPS from defaulting to failsafe.  And you cannot re calibrate the EPS if it is in failsafe, so you cant unplug the Carloop to plug in a scan tool.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/behodge.html'><span itemprop='name'>behodge</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-04T20:11:48Z' class='post-time'>
+                    November 4, 2022,  8:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-04T20:11:48Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey TimC,</p>
+<p>Just wanted to let you know I ended up getting a photon and the Waveshare CAN board you listed and the steering column worked first try!  Thanks a lot for the help!  I only tested it on my bench, so I’ll still have to see if the assist level is good for me, but I expect it will be fine.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-04T21:20:24Z' class='post-time'>
+                    November 4, 2022,  9:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-04T21:20:24Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/behodge.html">@behodge</a>:</p>
+<p>That’s great news.  If you can hook up ignition “turn on” power to both the EPS module and the CAN simulator and it pretty much instantly has assist on the bench test it most likely works fine.  If the CAN was not transmitting properly, there would be the usual 5 or 10 second wait before the assist kicks in when you bench test it due to it being in the “fail safe mode”.  Just throwing that out there for anyone who stumbles on this thread in the future.</p>
+<p>Once you get it installed, come back here and post a follow up if you don’t mind, I’m interested in how your project turns out and all this may help other hot rodders in the future.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-18T20:05:35Z' class='post-time'>
+                    August 18, 2024,  8:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-18T20:48:48Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Since the Carloop stuff has been discontinued, and Particle has replaced the Photon with the Photon2 which has no native CAN on its board, requiring an external MCP25625 board to convert SPI to CAN, I started searching for a workaround.  I’ve got a solution that I’m still testing, but the prototype works on the bench.</p>
+<p>I used an ESP-32 board and Arduino IDE.  In particular, I bought this:<br>
+<a href="https://www.amazon.com/Development-Microcontroller-Integrated-Antenna-Amplifiers/dp/B09GK74F7N" class="inline-onebox" rel="noopener nofollow ugc">Amazon.com</a>, (AISN B09GK74F7N)  Which is  a ESP32-WROOM microcontroller, it replaces the Particle Photon which has been discontinued.</p>
+<p>I also bought this: <a href="https://www.amazon.com/SN65HVD230-CAN-Board-Communication-Development/dp/B00KM6XMXO" class="inline-onebox" rel="noopener nofollow ugc">Amazon.com</a> (AISN B00KM6XMXO)  Which replaces the Carloop CANHitch also discontinued.  This is a waveshare SN65HVD320 board which is basically 99% identical to the CANHitch.</p>
+<p>You’ll also need a buck converter to drop the car battery voltage to 5v for the ESP32.</p>
+<p>Wiring is simple, 5v in from the buck converter to the VIN pin on the ESP32, ground from the buck converter to the GND pin on the ESP32, 3v3 pin on ESP32 to the 3.3V pin on the SN65 board.  GND from ESP32 to GND on SN65.  ESP32 Pin D4 (gpio4) to SN65 CANRx pin, and ESP32 D5 (gpio5) to SN65 CANTx pin.</p>
+<p>The SN65 waveshare board has a 120 ohm terminating resistor onboard, so you’ll need to twist two wires together and attach them to the CAN H and CAN L terminals on the SN65.  At the other end you’ll need to solder another 120ohm resistor as the second terminating resistor.  Anywhere along the twisted pair (my twisted pair is only 1 foot long) you can splice in a OBD2 connector and the Prius EPS module.  OBD2 connector is only needed if you wish to be able to check for codes or recenter the torque sensor in the future, it will also need 12v Bat, not ignition on pin 16 and ground on pins 4 and 5, pin 6 is CAN H and 14 is CAN L on the OBD2.</p>
+<p>The buck converter will need an ignition hot 12v source and a ground.  It can tee into the igniton 12v input to the Pruis EPS module so they power up together.</p>
+<p>You’ll need to download the Arduino IDE, I’m running version 2.3.2.<br>
+Start a new sketch, name it CAN_simulator or similar.</p>
+<p>Follow online instructions about using a ESP32 board on Arduino, in the IDE, select Tools&gt;&gt;Board&gt;&gt;Boards Manager, and search ESP32 by Espressif Systems.  DO NOT INSTALL THE LATEST VERSION IT WILL GIVE COMPILE ERRORS!  Instead, install version 2.0.11 and refuse all updates.</p>
+<p>Then you have to pick the correct brand of ESP32 board, so go to: Tools&gt;&gt;Boards&gt;&gt;ESP32&gt;&gt;DOIT ESP32 DEVKIT V1, once the ESP32 is connected to the PC with a USB cable youll need to figure out which port it’s on and select the correct port as well.</p>
+<p>You can copy/ paste my code below.</p>
+<pre><code class="lang-auto">// Copyright (c) Sandeep Mistry. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// Modified code for EPAS CAN BUS simulator by Tim Capps.
+// This code will output a vehicle speed and rpm signal to bypass Gen2 Prius EPAS fail safe mode.
+
+// THIS CODE WORKS&gt;  INSTALLED 8/18/24 and tested.
+
+
+#include &lt;CAN.h&gt;
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+
+  // start the CAN bus at 500 kbps
+  if (!CAN.begin(500E3)) {
+    while (1);
+  }
+}
+
+void loop() {
+      
+  //Sending Engine RPM Data on CANBUS.  RPM doesnt need to change, just be above 0 to enable EPS.
+  CAN.beginPacket(0x2C4); //2C4 is engine speed, having engine speed reported causes EPS to power on immediately at key on.
+  CAN.write(0x06); //b1,    b1b2=rpm (maybe b1b2 - 400?)
+  CAN.write(0x8A); //b2,    so 068A = 1674rpm converting 68A in hex calculator to decimal (may have to subtract 400, not sure)
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x19); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x92); //extra data, not used by EPS
+  CAN.write(0x09); //checksum,  checksum=ID+length+sum of data, so 02+C4(ID)+08(length)+06+8A+00+19+00+00+92 = 209 in hex.  
+                    //Checksum only uses last 2 digits or last byte, so 209 means checksum is 09
+  CAN.endPacket(); //You can open calculator in Windows, click programming, click either hex or dec(imal) to convert hex to decimal or add hex for checksum.
+
+  //Sending Vehicle speed data on CANBUS.  Having a vehicle speed allows you to taylor the desired assist output and "dead zone" where there is no assist.
+  //It is possible to add code to make this CAN ID change with a speed (frequency) input to the ESP32 so it varies assist with Speed like OEM.  I don't have skills for that.
+  //Prius has 3 basic stages of assist (it varies in proportion to speed but there are "steps" not totally linear)
+  //    Step 1 is roughly 0-15mph, max assist and 0 "deadband"
+  //    Step 2 is roughly 15-45mph, medium assist and roughly 5 degree +/- straight ahead has reduced assist for more road feel "deadband"
+  //    Step 3 is roughly 45mph and above, minimum assist and roughly 10 degree +/- straight ahead has reduced assist "deadband"
+  CAN.beginPacket(0x0B4); //0B4 is vehicle speed, having engine speed reported causes EPS to power on immediately at key on.
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x00); //extra data, not used by EPS
+  CAN.write(0x8D); //counter that iterates from 00-FF (0-255 in decimal) in the stock Prius datastream it counts and resets.  It can remain static for this application.
+  CAN.write(0x06); //b6,    6th byte, speed=(b6 b7)*0.0062 in MPH
+  CAN.write(0x66); //b7,    7th byte, so 06(b6) 66(b7) in hex = 1638 in decimal, 1638 * 0.0062 = 10.15MPH
+  CAN.write(0xB5); //checksum,  checksum=ID+length+sum of data, so 00+B4(ID)+08(length)+00+00+00+00+8D+06+66 = 1B5 in hex.  
+                    //Checksum only uses last 2 digits or last byte, so 1B5 means checksum is B5
+  CAN.endPacket(); 
+  delay (20);
+
+}
+</code></pre>
+<p>You’ll need to install the correct libraries to get it to compile properly as well, you can search the Arduino IDE library manager for CAN by sandeep Mistry version 0.3.1 or go to git hub and download the code as a zip file and link to it from the IDE library manager.  The library git hub link is here: <a href="https://github.com/sandeepmistry/arduino-CAN.git" class="inline-onebox" rel="noopener nofollow ugc">GitHub - sandeepmistry/arduino-CAN: An Arduino library for sending and receiving data using CAN bus.</a></p>
+<p>Verify the code to see if there are compile errors if not verify/compile it to the ESP32 board and test it out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/halcyoncv.html'><span itemprop='name'>halcyoncv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-29T05:00:44Z' class='post-time'>
+                    August 29, 2024,  5:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-29T05:00:44Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>I think you should try modifying the <code>sendMessage</code> function to send both the RPM and VSS messages at regular intervals. Here’s an updated version of your code:</p>
+<pre><code class="lang-auto">// This #include statement was automatically added by the Particle IDE.
+#include &lt;carloop.h&gt;
+
+#include "application.h"
+#include "carloop/carloop.h"
+
+SYSTEM_THREAD(ENABLED);
+
+Carloop carloop;
+
+void sendMessage() {
+    static uint32_t lastTransmitTime = 0;
+    uint32_t transmitInterval = 100; /* ms */
+    uint32_t now = millis();
+
+    if (now - lastTransmitTime &gt; transmitInterval) {
+        CANMessage rpmMessage;
+        CANMessage vssMessage;
+
+        // RPM Message
+        rpmMessage.id = 0x2C4;
+        rpmMessage.len = 8;
+        rpmMessage.data[0] = 0x06;
+        rpmMessage.data[1] = 0x8A;
+        rpmMessage.data[2] = 0x00;
+        rpmMessage.data[3] = 0x19;
+        rpmMessage.data[4] = 0x00;
+        rpmMessage.data[5] = 0x00;
+        rpmMessage.data[6] = 0x92;
+        rpmMessage.data[7] = 0x09;
+        carloop.can().transmit(rpmMessage);
+
+        // VSS Message
+        vssMessage.id = 0x0B4;
+        vssMessage.len = 8;
+        vssMessage.data[0] = 0x00;
+        vssMessage.data[1] = 0x00;
+        vssMessage.data[2] = 0x00;
+        vssMessage.data[3] = 0x00;
+        vssMessage.data[4] = 0x8D;
+        vssMessage.data[5] = 0x06; // Adjust this for different MPH values
+        vssMessage.data[6] = 0x66; // Adjust this for different MPH values
+        vssMessage.data[7] = 0xB5;
+        carloop.can().transmit(vssMessage);
+
+        lastTransmitTime = now;
+    }
+}
+
+void setup() {
+    carloop.setCANSpeed(500000);
+    carloop.begin();
+}
+
+void loop() {
+    sendMessage();
+}
+
+</code></pre>
+<p>This code sends the RPM message and the VSS message in sequence, at intervals of 100 ms. You can adjust the <code>vssMessage.data[5]</code> and <code>vssMessage.data[6]</code> values to simulate different speeds. This should help you avoid the limp mode and get the desired assist level from the EPS module.</p>
+<p>I hope this help you <img src="../../images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-31T11:36:42Z' class='post-time'>
+                    August 31, 2024, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-31T11:36:42Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for the code <a class="mention" href="../../u/halcyoncv.html">@halcyoncv</a>.  It does look cleaner than the original code I posted years ago.  That original code has been working in my car since 2020 reliably, however the new particle stuff doesn’t have native CAN support, so I found a workaround solution, using the ESP32 board and the code I posted on Aug 18th.  That code has been working on my test bench with a 08 Prius EPS system.  I am also currently sniffing the CAN bus to add the code needed to turn on an EPS warning light if the Pruis EPS module has any codes set.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/JapMini.html'><span itemprop='name'>JapMini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-20T12:22:42Z' class='post-time'>
+                    September 20, 2024, 12:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-20T12:52:02Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/halcyoncv.html">@halcyoncv</a> can I connect a pot to adjust the VSS values so as to increase and decrease sensitivity of the EPS?  I just found this post and I’m completely new to ESP32 and CANBUS.  I’ve been searching for months for info on how to get this Toyota Yaris EPS column working so that I can install it in my classic mini.</p>
+<p><a class="mention" href="../../u/TimC.html">@TimC</a> Thanks for all the info.  I’m going to try your code and the code from halcyoncv.</p>
+<p><a class="mention" href="../../u/halcyoncv.html">@halcyoncv</a> and <a class="mention" href="../../u/TimC.html">@TimC</a> can I use the MCP2515 can bus transceiver module with the code above instead of the waveshare SN65HVD320?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-20T13:59:29Z' class='post-time'>
+                    September 20, 2024,  1:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-20T13:59:29Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The code i posted on Aug 18, 2024 uses a library that includes the MCP2515 so it should work, if it does please post the results for future users.  The original code from the top of this thread I’m not sure of.  The code i posted originally has been running in my car reliably since 2020 using the particle photon board and a carloop can hitch which is basically the SN65HVD320.  The most recent post on Aug 18 2024 also works on my test bench.  I wanted to be able to recreate everything if I had a failure and the Photon and the CanHitch have been discontinued.  Using the code from Aug 18 with an ESP32 board and either the SN65HVD320 or the MCP2515 should also work reliably.</p>
+<p>You could add a pot to adjust the assist level or even use a speed sensor like the Prius/Yaris did originally, but the code as it is written wont support that, it will need modifying that is above my coding ability to read the inputs from the board and modify the can output code to vary the assist.</p>
+<p>That said you can use the current code and change the b6 and b7 bytes per the formula listed in the comments on my code to change between the different assist levels to see what works best for you.  My heavy American muscle car with a big V8 needs the max assist level to drive comfortably, so I left mine with b6 = 06 and b7 = 66 in hex, which is the equivalent of 10 mph.  You may find your Mini is happier with a higher speed and less assist.  You can always change the code and reflash until you are happy with the results.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/DSM_WISEMAN.html'><span itemprop='name'>DSM_WISEMAN</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-28T16:29:19Z' class='post-time'>
+                    October 28, 2024,  4:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-28T16:29:19Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey TIM,</p>
+<p>I made the profile on here so that I could reply to you, is there any way I could get in contact with you? Im in the process of doing the Prius EPS on my car, and I’ve tried the GPS kit some company offers, but because of the delays, I want to integrate it directly from my cars VSS, can you help me out in doing so? Either VSS or speedo on the gauge cluster… Would be amazing if you could help me out, I’m willing to pay for your help…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-29T12:20:01Z' class='post-time'>
+                    October 29, 2024, 12:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-29T12:20:01Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Unfortunately that is beyond my ability.  It is possible to do but I was stretching my programming knowledge to accomplish what I have.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/DSM_WISEMAN.html'><span itemprop='name'>DSM_WISEMAN</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-29T12:34:12Z' class='post-time'>
+                    October 29, 2024, 12:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-29T12:34:12Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there a way we could make it happen the same way you made your own? Im willing to pay for your help, but I really need this to work properly</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="856-1.html?page=2">next page ?</a></b></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

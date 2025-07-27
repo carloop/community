@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Question on Fuel Trim calculation for PID&#39;s 6-9</title>
+    <link>https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865</link>
+    <description>Hello. I am trying to figure out which one of two formulas to calculate the Fuel trim is correct for PID&#39;s 6-9.  In various sources I find fuelTrim = (100/128)A - 100.  In other sources I find  fuelTrim=A/1.28 - 100.  And in additional sources, I find both ways as options.  Since (A/1.28)-100 is not equal to (100/128)A-100, which formula is correct? Am I missing a key piece of info here that will help me determine which formula is correct or show that both are correct?  Thanks in advance for your feedback.</description>
+    
+    <lastBuildDate>Tue, 30 Apr 2019 11:52:08 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Question on Fuel Trim calculation for PID&#39;s 6-9</title>
+        <dc:creator><![CDATA[gi_unplugged]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello. I am trying to figure out which one of two formulas to calculate the Fuel trim is correct for PID’s 6-9.  In various sources I find fuelTrim = (100/128)A - 100.  In other sources I find  fuelTrim=A/1.28 - 100.  And in additional sources, I find both ways as options.  Since (A/1.28)-100 is not equal to (100/128)A-100, which formula is correct? Am I missing a key piece of info here that will help me determine which formula is correct or show that both are correct?  Thanks in advance for your feedback.</p>
+          <p><a href="https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865/1</link>
+        <pubDate>Tue, 30 Apr 2019 11:52:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-865-1</guid>
+        <source url="https://community.carloop.io/t/question-on-fuel-trim-calculation-for-pids-6-9/865.rss">Question on Fuel Trim calculation for PID&#39;s 6-9</source>
+      </item>
+  </channel>
+</rss>

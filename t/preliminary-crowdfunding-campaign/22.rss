@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>[Preliminary] Crowdfunding campaign</title>
+    <link>https://community.carloop.io/t/preliminary-crowdfunding-campaign/22</link>
+    <description>We are working with Crowd Supply, a crowdfunding site with a focus on open-source projects, to bring the Carloop devkit to production.
+
+https://www.crowdsupply.com/carloop/carloop
+
+As the beginning of the campaign gets nearer we will update this post with more information.</description>
+    
+    <lastBuildDate>Tue, 29 Nov 2016 04:46:15 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>[Preliminary] Crowdfunding campaign</title>
+        <dc:creator><![CDATA[makerken]]></dc:creator>
+        <description><![CDATA[
+            <p>Specs please, I can see serious effort into making this, but on the store page looking to make an impulse buy I should be able to tell:</p>
+<p>There are different Electron models 2G and two 3G, the picture shows a U260 which is Americas/Aus 3G. On the Electron page it says “We offer two types of Electron 3G Kits” but there isn’t a selection. Confirmation?</p>
+<p>It seems like the GPS module is the GP-635T, how does it preform deployed under the dash? If not great, then a uFL  breakout as well would be nice. A smarter person than I would be able to use the GPS data, and calibrate a magnetometer and then use it for directional information, not sure the value is there for everyone.</p>
+<p>A battery to ‘retain the satellite data’ to help with GPS fix times.</p>
+<p>Better Carloop library documentation and marketing, I can look at the code and kinda see what it does. Engine error code explanations, RPM, engine temperature etc. example getEngineCoolantTemp();</p>
+<p>Would the Asset Tracker I have be able to work? I haven’t looked at what pins are used.</p>
+<p>An accelerometer.</p>
+<p>An example trip logging project.</p>
+<p>For your consideration, thanks!</p>
+          <p><a href="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/4</link>
+        <pubDate>Tue, 29 Nov 2016 04:46:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-22-4</guid>
+        <source url="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22.rss">[Preliminary] Crowdfunding campaign</source>
+      </item>
+      <item>
+        <title>[Preliminary] Crowdfunding campaign</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>We pulled out of the Crowd Supply campaign and we are preparing for Carloop next gen.   Any particular requests for Carloop’s next gen?</p>
+          <p><a href="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/3</link>
+        <pubDate>Fri, 25 Nov 2016 19:07:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-22-3</guid>
+        <source url="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22.rss">[Preliminary] Crowdfunding campaign</source>
+      </item>
+      <item>
+        <title>[Preliminary] Crowdfunding campaign</title>
+        <dc:creator><![CDATA[jbynum]]></dc:creator>
+        <description><![CDATA[
+            <p>Any update on this?  The link above gives a 404.</p>
+          <p><a href="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/2</link>
+        <pubDate>Fri, 25 Nov 2016 18:00:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-22-2</guid>
+        <source url="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22.rss">[Preliminary] Crowdfunding campaign</source>
+      </item>
+      <item>
+        <title>[Preliminary] Crowdfunding campaign</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>We are working with Crowd Supply, a crowdfunding site with a focus on open-source projects, to bring the Carloop devkit to production.</p>
+<p><a href="https://www.crowdsupply.com/carloop/carloop" class="onebox" target="_blank" rel="noopener">https://www.crowdsupply.com/carloop/carloop</a></p>
+<p>As the beginning of the campaign gets nearer we will update this post with more information.</p>
+          <p><a href="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/preliminary-crowdfunding-campaign/22/1</link>
+        <pubDate>Mon, 28 Mar 2016 23:25:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-22-1</guid>
+        <source url="https://community.carloop.io/t/preliminary-crowdfunding-campaign/22.rss">[Preliminary] Crowdfunding campaign</source>
+      </item>
+  </channel>
+</rss>

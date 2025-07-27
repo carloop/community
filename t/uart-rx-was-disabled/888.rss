@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>UART RX was disabled</title>
+    <link>https://community.carloop.io/t/uart-rx-was-disabled/888</link>
+    <description>Hardware: Electron with Carloop GPS/CAN
+Particle OS: 1.2.1rc2
+
+I have a very basic test app that enables GPS and spews its output to serial. However, I am seeing repeated frame errors in the output, like in the following:
+
+```
+$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GPGSV,1,1,00*79
+$GLGSV,1,1,00*65
+$GNGLL,,,,,,V,N*7A
+$GNTXT,01,01,01,More than 100 frame errors, UART RX was disabled*70
+$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+```
+
+Am I doing something wrong, or is this a known issue? Does this impact behavior/performance? I&#39;m also not able to ever get a GPS fix — I&#39;ve even tried letting it run outside for a couple of hours with no luck.
+
+Thanks,
+Jason</description>
+    
+    <lastBuildDate>Thu, 13 Jun 2019 20:15:16 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/uart-rx-was-disabled/888.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>UART RX was disabled</title>
+        <dc:creator><![CDATA[jgosnell]]></dc:creator>
+        <description><![CDATA[
+            <p>I probably wasn’t clear enough here — by “basic test app”, I took the “carloop_minimal” example that comes with the Carloop library and stripped out everything but the GPS-related stuff. It enables GPS, opens the Serial1 port, and reads from Serial1/echoes to Serial.</p>
+<p>This is what produces the output above, with the frame errors, and it never gets a fix.</p>
+<p>I’ve been playing around with a different library (UbloxM8Q_GPS) that does a bit more configuration by sending a series of UBX messages to the receiver on startup. With it, I’m able to get a fix in around ten minutes or so outdoors with a clear view of the sky.</p>
+<p>Revisiting my original question, it seems like simply enabling GPS and then reading from it isn’t enough configuration to get the receiver to work.</p>
+<p>Jason</p>
+          <p><a href="https://community.carloop.io/t/uart-rx-was-disabled/888/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/uart-rx-was-disabled/888/2</link>
+        <pubDate>Thu, 13 Jun 2019 20:15:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-888-2</guid>
+        <source url="https://community.carloop.io/t/uart-rx-was-disabled/888.rss">UART RX was disabled</source>
+      </item>
+      <item>
+        <title>UART RX was disabled</title>
+        <dc:creator><![CDATA[jgosnell]]></dc:creator>
+        <description><![CDATA[
+            <p>Hardware: Electron with Carloop GPS/CAN<br>
+Particle OS: 1.2.1rc2</p>
+<p>I have a very basic test app that enables GPS and spews its output to serial. However, I am seeing repeated frame errors in the output, like in the following:</p>
+<pre><code class="lang-auto">$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+$GPGSV,1,1,00*79
+$GLGSV,1,1,00*65
+$GNGLL,,,,,,V,N*7A
+$GNTXT,01,01,01,More than 100 frame errors, UART RX was disabled*70
+$GNRMC,,V,,,,,,,,,,N*4D
+$GNVTG,,,,,,,,,N*2E
+$GNGGA,,,,,,0,00,99.99,,,,,,*56
+$GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+</code></pre>
+<p>Am I doing something wrong, or is this a known issue? Does this impact behavior/performance? I’m also not able to ever get a GPS fix — I’ve even tried letting it run outside for a couple of hours with no luck.</p>
+<p>Thanks,<br>
+Jason</p>
+          <p><a href="https://community.carloop.io/t/uart-rx-was-disabled/888/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/uart-rx-was-disabled/888/1</link>
+        <pubDate>Mon, 10 Jun 2019 17:42:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-888-1</guid>
+        <source url="https://community.carloop.io/t/uart-rx-was-disabled/888.rss">UART RX was disabled</source>
+      </item>
+  </channel>
+</rss>

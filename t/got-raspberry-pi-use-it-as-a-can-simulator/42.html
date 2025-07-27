@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Got Raspberry Pi? use it as a CAN simulator - Carloop Community</title>
+    <meta name="description" content="In order to debug Carloop without getting in and out of the car, @jvanier came up with a really cool tool.  The Carloop CAN Simulator.  That is what I call it anyways, but it is so cool!  If you’ve got a Raspberry Pi lyi&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="42.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="cBy78ZRWgYwRMKI0K2wo355cU">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="cBy78ZRWgYwRMKI0K2wo355cU"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Got Raspberry Pi? use it as a CAN simulator&#39;" href="42.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/got-raspberry-pi-use-it-as-a-can-simulator/42">
+<meta name="twitter:url" content="/t/got-raspberry-pi-use-it-as-a-can-simulator/42">
+<meta property="og:title" content="Got Raspberry Pi? use it as a CAN simulator">
+<meta name="twitter:title" content="Got Raspberry Pi? use it as a CAN simulator">
+<meta property="og:description" content="In order to debug Carloop without getting in and out of the car, @jvanier came up with a really cool tool.  The Carloop CAN Simulator.  That is what I call it anyways, but it is so cool!  If you’ve got a Raspberry Pi lying around, this is your opportunity to make it into a full fledged CAN simulator.  CAN Simulator hardware CAN Simulator software">
+<meta name="twitter:description" content="In order to debug Carloop without getting in and out of the car, @jvanier came up with a really cool tool.  The Carloop CAN Simulator.  That is what I call it anyways, but it is so cool!  If you’ve got a Raspberry Pi lying around, this is your opportunity to make it into a full fledged CAN simulator.  CAN Simulator hardware CAN Simulator software">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="4 ?">
+<meta property="article:published_time" content="2016-05-13T19:21:54+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="42.html">Got Raspberry Pi? use it as a CAN simulator</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Got Raspberry Pi? use it as a CAN simulator'>
+      <link itemprop='url' href='42.html'>
+      <meta itemprop='datePublished' content='2016-05-13T19:21:54Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="42.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-05-13T19:21:54Z' class='post-time'>
+                    May 13, 2016,  7:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-02T04:23:58Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In order to debug Carloop without getting in and out of the car, <a class="mention" href="../../u/jvanier.html">@jvanier</a> came up with a really cool tool.  The Carloop CAN Simulator.  That is what I call it anyways, but it is so cool!  If you’ve got a Raspberry Pi lying around, this is your opportunity to make it into a full fledged CAN simulator.</p>
+<h3><a name="can-simulator-hardwarehttpsgithubcomcarloopsimulator-1" class="anchor" href="#can-simulator-hardwarehttpsgithubcomcarloopsimulator-1"></a><a href="https://github.com/carloop/simulator">CAN Simulator hardware</a></h3>
+<h3><a name="can-simulator-softwarehttpsgithubcomcarloopsimulator-program-2" class="anchor" href="#can-simulator-softwarehttpsgithubcomcarloopsimulator-program-2"></a><a href="https://github.com/carloop/simulator-program">CAN Simulator software</a></h3>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="2">
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/santa2015.html'><span itemprop='name'>santa2015</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-30T08:09:54Z' class='post-time'>
+                    May 30, 2016,  8:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-30T08:09:54Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ol>
+<li>where can I find more info on how to setup (HW and SW) this CAN simulator? I guess I need a Raspberry Pi + Carloop attached via USB to the Raspberry =&gt; CAN traffic generator/simulator, right?</li>
+<li>Is there any configuration file on how to start/stop the CAN simulator service?</li>
+<li>What type of CAN messages will I get (i.e. Random)?</li>
+<li>Is it possible to simulate a CAN network with RPi (1) + Carloop and sniff the traffic with another RPi (2) + PiCAN (from Skpang) connected via SPI ?</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/subbu.html'><span itemprop='name'>subbu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-01T18:01:38Z' class='post-time'>
+                    June 1, 2016,  6:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-01T18:01:38Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/alanm">@alanm</a>, can you include some details on how I can get the Raspberry Pi CAN simulator running ( maybe here or a readme file on the github). I have a first gen Pi and would like to use it as a simulator.</p>
+<p>Regards,<br>
+Subbu</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-02T04:23:20Z' class='post-time'>
+                    June 2, 2016,  4:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-02T04:23:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all,</p>
+<p>I wrote up some information about the hardware and software for the simulator.</p>
+<h3><a name="hardware-infohttpsgithubcomcarloopsimulator-1" class="anchor" href="#hardware-infohttpsgithubcomcarloopsimulator-1"></a><a href="https://github.com/carloop/simulator">Hardware info</a></h3>
+<h3><a name="software-infohttpsgithubcomcarloopsimulator-program-2" class="anchor" href="#software-infohttpsgithubcomcarloopsimulator-program-2"></a><a href="https://github.com/carloop/simulator-program">Software info</a></h3>
+<p>The software is currently sending hard coded messages and printing messages it receives to the console. If you have suggestions of what would be useful, please write it here.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/subbu.html'><span itemprop='name'>subbu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-02T07:32:46Z' class='post-time'>
+                    June 2, 2016,  7:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-02T07:32:46Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks a lot <a class="mention" href="../../u/jvanier.html">@jvanier</a> for the detailed information.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="2">
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/tteague.html'><span itemprop='name'>tteague</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-20T01:01:31Z' class='post-time'>
+                    October 20, 2017,  1:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-20T01:01:31Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I built up a couple of the simulators, but I am having SPI issues.<br>
+There have been some recent changes with overlays in Raspbian.</p>
+<p>Would you mind posting the changes you made to your config.txt?</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-22T04:55:46Z' class='post-time'>
+                    October 22, 2017,  4:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-22T04:55:46Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have not spent enough time with my RPi3 to have an answer for you.<br>
+<a class="mention" href="../../u/jvanier.html">@jvanier</a> may know more, but appears to be really busy with work at Particle.<br>
+Maybe try the Raspberry Pi forums have some clues in the meantime?<br>
+<a href="https://www.raspberrypi.org/forums/" class="onebox" target="_blank" rel="noopener">https://www.raspberrypi.org/forums/</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/tteague.html'><span itemprop='name'>tteague</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-10-24T05:19:28Z' class='post-time'>
+                    October 24, 2017,  5:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-10-24T05:19:28Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Alright. Thanks for getting back to me. I will see where I can get.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/maleficarum'><span itemprop='name'>maleficarum</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-10T04:54:32Z' class='post-time'>
+                    April 10, 2018,  4:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-10T04:54:32Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all.</p>
+<p>Perhaps this is a very simple question with a very simple response, but I can’t figure out how to assemble the OBD extension cable; I know that is explained in the github README, but this is a little bit confussing for me:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056.png" data-download-href="//carloop-community.dyndns.org/uploads/default/796a693b1cad5f00996ccd5351c1c65ebae3c056" title="Screen Shot 2018-04-09 at 11.51.24 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056_2_690x34.png" width="690" height="34" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056_2_690x34.png,//carloop-community.dyndns.org/uploads/default/original/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056.png,//carloop-community.dyndns.org/uploads/default/original/1X/796a693b1cad5f00996ccd5351c1c65ebae3c056.png" data-dominant-color="E8E9E9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2018-04-09 at 11.51.24 PM.png</span><span class="informations">901×45 9.04 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>How the cable has to be connected to the simulator PCB ?</p>
+<p>Thanks for the support.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-13T14:03:43Z' class='post-time'>
+                    April 13, 2018,  2:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-13T14:03:43Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/maleficarum">@maleficarum</a>,</p>
+<p>From the Github readme, this is the picture:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/carloop/simulator/blob/master/simulator.png">
+  <header class="source">
+
+      <a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">carloop/simulator/blob/master/simulator.png</a></h4>
+
+
+  This file is binary. <a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">show original</a>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The picture shows the orientation of the OBD2 connector, the cable and the simulator PCB.<br>
+If you look closely at the picture, you can see there is a gap on the right (upper in the picture) side; this is where the pin not connected is.  Keep the cable to the left (lower in the picture) side so there is no gap, so that it matches the picture.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/asb.html'><span itemprop='name'>asb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-08-29T18:58:50Z' class='post-time'>
+                    August 29, 2018,  6:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-08-29T18:59:23Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi!<br>
+I have 2 quick questions:</p>
+<ol>
+<li>
+<p>how do we connect the OBD II port to the CAN-Simulator_v1.1?<br>
+The OBD cable in the link has an OBD port on both sides. The repo says i should cut it and connect it, but I am a bit confused. should the cable be soldered to the board? Can you please elaborate on this point?</p>
+</li>
+<li>
+<p>Regarding soldering the Pololu 12V Step-Up Voltage Regulator U3V12F12 and the other components  to the CAN-Simulator_v1.1, is the part reference in the BOM considered the location on the board where it should be soldered to? if yes, where are the STANDOFF 1 through 4 positions?</p>
+</li>
+</ol>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/asb.html'><span itemprop='name'>asb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-02T06:12:53Z' class='post-time'>
+                    September 2, 2018,  6:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-02T06:12:53Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi! Have you managed to resolve that issue?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-09-25T20:23:56Z' class='post-time'>
+                    September 25, 2018,  8:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-09-25T20:23:56Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/asb.html">@asb</a>,</p>
+<ol>
+<li></li>
+</ol>
+<p>It should look like this when it is done:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/carloop/simulator/blob/master/simulator.png">
+  <header class="source">
+
+      <a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">carloop/simulator/blob/master/simulator.png</a></h4>
+
+
+  This file is binary. <a href="https://github.com/carloop/simulator/blob/master/simulator.png" target="_blank" rel="noopener">show original</a>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The cable on the left side has a USB connector on one end and is attached to the CAN simulator PCB (the purpole board) on the other end.</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>The STANDOFF positions are the large holes drilled in the PCB.  There are no parts required.<br>
+If you want to mount the PCB inside a case or enclosure, then standoffs are the usual mounting hardware used to do this.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can&#39;t read any OBDII data</title>
+    <link>https://community.carloop.io/t/cant-read-any-obdii-data/879</link>
+    <description>I have an electron connected to my carloop. I&#39;m not able to read any CAN data. The red LED lights up when I have it connected to the OBDII port, and I can connect to the the electron, but it doesn&#39;t seem to read any data from any of my cars. I tried the example VIN reader app, and it couldn&#39;t even do that. I upgraded the device OS from 0.5.4 to 1.1.0 
+
+Any ideas?</description>
+    
+    <lastBuildDate>Sat, 25 May 2019 19:57:36 +0000</lastBuildDate>
+    <category>Troubleshooting</category>
+    <atom:link href="https://community.carloop.io/t/cant-read-any-obdii-data/879.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can&#39;t read any OBDII data</title>
+        <dc:creator><![CDATA[chanson]]></dc:creator>
+        <description><![CDATA[
+            <p>Vehicle info: Tried on my 2009 Acura TSX and my 2005 Jeep Wrangler. No go.</p>
+          <p><a href="https://community.carloop.io/t/cant-read-any-obdii-data/879/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/cant-read-any-obdii-data/879/2</link>
+        <pubDate>Sat, 25 May 2019 19:57:36 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-879-2</guid>
+        <source url="https://community.carloop.io/t/cant-read-any-obdii-data/879.rss">Can&#39;t read any OBDII data</source>
+      </item>
+      <item>
+        <title>Can&#39;t read any OBDII data</title>
+        <dc:creator><![CDATA[chanson]]></dc:creator>
+        <description><![CDATA[
+            <p>I have an electron connected to my carloop. I’m not able to read any CAN data. The red LED lights up when I have it connected to the OBDII port, and I can connect to the the electron, but it doesn’t seem to read any data from any of my cars. I tried the example VIN reader app, and it couldn’t even do that. I upgraded the device OS from 0.5.4 to 1.1.0</p>
+<p>Any ideas?</p>
+          <p><a href="https://community.carloop.io/t/cant-read-any-obdii-data/879/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/cant-read-any-obdii-data/879/1</link>
+        <pubDate>Sat, 25 May 2019 19:47:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-879-1</guid>
+        <source url="https://community.carloop.io/t/cant-read-any-obdii-data/879.rss">Can&#39;t read any OBDII data</source>
+      </item>
+  </channel>
+</rss>

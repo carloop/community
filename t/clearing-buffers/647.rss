@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Clearing Buffers</title>
+    <link>https://community.carloop.io/t/clearing-buffers/647</link>
+    <description>Hello, I am just getting started with Carloop and was able to get up and running pretty quickly.  However, I have run into an issue when I am trying to read the most recent value on the CANbus.  My code transmits a request for a parameter, then I try to read the response.  
+
+The code below works however, it appears it gives me the oldest value in the buffer instead of the most recent one.  I put in a 1 second for loop that works but is inefficient.  Is there a way to clear out the buffer?  Or is there another issue with my code.
+    for (unsigned long start = millis(); millis() - start &lt; 1000;){
+        carloop.update();
+        CANMessage messageread;
+    
+         if (carloop.can().receive(messageread)){
+
+            if (messageread.id == 0x18EFF82E) {
+                Serial.print(messageread.data[4], HEX);
+                STread = messageread.data[4], HEX;
+            }
+        }
+    
+    }
+
+The output I get in the serial monitor is below (the value is transmitted every 500ms and changed from 0 to 1 prior to calling this function).  Thanks in advance for any help.
+
+&lt;img src=&quot;/uploads/default/original/1X/5161bed968788ef9ca3149d0215c0aa38f21da9b.png&quot; width=&quot;296&quot; height=&quot;429&quot;&gt;</description>
+    
+    <lastBuildDate>Wed, 23 May 2018 11:49:10 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/clearing-buffers/647.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Clearing Buffers</title>
+        <dc:creator><![CDATA[cachen]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the tips, I found the issue, it was related to multiple parameters being reported using the same message id.  The first two bytes of data were identifying the parameter.  Once I changed it so I was looking for that message id plus the first two data bytes everything worked as expected.</p>
+<p>Thanks for the help.</p>
+          <p><a href="https://community.carloop.io/t/clearing-buffers/647/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/clearing-buffers/647/4</link>
+        <pubDate>Wed, 23 May 2018 11:49:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-647-4</guid>
+        <source url="https://community.carloop.io/t/clearing-buffers/647.rss">Clearing Buffers</source>
+      </item>
+      <item>
+        <title>Clearing Buffers</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cachen">@cachen</a> ,</p>
+<p>The source code for the VIN request sample is here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/carloop/app-vin-reader">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/carloop/app-vin-reader" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/576f66cc51318e668d219322b32ca8f35b7d0941_2_690x345.png" class="thumbnail" data-dominant-color="F4F0F2" width="690" height="345"></div>
+
+<h3><a href="https://github.com/carloop/app-vin-reader" target="_blank" rel="noopener">GitHub - carloop/app-vin-reader: VIN reader</a></h3>
+
+  <p>VIN reader. Contribute to carloop/app-vin-reader development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>As <a class="mention" href="https://community.carloop.io/u/dubb45">@dubb45</a> says<br>
+You need to wait until the message you are looking for arrives.<br>
+Also, there could be other messages on the CANbus that are not the message you are interested in.</p>
+          <p><a href="https://community.carloop.io/t/clearing-buffers/647/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/clearing-buffers/647/3</link>
+        <pubDate>Wed, 23 May 2018 03:55:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-647-3</guid>
+        <source url="https://community.carloop.io/t/clearing-buffers/647.rss">Clearing Buffers</source>
+      </item>
+      <item>
+        <title>Clearing Buffers</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Take a look at the “VIN request” sample app.<br>
+You need to add a loop for the data.</p>
+          <p><a href="https://community.carloop.io/t/clearing-buffers/647/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/clearing-buffers/647/2</link>
+        <pubDate>Tue, 22 May 2018 15:57:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-647-2</guid>
+        <source url="https://community.carloop.io/t/clearing-buffers/647.rss">Clearing Buffers</source>
+      </item>
+      <item>
+        <title>Clearing Buffers</title>
+        <dc:creator><![CDATA[cachen]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, I am just getting started with Carloop and was able to get up and running pretty quickly.  However, I have run into an issue when I am trying to read the most recent value on the CANbus.  My code transmits a request for a parameter, then I try to read the response.</p>
+<p>The code below works however, it appears it gives me the oldest value in the buffer instead of the most recent one.  I put in a 1 second for loop that works but is inefficient.  Is there a way to clear out the buffer?  Or is there another issue with my code.<br>
+for (unsigned long start = millis(); millis() - start &lt; 1000;){<br>
+carloop.update();<br>
+CANMessage messageread;</p>
+<pre><code>     if (carloop.can().receive(messageread)){
+
+        if (messageread.id == 0x18EFF82E) {
+            Serial.print(messageread.data[4], HEX);
+            STread = messageread.data[4], HEX;
+        }
+    }
+
+}
+</code></pre>
+<p>The output I get in the serial monitor is below (the value is transmitted every 500ms and changed from 0 to 1 prior to calling this function).  Thanks in advance for any help.</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/5161bed968788ef9ca3149d0215c0aa38f21da9b.png" width="296" height="429"></p>
+          <p><a href="https://community.carloop.io/t/clearing-buffers/647/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/clearing-buffers/647/1</link>
+        <pubDate>Tue, 22 May 2018 14:21:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-647-1</guid>
+        <source url="https://community.carloop.io/t/clearing-buffers/647.rss">Clearing Buffers</source>
+      </item>
+  </channel>
+</rss>

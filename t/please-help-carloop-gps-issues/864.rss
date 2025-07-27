@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Please help! Carloop GPS Issues</title>
+    <link>https://community.carloop.io/t/please-help-carloop-gps-issues/864</link>
+    <description>Hello,
+
+I am working on getting **real-time GPS coordinates** using the [Carloop GPS Unit] (https://store.carloop.io/products/carloop-gps?variant=4846877966372).  I have it connected to the Carloop OBD + Particle Electron and I can grab current car speed from CAN messages but the GPS is not valid for me.
+
+The code I&#39;m trying this with is basically:
+
+    auto &amp;gps = carloop.gps();
+    WITH_LOCK(gps) {
+        if (gps.location.isValid()) {
+          float lat = gps.location.lat();    //get latitude and longitude
+          float lon = gps.location.lng();
+          slocation = String(lat) + &quot;,&quot; + String(lon);
+          Serial.println(slocation);
+        }
+        else {
+          Serial.println(&quot;GPS not valid&quot;);
+        }
+    }
+
+I can&#39;t tell what I am doing wrong and I&#39;ve been at this for several days.  Perhaps it is something wrong with how I&#39;m connecting the GPS unit to the rest of the OBD?  Or the fact that the GPS unit is hidden underneath the wheel because it has to be a part of the OBD?  
+
+&lt;img src=&quot;/uploads/default/original/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819.JPG&quot; width=&quot;375&quot; height=&quot;500&quot;&gt;
+
+Any input or advice would be MUCH appreciated!</description>
+    
+    <lastBuildDate>Tue, 07 May 2019 18:48:15 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/please-help-carloop-gps-issues/864.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Please help! Carloop GPS Issues</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>That is great to hear.  If you have a picture of your setup it might be helpful.  I think <a class="mention" href="https://community.carloop.io/u/tmitchell">@tmitchell</a> is running into a similar issue.</p>
+          <p><a href="https://community.carloop.io/t/please-help-carloop-gps-issues/864/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/please-help-carloop-gps-issues/864/3</link>
+        <pubDate>Tue, 07 May 2019 18:48:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-864-3</guid>
+        <source url="https://community.carloop.io/t/please-help-carloop-gps-issues/864.rss">Please help! Carloop GPS Issues</source>
+      </item>
+      <item>
+        <title>Please help! Carloop GPS Issues</title>
+        <dc:creator><![CDATA[jjanelee97]]></dc:creator>
+        <description><![CDATA[
+            <p>Solved.</p>
+<p>The code works, it was just a matter of getting jumper wires so you can place the gps unit on top of the dashboard and have the OBD still connected underneath the dashboard.  It still takes a minute or so to receive GPS data.</p>
+          <p><a href="https://community.carloop.io/t/please-help-carloop-gps-issues/864/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/please-help-carloop-gps-issues/864/2</link>
+        <pubDate>Tue, 07 May 2019 00:52:24 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-864-2</guid>
+        <source url="https://community.carloop.io/t/please-help-carloop-gps-issues/864.rss">Please help! Carloop GPS Issues</source>
+      </item>
+      <item>
+        <title>Please help! Carloop GPS Issues</title>
+        <dc:creator><![CDATA[jjanelee97]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I am working on getting <strong>real-time GPS coordinates</strong> using the [Carloop GPS Unit] (<a href="https://store.carloop.io/products/carloop-gps?variant=4846877966372">https://store.carloop.io/products/carloop-gps?variant=4846877966372</a>).  I have it connected to the Carloop OBD + Particle Electron and I can grab current car speed from CAN messages but the GPS is not valid for me.</p>
+<p>The code I’m trying this with is basically:</p>
+<pre><code>auto &amp;gps = carloop.gps();
+WITH_LOCK(gps) {
+    if (gps.location.isValid()) {
+      float lat = gps.location.lat();    //get latitude and longitude
+      float lon = gps.location.lng();
+      slocation = String(lat) + "," + String(lon);
+      Serial.println(slocation);
+    }
+    else {
+      Serial.println("GPS not valid");
+    }
+}
+</code></pre>
+<p>I can’t tell what I am doing wrong and I’ve been at this for several days.  Perhaps it is something wrong with how I’m connecting the GPS unit to the rest of the OBD?  Or the fact that the GPS unit is hidden underneath the wheel because it has to be a part of the OBD?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819" title="IMG_4655.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819_2_562x750.JPG 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/fd4ed9f63075e0539a5bc3e1ad68cbfe34ccc819_2_750x1000.JPG 2x" data-dominant-color="836852"></a></div><p></p>
+<p>Any input or advice would be MUCH appreciated!</p>
+          <p><a href="https://community.carloop.io/t/please-help-carloop-gps-issues/864/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/please-help-carloop-gps-issues/864/1</link>
+        <pubDate>Tue, 30 Apr 2019 05:12:02 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-864-1</guid>
+        <source url="https://community.carloop.io/t/please-help-carloop-gps-issues/864.rss">Please help! Carloop GPS Issues</source>
+      </item>
+  </channel>
+</rss>

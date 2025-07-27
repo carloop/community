@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Honda B-CAN and Carloop - Carloop Community</title>
+    <meta name="description" content="My 2012 Honda Odyssey has two CAN systems, one is High Speed CAN and one is Low Speed CAN.  In Hondaspeak, high speed CAN is called F-CAN and low speed CAN is called B-CAN and it runs at 125 kbps.   B-CAN controls “less &amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="152.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="2CvH2ssypV0k7T3STGXIT2VMX">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="2CvH2ssypV0k7T3STGXIT2VMX"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Honda B-CAN and Carloop&#39;" href="152.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_999x1024.jpg">
+<meta property="og:image" content="/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_999x1024.jpg">
+<meta property="og:url" content="/t/honda-b-can-and-carloop/152">
+<meta name="twitter:url" content="/t/honda-b-can-and-carloop/152">
+<meta property="og:title" content="Honda B-CAN and Carloop">
+<meta name="twitter:title" content="Honda B-CAN and Carloop">
+<meta property="og:description" content="My 2012 Honda Odyssey has two CAN systems, one is High Speed CAN and one is Low Speed CAN.  In Hondaspeak, high speed CAN is called F-CAN and low speed CAN is called B-CAN and it runs at 125 kbps.   B-CAN controls “less important” things like climate control, audio, door locks, the blind spot indication system, and so on.  B-CAN connects to HS-CAN via the instrument cluster.  Interestingly, you can pull B-CAN error codes without a scan tool.  As far as I can tell, there is no diagnostic connecto...">
+<meta name="twitter:description" content="My 2012 Honda Odyssey has two CAN systems, one is High Speed CAN and one is Low Speed CAN.  In Hondaspeak, high speed CAN is called F-CAN and low speed CAN is called B-CAN and it runs at 125 kbps.   B-CAN controls “less important” things like climate control, audio, door locks, the blind spot indication system, and so on.  B-CAN connects to HS-CAN via the instrument cluster.  Interestingly, you can pull B-CAN error codes without a scan tool.  As far as I can tell, there is no diagnostic connecto...">
+<meta property="article:published_time" content="2016-10-25T15:27:07+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="next" href="152-1.html?page=2">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="152.html">Honda B-CAN and Carloop</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Honda B-CAN and Carloop'>
+      <link itemprop='url' href='152.html'>
+      <meta itemprop='datePublished' content='2016-10-25T15:27:06Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="152.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb.jpg">
+
+              <span class="crawler-post-infos">
+                  <time datetime='2016-10-25T15:27:07Z' class='post-time'>
+                    October 25, 2016,  3:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-25T15:27:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>My 2012 Honda Odyssey has two CAN systems, one is High Speed CAN and one is Low Speed CAN.  In Hondaspeak, high speed CAN is called F-CAN and low speed CAN is called B-CAN and it runs at 125 kbps.   B-CAN controls “less important” things like climate control, audio, door locks, the blind spot indication system, and so on.  B-CAN connects to HS-CAN via the instrument cluster.  Interestingly, you can pull B-CAN error codes without a scan tool.</p>
+<p>As far as I can tell, there is no diagnostic connector for B-CAN, so I would have to tap into the system by splicing wires and cobbling it together with a Carloop.</p>
+<p>Should be a fun project, looking forward to posting some results.</p>
+<p>Below is a picture showing some of the systems controlled by F-CAN and what is controlled by B-CAN.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb" title="Screen Shot 2016-10-24 at 11.33.35 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_488x500.jpg" width="488" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_488x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_732x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/05dd7c4faba120312a4a8ebc50d9219f18aa7ddb_2_976x1000.jpg" data-dominant-color="F1F1F1"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-10-24 at 11.33.35 PM.jpg</span><span class="informations">1320×1352 292 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879.JPG">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T22:19:54Z' class='post-time'>
+                    November 10, 2016, 10:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T22:19:54Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So I took a crack at this today.  I disconnected the parking sensor module which has B-CAN H and B-CAN L and I tried to tap into the connection as shown below.</p>
+<p>Unfortunately this did not work.  I set the speed to 125 kbit/s in socketcan and received no data.</p>
+<p>Is there a more elegant way to use the Carloop when not using the OBD pins?  As in does CAN-H / CAN-L break out somewhere else on the board?</p>
+<p>Will try again later and put a multimeter on it to see if I’m getting 2.5V.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/f3d2a1d6a5b74689a73985dd2447dde1737a1879" title="IMG_2366.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879_2_375x500.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879_2_562x750.JPG,//carloop-community.dyndns.org/uploads/default/original/1X/f3d2a1d6a5b74689a73985dd2447dde1737a1879.JPG" data-dominant-color="292928"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_2366.JPG</span><span class="informations">600×800 84.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72" title="IMG_2367.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72_2_375x500.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72_2_562x750.JPG,//carloop-community.dyndns.org/uploads/default/original/1X/34dc1f0fbccdd3e5fa51c9b4c43b77acb6754f72.JPG" data-dominant-color="65574C"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_2367.JPG</span><span class="informations">600×800 85 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f" title="IMG_2365.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f_2_375x500.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f_2_562x750.JPG,//carloop-community.dyndns.org/uploads/default/original/1X/ffb8fa4b5082d92f7e3d85a2b76aec1a89c5568f.JPG" data-dominant-color="52504E"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_2365.JPG</span><span class="informations">600×800 135 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T23:54:43Z' class='post-time'>
+                    November 10, 2016, 11:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T23:54:43Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice work, <a class="mention" href="../../u/clemoyne.html">@clemoyne</a>!  I would recommend using one of our OBD-II female connectors.  We will be publishing a bunch of new accessories on our store next week that makes this kind of work MUCH more enjoyable!</p>
+<p>Stay tuned!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-11T03:40:54Z' class='post-time'>
+                    November 11, 2016,  3:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-11T03:58:15Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice to know about offering more stuff in the store!</p>
+<p>As for my B-CAN work, I did just read the following from a<a href="http://digital.ni.com/public.nsf/allkb/84210794086E9C0886256C1C006BE6AE" rel="noopener nofollow ugc"> post on CAN standards</a>.</p>
+<blockquote>
+<p>Low Speed/Fault Tolerant CAN offers baud rates from 40 Kbit/s to 125 Kbits/sec. This standard allows CAN bus communication to continue in case of a wiring failure on the CAN bus lines. In low speed/fault tolerant CAN networks, each device has its own termination.</p>
+</blockquote>
+<p>Looks like that means I have to put a termination resistors on the Carloop (from B-CAN H to Ground and B-CAN L to Ground).  Maybe that is why I was not receiving anything!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/12894933b762d776d9957ccbc9a53f48e09c0d06.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-11T04:09:16Z' class='post-time'>
+                    November 11, 2016,  4:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-11T04:21:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hmm, this might be a problem:</p>
+<p>From  <a href="http://inst.cs.berkeley.edu/~ee249/fa08/Lectures/handout_canbus2.pdf" rel="noopener nofollow ugc">http://inst.cs.berkeley.edu/~ee249/fa08/Lectures/handout_canbus2.pdf</a></p>
+<blockquote>
+<p>For Low-Speed CAN, each device on the network needs a termination resistor for<br>
+each data line: R(RTH) for CAN H and R(RTL) for CAN L. Unlike the High-Speed<br>
+CAN, Low-Speed CAN requires termination on the transceiver rather than on the cable.<br>
+Figure 3 indicates where the termination resistors should be placed on a single-wire,<br>
+low-speed CAN network (The National Instruments Single-Wire CAN hardware includes<br>
+a built-in 9.09 kohm load resistor.)</p>
+</blockquote>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/12894933b762d776d9957ccbc9a53f48e09c0d06.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/12894933b762d776d9957ccbc9a53f48e09c0d06" title="Screen Shot 2016-11-10 at 11.07.24 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/12894933b762d776d9957ccbc9a53f48e09c0d06_2_690x202.jpg" width="690" height="202" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/12894933b762d776d9957ccbc9a53f48e09c0d06_2_690x202.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/12894933b762d776d9957ccbc9a53f48e09c0d06_2_1035x303.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/12894933b762d776d9957ccbc9a53f48e09c0d06_2_1380x404.jpg" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-11-10 at 11.07.24 PM.jpg</span><span class="informations">1516×444 57.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Maybe the way to tackle is to tap into the B-CAN wires so the Carloop is just sniffing data.  I tried using the Carloop as a termination which probably won’t work with low speed fault tolerant CAN.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-11T16:39:58Z' class='post-time'>
+                    November 11, 2016,  4:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-11T16:39:58Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good news: I managed to tap into the B-CAN lines at the heated seat module and record some data.</p>
+<p>The bad news is that the data is not really decodable.  I could not find any patterns, as the values are constantly changing.  Here are a couple videos showing what I found with cansniffer:</p>
+<p><a href="../../s/files/1/0915/1182/files/bcan_recording_1.mov?8798411789595733549" rel="noopener nofollow ugc">B-Can recording 1</a></p>
+<p><a href="../../s/files/1/0915/1182/files/bcan_recording_2.mov?8798411789595733549" rel="noopener nofollow ugc">B-Can recording 2</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-11T19:57:07Z' class='post-time'>
+                    November 11, 2016,  7:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-11T19:57:07Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just curious, does <a class="mention" href="../../u/jvanier.html">@jvanier</a>’s  socketcan serial app support  CAN messages with extended 29 bit arbitration ID’s?</p>
+<p>I am pretty sure that Honda B-can uses extended ID’s.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-16T01:53:02Z' class='post-time'>
+                    November 16, 2016,  1:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-16T01:53:02Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Today I managed to access BCAN using a USB CAN device.  It turns out that cansniffer does not work with extended 29 bit arbitration ID’s.  When I ran cansniffer nothing would happen, but with candump I was able to get some data.  When I played back the data with canplayer, I could get doors to lock/unlock, lights to flash, and the heated seats to turn on and off.<br>
+So I am still not sure if Carloop’s socketcan app will work with 29 bit ID’s, will have to try that later.  For now glad that I managed to hack into the body CAN system on my Honda!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-16T04:03:15Z' class='post-time'>
+                    November 16, 2016,  4:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-16T04:03:15Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great work! I’m quite sure that can-utils also works with 29 bit IDs.  We’ve been pretty busy but I’d love to help out on this project!  Sounds like you are making great progress, <a class="mention" href="../../u/clemoyne.html">@clemoyne</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-28T19:07:46Z' class='post-time'>
+                    July 28, 2017,  7:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-28T19:07:46Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey guys, long time no post.  I have picked up my project again and am making good progress…more on that soon.</p>
+<p>I was still wondering if socketcan-serial can handle 29 bit arbitration ID’s.</p>
+<p>I was able to successfully figure out some messages sent by a Blind Spot Indication module that I picked up when I analyzed it with a USB2CAN.  I have tried doing the same thing with a Carloop using socketcan-serial and I am not reading getting any messages off the bus.  It is low speed can (125 kbit) so I changed the speed from s6 to s4 in the slcand command, but it still doesn’t seem to pickup these 29 bit ID’s</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-29T04:07:49Z' class='post-time'>
+                    July 29, 2017,  4:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-29T04:07:49Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hey <a class="mention" href="../../u/clemoyne.html">@clemoyne</a>,<br>
+Great to have you back! Yes, you can get 29 bit arbitration IDs using <code>candump</code> as oppossed to <code>cansniffer</code>.</p>
+<p><code>cansniffer</code> doesn’t yet have the 29-bit arbitration ID implemented.  See the issue brought up in 2016 on can-utils repo: <a href="https://github.com/linux-can/can-utils/issues/30" class="inline-onebox">cansniffer filtering · Issue #30 · linux-can/can-utils · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-30T17:50:52Z' class='post-time'>
+                    July 30, 2017,  5:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-30T18:12:36Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Alan,</p>
+<p>Actually my question this time was whether socketcan-serial works with 29 bit ID’s on a Carloop.  Do I need to add “message.extended = true” to the socketcan_serial.ino file?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f.JPG">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-30T18:07:13Z' class='post-time'>
+                    July 30, 2017,  6:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-30T18:07:13Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Also here’s an update on my project.</p>
+<p>This all started because I purchased a metric cluster for our 2012 Odyssey, and the cluster was showing an error for the blind spot indication (BSI) system, which our van does not have.  I discovered that the BSI system is on the low speed 125 kbps B-CAN fbus.</p>
+<p>In the interest of science, I purchased the BSI module for our van off eBay.  I figured out the pinout from the shop manual, connected the pins for power, ground, BCAN H/L, and the mirror indicators, and I powered it up.  <div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f" title="BSI_module.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_375x500.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_562x750.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/1ab1b7e2b4f195c07fa1a81edfc86504b8ee555f_2_750x1000.JPG"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">BSI_module.JPG</span><span class="informations">3024×4032 2.37 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+I knew it was working because on boot the LED’s for the mirrors lit up.  Using my USB2CAN, I ran CANDUMP and saw the following 29-bit messages:
+<p>(1501182476.597224) can0 1610FF9F#<br>
+(1501182476.601778) can0 12F8AC9F#09<br>
+(1501182476.901628) can0 12F8AC9F#09<br>
+(1501182477.201563) can0 12F8AC9F#09<br>
+(1501182477.501585) can0 12F8AC9F#09<br>
+(1501182479.601400) can0 12F8AC9F#09<br>
+(1501182479.621410) can0 12F8AC9F#08<br>
+(1501182479.921487) can0 12F8AC9F#08<br>
+(1501182480.101490) can0 12F8AC9F#11<br>
+(1501182480.401726) can0 12F8AC9F#11<br>
+(1501182480.591237) can0 1610FF9F#<br>
+(1501182480.701417) can0 12F8AC9F#11<br>
+(1501182481.001430) can0 12F8AC9F#11<br>
+(1501182481.301328) can0 12F8AC9F#11</p>
+<p>I haven’t figured out what 1610FF9F# means, but I did discover that 12F8AC9F#08 indicates everything is OK, 12F8AC9F#09 turns on just the BSI warning light to indicate self test (while starting the car), and 12F8AC9F#11 indicates a fault.</p>
+<p>Armed with this information, I created a carloop transmit script that send the “BSI is OK” 12F8AC9F#08 message every 20 milliseconds.  The message is sent to the bus via the B-CAN lines under the passenger seat, and I am powering the Photon via USB on switched power so I don’t have to worry about battery drain. Voila, no more BSI errors!</p>
+<p>void loop() {<br>
+// Send a message at a regular time interval<br>
+unsigned long now = millis();<br>
+if (now - lastTransmitTime &gt; transmitInterval) {<br>
+CANMessage message;<br>
+// A CAN message has an ID that identifies the content inside<br>
+message.id = 0x12F8AC9F;<br>
+message.extended = true;<br>
+// It can have from 0 to 8 data bytes<br>
+message.len = 1;<br>
+// Pass the data to be transmitted in the data array<br>
+message.data[0] = 0x08;<br>
+// Send the message on the bus!<br>
+carloop.can().transmit(message);<br>
+lastTransmitTime = now;<br>
+}<br>
+}</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-31T03:55:05Z' class='post-time'>
+                    July 31, 2017,  3:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-31T03:55:05Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/alanm">@alanm</a>, I think this one is for you (there is more than one Alan here <img src="//carloop-community.dyndns.org/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20">)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/yuvch.html'><span itemprop='name'>yuvch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-25T20:38:10Z' class='post-time'>
+                    July 25, 2018,  8:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-25T20:38:10Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/clemoyne.html">@clemoyne</a> , I am trying to figure out a way to control A/C that’s on my navigation unit I am planning to replace with a carpc. Heres the connecter (DISPLAY UNIT CONNECTER A (5P)) that gives the navigation unit A/C control: <a href="https://www.manualslib.com/manual/939368/Honda-2004-Odyssey.html?page=2034#manual" class="inline-onebox" rel="noopener nofollow ugc">Honda 2004 Odyssey Service Manual (Page 2034 of 2459) | ManualsLib</a> .</p>
+<p>I’m a newbie at this, I assume that the connecter is linked in with B-CAN. How would I capture the data I’d need from there?</p>
+<p>Maybe I should do something similiar to what you did with your BSI system. Take out the Navigation unit and connect it to my own CAN Network, replay the data to my car. I seriously doubt it would work with a nav unit tho.</p>
+<p>If only the stinkin a/c controls weren’t in the nav</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-25T20:59:59Z' class='post-time'>
+                    July 25, 2018,  8:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-25T20:59:59Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Based on the pinouts it does not look like the 2004 Odyssey uses CAN for either of these modules.  You would see BCAN_H / BCAN_L or something like that on the pinout of one of the connectors.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/yuvch.html'><span itemprop='name'>yuvch</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-26T06:47:45Z' class='post-time'>
+                    July 26, 2018,  6:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-26T06:47:45Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You’re absolutely right. I just realised that the CAN bus standard was implemented after 2007.</p>
+<p>It uses the ISO9141 protocol but I’m not sure if the nav or climate control module are even using that.</p>
+<p>I’ll have to do some more research. Thanks for pointing that out, idk how it flew over my head</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-31T02:38:44Z' class='post-time'>
+                    July 31, 2018,  2:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-31T02:38:44Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I doubt that ISO9141 would interface with the nav or climate control.<br>
+Back in those days, those systems were typically discrete and not integrated together.<br>
+As a guess, the only thing on the ISO9141 are the OBD2 and re-flashing the engine control mapping.</p>
+<p>Most likely, the climate controls are mechanical, with levers, louvres and mechanical thermostats; there is probably no software there at all.</p>
+<p>The navigation system is most likely a plug-in replacement for the usual radio/stereo system.  It likely has only connections for power, speakers and the antennae (radio &amp; GPS).</p>
+<p>That being said, I am still working on CarloopRetro, which is intended to do ISO9141.<br>
+An oscilloscope just arrived, so I can now look into signal integrity in my prototyping.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/nokoa.html'><span itemprop='name'>nokoa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-10T18:02:13Z' class='post-time'>
+                    January 10, 2020,  6:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-10T18:02:13Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I know this is an old thread, but I couldn’t find an answer for this. I am trying to hook into the B-CAN to hopefully control the ac. I am trying to do this on a 2017 Honda Accord, it has soft AC buttons. I am not sure where to exactly find access to B-CAN, can I access it through the motorized driver seat? I saw that previously someone accessed it through the option connector, but I couldn’t find it on the fuse box.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-10T19:29:04Z' class='post-time'>
+                    January 10, 2020,  7:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-10T19:29:04Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, I was able to access B-CAN at the wiring for our heated seat module.  Really you could do this at any module that has a B-CAN connection.  Please be sure to let us know if you are able to successfully control HVAC over B-CAN!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><b><a rel="next" itemprop="url" href="152-1.html?page=2">next page ?</a></b></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

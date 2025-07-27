@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+    <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104</link>
+    <description>Here is a really complete list of CAN IDs for a bunch of different vehicles: which is found on opengarages.org fantastic resource.
+
+Mazda: http://www.madox.net/blog/projects/mazda-can-bus/
+Ford Mondeo: http://www.electronicsworkshop.eu/FordMondeoCANhacking
+Toyota Prius: http://www.vassfamily.net/ToyotaPrius/CAN/PriusCodes.xls | http://students.asl.ethz.ch/upl_pdf/151-report.pdf
+Toyota Camry: [need link]
+Toyota in general: [need link]
+Mini cooper: https://www.defcon.org/images/defcon-21/dc-21-presentations/Staggs/DEFCON-21-Staggs-How-to-Hack-Your-Mini-Cooper-WP.pdf
+Ford: https://groups.google.com/forum/#!topic/openxc/FrZA8-pDs6A
+Ford Radius: https://docs.google.com/spreadsheets/d/1aqWTyXr4O9Fnjt_ZvojrrKbXVxQZ8Ms7isXg39QUh70/edit#gid=0
+Jeep Wrangler: http://chadgibbons.com/2013/12/29/hacking-the-jeep-interior-can-bus/
+Dodge: http://tucrrc.utulsa.edu/DodgeCAN.html
+Ducati Panigale (bike): https://docs.google.com/spreadsheets/d/1-NJ9OlGQYTGMzBzwDPYn-aI_7_ign9SCiscKZufx3Uw/edit?pli=1
+BMW http://www.carx24.de/E65_Codes.xls
+Subaru Diesel: https://subdiesel.wordpress.com/ecu-analysis/can-messages/
+Nissan: https://github.com/Knio/carhack/blob/master/Cars/Nissan.markdown
+Honda: https://github.com/Knio/carhack/blob/master/Cars/Honda.markdown
+Bmw: http://web.archive.org/web/20041204074622/www.openbmw.org/bus/ | http://www.loopybunny.co.uk/CarPC/k_can.html
+GMLAN: https://docs.google.com/spreadsheets/d/1qEwOXSr3bWoc2VUhpuIam236OOZxPc2hxpLUsV0xkn0/edit?usp=sharing</description>
+    
+    <lastBuildDate>Thu, 25 Feb 2021 17:01:49 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Other than open-dbc repo from comma, I don’t know where to find that, sorry!</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/13</link>
+        <pubDate>Thu, 25 Feb 2021 17:01:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-13</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[dariush_abbasi868]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi<br>
+I am looking for Mercedes Benz truck message IDs and also its data</p>
+<p>I have found that it is 11-bit can and 500kb<br>
+I also logged dome IDs in bus which I do not know them and their data</p>
+<p>6B4   6B5  4A0 4A1  4F0  4F1  3B4  3B5</p>
+<p>could you please help me in this mater</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/12</link>
+        <pubDate>Mon, 22 Feb 2021 05:54:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-12</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[Tijani87]]></dc:creator>
+        <description><![CDATA[
+            <p>Any suggestions as to where to start I’m new into car hacking</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/11</link>
+        <pubDate>Wed, 01 May 2019 00:46:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-11</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/keven">@keven</a> check out <a href="https://github.com/commaai/opendbc" class="inline-onebox">GitHub - commaai/opendbc: democratize access to car decoder rings</a> - they don’t have specific for the Chevy Bolt but you might be able to test the definitions for the gm_global platforms.</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/10</link>
+        <pubDate>Wed, 06 Mar 2019 02:21:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-10</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[keven]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/zachary">@zachary</a>, <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a> ,<br>
+Do you know where can I find the CAN ID for the Chevrolet bolt?<br>
+If you have the can id, I can pay for it.</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/9</link>
+        <pubDate>Fri, 15 Feb 2019 00:57:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-9</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[keven]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/cyclin_al1">@cyclin_al1</a><br>
+ok, thank you. I have cracked some can id, but there are still 1~2 ID not cracked.   If you know someone has cracked the can bus signal, I can pay for it.</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/8</link>
+        <pubDate>Fri, 15 Feb 2019 00:55:34 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-8</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/keven">@keven</a>,<br>
+I think you are going to have to find that yourself, unless someone else on this community is also working on a Bolt.</p>
+<p>Maybe start by trying these:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.chevybolt.org">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/dc1830acf100506227cb5a6de890ab98774a143d.png" class="site-icon" data-dominant-color="F4AE03" width="32" height="32">
+
+      <a href="https://www.chevybolt.org" target="_blank" rel="noopener">Chevy Bolt EV Forum</a>
+  </header>
+
+  <article class="onebox-body">
+    <img width="360" height="360" src="//carloop-community.dyndns.org/uploads/default/original/1X/bd9365076eda439bf2c38d4068d7f07f79c55ed5.png" class="thumbnail onebox-avatar" data-dominant-color="F5B720">
+
+<h3><a href="https://www.chevybolt.org" target="_blank" rel="noopener">Chevy Bolt EV Forum</a></h3>
+
+  <p>We’re the Largest Chevy Bolt EV Online Community and Owner's Club. Join to discuss sport mode, reviews, battery range and charging!</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.mychevybolt.com/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/ebdfce871f894543321a8ca86f2b13f8ff9acdda.png" class="site-icon" data-dominant-color="6887BA" width="251" height="251">
+
+      <a href="https://www.mychevybolt.com/" target="_blank" rel="noopener">Chevy Bolt EV Forum</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/144;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/1929ba29b1d3539fe307b604d9c2198c117ba474_2_690x144.png" class="thumbnail" data-dominant-color="637FAF" width="690" height="144"></div>
+
+<h3><a href="https://www.mychevybolt.com/" target="_blank" rel="noopener">Chevy Bolt EV Forum</a></h3>
+
+  <p>Forum and Owners Group for the Chevy Bolt EV</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.insideevsforum.com/community/index.php?forums%2Fbolt-ev.34%2F">
+  <header class="source">
+
+      <a href="https://www.insideevsforum.com/community/index.php?forums%2Fbolt-ev.34%2F" target="_blank" rel="noopener">Inside EVS Forum</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/81;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/8bbe28b1633a5c48a2c780e6fafda6bc418ccbed.png" class="thumbnail" data-dominant-color="003602" width="690" height="81"></div>
+
+<h3><a href="https://www.insideevsforum.com/community/index.php?forums%2Fbolt-ev.34%2F" target="_blank" rel="noopener">Bolt EV</a></h3>
+
+  <p>Join the Bolt EV discussion to chat with electric vehicle owners and enthusiasts around the globe.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/7</link>
+        <pubDate>Thu, 14 Feb 2019 17:06:08 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-7</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[keven]]></dc:creator>
+        <description><![CDATA[
+            <p>Do you know where can I find the CAN ID for the Chevrolet bolt?</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/6</link>
+        <pubDate>Thu, 14 Feb 2019 05:15:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-6</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/keven">@keven</a>,</p>
+<p>The lists were found on <a href="http://OpenGarages.org">OpenGarages.org</a><br>
+Take a look at the last link in the first post of this thread … the entry there is for GMLAN.</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/5</link>
+        <pubDate>Sat, 02 Feb 2019 03:37:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-5</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[keven]]></dc:creator>
+        <description><![CDATA[
+            <p>Where did you find the CAN ID lists, where can I find the CAN ID of GM or Chevrolet?   Do you have a CAN ID for the Chevrolet bolt?</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/4</link>
+        <pubDate>Sat, 02 Feb 2019 03:33:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-4</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[zachary]]></dc:creator>
+        <description><![CDATA[
+            <p>Found the Staggs paper from DEFCON about hacking a MINI Cooper:<br>
+<a href="https://www.defcon.org/images/defcon-21/dc-21-presentations/Staggs/DEFCON-21-Staggs-How-to-Hack-Your-Mini-Cooper-WP.pdf" class="onebox" target="_blank" rel="noopener nofollow ugc">https://www.defcon.org/images/defcon-21/dc-21-presentations/Staggs/DEFCON-21-Staggs-How-to-Hack-Your-Mini-Cooper-WP.pdf</a></p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/3</link>
+        <pubDate>Fri, 19 Aug 2016 21:35:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-3</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[zachary]]></dc:creator>
+        <description><![CDATA[
+            <p>Such a great list! <img src="//carloop-community.dyndns.org/images/emoji/twitter/thumbsup.png?v=12" title=":thumbsup:" class="emoji" alt=":thumbsup:" loading="lazy" width="20" height="20"></p>
+<p>Unfortunately, the <img src="//carloop-community.dyndns.org/images/emoji/twitter/red_car.png?v=12" title=":red_car:" class="emoji" alt=":red_car:" loading="lazy" width="20" height="20"> MINI Cooper link gives a 404. <img src="//carloop-community.dyndns.org/images/emoji/twitter/frowning2.png?v=12" title=":frowning2:" class="emoji" alt=":frowning2:" loading="lazy" width="20" height="20"> <img src="//carloop-community.dyndns.org/images/emoji/twitter/panda_face.png?v=12" title=":panda_face:" class="emoji" alt=":panda_face:" loading="lazy" width="20" height="20"></p>
+<p>Looks like the Camry, general Toyota, and Dodge links do too.</p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/2</link>
+        <pubDate>Fri, 19 Aug 2016 21:32:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-2</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+      <item>
+        <title>List of CAN ID descriptions (from OpenGarages.org)</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Here is a really complete list of CAN IDs for a bunch of different vehicles: which is found on <a href="http://opengarages.org">opengarages.org</a> fantastic resource.</p>
+<p>Mazda: <a href="http://www.madox.net/blog/projects/mazda-can-bus/" class="inline-onebox">Mazda CAN Bus – Madox.NET</a><br>
+Ford Mondeo: <a href="http://www.electronicsworkshop.eu/FordMondeoCANhacking" class="inline-onebox">Ford Mondeo CAN bus hacking | www.electronicsworkshop.eu</a><br>
+Toyota Prius: <a href="http://www.vassfamily.net/ToyotaPrius/CAN/PriusCodes.xls" class="inline-onebox">vassfamily.net&nbsp;-&nbsp;This website is for sale!&nbsp;-&nbsp;vassfamily Resources and Information.</a> | <a href="http://students.asl.ethz.ch/upl_pdf/151-report.pdf" class="inline-onebox">Authentication User | ETH Zurich</a><br>
+Toyota Camry: [need link]<br>
+Toyota in general: [need link]<br>
+Mini cooper: <a href="https://www.defcon.org/images/defcon-21/dc-21-presentations/Staggs/DEFCON-21-Staggs-How-to-Hack-Your-Mini-Cooper-WP.pdf">https://www.defcon.org/images/defcon-21/dc-21-presentations/Staggs/DEFCON-21-Staggs-How-to-Hack-Your-Mini-Cooper-WP.pdf</a><br>
+Ford: <a href="https://groups.google.com/forum/#!topic/openxc/FrZA8-pDs6A" class="inline-onebox">Redirecting to Google Groups</a><br>
+Ford Radius: <a href="https://docs.google.com/spreadsheets/d/1aqWTyXr4O9Fnjt_ZvojrrKbXVxQZ8Ms7isXg39QUh70/edit#gid=0" class="inline-onebox">FordRadioCanIds - Google Sheets</a><br>
+Jeep Wrangler: <a href="http://chadgibbons.com/2013/12/29/hacking-the-jeep-interior-can-bus/" class="inline-onebox">Hacking the Jeep Interior CAN-Bus | Chad Gibbons’ Blog</a><br>
+Dodge: <a href="http://tucrrc.utulsa.edu/DodgeCAN.html">http://tucrrc.utulsa.edu/DodgeCAN.html</a><br>
+Ducati Panigale (bike): <a href="https://docs.google.com/spreadsheets/d/1-NJ9OlGQYTGMzBzwDPYn-aI_7_ign9SCiscKZufx3Uw/edit?pli=1">https://docs.google.com/spreadsheets/d/1-NJ9OlGQYTGMzBzwDPYn-aI_7_ign9SCiscKZufx3Uw/edit?pli=1</a><br>
+BMW <a href="http://www.carx24.de/E65_Codes.xls">http://www.carx24.de/E65_Codes.xls</a><br>
+Subaru Diesel: <a href="https://subdiesel.wordpress.com/ecu-analysis/can-messages/">https://subdiesel.wordpress.com/ecu-analysis/can-messages/</a><br>
+Nissan: <a href="https://github.com/Knio/carhack/blob/master/Cars/Nissan.markdown" class="inline-onebox">carhack/Cars/Nissan.markdown at master · Knio/carhack · GitHub</a><br>
+Honda: <a href="https://github.com/Knio/carhack/blob/master/Cars/Honda.markdown" class="inline-onebox">carhack/Cars/Honda.markdown at master · Knio/carhack · GitHub</a><br>
+Bmw: <a href="http://web.archive.org/web/20041204074622/www.openbmw.org/bus/">http://web.archive.org/web/20041204074622/www.openbmw.org/bus/</a> | <a href="http://www.loopybunny.co.uk/CarPC/k_can.html" class="inline-onebox">CarPC Install</a><br>
+GMLAN: <a href="https://docs.google.com/spreadsheets/d/1qEwOXSr3bWoc2VUhpuIam236OOZxPc2hxpLUsV0xkn0/edit?usp=sharing" class="inline-onebox">GMLan_Bible - Google Sheets</a></p>
+          <p><a href="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104/1</link>
+        <pubDate>Tue, 16 Aug 2016 20:43:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-104-1</guid>
+        <source url="https://community.carloop.io/t/list-of-can-id-descriptions-from-opengarages-org/104.rss">List of CAN ID descriptions (from OpenGarages.org)</source>
+      </item>
+  </channel>
+</rss>

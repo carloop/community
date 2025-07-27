@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Not Communicating with Vehicle’s OBD-II Port</title>
+    <link>https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420</link>
+    <description>Hello
+
+I recently set up my Carloop device and followed the initial setup guide; but I’m having trouble getting it to communicate with my vehicle’s OBD-II port. :upside_down_face:
+
+The device powers on correctly when plugged in, and I can connect it to my computer, but I’m not receiving any data from the car’s ECU. I’ve tried using different vehicles to rule out compatibility issues, but the problem persists. :upside_down_face:
+
+I have double-checked my connections and verified that the CAN library is correctly installed. I’ve also attempted to send basic requests to the OBD-II system but am not getting any response. Could this be due to specific vehicle manufacturer restrictions / is there a common troubleshooting step I might be missing? :thinking: I have checked https://carloop.dyndns.org/c/getting-started/5 [Azure](https://www.igmguru.com/cloud-computing/microsoft-azure-solution-architect-az-300-training) guide for reference . 
+
+Has anyone else encountered this issue when getting started with Carloop? I’d appreciate any advice on debugging this connection issue and ensuring that my setup is correctly configured. 
+
+Thanks in advance! :slightly_smiling_face:</description>
+    
+    <lastBuildDate>Fri, 31 Jan 2025 08:41:05 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop Not Communicating with Vehicle’s OBD-II Port</title>
+        <dc:creator><![CDATA[keral]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello</p>
+<p>I recently set up my Carloop device and followed the initial setup guide; but I’m having trouble getting it to communicate with my vehicle’s OBD-II port. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>The device powers on correctly when plugged in, and I can connect it to my computer, but I’m not receiving any data from the car’s ECU. I’ve tried using different vehicles to rule out compatibility issues, but the problem persists. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>I have double-checked my connections and verified that the CAN library is correctly installed. I’ve also attempted to send basic requests to the OBD-II system but am not getting any response. Could this be due to specific vehicle manufacturer restrictions / is there a common troubleshooting step I might be missing? <img src="https://carloop.dyndns.org/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"> I have checked <a href="https://carloop.dyndns.org/c/getting-started/5" class="inline-onebox">Getting Started - Carloop Community</a> <a href="https://www.igmguru.com/cloud-computing/microsoft-azure-solution-architect-az-300-training" rel="noopener nofollow ugc">Azure</a> guide for reference .</p>
+<p>Has anyone else encountered this issue when getting started with Carloop? I’d appreciate any advice on debugging this connection issue and ensuring that my setup is correctly configured.</p>
+<p>Thanks in advance! <img src="https://carloop.dyndns.org/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420/1</link>
+        <pubDate>Fri, 31 Jan 2025 08:41:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1420-1</guid>
+        <source url="https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420.rss">Carloop Not Communicating with Vehicle’s OBD-II Port</source>
+      </item>
+  </channel>
+</rss>

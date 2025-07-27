@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Battery charge % on Ioniq EV</title>
+    <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883</link>
+    <description>Hey,
+
+This will be my first car interfacing project so far. My plan is to be able to remotely monitor the battery percentage on my Hyundai Ioniq EV.
+
+1)Has anybody ever tried to do such a thing? I know it&#39;s possible since  there is another project out there called EVNotify that uses off the shelf OBD2 dongles and with a custom android app, reads battery %
+
+2)Is it possible I mess up my car trying to &quot;read&quot; data through OBD2 ? (read about people getting check engine lights once they plugged the photon in. )</description>
+    
+    <lastBuildDate>Mon, 14 Dec 2020 14:20:10 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Battery charge % on Ioniq EV</title>
+        <dc:creator><![CDATA[sixtybi]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, anyone succeeded? I am just about to order this, but it’s out of stock now, but it is time to be prepared.<br>
+I hope I can somehow monitor charging remotely.<br>
+I have already experienced unexpected disconnections which I would like to avoid in the future.<br>
+My idea is to have an OBD2 device which can send notification about SoC.<br>
+I tried EVnotify app with bluetooth OBD2 adapter, but it just needs to many devices I would like to have the same solution with less devices and to be more automatic, without starting/connecting anything.</p>
+          <p><a href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/6</link>
+        <pubDate>Mon, 14 Dec 2020 14:20:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-883-6</guid>
+        <source url="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss">Battery charge % on Ioniq EV</source>
+      </item>
+      <item>
+        <title>Battery charge % on Ioniq EV</title>
+        <dc:creator><![CDATA[asystat]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello guys,<br>
+I am struggling with the same thing…Have you made any progress reading the SoC of ioniq-ev<br>
+I would appreciate any help<br>
+Thanks</p>
+          <p><a href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/4</link>
+        <pubDate>Fri, 31 Jan 2020 20:37:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-883-4</guid>
+        <source url="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss">Battery charge % on Ioniq EV</source>
+      </item>
+      <item>
+        <title>Battery charge % on Ioniq EV</title>
+        <dc:creator><![CDATA[clusty]]></dc:creator>
+        <description><![CDATA[
+            <p>My current plan was to get the PID code from EVNotify. The guy got the SoC working with bluetooth obd2 dongles so surely Carloop would be able to use the method.</p>
+          <p><a href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/3</link>
+        <pubDate>Tue, 04 Jun 2019 14:56:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-883-3</guid>
+        <source url="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss">Battery charge % on Ioniq EV</source>
+      </item>
+      <item>
+        <title>Battery charge % on Ioniq EV</title>
+        <dc:creator><![CDATA[tpp]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey Clusty</p>
+<p>I’m working on the same challenge. So far I haven’t been able to get the SoC (state of charge), but I think I’m very close.<br>
+I’m following mainly the discussion on this topic: <a href="https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/issues/7" rel="noopener nofollow ugc">https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/issues/7</a><br>
+It is important to know that the CAN rate is 500kbit/s and uses the ISO 15765-2 standar. That means that the reply from the system is going to be in several CAN packets. Jvanier has writen about it in the VIN reader <a href="https://carloop.dyndns.org/t/how-to-request-vin/153/4">https://carloop.dyndns.org/t/how-to-request-vin/153/4</a>. I’m planning in using that an his VIN-reader example app to get the SOC, and using the PID and ID from <a href="https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20EV" rel="noopener nofollow ugc">https://github.com/JejuSoul/OBD-PIDs-for-HKMC-EVs/tree/master/Ioniq%20EV</a></p>
+<p>I hope that this helps you, maybe we can support us mutually. Let me know how you do!</p>
+          <p><a href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/2</link>
+        <pubDate>Fri, 31 May 2019 14:41:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-883-2</guid>
+        <source url="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss">Battery charge % on Ioniq EV</source>
+      </item>
+      <item>
+        <title>Battery charge % on Ioniq EV</title>
+        <dc:creator><![CDATA[clusty]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey,</p>
+<p>This will be my first car interfacing project so far. My plan is to be able to remotely monitor the battery percentage on my Hyundai Ioniq EV.</p>
+<p>1)Has anybody ever tried to do such a thing? I know it’s possible since  there is another project out there called EVNotify that uses off the shelf OBD2 dongles and with a custom android app, reads battery %</p>
+<p>2)Is it possible I mess up my car trying to “read” data through OBD2 ? (read about people getting check engine lights once they plugged the photon in. )</p>
+          <p><a href="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/battery-charge-on-ioniq-ev/883/1</link>
+        <pubDate>Wed, 29 May 2019 13:01:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-883-1</guid>
+        <source url="https://community.carloop.io/t/battery-charge-on-ioniq-ev/883.rss">Battery charge % on Ioniq EV</source>
+      </item>
+  </channel>
+</rss>

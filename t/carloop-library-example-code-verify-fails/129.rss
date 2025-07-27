@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop library example code &quot;Verify&quot; fails</title>
+    <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129</link>
+    <description>I found the Carloop library and forked it, but it doesn&#39;t seem to work. When I click &quot;Verify&quot; I get this:
+&lt;img src=&quot;/uploads/default/original/1X/58c61a15d21677647e8ee5d7f502e0b650c00f38.png&quot; width=&quot;686&quot; height=&quot;500&quot;&gt;
+
+I can&#39;t tell if it&#39;s because the library is broken, or because the Particle Build API is broken, or because I missed some other step of the setup. There&#39;s no compiler error or syntax errors that I can see anywhere to help debug this.
+
+Any advice?
+
+Thanks</description>
+    
+    <lastBuildDate>Sun, 02 Oct 2016 02:33:13 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Glad to hear this is getting resolved!</p>
+<p>You can run your code built for 0.4.8 on your 0.4.9 device. In case code is flashed to a device with older firmware, the Electron LED will breathe magenta (called safe mode). In this case you can either recompile your code for an older version, or update the device with the <a href="https://docs.particle.io/guide/tools-and-features/firmware-manager/electron/">firmware manager</a>.</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/11</link>
+        <pubDate>Sun, 02 Oct 2016 02:33:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-11</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[lucas]]></dc:creator>
+        <description><![CDATA[
+            <p>After contacting Particle support they suggested building for firmware version 0.4.8 instead of 0.4.9 and after changing that it is building successfully. It’s unclear if I can run code built for 0.4.8 on my 0.4.9 device or if I can roll back the firmware version on my device, but I’m hoping to have that cleared up soon.</p>
+<p>Thanks for the help!</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/10</link>
+        <pubDate>Fri, 30 Sep 2016 17:45:15 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-10</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[lucas]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried this, several times and even still all I get is a 500 error. I opened a support ticket with Particle, since it seems like an issue with their platform / electron.</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/9</link>
+        <pubDate>Thu, 29 Sep 2016 22:58:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-9</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>You won’t see a star to pick a device until you have 2 devices, so that’s normal.</p>
+<p>You can try removing the carloop library and adding it again. In your app, click the X next to carloop in Included libraries (shown in your first screenshot), then go to Libraries (5th icon on the left navbar), find carloop, click Include in app, select your app if you have more than one and click Include in this app. I have seen in the past where Particle Build got confused when using an Example from a published library.</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/8</link>
+        <pubDate>Thu, 29 Sep 2016 02:40:37 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-8</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[lucas]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, I am, but I wanted to confirm that my settings in Console didn’t effect it</p>
+<p><a href="https://cl.ly/0c05282z273n" class="inline-onebox" rel="noopener nofollow ugc">Image 2016-09-28 at 5.19.49 PM</a> (I blanked out the device ID)</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/7</link>
+        <pubDate>Thu, 29 Sep 2016 00:17:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-7</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>All the recommendations assume you are working at <a href="http://build.particle.io">build.particle.io</a></p>
+<p>This is what the screen should look like:<br>
+                    <a href="https://cl.ly/bLuo0yrJ" target="_blank" class="onebox" rel="noopener">
+            <img src="//carloop-community.dyndns.org/uploads/default/original/1X/6ea454c7357a4df48103d6f86fd9a3e85331db69.png" title="Image 2016-09-28 at 5.01.13 PM" alt="CloudApp" width="480" data-dominant-color="53534D" height="265">
+          </a>
+
+</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/6</link>
+        <pubDate>Thu, 29 Sep 2016 00:05:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-6</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[lucas]]></dc:creator>
+        <description><![CDATA[
+            <p>Doesn’t seem to be working yet.</p>
+<p>I only have 1 device, it’s running on 0.4.9 and it says “device connected” but I see no gold star or any way to add the gold star.</p>
+<p>When I go into my “Products” in the Particle Console, the device is associated with the Product, but the Firmware Version says "Incorrect product ID"and when I try to set one there are no options.</p>
+<p>Do I need to remove the device from the Product to use it for Development?</p>
+<p>Thanks for your help</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/5</link>
+        <pubDate>Wed, 28 Sep 2016 23:22:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-5</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/lucas">@lucas</a> were you able to solve this?</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/4</link>
+        <pubDate>Sun, 25 Sep 2016 14:09:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-4</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for helping here <a class="mention" href="https://community.carloop.io/u/scruffr">@ScruffR</a>! It might also be a temporary issue, so definitely try again today with the advice above.</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/3</link>
+        <pubDate>Wed, 21 Sep 2016 10:24:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-3</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[ScruffR]]></dc:creator>
+        <description><![CDATA[
+            <p>I think this might be due to having set a wrong target in Particle Build.<br>
+Have a look at the target drawer (cross hair icon - third from the bottom left) and see whether you got the correct device selected (golden star next to the device name) and if you got a valid target firmware set (click the arrow/shevron next to the device name and see if this corresponds to the system on the device)</p>
+<p>If you are targeting an Electron, you can’t select 0.4.8!</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/2</link>
+        <pubDate>Wed, 21 Sep 2016 04:02:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-2</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+      <item>
+        <title>Carloop library example code &quot;Verify&quot; fails</title>
+        <dc:creator><![CDATA[lucas]]></dc:creator>
+        <description><![CDATA[
+            <p>I found the Carloop library and forked it, but it doesn’t seem to work. When I click “Verify” I get this:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/58c61a15d21677647e8ee5d7f502e0b650c00f38.png" data-download-href="//carloop-community.dyndns.org/uploads/default/58c61a15d21677647e8ee5d7f502e0b650c00f38" title="Image 2016-09-20 at 5.45.49 PM.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/58c61a15d21677647e8ee5d7f502e0b650c00f38_2_686x500.png" width="686" height="500" data-dominant-color="9C9F9E"></a></div><p></p>
+<p>I can’t tell if it’s because the library is broken, or because the Particle Build API is broken, or because I missed some other step of the setup. There’s no compiler error or syntax errors that I can see anywhere to help debug this.</p>
+<p>Any advice?</p>
+<p>Thanks</p>
+          <p><a href="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-library-example-code-verify-fails/129/1</link>
+        <pubDate>Wed, 21 Sep 2016 03:20:33 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-129-1</guid>
+        <source url="https://community.carloop.io/t/carloop-library-example-code-verify-fails/129.rss">Carloop library example code &quot;Verify&quot; fails</source>
+      </item>
+  </channel>
+</rss>

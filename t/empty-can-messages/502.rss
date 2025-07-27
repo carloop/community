@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Empty CAN Messages</title>
+    <link>https://community.carloop.io/t/empty-can-messages/502</link>
+    <description>New comer here, tried to build the Blynk demo however I was getting zero responses that didnt make much sense, so I went for the even more basic minimal carloop example where I just read and printed the CAN messages, however what i got was still empty payload ....any idea how i can proceed with this?
+Output  from serial monitor: 
+&gt; Battery voltage:     5.522343 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.325117 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.510742 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.446933 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.423730 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.493340 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.394726 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.603555 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.267109 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.684765 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.296113 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.406328 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.655762 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.673164 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.400527 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.307715 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.696367 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.412128 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.203300 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.284512 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.296113 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.255508 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.528144 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.644160 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.122089 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.504941 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.342519 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.597754 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.354121 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+&gt; Battery voltage:     5.354121 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error
+
+
+Code :
+&gt;    // This #include statement was automatically added by the Particle IDE.
+&gt;  #include &lt;carloop.h&gt;
+
+&gt; /* Minimal Carloop example app
+&gt;  *
+&gt;  * Reads battery voltage, counts CAN messages and report GPS position to
+&gt;  * USB serial once per second
+&gt;  *
+&gt;  * Copyright 2016 Julien Vanier
+&gt;  *
+&gt;  * Distributed under the MIT license. See LICENSE.txt for more details.
+&gt;  */
+
+&gt;  #include &quot;application.h&quot;
+&gt;  #include &quot;carloop.h&quot;
+
+&gt; void updateCanMessageCount();
+&gt; void printValuesAtInterval();
+&gt; void printValues();
+&gt; void printFloat(float val, bool valid, int len, int prec);
+&gt; void printDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t);
+
+&gt; Carloop&lt;CarloopRevision2&gt; carloop;
+
+&gt; int canMessageCount = 0;
+
+&gt; void setup()
+&gt; {
+&gt;     Serial.begin(115200);
+&gt;     carloop.begin();
+&gt; }
+
+&gt; void loop()
+&gt; {
+&gt;     carloop.update();
+&gt;     updateCanMessageCount();
+&gt;     printValuesAtInterval();
+&gt; }
+
+&gt; void updateCanMessageCount()
+&gt; {
+&gt;     CANMessage message;
+&gt;     while(carloop.can().receive(message))
+&gt;     {
+&gt;         canMessageCount++;
+&gt;     }
+&gt; }
+
+&gt; void printValuesAtInterval() {
+&gt;     static const unsigned long interval = 1000;
+
+&gt;     static unsigned long lastDisplay = 0;
+&gt;     if(millis() - lastDisplay &lt; 1000)
+&gt;     {
+&gt;         return;
+&gt;     }
+&gt;     lastDisplay = millis();
+&gt;     printValues();
+&gt; }
+
+&gt; void printValues()
+&gt; {
+&gt;     auto &amp;gps = carloop.gps();
+&gt;     // Ensure that the GPS state doesn&#39;t change while printing
+&gt;     WITH_LOCK(gps) {
+&gt;         Serial.printf(&quot;Battery voltage: %12f &quot;, carloop.battery());
+&gt;         Serial.printf(&quot;CAN messages: %12d &quot;, canMessageCount);
+&gt;         Serial.print(&quot;GPS &quot;);
+&gt;         printFloat(gps.location.lat(), gps.location.isValid(), 11, 6);
+&gt;         printFloat(gps.location.lng(), gps.location.isValid(), 12, 6);
+&gt;         printDateTime(gps.date, gps.time);
+&gt;         Serial.printf(&quot;%6d chars, %d checksum error&quot;, gps.charsProcessed(), gps.failedChecksum());
+&gt;         Serial.println(&quot;&quot;);
+&gt;     }
+&gt; }
+
+&gt; void printFloat(float val, bool valid, int len, int prec)
+&gt; {
+&gt;     if(!valid)
+&gt;     {
+&gt;         while(len-- &gt; 1)
+&gt;         {
+&gt;             Serial.print(&#39;*&#39;);
+&gt;         }
+&gt;         Serial.print(&#39; &#39;);
+&gt;     }
+&gt;     else
+&gt;     {
+&gt;         char format[10];
+&gt;         snprintf(format, sizeof(format), &quot;%%%d.%df&quot;, len, prec);
+&gt;         Serial.printf(format, val);
+&gt;     }
+&gt; }
+
+&gt; void printDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t)
+&gt; {
+&gt;     if (!d.isValid())
+&gt;     {
+&gt;         Serial.print(&quot;********** &quot;);
+&gt;     }
+&gt;     else
+&gt;     {
+&gt;         Serial.printf(&quot;%02d/%02d/%02d &quot;, d.month(), d.day(), d.year());
+&gt;     }
+
+&gt;     if (!t.isValid())
+&gt;     {
+&gt;         Serial.print(&quot;******** &quot;);
+&gt;     }
+&gt;     else
+&gt;     {
+&gt;         Serial.printf(&quot;%02d:%02d:%02d &quot;, t.hour(), t.minute(), t.second());
+&gt;     }
+&gt; }</description>
+    
+    <lastBuildDate>Fri, 19 Jan 2018 03:40:17 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/empty-can-messages/502.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Empty CAN Messages</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/badr42">@badr42</a>,</p>
+<p>Have you had any luck yet?</p>
+<p>What microcontroller are you using with the Carloop, and have you checked to see that the system firmware is up to date?<br>
+If you have an Electron or Photon, you can find instructions at <a href="http://particle.io">particle.io</a>.  If you have trouble with that, ask here or over on the particle forums (<a href="http://community.particle.io">community.particle.io</a>).  If you have a Redbear Duo, you will need to check their forums; I don’t have one of those yet to know the details.</p>
+<p>If that does not solve it, then we might need to look into the hardware, and possible raise a service request with <a href="http://carloop.io">carloop.io</a> (I don’t actually work for them myself).</p>
+          <p><a href="https://community.carloop.io/t/empty-can-messages/502/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/empty-can-messages/502/5</link>
+        <pubDate>Fri, 19 Jan 2018 03:40:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-502-5</guid>
+        <source url="https://community.carloop.io/t/empty-can-messages/502.rss">Empty CAN Messages</source>
+      </item>
+      <item>
+        <title>Empty CAN Messages</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>your going to have to look at the pinout of your OBDII connector and see what pins are available. I know the carloop works on the standard pins 6 &amp;14<br>
+that could be your problem.</p>
+          <p><a href="https://community.carloop.io/t/empty-can-messages/502/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/empty-can-messages/502/4</link>
+        <pubDate>Fri, 12 Jan 2018 17:17:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-502-4</guid>
+        <source url="https://community.carloop.io/t/empty-can-messages/502.rss">Empty CAN Messages</source>
+      </item>
+      <item>
+        <title>Empty CAN Messages</title>
+        <dc:creator><![CDATA[badr42]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried all of the different possible speeds, and yet still didnt work, empty messages at all speeds.</p>
+          <p><a href="https://community.carloop.io/t/empty-can-messages/502/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/empty-can-messages/502/3</link>
+        <pubDate>Fri, 12 Jan 2018 15:20:00 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-502-3</guid>
+        <source url="https://community.carloop.io/t/empty-can-messages/502.rss">Empty CAN Messages</source>
+      </item>
+      <item>
+        <title>Empty CAN Messages</title>
+        <dc:creator><![CDATA[dubb45]]></dc:creator>
+        <description><![CDATA[
+            <p>Add carloop.setCANSpeed(250000); before carloop.begin(); in setup(); to use a different speed like 250 kbit/s (the default is 500 kbit/s). try something like this. got this off the forum from <span class="mention">@jvanierCarloop</span></p>
+<ul>
+<li>10 kbit/s</li>
+<li>20 kbit/s</li>
+<li>50 kbit/s</li>
+<li>100 kbit/s</li>
+<li>125 kbit/s</li>
+<li>250 kbit/s</li>
+<li>500 kbit/s</li>
+<li>800 kbit/s</li>
+<li>1 Mbit/s</li>
+</ul>
+          <p><a href="https://community.carloop.io/t/empty-can-messages/502/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/empty-can-messages/502/2</link>
+        <pubDate>Mon, 08 Jan 2018 14:11:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-502-2</guid>
+        <source url="https://community.carloop.io/t/empty-can-messages/502.rss">Empty CAN Messages</source>
+      </item>
+      <item>
+        <title>Empty CAN Messages</title>
+        <dc:creator><![CDATA[badr42]]></dc:creator>
+        <description><![CDATA[
+            <p>New comer here, tried to build the Blynk demo however I was getting zero responses that didnt make much sense, so I went for the even more basic minimal carloop example where I just read and printed the CAN messages, however what i got was still empty payload …any idea how i can proceed with this?<br>
+Output  from serial monitor:</p>
+<blockquote>
+<p>Battery voltage:     5.522343 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.325117 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.510742 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.446933 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.423730 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.493340 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.394726 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.603555 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.267109 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.684765 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.296113 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.406328 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.655762 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.673164 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.400527 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.307715 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.696367 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.412128 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.203300 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.284512 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.296113 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.255508 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.528144 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.644160 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.122089 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.504941 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.342519 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.597754 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.354121 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error<br>
+Battery voltage:     5.354121 CAN messages:            0 GPS ********** *********** ********** ********      0 chars, 0 checksum error</p>
+</blockquote>
+<p>Code :</p>
+<blockquote>
+<p>// This <span class="hashtag-raw">#include</span> statement was automatically added by the Particle IDE.<br>
+<span class="hashtag-raw">#include</span> &lt;carloop.h&gt;</p>
+</blockquote>
+<blockquote>
+<p>/* Minimal Carloop example app<br>
+*</p>
+<ul>
+<li>Reads battery voltage, counts CAN messages and report GPS position to</li>
+<li>USB serial once per second</li>
+<li></li>
+<li>Copyright 2016 Julien Vanier</li>
+<li></li>
+<li>Distributed under the MIT license. See LICENSE.txt for more details.<br>
+*/</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><span class="hashtag-raw">#include</span> “application.h”<br>
+<span class="hashtag-raw">#include</span> “carloop.h”</p>
+</blockquote>
+<blockquote>
+<p>void updateCanMessageCount();<br>
+void printValuesAtInterval();<br>
+void printValues();<br>
+void printFloat(float val, bool valid, int len, int prec);<br>
+void printDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t);</p>
+</blockquote>
+<blockquote>
+<p>Carloop carloop;</p>
+</blockquote>
+<blockquote>
+<p>int canMessageCount = 0;</p>
+</blockquote>
+<blockquote>
+<p>void setup()<br>
+{<br>
+Serial.begin(115200);<br>
+carloop.begin();<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>void loop()<br>
+{<br>
+carloop.update();<br>
+updateCanMessageCount();<br>
+printValuesAtInterval();<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>void updateCanMessageCount()<br>
+{<br>
+CANMessage message;<br>
+while(carloop.can().receive(message))<br>
+{<br>
+canMessageCount++;<br>
+}<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>void printValuesAtInterval() {<br>
+static const unsigned long interval = 1000;</p>
+</blockquote>
+<blockquote>
+<pre><code>static unsigned long lastDisplay = 0;
+if(millis() - lastDisplay &lt; 1000)
+{
+    return;
+}
+lastDisplay = millis();
+printValues();
+</code></pre>
+<p>}</p>
+</blockquote>
+<blockquote>
+<p>void printValues()<br>
+{<br>
+auto &amp;gps = carloop.gps();<br>
+// Ensure that the GPS state doesn’t change while printing<br>
+WITH_LOCK(gps) {<br>
+Serial.printf("Battery voltage: %12f ", carloop.battery());<br>
+Serial.printf(“CAN messages: %12d “, canMessageCount);<br>
+Serial.print(“GPS “);<br>
+printFloat(gps.location.lat(), gps.location.isValid(), 11, 6);<br>
+printFloat(gps.location.lng(), gps.location.isValid(), 12, 6);<br>
+printDateTime(gps.date, gps.time);<br>
+Serial.printf(”%6d chars, %d checksum error”, gps.charsProcessed(), gps.failedChecksum());<br>
+Serial.println(””);<br>
+}<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>void printFloat(float val, bool valid, int len, int prec)<br>
+{<br>
+if(!valid)<br>
+{<br>
+while(len-- &gt; 1)<br>
+{<br>
+Serial.print(‘*’);<br>
+}<br>
+Serial.print(’ ');<br>
+}<br>
+else<br>
+{<br>
+char format[10];<br>
+snprintf(format, sizeof(format), “%%%d.%df”, len, prec);<br>
+Serial.printf(format, val);<br>
+}<br>
+}</p>
+</blockquote>
+<blockquote>
+<p>void printDateTime(TinyGPSDate &amp;d, TinyGPSTime &amp;t)<br>
+{<br>
+if (!d.isValid())<br>
+{<br>
+Serial.print("********** “);<br>
+}<br>
+else<br>
+{<br>
+Serial.printf(”%02d/%02d/%02d ", d.month(), d.day(), d.year());<br>
+}</p>
+</blockquote>
+<blockquote>
+<pre><code>if (!t.isValid())
+{
+    Serial.print("******** ");
+}
+else
+{
+    Serial.printf("%02d:%02d:%02d ", t.hour(), t.minute(), t.second());
+}
+</code></pre>
+<p>}</p>
+</blockquote>
+          <p><a href="https://community.carloop.io/t/empty-can-messages/502/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/empty-can-messages/502/1</link>
+        <pubDate>Sun, 07 Jan 2018 21:02:03 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-502-1</guid>
+        <source url="https://community.carloop.io/t/empty-can-messages/502.rss">Empty CAN Messages</source>
+      </item>
+  </channel>
+</rss>

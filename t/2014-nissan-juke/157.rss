@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>2014 Nissan Juke</title>
+    <link>https://community.carloop.io/t/2014-nissan-juke/157</link>
+    <description>My mother in law left her 2014 Nissan Juke here for a few days so naturally I had to do some carlooping.  Only had about 30 minutes so I was able to determine a few functions.  
+
+Here is a screen shot from cansniffer:
+
+&lt;img src=&quot;/uploads/default/original/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3.jpg&quot; width=&quot;509&quot; height=&quot;500&quot;&gt;
+
+I was able to determine the following:  
+
+&lt;img src=&quot;/uploads/default/original/1X/aaf9204131447d5eb8dd2de82fc9fe1a10108f2e.png&quot; width=&quot;690&quot; height=&quot;251&quot;&gt;
+
+I tried to control the Rear Defrost and the locks using the data above to no avail.  I have to wonder if maybe the messages are actually from a body module reporting status and the actual command goes on low speed CAN or something.</description>
+    
+    <lastBuildDate>Thu, 03 Nov 2016 19:41:29 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/2014-nissan-juke/157.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>2014 Nissan Juke</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>I would highly recommend trying <code>cangen can0 -g 10 -I 3E9 -D 007F0000</code>  next time!  Where <code>-g 10</code> is the sending frequency (10 ms), <code>3E9</code> is the Message ID you want to send and <code>007F0000</code> is the data (in this case, only 3 bytes).  <code>cansend</code> will only send a single message that might be overwritten by the original module in the vehicle.  Whereas <code>cangen</code> can send continuous messages at the <code>-g</code> rate you specify.</p>
+<p>Keep your eyes peeled for other OBD-II ports you can connect to!  Great post by the way!!</p>
+          <p><a href="https://community.carloop.io/t/2014-nissan-juke/157/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-nissan-juke/157/4</link>
+        <pubDate>Thu, 03 Nov 2016 19:41:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-157-4</guid>
+        <source url="https://community.carloop.io/t/2014-nissan-juke/157.rss">2014 Nissan Juke</source>
+      </item>
+      <item>
+        <title>2014 Nissan Juke</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>I tried sending the messages with “cansend”, and when that didn’t work I built an app to repeatedly send “door lock” and “RR def on” commands.  Unfortunately that didn’t work.</p>
+<p>I did notice there were significantly more arbitration ID’s in the Juke vs. our Odyssey, which is interesting since it has way less features.  So there are likely more modules on the high speed CAN bus.</p>
+<p>The car is gone now but will be back in a few weeks, will pick it up then!</p>
+          <p><a href="https://community.carloop.io/t/2014-nissan-juke/157/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-nissan-juke/157/3</link>
+        <pubDate>Thu, 03 Nov 2016 00:32:43 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-157-3</guid>
+        <source url="https://community.carloop.io/t/2014-nissan-juke/157.rss">2014 Nissan Juke</source>
+      </item>
+      <item>
+        <title>2014 Nissan Juke</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Very cool! Did you try replaying the messages with <code>canplayer</code>?  Some of the messages you were sniffing might be going from the BCM (Body Control Module) to the dashboard.  e.g.: TCS ON/OFF, RR DEF OFF/ON.  If there was no light for the lock/unlock doors on the dashboard then most likely that is a variable you might be able to affect…</p>
+          <p><a href="https://community.carloop.io/t/2014-nissan-juke/157/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-nissan-juke/157/2</link>
+        <pubDate>Wed, 02 Nov 2016 21:10:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-157-2</guid>
+        <source url="https://community.carloop.io/t/2014-nissan-juke/157.rss">2014 Nissan Juke</source>
+      </item>
+      <item>
+        <title>2014 Nissan Juke</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>My mother in law left her 2014 Nissan Juke here for a few days so naturally I had to do some carlooping.  Only had about 30 minutes so I was able to determine a few functions.</p>
+<p>Here is a screen shot from cansniffer:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/f21e50006a6fd165166dc49b8a50fd1b2703e3b3" title="Screen Shot 2016-11-02 at 4.08.24 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3_2_509x500.jpg" width="509" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3_2_509x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3_2_763x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/f21e50006a6fd165166dc49b8a50fd1b2703e3b3_2_1018x1000.jpg 2x" data-dominant-color="3E1A31"></a></div><p></p>
+<p>I was able to determine the following:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/aaf9204131447d5eb8dd2de82fc9fe1a10108f2e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/aaf9204131447d5eb8dd2de82fc9fe1a10108f2e" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/aaf9204131447d5eb8dd2de82fc9fe1a10108f2e.png" width="690" height="251" data-dominant-color="818581"></a></div><p></p>
+<p>I tried to control the Rear Defrost and the locks using the data above to no avail.  I have to wonder if maybe the messages are actually from a body module reporting status and the actual command goes on low speed CAN or something.</p>
+          <p><a href="https://community.carloop.io/t/2014-nissan-juke/157/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/2014-nissan-juke/157/1</link>
+        <pubDate>Wed, 02 Nov 2016 20:45:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-157-1</guid>
+        <source url="https://community.carloop.io/t/2014-nissan-juke/157.rss">2014 Nissan Juke</source>
+      </item>
+  </channel>
+</rss>

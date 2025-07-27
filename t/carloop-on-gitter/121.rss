@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop on Gitter?</title>
+    <link>https://community.carloop.io/t/carloop-on-gitter/121</link>
+    <description>Is anyone else using gitter? it would be good to get the discussion going on there if anyone else is interested?</description>
+    
+    <lastBuildDate>Tue, 06 Sep 2016 22:47:55 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/carloop-on-gitter/121.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Carloop on Gitter?</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s an interesting thought. I prefer the Discourse format better to post links and projects (with pics) that might not be 100% related to one of our Github repos.</p>
+<p>Having said that, it might be useful as we try to build data dictionaries or discuss very specific commits related to a repo.</p>
+<p>We have a Carloop lobby but it’s empty since most people ask questions here.  I would vote to keep the conversation here since you’ll get the most exposure. I’m open, though.</p>
+          <p><a href="https://community.carloop.io/t/carloop-on-gitter/121/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-on-gitter/121/4</link>
+        <pubDate>Tue, 06 Sep 2016 22:47:55 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-121-4</guid>
+        <source url="https://community.carloop.io/t/carloop-on-gitter/121.rss">Carloop on Gitter?</source>
+      </item>
+      <item>
+        <title>Carloop on Gitter?</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Yeah, i really like gitter, its like a realtime forum, works really well across time-zones too but a little less “clunky” to post. I have 4 or 5 really active groups in there (mainly meteor, node js related things). I personally tend to find that topics are more conversations than just posts. The other big advantage is the integration with github. I really like your forum here, which im guessing is Discourse? Just wondered if anyone else was on gitter also.</p>
+          <p><a href="https://community.carloop.io/t/carloop-on-gitter/121/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-on-gitter/121/3</link>
+        <pubDate>Tue, 06 Sep 2016 20:40:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-121-3</guid>
+        <source url="https://community.carloop.io/t/carloop-on-gitter/121.rss">Carloop on Gitter?</source>
+      </item>
+      <item>
+        <title>Carloop on Gitter?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Personally I prefer the forum format because not everybody is on the same time zone. Have you had a good experience using Gitter?</p>
+          <p><a href="https://community.carloop.io/t/carloop-on-gitter/121/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-on-gitter/121/2</link>
+        <pubDate>Tue, 06 Sep 2016 20:09:27 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-121-2</guid>
+        <source url="https://community.carloop.io/t/carloop-on-gitter/121.rss">Carloop on Gitter?</source>
+      </item>
+      <item>
+        <title>Carloop on Gitter?</title>
+        <dc:creator><![CDATA[paradoxewan]]></dc:creator>
+        <description><![CDATA[
+            <p>Is anyone else using gitter? it would be good to get the discussion going on there if anyone else is interested?</p>
+          <p><a href="https://community.carloop.io/t/carloop-on-gitter/121/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/carloop-on-gitter/121/1</link>
+        <pubDate>Tue, 06 Sep 2016 19:55:28 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-121-1</guid>
+        <source url="https://community.carloop.io/t/carloop-on-gitter/121.rss">Carloop on Gitter?</source>
+      </item>
+  </channel>
+</rss>

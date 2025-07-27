@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Beginner Carloop Pro Owner, GPS Functionality Questions!</title>
+    <link>https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287</link>
+    <description>Hello all!
+
+I am very excited to finally have my very own carloop pro! I have been very anxious and before receiving the product, have been nose-deep in documentation and further functionalities. 
+
+When setting up my device, I have 1) connected the device to my desktop via the mini-usb port thats located near the beige port on the top side, 2) inserted sim card and activated sim card on console.partcle.io , 3) connected the antenna cable as well, made sure it snapped into place. 
+
+I am now only seeing a constant flash of green LED and a solid red LED along with a short white pulse which immediately returns to its original green and red. 
+
+I have read many articles stating that it can take anywhere from seconds to minutes for configuration which is why I waited so long to make a post on this forum page, 
+
+On https://docs.particle.io/troubleshooting/led/electron/ , it states that this pattern I am seeing is the normal one after powering on but it has been connected for 45+ minutes now with no change. 
+
+Side Note: is this problem being caused by lack of power of the GPS module itself which is the beige port that i mentioned before? 
+
+I intend to work on a 2015 Lexus is250 F Sport, its my daily for now / soon to be track - only car. I am also in my final year of University and plan on making a mini &#39;tune&#39; file for the car for my Senior Project as I am a computer science major. With green flag&#39;s from advisors and professors, I am very eager to jump into this project as soon as possible and learn as much as I can!
+
+Any and all help would be greatly appreciated!</description>
+    
+    <lastBuildDate>Fri, 30 Sep 2022 06:36:22 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Beginner Carloop Pro Owner, GPS Functionality Questions!</title>
+        <dc:creator><![CDATA[zanie]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello all!</p>
+<p>I am very excited to finally have my very own carloop pro! I have been very anxious and before receiving the product, have been nose-deep in documentation and further functionalities.</p>
+<p>When setting up my device, I have 1) connected the device to my desktop via the mini-usb port thats located near the beige port on the top side, 2) inserted sim card and activated sim card on <a href="http://console.partcle.io" rel="noopener nofollow ugc">console.partcle.io</a> , 3) connected the antenna cable as well, made sure it snapped into place.</p>
+<p>I am now only seeing a constant flash of green LED and a solid red LED along with a short white pulse which immediately returns to its original green and red.</p>
+<p>I have read many articles stating that it can take anywhere from seconds to minutes for configuration which is why I waited so long to make a post on this forum page,</p>
+<p>On <a href="https://docs.particle.io/troubleshooting/led/electron/" rel="noopener nofollow ugc">https://docs.particle.io/troubleshooting/led/electron/</a> , it states that this pattern I am seeing is the normal one after powering on but it has been connected for 45+ minutes now with no change.</p>
+<p>Side Note: is this problem being caused by lack of power of the GPS module itself which is the beige port that i mentioned before?</p>
+<p>I intend to work on a 2015 Lexus is250 F Sport, its my daily for now / soon to be track - only car. I am also in my final year of University and plan on making a mini ‘tune’ file for the car for my Senior Project as I am a computer science major. With green flag’s from advisors and professors, I am very eager to jump into this project as soon as possible and learn as much as I can!</p>
+<p>Any and all help would be greatly appreciated!</p>
+          <p><a href="https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287/1</link>
+        <pubDate>Fri, 30 Sep 2022 06:04:05 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1287-1</guid>
+        <source url="https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287.rss">Beginner Carloop Pro Owner, GPS Functionality Questions!</source>
+      </item>
+  </channel>
+</rss>

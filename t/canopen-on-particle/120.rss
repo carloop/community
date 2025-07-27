@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>CANOpen on particle?</title>
+    <link>https://community.carloop.io/t/canopen-on-particle/120</link>
+    <description>Has anyone attempted to port and run this library:
+
+https://github.com/CANopenNode/CANopenNode
+
+on Electron&#39;s STM32F205 120MHz ARM Cortex M3 microcontroller? 
+
+LEV&#39;s EnergyBus is adopting CANOpen and I am very interested in communicating with EnergyBus.</description>
+    
+    <lastBuildDate>Fri, 02 Sep 2016 04:34:04 +0000</lastBuildDate>
+    <category>Software</category>
+    <atom:link href="https://community.carloop.io/t/canopen-on-particle/120.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>CANOpen on particle?</title>
+        <dc:creator><![CDATA[mehrdad]]></dc:creator>
+        <description><![CDATA[
+            <p>My knowledge of CANopen is very limited and I am a noob when it comes to CAN. Based Wikipedia and other articles I have read, In terms of the OSI model, CANopen is a communication protocol and device profile specification for embedded systems. CANopen implements the layers above and including the network layer.</p>
+<p>CiA (CAN in Automation) is the organization driving canopen.</p>
+<p><a href="http://www.can-cia.org/can-knowledge/canopen/canopen/" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.can-cia.org/can-knowledge/canopen/canopen/</a></p>
+<p>Each manufacturer can define device IDs in the messages that are communicated using CANopen ( which I guess is the application layer).</p>
+<p>A complete overview of CAN network layers is explained here:</p>
+<p><a href="http://www.can-cia.org/can-knowledge/" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.can-cia.org/can-knowledge/</a></p>
+          <p><a href="https://community.carloop.io/t/canopen-on-particle/120/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canopen-on-particle/120/3</link>
+        <pubDate>Fri, 02 Sep 2016 04:34:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-120-3</guid>
+        <source url="https://community.carloop.io/t/canopen-on-particle/120.rss">CANOpen on particle?</source>
+      </item>
+      <item>
+        <title>CANOpen on particle?</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t think anybody has attempted that yet. That sounds like a solid project.</p>
+<p>Can you tell us more about the applications of CANOpen?</p>
+          <p><a href="https://community.carloop.io/t/canopen-on-particle/120/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canopen-on-particle/120/2</link>
+        <pubDate>Fri, 02 Sep 2016 00:58:17 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-120-2</guid>
+        <source url="https://community.carloop.io/t/canopen-on-particle/120.rss">CANOpen on particle?</source>
+      </item>
+      <item>
+        <title>CANOpen on particle?</title>
+        <dc:creator><![CDATA[mehrdad]]></dc:creator>
+        <description><![CDATA[
+            <p>Has anyone attempted to port and run this library:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/CANopenNode/CANopenNode">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/CANopenNode/CANopenNode" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/eb69312f8be0b41a9c9193a747519ffdda8f4502_2_690x345.png" class="thumbnail" data-dominant-color="ECEDED" width="690" height="345"></div>
+
+<h3><a href="https://github.com/CANopenNode/CANopenNode" target="_blank" rel="noopener nofollow ugc">GitHub - CANopenNode/CANopenNode: CANopen protocol stack</a></h3>
+
+  <p>CANopen protocol stack. Contribute to CANopenNode/CANopenNode development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>on Electron’s STM32F205 120MHz ARM Cortex M3 microcontroller?</p>
+<p>LEV’s EnergyBus is adopting CANOpen and I am very interested in communicating with EnergyBus.</p>
+          <p><a href="https://community.carloop.io/t/canopen-on-particle/120/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/canopen-on-particle/120/1</link>
+        <pubDate>Fri, 02 Sep 2016 00:20:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-120-1</guid>
+        <source url="https://community.carloop.io/t/canopen-on-particle/120.rss">CANOpen on particle?</source>
+      </item>
+  </channel>
+</rss>

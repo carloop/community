@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DUO+particle troubles and 2 links that helped</title>
+    <link>https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301</link>
+    <description>I got my red bear duo from the recent mass drop.  Initially I was able to get the duo connected to particle build, but after trying to install an example application it stopped working.  After a ton of random flashing I have things working again.  Two pages helped get things going again.
+
+https://github.com/redbear/firmware/releases
+https://community.particle.io/t/duo-wifi-will-not-connect/30081/15
+
+The first link has information about flashing to the duo, and the second was used when the firmware was updated, but the device still wasn&#39;t connecting to particle build.
+
+Hope this helps others.</description>
+    
+    <lastBuildDate>Sat, 13 May 2017 18:06:12 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>DUO+particle troubles and 2 links that helped</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Super helpful, <a class="mention" href="https://community.carloop.io/u/froismo">@froismo</a> - thanks so much <img src="//carloop-community.dyndns.org/images/emoji/twitter/muscle.png?v=12" title=":muscle:" class="emoji" alt=":muscle:" loading="lazy" width="20" height="20"><img src="//carloop-community.dyndns.org/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"><img src="//carloop-community.dyndns.org/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301/2</link>
+        <pubDate>Sat, 13 May 2017 18:06:12 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-301-2</guid>
+        <source url="https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301.rss">DUO+particle troubles and 2 links that helped</source>
+      </item>
+      <item>
+        <title>DUO+particle troubles and 2 links that helped</title>
+        <dc:creator><![CDATA[froismo]]></dc:creator>
+        <description><![CDATA[
+            <p>I got my red bear duo from the recent mass drop.  Initially I was able to get the duo connected to particle build, but after trying to install an example application it stopped working.  After a ton of random flashing I have things working again.  Two pages helped get things going again.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/redbear/firmware/releases">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/redbear/firmware/releases" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/da58d61e9ec5a6fe8c60095e0439475859b6faa0_2_690x345.png" class="thumbnail" data-dominant-color="F3EEEE" width="690" height="345"></div>
+
+<h3><a href="https://github.com/redbear/firmware/releases" target="_blank" rel="noopener nofollow ugc">Releases · redbear/firmware</a></h3>
+
+  <p>Firmware for Particle Devices: Spark Core (master branch) and Photon (latest branch) - redbear/firmware</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox discoursetopic" data-onebox-src="https://community.particle.io/t/duo-wifi-will-not-connect/30081/15">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/e3ad4f4bf41d23dcad057a310a52856bc9f17b6c.png" class="site-icon" data-dominant-color="54EBFF" width="32" height="32">
+
+      <a href="https://community.particle.io/t/duo-wifi-will-not-connect/30081/15" target="_blank" rel="noopener nofollow ugc" title="05:35PM - 02 March 2017">Particle – 2 Mar 17</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="//carloop-community.dyndns.org/uploads/default/original/1X/bf90c28027f88e7c5fc6ebc759dbe3dbe6fc78fb.png" class="thumbnail onebox-avatar" data-dominant-color="55EBFF" width="16" height="16">
+
+<div class="title-wrapper">
+  <h3><a href="https://community.particle.io/t/duo-wifi-will-not-connect/30081/15" target="_blank" rel="noopener nofollow ugc">Duo WiFi will not connect</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #808281;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Troubleshooting</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>For such issue I’d usually expect a rapid cyan blink with a short red burst in between, but you can try this anyway while in DFU Mode  particle keys server particle keys doctor</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The first link has information about flashing to the duo, and the second was used when the firmware was updated, but the device still wasn’t connecting to particle build.</p>
+<p>Hope this helps others.</p>
+          <p><a href="https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301/1</link>
+        <pubDate>Sat, 13 May 2017 17:04:13 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-301-1</guid>
+        <source url="https://community.carloop.io/t/duo-particle-troubles-and-2-links-that-helped/301.rss">DUO+particle troubles and 2 links that helped</source>
+      </item>
+  </channel>
+</rss>

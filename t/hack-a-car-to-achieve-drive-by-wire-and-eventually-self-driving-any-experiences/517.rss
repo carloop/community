@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Hack a car to achieve drive-by-wire and eventually self-driving? Any experiences?</title>
+    <link>https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517</link>
+    <description>Hi guys. There is a self-driving development platform hackathon for car drive-by-wire hacking https://www.pixmoving.com/move-it
+
+Hacking include: 
+● Hacking of car control, both lateral and longitudinal controls, to achieve drive-by-wire 
+● Self-driving setup and test of 1/16 scale car powered by Raspberry Pi 
+● Installation and test run of open source self-driving software on full-sized car
+
+Prizes and reimburse offered for the outcomes. Looks very promising and cool. The relevant skills would be a plus. Anyone interested? 
+https://www.pixmoving.com/move-it</description>
+    
+    <lastBuildDate>Wed, 24 Jan 2018 07:09:46 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Hack a car to achieve drive-by-wire and eventually self-driving? Any experiences?</title>
+        <dc:creator><![CDATA[nancylee]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi guys. There is a self-driving development platform hackathon for car drive-by-wire hacking <a href="https://www.pixmoving.com/move-it" rel="noopener nofollow ugc">https://www.pixmoving.com/move-it</a></p>
+<p>Hacking include:<br>
+● Hacking of car control, both lateral and longitudinal controls, to achieve drive-by-wire<br>
+● Self-driving setup and test of 1/16 scale car powered by Raspberry Pi<br>
+● Installation and test run of open source self-driving software on full-sized car</p>
+<p>Prizes and reimburse offered for the outcomes. Looks very promising and cool. The relevant skills would be a plus. Anyone interested?</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.pixmoving.com/move-it">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/b81d0cbd900ab51c7a8d863c87796def707a1139.png" class="site-icon" data-dominant-color="3EB0EC" width="192" height="192">
+
+      <a href="https://www.pixmoving.com/move-it" target="_blank" rel="noopener nofollow ugc">pixmoving</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/269;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/6cea7f79e22f224af0b0381d449d0a11c17e184d_2_690x269.jpeg" class="thumbnail" data-dominant-color="827D7A" width="690" height="269"></div>
+
+<h3><a href="https://www.pixmoving.com/move-it" target="_blank" rel="noopener nofollow ugc">PIX Moving | Move-it Hackathon For Self-driving</a></h3>
+
+  <p>Move-it is a hackathon for self-driving, aiming to build an affordable development platform(chassis) for self-driving, solving various engineering challenges along the process. Move-It Hackathon is a reflection for transportation revolution. It’s an...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517/1</link>
+        <pubDate>Wed, 24 Jan 2018 07:09:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-517-1</guid>
+        <source url="https://community.carloop.io/t/hack-a-car-to-achieve-drive-by-wire-and-eventually-self-driving-any-experiences/517.rss">Hack a car to achieve drive-by-wire and eventually self-driving? Any experiences?</source>
+      </item>
+  </channel>
+</rss>

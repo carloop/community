@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Instrument Cluster at a Meetup Event Dec 2016</title>
+    <link>https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209</link>
+    <description>Hello, I have a several Particle products and just discovered Carloop! I would like to purchase an instrument cluster and was looking for recommendations. Specifically, where can I find the one used or similar to the one used at the Meetup event pictured below?
+
+Also, if I purchase something similar to the below, if I purchase the Pro (https://store.carloop.io/products/carloop-pro), will that be all I need to get started? I have the Particle Photon (Wi-Fi). At some point I will purchase the Particle Electron. Right now Wi-Fi is fine.
+
+Thanks!
+
+&lt;img src=&quot;/uploads/default/original/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8.png&quot; width=&quot;690&quot; height=&quot;406&quot;&gt;</description>
+    
+    <lastBuildDate>Mon, 30 Jan 2017 21:29:29 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Instrument Cluster at a Meetup Event Dec 2016</title>
+        <dc:creator><![CDATA[running-raptor]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you for the clarification and information!</p>
+          <p><a href="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/3</link>
+        <pubDate>Mon, 30 Jan 2017 21:29:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-209-3</guid>
+        <source url="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209.rss">Instrument Cluster at a Meetup Event Dec 2016</source>
+      </item>
+      <item>
+        <title>Instrument Cluster at a Meetup Event Dec 2016</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/running-raptor">@running-raptor</a>!<br>
+If you already have a Photon, all you would need to buy is a Carloop: <a href="https://store.carloop.io/products/carloop" class="inline-onebox">Carloop Particle Adapter for OBD II</a></p>
+<p>We built that dashboard as a showcase for meetups, conferences and Maker Faires.    The box has an instrument cluster, Body Control Module and Engine Control module.  All components from a 2012 Chevy Cruze.  If you go to <a href="http://car-part.com">car-part.com</a> you can find all components just make sure you ask for a pigtail connector from the junkyard.</p>
+<p>Putting it together is not trivial; you’ll need to spend quite a bit of time poring through the wiring diagram and making sure all the ignition, 12V power, and CAN wires  are hooked up correctly.  Certainly doable but allow yourself ample time.</p>
+<p>We can sell a custom dashboard-BCM-ECU kit but they are not cheap, so your best route is to DIY it!</p>
+          <p><a href="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/2</link>
+        <pubDate>Mon, 30 Jan 2017 07:13:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-209-2</guid>
+        <source url="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209.rss">Instrument Cluster at a Meetup Event Dec 2016</source>
+      </item>
+      <item>
+        <title>Instrument Cluster at a Meetup Event Dec 2016</title>
+        <dc:creator><![CDATA[running-raptor]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, I have a several Particle products and just discovered Carloop! I would like to purchase an instrument cluster and was looking for recommendations. Specifically, where can I find the one used or similar to the one used at the Meetup event pictured below?</p>
+<p>Also, if I purchase something similar to the below, if I purchase the Pro (<a href="https://store.carloop.io/products/carloop-pro">https://store.carloop.io/products/carloop-pro</a>), will that be all I need to get started? I have the Particle Photon (Wi-Fi). At some point I will purchase the Particle Electron. Right now Wi-Fi is fine.</p>
+<p>Thanks!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8.png" data-download-href="//carloop-community.dyndns.org/uploads/default/f28826f632a7dae7d37c0b79171dcd912e44b6e8" title="Snip20170127_1.png"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8_2_690x406.png" width="690" height="406" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8_2_690x406.png, //carloop-community.dyndns.org/uploads/default/optimized/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8_2_1035x609.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/f28826f632a7dae7d37c0b79171dcd912e44b6e8.png 2x" data-dominant-color="959596"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209/1</link>
+        <pubDate>Sat, 28 Jan 2017 00:04:14 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-209-1</guid>
+        <source url="https://community.carloop.io/t/instrument-cluster-at-a-meetup-event-dec-2016/209.rss">Instrument Cluster at a Meetup Event Dec 2016</source>
+      </item>
+  </channel>
+</rss>

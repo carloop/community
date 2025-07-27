@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+    <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55</link>
+    <description>Hello,
+
+I recently acquired a carloop device from Maker Faire along with particle kits. I have the &quot;GPS Receiver - GP-20U7&quot; (https://www.sparkfun.com/products/13740) module from sparkfun and wondering if I can use it with carloop. 
+
+Any feedback / support on this would be great.
+
+Regards,
+Subbu</description>
+    
+    <lastBuildDate>Wed, 01 Jun 2016 16:47:04 +0000</lastBuildDate>
+    <category>Hardware</category>
+    <atom:link href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="subbu" data-post="4" data-topic="55">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/s/a88e57/48.png" class="avatar"> subbu:</div>
+<blockquote>
+<p>I bought my Carloop from Maker faire</p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://community.carloop.io/u/subbu">@subbu</a>, all Carloops made for Maker Faire have the correct GPS pinout.  You should not have any issues.  Glad you thought about it!</p>
+          <p><a href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/5</link>
+        <pubDate>Wed, 01 Jun 2016 16:47:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-55-5</guid>
+        <source url="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss">GPS models supported - Can I use GPS Receiver - GP-20U7</source>
+      </item>
+      <item>
+        <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+        <dc:creator><![CDATA[subbu]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, I bought my Carloop from Maker faire and do you know if it has the same problem where the GPS connector pins are reversed?  I haven’t had a chance to connect the GPS to Carloop yet to test it. Please let me know and I don’t think the suggestion of swapping out the pins in the cable is going to work as they are too small.</p>
+<p>Regards,<br>
+Subbu</p>
+          <p><a href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/4</link>
+        <pubDate>Wed, 01 Jun 2016 16:44:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-55-4</guid>
+        <source url="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss">GPS models supported - Can I use GPS Receiver - GP-20U7</source>
+      </item>
+      <item>
+        <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+        <dc:creator><![CDATA[subbu]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks <a class="mention" href="https://community.carloop.io/u/alanm">@alanm</a>, I purchased the GP 735 from Sparkfun. I will try that and post here if I have any questions.</p>
+          <p><a href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/3</link>
+        <pubDate>Sat, 28 May 2016 23:20:29 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-55-3</guid>
+        <source url="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss">GPS models supported - Can I use GPS Receiver - GP-20U7</source>
+      </item>
+      <item>
+        <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/subbu">@subbu</a>, welcome!<br>
+Yes, you can use the GP-20U7 GPS receiver by cutting its JST-PH connector and connecting it to the second columns of female I2C pins available on Carloop.  You will need to check which wires on the GPS correspond to which pins on Carloop (TX, RX, Power, Ground).  The one we recommend is <a href="https://www.sparkfun.com/products/13670">GP 735 from Sparkfun</a>.   You can connect this one directly to the white connector located in between the two headers.  We’ve added <a href="https://github.com/carloop/carloop-library#gps">an example</a> on how to use it on Carloop’s Github readme file.</p>
+          <p><a href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/2</link>
+        <pubDate>Tue, 24 May 2016 14:04:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-55-2</guid>
+        <source url="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss">GPS models supported - Can I use GPS Receiver - GP-20U7</source>
+      </item>
+      <item>
+        <title>GPS models supported - Can I use GPS Receiver - GP-20U7</title>
+        <dc:creator><![CDATA[subbu]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I recently acquired a carloop device from Maker Faire along with particle kits. I have the “GPS Receiver - GP-20U7” (<a href="https://www.sparkfun.com/products/13740" class="inline-onebox" rel="noopener nofollow ugc">GPS Module - GP1818MK (56 Channel) - GPS-19166 - SparkFun Electronics</a>) module from sparkfun and wondering if I can use it with carloop.</p>
+<p>Any feedback / support on this would be great.</p>
+<p>Regards,<br>
+Subbu</p>
+          <p><a href="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55/1</link>
+        <pubDate>Tue, 24 May 2016 07:04:53 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-55-1</guid>
+        <source url="https://community.carloop.io/t/gps-models-supported-can-i-use-gps-receiver-gp-20u7/55.rss">GPS models supported - Can I use GPS Receiver - GP-20U7</source>
+      </item>
+  </channel>
+</rss>

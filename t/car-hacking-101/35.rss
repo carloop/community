@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Car Hacking 101</title>
+    <link>https://community.carloop.io/t/car-hacking-101/35</link>
+    <description>Great resource from Make magazine: http://makezine.com/2016/04/08/car-hacking-tools-trade/</description>
+    
+    <lastBuildDate>Mon, 18 Apr 2016 16:40:30 +0000</lastBuildDate>
+    <category>General Car Talk</category>
+    <atom:link href="https://community.carloop.io/t/car-hacking-101/35.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Car Hacking 101</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Great resource from Make magazine: <a href="http://makezine.com/2016/04/08/car-hacking-tools-trade/" class="inline-onebox">Car Hacking 101: Tools of the Trade | Make:</a></p>
+          <p><a href="https://community.carloop.io/t/car-hacking-101/35/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/car-hacking-101/35/1</link>
+        <pubDate>Mon, 18 Apr 2016 16:40:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-35-1</guid>
+        <source url="https://community.carloop.io/t/car-hacking-101/35.rss">Car Hacking 101</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chevy Volt (2014) - What&#39;s my battery at? - Project Share - Carloop Community</title>
+    <meta name="description" content="I’m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input f&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="249.html">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="udLwH81A1QCi8EhVVaR7YX4tM">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="udLwH81A1QCi8EhVVaR7YX4tM"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Chevy Volt (2014) - What&#39;s my battery at?&#39;" href="249.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/chevy-volt-2014-whats-my-battery-at/249">
+<meta name="twitter:url" content="/t/chevy-volt-2014-whats-my-battery-at/249">
+<meta property="og:title" content="Chevy Volt (2014) - What&#39;s my battery at?">
+<meta name="twitter:title" content="Chevy Volt (2014) - What&#39;s my battery at?">
+<meta property="og:description" content="I’m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input from the community on how best to overcome obstacles.  Code: GitHub - drewwells/carloop  I’m assuming you know how to get going with Particle in Carloop here. You can flash updates by calling particle flash (device name). Note this will perform an OTA update, you may wish to add -...">
+<meta name="twitter:description" content="I’m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input from the community on how best to overcome obstacles.  Code: GitHub - drewwells/carloop  I’m assuming you know how to get going with Particle in Carloop here. You can flash updates by calling particle flash (device name). Note this will perform an OTA update, you may wish to add -...">
+<meta property="og:article:section" content="Project Share">
+<meta property="og:article:section:color" content="25AAE2">
+<meta property="article:published_time" content="2017-04-05T02:05:38+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="249.html">Chevy Volt (2014) - What&#39;s my battery at?</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="/c/project-share/8" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Project Share</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Chevy Volt (2014) - What&#39;s my battery at?'>
+      <link itemprop='url' href='249.html'>
+      <meta itemprop='datePublished' content='2017-04-05T02:05:38Z'>
+        <meta itemprop='articleSection' content='Project Share'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/dreww.html'><span itemprop='name'>dreww</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="249.html">
+
+
+              <span class="crawler-post-infos">
+                  <time datetime='2017-04-05T02:05:38Z' class='post-time'>
+                    April 5, 2017,  2:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-05T02:05:38Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m working on an app to pull battery status off of the car. This is very useful b/c Chevy has provided a rather lame app for performing this task. I thought it would be helpful to others to share my work and get input from the community on how best to overcome obstacles.</p>
+<p>Code: <a href="https://github.com/drewwells/carloop/" class="inline-onebox" rel="noopener nofollow ugc">GitHub - drewwells/carloop</a></p>
+<p>I’m assuming you know how to get going with Particle in Carloop here. You can flash updates by calling <code>particle flash (device name)</code>. Note this will perform an OTA update, you may wish to add <code>--serial</code> to perform a serial upgrade. I found serial to be a pain since I had to physically plug the USB cable into the device. Eventually, I just put an ATT sim in the device with gigabytes of data allowance.</p>
+<p>Speaking of, this code assumes you are using an AT&amp;T sim, so there’s some code in there activating that and would need to be removed if you wish to use the Particle sim.</p>
+<p>What is working</p>
+<ol>
+<li>Ambient Temperature (this is the most common data sent via the CAN bus and has become my reliability check)</li>
+<li>State of Charge (percentage of battery that is charged, range goes up to ~88% and I’m not sure what the lower limit is yet)</li>
+<li>Fuel Tank Level Input, no idea why I’m looking at this</li>
+<li>Charger voltage (works with the car on or off)</li>
+<li>Charger amperage (works with the car on or off)</li>
+</ol>
+<p>What is not working</p>
+<ol>
+<li>State of Charge is very infrequent, often updating only 1-2 per 4hour charging session. The value updates continuously while the car is on. This is true of most of the data.</li>
+<li>My car will report errors while particle is plugged in. I had to unplug Particle this morning to get the car to turn on. Check Engine light will turn on and off due to these errors or the radio/AC may shut off.</li>
+<li>GPS is broken, not sure if it’s hardware or software issue</li>
+<li>Higher level functionality is missing. Ideally, the raw data would be processed for more useful functionality like what time will my car be charged. Current (max SOC - current SOC) / charger amp / charger volt would give the time to max charge.</li>
+</ol>
+<p>The project is a branch off the extremely helpful starter guide on <a href="http://hackster.io" rel="noopener nofollow ugc">hackster.io</a> <a href="https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991" class="inline-onebox" rel="noopener nofollow ugc">Visualize Car Data With Carloop And Blynk - Hackster.io</a> . All credits go to Emerson for getting this far! Also credits to the gm-volt community for collecting PIDs for the car <a href="https://docs.google.com/spreadsheets/d/1HgWCnosdRqZYoWHEl7ylAxjxv4UFVeisWiR7gcr8H6I/edit#gid=0" class="inline-onebox" rel="noopener nofollow ugc">Volt PIDs - Google Sheets</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-05T03:38:07Z' class='post-time'>
+                    April 5, 2017,  3:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-05T03:38:07Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Congratulations!  Keep up the (hard) work.  I am sure you will get a lot more working…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-12T16:28:53Z' class='post-time'>
+                    April 12, 2017,  4:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-12T16:28:53Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="../../u/dreww.html">@dreww</a> this is amazing!  Regarding the GPS - are you talking about the Carloop GPS or the Chevy Volt’s on board GPS?  I have a theory about the Chevy Volt on-board GPS and I’d love to try it out to see if it works.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/dreww.html'><span itemprop='name'>dreww</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-12T16:53:42Z' class='post-time'>
+                    April 12, 2017,  4:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-12T16:53:42Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The carloop GPS doesn’t report it is valid from my carloop pro kit. I haven’t played with the on board GPS but think carloop would be more consistent.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-12T17:12:48Z' class='post-time'>
+                    April 12, 2017,  5:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-12T17:12:48Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, we are working on a new version of the Carloop GPS that is much more consistent and reliable.  Regarding the Chevy Volt GPS, here are a few more CAN IDs (including the GPS coordinates which will need to be changed to degrees and seconds):</p>
+<blockquote>
+<pre><code> CAN ID  | Byte Location | Data          | Units           |   
+|--------|---------------|---------------|-----------------|
+| 32A    | Bytes 1-4     | GPS Latitude  | Milliarcseconds |  
+| 32A    | Bytes 5-8     | GPS Longitude | Milliarcseconds |   
+| 0C9    | Byte 5        | Accelerator   | 0-254 (0-100%)  | 
+| 3E9	 | Bytes 1-2     | Vehicle Speed | 1/100 mph       |
+</code></pre>
+</blockquote>
+<p>source: <a href="http://evtools.info/ChevyVoltOBD2CAN.html" class="inline-onebox">evtools.info</a></p>
+<p>My theory is that you need to request the vehicle’s location using the On Star mobile app and that will update the GPS coordinates.  I haven’t confirmed that will work but it would be interesting to measure using candump from can-utils when that happens.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/dreww.html'><span itemprop='name'>dreww</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-13T13:28:21Z' class='post-time'>
+                    April 13, 2017,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-13T13:28:21Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry, I didn’t mean carloop is unreliable. I mean the Chevy Volt’s GPS will be unreliable, it’s been difficult pulling any data from this car. I want to instead pull from the tracker in the carloop.</p>
+<p>As I understand it, the Carloop Pro comes with a tracker… but I’m not able to talk to it. Do you have some tips on getting it to work.</p>
+<p>I’ll try that trick with OnStar, but if that’s what it takes… the GPS of the car isn’t of much use.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/cyclin_al1.html'><span itemprop='name'>cyclin_al1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-04-14T21:07:21Z' class='post-time'>
+                    April 14, 2017,  9:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-04-14T21:07:21Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><span class="mention">@drew</span>, if you get a solution working to use the Chevy Volt GPS, I am sure others here would appreciate the solution.  There are a few people with Volts on this forum.</p>
+<p>In the case of the Carloop GPS module (included in the Pro, or could be purchased separately), I suggest checking out the sample apps here.  All the samples have the source code openly available on GitHub.</p>
+<p>Also, there have been some issues with the Carloop GPS unit.  If you try one of the examples and that does not work, then contact Carloop (there are some other threads about this).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Mutley.html'><span itemprop='name'>Mutley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-04T16:43:34Z' class='post-time'>
+                    May 4, 2017,  4:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-04T16:43:34Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Chevy Volt GPS on the CAN works, although when I used it, there’s a slight bits remapping required for Latitude or Longitude, I don’t recall. I could check my stuff, but I was able to get the path on the map (shifted a bit of course) of the drive I did with the Carloop in cellular data mode (so theoretically, in real-time).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Mutley.html'><span itemprop='name'>Mutley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-04T16:47:36Z' class='post-time'>
+                    May 4, 2017,  4:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-04T16:47:36Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For the SOC, I found out the signal on the Battery CAN network of what appear to be the usable SOC. The problem is that this message is sent on the Battery CAN BUS and it’s located on the other OBDII connector (X84B) which is on the passenger side (the 1st GEN Volt has 2 OBDII connector, the driver side has 3 CAN , and the other has 2 CAN network. The Bolt is wired the same way BTW).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

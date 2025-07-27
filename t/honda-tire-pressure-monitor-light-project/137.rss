@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Honda tire pressure monitor light project</title>
+    <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137</link>
+    <description>Thanks for this post, I was able to use this to do my 2nd Carloop test.
+
+I was able to dump a whole bunch of OBD2 data.  My goal is to identify a message telling the cluster to turn on the TPMS light.  So I thought I&#39;d log some data with the light off and the light on and see what differences I find.
+
+As I&#39;m sure most of you already know, its not that easy!  In just a few minutes of running my Honda generated almost 10,000 messages.  I was able to delete 7,000 duplicates, leaving 3,000 messages to analyze.
+
+So my question, what&#39;s the best way to go about analyzing the data?  I&#39;m not the best coder and barely understand Hex, but I think I can figure this out.
+
+Here are some example messages that came across when the TPMS light was on
+
+000002f500000007   (7 times)
+7fc008000000001d  (34 times)
+02030c1c  (1 time)
+
+It is interesting that some are 16 characters and some are 8 characters.  It also looks to me that the first 2 or 3 digits might identify something?</description>
+    
+    <lastBuildDate>Thu, 16 Jan 2020 18:38:38 +0000</lastBuildDate>
+    <category>Project Share</category>
+    <atom:link href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[brunjc21]]></dc:creator>
+        <description><![CDATA[
+            <blockquote>
+<p>Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:</p>
+</blockquote>
+<blockquote>
+<p>Where the last digit changes from 0E to 1D to 2C to 3B</p>
+</blockquote>
+<blockquote>
+<p>333 01 00 00 00 00 00 0E</p>
+</blockquote>
+<p>Has anyone have any insight to the algorithm used to generate the last nibble of the last byte? It does seem like a sum then XOR’d by a value…</p>
+<p>For example, sum of (00 00 00 00 00 00) = 00 ^0x0F == 0x0F<br>
+sum of (01 00 00 00 00 00) = 00 ^0x0F == 0x0E</p>
+<p>But this does not work with much of the data I have traced from a Honda. I mean, I can confirm that there are some messages that are 8 bytes, first seven are 0x00s and the last byte is 0x0F, but that algorithm doesn’t work with everything.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/27</link>
+        <pubDate>Thu, 16 Jan 2020 18:38:38 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-27</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:</p>
+<p>Where the last digit changes from 0E to 1D to 2C to 3B</p>
+<p>333  01 00 00 00 00 00 0E</p>
+<p>Not sure if 01 just means “a tire is low” or “1 tire is low”.  Pretty clear that in this car the TPMS module does NOT report tire pressure, only if a tire is low.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/26</link>
+        <pubDate>Thu, 10 Nov 2016 14:18:40 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-26</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Wow, that’s an impressive accomplishment! Well done! You can put a <code>delay(100);</code> in between each transmit to insert a 100ms pause in between each transmit. The messages you posted above show a delay of 0.1s in between each frame.</p>
+<aside class="quote no-group" data-username="clemoyne" data-post="22" data-topic="137">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/ecb155/48.png" class="avatar"> clemoyne:</div>
+<blockquote>
+<p>(1476987407.909367) can0 333#0000000000000F<br>
+(1476987408.009644) can0 333#0000000000001E<br>
+(1476987408.109524) can0 333#0000000000002D<br>
+(1476987408.208971) can0 333#0000000000003C</p>
+</blockquote>
+</aside>
+<p>I’ll see if I can figure out what the “no buffer space available” message means.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/25</link>
+        <pubDate>Tue, 25 Oct 2016 00:59:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-25</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Update.  So now I verified that it REALLY works.  <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I modified the Julien’s <a href="https://carloop.dyndns.org/t/minimal-transmitting-code/132">minimal transmitting code app</a> and changed the values to the appropriate ones for “working” TPMS in my Honda.<br>
+I then disconnected the TPMS module, located just above the accelerator pedal.<br>
+I flashed the code to my Particle and so far so good, no TPMS light!<br>
+Next step I need to get the Particle to go to sleep when the car is off and do some more testing to make sure this really works.<br>
+Below is a snippet of code (changes from <a href="https://carloop.dyndns.org/t/minimal-transmitting-code/132">Julien’s code</a>) and some pictures.  Note that I have a light on for a missing Blind Spot Information System since I took the cluster from a car that had this feature and ours does not.  So next I need to reverse engineer this signal!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f8dbe2c8529978fa5c4fd11262e6518df9b4b277.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/f8dbe2c8529978fa5c4fd11262e6518df9b4b277" title="IMG_2201.JPG"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/f8dbe2c8529978fa5c4fd11262e6518df9b4b277.JPG" width="666" height="500"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68" title="IMG_2199.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_375x500.JPG, //carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_562x750.jpeg 1.5x"></a></div><p></p>
+<pre><code>// A CAN message has an ID that identifies the content inside
+message.id = 0x333;
+
+// It can have from 0 to 8 data bytes
+message.len = 7;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x00;
+message.data[1] = 0x00;
+message.data[2] = 0x00;
+message.data[3] = 0x00;
+message.data[4] = 0x00;
+message.data[5] = 0x00;
+message.data[6] = 0x0F;
+// Send the message on the bus!
+carloop.can().transmit(message);
+message.data[6] = 0x1E;
+carloop.can().transmit(message);
+message.data[6] = 0x2D;
+carloop.can().transmit(message);
+message.data[6] = 0x3C;
+carloop.can().transmit(message);
+lastTransmitTime = now;
+</code></pre>
+<p>}<br>
+}</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/24</link>
+        <pubDate>Mon, 24 Oct 2016 21:07:31 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-24</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Well I did it!  Discovered that the arbitration ID for TPMS is 333</p>
+<p>I then noticed that the messages go in a pattern like this:</p>
+<p>(1476987407.909367) can0 333#0000000000000F<br>
+(1476987408.009644) can0 333#0000000000001E<br>
+(1476987408.109524) can0 333#0000000000002D<br>
+(1476987408.208971) can0 333#0000000000003C</p>
+<p>I wrote a script to keep playing those messages via canplayer and the light seems to be staying off!</p>
+<p>PS I still want to figure out how to play 15 minutes of a candump file!</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/22</link>
+        <pubDate>Fri, 21 Oct 2016 21:10:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-22</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m actually receiving the error when trying to send CAN messages.  Seems like I can send 15 at a time or so.</p>
+<p>Just wondering if there is a workaround, would be great to playback the 15 minutes of candump file and watch the gauges move around</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/21</link>
+        <pubDate>Fri, 21 Oct 2016 20:40:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-21</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Maybe try restricting the amount of CAN message IDs that you log.  For example <code>candump can0 374:374</code> might be a good idea to restrict CAN messages to ID 374 for example.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/20</link>
+        <pubDate>Fri, 21 Oct 2016 20:38:26 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-20</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks Alan!  Any thoughts on the buffer error?  I’m not sure where to go with that.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/19</link>
+        <pubDate>Fri, 21 Oct 2016 19:42:45 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-19</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Craig, this is fantastic work!  Congratulations!  Once you find the actual messages that modify the TPMS light on the dashboard, you will be entering the Carloop Hall of Fame!</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/18</link>
+        <pubDate>Fri, 21 Oct 2016 19:29:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-18</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>In the video I just noticed that before the file errors out the TPMS light turned off!  So in theory I can now isolate the “good TPMS” CAN messages, disconnect my TPMS module, and publish “good TPMS” CAN messages using a Carloop!</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/17</link>
+        <pubDate>Fri, 21 Oct 2016 18:32:25 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-17</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Phew, it took me a while to get here, but I was able to successfully capture canbus data from my 2012 Honda Odyssey and then play it back to an extra instrument cluster I had lying around.</p>
+<p>Test rig:</p>
+<p>I built a simple test rig by learning the pinout of my Honda Odyssey cluster.  It is a 32 pin connector.  For purposes of this test, I used 2 12V power lines (pins 1 &amp; 17), 3 grounds (pins 4,31, 32), HSCAN+ and HSCAN-.  There are pins for low speed CAN (125kbps) but I am not playing with those yet.  The setup is powered by 8 AA batteries.  I added a 125 ohm resistor between the data lines on my breadboard.</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/3ac3d9d0c07b3f2a1e4f64d943e37570116ce067.jpg" width="204" height="119"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/e708644e6ef5cb16bbeabb102938a862c267dc46.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/e708644e6ef5cb16bbeabb102938a862c267dc46" title="FullSizeRender 21.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/e708644e6ef5cb16bbeabb102938a862c267dc46_2_666x500.jpeg" width="666" height="500" data-dominant-color="4D4033"></a></div><p></p>
+<p>Using socketcan-serial, I ran “candump -l” which is part of the socketcan Linux utility.  I drove for about 15 minutes and captured 59 mb of packet data.</p>
+<p>Next comes the fun part…I ran canplayer -I [filename] to play my data into the test cluster.  Voila, the cluster showed the RPM from the start of the file!</p>
+<p>Unfortunately the fun only lasted for a few seconds, as I keep getting a “no buffer space available” error. The only way to clear it is to turn the cluster on and off.   Any suggestions on how to fix this?  The output below might be interesting.  Also <a href="https://cdn.shopify.com/s/files/1/0915/1182/files/carloop_honda_cluster.mov?793569196929280062" rel="noopener nofollow ugc">here is a movie</a> showing the tach move!</p>
+<p>parallels@ubuntu:~$ ip -details -statistics link show can0<br>
+5: can0: &lt;NOARP,UP,LOWER_UP&gt; mtu 16 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 10<br>
+link/can  promiscuity 0<br>
+RX: bytes  packets  errors  dropped overrun mcast<br>
+638465     80715    0       0       0       0<br>
+TX: bytes  packets  errors  dropped carrier collsns<br>
+198        29       0       0       0       0</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/16</link>
+        <pubDate>Fri, 21 Oct 2016 15:25:58 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-16</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey, personally I’d love to come to Montreal for New Years but my wife and kids might not be so keen on it.  <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/15</link>
+        <pubDate>Thu, 20 Oct 2016 19:17:41 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-15</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ll be in Montreal over New Years if you’re around for a cup of coffee… and the journey!</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/14</link>
+        <pubDate>Thu, 20 Oct 2016 02:09:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-14</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>So I did some static CAN sniffing and determined a few things on my 2012 Honda Odyssey.</p>
+<p>I was able to decode brakes, parking brake, gear shift position, TCS status, headlight status, doors open/closed, seat belt status, cruise status, and AC on/off.</p>
+<p>Pretty happy about this.</p>
+<p>One thing I’ve noticed is that for all of the ID’s, Byte 7 is constantly changing.  Is this some kind of checksum?  Wondering if that could be difficult to reverse engineer.  I have tried injecting some messages with no luck…really hoping to convince the car something is happening that is not.</p>
+<p>Another thing I’ve noticed is that the radio, climate control, and door module are likely on a different bus.  Not too surprised.</p>
+<p>Next need to get a buddy to drive while I take some on the road data!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/be2a8334077d1487681efc2932b774714d64d30e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/be2a8334077d1487681efc2932b774714d64d30e" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/be2a8334077d1487681efc2932b774714d64d30e.png" width="537" height="500" data-dominant-color="969796"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/13</link>
+        <pubDate>Wed, 19 Oct 2016 15:41:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-13</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks!</p>
+<p>Other great resources that I was looking at last night include the <a href="http://opengarages.org/handbook/" rel="noopener nofollow ugc">Car Hackers Handbook</a> and the <a href="https://www.youtube.com/channel/UC8H4JYKBSAMcCH6snL5OWYg" rel="noopener nofollow ugc">Open Garages YouTube series</a>.</p>
+<p>BTW- if there is anyone in the Toronto area interested in this stuff, I’d love to meet up!</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/12</link>
+        <pubDate>Wed, 19 Oct 2016 12:37:10 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-12</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[egarl004]]></dc:creator>
+        <description><![CDATA[
+            <p>The text you see on the right is simply ascii representations of the bytes. Sadly, mostly useless in for obd info (or at least in my experience)</p>
+<p>What you’re looking at are the raw broadcasted values on the bus. Some are broadcasted, other messages are not. example - VIN.</p>
+<p>Check out these links (each helped me a ton in understanding some basics). I’m new to forum but plan on posting something helpful within the week on hackster revolving around getting obd2 data to thingspeak for visualizations.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://dale-peterson.com/digital-bond-archives/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/396264641c2d04219de7ab3abef8655b1ded562c.jpeg" class="site-icon" data-dominant-color="8DBBD6" width="32" height="32">
+
+      <a href="https://dale-peterson.com/digital-bond-archives/" target="_blank" rel="noopener nofollow ugc">Dale Peterson: ICS Security Catalyst</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://dale-peterson.com/digital-bond-archives/" target="_blank" rel="noopener nofollow ugc">Digital Bond Archives - Dale Peterson: ICS Security Catalyst</a></h3>
+
+  <p>[et_pb_section fb_built=”1″ _builder_version=”3.0.47″][et_pb_row _builder_version=”3.0.101″][et_pb_column type=”2_3″ _builder_version=”3.0.47″][et_pb_text _builder_version=”3.21.1″ text_font=”||||||||” text_text_color=”#007db7″ text_font_size=”36px”...</p>
+
+  <p>
+    <span class="label1">Est. reading time: 6 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.cowfishstudios.com/blog/canned-pi-part1">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/28c83df56ce8ae568d7f4cb1591fdc3c0256a3bb.png" class="site-icon" data-dominant-color="F5CE2A" width="16" height="16">
+
+      <a href="https://www.cowfishstudios.com/blog/canned-pi-part1" target="_blank" rel="noopener nofollow ugc">Cowfish Studios</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/323;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a59be70ef2b49f9ca6bebb0736ea26e3ef8f710e_2_690x323.jpeg" class="thumbnail" data-dominant-color="3C4641" width="690" height="323"></div>
+
+<h3><a href="https://www.cowfishstudios.com/blog/canned-pi-part1" target="_blank" rel="noopener nofollow ugc">CANned Pi: (Part1)</a></h3>
+
+  <p>In this tutorial you will learn how to gain access to a&nbsp;vehicle's internal network using a Raspberry Pi and&nbsp;CAN-Bus Board!</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/11</link>
+        <pubDate>Wed, 19 Oct 2016 05:49:22 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-11</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>Also is there any good documentation for canutils?  For example, what does the section on the right side represent (where you see the … that change from time to time)</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/10</link>
+        <pubDate>Wed, 19 Oct 2016 01:37:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-10</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>So it appears to be the same ID’s showing up.  Is that interesting?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/a5b3d415278ec4d35ce4e2a6da61677383549ec4" title="Screen Shot 2016-10-18 at 9.31.14 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_357x500.jpg" width="357" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_357x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_535x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_714x1000.jpg 2x" data-dominant-color="472138"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/9</link>
+        <pubDate>Wed, 19 Oct 2016 01:32:49 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-9</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>nice work! now try the following:<br>
+<code>cansniffer -cae can0</code></p>
+<p>and do another screenshot</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/8</link>
+        <pubDate>Wed, 19 Oct 2016 01:30:46 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-8</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>FYI, just discovered this also work in Ubuntu running on Parallels on my mac!</p>
+<p>Now what does all this mean.   <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/901d2de5801199f274a0797da5b620294c3eb894.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/901d2de5801199f274a0797da5b620294c3eb894" title="Screen Shot 2016-10-18 at 9.14.53 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_568x500.jpg" width="568" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_568x500.jpg, //carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_852x750.jpg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_1136x1000.jpg 2x" data-dominant-color="3F1930"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/7</link>
+        <pubDate>Wed, 19 Oct 2016 01:16:32 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-7</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey Craig!<br>
+Thanks for posting this.  It reminded me that there is a great VM application to run Linux on your Mac OS called VirtualBox.  At the last Car Hax two people used Virtual Box to effectively run socketcan and can-utils and communicate over USB serial with Carloop!</p>
+<p><a href="https://www.virtualbox.org/wiki/Mac%20OS%20X%20build%20instructions" class="onebox" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Mac%20OS%20X%20build%20instructions</a></p>
+<p>To install from Mac OSX terminal with Homebrew:</p>
+<p><code>brew update brew tap caskroom/cask brew cask install virtualbox</code></p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/6</link>
+        <pubDate>Tue, 18 Oct 2016 20:28:50 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-6</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>To keep this thread going, here is a great link discussing how to install / run socketcan on Carloop: <a href="https://carloop.dyndns.org/t/use-carloop-with-socketcan-and-can-utils/117" class="inline-onebox">Use Carloop with SocketCAN and can-utils - Software - Carloop Community</a></p>
+<p>I was trying to figure out if I could install can-utils on my Macbook and of course stumbled onto a <a href="https://github.com/linux-can/can-utils/issues/27" rel="noopener nofollow ugc">post by Alan</a> leading me to believe it is not possible.</p>
+<p>So I think I’ll resort to running can-utils on a Raspberry Pi and just SSH into the Pi.  I might get fancy and re-appropriate an old Windows machine with Linux, but hoping the lag with the Pi is not too bad.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/5</link>
+        <pubDate>Tue, 18 Oct 2016 20:02:59 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-5</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[alanm]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://community.carloop.io/u/clemoyne">@clemoyne</a>,<br>
+Yes, we remember you very well!  Hello and welcome to the Carloop community!  Here is a list of CAN IDs that we’ve started compiling  and updating: <a href="https://carloop.dyndns.org/t/list-of-can-id-descriptions-from-opengarages-org/104" class="inline-onebox">List of CAN ID descriptions (from OpenGarages.org) - Carloop Community</a>  Let me know if you find new ones for Honda specifically.   Would be great to update that list.</p>
+<p>In response to your question about reverse engineering, I would highly recommend <a href="https://github.com/linux-can/can-utils">socketcan</a> with linux.  You will need to use a linux computer (a Raspberry Pi works well).  Running commands like <code>cansniffer can0</code> can be incredibly helpful, especially if you can disconnect and reconnect the TPMS unit to identify which messages are changing.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/4</link>
+        <pubDate>Tue, 04 Oct 2016 18:06:47 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-4</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[clemoyne]]></dc:creator>
+        <description><![CDATA[
+            <p>So far all I’ve done is used the code from <a href="https://carloop.dyndns.org/t/turn-your-carloop-into-a-remote-obd-ii-reader/93/9">this post</a> and dumped the serial output to my laptop.  I cleaned up the output and used Excel to look at it.  Long term I’d like to write  Python script to parse the data, but first I need to figure out what I’m looking at!</p>
+<p>Can anyone recommend a good resource for decoding CAN data?</p>
+<p>PS- met you guys at Maker Faire NYC last weekend, it’s Craig from <a href="https://chicagodist.com" rel="noopener nofollow ugc">chicagodist.com</a> and elmwoodelectronics.ca</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/3</link>
+        <pubDate>Tue, 04 Oct 2016 14:15:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-3</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+      <item>
+        <title>Honda tire pressure monitor light project</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Nice work! I moved the post to a new topic so I can help you get to the info you are looking for.</p>
+<p>Do you have some code to share at this point? If you have a GitHub account you can <a href="https://gist.github.com/">post it to a gist</a> and share the URL here. You can also post a log of the data you collected as a gist.</p>
+          <p><a href="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137/2</link>
+        <pubDate>Tue, 04 Oct 2016 13:52:04 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-137-2</guid>
+        <source url="https://community.carloop.io/t/honda-tire-pressure-monitor-light-project/137.rss">Honda tire pressure monitor light project</source>
+      </item>
+  </channel>
+</rss>

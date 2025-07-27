@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Renualt pid help</title>
+    <link>https://community.carloop.io/t/renualt-pid-help/1074</link>
+    <description>Hello,  
+I want to create a small project will send me the total distance of the car and vin number 
+
+I&#39;m using pi zero with canbus and connected it  to the my car 
+I have try 2 speeds: 
+250kbps
+this is what I got (this is just the first lines )
+   &gt;  [1m[34mcan0[0m  110   [4]  B4 23 34 D6
+&gt;       [1m[34mcan0[0m  012   [1]  remote request
+&gt;       [1m[34mcan0[0m  004ACDA0   [1]  remote request
+&gt;       [1m[34mcan0[0m       091   [4]  A7 32 AA 07
+&gt;       [1m[34mcan0[0m       709   [0] 
+&gt;       [1m[34mcan0[0m       091   [4]  A7 32 AA 07
+&gt;       [1m[34mcan0[0m       654   [4]  A7 32 AA 07
+&gt;       [1m[34mcan0[0m  1952CDA0   [4]  remote request
+&gt;       [1m[34mcan0[0m  10437A5F   [4]  remote request
+&gt;       [1m[34mcan0[0m       44D   [2]  C7 32
+&gt;       [1m[34mcan0[0m       560   [2]  C7 32
+&gt;       [1m[34mcan0[0m       091   [4]  C7 B4 23 34
+&gt;       [1m[34mcan0[0m  11A6E2DF   [4]  remote request
+&gt;       [1m[34mcan0[0m  1A6E2DF0   [4]  remote request
+&gt;       [1m[34mcan0[0m  1B8B7C20   [4]  remote request
+&gt;       [1m[34mcan0[0m       70B   [0] 
+
+and this in the 500kbps
+
+
+and got many many pid 
+&gt; [1m[34mcan0[0m  0E0   [8]  C5 7F FE 7F F1 40 FE FE
+&gt;   [1m[34mcan0[0m  0E1   [8]  7F F7 7F FF 7F DB A8 09
+&gt;   [1m[34mcan0[0m  19D   [8]  38 2E B0 61 A8 08 00 D8
+&gt;   [1m[34mcan0[0m  299   [8]  FF E0 00 18 A8 10 FF E0
+&gt;   [1m[34mcan0[0m  29A   [8]  00 00 00 00 00 00 0A F5
+&gt;   [1m[34mcan0[0m  312   [8]  50 00 02 47 FF 40 A0 87
+&gt;   [1m[34mcan0[0m  378   [8]  3C 68 96 28 08 40 00 20
+&gt;   [1m[34mcan0[0m  563   [2]  2E B0
+&gt;   [1m[34mcan0[0m  15A   [6]  3A 70 00 14 00 00
+&gt;   [1m[34mcan0[0m  15C   [8]  1C 3C 31 E3 29 00 25 00
+&gt;   [1m[34mcan0[0m  15D   [8]  5E 8B 82 F0 98 90 44 FE
+&gt;   [1m[34mcan0[0m  15E   [8]  32 C3 29 36 63 29 71 8A
+&gt;   [1m[34mcan0[0m  44E   [7]  47 4C C8 E1 17 52 4C
+&gt;   [1m[34mcan0[0m  2F7   [1]  44
+&gt;   [1m[34mcan0[0m  194   [6]  FE 32 00 08 00 00
+&gt;   [1m[34mcan0[0m  18D   [8]  32 94 88 AA 08 00 00 00
+&gt;   [1m[34mcan0[0m  18E   [8]  00 00 00 00 00 00 48 00
+&gt;   [1m[34mcan0[0m  2E1   [4]  72 0E 90 00
+&gt;   [1m[34mcan0[0m  313   [2]  03 88
+&gt;   [1m[34mcan0[0m  0E0   [8]  C5 7F FE 7F F1 50 FE FE
+
+ where can I found information about the pids I need , and know which one to search ? 
+ for start I want to get the total distance (and maybe the vin) - just to see everything is working correct .
+ 
+Thanks,</description>
+    
+    <lastBuildDate>Wed, 21 Oct 2020 15:25:51 +0000</lastBuildDate>
+    <category>Getting Started</category>
+    <atom:link href="https://community.carloop.io/t/renualt-pid-help/1074.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[kong]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi</p>
+<p>500kbps canbus</p>
+<p>kong</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/6</link>
+        <pubDate>Wed, 21 Oct 2020 15:25:51 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-6</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[david]]></dc:creator>
+        <description><![CDATA[
+            <p>what is the kbps you are using to listen<br>
+maybe I’m listening to the wrong data?<br>
+I see that I get data in all kinds of rates:<br>
+125<br>
+250<br>
+500</p>
+<p>Thank you for the help!</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/5</link>
+        <pubDate>Tue, 20 Oct 2020 06:11:07 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-5</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[kong]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi</p>
+<p>I read OBD2 using AT90CAN (my own PCB) and setup the mask filer → </p>
+<p>INT 2 CANBUS Len:7:0x05D7 [BA E8 F1 40 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 42 F0 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 0A F8 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 4B 08 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 70 18 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 73 20 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 EE 30 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km<br>
+INT 2 CANBUS Len:7:0x05D7 [BA E7 CB 38 ]00 00 02 81 34 80 C0 D8  |         4        |   0   0   2 129  52 128 192 216  | ODOMETER: 26263 km</p>
+<p>you have to use the mask filer to listen each ID, ZOE has large amount CAN messages</p>
+<p>good luck</p>
+<p>Kong</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/4</link>
+        <pubDate>Mon, 19 Oct 2020 16:49:16 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-4</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[david]]></dc:creator>
+        <description><![CDATA[
+            <p>yes<br>
+total distance mean ODOMETER</p>
+<p>but how could it be that I don’t see this msg?<br>
+0x5d7? in the logs?<br>
+I have saved data for 5 min , and I don’t see this PID</p>
+<p>how could it be?</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/3</link>
+        <pubDate>Mon, 19 Oct 2020 13:38:06 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-3</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[kong]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi<br>
+Does total distance mean ODOMETER? if yes, (0x5d7) D2-D5 4 byte data</p>
+<p>VIN you have to request 7E4-&gt;7EC</p>
+<p>hope can help.</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/2</link>
+        <pubDate>Thu, 15 Oct 2020 15:09:18 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-2</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+      <item>
+        <title>Renualt pid help</title>
+        <dc:creator><![CDATA[david]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,<br>
+I want to create a small project will send me the total distance of the car and vin number</p>
+<p>I’m using pi zero with canbus and connected it  to the my car<br>
+I have try 2 speeds:<br>
+250kbps<br>
+this is what I got (this is just the first lines )</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  110   [4]  B4 23 34 D6<br>
+e[1me[34mcan0e[0m  012   [1]  remote request<br>
+e[1me[34mcan0e[0m  004ACDA0   [1]  remote request<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       709   [0]<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       654   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m  1952CDA0   [4]  remote request<br>
+e[1me[34mcan0e[0m  10437A5F   [4]  remote request<br>
+e[1me[34mcan0e[0m       44D   [2]  C7 32<br>
+e[1me[34mcan0e[0m       560   [2]  C7 32<br>
+e[1me[34mcan0e[0m       091   [4]  C7 B4 23 34<br>
+e[1me[34mcan0e[0m  11A6E2DF   [4]  remote request<br>
+e[1me[34mcan0e[0m  1A6E2DF0   [4]  remote request<br>
+e[1me[34mcan0e[0m  1B8B7C20   [4]  remote request<br>
+e[1me[34mcan0e[0m       70B   [0]</p>
+</blockquote>
+<p>and this in the 500kbps</p>
+<p>and got many many pid</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 40 FE FE<br>
+e[1me[34mcan0e[0m  0E1   [8]  7F F7 7F FF 7F DB A8 09<br>
+e[1me[34mcan0e[0m  19D   [8]  38 2E B0 61 A8 08 00 D8<br>
+e[1me[34mcan0e[0m  299   [8]  FF E0 00 18 A8 10 FF E0<br>
+e[1me[34mcan0e[0m  29A   [8]  00 00 00 00 00 00 0A F5<br>
+e[1me[34mcan0e[0m  312   [8]  50 00 02 47 FF 40 A0 87<br>
+e[1me[34mcan0e[0m  378   [8]  3C 68 96 28 08 40 00 20<br>
+e[1me[34mcan0e[0m  563   [2]  2E B0<br>
+e[1me[34mcan0e[0m  15A   [6]  3A 70 00 14 00 00<br>
+e[1me[34mcan0e[0m  15C   [8]  1C 3C 31 E3 29 00 25 00<br>
+e[1me[34mcan0e[0m  15D   [8]  5E 8B 82 F0 98 90 44 FE<br>
+e[1me[34mcan0e[0m  15E   [8]  32 C3 29 36 63 29 71 8A<br>
+e[1me[34mcan0e[0m  44E   [7]  47 4C C8 E1 17 52 4C<br>
+e[1me[34mcan0e[0m  2F7   [1]  44<br>
+e[1me[34mcan0e[0m  194   [6]  FE 32 00 08 00 00<br>
+e[1me[34mcan0e[0m  18D   [8]  32 94 88 AA 08 00 00 00<br>
+e[1me[34mcan0e[0m  18E   [8]  00 00 00 00 00 00 48 00<br>
+e[1me[34mcan0e[0m  2E1   [4]  72 0E 90 00<br>
+e[1me[34mcan0e[0m  313   [2]  03 88<br>
+e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 50 FE FE</p>
+</blockquote>
+<p>where can I found information about the pids I need , and know which one to search ?<br>
+for start I want to get the total distance (and maybe the vin) - just to see everything is working correct .</p>
+<p>Thanks,</p>
+          <p><a href="https://community.carloop.io/t/renualt-pid-help/1074/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/renualt-pid-help/1074/1</link>
+        <pubDate>Thu, 01 Oct 2020 12:38:42 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-1074-1</guid>
+        <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+      </item>
+  </channel>
+</rss>

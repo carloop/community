@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Website cert fail</title>
+    <link>https://community.carloop.io/t/website-cert-fail/62</link>
+    <description>I am a Carloop fan but guys, your website puts up an immediate roadblock because your certificate is invalid. You&#39;re losing visitors before the welcome mat!
+
+Also, the home page has no About Us, no Contact Us. As a small company, you want to be approachable and this is the opposite of that. 
+
+
+&lt;img src=&quot;/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png&quot; width=&quot;690&quot; height=&quot;439&quot;&gt;</description>
+    
+    <lastBuildDate>Tue, 31 May 2016 05:32:39 +0000</lastBuildDate>
+    <category>Site Feedback</category>
+    <atom:link href="https://community.carloop.io/t/website-cert-fail/62.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Website cert fail</title>
+        <dc:creator><![CDATA[jvanier]]></dc:creator>
+        <description><![CDATA[
+            <p>Yep, the Let’s Encrypt SSL certificate expired tonight and the script to renew it didn’t run on schedule. So the certificate was expired until I ran the script. That’s now fixed for next time.</p>
+<p>We’ll definitely include additional contact info on the website. Thanks for reminding us!</p>
+          <p><a href="https://community.carloop.io/t/website-cert-fail/62/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/website-cert-fail/62/2</link>
+        <pubDate>Tue, 31 May 2016 05:32:39 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-62-2</guid>
+        <source url="https://community.carloop.io/t/website-cert-fail/62.rss">Website cert fail</source>
+      </item>
+      <item>
+        <title>Website cert fail</title>
+        <dc:creator><![CDATA[MRubenzahl]]></dc:creator>
+        <description><![CDATA[
+            <p>I am a Carloop fan but guys, your website puts up an immediate roadblock because your certificate is invalid. You’re losing visitors before the welcome mat!</p>
+<p>Also, the home page has no About Us, no Contact Us. As a small company, you want to be approachable and this is the opposite of that.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png" data-download-href="//carloop-community.dyndns.org/uploads/default/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11_2_690x439.png" width="690" height="439" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11_2_690x439.png, //carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png 1.5x, //carloop-community.dyndns.org/uploads/default/original/1X/d398c5b7251a1128fdba9d9d9c05ba1b1a189b11.png 2x" data-dominant-color="F0F0F1"></a></div><p></p>
+          <p><a href="https://community.carloop.io/t/website-cert-fail/62/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/website-cert-fail/62/1</link>
+        <pubDate>Tue, 31 May 2016 03:23:44 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-62-1</guid>
+        <source url="https://community.carloop.io/t/website-cert-fail/62.rss">Website cert fail</source>
+      </item>
+  </channel>
+</rss>

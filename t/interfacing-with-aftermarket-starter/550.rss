@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Interfacing with aftermarket starter</title>
+    <link>https://community.carloop.io/t/interfacing-with-aftermarket-starter/550</link>
+    <description>I recently installed an aftermarket starter module in my 2006 Venza ([Directed DB3](https://www.directechs.com/product.aspx?sku=DB3)). 
+
+Right now it lets me start the car by hitting lock x3, but the range isn&#39;t great.  I want to use an Electron to start via the internet.
+
+The DB3 adapter has an interface for an internet starter - [Viper SmartStart](https://www.viper.com/smartstart/), but I&#39;m not keen on the price or monthly fee.
+
+I found a thread where someone reverse engineered the interface protocol a bit, but i&#39;m not sure if it works, and how to use this to make a Carloop/Electron work.
+http://forum.arduino.cc/index.php?topic=87638.0
+
+Anyone have any experience or ideas?
+
+Thanks!</description>
+    
+    <lastBuildDate>Sun, 25 Feb 2018 04:30:30 +0000</lastBuildDate>
+    <category>Car Hacking</category>
+    <atom:link href="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Interfacing with aftermarket starter</title>
+        <dc:creator><![CDATA[cyclin_al1]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://community.carloop.io/u/wochanda">@wochanda</a>,</p>
+<p>I don’t have a vehicle or a starter like what you have.  Hopefully, someone else can help based on experience.</p>
+<p>The reverse-engineering of the protocol shown in the arduino forum does not indicate if it was successful or not.  You could try the same approach with just the Electron and not even need the Carloop to do that.  Essentially, they were attempting to tie into the serial bus in between the starter module and the remote receiver.  The Electron (and most microprocessors) support serial interfaces; it should be quite easy to try that out.</p>
+<p>With that approach, if the reverse-engineering is not correct, you could use your Electron wired in the same way to monitor the communications and then you could do your own reverse engineering.</p>
+<p>With enough effort, you should have a very good chance of succeeding.</p>
+          <p><a href="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/interfacing-with-aftermarket-starter/550/2</link>
+        <pubDate>Sun, 25 Feb 2018 04:30:30 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-550-2</guid>
+        <source url="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550.rss">Interfacing with aftermarket starter</source>
+      </item>
+      <item>
+        <title>Interfacing with aftermarket starter</title>
+        <dc:creator><![CDATA[wochanda]]></dc:creator>
+        <description><![CDATA[
+            <p>I recently installed an aftermarket starter module in my 2006 Venza (<a href="https://www.directechs.com/product.aspx?sku=DB3" rel="noopener nofollow ugc">Directed DB3</a>).</p>
+<p>Right now it lets me start the car by hitting lock x3, but the range isn’t great.  I want to use an Electron to start via the internet.</p>
+<p>The DB3 adapter has an interface for an internet starter - <a href="https://www.viper.com/smartstart/" rel="noopener nofollow ugc">Viper SmartStart</a>, but I’m not keen on the price or monthly fee.</p>
+<p>I found a thread where someone reverse engineered the interface protocol a bit, but i’m not sure if it works, and how to use this to make a Carloop/Electron work.</p><aside class="onebox discoursetopic" data-onebox-src="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/c709ed32ff439134cbd331609813585e4f8be5e4.png" class="site-icon" data-dominant-color="00878F" width="32" height="32">
+
+      <a href="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934" target="_blank" rel="noopener nofollow ugc" title="02:46PM - 18 January 2012">Arduino Forum – 18 Jan 12</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:463/500;"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/dc8699eebc2ee160e86015bffb35c58fdeb7cc98.jpeg" class="thumbnail" data-dominant-color="AEAEAF" width="463" height="500"></div>
+
+<div class="title-wrapper">
+  <h3><a href="https://forum.arduino.cc/t/interfacing-with-car-alarm/85934" target="_blank" rel="noopener nofollow ugc">Interfacing with car alarm</a></h3>
+  <div class="topic-category">
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #0088CC;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Using Arduino</span>
+        </span>
+      </span>
+      <span class="badge-wrapper bullet">
+        <span class="badge-category-bg" style="background-color: #0088CC;"></span>
+        <span class="badge-category clear-badge">
+          <span class="category-name">Project Guidance</span>
+        </span>
+      </span>
+  </div>
+</div>
+
+  <p>Hi everyone,  I'm new here, and new to arduino. I don't have much experience with electronics but I've got some experience coding.  Last year I got and installed a new alarm on my car. It's a Viper 5701. I've checked and it's SmartStart compatible...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Anyone have any experience or ideas?</p>
+<p>Thanks!</p>
+          <p><a href="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://community.carloop.io/t/interfacing-with-aftermarket-starter/550/1</link>
+        <pubDate>Fri, 23 Feb 2018 20:02:57 +0000</pubDate>
+        <guid isPermaLink="false">community.carloop.io-post-550-1</guid>
+        <source url="https://community.carloop.io/t/interfacing-with-aftermarket-starter/550.rss">Interfacing with aftermarket starter</source>
+      </item>
+  </channel>
+</rss>

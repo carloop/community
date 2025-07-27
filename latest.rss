@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Carloop Community - Latest topics</title>
+    <link>https://community.carloop.io/latest</link>
+    <description>Latest topics</description>
+    
+      <lastBuildDate>Fri, 31 Jan 2025 08:41:05 +0000</lastBuildDate>
+      <atom:link href="https://community.carloop.io/latest.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Carloop Not Communicating with Vehicle’s OBD-II Port</title>
+          <dc:creator><![CDATA[keral]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello</p>
+<p>I recently set up my Carloop device and followed the initial setup guide; but I’m having trouble getting it to communicate with my vehicle’s OBD-II port. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>The device powers on correctly when plugged in, and I can connect it to my computer, but I’m not receiving any data from the car’s ECU. I’ve tried using different vehicles to rule out compatibility issues, but the problem persists. <img src="https://carloop.dyndns.org/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+<p>I have double-checked my connections and verified that the CAN library is correctly installed. I’ve also attempted to send basic requests to the OBD-II system but am not getting any response. Could this be due to specific vehicle manufacturer restrictions / is there a common troubleshooting step I might be missing? <img src="https://carloop.dyndns.org/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"> I have checked <a href="https://carloop.dyndns.org/c/getting-started/5" class="inline-onebox">Getting Started - Carloop Community</a> <a href="https://www.igmguru.com/cloud-computing/microsoft-azure-solution-architect-az-300-training" rel="noopener nofollow ugc">Azure</a> guide for reference .</p>
+<p>Has anyone else encountered this issue when getting started with Carloop? I’d appreciate any advice on debugging this connection issue and ensuring that my setup is correctly configured.</p>
+<p>Thanks in advance! <img src="https://carloop.dyndns.org/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420</link>
+          <pubDate>Fri, 31 Jan 2025 08:41:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1420</guid>
+          <source url="https://community.carloop.io/t/carloop-not-communicating-with-vehicle-s-obd-ii-port/1420.rss">Carloop Not Communicating with Vehicle’s OBD-II Port</source>
+        </item>
+        <item>
+          <title>How to Configure AWS Big Data with My Volkswagen Atlas?</title>
+          <dc:creator><![CDATA[halcyoncv]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hey everyone,</p>
+<p>I am diving into a new project where I am trying to set up my Volkswagen Atlas (2019 model) to send data directly to AWS for storage and analysis. As I have seen many people using this in my surrounding. I’ve got Carloop up and running, and now I am looking to leverage AWS Big Data tools to collect and analyze all the information from my car.</p>
+<p>I was doing research about the same I came across these resources/articles <a href="https://aws.amazon.com/solutions/case-studies/volkswagen-group-case-study/" class="inline-onebox" rel="noopener nofollow ugc">Volkswagen Group iSI Case Study | IoT | AWS</a> <a href="https://www.igmguru.com/blog/what-is-aws-big-data" rel="noopener nofollow ugc">what is AWS big data?</a>, however, they are information but I wanted to learn from community members.</p>
+<p>Has anyone here done something similar? I’m particularly interested in any tips on configuring the data pipeline from Carloop to AWS, and what services you’d recommend for real-time processing and long-term storage. Any pitfalls to avoid or best practices to follow would be awesome to know.</p>
+<p>Thanks in advance for the help!</p>
+<p>Best Regards,</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411</link>
+          <pubDate>Fri, 30 Aug 2024 04:56:15 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1411</guid>
+          <source url="https://community.carloop.io/t/how-to-configure-aws-big-data-with-my-volkswagen-atlas/1411.rss">How to Configure AWS Big Data with My Volkswagen Atlas?</source>
+        </item>
+        <item>
+          <title>Help Needed with Setting Up Carloop GPS on My Vehicle</title>
+          <dc:creator><![CDATA[shawn5670]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>Hello guys! <img src="https://carloop.dyndns.org/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>I am trying to get my Carloop GPS up and running in my car, but I’m stuck!  No matter what I try, I can’t seem to get a signal.</p>
+<p><strong>Here’s what I’ve done so far:</strong></p>
+<ul>
+<li>Plugged the Carloop thingy (is that what it’s called?) into the OBD-II port in my car.</li>
+<li>Downloaded the Carloop library onto my Particle device (hope I did that right!).</li>
+<li>Uploaded the sample GPS code to the device (fingers crossed!).</li>
+<li>Checked the Particle console for GPS info, but it’s blank.</li>
+<li>Double-checked everything, and the device seems connected, but the GPS data is missing in action.</li>
+</ul>
+<p>I also check this: <a href="https://carloop.dyndns.org/t/help-with-carloop-code-reader-app/415">https://carloop.dyndns.org/t/help-with-carloop-code-reader-app</a><a href="https://www.igmguru.com/salesforce/salesforce-developer-training/" rel="noopener nofollow ugc">salesforce-dev</a> But I have not found any solution. Anyone else ever face this issue?  Maybe I’m missing something super simple?  Any troubleshooting tips from the experts would be a lifesaver!</p>
+<p>Thanks in advance</p>
+<p>Respected community member <img src="https://carloop.dyndns.org/images/emoji/twitter/smiling_face_with_three_hearts.png?v=12" title=":smiling_face_with_three_hearts:" class="emoji" alt=":smiling_face_with_three_hearts:" loading="lazy" width="20" height="20"></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/help-needed-with-setting-up-carloop-gps-on-my-vehicle/1408">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/help-needed-with-setting-up-carloop-gps-on-my-vehicle/1408</link>
+          <pubDate>Mon, 22 Jul 2024 08:58:59 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1408</guid>
+          <source url="https://community.carloop.io/t/help-needed-with-setting-up-carloop-gps-on-my-vehicle/1408.rss">Help Needed with Setting Up Carloop GPS on My Vehicle</source>
+        </item>
+        <item>
+          <title>Troubleshooting Stepper Motor Issues with Blackbox X32 in CNC Setup</title>
+          <dc:creator><![CDATA[shawn5670]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Hi everyone, <img src="https://carloop.dyndns.org/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>I was recently working on a CNC project and using a Blackbox X32 controller along with Nema 23 stepper motors. I’m experiencing some issues with the setup and could use some advice from those who have experience with similar configurations.<br>
+Here are the specifics of my setup:</p>
+<ul>
+<li>Blackbox X32 controller</li>
+<li>Nema 23 stepper motors</li>
+</ul>
+<p>But I am facing some specific issues like:</p>
+<ol>
+<li>Sometimes the motors skip steps or move erratically.</li>
+<li>The motors and controller seem to get quite hot after a short period of operation.</li>
+<li>There’s a lot of noise from the motors during operation, which I suspect might be due to improper tuning.</li>
+</ol>
+<p>I have tried adjusting the current settings on the Blackbox X32 and checking all connections, but the problems persist. Has anyone else encountered similar issues or have any tips on how to resolve them? Are there specific settings or configurations I should be aware of for this setup?</p>
+<p>Any help or suggestions would be greatly appreciated!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407</link>
+          <pubDate>Mon, 08 Jul 2024 06:00:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1407</guid>
+          <source url="https://community.carloop.io/t/troubleshooting-stepper-motor-issues-with-blackbox-x32-in-cnc-setup/1407.rss">Troubleshooting Stepper Motor Issues with Blackbox X32 in CNC Setup</source>
+        </item>
+        <item>
+          <title>Communicating to ECU problem</title>
+          <dc:creator><![CDATA[ehsan]]></dc:creator>
+          <category>Car Hacking</category>
+          <description><![CDATA[
+            <p>hello every one<br>
+i have ECU model : siemens continental SIM2K-34VR<br>
+and i want to communicate to it by can protocol i have sent this pid request :<br>
+txHeader.DLC = 3;<br>
+txHeader.IDE = CAN_ID_STD;<br>
+txHeader.StdId = 0x7DF;</p>
+<p>TxMessage.data[0] = 0x02;<br>
+TxMessage.data[1] = 0x01;<br>
+TxMessage.data[2] = 0x00;<br>
+TxMessage.data[3] = 0x00;<br>
+TxMessage.data[4] = 0x00;<br>
+TxMessage.data[5] = 0x00;<br>
+TxMessage.data[6] = 0x00;<br>
+TxMessage.data[7] = 0x00;</p>
+<p>but the received can message is this :<br>
+ID: 0x1C3<br>
+Rx:     0x00     0x00     0x0D     0x08     0x00     0x00     0x00     0x00</p>
+<p>i haven’t connect anything else to ECU just +12V and GND and SWITCH power<br>
+is it because of this ?or sth else?</p>
+<p>how can i found the standard iso of my ECU i search all around the internet but didn’t get anything usefull</p>
+<p>appreciate your help.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/communicating-to-ecu-problem/1405">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/communicating-to-ecu-problem/1405</link>
+          <pubDate>Tue, 11 Jun 2024 22:19:07 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1405</guid>
+          <source url="https://community.carloop.io/t/communicating-to-ecu-problem/1405.rss">Communicating to ECU problem</source>
+        </item>
+        <item>
+          <title>Carloop is Retired</title>
+          <dc:creator><![CDATA[jvanier]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Back in 2016, we introduced Carloop, a 100% open-source development kit designed to connect cars to the cloud, supporting applications like GPS tracking, mileage logging, and diagnostic trouble code decoding. Since then, a vibrant community of passionate developers and enthusiasts came on a journey with us to open the secrets of modern cars.</p>
+<p>This journey is coming to an end. We are retiring the Carloop hardware. Rest assured that your existing hardware will continue working.</p>
+<blockquote>
+<p><strong>The last Carloop units are available for a fire sale at <a href="https://store.carloop.io">https://store.carloop.io</a> while supplies last.</strong></p>
+</blockquote>
+<p>We will also keep this forum and our GitHub repository at <a href="https://github.com/carloop" class="inline-onebox">Carloop · GitHub</a> active as a sign of our commitment to the community. As passionate hackers, we encourage you to connect with us on LinkedIn or X (Formerly Twitter).</p>
+<p>— Alan Mond &amp; Julien Vanier, the Carloop team<br>
+LinkedIn: <a href="https://www.linkedin.com/in/mondalan">Alan</a>, <a href="https://www.linkedin.com/in/jvanier">Julien</a>. X (formerly Twitter): <a href="https://twitter.com/mondalan">Alan</a>, <a href="https://twitter.com/monkbroc">Julien</a>.</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-is-retired/1393">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-is-retired/1393</link>
+          <pubDate>Tue, 06 Feb 2024 03:38:02 +0000</pubDate>
+          <discourse:topicPinned>Yes</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1393</guid>
+          <source url="https://community.carloop.io/t/carloop-is-retired/1393.rss">Carloop is Retired</source>
+        </item>
+        <item>
+          <title>Is this project still alive? Which device to pick?</title>
+          <dc:creator><![CDATA[mchouque]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I’d love to buy a carloop device but everything is sold out in the store.</p>
+<p>And on the github page, there’s a link to OSH park to order one but it’s the v2.1 version while the current seems to be v2.3. So which one should I take if I want to build one myself?</p>
+<p>I also see Particle released a Photon 2. Will there be a new release for that?</p>
+<p>Cheers,<br>
+Matt</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/is-this-project-still-alive-which-device-to-pick/1350">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/is-this-project-still-alive-which-device-to-pick/1350</link>
+          <pubDate>Fri, 07 Jul 2023 15:11:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1350</guid>
+          <source url="https://community.carloop.io/t/is-this-project-still-alive-which-device-to-pick/1350.rss">Is this project still alive? Which device to pick?</source>
+        </item>
+        <item>
+          <title>Is SwiftUI a compatible language with CarLoop OBD-II device</title>
+          <dc:creator><![CDATA[Cole.H]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>I am just curious if I can code using the SwiftUI language and have everything still work as intended with the OBD-II communication device? I’m currently in school and want to do my final project on over the air vehicle diagnostic and communication. Does anyone know if this is something that I’m able to do and if so, do you have any tips for me getting into it?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322</link>
+          <pubDate>Tue, 21 Feb 2023 22:52:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1322</guid>
+          <source url="https://community.carloop.io/t/is-swiftui-a-compatible-language-with-carloop-obd-ii-device/1322.rss">Is SwiftUI a compatible language with CarLoop OBD-II device</source>
+        </item>
+        <item>
+          <title>Carloop availability</title>
+          <dc:creator><![CDATA[Maxima]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hey everyone my name is Adi and I am just getting into the CAN hacking space, it’s a really awesome thing going on here. I see that the particle photon series of boards is now discontinued and argon is set to be discontinued on their site. Are carloop units still being produced or am I too late to the party? Again much love to this community and any help/advice is appreciated!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-availability/1315">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-availability/1315</link>
+          <pubDate>Sun, 29 Jan 2023 15:05:47 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1315</guid>
+          <source url="https://community.carloop.io/t/carloop-availability/1315.rss">Carloop availability</source>
+        </item>
+        <item>
+          <title>Which CANbus avail at OBD2 connector 2009 Honda</title>
+          <dc:creator><![CDATA[ohseegee]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>I want to receive/transmit lock and unlock codes to my 2009 Honda Accord.</p>
+<p>I have plugged into the CANbus at the OBD2 connector and am successfully reading CAN frames.  However, I’m not capturing any lock/lock codes.</p>
+<p>I read <a href="https://carloop.dyndns.org/t/honda-b-can-and-carloop/152">on this post</a> that there are 2 CAN busses on the Honda’s, bridged through a gateway module.  SO my questions are:</p>
+<ol>
+<li>Which CAN bus (F or B) am I connecting to at the OBD2 connector?  Since my speed is 500k on the bus I assume F.</li>
+<li>How can I ask the gateway to bridge lock codes (send and receive) across the busses?</li>
+<li>If <span class="hashtag-raw">#2</span> is not possible, how can I (easily) connect to the CAN-B on this car?  I say in the other post that an Odysey owner jumpered into CAN-B at a car heater module…but hoping for something easier or under-dash.</li>
+</ol>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300</link>
+          <pubDate>Tue, 15 Nov 2022 22:19:14 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1300</guid>
+          <source url="https://community.carloop.io/t/which-canbus-avail-at-obd2-connector-2009-honda/1300.rss">Which CANbus avail at OBD2 connector 2009 Honda</source>
+        </item>
+        <item>
+          <title>Beginner Carloop Pro Owner, GPS Functionality Questions!</title>
+          <dc:creator><![CDATA[zanie]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello all!</p>
+<p>I am very excited to finally have my very own carloop pro! I have been very anxious and before receiving the product, have been nose-deep in documentation and further functionalities.</p>
+<p>When setting up my device, I have 1) connected the device to my desktop via the mini-usb port thats located near the beige port on the top side, 2) inserted sim card and activated sim card on <a href="http://console.partcle.io" rel="noopener nofollow ugc">console.partcle.io</a> , 3) connected the antenna cable as well, made sure it snapped into place.</p>
+<p>I am now only seeing a constant flash of green LED and a solid red LED along with a short white pulse which immediately returns to its original green and red.</p>
+<p>I have read many articles stating that it can take anywhere from seconds to minutes for configuration which is why I waited so long to make a post on this forum page,</p>
+<p>On <a href="https://docs.particle.io/troubleshooting/led/electron/" rel="noopener nofollow ugc">https://docs.particle.io/troubleshooting/led/electron/</a> , it states that this pattern I am seeing is the normal one after powering on but it has been connected for 45+ minutes now with no change.</p>
+<p>Side Note: is this problem being caused by lack of power of the GPS module itself which is the beige port that i mentioned before?</p>
+<p>I intend to work on a 2015 Lexus is250 F Sport, its my daily for now / soon to be track - only car. I am also in my final year of University and plan on making a mini ‘tune’ file for the car for my Senior Project as I am a computer science major. With green flag’s from advisors and professors, I am very eager to jump into this project as soon as possible and learn as much as I can!</p>
+<p>Any and all help would be greatly appreciated!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287</link>
+          <pubDate>Fri, 30 Sep 2022 06:04:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1287</guid>
+          <source url="https://community.carloop.io/t/beginner-carloop-pro-owner-gps-functionality-questions/1287.rss">Beginner Carloop Pro Owner, GPS Functionality Questions!</source>
+        </item>
+        <item>
+          <title>CAN ID and Bytes for Ford Focus 2017</title>
+          <dc:creator><![CDATA[Chris]]></dc:creator>
+          <category>Troubleshooting</category>
+          <description><![CDATA[
+            <p>Good evening, does anyone have the CAN IDs and bytes for starting the 2017 Ford Focus odometer?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256</link>
+          <pubDate>Tue, 17 May 2022 18:12:17 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1256</guid>
+          <source url="https://community.carloop.io/t/can-id-and-bytes-for-ford-focus-2017/1256.rss">CAN ID and Bytes for Ford Focus 2017</source>
+        </item>
+        <item>
+          <title>Honda Odyssey 2014</title>
+          <dc:creator><![CDATA[Don777]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>Hello can any have any idea can H can Low I’m trying to install speed converter in my Honda Odyssey RC1 from Japan I’m in Uk i have two pairs of twisted wires red and blue and red and white coming to my speedometer plug I need to break them in install canm8 speed converter? </p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/73af068289506fa378018b49bce59b4080c5769a.jpeg" data-download-href="//carloop-community.dyndns.org/uploads/default/73af068289506fa378018b49bce59b4080c5769a" title="6F8F2D21-1C94-434B-88FF-D5576537507E.jpeg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/73af068289506fa378018b49bce59b4080c5769a_2_375x500.jpeg" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/73af068289506fa378018b49bce59b4080c5769a_2_375x500.jpeg, //carloop-community.dyndns.org/uploads/default/optimized/1X/73af068289506fa378018b49bce59b4080c5769a_2_562x750.jpeg 1.5x, //carloop-community.dyndns.org/uploads/default/optimized/1X/73af068289506fa378018b49bce59b4080c5769a_2_750x1000.jpeg 2x"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/honda-odyssey-2014/1235">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/honda-odyssey-2014/1235</link>
+          <pubDate>Mon, 14 Mar 2022 12:05:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1235</guid>
+          <source url="https://community.carloop.io/t/honda-odyssey-2014/1235.rss">Honda Odyssey 2014</source>
+        </item>
+        <item>
+          <title>Very Basic Beginner</title>
+          <dc:creator><![CDATA[dgill]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>I am brand new to carloop, CAN sniffing, to etc. I have a carloop basic and would like to stay capturing CAN traffic on my 2015 Silverado. Despite connecting via the particle WiFi and USB cable, I cannot figure out how to get my raspberry pi 3 to recognize it in a way to allow me to capture can traffic. Any help is really appreciated.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/very-basic-beginner/1198">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/very-basic-beginner/1198</link>
+          <pubDate>Sat, 30 Oct 2021 21:18:52 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1198</guid>
+          <source url="https://community.carloop.io/t/very-basic-beginner/1198.rss">Very Basic Beginner</source>
+        </item>
+        <item>
+          <title>Read &amp; Send Commands via CAN-H/CAN-L using ONLY OBD2 port</title>
+          <dc:creator><![CDATA[tallatghazi]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>Hello<br>
+Can you please confirm that minimum which version of Carloop device can have bi-directional communication with the vehicle’s ECU via CAN (H/L), if connected to OBD2 port only?</p>
+<p>Bidirectional means, I would like to get the data from ECU (Door Status, DTC Read/Reset, etc) as well as I would like to send commands REMOTELY (GPRS) to vehicle to roll up windows, Lock the doors, Engine Cut-off, etc ?<br>
+Or any other development kit available (Arduino)</p>
+<p>Thanks</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/read-send-commands-via-can-h-can-l-using-only-obd2-port/1197">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/read-send-commands-via-can-h-can-l-using-only-obd2-port/1197</link>
+          <pubDate>Wed, 27 Oct 2021 21:30:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1197</guid>
+          <source url="https://community.carloop.io/t/read-send-commands-via-can-h-can-l-using-only-obd2-port/1197.rss">Read &amp; Send Commands via CAN-H/CAN-L using ONLY OBD2 port</source>
+        </item>
+        <item>
+          <title>How to send request?</title>
+          <dc:creator><![CDATA[david]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello,<br>
+can someone explin to me how can I send request to the car?<br>
+if I understand correct I need to send<br>
+7DF#0209020000000000<br>
+where “7DF”  mean question to the “car”?<br>
+02 - mean  - I want information<br>
+0902 - what I’m looking for?</p>
+<p>am I right?<br>
+can someone maybe give some information about it?</p>
+<p>Thanks,</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/how-to-send-request/1189">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/how-to-send-request/1189</link>
+          <pubDate>Mon, 11 Oct 2021 13:04:00 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1189</guid>
+          <source url="https://community.carloop.io/t/how-to-send-request/1189.rss">How to send request?</source>
+        </item>
+        <item>
+          <title>Having trouble getting candump to show meaningfull data</title>
+          <dc:creator><![CDATA[wustlStudent]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>On a 2017 Rav4 and a 2019 Volkswagen Golf, I have not been able to get meaningful candump data. I essentially get no data.</p>
+<p>I’m using a virtualbox ubuntu image on a windows 10 pc. I pass through the USB.</p>
+<p>I run<br>
+sudo apt install can-utils<br>
+sudo slcand -o -c -s6 /dev/ttyACM0 can0<br>
+sudo ifconfig can0 up txqueuelen 1000<br>
+candump can0</p>
+<p>The final command simply prints out one message over and over again.</p>
+<p>What am I missing?</p>
+<p>I’m definitely getting some pid info using the the visualization sample app: <a href="https://www.hackster.io/egarl004/visualize-car-data-with-carloop-and-blynk-49c991" class="inline-onebox" rel="noopener nofollow ugc">Visualize Car Data With Carloop And Blynk - Hackster.io</a></p>
+<p>But I haven’t been able to get onto the can bus and start sniffing and spoofing, as I want to. Shouldn’t the CAN network be on the OBDII port and thus the carloop, or are there deeper electronics that I’m missing?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/having-trouble-getting-candump-to-show-meaningfull-data/1185">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/having-trouble-getting-candump-to-show-meaningfull-data/1185</link>
+          <pubDate>Sun, 26 Sep 2021 23:34:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1185</guid>
+          <source url="https://community.carloop.io/t/having-trouble-getting-candump-to-show-meaningfull-data/1185.rss">Having trouble getting candump to show meaningfull data</source>
+        </item>
+        <item>
+          <title>School Project Questions</title>
+          <dc:creator><![CDATA[wustlStudent]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hi, I’m a masters computer scientist using carloop for an iot project. a few questions:</p>
+<ol>
+<li>
+<p>Is it possible to use carloop with a particle boron or only a photon/electron?</p>
+</li>
+<li>
+<p>Is it possible to buy a carloop gps adapter as a standalone if I already have an electron?</p>
+</li>
+<li>
+<p>Can you point me toward any resources that would best allow me to understand exactly what data I can get from my vehicle as well as what data I can send to my vehicle (sniffing and spoofing etc)?</p>
+</li>
+</ol>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/school-project-questions/1181">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/school-project-questions/1181</link>
+          <pubDate>Mon, 20 Sep 2021 05:53:03 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1181</guid>
+          <source url="https://community.carloop.io/t/school-project-questions/1181.rss">School Project Questions</source>
+        </item>
+        <item>
+          <title>Need somebody, who can install software from GitHub!</title>
+          <dc:creator><![CDATA[Konstantin]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi guys! There is ready-made software on GitHub:<a href="https://github.com/daftracing/SoftStick" class="inline-onebox" rel="noopener nofollow ugc">GitHub - daftracing/SoftStick: Carloop firmware that emulates Drift Stick hardware</a>. I need to install it correctly on my Carloop. I do not know how to do this, but the program is urgently needed, so I am ready to pay for this installation!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164</link>
+          <pubDate>Mon, 09 Aug 2021 06:24:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1164</guid>
+          <source url="https://community.carloop.io/t/need-somebody-who-can-install-software-from-github/1164.rss">Need somebody, who can install software from GitHub!</source>
+        </item>
+        <item>
+          <title>Using Particle&#39;s CAN library functions?</title>
+          <dc:creator><![CDATA[tpp]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hello</p>
+<p>I been using the carloop following some examples from this site. For example, I use the carloop.can().receive(message); to receive new messages.<br>
+Now I want to use the “addFilter()” function from the Particle’s CAN library. How can I call that function since now the CAN object is part of the carloop objetc?<br>
+I will try with:</p>
+<pre><code>void setup() {
+
+carloop.setCANSpeed(500000);
+carloop.begin();
+carloop.can().addFilter(0x100, 0x7FF);
+</code></pre>
+<p>but I can’t check with a vehicle right now. Should this work?</p>
+<p>Any help will be greatly appreciated.<br>
+Best,</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/using-particles-can-library-functions/1153">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/using-particles-can-library-functions/1153</link>
+          <pubDate>Thu, 17 Jun 2021 22:59:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1153</guid>
+          <source url="https://community.carloop.io/t/using-particles-can-library-functions/1153.rss">Using Particle&#39;s CAN library functions?</source>
+        </item>
+        <item>
+          <title>Master&#39;s thesis project ideas/guidance</title>
+          <dc:creator><![CDATA[alright21]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello everyone! My name is Alberto and I am a Master’s degree student in Cyber Security who is currently looking for project ideas that can be translated to an master’s thesis.<br>
+I recently got interested in Automotive Security thanks to a company I discussed with. I had the opportunity to read the recent standards in the field (ISO 21434, UNECE WP.29, …) but I do not have much experience in the practical side of car security and testing, so I am here to ask for a little help. If you have some ideas you want to share, or if you are working in some projects I could help with, feel free to post it below, so we can start an interesting conversation.<br>
+I graduated in computer science and I learned by myself concept of offensive security and penetration testing, but I am far from an expert in this field, so I am always trying to expand my knowledge and learn more. I found out that car security is an interesting area to study and to work on, so I decided to focus on that for my final project.<br>
+Thank you in advance for your time and I am happy to hear what you are working on/what you want to share.<br>
+Stay safe!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/masters-thesis-project-ideas-guidance/1145">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/masters-thesis-project-ideas-guidance/1145</link>
+          <pubDate>Thu, 06 May 2021 12:03:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1145</guid>
+          <source url="https://community.carloop.io/t/masters-thesis-project-ideas-guidance/1145.rss">Master&#39;s thesis project ideas/guidance</source>
+        </item>
+        <item>
+          <title>Obd-ii simulator</title>
+          <dc:creator><![CDATA[Hicham]]></dc:creator>
+          <category>Software</category>
+          <description><![CDATA[
+            <p>Hi everyboby,</p>
+<p>Sorry for my English.</p>
+<p>I’m Hicham from France.</p>
+<p>I’m professionnal Radio reseller, and sometimes i have some problemes with radio.</p>
+<p>I want find a solution to simulate some basic CANBUS information like ACC, illumination, steering wheel control, etc… to test unit before i give them to my customer, you see.</p>
+<p>Is somebody can tell me if here or anywhere i can found, or buy a board that i can plugg to my computer by USB and send this info (ACC, Illumination, Vol+ Vol- of the steering control)  by activate bit on a software and send by 2 wires using CANBUS protocol to my Radio unit and see if work well.</p>
+<p>When i see all possibility here, i think this is may be possible.</p>
+<p>Thank a lot by advance</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/obd-ii-simulator/1141">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/obd-ii-simulator/1141</link>
+          <pubDate>Thu, 29 Apr 2021 13:31:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1141</guid>
+          <source url="https://community.carloop.io/t/obd-ii-simulator/1141.rss">Obd-ii simulator</source>
+        </item>
+        <item>
+          <title>CarLoop GPS Shield LED</title>
+          <dc:creator><![CDATA[JiDoan]]></dc:creator>
+          <category>Hardware</category>
+          <description><![CDATA[
+            <p>Is it possible to trigger the D1 LED on the CarLoop GPS Sheild? It appears to be connected to pin D4 according to the <a href="https://github.com/carloop/hardware/blob/master/GPS_Shield/CarLoop_GPS_V1_Schematic.PDF" rel="noopener nofollow ugc">schematic</a> and I have tried using <code>digitalWrite</code> on D4 but it doesn’t seem to work.<br>
+<img src="//carloop-community.dyndns.org/uploads/default/original/1X/20fb7841fc49033a733d302505c42d531bfafdf7.png" width="480" height="347"></p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-gps-shield-led/1137">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-gps-shield-led/1137</link>
+          <pubDate>Wed, 14 Apr 2021 01:05:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1137</guid>
+          <source url="https://community.carloop.io/t/carloop-gps-shield-led/1137.rss">CarLoop GPS Shield LED</source>
+        </item>
+        <item>
+          <title>Support for Newer Particle Boards (i.e. Argon)</title>
+          <dc:creator><![CDATA[DrMickeyLauer]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>Since the RedBear Duo is no longer available (Particle since bought RedBear), I wonder whether you would consider making a matching board for their newer boards, i.e. the Argon, which has BLE and WiFi functionality.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/support-for-newer-particle-boards-i-e-argon/1129">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/support-for-newer-particle-boards-i-e-argon/1129</link>
+          <pubDate>Sat, 13 Mar 2021 12:13:09 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1129</guid>
+          <source url="https://community.carloop.io/t/support-for-newer-particle-boards-i-e-argon/1129.rss">Support for Newer Particle Boards (i.e. Argon)</source>
+        </item>
+        <item>
+          <title>Carloop as Poor man&#39;s Passthrough-Device</title>
+          <dc:creator><![CDATA[DrMickeyLauer]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hi from Germany,</p>
+<p>I’m working on OBD2 and UDS Apps for iOS. To facilitate reprogramming, I have looked out for a<br>
+proper device that allows me to connect via WiFi or BLE and send and receive CAN frames.</p>
+<p>I don’t want or need any ELM327 or STN compatibility, I’m rather leaning towards a simple WiFi-interface<br>
+that allows me to send and receive unprocessed frames in the fastest and simplest way.</p>
+<p>For this I would need the Carloop to act as a WiFi access point, offering a simple TCP-interface<br>
+that translates my commands and sends them to CAN, receiving the answers and piping them back via WiFi.</p>
+<p>The icing on the cake would be automatic CAN frame segmentation and perhaps ISO-TP encoding/decoding.</p>
+<p>Is this possible with the CarLoop Photon or did I buy something wrong? <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+Moreover, did any one do something like this where I could join forces?</p>
+<p>Best regards,</p>
+<p>Mickey.</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128</link>
+          <pubDate>Sat, 13 Mar 2021 10:32:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1128</guid>
+          <source url="https://community.carloop.io/t/carloop-as-poor-mans-passthrough-device/1128.rss">Carloop as Poor man&#39;s Passthrough-Device</source>
+        </item>
+        <item>
+          <title>Carloop Basic USB device not detected on Windows or Linux</title>
+          <dc:creator><![CDATA[dreolf]]></dc:creator>
+          <category>General Car Talk</category>
+          <description><![CDATA[
+            <p>I’m having some trouble accessing the USB interface on my Carloop Basic. I’ve initialized and registered the Photon and upgraded its firmware, all over wifi. But when I attach it to a USB 2 or 3 port, I don’t see the Carloop as a USB device. I’ve tried it natively on three Windows 10 devices with both USB 3 and 2, one Windows 7 computer with USB 2 and a Ubuntil 20.0.04L laptop with USB 2. In all cases, the Photon USB connection is not detected in or out of DFU mode. “dfu-util -l” sees nothing, nor does “particle usb list”. USB drivers are installed. I have no trouble accessing the Photon using wifi (“particle list” works fine). Anybody out there run into this and found a solution? Hard to believe I have a defective USB interface on the Photon but suppose it’s possible.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106</link>
+          <pubDate>Thu, 31 Dec 2020 22:48:48 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1106</guid>
+          <source url="https://community.carloop.io/t/carloop-basic-usb-device-not-detected-on-windows-or-linux/1106.rss">Carloop Basic USB device not detected on Windows or Linux</source>
+        </item>
+        <item>
+          <title>Components for PCM board</title>
+          <dc:creator><![CDATA[Algopyguy]]></dc:creator>
+          <category>Hardware</category>
+          <description><![CDATA[
+            <p>Is there anyway we can get a list of components for the PCB? A lot of us like to get out the soldering gun😂…</p>
+<p>Dman</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/components-for-pcm-board/1088">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/components-for-pcm-board/1088</link>
+          <pubDate>Sat, 31 Oct 2020 21:36:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1088</guid>
+          <source url="https://community.carloop.io/t/components-for-pcm-board/1088.rss">Components for PCM board</source>
+        </item>
+        <item>
+          <title>Hardware assembly and github code configration</title>
+          <dc:creator><![CDATA[Odb7]]></dc:creator>
+          <category>Hardware</category>
+          <description><![CDATA[
+            <p>Hello, I wanted to buy the basic but they are sold out So my next best option is buy carloop without the photon. I already have the photon and know how to download and extract the github code<br>
+How long does it take to configure the Carloop to get it all up and running? Is there a video or tutorial on it. I was not able to find anything here <a href="https://carloop.readme.io/docs" class="inline-onebox" rel="noopener nofollow ugc">Getting Started with Carloop</a> Is is possible to download a third-party App from Apple Store that does OBD2 scanning as the one on the <a href="https://www.carloop.io/apps/">https://www.carloop.io/apps/</a> are very basic like mileage reader and code scanner</p>
+<p>Here is what I am looking for in a ODB2 scanner</p>
+<ol>
+<li>Read diagnostic trouble codes, both generic and manufacturer-specific, and display their meaning (over 3000 generic code definitions in the database).</li>
+<li>Clear trouble codes and turn off the MIL (“Check Engine” light)</li>
+<li>Display current sensor data, including:</li>
+<li>Engine RPM</li>
+<li>Calculated Load Value</li>
+<li>Coolant Temperature</li>
+<li>Fuel System Status</li>
+<li>Vehicle Speed</li>
+<li>Short Term Fuel Trim</li>
+<li>Long Term Fuel Trim</li>
+<li>Intake Manifold Pressure</li>
+<li>Timing Advance</li>
+<li>Intake Air Temperature</li>
+<li>Air Flow Rate</li>
+<li>Absolute Throttle Position</li>
+<li>Oxygen sensor voltages/associated short term fuel trims</li>
+<li>Fuel System status</li>
+<li>Fuel Pressure</li>
+</ol>
+<p>And save that on an SD Card in CSV format<br>
+And I have Kia Rio 2002 Model so not all Hardware in the Market support it</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084</link>
+          <pubDate>Tue, 27 Oct 2020 23:11:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1084</guid>
+          <source url="https://community.carloop.io/t/hardware-assembly-and-github-code-configration/1084.rss">Hardware assembly and github code configration</source>
+        </item>
+        <item>
+          <title>CANBUS e-golf Battery INFO help</title>
+          <dc:creator><![CDATA[kong]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello all. i would like to get SOC of my ev e-golf from OBD2 but i tried to request 0x7DF, 07E0 for 022101 022102 without respone. anyone has idea for e-golf?</p>
+<p>Thank you very much</p>
+<p>Kong</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://community.carloop.io/t/canbus-e-golf-battery-info-help/1079">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/canbus-e-golf-battery-info-help/1079</link>
+          <pubDate>Thu, 15 Oct 2020 15:01:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1079</guid>
+          <source url="https://community.carloop.io/t/canbus-e-golf-battery-info-help/1079.rss">CANBUS e-golf Battery INFO help</source>
+        </item>
+        <item>
+          <title>Renualt pid help</title>
+          <dc:creator><![CDATA[david]]></dc:creator>
+          <category>Getting Started</category>
+          <description><![CDATA[
+            <p>Hello,<br>
+I want to create a small project will send me the total distance of the car and vin number</p>
+<p>I’m using pi zero with canbus and connected it  to the my car<br>
+I have try 2 speeds:<br>
+250kbps<br>
+this is what I got (this is just the first lines )</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  110   [4]  B4 23 34 D6<br>
+e[1me[34mcan0e[0m  012   [1]  remote request<br>
+e[1me[34mcan0e[0m  004ACDA0   [1]  remote request<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       709   [0]<br>
+e[1me[34mcan0e[0m       091   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m       654   [4]  A7 32 AA 07<br>
+e[1me[34mcan0e[0m  1952CDA0   [4]  remote request<br>
+e[1me[34mcan0e[0m  10437A5F   [4]  remote request<br>
+e[1me[34mcan0e[0m       44D   [2]  C7 32<br>
+e[1me[34mcan0e[0m       560   [2]  C7 32<br>
+e[1me[34mcan0e[0m       091   [4]  C7 B4 23 34<br>
+e[1me[34mcan0e[0m  11A6E2DF   [4]  remote request<br>
+e[1me[34mcan0e[0m  1A6E2DF0   [4]  remote request<br>
+e[1me[34mcan0e[0m  1B8B7C20   [4]  remote request<br>
+e[1me[34mcan0e[0m       70B   [0]</p>
+</blockquote>
+<p>and this in the 500kbps</p>
+<p>and got many many pid</p>
+<blockquote>
+<p>e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 40 FE FE<br>
+e[1me[34mcan0e[0m  0E1   [8]  7F F7 7F FF 7F DB A8 09<br>
+e[1me[34mcan0e[0m  19D   [8]  38 2E B0 61 A8 08 00 D8<br>
+e[1me[34mcan0e[0m  299   [8]  FF E0 00 18 A8 10 FF E0<br>
+e[1me[34mcan0e[0m  29A   [8]  00 00 00 00 00 00 0A F5<br>
+e[1me[34mcan0e[0m  312   [8]  50 00 02 47 FF 40 A0 87<br>
+e[1me[34mcan0e[0m  378   [8]  3C 68 96 28 08 40 00 20<br>
+e[1me[34mcan0e[0m  563   [2]  2E B0<br>
+e[1me[34mcan0e[0m  15A   [6]  3A 70 00 14 00 00<br>
+e[1me[34mcan0e[0m  15C   [8]  1C 3C 31 E3 29 00 25 00<br>
+e[1me[34mcan0e[0m  15D   [8]  5E 8B 82 F0 98 90 44 FE<br>
+e[1me[34mcan0e[0m  15E   [8]  32 C3 29 36 63 29 71 8A<br>
+e[1me[34mcan0e[0m  44E   [7]  47 4C C8 E1 17 52 4C<br>
+e[1me[34mcan0e[0m  2F7   [1]  44<br>
+e[1me[34mcan0e[0m  194   [6]  FE 32 00 08 00 00<br>
+e[1me[34mcan0e[0m  18D   [8]  32 94 88 AA 08 00 00 00<br>
+e[1me[34mcan0e[0m  18E   [8]  00 00 00 00 00 00 48 00<br>
+e[1me[34mcan0e[0m  2E1   [4]  72 0E 90 00<br>
+e[1me[34mcan0e[0m  313   [2]  03 88<br>
+e[1me[34mcan0e[0m  0E0   [8]  C5 7F FE 7F F1 50 FE FE</p>
+</blockquote>
+<p>where can I found information about the pids I need , and know which one to search ?<br>
+for start I want to get the total distance (and maybe the vin) - just to see everything is working correct .</p>
+<p>Thanks,</p>
+            <p><small>6 posts - 2 participants</small></p>
+            <p><a href="https://community.carloop.io/t/renualt-pid-help/1074">Read full topic</a></p>
+          ]]></description>
+          <link>https://community.carloop.io/t/renualt-pid-help/1074</link>
+          <pubDate>Thu, 01 Oct 2020 12:38:41 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.carloop.io-topic-1074</guid>
+          <source url="https://community.carloop.io/t/renualt-pid-help/1074.rss">Renualt pid help</source>
+        </item>
+  </channel>
+</rss>

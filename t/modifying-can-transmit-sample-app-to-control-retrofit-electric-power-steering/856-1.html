@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modifying can transmit sample app to control retrofit electric power steering - Carloop Community</title>
+    <meta name="description" content="So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have th&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="856-1.html?page=2">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="ZeFng7mH0459cNcDUjyNSCmYf">
+<script defer="" src="../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="ZeFng7mH0459cNcDUjyNSCmYf"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Modifying can transmit sample app to control retrofit electric power steering&#39;" href="856.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2">
+<meta name="twitter:url" content="/t/modifying-can-transmit-sample-app-to-control-retrofit-electric-power-steering/856?page=2">
+<meta property="og:title" content="Modifying can transmit sample app to control retrofit electric power steering">
+<meta name="twitter:title" content="Modifying can transmit sample app to control retrofit electric power steering">
+<meta property="og:description" content="Thanks for a most informative thread - I have a quick question - which generation of Prius column did you use? I have a Gen3 column (and rack) here for my project car and I’d really like it to have adaptive-speed as it’s going to be a bit of a monster…  Actually - I have a second question too… I’m fitting a Syvecs S12 ECU to the car, and as this has programmable CAN outputs it’d be really helpful to know what I should be transmitting to the Prius’ CAN.  I see from the above that 2C4 is engine rp...">
+<meta name="twitter:description" content="Thanks for a most informative thread - I have a quick question - which generation of Prius column did you use? I have a Gen3 column (and rack) here for my project car and I’d really like it to have adaptive-speed as it’s going to be a bit of a monster…  Actually - I have a second question too… I’m fitting a Syvecs S12 ECU to the car, and as this has programmable CAN outputs it’d be really helpful to know what I should be transmitting to the Prius’ CAN.  I see from the above that 2C4 is engine rp...">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="14 mins ??">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="1 ?">
+<meta property="article:published_time" content="2024-11-10T13:55:39+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="prev" href="856.html">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="856.html">Modifying can transmit sample app to control retrofit electric power steering</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Modifying can transmit sample app to control retrofit electric power steering'>
+      <link itemprop='url' href='856.html'>
+      <meta itemprop='datePublished' content='2019-04-14T04:28:06Z'>
+        <meta itemprop='articleSection' content='General Car Talk'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+        <span itemprop='author' itemscope="" itemtype="http://schema.org/Person">
+          <meta itemprop='name' content='TimC'>
+          <link itemprop='url' href='../../u/TimC.html'>
+        </span>
+        <meta itemprop='text' content='So I’m back on the project of using a photon and can-hitch to send an rpm signal and a VSS signal to the electric power steering (EPS) column from a Toyota Prius that I’ve integrated into a 1967 Ford Fairlane.  I have th&amp;hellip;'>
+
+          <div id='post_21' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Paddy_SP.html'><span itemprop='name'>Paddy_SP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-10T13:55:39Z' class='post-time'>
+                    November 10, 2024,  1:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-10T13:55:39Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for a most informative thread - I have a quick question - which generation of Prius column did you use? I have a Gen3 column (and rack) here for my project car and I’d really like it to have adaptive-speed as it’s going to be a bit of a monster…</p>
+<p>Actually - I have a second question too… I’m fitting a Syvecs S12 ECU to the car, and as this has programmable CAN outputs it’d be really helpful to know what I should be transmitting to the Prius’ CAN.</p>
+<p>I see from the above that 2C4 is engine rpm and 0B4 is vehicle speed - is that a) correct and b) applicable to a Gen3 Prius?</p>
+<p>Any help would be most appreciated!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-10T15:00:19Z' class='post-time'>
+                    November 10, 2024,  3:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-10T15:00:19Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/Paddy_SP.html">@Paddy_SP</a><br>
+I used the gen 2 column, from a 2008 specifically.  I’m pretty sure they did change the column between the two generations, mine has a 12v dc brushed  two wire motor, and I believe the gen 3 has a three phase AC brush-less motor.  I’m like 80% sure the CAN id’s did not change.  There is a thread on <a href="http://Pro-touring.com" rel="noopener nofollow ugc">Pro-touring.com</a> where a guy was using the column from a Subaru BRZ I think which is basically a rebadged Toyota and he used the same or very similar CAN id’s to mess with his, no idea if he actually finished the project however.</p>
+<p>Yes, the 2C4 is rpm on gen 2 (80% sure on gen3) and doesn’t need to make any changes, a steady engine rpm input is all that is needed to get it to power on immediately without the 10 second delay.</p>
+<p>0B4 is the speed id for gen 2.  You would need to have the S12 vary the last three bits, where I have 06, 66, and B5.  The 06 and 66 will change based off the speed using the formula in my code, and the B5 is a checksum, which will change as the first two bits change.  That formula is also in my code above from August 18th, 2024.</p>
+<p>The 0B4 Id is what lets the EPAS ECU think its still communicating with the Prius since it thinks it’s coming from the ABS controller, and that eliminates the “lost communication with ABS code” that puts it in limp mode.  Once that’s eliminated you can actually use a scan tool to set the torque center point and the return to center ability gets way better as well.</p>
+<p>That’s about as much as I can help, since I don’t have any experience with the S12 ECU, but even if you don’t get the assist variable working like factory, you could possibly get a set speed you like and have the ECU output it statically like I do, my car drives great with the max assist level (06 66 B5 = 10 mph).</p>
+<p><a class="mention" href="../../u/DSM_WISEMAN.html">@DSM_WISEMAN</a>,<br>
+Sorry I can’t help beyond what I’ve provided here, I don’t have the time and I’m not willing to take the responsibility of actually producing these things.  If you can find someone local to you who does robotics or fixes electronics you could possibly show them this thread and see if they can help if you can’t figure it out on your own.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Paddy_SP.html'><span itemprop='name'>Paddy_SP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-10T15:37:22Z' class='post-time'>
+                    November 10, 2024,  3:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-10T15:37:22Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="../../u/TimC.html">@TimC</a> - many thanks for getting back on this so quickly, it’s much appreciated!</p>
+<p>Yes, as you said, my Gen3 system is three-phase. As I’ve now got a handle on the rpm and speed side of things, I guess the only other subject I’d like to go further into is that of establishing the centre* point - it’d be really handy if I could do it via the S12, so I’ll need to find out what the ID for that is.</p>
+<p>*Brit spelling</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/TimC.html'><span itemprop='name'>TimC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-10T19:25:26Z' class='post-time'>
+                    November 10, 2024,  7:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-10T19:25:26Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Although you probably could find the ID for resetting center point and get your ecu to send it, if you just get the system to not have any trouble codes by getting it an RPM and VSS signal, any decent repair shop with a bi-directional scan tool should be able to reset that for you if you don’t have your own.  It cannot be reset if there are any codes in the EPAS computer.  Once I made this simulator for my car, all the trouble codes went away and I was able to use a Snap-on scan tool at work to recenter the torque sensor.  You would need to attach an OBD2 port to your CAN wiring going between the ECU and EPAS module, then you can use a scan tool to check or clear codes and recenter the torque sensor.  There is a procedure from Toyota that uses the scan tool to do it. Basically you hook up the scanner, with the steering wheel pointed straight ahead on flat ground, then push the “button” on the scanner screen, the scanner will then have you go through a series of key on/ key off/ key on and possibly turn the wheel left and right, it walks you through it on the screen.  When your done, the module remembers where the center point is and it will make the return to center much better.  I believe most people complaining online about return to center after going around a turn have the system in limp mode or the center point is unknown.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../u/Paddy_SP.html'><span itemprop='name'>Paddy_SP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-10T21:27:14Z' class='post-time'>
+                    November 10, 2024,  9:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-10T21:27:14Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks again for the info - I have an Autel MaxiDAS, so should be able to reset it with that.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><a rel="prev" itemprop="url" href="856.html">? previous page</a></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

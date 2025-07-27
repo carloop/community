@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Honda tire pressure monitor light project - #26 by clemoyne - Project Share - Carloop Community</title>
+    <meta name="description" content="Thanks for this post, I was able to use this to do my 2nd Carloop test. 
+I was able to dump a whole bunch of OBD2 data.  My goal is to identify a message telling the cluster to turn on the TPMS light.  So I thought I’d l&amp;hellip;">
+    <meta name="generator" content="Discourse 3.3.0.beta1-dev - https://github.com/discourse/discourse version e84d462e2804bde1e49fae2c55eecd329dc73dc0">
+<link rel="icon" type="image/png" href="../../../uploads/default/optimized/1X/5d0dc9f48a4fa5171a3a95c8befa000d9f0fe88b_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../uploads/default/optimized/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a_2_180x180.png">
+<meta name="theme-color" media="all" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="../137.html?page=2">
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml" title="Carloop Community Search">
+
+    <link href="../../../stylesheets/color_definitions_base__1_c9899b2a42d6bd619c29b433a9ef7a3953a01da1.css?__ws=community.carloop.io" media="all" rel="stylesheet" class="light-scheme">
+
+  <link href="../../../stylesheets/desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop">
+
+
+
+  <link href="../../../stylesheets/chat_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat">
+  <link href="../../../stylesheets/checklist_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="checklist">
+  <link href="../../../stylesheets/discourse-details_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-details">
+  <link href="../../../stylesheets/discourse-lazy-videos_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+  <link href="../../../stylesheets/discourse-local-dates_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-local-dates">
+  <link href="../../../stylesheets/discourse-narrative-bot_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+  <link href="../../../stylesheets/discourse-presence_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="discourse-presence">
+  <link href="../../../stylesheets/docker_manager_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="docker_manager">
+  <link href="../../../stylesheets/footnote_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="footnote">
+  <link href="../../../stylesheets/poll_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll">
+  <link href="../../../stylesheets/spoiler-alert_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="spoiler-alert">
+  <link href="../../../stylesheets/chat_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="chat_desktop">
+  <link href="../../../stylesheets/poll_desktop_7659a6af5bea9aaa0d00bcc5111c495874284faf.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="poll_desktop">
+
+  <link href="../../../stylesheets/desktop_theme_1_68ec8432d72346d143d3760e6bc02ea5b1bbe8ac.css?__ws=community.carloop.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="with top headers">
+
+    
+    <meta id="data-ga-universal-analytics" data-tracking-code="UA-75724305-1" data-json="{&quot;cookieDomain&quot;:&quot;auto&quot;}" data-auto-link-domains="">
+
+  <link rel="preload" href="../../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" as="script" data-discourse-entrypoint="google-universal-analytics-v3" nonce="pqezyTNpgKjHmrLFZlAtpY1AG">
+<script defer="" src="../../../assets/google-universal-analytics-v3-08add7ec997ab472fcd9f821d32ff7caf4b8b9a5de2ec18ca723a040be07a098.js" data-discourse-entrypoint="google-universal-analytics-v3" nonce="pqezyTNpgKjHmrLFZlAtpY1AG"></script>
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Honda tire pressure monitor light project&#39;" href="../137.rss">
+    <meta property="og:site_name" content="Carloop Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:image" content="/uploads/default/original/1X/f03d9faa7e5bd5b8a589b4ee5784e6678991578a.png">
+<meta property="og:url" content="/t/honda-tire-pressure-monitor-light-project/137/26">
+<meta name="twitter:url" content="/t/honda-tire-pressure-monitor-light-project/137/26">
+<meta property="og:title" content="Honda tire pressure monitor light project">
+<meta name="twitter:title" content="Honda tire pressure monitor light project">
+<meta property="og:description" content="Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:  Where the last digit changes from 0E to 1D to 2C to 3B  333  01 00 00 00 00 00 0E  Not sure if 01 just means “a tire is low” or “1 tire is low”.  Pretty clear that in this car the TPMS module does NOT report tire pressure, only if a tire is low.">
+<meta name="twitter:description" content="Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:  Where the last digit changes from 0E to 1D to 2C to 3B  333  01 00 00 00 00 00 0E  Not sure if 01 just means “a tire is low” or “1 tire is low”.  Pretty clear that in this car the TPMS module does NOT report tire pressure, only if a tire is low.">
+<meta property="og:article:section" content="Project Share">
+<meta property="og:article:section:color" content="25AAE2">
+<meta property="article:published_time" content="2016-11-10T14:18:40+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+        <link rel="prev" href="/t/honda-tire-pressure-monitor-light-project/137">
+
+    
+  </head>
+  <body class="crawler ">
+    <div id="top-navbar" class="container">
+<span id="top-navbar-links" style="display:none;">
+  <a href="https://www.carloop.io" class="dow-menu" id="home"><span id="home-text">Home</span>
+  <i class="fa fa-home" aria-hidden="true"></i></a>  
+  <a href="https://carloop.readme.io/" class="dow-menu" id="docs">Documentation</a> 
+</span>
+</div>
+    <header>
+  <a href="../../../index.htm">
+    Carloop Community
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/honda-tire-pressure-monitor-light-project/137">Honda tire pressure monitor light project</a>
+    </h1>
+
+      <div class="topic-category" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <a href="/c/project-share/8" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Project Share</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1">
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope="" itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Honda tire pressure monitor light project'>
+      <link itemprop='url' href='https://carloop.dyndns.org/t/honda-tire-pressure-monitor-light-project/137'>
+      <meta itemprop='datePublished' content='2016-10-03T20:45:12Z'>
+        <meta itemprop='articleSection' content='Project Share'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Carloop Community'>
+          <div itemprop='logo' itemscope="" itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='/uploads/default/original/1X/1c11e9182b98c202a382d6f5862b4cc22c18a478.png'>
+          </div>
+      </div>
+
+        <span itemprop='author' itemscope="" itemtype="http://schema.org/Person">
+          <meta itemprop='name' content='clemoyne'>
+          <link itemprop='url' href='../../../u/clemoyne.html'>
+        </span>
+        <meta itemprop='text' content='Thanks for this post, I was able to use this to do my 2nd Carloop test. 
+I was able to dump a whole bunch of OBD2 data.  My goal is to identify a message telling the cluster to turn on the TPMS light.  So I thought I’d l&amp;hellip;'>
+
+          <div id='post_7' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/901d2de5801199f274a0797da5b620294c3eb894.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T01:16:32Z' class='post-time'>
+                    October 19, 2016,  1:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T01:16:32Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>FYI, just discovered this also work in Ubuntu running on Parallels on my mac!</p>
+<p>Now what does all this mean.   <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/901d2de5801199f274a0797da5b620294c3eb894.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/901d2de5801199f274a0797da5b620294c3eb894" title="Screen Shot 2016-10-18 at 9.14.53 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_568x500.jpg" width="568" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_568x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_852x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/901d2de5801199f274a0797da5b620294c3eb894_2_1136x1000.jpg" data-dominant-color="3F1930"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-10-18 at 9.14.53 PM.jpg</span><span class="informations">1478×1300 366 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T01:30:46Z' class='post-time'>
+                    October 19, 2016,  1:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T01:30:46Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>nice work! now try the following:<br>
+<code>cansniffer -cae can0</code></p>
+<p>and do another screenshot</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T01:32:49Z' class='post-time'>
+                    October 19, 2016,  1:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T01:32:49Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So it appears to be the same ID’s showing up.  Is that interesting?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/a5b3d415278ec4d35ce4e2a6da61677383549ec4" title="Screen Shot 2016-10-18 at 9.31.14 PM.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_357x500.jpg" width="357" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_357x500.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_535x750.jpg,//carloop-community.dyndns.org/uploads/default/optimized/1X/a5b3d415278ec4d35ce4e2a6da61677383549ec4_2_714x1000.jpg" data-dominant-color="472138"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2016-10-18 at 9.31.14 PM.jpg</span><span class="informations">882×1234 308 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T01:37:16Z' class='post-time'>
+                    October 19, 2016,  1:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T01:37:16Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Also is there any good documentation for canutils?  For example, what does the section on the right side represent (where you see the … that change from time to time)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/a59be70ef2b49f9ca6bebb0736ea26e3ef8f710e.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T05:49:22Z' class='post-time'>
+                    October 19, 2016,  5:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T05:49:22Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The text you see on the right is simply ascii representations of the bytes. Sadly, mostly useless in for obd info (or at least in my experience)</p>
+<p>What you’re looking at are the raw broadcasted values on the bus. Some are broadcasted, other messages are not. example - VIN.</p>
+<p>Check out these links (each helped me a ton in understanding some basics). I’m new to forum but plan on posting something helpful within the week on hackster revolving around getting obd2 data to thingspeak for visualizations.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://dale-peterson.com/digital-bond-archives/">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/396264641c2d04219de7ab3abef8655b1ded562c.jpeg" class="site-icon" data-dominant-color="8DBBD6" width="32" height="32">
+
+      <a href="https://dale-peterson.com/digital-bond-archives/" target="_blank" rel="noopener nofollow ugc">Dale Peterson: ICS Security Catalyst</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://dale-peterson.com/digital-bond-archives/" target="_blank" rel="noopener nofollow ugc">Digital Bond Archives - Dale Peterson: ICS Security Catalyst</a></h3>
+
+  <p>[et_pb_section fb_built=”1? _builder_version=”3.0.47?][et_pb_row _builder_version=”3.0.101?][et_pb_column type=”2_3? _builder_version=”3.0.47?][et_pb_text _builder_version=”3.21.1? text_font=”||||||||” text_text_color=”#007db7? text_font_size=”36px”...</p>
+
+  <p>
+    <span class="label1">Est. reading time: 6 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.cowfishstudios.com/blog/canned-pi-part1">
+  <header class="source">
+      <img src="//carloop-community.dyndns.org/uploads/default/original/1X/28c83df56ce8ae568d7f4cb1591fdc3c0256a3bb.png" class="site-icon" data-dominant-color="F5CE2A" width="16" height="16">
+
+      <a href="https://www.cowfishstudios.com/blog/canned-pi-part1" target="_blank" rel="noopener nofollow ugc">Cowfish Studios</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/323;"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a59be70ef2b49f9ca6bebb0736ea26e3ef8f710e_2_690x323.jpeg" class="thumbnail" data-dominant-color="3C4641" width="690" height="323"></div>
+
+<h3><a href="https://www.cowfishstudios.com/blog/canned-pi-part1" target="_blank" rel="noopener nofollow ugc">CANned Pi: (Part1)</a></h3>
+
+  <p>In this tutorial you will learn how to gain access to a&nbsp;vehicle's internal network using a Raspberry Pi and&nbsp;CAN-Bus Board!</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T12:37:10Z' class='post-time'>
+                    October 19, 2016, 12:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T12:37:10Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks!</p>
+<p>Other great resources that I was looking at last night include the <a href="http://opengarages.org/handbook/" rel="noopener nofollow ugc">Car Hackers Handbook</a> and the <a href="https://www.youtube.com/channel/UC8H4JYKBSAMcCH6snL5OWYg" rel="noopener nofollow ugc">Open Garages YouTube series</a>.</p>
+<p>BTW- if there is anyone in the Toronto area interested in this stuff, I’d love to meet up!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/be2a8334077d1487681efc2932b774714d64d30e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-19T15:41:51Z' class='post-time'>
+                    October 19, 2016,  3:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-19T15:54:14Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So I did some static CAN sniffing and determined a few things on my 2012 Honda Odyssey.</p>
+<p>I was able to decode brakes, parking brake, gear shift position, TCS status, headlight status, doors open/closed, seat belt status, cruise status, and AC on/off.</p>
+<p>Pretty happy about this.</p>
+<p>One thing I’ve noticed is that for all of the ID’s, Byte 7 is constantly changing.  Is this some kind of checksum?  Wondering if that could be difficult to reverse engineer.  I have tried injecting some messages with no luck…really hoping to convince the car something is happening that is not.</p>
+<p>Another thing I’ve noticed is that the radio, climate control, and door module are likely on a different bus.  Not too surprised.</p>
+<p>Next need to get a buddy to drive while I take some on the road data!</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/be2a8334077d1487681efc2932b774714d64d30e.png" data-download-href="//carloop-community.dyndns.org/uploads/default/be2a8334077d1487681efc2932b774714d64d30e" title="Pasted image"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/be2a8334077d1487681efc2932b774714d64d30e.png" width="537" height="500" data-dominant-color="969796"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Pasted image</span><span class="informations">841×783 19.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/egarl004.html'><span itemprop='name'>egarl004</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-20T02:09:42Z' class='post-time'>
+                    October 20, 2016,  2:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-20T02:09:42Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ll be in Montreal over New Years if you’re around for a cup of coffee… and the journey!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-20T19:17:41Z' class='post-time'>
+                    October 20, 2016,  7:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-20T19:17:41Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey, personally I’d love to come to Montreal for New Years but my wife and kids might not be so keen on it.  <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/3ac3d9d0c07b3f2a1e4f64d943e37570116ce067.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T15:25:58Z' class='post-time'>
+                    October 21, 2016,  3:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T15:47:42Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Phew, it took me a while to get here, but I was able to successfully capture canbus data from my 2012 Honda Odyssey and then play it back to an extra instrument cluster I had lying around.</p>
+<p>Test rig:</p>
+<p>I built a simple test rig by learning the pinout of my Honda Odyssey cluster.  It is a 32 pin connector.  For purposes of this test, I used 2 12V power lines (pins 1 &amp; 17), 3 grounds (pins 4,31, 32), HSCAN+ and HSCAN-.  There are pins for low speed CAN (125kbps) but I am not playing with those yet.  The setup is powered by 8 AA batteries.  I added a 125 ohm resistor between the data lines on my breadboard.</p>
+<p><img src="//carloop-community.dyndns.org/uploads/default/original/1X/3ac3d9d0c07b3f2a1e4f64d943e37570116ce067.jpg" width="204" height="119"></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/e708644e6ef5cb16bbeabb102938a862c267dc46.jpg" data-download-href="//carloop-community.dyndns.org/uploads/default/e708644e6ef5cb16bbeabb102938a862c267dc46" title="FullSizeRender 21.jpg"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/e708644e6ef5cb16bbeabb102938a862c267dc46_2_666x500.jpeg" width="666" height="500" data-dominant-color="4D4033"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">FullSizeRender 21.jpg</span><span class="informations">4032×3024 2.48 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<p>Using socketcan-serial, I ran “candump -l” which is part of the socketcan Linux utility.  I drove for about 15 minutes and captured 59 mb of packet data.</p>
+<p>Next comes the fun part…I ran canplayer -I [filename] to play my data into the test cluster.  Voila, the cluster showed the RPM from the start of the file!</p>
+<p>Unfortunately the fun only lasted for a few seconds, as I keep getting a “no buffer space available” error. The only way to clear it is to turn the cluster on and off.   Any suggestions on how to fix this?  The output below might be interesting.  Also <a href="../../../s/files/1/0915/1182/files/carloop_honda_cluster.mov?793569196929280062" rel="noopener nofollow ugc">here is a movie</a> showing the tach move!</p>
+<p>parallels@ubuntu:~$ ip -details -statistics link show can0<br>
+5: can0: &lt;NOARP,UP,LOWER_UP&gt; mtu 16 qdisc pfifo_fast state UNKNOWN mode DEFAULT group default qlen 10<br>
+link/can  promiscuity 0<br>
+RX: bytes  packets  errors  dropped overrun mcast<br>
+638465     80715    0       0       0       0<br>
+TX: bytes  packets  errors  dropped carrier collsns<br>
+198        29       0       0       0       0</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T18:32:25Z' class='post-time'>
+                    October 21, 2016,  6:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T18:32:25Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In the video I just noticed that before the file errors out the TPMS light turned off!  So in theory I can now isolate the “good TPMS” CAN messages, disconnect my TPMS module, and publish “good TPMS” CAN messages using a Carloop!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T19:29:30Z' class='post-time'>
+                    October 21, 2016,  7:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T19:29:30Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Craig, this is fantastic work!  Congratulations!  Once you find the actual messages that modify the TPMS light on the dashboard, you will be entering the Carloop Hall of Fame!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T19:42:45Z' class='post-time'>
+                    October 21, 2016,  7:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T19:42:45Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Alan!  Any thoughts on the buffer error?  I’m not sure where to go with that.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/alanm'><span itemprop='name'>alanm</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T20:38:26Z' class='post-time'>
+                    October 21, 2016,  8:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T20:38:26Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Maybe try restricting the amount of CAN message IDs that you log.  For example <code>candump can0 374:374</code> might be a good idea to restrict CAN messages to ID 374 for example.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T20:40:25Z' class='post-time'>
+                    October 21, 2016,  8:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T20:40:25Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m actually receiving the error when trying to send CAN messages.  Seems like I can send 15 at a time or so.</p>
+<p>Just wondering if there is a workaround, would be great to playback the 15 minutes of candump file and watch the gauges move around</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-21T21:10:46Z' class='post-time'>
+                    October 21, 2016,  9:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-21T21:10:46Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well I did it!  Discovered that the arbitration ID for TPMS is 333</p>
+<p>I then noticed that the messages go in a pattern like this:</p>
+<p>(1476987407.909367) can0 333#0000000000000F<br>
+(1476987408.009644) can0 333#0000000000001E<br>
+(1476987408.109524) can0 333#0000000000002D<br>
+(1476987408.208971) can0 333#0000000000003C</p>
+<p>I wrote a script to keep playing those messages via canplayer and the light seems to be staying off!</p>
+<p>PS I still want to figure out how to play 15 minutes of a candump file!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="2">
+              </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../uploads/default/original/1X/f8dbe2c8529978fa5c4fd11262e6518df9b4b277.JPG">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-24T21:07:31Z' class='post-time'>
+                    October 24, 2016,  9:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-24T21:07:31Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Update.  So now I verified that it REALLY works.  <img src="//carloop-community.dyndns.org/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I modified the Julien’s <a href="../../minimal-transmitting-code/132.html">minimal transmitting code app</a> and changed the values to the appropriate ones for “working” TPMS in my Honda.<br>
+I then disconnected the TPMS module, located just above the accelerator pedal.<br>
+I flashed the code to my Particle and so far so good, no TPMS light!<br>
+Next step I need to get the Particle to go to sleep when the car is off and do some more testing to make sure this really works.<br>
+Below is a snippet of code (changes from <a href="../../minimal-transmitting-code/132.html">Julien’s code</a>) and some pictures.  Note that I have a light on for a missing Blind Spot Information System since I took the cluster from a car that had this feature and ours does not.  So next I need to reverse engineer this signal!</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/f8dbe2c8529978fa5c4fd11262e6518df9b4b277.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/f8dbe2c8529978fa5c4fd11262e6518df9b4b277" title="IMG_2201.JPG"><img src="//carloop-community.dyndns.org/uploads/default/original/1X/f8dbe2c8529978fa5c4fd11262e6518df9b4b277.JPG" width="666" height="500"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_2201.JPG</span><span class="informations">4032×3024 2.07 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="//carloop-community.dyndns.org/uploads/default/original/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68.JPG" data-download-href="//carloop-community.dyndns.org/uploads/default/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68" title="IMG_2199.JPG"><img src="//carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_375x500.JPG" width="375" height="500" srcset="//carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_375x500.JPG,//carloop-community.dyndns.org/uploads/default/optimized/1X/a1f8363f35bf30f425c0d51aafdb96ca0fef5d68_2_562x750.jpeg"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">IMG_2199.JPG</span><span class="informations">3024×4032 1.74 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div>
+<pre><code>// A CAN message has an ID that identifies the content inside
+message.id = 0x333;
+
+// It can have from 0 to 8 data bytes
+message.len = 7;
+
+// Pass the data to be transmitted in the data array
+message.data[0] = 0x00;
+message.data[1] = 0x00;
+message.data[2] = 0x00;
+message.data[3] = 0x00;
+message.data[4] = 0x00;
+message.data[5] = 0x00;
+message.data[6] = 0x0F;
+// Send the message on the bus!
+carloop.can().transmit(message);
+message.data[6] = 0x1E;
+carloop.can().transmit(message);
+message.data[6] = 0x2D;
+carloop.can().transmit(message);
+message.data[6] = 0x3C;
+carloop.can().transmit(message);
+lastTransmitTime = now;
+</code></pre>
+<p>}<br>
+}</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/jvanier.html'><span itemprop='name'>jvanier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-10-25T00:59:18Z' class='post-time'>
+                    October 25, 2016, 12:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-10-25T00:59:18Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Wow, that’s an impressive accomplishment! Well done! You can put a <code>delay(100);</code> in between each transmit to insert a 100ms pause in between each transmit. The messages you posted above show a delay of 0.1s in between each frame.</p>
+<aside class="quote no-group" data-username="clemoyne" data-post="22" data-topic="137">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="//carloop-community.dyndns.org/letter_avatar_proxy/v4/letter/c/ecb155/48.png" class="avatar"> clemoyne:</div>
+<blockquote>
+<p>(1476987407.909367) can0 333#0000000000000F<br>
+(1476987408.009644) can0 333#0000000000001E<br>
+(1476987408.109524) can0 333#0000000000002D<br>
+(1476987408.208971) can0 333#0000000000003C</p>
+</blockquote>
+</aside>
+<p>I’ll see if I can figure out what the “no buffer space available” message means.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='../../../u/clemoyne.html'><span itemprop='name'>clemoyne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-11-10T14:18:40Z' class='post-time'>
+                    November 10, 2016,  2:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-11-10T14:18:40Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:</p>
+<p>Where the last digit changes from 0E to 1D to 2C to 3B</p>
+<p>333  01 00 00 00 00 00 0E</p>
+<p>Not sure if 01 just means “a tire is low” or “1 tire is low”.  Pretty clear that in this car the TPMS module does NOT report tire pressure, only if a tire is low.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="1">
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="1">
+              </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope="" itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://carloop.dyndns.org/u/brunjc21'><span itemprop='name'>brunjc21</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-16T18:38:38Z' class='post-time'>
+                    January 16, 2020,  6:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T18:38:38Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p>Thought it might be useful to share the message shown when the TPMS Module is reporting low tire pressure:</p>
+</blockquote>
+<blockquote>
+<p>Where the last digit changes from 0E to 1D to 2C to 3B</p>
+</blockquote>
+<blockquote>
+<p>333 01 00 00 00 00 00 0E</p>
+</blockquote>
+<p>Has anyone have any insight to the algorithm used to generate the last nibble of the last byte? It does seem like a sum then XOR’d by a value…</p>
+<p>For example, sum of (00 00 00 00 00 00) = 00 ^0x0F == 0x0F<br>
+sum of (01 00 00 00 00 00) = 00 ^0x0F == 0x0E</p>
+<p>But this does not work with much of the data I have traced from a Honda. I mean, I can confirm that there are some messages that are 8 bytes, first seven are 0x00s and the last byte is 0x0F, but that algorithm doesn’t work with everything.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction">
+              <meta itemprop="userInteractionCount" content="0">
+              <span class='post-likes'></span>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope="" itemtype="http://schema.org/InteractionCounter">
+                <meta itemprop="interactionType" content="http://schema.org/CommentAction">
+                <meta itemprop="userInteractionCount" content="0">
+              </div>
+
+          </div>
+    </div>
+
+    <div role='navigation' itemscope="" itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+        <span itemprop='name'><a rel="prev" itemprop="url" href="/t/honda-tire-pressure-monitor-light-project/137">? previous page</a></span>
+    </div>
+
+  
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../../index.htm' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">FAQ/Guidelines </a>
+        </span>
+      </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope="" itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>
